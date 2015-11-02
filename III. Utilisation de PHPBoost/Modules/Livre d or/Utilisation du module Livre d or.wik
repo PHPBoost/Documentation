@@ -1,0 +1,28 @@
+<#id#>56</#id#>
+<#id_contents#>1281</#id_contents#>
+<#title#>Utilisation du module Livre d'or</#title#>
+<#encoded_title#>utilisation-du-module-livre-d-or</#encoded_title#>
+<#hits#>405</#hits#>
+<#id_cat#>28</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>28</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>54</#cat_article_id#>
+<#con_id_contents#>1281</#con_id_contents#>
+<#con_id_article#>56</#con_id_article#>
+<#menu#></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>5193</#user_id#>
+<#user_ip#>88.125.157.163</#user_ip#>
+<#timestamp#>1405003672</#timestamp#>
+<#content#>[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/guestbook/home.png[/img][/align]
+
+Si vous en avez l'autorisation, vous pouvez saisir un message dans le champ prévu à cet effet. Ce message s'ajoutera à la liste des messages qui se trouvent en-dessous.
+Si les visiteurs sont autorisés à poster (autorisés par défaut), ils doivent saisir un pseudo et le code de vérification en plus du message. Pour les membres enregistrés sur le site ces champs n'apparaissent pas.
+Les messages seront affichés du plus récent au plus ancien. La date du message ainsi que les informations du membre qui l'a posté sont précisées autour du message.
+
+[style=warning]Attention ! Il est possible que l'administrateur du site ait bloqué certaines balises de BBCode. Dans ce cas, elles ne vous seront pas accessibles et ne seront pas "parsées" (transformées en code HTML) par le code PHP. Inutile de tenter de les saisir manuellement dans ce cas.[/style]</#content#>

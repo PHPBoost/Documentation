@@ -1,0 +1,37 @@
+<#id#>246</#id#>
+<#id_contents#>1244</#id_contents#>
+<#title#>Utilisation du module Recherche</#title#>
+<#encoded_title#>utilisation-du-module-recherche</#encoded_title#>
+<#hits#>256</#hits#>
+<#id_cat#>75</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>75</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>244</#cat_article_id#>
+<#con_id_contents#>1244</#con_id_contents#>
+<#con_id_article#>246</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_page-de-recherche">Page de recherche</a></li><li><a href="#paragraph_resultats">Résultats</a></li><li><a href="#paragraph_mini-menu">Mini menu</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>88.125.157.163</#user_ip#>
+<#timestamp#>1404999242</#timestamp#>
+<#content#>-- Page de recherche --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/home.png[/img][/align]
+Sur la page de recherche, vous pouvez indiquer le ou les mots rechercher (4 lettres minimum) et choisir le ou les modules concernés.
+
+-- Résultats --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/results.png[/img][/align]
+Si des résultats correspondant à la recherche demandée sont trouvés, ils sont affichés en liste. Les résultats se présentent de la forme :
+[b]nom du module[/b] : titre
+La pagination est appliquée si le nombre de résultats dépasse le nombre de résultats par page configuré dans l'[link=4-1-administration-du-module-recherche]administration du module[/link].
+
+-- Mini menu --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/mini.png[/img][/align]
+Vous avez la possibilité d'effectuer une recherche depuis n'importe quelle page du site si le bloc [b]Recherche[/b] est activé par l'administrateur du site (il faut indiquer 4 lettres minimum).</#content#>

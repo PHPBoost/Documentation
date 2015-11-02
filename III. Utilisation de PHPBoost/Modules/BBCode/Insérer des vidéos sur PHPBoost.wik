@@ -1,0 +1,80 @@
+<#id#>143</#id#>
+<#id_contents#>1388</#id_contents#>
+<#title#>Insérer des vidéos sur PHPBoost</#title#>
+<#encoded_title#>inserer-des-videos-sur-phpboost</#encoded_title#>
+<#hits#>2443</#hits#>
+<#id_cat#>34</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>34</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>79</#cat_article_id#>
+<#con_id_contents#>1388</#con_id_contents#>
+<#con_id_article#>143</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_quel-format-choisir">Quel format choisir ?</a></li><li><a href="#paragraph_premi-re-tape-h-berger-la-vid-o">Première étape : héberger la vidéo</a><ol class="wiki_list_2"><li><a href="#paragraph_dailymotion">Dailymotion</a></li><li><a href="#paragraph_youtube">Youtube</a></li><li><a href="#paragraph_autres-h-bergeurs-vid-os">Autres hébergeurs vidéos</a></li></ol></li><li><a href="#paragraph_j-ai-mon-lecteur-flash">J'ai mon lecteur flash</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>5083</#user_id#>
+<#user_ip#>93.5.71.211</#user_ip#>
+<#timestamp#>1423341322</#timestamp#>
+<#content#>Comment insérer une vidéo dans PHPBoost grâce au BBCode ?
+La question a été posée à  plusieurs reprises sur le forum, nous allons ici y répondre en traitant plusieurs cas.
+
+-- Quel format choisir ? --
+
+Sur PHPBoost il est uniquement possible d'afficher des vidéos au format flash.
+Pourquoi ? Il y a plusieurs raisons :
+[list][*]Tous les utilisateurs ont flash (Windows, Mac et même Linux !), contrairement aux formats comme Quicktime ou Windows Media Player ou encore Real Player[*]C'est un format très adapté, un lecteur bien fait en flash est très propre, le format [url=http://fr.wikipedia.org/wiki/FLV]flv[/url] est particulièrement adapté au streaming[/list]
+
+-- Première étape : héberger la vidéo --
+
+Tout d'abord il faut que votre vidéo soit hébergée quelque part sur le net.
+Deux solutions s'offrent à vous:
+[list][*]Vous disposez d'un lecteur en flash et vous souhaitez l'utiliser (dans ce cas seule la fin de l'article devrait vous intéresser) ;[*]Vous souhaitez faire héberger votre vidéo par un service adapté dans ce cas voici une présentation des principaux services.[/list]
+
+--- Dailymotion ---
+
+[url=http://www.dailymotion.com]www.dailymotion.com[/url]
+Vous pouvez envoyer des vidéos de tous les principaux formats (QuickTime, Windows Media, MPEG, DV, 3GPP...), vos fichiers doivent avoir une taille maximale de 150 Mo (ce qui vous laisse une bonne marge de man&#339;uvre).
+Pour envoyer la vidéo, il faut être inscrit (c'est la moindre des choses), cliquez sur envoyer une vidéo et suivez les instructions. Il est important de ne pas fermer la page pendant toute la durée du chargement !
+Une fois la vidéo envoyée, elle apparaîtra dans vos vidéos.
+
+Pour ajouter une vidéo il va falloir copier le code fourni dans le formulaire [i]lecteur exportable.[/i]. Nous allons prendre pour l'exemple [url=http://www.dailymotion.com/visited/search/mussotrail/video/xukdm_mussotrail-dirt-co-2]une vidéo de BMX[/url] ([url=http://www.mussotrail.com]www.mussotrail.com[/url]). Trois propriétés nous intéressent :
+[list][*]La largeur (width en anglais) qui vaut ici 425
+[*]La hauteur (height en anglais) qui vaut ici 335)[*]L'adresse du fichier vidéo (ici il s'agit de [url=http://www.dailymotion.com/swf/73hv0LSLNy9uU5YZs]http://www.dailymotion.com/swf/73hv0LSLNy9uU5YZs[/url], il se trouve dans le champ src de la balise embed ;))[/list]
+
+Pour l'afficher grâce au BBCode il faudra utiliser la balise flash comme ceci :
+[code=bbcode][swf=largeur,hauteur]adresse[/swf][/code]
+Pour cet exemple nous avons donc :
+[code=bbcode][swf=425,335]http://www.dailymotion.com/swf/73hv0LSLNy9uU5YZs[/swf][/code]
+
+Et voici le résultat final (centré) :
+[align=center][swf=425,335]http://www.dailymotion.com/swf/73hv0LSLNy9uU5YZs[/swf][/align]
+
+[u]Remarques:[/u]
+Dailymotion est un bon hébergeur, leur lecteur est fonctionnel, un seul reproche à leur faire, c'est que lorsqu'on clique sur la vidéo une nouvelle fenêtre s'ouvre et renvoie sur la vidéo chez eux.
+
+--- Youtube ---
+
+[url=http://www.youtube.com]www.youtube.com[/url]
+Youtube est un des gros hébergeurs de vidéos. La remarque précédente sur dailymotion est aussi valable,  leur lecteur est tout de même bien fait,  en revanche la taille des fichiers est limitée à 100 Mo. Le choix dépend donc de l'importance de vos critères.
+
+Là encore la démarche est facilitée : le code source en html est donné. Il suffit donc de soutirer quelques informations de ce code pour afficher la vidéo. D'abord il s'agit du champ appelé embed, vous avez là encore 3 valeurs à relever.
+Voici un exemple de vidéo de chez youtube :
+[code=bbcode][swf=425,350]http://www.youtube.com/v/9iC0EbHcU1U[/swf][/code]
+Qui donne :
+[align=center][swf=425,350]http://www.youtube.com/v/9iC0EbHcU1U[/swf][/align]
+
+--- Autres hébergeurs vidéos ---
+
+Il existe d'autres hébergeurs vidéos et chez tous il s'agit de la même démarche. En voici deux autres: [url=http://video.google.com/][s]Google Vidéo[/s][/url], [url=http://www.zapiks.fr]Zapicks[/url] (sports de glisse).
+
+-- J'ai mon lecteur flash --
+
+Si vous avez votre propre lecteur de streaming en flash vous avez certainement le code html qui va avec.
+Pour l'insérer dans PHPBoost il vous suffit simplement de repérer la hauteur, la largeur et l'adresse de votre animation. Ensuite il faut utiliser la balise flash de la façon suivante :
+[code=bbcode][swf=largeur,hauteur]adresse[/swf][/code]
+
+N'hésitez pas à poser des questions sur le forum pour avoir des éclaircissements ou des précisions.</#content#>

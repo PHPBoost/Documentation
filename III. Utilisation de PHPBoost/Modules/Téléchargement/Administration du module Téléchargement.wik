@@ -1,0 +1,106 @@
+<#id#>66</#id#>
+<#id_contents#>805</#id_contents#>
+<#title#>Administration du module Téléchargement</#title#>
+<#encoded_title#>administration-du-module-telechargement</#encoded_title#>
+<#hits#>445</#hits#>
+<#id_cat#>32</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>32</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>65</#cat_article_id#>
+<#con_id_contents#>805</#con_id_contents#>
+<#con_id_article#>66</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-telechargements">Configuration des téléchargements</a><ol class="wiki_list_2"><li><a href="#paragraph_permissions-globales">Permissions globales</a></li><li><a href="#paragraph_configuration-des-telechargements">Configuration des téléchargements</a></li></ol></li><li><a href="#paragraph_categories">Catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li></ol></li><li><a href="#paragraph_gerer-les-fichiers">Gérer les fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_liste-des-fichiers">Liste des fichiers</a></li><li><a href="#paragraph_ajouter-un-fichier">Ajouter un fichier</a></li></ol></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>982</#user_id#>
+<#user_ip#>193.164.156.12</#user_ip#>
+<#timestamp#>1358351391</#timestamp#>
+<#content#>Dans cette partie nous allons voir comment administrer le module téléchargement.
+
+-- Configuration des téléchargements --
+
+--- Permissions globales ---
+
+Vous pouvez définir ici les permissions globales du module. Vous pourrez changer ces permissions localement sur chaque catégorie.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_1.jpg[/img][/align]
+
+[b]Permissions :[/b]
+
+[list]
+[*]Permissions de lecture : définit qui a le droit d'accéder au module.
+[*]Permissions d'écriture : définit qui a le droit d'ajout sur le module.
+[*]Permissions de contribution : définit qui a le droit de poster une contribution pour le module téléchargement.
+[/list]
+
+--- Configuration des téléchargements ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_2.jpg[/img][/align]
+
+[b]Liste des paramètres disponibles :[/b]
+
+[list]
+[*]Nombre maximum de fichiers affichés : nombre de fichiers visibles sur une page.
+[*]Nombre de colonnes dans lesquelles sont présentées les catégories  : nombre de colonne pour afficher les catégories sur une page.
+[*]Echelle de notation : Note maximum que l'on peut donner à un fichier.
+[*]Description de la racine des téléchargements : Message qui sera affiché sur la page d'accueil du module Téléchargement.
+[/list]
+
+-- Catégories --
+
+--- Gestion des catégories ---
+
+Cette page vous permet de gérer vos catégories de téléchargement, les rendre visibles ou non, les modifier, les supprimer ou les classer.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_3.jpg[/img][/align]
+
+--- Ajouter une catégorie ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_4.jpg[/img][/align]
+
+[b]Vous pouvez créer de nouvelles catégories, pour cela vous devez remplir les informations suivantes :[/b]
+
+[list]
+[*][b]Nom de la catégorie[/b] : titre de la catégorie.
+[*][b]Emplacement de la catégorie[/b] : vous pouvez placer la catégorie à la racine ou dans une autre catégorie.
+[*][b]Image de la catégorie[/b] : icône de la catégorie, les icônes doivent se trouver dans le répertoire ../download de votre serveur.
+[*][b]Visible[/b] : pour rendre la catégorie visible.
+[*][b]Description de la catégorie[/b] : description de la catégorie.
+[*][b]Permissions spéciales[/b] : par défaut la catégorie aura la configuration générale du module. Vous pouvez lui appliquer des permissions particulières en cochant la petite case.
+[/list]
+
+-- Gérer les fichiers --
+
+--- Liste des fichiers ---
+
+Cette page vous permet de voir tous vos téléchargements, de les modifier et si besoin de les supprimer.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_5.jpg[/img][/align]
+
+--- Ajouter un fichier ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_6.jpg[/img][/align]
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_7.jpg[/img][/align]
+
+[b]Vous pouvez ajouter un nouveau fichier en téléchargement, pour cela vous devez remplir les informations suivantes :[/b]
+
+[list]
+[*][b]Titre[/b] : nom de votre fichier.
+[*][b]Catégorie[/b] : choisissez une catégorie où se trouvera votre fichier.
+[*][b]url[/b] : adresse de votre fichier. Ne pas oublier le 'http://'.
+[*][b]Taille[/b] : notez ici la taille de votre fichier en méga-octets (Mo).
+[*][b]Nombre de téléchargements[/b] : nombre de fois que le fichier a été téléchargé.
+[*][b]Méthode de téléchargement[/b] : choisissez de faire une redirection vers le fichier sauf si le fichier s'affiche dans le navigateur au lieu d'être téléchargé et que ce fichier est sur votre serveur, dans ce cas, choisissez de forcer le téléchargement.
+[*][b]Description complète[/b] : description complète votre fichier qui s'affichera sur la page de téléchargement du fichier.
+[*][b]Courte description[/b] : description qui s'affichera dans la liste des téléchargements de la catégorie.
+[*][b]Adresse de l'image illustrant le fichier[/b] : adresse de l'image qui illustrera le fichier.
+[*][b]Date d'ajout du fichier[/b] : permet de choisir la date d'ajout du fichier.
+[*][b]Ignorer la date de sortie du fichier[/b] : ne prends plus en compte la date de sortie du fichier.
+[*][b]Date de sortie (ou dernière mise à jour) du fichier[/b] : date de sortie ou de mise à jours du fichier (peut être différente de la date d'ajout).
+[*][b]Parution du fichier[/b] : permet de choisir la durée de visibilité du fichier en téléchargement, ou bien l'approbation ou non de celui-ci. Si vous choisissez une période précise, au delà de cette période, le fichier sera désapprouvé.
+[*][b]Approuvé[/b] : définit si le fichier est approuvé ou non, tant qu'un fichier n'est pas approuvé il ne s'affichera pas.
+[/list]</#content#>

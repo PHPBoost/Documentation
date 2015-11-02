@@ -1,0 +1,111 @@
+<#id#>11</#id#>
+<#id_contents#>777</#id_contents#>
+<#title#>Panneau de modération</#title#>
+<#encoded_title#>panneau-de-moderation</#encoded_title#>
+<#hits#>1089</#hits#>
+<#id_cat#>11</#id_cat#>
+<#is_cat#>1</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>11</#cat_id#>
+<#cat_id_parent#>3</#cat_id_parent#>
+<#cat_article_id#>11</#cat_article_id#>
+<#con_id_contents#>777</#con_id_contents#>
+<#con_id_article#>11</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_presentation">Présentation</a><ol class="wiki_list_2"><li><a href="#paragraph_les-avertissements">Les avertissements</a></li><li><a href="#paragraph_les-sanctions">Les sanctions</a></li><li><a href="#paragraph_les-bannissements">Les bannissements</a></li><li><a href="#paragraph_les-alertes">Les alertes</a></li></ol></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1466</#user_id#>
+<#user_ip#>90.55.70.218</#user_ip#>
+<#timestamp#>1358193255</#timestamp#>
+<#content#>Dans cet article, nous découvrirons pas à pas le panneau de modération de PHPBoost. 
+Celui-ci va vous permettre de gérer les avertissements des utilisateurs.
+
+
+-- Présentation --
+
+Il existe deux panneaux de modération différents : celui du site général, et celui du forum.
+
+Pour accéder au panneau de modération général de votre site, cliquez sur [i]Mon profil[/i], puis sur [i]Panneau de modération[/i], tout à gauche.
+
+Voilà ce que vous devriez voir : 
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_1.jpg[/img]
+[/align]
+Pour accéder au panneau de modération du forum, rendez-vous sur votre forum et cliquez sur [i]Panneau de modération[/i], juste au-dessous du titre de votre forum.
+
+Voilà ce que vous devriez voir : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_2.jpg[/img][/align]
+
+Les deux panneaux sont assez similaires, il y a juste une fonctionnalité supplémentaire sur le forum : les alertes.
+Nous allons maintenant détailler chaque fonctionnalité.
+
+
+--- Les avertissements ---
+
+Vous pouvez mettre des avertissements aux utilisateurs si vous le jugez nécessaire. Ces avertissements vont permettre de prévenir l'utilisateur, via un message envoyé anonymement, de ses agissements jugés nuisibles et/ou déplacés.
+
+Pour envoyer un avertissement à un utilisateur, cliquez sur [i]Gestion des avertissements[/i], puis entrez le nom de l'utilisateur concerné.
+
+Voilà ce que vous devriez voir : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_3.jpg[/img][/align]
+
+D'ici, vous pouvez personnaliser le message (un message pré-enregistré est déjà écrit) qui sera envoyé à l'utilisateur pour le prévenir et modifier le niveau d'avertissement qui va lui être accordé. Pour lui envoyer l'avertissement, mettez le pourcentage que vous voulez, et cliquez sur [i]Changer le niveau[/i], juste à côté. L'auteur du message privé sera "Administrateur" ou "Modérateur" selon le rang de l'expéditeur. Aucun pseudo ne figurera.
+
+Vous pouvez voir, même en tant que membre, si un utilisateur est averti, ou pas. Pour le savoir, regarder les messages ou commentaires postés par l'utilisateur averti. Vous verrez en bas une petite icône avec un point d&#8217;exclamation, et un pourcentage juste à côté. Le pourcentage d'avertissement : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_4.jpg[/img][/align]
+
+
+--- Les sanctions ---
+
+Vous pouvez sanctionner les utilisateurs ayant commis une faute. Les sanctions empêcheront l'utilisateur de poster quoi que ce soit sur le totalité du site pour une durée déterminée, qui sera fixée par vous-même. L'utilisateur sera prévenu par message privé, comme pour les avertissements. Pour arriver au panneau de la [i]Gestion des sanctions[/i], effectuez la même procédure que pour celle des avertissements.
+
+Voilà ce que vous devriez voir : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_5.jpg[/img][/align]
+
+Vous pouvez personnaliser le message pré-enregistré et modifier la durée durant laquelle le membre ne pourra pas poster. Pour le sanctionner, il vous suffira alors de cliquer sur [i]Envoyer[/i]. Il recevra alors un message privé anonyme, de la même manière que pour les avertissements.
+
+
+--- Les bannissements ---
+
+Vous pouvez bannir un utilisateur ayant commit une faute (souvent grave). Il existe deux façons de bannir. 
+
+La première va consister à vous rendre dans la Gestion des bannissements (qui va en fait vous renvoyer dans la Gestion des avertissements), dans le panneau de modération (forum, ou site général), et de mettre 100% d'avertissement à membre. Celui-ci sera alors banni définitivement, et ne pourra donc plus accéder au site. 
+
+Il existe une deuxième façon, mais uniquement utilisable par l'administrateur, puisqu'il faut accéder à l'administration du site. Cette deuxième façon étant bien plus appréciable, puisqu'elle va vous permettre de bannir le membre, mais pendant une durée limitée, allant de 1 minute, jusqu'à définitivement. Pour cela, rendez-vous dans votre administration. Cliquez sur [i]Membres[/i], puis [i]Gestion[/i].
+
+Vous verrez alors ceci : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_6.jpg[/img][/align]
+
+Cliquez sur [i]Modifier[/i], pour modifier les informations de l'utilisateur. Descendez, jusqu'à trouver la partie Sanction, d'ici vous pourrez ajuster la durée du bannissement : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_7.jpg[/img][/align]
+
+
+--- Les alertes ---
+
+Les alertes vont permettre aux utilisateurs d'avertir les modérateurs concernant des sujets du forum qui ne respecteraient par le règlement.
+
+Pour alerter les modérateurs d'un sujet non conforme, rendez-vous sur ce même sujet, puis cliquez sur [i]Alerter les modérateurs[/i], sous le dernier message du sujet. Vous arriverez sur une page qui vous permettra d'exposer le problème rencontré aux modérateurs : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_8.jpg[/img][/align]
+
+Intéressons nous maintenant au traitement de ces alertes, du côté des modérateurs.
+
+Lorsque une alerte est envoyée, votre panneau de contribution clignotera, avec un petit chiffre à côté (le nombre de contributions en attentes) :
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_9.jpg[/img][/align]
+
+Vous pouvez donc traiter cette alerte du panneau de contribution, en cliquant dessus, puis en cliquant sur [i]Traiter la contribution[/i], en haut. Mais vous pouvez aussi la traiter depuis le panneau de modération du forum. Si vous avez choisi cette dernière solution, dirigez vous vers le panneau de modération du forum, cliquez sur [i]Gestion des alertes[/i]. Toutes les alertes apparaitront alors (qu'elles soient traitées ou non) : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/moderation/moderation_10.jpg[/img][/align]
+
+Pour la traiter, cliquez dessus, puis cliquez sur [i]Mettre en résolu[/i]. Après, à vous de régler le problème signalé (par messages privés, ...). Sachez que toute alerte peut être ré-ouverte. Pour cela cliquez sur l'alerte déjà traitée, puis cliquez sur [i]Mettre en attente de traitement[/i].
+
+Voilà, maintenant vous savez vous servir du panneau de modération de PHPBoost ! Utilisez le à bon escient ;)</#content#>

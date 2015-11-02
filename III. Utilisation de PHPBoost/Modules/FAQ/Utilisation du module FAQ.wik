@@ -1,0 +1,100 @@
+<#id#>43</#id#>
+<#id_contents#>817</#id_contents#>
+<#title#>Utilisation du module FAQ</#title#>
+<#encoded_title#>utilisation-du-module-faq</#encoded_title#>
+<#hits#>636</#hits#>
+<#id_cat#>24</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>24</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>39</#cat_article_id#>
+<#con_id_contents#>817</#con_id_contents#>
+<#con_id_article#>43</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_index-de-la-faq">Index de la FAQ</a></li><li><a href="#paragraph_contenu-d-une-categorie">Contenu d'une catégorie</a></li><li><a href="#paragraph_gerer-la-categorie">Gérer la catégorie</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-une-question">Ajouter une question</a></li></ol></li><li><a href="#paragraph_questions-reponses">Questions/Réponses</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1837</#user_id#>
+<#user_ip#>142.213.7.74</#user_ip#>
+<#timestamp#>1358355067</#timestamp#>
+<#content#>Voici une petite documentation pour les utilisateurs du module FAQ.
+
+-- Index de la FAQ --
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_6.jpg[/img][/align]
+
+Lorsque vous arrivez sur l'index de la foire aux questions vous accédez à une page regroupant les catégories contenant les questions/réponses.
+Le nombre de question que contient une catégorie est écrit en-dessous de celle-ci.
+Pour accéder aux questions/réponses d'une catégorie, il suffit de cliquez sur celle désirée.
+
+Autre point, l'index se gère comme les autres catégories, il vous est donc possible d'ajouter des questions/réponses directement sur l'index.
+
+-- Contenu d'une catégorie --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_7.jpg[/img][/align]
+
+Résumé du contenu:
+
+[list][*]Un en-tête vous permet de rédiger une description et/ou autre de la catégorie.
+[*]Pour chaque catégorie vous accédez à la liste des questions/réponses correspondantes. Il peut y avoir des sous-catégories dans une catégorie.
+[*]Pour pouvoir modifier la catégorie et son contenu il suffit de suivre le lien "Gérer la catégorie".[/list]
+
+-- Gérer la catégorie --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_8.jpg[/img][/align]
+
+Résumé des possibilités pour la description de votre catégorie:
+
+[list][*]Éditez le nom de la catégorie dans le champs prévu à cet effet.
+	[*]Éditez la description à l'aide du BBcode ou de l'éditeur Tinymce.
+	[*]Prévisualiser votre description.[/list]
+
+Résumé des possibilités pour l'affichage de vos réponses:
+
+[list][*]Suivre la configuration générale. Choisi par défaut par le/les administrateur(s).
+	[*]En ligne, les réponses seront masquées et un clic sur la question affichera la réponse correspondante .
+	[*]En bloc, les questions seront suivies de leurs réponses.[/list]
+
+Vous pouvez aussi changer les droits d'autorisations de la catégorie. Les sous-catégories contenues dans cette catégorie adopteront elles aussi la modification.
+
+--- Ajouter une question ---
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_9.jpg[/img][/align]
+
+Le premier lien "Afficher toutes les réponses" vous permet d'afficher et cacher toutes les réponses.
+
+Un peu plus bas se trouvent une icône représentant le mot "Ajout". Un clic vous affiche une nouvelle page où vous devez éditer votre question et votre réponse.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_10.jpg[/img][/align]
+
+Pour rédiger votre réponse vous pouvez utiliser le BBcode ou l'éditeur Tinymce.
+
+-- Questions/Réponses --
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_11.jpg[/img][/align]
+
+Pour commencer les questions/réponses sont soit affichées en ligne ou en bloc, se référer à la partie "Gérer la catégorie".
+
+À droite de la question se trouve cinq icônes. Voici leur fonction respective.
+
+-[img]/faq/templates/images/flag.png[/img]-
+Adresse de la question, il s'agit de l'ancre qui mène directement à la question, pratique pour référer quelqu'un sur une question de la FAQ.
+
+-[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_12.png[/img]-
+Cet icône vous permet de déplacer la question dans une autre catégorie ou sous-catégorie.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_15.jpg[/img][/align]
+
+-[img]/faq/templates/images/up.png[/img]-
+Monter la question au-dessus de la question précédente, sans changer de catégorie ou sous-catégorie.
+
+-[img]/faq/templates/images/down.png[/img]-
+Descendre la question au-dessous de la question suivante, sans changer de catégorie ou sous-catégorie.
+
+-[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_13.png[/img]-
+Modifier la question/réponse. Référez-vous à l'étape ajouter une question.
+
+-[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_14.png[/img]-
+Supprimer la question. Un message vous demandant la confirmation de suppression vous sera affiché.</#content#>

@@ -1,0 +1,90 @@
+<#id#>172</#id#>
+<#id_contents#>942</#id_contents#>
+<#title#>Passer son site 3.0 en version 4.0</#title#>
+<#encoded_title#>passer-son-site-3-0-en-version-4-0</#encoded_title#>
+<#hits#>18940</#hits#>
+<#id_cat#>48</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>48</#cat_id#>
+<#cat_id_parent#>2</#cat_id_parent#>
+<#cat_article_id#>170</#cat_article_id#>
+<#con_id_contents#>942</#con_id_contents#>
+<#con_id_article#>172</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_pre-requis">Pré-requis</a></li><li><a href="#paragraph_preparer-votre-site">Préparer votre site</a></li><li><a href="#paragraph_mise-a-jour-du-site">Mise à jour du site</a></li><li><a href="#paragraph_configurez-votre-site-sur-phpboost-4-0">Configurez votre site sur PHPBoost 4.0</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1760</#user_id#>
+<#user_ip#>82.224.142.186</#user_ip#>
+<#timestamp#>1372004416</#timestamp#>
+<#content#>Pour pouvoir passer de la version 3.0 à la 4.0, il ne suffit pas de remplacer les fichiers ou d'appliquer un patch comme les mises à jours mineures.
+
+Etant donné qu'il y a eu plusieurs changements au niveau de la base de données, il faut faire des conversions pour que la nouvelle version fonctionne correctement, nous allons donc voir au cours de cet article les différentes choses à faire pour migrer vers PHPBoost 4.0.
+
+[style=warning]N'oubliez pas de faire des sauvegardes de [b]vos fichiers[/b] et de [b]la base de données[/b] avant la procédure ![/style]
+
+
+-- Pré-requis --
+En premier lieu, nous vous conseillons très fortement d'effectuer une sauvegarde de tout votre site. Que se soit au niveau de l'hébergement des répertoires et fichiers constituant le site, qu'au niveau de la base de données.[indent][list]
+	[*][i]Pour la base de données, nous vous invitons à regarder cet [link=gestion-de-la-base-de-donnees#paragraph_sauvegarder-une-table-ou-l-ensemble-des-tables]article[/link].[/i]
+	[*][i]Pour le contenu de votre site, nous vous invitons à regarder cet [link=transfert-des-fichiers-via-logiciel-ftp]article[/link] (Au lieu de copier vers le serveur en ligne, vous copierez vers le serveur local ou nouveau serveur)[/i][/list][/indent]
+En second lieu, suivant le système d'exploitation de votre machine à partir de laquelle vous allez effectuer cette opération, certains fichiers composant la fourniture de la version PHPBoost 4.0 correspondent à des fichiers cachés de type .nom-fichier (avec le point devant) Il sera donc nécessaire que vous régliez votre explorateur de fichiers pour les rendre visibles.
+
+En troisième lieu,  cette migration ne vaut que pour le noyau du CMS ainsi que ses modules associés. Les thèmes et les modules non-officiels, eux, devront être migrés à part avec la procédure les affairant. [indent][list]
+	[*][i]Il est préférable de désactiver tous vos modules non-officiels avant de procéder à la migration.[/i]
+[/list][/indent]Il sera aussi important de sauvegarder la/les versions 3.0 se trouvant dans le répertoire [b]/templates[/b] parce que le premier redémarrage se fera avec le thème base de la version 4.0.[indent][list]
+	[*][i]Nous vous invitons à regarder cet [link=mettre-a-jour-son-theme-3-0-en-4-0]article[/link].[/i]
+[/list][/indent]
+Enfin, il sera nécessaire que vous fassiez le recensement de tous les répertoires et fichiers que vous avez ajoutés en plus de ceux constituant le CMS PHPBoost 3.0 pour bien les identifier avant de suivre cette procédure.
+
+
+-- Préparer votre site --
+1 - Sur le serveur de votre site PHPBoost en version 3.0, sauvegardez les dossiers suivants :
+[indent][list]
+	[*]/gallery/pics (si le module gallery est installé)
+	[*]/gallery/pics/thumbnails (si le module gallery est installé)
+	[*]/images
+	[*]/upload
+[/list][/indent]
+2 - Sur le serveur de votre site PHPBoost en version 3.0, dans le dossier [b]/cache[/b], sauvegardez les fichiers suivants (s'ils existent) :
+[indent][list]
+	[*] pages.txt
+	[*] os.txt
+	[*] browsers.txt
+	[*] lang.txt
+	[*] robots.txt
+[/list][/indent]
+3 - Une fois ces fichiers sauvegardés à part en sécurité [u]supprimez[/u] tous les dossiers et fichiers. 
+[indent]([b][color=red]attention à ne pas supprimer des dossiers/fichiers étrangers à PHPBoost ![/color][/b])[/indent]
+4 - Téléchargez la version complète de [url=/download/]PHPBoost 4.0[/url].
+
+5 - Décompressez l'archive et transférer [b][u]tous[/u][/b] les fichiers et dossiers de la version 4.0 sur votre serveur dans le même répertoire de la version 3.0.
+
+6 - Remettez les fichiers et dossiers de la version 3.0 (sauf ceux du dossier cache) que vous avez préalablement sauvegardés dans l'étape 1, sur votre serveur toujours dans le même répertoire en autorisant le remplacement des fichiers.
+
+7 - Transférez maintenant les fichiers sauvegardés dans l'étape 2 du dossier [b]cache[/b] dans le dossier [b]/stats/cache/[/b]
+
+8 - Récupérez ensuite le pack de mise à jour à cette adresse : [url=/download/file-231+pack-de-mise-jour-3-0-vers-4-0.php]PHPBoost 3.0 vers PHPBoost 4.0[/url]
+
+9 - Décompressez l'archive et téléchargez le dossier [b]update[/b] dans le répertoire PHPBoost de votre serveur.
+
+
+-- Mise à jour du site --
+- Lancez l'adresse suivante : [code=text,0,1]http://www.monsite.com/update/[/code]
+(en remplaçant [code=text,0,1]http://www.monsite.com[/code] par l'adresse de votre site)
+
+- Là vous pouvez suivre les différentes étapes, qui sont proches de la procédure de l'installation de PHPBoost que vous avez connue au moment de la création de votre site PHPBoost version 3.0. A noter que lorsque vous arriverez au choix du nom de la base de données, il s'agit de celui de la base de données version 3.0 à convertir. Le temps de la conversion peut être plus où moins long suivant la taille de la base de données. En moyenne comptez une à deux minutes.
+
+
+-- Configurez votre site sur PHPBoost 4.0 --
+- En premier lieu [u]supprimez le dossier /update et /install de votre serveur[/u], une personne mal intentionnée pourrait endommager votre site le cas échéant.
+
+- Mettez votre site en maintenance dans l'administration et passez en revue l'ensemble des données, configurations et autorisations.
+
+- Allez dans le panneau d'Administration puis Modules \ Modules \ Ajouter et ajouter le nouveau module "Personnalisation" que vous retrouverez ensuite dans le menu Outils.
+
+Au moindre problème contactez le support sur le [url=/forum/index.php]forum PHPBoost[/url].
+
+Bonne continuation sur PHPBoost 4.0 !</#content#>

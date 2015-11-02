@@ -1,0 +1,355 @@
+<#id#>146</#id#>
+<#id_contents#>1311</#id_contents#>
+<#title#>Mettre à jour son thème 3.0 en 4.0</#title#>
+<#encoded_title#>mettre-a-jour-son-theme-3-0-en-4-0</#encoded_title#>
+<#hits#>1240</#hits#>
+<#id_cat#>42</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>42</#cat_id#>
+<#cat_id_parent#>4</#cat_id_parent#>
+<#cat_article_id#>145</#cat_article_id#>
+<#con_id_contents#>1311</#con_id_contents#>
+<#con_id_article#>146</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-config-ini">Le fichier config.ini</a></li><li><a href="#paragraph_le-header-tpl">Le header.tpl</a><ol class="wiki_list_2"><li><a href="#paragraph_le-cache-css">Le Cache CSS</a></li><li><a href="#paragraph_les-fichiers-css-des-modules">Les fichiers CSS des modules</a></li><li><a href="#paragraph_le-favicon">Le favicon</a></li><li><a href="#paragraph_javascript">Javascript</a></li><li><a href="#paragraph_tinymce">TinyMCE</a></li><li><a href="#paragraph_le-logo">Le logo</a></li><li><a href="#paragraph_code-de-la-maintenance">Code de la maintenance</a></li></ol></li><li><a href="#paragraph_le-content-css">Le content.css</a></li><li><a href="#paragraph_fichiers-images-a-deplacer-et-creer">Fichiers images à déplacer et créer</a></li><li><a href="#paragraph_la-preview-du-theme">La preview du thème</a></li><li><a href="#paragraph_fichiers-css-devenus-inutiles">Fichiers CSS devenus inutiles</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>982</#user_id#>
+<#user_ip#>83.204.255.203</#user_ip#>
+<#timestamp#>1405398341</#timestamp#>
+<#content#>Nous allons voir au fil de cet article la manière de modifier un thème 3.0 afin de pouvoir l'utiliser sur la version 4.0 de PHPBoost.
+
+-- Le fichier config.ini --
+
+Le fichier config.ini a été modifié afin de permettre aux graphistes de paramétrer leurs thèmes en fonction des besoins.
+
+Modifications apportées :
+
+[list]
+	[*]'left_column' et 'right_column' laissent place à 'columns_disabled', qui définit les emplacements de menu à désactiver à l'installation du thème.
+
+Par exemple, pour désactiver la colonne gauche et le sous entête, on entrera ceci :
+[code=ini]columns_disabled=left,sub_header[/code]
+[style=notice]
+Pour info, voilà les différentes valeurs possibles :
+[code=ini]header,sub_header,top_central,bottom_central,top_footer,footer,left,right[/code][/style]
+
+	[*]L'adresse de l'image de prévisualisation est maintenant indiquée dans le config.ini . On rétrograde me direz-vous ? Que nenni ! L'avantage est qu'il est maintenant possible d'afficher plusieurs images de prévisualisation, et en taille réelle s'il vous plaît :)
+Par exemple, pour définir 2 images de prévisualisation du thème, nous écrirons :
+[code=ini]pictures="theme/images/theme.jpg,theme/images/apercu2.png"[/code]
+[/list]
+
+Bien entendu, n'oubliez pas de changer la version de compatibilité du thème :
+[code=ini]compatibility=4.0[/code]
+
+[style=notice]N'oubliez pas d'éditer les config.ini de chaque dossier langue de votre thème.[/style]
+
+-- Le header.tpl --
+
+Le header.tpl a été repensé afin de gagner en visibilité et de profiter des nombreuses améliorations apportées sur le noyau.
+
+[style=notice]Les explications données ci-dessous s'appliquent à la majorité des thèmes. Il se peut que le contenu de votre fichier soit différent des exemples affichés. Lisez bien toutes les consignes afin d'éviter toute erreur.[/style]
+
+--- Le Cache CSS ---
+
+PHPBoost V4 permet de mettre les fichiers CSS en cache afin de gagner en rapidité d'execution.
+
+Remplacer :[code=tpl]&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/design.css" type="text/css" media="screen" /&gt;
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/global.css" type="text/css" media="screen, print, handheld" /&gt;
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/generic.css" type="text/css" media="screen, print, handheld" /&gt;
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/content.css" type="text/css" media="screen, print, handheld" /&gt;
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/bbcode.css" type="text/css" media="screen, print, handheld" /&gt;[/code]
+par : [code=tpl]&lt;!-- Theme CSS --&gt;
+# IF C_CSS_CACHE_ENABLED #
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/kernel/css_cache.php?name=theme-{THEME}&amp;files=
+/templates/{THEME}/theme/design.css;
+/templates/{THEME}/theme/global.css;
+/templates/{THEME}/theme/generic.css;
+/templates/{THEME}/theme/content.css" type="text/css" media="screen, print, handheld" /&gt;
+# ELSE #
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/design.css" type="text/css" media="screen" /&gt;
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/global.css" type="text/css" media="screen, print, handheld" /&gt;
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/generic.css" type="text/css" media="screen, print, handheld" /&gt;
+&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/content.css" type="text/css" media="screen, print, handheld" /&gt;
+# ENDIF #[/code]
+
+--- Les fichiers CSS des modules ---
+
+La variable des fichiers CSS associés aux modules change.
+
+Remplacez [code=tpl]{ALTERNATIVE_CSS}[/code]
+par [code=tpl]{MODULES_CSS}[/code]
+
+--- Le favicon ---
+
+La favicon est maintenant paramétrable depuis le panneau d'administration.
+
+Remplaçez [code=tpl]&lt;link rel="shortcut icon" href="{PATH_TO_ROOT}/favicon.ico" type="image/x-icon" /&gt;[/code]
+par [code=tpl]	# IF C_FAVICON #
+	&lt;link rel="shortcut icon" href="{FAVICON}" type="{FAVICON_TYPE}" /&gt;
+	# ENDIF #[/code]
+
+--- Javascript ---
+
+Deux variables supplémentaires sont nécessaire pour le Javascript.
+
+Ajouter [code=tpl]var THEME = "{THEME}";
+var LANG = "{LANG}";[/code]
+en dessous de [code=tpl]var TOKEN = "{TOKEN}";[/code]
+
+Remplacez :
+
+[code=tpl]&lt;script type="text/javascript" src="{PATH_TO_ROOT}/kernel/framework/js/scriptaculous/prototype.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="{PATH_TO_ROOT}/kernel/framework/js/scriptaculous/scriptaculous.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="{PATH_TO_ROOT}/kernel/framework/js/global.js"&gt;&lt;/script&gt;[/code]
+
+Par :
+
+[code=tpl]&lt;script type="text/javascript" src="{PATH_TO_ROOT}/kernel/lib/js/scriptaculous/prototype.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="{PATH_TO_ROOT}/kernel/lib/js/scriptaculous/scriptaculous.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="{PATH_TO_ROOT}/kernel/lib/js/phpboost/global.js"&gt;&lt;/script&gt;
+		&lt;script type="text/javascript" src="{PATH_TO_ROOT}/kernel/lib/js/lightbox/lightbox.js"&gt;&lt;/script&gt;[/code]
+
+--- TinyMCE ---
+
+TinyMCE est maintenant géré comme un module.
+
+Supprimer [code=tpl]# IF C_BBCODE_TINYMCE_MODE # &lt;script type="text/javascript" src="{PATH_TO_ROOT}/kernel/framework/content/tinymce/tiny_mce.js"&gt;&lt;/script&gt; # ENDIF #[/code]
+
+--- Le logo ---
+
+Le logo est maintenant modifiable dans le panneau d'administration.
+
+Ajouter [code=tpl]# IF C_HEADER_LOGO #
+	&lt;style type="text/css"&gt;
+		div#header_container {
+   			background: url('{HEADER_LOGO}') no-repeat;
+		}
+	&lt;/style&gt;
+# ENDIF #
+[/code]
+en dessous de la balise [code=tpl]&lt;body&gt;[/code]
+
+--- Code de la maintenance ---
+
+La maintenance est maintenant externalisée.
+
+Remplacez [code=tpl]# IF C_MAINTAIN_DELAY #
+# IF C_ALERT_MAINTAIN #
+&lt;div style="position:absolute;top:5px;width:99%;"&gt;
+	&lt;div style="position:relative;width:400px;margin:auto;margin-top:30px;" class="warning"&gt;
+		{L_MAINTAIN_DELAY}
+		&lt;br /&gt;&lt;br /&gt;
+		&lt;script type="text/javascript"&gt;
+			document.write('&lt;div id="release"&gt;{L_LOADING}...&lt;/div&gt;');
+		&lt;/script&gt;
+		&lt;noscript&gt;
+			&lt;strong&gt;{DELAY}&lt;/strong&gt;
+		&lt;/noscript&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+# ENDIF #
+
+&lt;script type="text/javascript"&gt;
+&lt;!--
+var release_timeout_seconds = 0;
+function release(year, month, day, hour, minute, second)
+{
+	if (document.getElementById('release'))
+	{
+		var sp_day = 86400;
+		var sp_hour = 3600;
+		var sp_minute = 60;
+		
+		now = new Date({MAINTAIN_NOW_FORMAT}+release_timeout_seconds++);
+		end = new Date(year, month, day, hour, minute, second);
+		release_time = (end.getTime() - now.getTime())/1000;
+		
+		if( release_time &lt;= 0 )
+		{
+			document.location.reload();
+			release_time = '0';
+		}
+		else
+			timeout = setTimeout('release('+year+', '+month+', '+day+', '+hour+', '+minute+', '+second+')', 1000);
+		
+		release_days = Math.floor(release_time/sp_day);
+		release_time -= (release_days * sp_day);
+		
+		release_hours = Math.floor(release_time/sp_hour);
+		release_time -= (release_hours * sp_hour);
+
+		release_minutes = Math.floor(release_time/sp_minute);
+		release_time -= (release_minutes * sp_minute);
+
+		release_seconds = Math.floor(release_time);
+		release_seconds = (release_seconds &lt; 10) ? '0' + release_seconds : release_seconds;
+		
+		document.getElementById('release').innerHTML = '&lt;strong&gt;' + release_days + '&lt;/strong&gt; {L_DAYS} &lt;strong&gt;' + release_hours + '&lt;/strong&gt; {L_HOURS} &lt;strong&gt;' + release_minutes + '&lt;/strong&gt; {L_MIN} &lt;strong&gt;' + release_seconds + '&lt;/strong&gt; {L_SEC}';
+	}
+}
+if ({UNSPECIFIED})
+	release({MAINTAIN_RELEASE_FORMAT});
+else
+{
+	if (document.getElementById('release'))
+		document.getElementById('release').innerHTML = '&lt;strong&gt;{DELAY}&lt;/strong&gt;';
+}
+--&gt;
+&lt;/script&gt;
+# ENDIF #[/code]
+par[code=tpl]	# INCLUDE MAINTAIN #[/code]
+
+
+-- Le content.css --
+
+PHPBoost utilise en plus de la balise "input", la balise "button".
+
+remplacez : [code=css]input.submit{
+input.submit:hover{
+input.reset{
+input.reset:hover{[/code]
+respectivement par : [code=css]input.submit, button.submit{
+input.submit:hover, button.submit:hover{
+input.reset, button.reset{
+input.reset:hover, button.reset:hover{[/code]
+
+[style=notice]vers les lignes 150[/style]
+
+Ajouter dans votre fichier :
+
+[code=css]/* Commentaires */
+.comment {
+	width:98%;
+	margin-bottom:20px;
+	overflow:auto;
+}
+
+.comment-date {
+	margin-left: 10px;
+}
+
+.comment-user_infos {
+	text-align:center;
+	width:150px;
+	float:left;
+}
+
+.comment-content {
+	margin-left:180px;
+}
+
+.view-topic {
+	margin-top: 10px;
+}
+
+.comment-message {
+	position: relative;
+	padding: 15px;
+	margin-top: 5px;
+	border: 1px solid #D6DEE7;
+	color: #333;
+	background:#ECEFFA;
+	min-height: 80px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+.comment-message::before {
+	content: "";
+	top: 15px;
+	bottom: auto;
+	left: -25px;
+	position: absolute;
+	border-width: 15px 25px 15px 0;
+	border-color: transparent #D6DEE7;	
+	border-style: solid;
+	display: block;
+	width: 0;
+}
+
+.comment-message::after {
+	content: "";
+	top: 16px;
+	bottom: auto;
+	left: -24px;
+	position: absolute;
+	border-width: 14px 24px 14px 0;
+	border-color: transparent #ECEFFA;	
+	border-style: solid;
+	display: block;
+	width: 0;
+}
+
+.comment-avatar{
+	width:80px;
+}
+
+.message-containt{
+	overflow:auto;	
+}
+
+div#comment-pseudo a {}
+
+.comment-user_infos img{
+	padding:10px 0px;	
+}
+
+.comment-moderate{
+	background:#ECEFFA;
+	border: 1px solid #D6DEE7;
+	border-radius:4px;
+	padding-top:4px;
+	width: 98%;
+	text-align:center;
+	vertical-align:middle;
+}
+.comment-moderate a{
+	vertical-align:top;
+}[/code]
+
+Mais aussi :
+
+[code=css].module_top_title {
+	float:left;
+    font-size:12px;
+	margin-left:3px;
+	font-weight:bold;
+}
+
+.module_top_title img {
+	margin-top:-2px;
+}
+
+.module_top_com {
+	float:right;
+}
+
+.module_actions {
+	float:right;
+	margin:0 10px 15px;
+	margin-top:-25px;
+}[/code]
+
+
+-- Fichiers images à déplacer et créer --
+
+Les fichiers suivants ont été déplacé et crées : 
+Copiez l'image [code=text,0,1]"com_mini.png"[/code] dans le repertoire [code=text,0,1]"templates\{VotreTheme}\images"[/code].
+
+
+-- La preview du thème --
+
+Là où il n'y avait possibilité de ne présenter qu'une image de 240 pixels de large, la version 4 nous laisse maintenant en afficher plusieurs en taille réelle.
+Je vous laisse donc créer autant de preview que vous voulez, et stockez les où vous le souhaitez (dans le dossier du thème bien sûr).
+Notez tout de même leurs emplacements, car il faudra par la suite indiquer à PHPBoost où sont stockées ces images.
+
+Seule recommandation : Les images doivent faire 1024 pixels de large.
+
+[style=success]Vous pouvez maintenant importer le thème modifié dans votre installation PHPBoost version 4 ![/style]
+
+-- Fichiers CSS devenus inutiles --
+
+Vous pouvez également supprimer les fichiers bbcode.css et tinymce présents dans votre thème qui sont maintenant devenus inutiles.</#content#>

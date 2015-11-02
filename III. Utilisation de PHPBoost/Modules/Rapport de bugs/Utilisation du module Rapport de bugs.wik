@@ -1,0 +1,125 @@
+<#id#>186</#id#>
+<#id_contents#>926</#id_contents#>
+<#title#>Utilisation du module Rapport de bugs</#title#>
+<#encoded_title#>utilisation-du-module-rapport-de-bugs</#encoded_title#>
+<#hits#>801</#hits#>
+<#id_cat#>50</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>50</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>184</#cat_article_id#>
+<#con_id_contents#>926</#con_id_contents#>
+<#con_id_article#>186</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_presentation-du-module">Présentation du module</a><ol class="wiki_list_2"><li><a href="#paragraph_bugs-non-resolus">Bugs non résolus</a></li><li><a href="#paragraph_bugs-resolus">Bugs résolus</a></li><li><a href="#paragraph_feuille-de-route">Feuille de route</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol></li><li><a href="#paragraph_rapporter-un-bug">Rapporter un bug</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>935</#user_id#>
+<#user_ip#>89.90.175.161</#user_ip#>
+<#timestamp#>1368007640</#timestamp#>
+<#content#>Une fois le module "rapport de bugs" activé et configuré, il vous faudra le rendre accessible aux membres ayant une autorisation d'accès. Pour cela, vous pouvez créer un lien direct vers l'URL [code=text]http://monsite.com/bugtracker/[/code] dans un menu de liens par exemple.
+
+Seuls les membres ayant les autorisations nécessaires pourront accéder au module.
+
+
+-- Présentation du module --
+
+La page d'accueil du module se présente sous la forme d'un tableau à onglets.
+Si toutes les options sont actives, le tableau affichera quatre onglets:
+[list]
+	[*] Bugs non-résolus
+	[*] Bugs résolus
+	[*] Feuille de route 
+	[*] Statistiques : affiche les statistiques 
+[/list]
+
+[style=notice]Au dessus à droite du tableau se trouve le bouton "ajout" permettant de créer un nouveau rapport de bug.[/style]
+
+[style=notice]L'onglet "Feuille de route" n'est pas forcément présent.[/style]
+
+
+--- Bugs non résolus ---
+
+Cet onglet présente la liste des bugs non encore résolus. On y trouve les colonnes suivantes:
+[list]
+	[*] ID -&gt; affiche le numéro identifiant du bug sous forme de lien pointant vers la page détaillée de la description du bug
+	[*] Titre -&gt; Affiche l'intitulé du bug
+	[*] Niveau -&gt; affiche le niveau d'importance du bug. Le fond de la cellule prend la couleur définie pour le niveau choisi.
+	[*] État -&gt; Traité ou non 
+	[*] Commentaires -&gt; affiche le nombre de commentaires liés au bug en cours, sous forme d'un lien pointant vers ces derniers
+	[*] Détecté le -&gt; date de détection du bug
+	[*] Actions -&gt; affiche les icônes de gestion du bug: Rejeter le bug / Modifier le bug / Afficher l'historique du bug / Supprimer le bug  
+[/list]
+
+[style=notice]La colonne "Actions" n'est affichée que si l'utilisateur a le droit de modération sur le module.[/style]
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/bugs_non_resolus.jpg[/img]
+
+
+--- Bugs résolus ---
+
+L'onglet "bugs résolus" affiche un tableau assez similaire au précédent avec cependant quelques variantes. En effet, la colonne "état" dresse ici la liste des bugs corrigés et rejetés. On y trouve la date de correction dans la colonne "Corrigé le". 
+
+[style=notice]La colonne "Actions" n'est affichée que si l'utilisateur a le droit de modération sur le module.[/style]
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/bugs_resolus.jpg[/img]
+
+--- Feuille de route ---
+
+L'onglet feuille de route liste les bugs corrigés pour chaque version. Cet onglet ne s'affiche que si chacunes des conditions suivantes sont remplies:
+[list]
+     [*] il existe au moins une version renseignée dans la section "version" de l'administration du module
+     [*] l'option "afficher la feuille de route" est activée dans la section "configuration" de l'administration du module     
+[/list]
+
+La feuille de route pour une version comprend les bugs corrigés (ID barré) ou à corriger (ID non barré) pour celle-ci. Une liste déroulante positionnée au dessus du tableau vous permet de choisir la version à afficher.
+ 
+[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/feuille_de_route.jpg[/img]
+
+
+--- Statistiques ---
+
+Comme son nom l'indique, cet onglet présente les statistiques du module.
+Parmi les informations listées on trouve :
+
+[list]
+	[*] Le nombre de bugs détectés
+	[*] Le nombre de bugs corrigés (Cette section n'est disponible que s'il y a au moins un bug corrigé dans une version)
+	[*] Le top 10 des personnes ayant détecté des bugs avec le détail du nombre de bugs pour chaque participant
+[/list]
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/statistiques.jpg[/img]
+
+
+-- Rapporter un bug --
+
+Après avoir cliqué sur le lien "Ajout" (cf "Présentation du module" en début d'article) PHPBoost affiche le formulaire d'ajout de bug.
+Ce dernier vous propose de renseigner les informations nécessaires à la bonne compréhension du bug rapporté ainsi qu'à sa correction.
+Vous aurez à renseigner:
+[list]
+	[*] Le titre du bug, permettant d'identifier rapidement le sujet dont il est question
+	[*] La description, qui comprend certains champs pré-remplis (en fonction de la configuration du module) permettant de traiter le bug au mieux
+	[*] La catégorie (si configurée) permettant de distinguer de quelle partie du site/objet provient le bug
+	[*] Le niveau du bug, en fonction de son degré d'importance du bug
+	[*] La priorité, permettant de savoir si le bug doit être résolu rapidement ou non (bien souvent en fonction du niveau d'importance du bug)
+	[*] La version (si configurée) du script dans laquelle a été répertorié le bug
+	[*] La possibilité de reproduction ou non, selon que le bug soit reproductible ou non
+	[*] La méthode de reproduction du bug.
+[/list]
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/ajout_bug.jpg[/img]
+
+Après avoir validé le formulaire, le bug ainsi rapporté ira rejoindre le haut de la liste du tableau présentant les bugs résolus.
+En fonction de la configuration du module, l'utilisateur pourra être averti par MP de :
+
+[list]
+	[*] L'ajout d'un commentaire à la suite du bug. Ces commentaires sont, la plupart du temps, rédigés par les développeurs qui pourraient nécessiter d'avantage d'informations pour solutionner le bug. 
+	[*] Le rejet du bug si ce dernier n'est pas considéré comme tel par les développeurs
+	[*] La résolution du bug.
+[/list]
+
+Chaque MP contient un lien pointant vers la page du bug avec sa présentation et les commentaires (s'il y en a) qui ont été postés sur la fiche en présence.
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/fiche_bug.jpg[/img]</#content#>

@@ -1,0 +1,270 @@
+<#id#>194</#id#>
+<#id_contents#>1012</#id_contents#>
+<#title#>Dupliquer un module</#title#>
+<#encoded_title#>dupliquer-un-module</#encoded_title#>
+<#hits#>1257</#hits#>
+<#id_cat#>54</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>54</#cat_id#>
+<#cat_id_parent#>0</#cat_id_parent#>
+<#cat_article_id#>192</#cat_article_id#>
+<#con_id_contents#>1012</#con_id_contents#>
+<#con_id_article#>194</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_la-theorie">La théorie</a></li><li><a href="#paragraph_la-pratique">La pratique</a><ol class="wiki_list_2"><li><a href="#paragraph_remplacer-le-nom-du-module-dans-le-contenu-de-chaque-fichier">Remplacer le nom du module dans le contenu de chaque fichier</a></li><li><a href="#paragraph_remplacer-le-nom-des-fichiers">Remplacer le nom des fichiers</a></li><li><a href="#paragraph_ajustements">Ajustements</a></li><li><a href="#paragraph_installation">Installation</a></li></ol></li><li><a href="#paragraph_les-mises-a-jours">Les mises à jours</a></li><li><a href="#paragraph_bonus">Bonus</a><ol class="wiki_list_2"><li><a href="#paragraph_module-blog">Module blog</a></li><li><a href="#paragraph_appel-des-5-derniers-billets-du-blog-dans-homecustom">Appel des 5 derniers billets du blog dans HomeCustom </a></li></ol></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>768</#user_id#>
+<#user_ip#>78.122.32.202</#user_ip#>
+<#timestamp#>1395674240</#timestamp#>
+<#content#>-- La théorie --
+Il est possible de dupliquer un module, soit pour le renommer à son goût, soit pour utiliser simultanément plusieurs fois le même module dans des situations différentes .
+
+Il suffit de remplacer le nom du module partout où il apparaît en respectant bien la casse (majuscules/minuscules), dans sa version [u]non-installée[/u].
+Vous n'avez besoin d'aucune connaissance particulière en programmation, mais il va falloir être méthodique sachant que chaque oubli ou suppression d'un autre caractère entraînera une erreur.
+
+Outil : notepad++
+
+-- La pratique --
+Exemple avec le module [b]news[/b] transformé en module [b]blog[/b],[color=#FF9900] version PHPBoost 4.0[/color] . 
+ 
+[list=ordered]
+	[*] [url=/download/download-249+news.php]Télécharger le module news officiel[/url]
+	[*] Décompresser l'archive 
+	[*] Modifier le nom du dossier [b]news[/b] en [b]blog[/b]
+[/list]
+
+--- Remplacer le nom du module dans le contenu de chaque fichier ---
+Il faut effectuer le remplacement des trois chaînes de caractères contenues dans chaque fichier du module : [i]module[/i], [i]Module[/i] et [i]MODULE[/i].
+
+[list=ordered]
+	[*] Ouvrir un des fichiers du dossier avec notepad++
+	[*] Cliquer sur le menu [b]Recherche &gt; Rechercher...[/b] ou CTRL+F
+	[*] Cliquer sur l'onglet [b]replace[/b]
+	[*] Cocher la case [b]Respecter la [u]c[/u]asse[/b]
+[/list]
+Effectuer les 3 recherches suivantes :
+[list]
+	[*] Rechercher [b]news[/b], remplacer par [b]blog[/b]
+	[*] Rechercher [b]News[/b], remplacer par [b]Blog[/b]
+	[*] Rechercher [b]NEWS[/b], remplacer par [b]BLOG[/b]
+[/list]
+Grâce au bouton [b]Remplacer tout[/b], la manipulation est très rapide pour chaque recherche.
+Une recherche, sans respect de la casse, sur [b]news[/b] permet de s'assurer que tout est modifié.
+
+enregistrer le fichier puis ouvrir le suivant et recommencer
+
+--- Remplacer le nom des fichiers ---
+une fois le [u]contenu[/u] des fichiers modifiés, il faut renommer le [u]nom[/u] de chaque fichier qui contient le mot [b]news[/b], [b]News[/b] ou [b]NEWS[/b], respectivement avec [b]blog[/b], [b]Blog[/b] ou [b]BLOG[/b] (news_block.tpl devient blog_block.tpl, NewsSetup.class.php devient BlogSetup.class.php, etc.).
+
+__news
+[hide]____lang
+______english
+________desc.ini
+________install.php
+________news_config.php
+________news_english.php
+______french
+________desc.ini
+________install.php
+________news_config.php
+________news_french.php
+____phpboost
+______NewsCats.class.php
+______NewsCommentsTopic.class.php
+______NewsExtensionPointProvider.class.php
+______NewsFeedProvider.class.php
+______NewsHomePageExtensionPoint.class.php
+______NewsSearchable.class.php
+______NewsSetup.class.php
+______NewsSitemapExtensionPoint.class.php
+____templates
+______framework
+________content
+__________syndication
+____________last_news.tpl
+______images
+______admin_news.tpl
+______admin_news_cat.tpl
+______admin_news_config.tpl
+______admin_news_menu.tpl
+______management.tpl
+______news.css
+______news.tpl
+______news_block.tpl
+______news_list.tpl
+____admin_news.php
+____admin_news_cat.php
+____admin_news_config.php
+____admin_news_menu.php
+____config.ini
+____index.php
+____management.php
+____news.php
+____news.png
+____news_begin.php
+____news_constants.php
+____news_mini.png
+____print.php
+____xmlhttprequest.php
+____xmlhttprequest_cats.php[/hide]
+
+Ça fait du monde :)
+Une fois TOUS les fichiers vérifiés et modifiés, le répertoire blog ressemble à ça :
+__blog
+[hide]____lang
+______english
+________desc.ini
+________install.php
+________blog_config.php
+________blog_english.php
+______french
+________desc.ini
+________install.php
+________blog_config.php
+________blog_french.php
+____phpboost
+______BlogCats.class.php
+______BlogCommentsTopic.class.php
+______BlogExtensionPointProvider.class.php
+______BlogFeedProvider.class.php
+______BlogHomePageExtensionPoint.class.php
+______BlogSearchable.class.php
+______BlogSetup.class.php
+______BlogSitemapExtensionPoint.class.php
+____templates
+______framework
+________content
+__________syndication
+____________last_blog.tpl
+______images
+______admin_blog.tpl
+______admin_blog_cat.tpl
+______admin_blog_config.tpl
+______admin_blog_menu.tpl
+______management.tpl
+______blog.css
+______blog.tpl
+______blog_block.tpl
+______blog_list.tpl
+____admin_blog.php
+____admin_blog_cat.php
+____admin_blog_config.php
+____admin_blog_menu.php
+____config.ini
+____index.php
+____management.php
+____blog.php
+____blog.png
+____blog_begin.php
+____blog_constants.php
+____blog_mini.png
+____print.php
+____xmlhttprequest.php
+____xmlhttprequest_cats.php[/hide]
+
+--- Ajustements ---
+Il y a quelques réajustement à faire dans les fichiers de langues (news est féminin, blog est masculin ;))
+Changer les icônes [b]blog.png[/b] et [b]blog_mini.png[/b] si besoin.
+
+--- Installation ---
+Ajouter le dossier à la racine du site.
+Il ne reste plus qu'a tester en installant le module via l'administration du site.
+
+-- Les mises à jours --
+Vous devrez refaire la manipulation sur les fichiers modifiés par la mise à jour si le module dupliqué (ici news) est impacté.
+La configuration et la création de la base de donnée du nouveau module (blog) étant déjà effectuées, il suffit de remplacer les fichier sans avoir besoin de réinstaller le module (sauf en cas de mise à jour impactant la base de données).
+
+-- Bonus --
+[color=#FF9900] version PHPBoost 4.0[/color]
+--- Module blog ---
+Module blog : [url=http://dev.babsoweb.com/data/modules/blog.zip]télécharger[/url].
+Icônes (16 32 64px) : [url=http://icongal.com/gallery/icon/6023/32/blog_post_test_write_document]télécharger[/url], à placer dans [i]blog/templates/images[/i].
+
+--- Appel des 5 derniers billets du blog dans HomeCustom  ---
+
+Fichier [i]HomeCustomHomePageExtensionPoint.class.php[/i] :
+ [code=php]&lt;?php
+/*##################################################
+ *                     HomeCustomHomePageExtensionPoint.class.php
+ *                            -------------------
+ *   begin                : August 25, 2012
+ *   copyright            : (C) 2012 Kevin MASSY
+ *   email                : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+ 
+class HomeCustomHomePageExtensionPoint implements HomePageExtensionPoint
+{
+	public function get_home_page()
+	{
+		return new DefaultHomePage($this-&gt;get_title(), $this-&gt;get_view());
+	}
+ 
+	private function get_title()
+	{
+		return LangLoader::get_message('title', 'common', 'HomeCustom');
+	}
+ 
+	private function get_view()
+	{
+		$template = new FileTemplate('HomeCustom/home.tpl');
+ 
+		return $this-&gt;build_view($template);
+	}
+ 
+	private function build_view(View $template)
+	{
+		$result = PersistenceContext::get_querier()-&gt;select('
+			SELECT id, title, contents, timestamp, img, user_id
+			FROM ' . PREFIX . 'blog
+			WHERE visible = 1
+			ORDER BY timestamp DESC 
+			LIMIT 5
+		');
+ 
+		while ($row = $result-&gt;fetch())
+		{
+			$date = new Date(DATE_TIMESTAMP, TIMEZONE_AUTO, $row['timestamp']);
+			$template-&gt;assign_block_vars('blog', array(
+				'U_LINK' =&gt; Url::to_absolute('/blog/blog.php?id=' . $row['id']),
+				'TITLE' =&gt; $row['title'],
+				'CONTENT' =&gt; $row['contents'],
+				'IMG' =&gt; FormatingHelper::second_parse_url($row['img']),
+				'DATE' =&gt; $date-&gt;format(DATE_FORMAT_TEXT_LONG)
+			));
+			
+		}
+ 
+		return $template;
+	}
+}
+?&gt;[/code]
+Fichier [i]home.tpl[/i] :
+[code=tpl]# START blog #
+&lt;div&gt;
+	&lt;a href="{blog.U_LINK}"&gt;{blog.TITLE}&lt;/a&gt;
+	&lt;p&gt;{blog.DATE}&lt;/p&gt;
+        &lt;img src="{blog.IMG}" alt="{blog.TITLE}" /&gt;
+	&lt;p&gt;{blog.CONTENT}&lt;/p&gt;
+&lt;/div&gt;
+# END blog #[/code]</#content#>

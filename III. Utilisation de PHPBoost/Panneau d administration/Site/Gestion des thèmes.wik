@@ -1,0 +1,91 @@
+<#id#>133</#id#>
+<#id_contents#>1398</#id_contents#>
+<#title#>Gestion des thèmes</#title#>
+<#encoded_title#>gestion-des-themes</#encoded_title#>
+<#hits#>1676</#hits#>
+<#id_cat#>15</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>15</#cat_id#>
+<#cat_id_parent#>10</#cat_id_parent#>
+<#cat_article_id#>15</#cat_article_id#>
+<#con_id_contents#>1398</#con_id_contents#>
+<#con_id_article#>133</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_th-mes-install-s">Thèmes installés</a></li><li><a href="#paragraph_ajouter-un-th-me">Ajouter un thème</a></li><li><a href="#paragraph_installer-un-th-me">Installer un thème</a></li><li><a href="#paragraph_conseils-pour-choisir-le-th-me-de-son-site">Conseils pour choisir le thème de son site</a><ol class="wiki_list_2"><li><a href="#paragraph_mettre-le-th-me-par-d-faut-de-votre-site">Mettre le thème par défaut de votre site</a></li><li><a href="#paragraph_vous-souhaitez-que-tous-les-membres-aient-le-m-me-th-me">Vous souhaitez que tous les membres aient le même thème?</a></li><li><a href="#paragraph_vous-souhaitez-que-les-membres-puissent-choisir-leur-th-me">Vous souhaitez que les membres puissent choisir leur thème?</a></li></ol></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>5083</#user_id#>
+<#user_ip#>90.16.36.10</#user_ip#>
+<#timestamp#>1423580748</#timestamp#>
+<#content#>-- Thèmes installés --
+
+Vous avez la possibilité ici de voir tous les thèmes installés sur votre site.
+
+Pour chacun vous pouvez : 
+[list]
+       [*] Prévisualiser le thème
+       [*] L'activer ou non
+       [*] Choisir le niveau d'autorisation du thème pour qu'il soit utilisé
+       [*] Le supprimer.
+[/list]
+
+Enfin pour chaque thème, vous avez différents renseignements fournis : 
+[list]
+       [*] l'auteur
+       [*] une petite description
+       [*] sa compatibilité avec les versions de phpboost
+       [*] sa version Html
+       [*] sa version Css
+       [*] ses couleurs dominantes
+       [*] son extensibilité
+       [*] sa largeur
+[/list]
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/themes/installed_themes.png[/img][/align]
+
+-- Ajouter un thème --
+
+PHPBoost est doté d'une fonction pour intégrer automatiquement les thèmes sans passer par le FTP. Ces thèmes doivent être aux formats ZIP ou TAR.
+
+[style=notice]Tous les thèmes en téléchargement sur le site de pHPBoost sont intégrables de cette manière.[/style]
+
+Via le formulaire, sélectionnez le thème en .zip ou .tar sur votre disque dur puis cliquez sur 'uploader'. Attendez quelques instants et vous verrez le thème se mettre dessous dans les thèmes à installer. Le thème est alors mis dans le répertoire /templates/
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/themes/upload_a_theme.png[/img][/align]
+
+[style=notice]Vous pourrez aussi télécharger via FTP votre thème dans le répertoire '/templates' de votre hébergement.[/style]
+
+Une fois le thème ajouté, il faut l'installer, c'est ce que nous allons voir ci dessous.
+
+-- Installer un thème --
+
+Une fois votre thème mis sur le FTP, il va falloir l'installer via le panel d'administration.
+Vous avez la liste des thèmes non installés sous le formulaire d'upload des thèmes. 
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/themes/themes_managment.png[/img][/align]
+
+Choisissez le thème que vous souhaitez installer puis cliquez sur 'installer'. Le thème disparait de la liste des thèmes à installer et apparaitra dans la liste de gestion des thèmes, ce que nous avons vu en début de cet article.
+
+[style=notice]Si le thème que vous utilisez n'a pas changé, lisez le chapitre en dessous pour savoir que faire.[/style]
+
+-- Conseils pour choisir le thème de son site --
+
+Une fois le ou les thèmes installés sur PHPBoost, vous allez avoir plusieurs configurations possibles : 
+
+--- Mettre le thème par défaut de votre site ---
+
+Ce thème sera le thème de tous les visiteurs de votre site. Pour cela, allez dans le panel de configuration du site / site / configuration et la vous avez une zone de sélection du thème par défaut du site. 
+
+--- Vous souhaitez que tous les membres aient le même thème? ---
+
+Pour qu'un seul thème soit proposé aux visiteurs et aux membres, il va falloir que vous choisissiez le thème par défaut de votre site  puis rendez vous dans le panel de configuration / membres / membres/ configuration des membres et pour 'Permission aux membres de choisir leur thème' cochez 'NON' (à partir de la version 4.1 de PHPBoost, cette option a été retirée, tous les membres ont la possibilité de choisir leur thème).
+
+--- Vous souhaitez que les membres puissent choisir leur thème? ---
+
+Installez plusieurs thèmes .Chaque membre pourra choisir son thème dans son profil (donc l'administrateur aussi) :
+ [list]
+	[*] Choisissez dans la configuration le thème par défaut pour les visiteurs.
+	[*]dans le panel de configuration / membres / membres/ configuration des membres au niveau 'Permission aux membres de choisir leur thème' cochez 'OUI' (à partir de la version 4.1 de PHPBoost, cette option a été retirée, tous les membres ont la possibilité de choisir leur thème).
+[/list]</#content#>

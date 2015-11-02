@@ -1,0 +1,147 @@
+<#id#>174</#id#>
+<#id_contents#>855</#id_contents#>
+<#title#>Traitement des dates</#title#>
+<#encoded_title#>traitement-des-dates</#encoded_title#>
+<#hits#>891</#hits#>
+<#id_cat#>5</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>5</#cat_id#>
+<#cat_id_parent#>0</#cat_id_parent#>
+<#cat_article_id#>159</#cat_article_id#>
+<#con_id_contents#>855</#con_id_contents#>
+<#con_id_article#>174</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_les-referentiels-temporels">Les référentiels temporels</a><ol class="wiki_list_2"><li><a href="#paragraph_les-differents-referentiels">Les différents référentiels</a></li><li><a href="#paragraph_quel-referentiel-utiliser">Quel référentiel utiliser ?</a></li></ol></li><li><a href="#paragraph_initialiser-la-classe">Initialiser la classe</a><ol class="wiki_list_2"><li><a href="#paragraph_date-actuelle">Date actuelle</a></li><li><a href="#paragraph_annee-mois-jour-heure-minutes-secondes">Année, mois, jour, heure, minutes, secondes</a></li><li><a href="#paragraph_timestamp">Timestamp</a></li><li><a href="#paragraph_chaine-de-caractere">Chaîne de caractère</a></li></ol></li><li><a href="#paragraph_traitement-sur-l-objet-date">Traitement sur l'objet Date</a><ol class="wiki_list_2"><li><a href="#paragraph_obtenir-le-timestamp">Obtenir le timestamp</a></li><li><a href="#paragraph_obtenir-l-annee-de-la-date">Obtenir l'année de la date</a></li><li><a href="#paragraph_obtenir-le-mois-de-la-date">Obtenir le mois de la date</a></li><li><a href="#paragraph_obtenir-le-jour-de-la-date">Obtenir le jour de la date</a></li><li><a href="#paragraph_obtenir-l-heure-de-la-date">Obtenir l'heure de la date</a></li><li><a href="#paragraph_obtenir-les-minutes-de-la-date">Obtenir les minutes de la date</a></li><li><a href="#paragraph_obtenir-les-secondes-de-la-date">Obtenir les secondes de la date</a></li><li><a href="#paragraph_exporter-sous-format-annee-mois-jour">Exporter sous format année-mois-jour</a></li><li><a href="#paragraph_verifier-si-la-date-est-anterieure-a-une-autre-date">Vérifier si la date est antérieure à une autre date</a></li><li><a href="#paragraph_verifier-si-la-date-est-posterieure-a-une-autre-date">Vérifier si la date est postérieure à une autre date</a></li><li><a href="#paragraph_verifier-si-la-date-est-egale-a-une-autre-date">Vérifier si la date est égale à une autre date</a></li></ol></li><li><a href="#paragraph_modifier-les-donnees-d-une-date-apres-sa-creation">Modifier les données d'une date après sa création</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>86.204.86.165</#user_ip#>
+<#timestamp#>1358773264</#timestamp#>
+<#content#>PHPBoost possède une classe permettant d'effectuer plusieurs traitements sur les dates. Nous allons vous la présenter au cours de cet article.
+
+La classe va vous permettre de formater une date dans différents référentiels horaires et de récupérer plusieurs informations dessus.
+
+-- Les référentiels temporels --
+
+Dans un monde internationnal tel qu'Internet, des gens de toutes les nationnalités et de tous les pays se retrouvent sur un même site, donc le serveur peut être basé n'importe où. Il est donc important d'adapter les dates à l'utilisateur (et notamment à son fuseau horaire). Cette classe gère aussi le changement d'heure (heure d'été/ heure d'hiver).
+
+--- Les différents référentiels ---
+
+La classe [i]Date[/i] gère la notion de fuseau horaire à partir de différents référentiels qui sont les suivants :
+[list][*]L'heure [b]système[/b] (ou l'heure du serveur). Toutes les données manipulées par l'application doivent être en heure système. En interne, la classe Date manipule le temps selon le référentiel du système, et tout enregistrement dans la base de données ou dans un fichier quelconque doit se faire dans ce référentiel. Cela permet d'avoir des données homogènes. Ce fuseau horaire est donné automatiquement par le serveur.
+[*]L'heure du [b]site[/b]. Elle est dans le fuseau horaire de l'endroit où est localisé le site. Par exemple un site français sera à l'heure française, c'est à dire en GMT + 1 en hiver. Cette référence sera par ailleurs utilisée pour les invités (visiteurs non enregistrés). Le fuseau horaire du site est choisi par l'administrateur.
+[*]L'heure de l'[b]utilisateur[/b]. Chaque utilisateur enregistré choisit son fuseau horaire, les autres auront le référentiel par défaut, à savoir celui du site.[/list]
+
+--- Quel référentiel utiliser ? ---
+
+Voilà ce qu'il est important de retenir.
+
+L'affichage d'une date se fait quasiment systématiquement dans le référentiel utilisateur. Lorsque l'utilisateur entre une date, elle sera aussi dans son propre référentiel.
+
+L'enregistrement dans la base de données ou dans un fichier texte se fait dans le référentiel système.
+[style=warning]Toute date doit être enregistrée dans le référentiel système, c'est le seul référentiel qu'ont en commun tous les utilisateurs et qui fournira donc une heure équivalente à chacun d'entre eux. Il est impératif de respecter cette règle.[/style]
+
+-- Initialiser la classe --
+
+Selon vos besoins, vous allez avoir besoin de la date actuelle ou d'utiliser une date formatée ou non. Nous allons voir dans ces exemples les différentes manières d'utiliser la classe [i]Date[/i].
+
+--- Date actuelle ---
+
+[code=php]$date = new Date();
+$date = new Date(DATE_NOW);[/code]
+
+Les deux codes si dessus se valent et vont initialiser la classe avec la date et l'heure actuelle. 
+
+--- Année, mois, jour---
+
+[code=php]$date = new Date(DATE_YEAR_MONTH_DAY, TIMEZONE_SYSTEM, 2012, 11, 03);[/code]
+- Le premier paramètre [code=php,0,1]DATE_YEAR_MONTH_DAY[/code]
+spécifie que vous souhaitez donner l'année, le mois et le jour. 
+- Le deuxième paramètre et le timezone, vous pouvez utiliser le timezone (décalage horaire) du serveur, de l'utilisateur ou celui de la configuration du site. Les valeurs sont : [code=php,0,1]TIMEZONE_SITE, TIMEZONE_SYSTEM, TIMEZONE_USER[/code]
+- Les trois autres paramètres sont l'année, le mois et le jour.
+
+--- Année, mois, jour, heure, minutes, secondes ---
+
+[code=php]$date = new Date(DATE_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND, TIMEZONE_SYSTEM, 2012, 11, 03, 12, 9, 24);[/code]
+
+- [code=php,0,1]DATE_YEAR_MONTH_DAY_HOUR_MINUTE_SECOND[/code] permet de spécifier le formatage Année, mois, jour, heure, minutes et secondes.
+- Le deuxième paramètre et le timezone, vous pouvez utiliser le timezone (décalage horaire) du serveur, de l'utilisateur ou celui de la configuration du site. Les valeurs sont : [code=php,0,1]TIMEZONE_SITE, TIMEZONE_SYSTEM, TIMEZONE_USER[/code]
+- Les six autres paramètres sont l'année, le mois, le jour, l'heure, les minutes et les secondes.
+
+--- Timestamp ---
+
+[code=php]$date = new Date(DATE_TIMESTAMP, TIMEZONE_SYSTEM, 100000);[/code]
+- Le premier paramètre [code=php,0,1]DATE_TIMESTAMP[/code]
+spécifie que vous souhaitez utiliser une timestamp.
+- Le deuxième paramètre est le timezone, vous pouvez utiliser le timezone (décalage horaire) du serveur, de l'utilisateur ou celui de la configuration du site. Les valeurs sont : [code=php,0,1]TIMEZONE_SITE, TIMEZONE_SYSTEM, TIMEZONE_USER[/code]
+- Le troisième paramètre est la valeur du timestamp.
+
+--- Chaîne de caractère ---
+
+[code=php]$date = new Date(DATE_FROM_STRING, TIMEZONE_SYSTEM, '10/17/2009', 'm/d/y');[/code]
+- Le premier paramètre [code=php,0,1]DATE_FROM_STRING[/code]
+spécifie que vous souhaitez utiliser chaîne de caractère avec un type de formatage.
+- Le deuxième paramètre est le timezone, vous pouvez utiliser le timezone (décalage horaire) du serveur, de l'utilisateur ou celui de la configuration du site. Les valeurs sont : [code=php,0,1]TIMEZONE_SITE, TIMEZONE_SYSTEM, TIMEZONE_USER[/code]
+- Le troisième paramètre est la valeur de la date
+- Le quatrième paramètre est le type de formatage 
+
+-- Traitement sur l'objet Date --
+
+Vous pouvez, après avoir instancié la classe date, utiliser plusieurs fonctions pour obtenir divers renseignements :
+
+--- Obtenir le timestamp ---
+
+[code=php]$date-&gt;get_timestamp();[/code]
+
+--- Obtenir l'année de la date ---
+
+[code=php]$date-&gt;get_year();[/code]
+
+--- Obtenir le mois de la date ---
+
+[code=php]$date-&gt;get_month();[/code]
+
+--- Obtenir le jour de la date ---
+
+[code=php]$date-&gt;get_day();[/code]
+
+--- Obtenir l'heure de la date ---
+
+[code=php]$date-&gt;get_hours();[/code]
+
+--- Obtenir les minutes de la date ---
+
+[code=php]$date-&gt;get_minutes();[/code]
+
+--- Obtenir les secondes de la date ---
+
+[code=php]$date-&gt;get_seconds();[/code]
+
+--- Exporter sous format année-mois-jour ---
+
+[code=php]$date-&gt;to_date();[/code]
+
+--- Vérifier si la date est antérieure à une autre date ---
+
+[code=php]$date-&gt;is_anterior_to(Date $date);[/code]
+
+--- Vérifier si la date est postérieure à une autre date ---
+
+[code=php]$date-&gt;is_posterior_to(Date $date);[/code]
+
+--- Vérifier si la date est égale à une autre date ---
+
+[code=php]$date-&gt;equals(Date $date);[/code]
+
+-- Modifier les données d'une date après sa création --
+
+Vous pouvez, après création de l'objet, modifier la date, son jour, l'année, l'heure, etc :
+
+[code=php]$date-&gt;set_year($year); // Change l'année
+$date-&gt;set_month($month); // Change le mois
+$date-&gt;set_day($day); // Change le jour
+$date-&gt;set_hours($hours): // Change l'heure
+$date-&gt;set_minutes($minutes); // Change les minutes
+$date-&gt;set_seconds($second); // Change les secondes[/code]</#content#>

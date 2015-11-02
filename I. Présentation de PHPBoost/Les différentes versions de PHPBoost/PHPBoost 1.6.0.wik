@@ -1,0 +1,65 @@
+<#id#>94</#id#>
+<#id_contents#>138</#id_contents#>
+<#title#>PHPBoost 1.6.0</#title#>
+<#encoded_title#>phpboost-1-6-0</#encoded_title#>
+<#hits#>597</#hits#>
+<#id_cat#>14</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>14</#cat_id#>
+<#cat_id_parent#>1</#cat_id_parent#>
+<#cat_article_id#>14</#cat_article_id#>
+<#con_id_contents#>138</#con_id_contents#>
+<#con_id_article#>94</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>82.124.181.87</#user_ip#>
+<#timestamp#>1346007502</#timestamp#>
+<#content#>Sortie le 10 septembre 2006, PHPBoost 1.6.0 est le fruit de 3 mois de développement intensif. De nombreuses nouveautés font leur apparition, comme notamment un module de gestion de contenu en BBCode ou HTML, une newsletter avec 3 formats d'envoi, un système de messagerie privée plus approfondi avec accusé de réception, un module de sauvegarde et de restauration de base de données avec stockage des sauvegardes directement sur le serveur, un système de suivi des messages sur le forum avec possibilité de notification de réponse par mail, flux RSS sur le forum et sur les articles, une nouvelle interface d'administration plus claire et intuitive, la possibilité de choisir la page de démarrage (vous n'êtes plus obligé d'avoir les news en accueil), une nouvelle barre d'arborescence pour un meilleur confort de navigation.
+
+
+-- Changelog --
+
+[list]
+[*]Nouveau système de messages privés, avec limite sur la boite du membre. Possibilité d'éditer les messages si le destinataire ne les a pas encore lu. Marqueur de lecture par le destinataire, et moteur de recherche (Ajax) de membre intégré
+[*]Module [i]Newsletter[/i] (avec envoi au choix en texte, HTML, et BBCode) avec gestion des archives
+[*]Possibilité de scinder (couper en 2) les sujets sur le forum à partir de n'importe quel message à destination de la catégorie voulue. 
+[*]Possibilité de sélectionner des sujets du forum à suivre, une interface permet de les consulter.
+[*]Notification par mail de réponse sur les sujets suivis (activable/désactivable), si le membre est hors ligne
+[*]Module de création automatisé de pages texte/PHP avec choix du niveau d'accès, possibilité de créer des arborescences, catégories, de supprimer la colonne de droite, etc.
+[*]Nouvelle classe de gestion du cache du site, plus sûre et optimisée
+[*]Flux RSS du forum, et des articles (permet d'afficher les 10 derniers ajouts sur son site ou d'autres)
+[*]Sauvegarde/Importation automatique de la base de donnée depuis l'administration
+[*]Possibilité de mettre le site en maintenance, et restreindre l'accès
+[*]Prévisualisation (Ajax) sur tous les formulaires texte
+[*]Lien pour afficher tous les messages du membre sur le forum dans son profil
+[*]Moteur de recherche (Ajax) de membre, dans la page membre et dans l'administration (gestion des groupes, et gestion des membres)
+[*]Possibilité d'avertir les modérateurs d'un sujet non conforme sur le forum
+[*]Nouvelle interface pour l'administration
+[*]Possibilité de choisir la page de démarrage du site
+[*]Refonte du module mini statistiques, lecture du cache des informations (dernier membre, nombre de membres)
+[*]Nouveau champs dans les autorisations des groupes, permettant de désactiver l'approbation des articles/liens web/news pour le groupe
+[*]Liste déroulante des images disponibles avec aperçu pour les groupes d'utilisateurs et les rangs du forum dans l'administration
+[*]Refonte du moteur de recherche du forum, beaucoup plus rapide et avec classement par pertinence de la réponse
+[*]Affichage des groupes du site ainsi que les personnes en faisant parties dans la page membre
+[*]Icônes devant les sujets contenant un sondage
+[*]Nouvelle balise [i][strike][/i], permet de barrer le texte.
+[*]Possibilité de redimensionner le champ texte avec les flèches
+[*]Nouvelle interface pour le BBCode
+[*]Refonte de la barre de lien rapide
+[*]Page de test du support de l'URL Rewriting
+[*]Envoi anonyme du message privé lors d'un avertissement sur le forum
+[*]Système de protection anti-bots, bloquant les messages contenant un nombre de lien abusif
+[*]Délestage automatique de la shoutbox à partir de 100 messages
+[*]Possibilité de modifier le nombre de vue des articles
+[*]Système de gestion des erreurs, numérotées
+[*]Ajout du cache des catégories du forum
+[*]Suppression d'une faille XSS
+[*]Suppression d'un bug de connexion automatique
+[*]Suppression d'un bug présent dans la balise [i][swf][/i]
+[*]Corrections diverses de bugs mineurs
+[/list]</#content#>

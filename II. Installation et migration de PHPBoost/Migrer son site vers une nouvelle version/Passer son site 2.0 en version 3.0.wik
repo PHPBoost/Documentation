@@ -1,0 +1,79 @@
+<#id#>173</#id#>
+<#id_contents#>711</#id_contents#>
+<#title#>Passer son site 2.0 en version 3.0</#title#>
+<#encoded_title#>passer-son-site-2-0-en-version-3-0</#encoded_title#>
+<#hits#>497</#hits#>
+<#id_cat#>48</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>48</#cat_id#>
+<#cat_id_parent#>2</#cat_id_parent#>
+<#cat_article_id#>170</#cat_article_id#>
+<#con_id_contents#>711</#con_id_contents#>
+<#con_id_article#>173</#con_id_article#>
+<#menu#></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>90.40.233.244</#user_ip#>
+<#timestamp#>1357642408</#timestamp#>
+<#content#>[title=4]Un processus de conversion complexe[/title]
+
+La version 3 est une version majeure de PHPBoost, les changements du code en interne et de la base de données (qui stocke le contenu du site) sont très nombreux. Certains systèmes n'existent plus : c'est le cas des menus de liens gérés par le système désormais. Tout convertir aurait énormément retardé la sortie du script de migration. Ainsi certains éléments ne sont pas convertis, en voici la liste :
+
+[list][*]Certaines configurations sont perdues car trop différentes par rapport à la 3.0.
+[*]Les menus de liens 2.0 ne sont pas transférés, les menus des modules 3.0 sont mis par défaut.
+[*]Les droits dans de nombreux endroits sont perdus. Le système d'autorisations par niveau/groupes/membres beaucoup plus puissant et flexible les remplace alors.
+[*]Les rangs ne sont pas transférés[/list]
+
+Il est donc fortement conseillé, une fois la mise à jour achevée, de mettre votre site en maintenance et de vérifier les autorisations dans les différents modules.
+
+[style=warning]Un dernier conseil avant de commencer qui est primordial, faites la mise à jour sur une sauvegarde et non sur votre site.[/style]
+
+[title=4]Détail de la procédure[/title]
+
+[b][size=15]Préparation de votre site[/size][/b]
+
+
+- Sur votre site PHPBoost 2.0 avec les fichiers de la version 2.0, sauvegardez les dossiers suivants :
+[list]
+	[*]/gallery/pics (si le module gallery est installé)
+	[*]/gallery/pics/thumbnails (si le module gallery est installé)
+	[*]/images
+	[*]/upload
+[/list]
+- Une fois ces fichiers sauvegardés à part en sécurité [u]supprimez[/u] tous les autres dossiers et fichiers. ([b]attention à ne pas supprimer de dossiers/fichiers étrangers à PHPBoost ![/b])
+
+- Mettez les fichiers et dossiers de la version 2.0 que vous avez préalablement sauvegardés sur votre serveur dans le répertoire où la version 2.0 était installée.
+
+- Téléchargez [b][color=red]la version complète[/color][/b] de [url=/download/download-111+phpboost-3-0-complete.php]PHPBoost 3.0 Tornade[/url]. [u]Il faut cette version[/u] pour une conversion correcte !
+
+- Mettez [b][u]tous[/u][/b] les fichiers et dossiers de la version 3.0 au même endroit qu'à l'étape précédente.
+
+
+- Téléchargez le pack de mise à jour à cette adresse : [url=http://dl.phpboost.com/fr/updates/update_phpboost2_to_3.zip]PHPBoost 2.0 vers PHPBoost 3.0[/url]
+
+- Mettez le pack de mise à jour au même endroit qu'à l'étape précédente.
+
+
+[b][size=15]Mise à jour de votre site[/size][/b]
+
+
+- Rendez vous à l'adresse suivante (en remplaçant [code=text,0,1]http://www.monsite.com[/code] par l'adresse de votre site) : [code=text,0,1]http://www.monsite.com/update/update.php[/code]
+
+- Là vous pouvez suivre les différentes étapes, il s'agit d'une procédure proche de l'installation de PHPBoost que vous avez dû connaitre au tout début de votre site 2.0. A noter que lorsque vous choisirez le nom de base de données, il s'agit de celui de la base de données 2.0 à convertir.
+
+
+[b][size=15]Configurez votre site sur PHPBoost 3.0[/size][/b]
+
+
+- En premier lieu [u]supprimez le dossier /update de votre serveur[/u], une personne mal intentionnée pourrait endommager votre site le cas échéant.
+
+- Mettez votre site en maintenance dans l'administration et passez en revue l'ensemble des configurations et autorisations.
+
+Au moindre problème contactez le support sur le [url=/forum/index.php]forum PHPBoost[/url].
+
+
+Bonne continuation sur PHPBoost 3.0 !</#content#>

@@ -1,0 +1,94 @@
+<#id#>142</#id#>
+<#id_contents#>1251</#id_contents#>
+<#title#>Système de pagination</#title#>
+<#encoded_title#>systeme-de-pagination</#encoded_title#>
+<#hits#>982</#hits#>
+<#id_cat#>5</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>5</#cat_id#>
+<#cat_id_parent#>0</#cat_id_parent#>
+<#cat_article_id#>159</#cat_article_id#>
+<#con_id_contents#>1251</#con_id_contents#>
+<#con_id_article#>142</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_utilisation-de-la-classe-modulepagination">Utilisation de la classe ModulePagination</a></li><li><a href="#paragraph_liste-des-fonctions-disponible">Liste des fonctions disponible</a><ol class="wiki_list_2"><li><a href="#paragraph_definir-l-url-de-la-pagination">Définir l'url de la pagination</a></li><li><a href="#paragraph_afficher-la-pagination">Afficher la pagination</a></li><li><a href="#paragraph_recuperer-le-nombre-d-elements-par-page">Récupérer le nombre d'éléments par page</a></li><li><a href="#paragraph_savoir-si-la-page-actuelle-possede-des-elements-ou-non">Savoir si la page actuelle possède des éléments ou non</a></li><li><a href="#paragraph_savoir-s-il-y-a-besoin-de-la-pagination-ou-non">Savoir s'il y a besoin de la pagination ou non</a></li><li><a href="#paragraph_recuperer-le-nombre-de-pages">Récupérer le nombre de pages</a></li><li><a href="#paragraph_recuperer-le-nombre-a-partir-duquel-vous-devez-recuperer-les-elements-en-base-de-donnees">Récupérer le nombre à partir duquel vous devez récupérer les éléments en base de données</a></li></ol></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>5193</#user_id#>
+<#user_ip#>88.125.157.163</#user_ip#>
+<#timestamp#>1404999981</#timestamp#>
+<#content#>Le framework de PHPBoost intègre une classe vous permettant de générer très facilement une pagination complète.
+
+Nous allons voir comment l'utiliser.
+
+-- Utilisation de la classe ModulePagination --
+
+La classe ModulePagination prend plusieurs paramètres : 
+
+[code=php,0,1]$pagination = new ModulePagination($current_page, $number_elements, $number_items_per_page, $type = Pagination::FULL_PAGINATION);[/code]
+
+[list]
+	[*] Le premier paramètre est le numéro de la page où vous êtes actuellement.
+	[*] Le deuxième est le nombre d'éléments 
+	[*] Le troisième est le nombre d'éléments par page que vous souhaitez avoir
+	[*] Le quatrième (facultatif) est le type de pagination, [code=php,0,1]Pagination::FULL_PAGINATION[/code] pour avoir une pagination complète, ou [code=php,0,1]Pagination::LIGHT_PAGINATION[/code] pour une pagination plus compacte
+[/list]
+
+Prenons un exemple : 
+
+[code=php]// On compte le nombre d'éléments dans votre base de données
+$number_items = PersistenceContext::get_querier()-&gt;count('votre_table');
+// On récupère le numéro de page courante et on lui donne la valeur de 1 si elle n'est pas définie
+$current_page = AppContext::get_request()-&gt;get_getint('page', 1);
+// On initialise la classe pagination avec les différents paramètres
+$pagination = new ModulePagination($current_page, $number_items, 20);[/code]
+
+Vous allez ensuite pouvoir utiliser les fonctions de la classe pour afficher la pagination, récupérer le numéro de la page, ...
+
+-- Liste des fonctions disponible --
+
+--- Définir l'url de la pagination ---
+
+[code=php]$pagination-&gt;set_url(PATH_TO_ROOT . '/votre_module/votre_page.php?page=%d');[/code]
+
+La classe va s'occuper de remplacer [i]%d[/i] par le numéro de page.
+
+--- Afficher la pagination ---
+
+La fonction display va renvoyer le code HTML de la pagination. Créez une variable TPL ou utiliser un [i]echo[/i] :
+
+[code=php]echo $pagination-&gt;display();[/code]
+
+--- Récupérer le nombre d'éléments par page ---
+
+C'est celui que vous avez défini en troisième paramètre.
+
+Pour le récupérer : [code=php]$pagination-&gt;get_number_items_per_page();[/code]
+
+--- Savoir si la page actuelle possède des éléments ou non ---
+
+Vous pouvez savoir si la page actuelle possède ou non des éléments pour renvoyer une erreur 404 par la suite comme ceci :
+
+[code=php]if ($pagination-&gt;current_page_is_empty() &amp;&amp; $page &gt; 1)
+{
+	$error_controller = PHPBoostErrors::unexisting_page();
+	DispatchManager::redirect($error_controller);
+}[/code]
+
+--- Savoir s'il y a besoin de la pagination ou non ---
+
+Vous pouvez utiliser la fonction [i]has_several_pages()[/i] pour savoir si vous devez ou non afficher la pagination dans votre page. En effet, la pagination n'est pas utile s'il n'y a qu'une page à afficher ...
+
+[code=php]$pagination-&gt;has_several_pages();[/code]
+
+--- Récupérer le nombre de pages ---
+
+Pour le récupérer : [code=php]$pagination-&gt;get_number_pages();[/code]
+
+--- Récupérer le nombre à partir duquel vous devez récupérer les éléments en base de données ---
+
+Selon la page demandée, vous n'allez pas afficher les mêmes éléments. Pour connaitre à partir de quel élément vous devez récupérer vos articles par exemple, il faut s'aider de cette fonction :
+
+[code=php]$pagination-&gt;get_display_from();[/code]</#content#>

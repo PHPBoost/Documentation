@@ -1,0 +1,56 @@
+<#id#>160</#id#>
+<#id_contents#>842</#id_contents#>
+<#title#>Pages</#title#>
+<#encoded_title#>pages</#encoded_title#>
+<#hits#>561</#hits#>
+<#id_cat#>44</#id_cat#>
+<#is_cat#>1</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>44</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>160</#cat_article_id#>
+<#con_id_contents#>842</#con_id_contents#>
+<#con_id_article#>160</#con_id_article#>
+<#menu#></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1837</#user_id#>
+<#user_ip#>24.201.132.222</#user_ip#>
+<#timestamp#>1358734120</#timestamp#>
+<#content#>[table style="float:right;"]
+   [row]
+      [head colspan="2"]Pages[/head]
+   [/row]
+   [row]
+      [col]Auteur[/col]
+      [col][url=/user/profile/1]CrowkaiT[/url][/col]
+   [/row]
+   [row]
+      [col]Version actuelle[/col]
+      [col]4.0[/col]
+   [/row]
+   [row]
+      [col]Date de sortie[/col]
+      [col]juillet 2007[/col]
+   [/row]
+   [row]
+      [col]Compatibilité[/col]
+      [col]PHPBoost 4.0[/col]
+   [/row]
+[/table]
+
+[align=center]
+   [size=20][b]Module Pages[/b][/size]
+   [img]http://resources.phpboost.com/documentation/utilisation/modules/pages/logo.png[/img]
+   
+[/align]
+
+
+
+
+
+
+
+[b]Description :[/b] Ce module vous procure un système de création de pages où peuvent être intégrées comme syntaxes le bbcode, l'html et le javascript. Ce module sort un peu de l'esprit communautaire du CMS. Il a surtout pour but d'être utilisé par l'administrateur afin d'inclure des pages supplémentaires intégrées dans l'architecture de Phpboost. Une fonction intéressante est la création de catégories rassemblant des pages pour une meilleure présentation, idéal pour une documentation par exemple. La gestion des droits est assez poussée ce qui permettra à l'administrateur de mettre des autorisations personnalisées sur ces pages.</#content#>

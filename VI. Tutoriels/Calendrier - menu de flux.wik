@@ -1,0 +1,50 @@
+<#id#>302</#id#>
+<#id_contents#>1402</#id_contents#>
+<#title#>Calendrier - menu de flux</#title#>
+<#encoded_title#>calendrier-menu-de-flux</#encoded_title#>
+<#hits#>554</#hits#>
+<#id_cat#>54</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>54</#cat_id#>
+<#cat_id_parent#>0</#cat_id_parent#>
+<#cat_article_id#>192</#cat_article_id#>
+<#con_id_contents#>1402</#con_id_contents#>
+<#con_id_article#>302</#con_id_article#>
+<#menu#></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>5083</#user_id#>
+<#user_ip#>90.16.59.222</#user_ip#>
+<#timestamp#>1425644820</#timestamp#>
+<#content#>Par défaut les menus de flux sont quasiment identiques et affichent les entrées d'un module dans l'ordre décroissant de création.
+
+Je vous propose d'améliorer le menu de flux du module Calendrier afin d'obtenir un menu affichant les prochaines entrées dans un ordre croissant de rendez-vous.
+
+[style=warning]ATTENTION: Toute modification d'un fichier php sera annulée par une mise à jour officielle du module correspondant - pensez à garder une copie de vos modifications[/style]
+
+modification réalisée à partir de phpboost 4.1.2
+
+[title=3]calendar/phpboost/CalendarFeedProvider.class.php[/title]
+
+modification à partir de la ligne 66
+[code=php]WHERE approved = 1
+AND id_category IN :cats_ids
+ORDER BY start_date DESC', array([/code] par [code=php]WHERE approved = 1
+AND start_date &gt; ' . time() . '
+AND id_category IN :cats_ids
+ORDER BY start_date ASC', array([/code]
+
+modification ligne [s]86[/s] 87 (après modification ci-dessus)
+[code=php]$item-&gt;set_date($event-&gt;get_content()-&gt;get_creation_date());[/code] par [code=php]$item-&gt;set_date($event-&gt;get_start_date());[/code]
+
+Résultat:
+il faut bien sur creer un menu de flux : administration &gt; contenu &gt; menus =&gt; ajouter un menu =&gt; menu de flux =&gt; choisir : calendar/racine (ou une catégorie si vous en avez créé)
+vous pouvez créer autant de menus que de catégories - par défaut la catégorie "racine" affiche les entrées de toutes les catégories.
+[style=success]Affichage des événements dans l'ordre croissant, classé par date de rendez-vous au lieu de la date de création de l'événement[/style]
+
+exemple pour des événements tous créés à la même date (09-09): [img]http://i.imgur.com/9mdFDQY.png[/img]
+
+[style=warning]Pensez à vider le cache syndication pour mettre à jour les menus de flux existants.[/style]</#content#>

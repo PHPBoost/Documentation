@@ -1,0 +1,53 @@
+<#id#>88</#id#>
+<#id_contents#>765</#id_contents#>
+<#title#>Gestion des langues</#title#>
+<#encoded_title#>gestion-des-langues</#encoded_title#>
+<#hits#>446</#hits#>
+<#id_cat#>15</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>15</#cat_id#>
+<#cat_id_parent#>10</#cat_id_parent#>
+<#cat_article_id#>15</#cat_article_id#>
+<#con_id_contents#>765</#con_id_contents#>
+<#con_id_article#>88</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-langues">Gestion des langues</a></li><li><a href="#paragraph_ajouter-une-langue">Ajouter une langue</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1466</#user_id#>
+<#user_ip#>90.55.70.218</#user_ip#>
+<#timestamp#>1358183554</#timestamp#>
+<#content#>-- Gestion des langues --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/langs/manage.png[/img][/align]
+
+[style=warning]La langue par défaut ne peut pas être désinstallée, désactivée, ou réservée pour un type de membre, ceci afin que le logiciel ait toujours un fichier langue disponible pour son bon fonctionnement.[/style]
+
+Pour chaque langue vous avez un descriptif sur : 
+[list]
+[*] ses auteurs
+[*] sa compatibilité avec les versions de PHPBoost.
+[/list]
+
+Vous pouvez
+[list] 
+[*] activer ou non une langue
+[*] désinstaller une langue
+[*] Choisir pour chaque langue le niveau d'autorisation d'utilisateur minimum pour l'utiliser.
+[/list]
+
+-- Ajouter une langue --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/langs/add.png[/img][/align]
+
+Le fichier langue à installer peut : 
+[list] 
+[*] se trouver sur votre disque dur et vous l'uploadez via ce formulaire. Il doit être en format ZIP ou TAR.
+[*] être disponible dans le répertoire '../lang' de votre site puisque vous l'aurez préalablement déposé à cet endroit via un logiciel FTP.
+[/list]
+[style=notice]La langue par défaut est choisie dans la configuration du site.
+Si plusieurs langues sont installées, chaque membre pourra choisir sa langue dans son profil. [/style]
+
+Pour installer une langue, il suffit de choisir le niveau d'autorisations d'accès à la langue et de cliquer sur 'installer'</#content#>

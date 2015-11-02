@@ -1,0 +1,67 @@
+<#id#>122</#id#>
+<#id_contents#>1312</#id_contents#>
+<#title#>Gestion des commentaires</#title#>
+<#encoded_title#>gestion-des-commentaires</#encoded_title#>
+<#hits#>577</#hits#>
+<#id_cat#>18</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>18</#cat_id#>
+<#cat_id_parent#>10</#cat_id_parent#>
+<#cat_article_id#>18</#cat_article_id#>
+<#con_id_contents#>1312</#con_id_contents#>
+<#con_id_article#>122</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-commentaires">Configuration des commentaires</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-des-commentaires">Configuration des commentaires</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_gestion-des-commentaires">Gestion des commentaires</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>982</#user_id#>
+<#user_ip#>83.204.255.203</#user_ip#>
+<#timestamp#>1405398714</#timestamp#>
+<#content#>-- Configuration des commentaires --
+Cette section vous permet de configurer la manière dont PHPBoost gère les commentaires postés sur votre site.
+
+--- Configuration des commentaires ---
+
+La configuration des commentaires vous permet de :
+[list]
+	[*] valider, ou non, l'utilisation du captcha ( formulaire anti-robot),  et son degré de difficulté
+	[*] définir le nombre de commentaires à afficher sur une page
+        [*] définir le nombre de liens maximum qu'un utilisateur peut insérer dans un commentaire
+	[*] choisir l'ordre d'affichage des commentaires (choix chronologique croissant ou décroissant)
+        [*] sélectionner le type de formatage interdit dans les commentaires
+[/list]
+--- Autorisations ---
+
+Vous pouvez définir avec précision quels sont les droits octroyés aux utilisateurs de votre site. Qu'ils soient visiteurs, membres, modérateurs ou autre, vous définissez qui peut lire, poster, éditer ou encore supprimer des commentaires.
+
+Cette gestion des commentaires est une gestion globale, active par défaut pour l'ensemble de votre site PHPBoost. Cependant, vous pouvez redéfinir ces droits de manière localisée pour chaque module installé sur votre site.
+
+Ainsi, si vous souhaitez configurer différemment le fonctionnement des commentaires dans le module "Galerie". Il vous suffit de vous rendre à la page de configuration de votre galerie d'image et d'y configurer les commentaires.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/comments/comments_config.jpg[/img][/align]
+
+-- Gestion des commentaires --
+Cette section vous permet de visualiser l'ensemble des commentaires qui se trouvent sur votre site et de les modérer si besoin.
+
+Vous avez la possibilité de voir les commentaires selon : 
+[list]
+[*] l'ordre chronologique pour tous les modules  : "Voir les derniers commentaires"
+[*] le module désiré en cliquant sur le nom de ce dernier
+[/list]
+
+Pour chaque commentaire vous voyez : 
+[list]
+[*] le profil du membre à gauche
+[*] le contenu du commentaire à droite
+[*] un lien pour accéder au commentaire au niveau du module : 'Voir la discussion '
+[/list]
+
+Vous pourrez également modérer les commentaires : 
+[list]
+[*] les éditer via l'icône : [html]&lt;i class="fa fa-edit"&gt;&lt;/i&gt;[/html]
+[*] les supprimer via l'icône : [html]&lt;i class="fa fa-delete"&gt;&lt;/i&gt;[/html]
+[/list]
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/comments/comments_managment.jpg[/img][/align]</#content#>

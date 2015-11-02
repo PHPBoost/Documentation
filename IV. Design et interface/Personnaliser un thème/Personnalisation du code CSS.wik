@@ -1,0 +1,44 @@
+<#id#>247</#id#>
+<#id_contents#>1362</#id_contents#>
+<#title#>Personnalisation du code CSS</#title#>
+<#encoded_title#>personnalisation-du-code-css</#encoded_title#>
+<#hits#>1193</#hits#>
+<#id_cat#>59</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>59</#cat_id#>
+<#cat_id_parent#>4</#cat_id_parent#>
+<#cat_article_id#>211</#cat_article_id#>
+<#con_id_contents#>1362</#con_id_contents#>
+<#con_id_article#>247</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_les-fichiers-css-du-theme">Les fichiers CSS du thème</a></li><li><a href="#paragraph_le-cas-du-default-css-et-print-css">Le cas du default.css et print.css</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1760</#user_id#>
+<#user_ip#>82.224.142.186</#user_ip#>
+<#timestamp#>1407878864</#timestamp#>
+<#content#>-- Les fichiers CSS du thème --
+
+Nous l'avons vu dans l'article "[b][link=structure-d-un-theme]Structure d'un thème[/link][/b]", les thèmes de la version 4.1 sont constitués de 3 fichiers CSS
+
+Pour modifier le thème base à votre goût, il est préférable de modifier les fichiers CSS dans l'ordre suivant : [list]
+	[*][b][link=fichier-design-css]design.css[/link][/b] : Il contient toutes les classes de mises en forme du sites (Le gros du Design)
+	[*][b][link=fichier-content-css]content.css[/link][/b] : Il contient les classes propres au contenu du site (messages, modules).
+	[*][b][link=fichier-global-css]global.css[/link][/b] : il contient toutes les classes utiles sur le site et communes aux différents modules.
+[/list]
+La modification de ces 3 fichiers est normalement suffisantes pour vous permettre d'avoir n'importe quel rendu.
+
+
+-- Le cas du default.css et print.css --
+
+Facultativement, vous pouvez avoir besoin de modifier les fichiers du thème défault. Sachez qu'ils ne contiennent aucune information de couleur ou autre propriété susceptible d'être modifiée à chaque thème.
+[list]
+	[*][b][link=fichier-default-css]default.css[/link][/b] : Il contient les éléments génériques et les réinitialisations afin de garantir un affichage identique sur tous les navigateurs.
+	[*]print.css : Met en forme le site pour un affichage épuré destiné à l'impression.
+[/list]
+
+[style=warning]Il est vivement conseiller de ne pas faire de modification dans ces fichiers[/style]
+
+Il vaut mieux privilégier la surcharge des fichiers du thème que de toucher au fichier du répertoire [i]default[/i] qui touchera l'ensemble des thèmes et l'administration.</#content#>

@@ -1,0 +1,38 @@
+<#id#>90</#id#>
+<#id_contents#>134</#id_contents#>
+<#title#>PHPBoost 1.3.1</#title#>
+<#encoded_title#>phpboost-1-3-1</#encoded_title#>
+<#hits#>502</#hits#>
+<#id_cat#>14</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>14</#cat_id#>
+<#cat_id_parent#>1</#cat_id_parent#>
+<#cat_article_id#>14</#cat_article_id#>
+<#con_id_contents#>134</#con_id_contents#>
+<#con_id_article#>90</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>82.124.181.87</#user_ip#>
+<#timestamp#>1346007340</#timestamp#>
+<#content#>La première version de PHPBoost distribuée au public est lancée le 18 novembre 2005, en version 1.3.1. Elle est immédiatement remplacée par PHPBoost 1.3.1b, mise à jour corrigeant les erreurs de jeunesse qui sont difficiles à prévoir.
+Les fonctionnalités sont très réduites, mais le fonctionnement global est passable. 
+
+
+-- Changelog --
+
+[list]
+	[*]Déplacement des blocs (avec gestion du rang d'affichage)
+	[*]Design tableau et CSS pour éviter les bugs d'affichage
+	[*]Possibilité de pagination dans les articles (balise [i][page][/i]) 
+	[*]Moteur de recherche pour les membres
+	[*]Blocage de la zone d'administration après 5 essais de connexion
+	[*]Génération d'une clé de déverrouillage du compte administrateur lors de l'inscription (si le compte est bloqué après 5 essais). 
+	[*]Suppression d'une faille possible avec les headers lors de l'envoi d'un mail
+	[*]Amélioration de la régénération du cache des miniatures de la galerie 
+	[*]Optimisation des requêtes SQL
+[/list]</#content#>

@@ -1,0 +1,93 @@
+<#id#>41</#id#>
+<#id_contents#>828</#id_contents#>
+<#title#>Administration du module FAQ</#title#>
+<#encoded_title#>administration-du-module-faq</#encoded_title#>
+<#hits#>351</#hits#>
+<#id_cat#>24</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>24</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>39</#cat_article_id#>
+<#con_id_contents#>828</#con_id_contents#>
+<#con_id_article#>41</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a></li><li><a href="#paragraph_autorisations-generales">Autorisations générales</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_recompter-le-nombre-de-questions">Recompter le nombre de questions</a></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li></ol></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_liste-des-questions">Liste des questions</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1837</#user_id#>
+<#user_ip#>24.201.132.222</#user_ip#>
+<#timestamp#>1358464337</#timestamp#>
+<#content#>-- Configuration de la FAQ --
+
+--- Configuration de la FAQ ---
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_1.jpg[/img]
+[/align]
+[b]Nom de la FAQ [/b] : donnez un nom à votre module FAQ
+
+[b]Nombre de catégories par ligne  [/b] : les catégories vont êtres classées sous forme de tableau avec lignes et colonnes. Choisissez ici le nombre de catégorie par ligne que vous souhaitez afficher.
+
+[b]Mode d'affichage[/b]  : 2 modes sont possibles : 
+
+[list]
+[*][u]en ligne[/u] : les questions sont disposées les unes sous les autres et quand on clique sur une, la réponse apparait dessous.
+[*][u]en bloc[/u] : la listes des questions de la catégorie sont affichées en bloc, en cliquant sur une question, on est renvoyé sur la réponse sur la même page au-dessous.
+[/list]
+
+--- Autorisations générales ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_2.jpg[/img][/align]
+
+Vous allez pouvoir choisir les droits aux membres pour la lecture de la FAQ et de l'écriture de nouvelles questions.
+
+Vous allez pouvoir inclure : 
+
+[list]
+[*] les différents rangs (visiteur / membres / modérateurs / administrateur)
+[*] les différents groupes que vous aurez créés
+[*]des membres en particulier
+[/list]
+
+-- Gestion des catégories --
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_3.jpg[/img][/align]
+
+--- Recompter le nombre de questions ---
+
+Si vous supprimez une catégorie avec sauvegardes des questions dans une autre catégorie, ou que vous avez déplacé des questions d'une catégorie à une autre, il est possible que le nombre de questions par catégorie ne soit pas exact. Dans ce cas cliquez sur 'Recompter le nombre de questions pour chaque catégorie' pour mettre à jour.
+
+--- Gestion des catégories ---
+
+Vous avez ici l'arborescence complète des catégories de votre FAQ. Pour chaque catégorie, vous allez pouvoir : 
+
+[list]
+[*] l[b]a déplacer[/b] par rapport à sa catégorie supérieure ou inférieure. Pour cela utiliser les petites flèches.
+[*] Vous allez pouvoir déplacer la catégorie 1 par rapport à la 2
+[*]Vous pouvez monter ou descendre la sous-catégorie 2 par rapport à la 1 ou 3 (ce sont des exemples, non présents dans le screen).
+[*]PAR CONTRE pour déplacer une sous-catégorie dans une autre catégorie, vous devrez éditer la sous-catégorie et choisir le nouvel  emplacement. 
+[list]
+[*] [b]l'éditer[/b] pour la modifier
+[*] [b]la supprimer[/b] : il vous sera automatiquement demandé si vous le souhaitez avant de supprimer votre catégorie de transférer les questions et les sous-catégories dans une autre catégorie pour ne pas les perdre ou bien alors vous pourrez effacer votre catégorie avec tout son contenu à l'intérieur.
+[/list]
+
+-- Ajouter une catégorie --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_4.jpg[/img]
+[/align]
+[b]Nom de la catégorie[/b] : donnez un nom à votre catégorie
+
+[b]Emplacement de la catégorie[/b] : choisissez dans l'arborescence dans quelle catégorie déjà existante vous souhaitez mettre votre nouvelle catégorie
+
+[b]Image de la catégorie[/b] : vous pouvez mettre une icône représentant votre catégorie. Pour cela mettez ici l'adresse de votre icône.
+
+[b]Description[/b] : vous pouvez mettre une petite description de votre catégorie. Cette description se trouvera au-dessus des questions de votre catégorie.
+
+-- Liste des questions --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_5.jpg[/img][/align]
+
+Vous avez ici la liste complète des questions avec leur date de création et leur catégorie.
+
+[style=notice]Si une question n'a pas de catégorie, c'est qu'elle se trouve a la racine de l'arborescence des catégories.[/style]</#content#>

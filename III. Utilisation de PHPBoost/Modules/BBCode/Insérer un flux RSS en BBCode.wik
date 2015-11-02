@@ -1,0 +1,39 @@
+<#id#>141</#id#>
+<#id_contents#>1441</#id_contents#>
+<#title#>Insérer un flux RSS en BBCode</#title#>
+<#encoded_title#>inserer-un-flux-rss-en-bbcode</#encoded_title#>
+<#hits#>1006</#hits#>
+<#id_cat#>34</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>34</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>79</#cat_article_id#>
+<#con_id_contents#>1441</#con_id_contents#>
+<#con_id_article#>141</#con_id_article#>
+<#menu#></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>982</#user_id#>
+<#user_ip#>193.164.156.11</#user_ip#>
+<#timestamp#>1444215955</#timestamp#>
+<#content#>Vous souhaitez afficher sur votre site un flux RSS via le BBCode, c'est maintenant possible et il n'y a rien de plus simple !
+
+Il faut utiliser la balise feed : 
+
+[code=bbcode][feed]le_nom_du_module[/feed][/code]
+
+Vous avez la possibilité de personnaliser l'affichage : 
+[list]
+	[*][b]cat="numéro de la catégorie du flux dans le module"[/b]
+Pour connaître le numéro de la catégorie du flux, allez dans le module souhaité, allez dans la catégorie souhaitée et cliquez sur cette icone [html]&lt;i class="fa fa-syndication"&gt;&lt;/i&gt;[/html], vous allez être redirigé vers une page avec ce type d'adresse : /syndication/rss/forum/4
+Cela correspond au module forum et la catégorie est la n° 4.
+Si vous souhaitez afficher tous les flux d'un module, dans ce cas ne mettez pas cat"x"
+	[*][b]number="nombre de flux à afficher"[/b]
+[/list]
+
+Exemple : afficher les 5 derniers flux du module téléchargement de la catégorie 3
+
+[code=bbcode][feed cat="3" number="5"]download[/feed][/code]</#content#>

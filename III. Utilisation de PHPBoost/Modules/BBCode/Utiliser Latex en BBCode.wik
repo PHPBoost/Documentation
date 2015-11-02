@@ -1,0 +1,49 @@
+<#id#>82</#id#>
+<#id_contents#>114</#id_contents#>
+<#title#>Utiliser Latex en BBCode</#title#>
+<#encoded_title#>utiliser-latex-en-bbcode</#encoded_title#>
+<#hits#>997</#hits#>
+<#id_cat#>34</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>34</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>79</#cat_article_id#>
+<#con_id_contents#>114</#con_id_contents#>
+<#con_id_article#>82</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_syntaxe">Syntaxe</a></li><li><a href="#paragraph_exemples">Exemples</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>81.51.228.217</#user_ip#>
+<#timestamp#>1345885285</#timestamp#>
+<#content#>-- Introduction --
+
+Bien qu'elle permette une mise en forme assez poussée, l'utilisation du BBCode atteint ses limites, notamment en ce qui concerne l'affichage de formules mathématiques. Pour cela, il existe sur PHPBoost un interpréteur de langage mathématique. Il utilise [url=http://www.xm1math.net/phpmathpublisher/index_fr.html]PHPMathPublisher[/url], un logiciel libre qui permet de transformer le langage en images, ce qui est compatible avec tous les navigateurs. Il a été légèrement modifié afin de gérer la mise en cache des images, leur génération étant une opération gourmande en ressources. Les images sont ainsi conservées pendant 1 semaine, puis elles sont supprimées. Si elles sont à nouveau demandées, alors elles sont régénérées immédiatement.
+
+-- Syntaxe --
+
+La syntaxe est assez proche du [url=http://fr.wikipedia.org/wiki/LaTeX]LaTeX[/url], un langage de mise en forme qui supporte très bien les expressions mathématiques.
+
+Pour introduire les expressions, il faut les entourer de la balise [i]math[/i], disponible dans la barre d'outils BBCode. 
+
+Comment rédiger ces expressions?
+C'est assez simple, pour cela rien ne vaut [url=http://www.xm1math.net/phpmathpublisher/doc_fr/help_fr.html]la documentation officielle de PHPMathPublisher[/url].
+[style=warning]A noter simplement que sur PHPBoost il ne faut pas mettre les balises &lt;m&gt; comme indiqué mais celle qui correspond en BBCode.[/style]
+
+-- Exemples --
+
+[u]Série de Fourier de f:[/u]
+[code]S(f)(t)=a_{0}/2+sum{n=1}{+infty}{a_{n} cos(n omega t)+b_{n} sin(n omega t)}[/code]
+[math]S(f)(t)=a_{0}/2+sum{n=1}{+infty}{a_{n} cos(n omega t)+b_{n} sin(n omega t)}[/math]
+
+[u]Limite (utilisation de quantificateurs):[/u]
+[code]{lim{{n}right{+infty}}{u_n}=l}doubleleftright{forall{varepsilon}&gt;0,exists{n}_0 in bbN, forall{n} in bbN, n&gt;={n_0}doubleright{delim{|}{u_n-l}{|}}&lt;=varepsilon}[/code]
+[math]{lim{{n}right{+infty}}{u_n}=l}doubleleftright{forall{varepsilon}&gt;0,exists{n}_0 in bbN, forall{n} in bbN, n&gt;={n_0}doubleright{delim{|}{u_n-l}{|}}&lt;=varepsilon}[/math]
+
+
+[u]Moment cinétique du solide écrit en O:[/u]
+[code]vec{sigma_O}=tripleint{v}{}{vec{OA}wedge{vec{v(P)}.dm(P)}}[/code]
+[math]vec{sigma_O}=tripleint{v}{}{vec{OA}wedge{vec{v(P)}.dm(P)}}[/math]</#content#>

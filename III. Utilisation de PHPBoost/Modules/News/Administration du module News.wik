@@ -1,0 +1,111 @@
+<#id#>258</#id#>
+<#id_contents#>836</#id_contents#>
+<#title#>Administration du module News</#title#>
+<#encoded_title#>administration-du-module-news</#encoded_title#>
+<#hits#>662</#hits#>
+<#id_cat#>39</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>39</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>119</#cat_article_id#>
+<#con_id_contents#>836</#con_id_contents#>
+<#con_id_article#>258</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_la-gestion-des-news">La gestion des news</a></li><li><a href="#paragraph_administrer-les-categories">Administrer les catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_la-creation-d-une-categorie">La création d'une catégorie</a><ol class="wiki_list_3"><li><a href="#paragraph_permissions">Permissions</a></li></ol></li></ol></li><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_le-message-en-page-d-accueil">Le message en page d'accueil</a></li></ol></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1837</#user_id#>
+<#user_ip#>24.201.132.222</#user_ip#>
+<#timestamp#>1358733406</#timestamp#>
+<#content#>Ce document vous expliquera comment configurer le module News.
+
+-- La gestion des news --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_1.jpg[/img][/align]
+
+Tout d'abord, vous avez un tableau dans la partie "Gestion des news" qui liste les news existantes, en fournissant plusieurs informations :
+
+[list]
+	[*]Le titre, avec un lien pointant vers l'affichage de cette news.
+	[*]Le nom de la catégorie dans laquelle se trouve la news.
+	[*]Le pseudo de la personne qui a rédigé la news.
+	[*]La date à laquelle la news a été rédigée.
+	[*]L'approbation, c'est-à-dire si la news est publiée, ou en attente (nous verrons ça dans l'utilisation de ce module).
+	[*]Un lien pour modifier la news.
+	[*]Et un autre pour la supprimer.
+[/list]
+
+-- Administrer les catégories --
+
+De la même manière que pour les articles, vous pouvez gérer les catégories. Lorsque vous vous rendez dans cette section, vous vous trouvez nez-à-nez avec une liste un peu particulière des catégories. Cette liste se présente sous forme  d'arborescence détaillant quelle catégorie appartient à quelle catégorie.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_2.jpg[/img][/align]
+
+Dans chaque rectangle correspondant à une catégorie sont indiqués :
+
+[list]
+	[*]Le titre de la catégorie, accompagné d'un lien vous amenant vers l'écran de la catégorie. 
+        [*]Un lien permettant de la rendre invisible, elle ne sera donc plus visible aux public.
+	[*]Un lien permettant de modifier la catégorie.
+	[*]Un lien pour supprimer, après vérification, la catégorie.
+[/list]
+
+
+--- La création d'une catégorie ---
+
+Nous voici maintenant dans le panneau de création d'une catégorie.
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_5.jpg[/img][/align]
+
+[list]
+	[*][b]Nom de la catégorie[/b] : le nom qu'aura votre catégorie
+	[*][b]Emplacement de la catégorie[/b] : la place qu'aura votre catégorie dans l'arborescence
+       Exemple : Racine, puis --- une catégorie, puis -------- une sous-catégorie, etc.
+	[*][b]Une icône[/b] : vous permet d'associer votre catégorie à une image. Veillez à ne pas mettre d'images trop grosses afin de ne pas gêner la navigation des membres.
+	[*][b]Description[/b] : rédigez ici une courte description de la catégorie
+	[*][b]Permissions spéciales[/b] : ce sont les permissions qui seront effectives sur la catégorie. Nous allons détailler cela.
+[/list]
+
+---- Permissions ----
+
+Chaque catégorie peut disposer de permissions spécifiques. Nous allons voir ça ensemble. Pour faire apparaitre les permissions, cochez la petite case juste à côté.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_6.jpg[/img][/align]
+
+[list]
+	[*][b]Permission de lecture :[/b] Cela vous permettra de définir qui peut voir la catégorie.
+	[*][b]Permission de contribution :[/b] vous permettra de définir qui peut proposer une news (si vous ne savez pas ce qu'est le panneau de contribution, [link=panneau-de-contribution]dirigez-vous ici[/link])
+	[*][b]Permission d'écriture :[/b] vous permettra de définir qui peut ajouter une catégorie
+	[*][b]Permission de modération :[/b] vous permettra de définir les autorisations de modération (édition et suppression) et de visualiser la liste des news en attente
+[/list]
+-- Configuration --
+
+Nous allons voir cela en deux étapes : la configuration générale et les permissions globales.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_2.jpg[/img][/align]
+
+[list]
+	[*]Le [b]nombre de news par page :[/b] Ce nombre, par défaut à 5, permet d'alléger ou d'allonger la page des news. Tout dépend bien sûr de la longueur moyenne des news rédigées.
+	[*]Le [b]nombre d'archives par page :[/b] De la même manière vous pouvez choisir, cette fois pour les archives, le nombre de news par page.
+	[*]Le [b]nombre de colonnes pour afficher les news dans une page.[/b]
+	[*]La [b]pagination [/b]: C'est le script qui permet, lorsqu'il y a beaucoup de pages de news, qu'au lieu de toutes les afficher, il y ait seulement [i]1 2 3 ... 4 [5] 6 ... 10 11 12[/i] en bas de page.
+	[*]Les [b]blocs [/b]: Vous pouvez aussi afficher les news en blocs, c'est-à-dire que le contenu sera affiché. Si cette option est désactivée, alors seuls les titres et les dates seront listés.
+	[*]Les [b]commentaires [/b]: Les news peuvent être commentées par les membres si l'option est à Oui.
+	[*]Les [b]icônes de catégorie[/b] : Lorsque cette icône n'est pas activée, elle ne se trouve plus en haut à gauche de chaque news avec un lien vers la catégorie.
+	[*]L'affichage de l'[b]auteur [/b] et de la [b]date.[/b]
+[/list]
+
+Pour les permissions globales, ce sont les mêmes que pour les permissions spécifiques à une news ou à une catégorie.
+
+--- Le message en page d'accueil ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_3.jpg[/img][/align]
+
+Activer ce message va rajouter un bloc en haut de la page des news (un édito), qui aura pour titre celui que vous lui donnerez et qui contiendra le message entré dans la zone de texte.
+Vous pouvez ainsi rédiger un message d'accueil. Attention, ce message disparaitra de votre page d'accueil si vous choisissez de mettre un autre module que celui-ci en page d'accueil (il n'est présent qu'avec le module news d'affiché).
+
+Un exemple avec l'édito activé : 
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_4.jpg[/img][/align]</#content#>

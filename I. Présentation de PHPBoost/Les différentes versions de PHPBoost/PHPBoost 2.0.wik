@@ -1,0 +1,200 @@
+<#id#>95</#id#>
+<#id_contents#>893</#id_contents#>
+<#title#>PHPBoost 2.0</#title#>
+<#encoded_title#>phpboost-2-0</#encoded_title#>
+<#hits#>2097</#hits#>
+<#id_cat#>14</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>14</#cat_id#>
+<#cat_id_parent#>1</#cat_id_parent#>
+<#cat_article_id#>14</#cat_article_id#>
+<#con_id_contents#>893</#con_id_contents#>
+<#con_id_article#>95</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a><ol class="wiki_list_2"><li><a href="#paragraph_noyau">Noyau</a></li><li><a href="#paragraph_modules">Modules</a></li></ol></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>3484</#user_id#>
+<#user_ip#>90.61.173.190</#user_ip#>
+<#timestamp#>1359218446</#timestamp#>
+<#content#>Sortie le 4 novembre 2007, après 3 mois de tests en version bêta et plus d'un mois de tests en version RC, la version 2.0 de PHPBoost est enfin arrivée. Ces longues périodes de test lui auront permis d'acquérir une stabilité conséquente, elle est maintenant suffisamment fiable pour faire un site sans problèmes.
+Niveau nouveautés, tout a été revu. Le code a entièrement été réécrit, la structure a complètement changé, puisque maintenant PHPBoost est un noyau qui permet de faire tourner des modules. Ces deux parties sont indépendantes, on peut très facilement installer des modules ou en supprimer, elle est entièrement modulable.
+
+
+-- Changelog --
+
+--- Noyau ---
+
+[b]Structure et fonctionnement:[/b]
+
+[list]
+[*][color=red]Nouveauté :[/color] Nouvelle architecture de PHPBoost totalement remaniée
+[*][color=red]Nouveauté :[/color] Nouvelle interface d'administration plus ergonomique, et plus claire
+[*][color=red]Nouveauté :[/color] Refonte complète des sources HTML et de l'organisation des feuilles de style (CSS)
+[*][color=red]Nouveauté :[/color] Nouvel installateur
+[*][color=red]Nouveauté :[/color] Généralisation des autorisations des groupes à l'ensemble des modules, multi-groupes gérés totalement
+[*][color=red]Nouveauté :[/color] Gestion possible de nouveaux systèmes de base de données: PostgreSQL, Oracle, SQLite, MySQLi, etc. et logique booléenne des tables rétablie.
+[*][color=red]Nouveauté :[/color] Gestion complète de tout les modules du site et des modules additionnels, interface d'administration intuitive, installation/désinstallation/mise à jour des modules automatiséé, upload du module automatisé (support des fichiers zip, tar), activable/désactivable, gestion du cache avec autorisations d'accès et de modération (gérable en plus avec les groupes). Alerte pour chaque module lors de leur mise à jour
+[*][color=red]Nouveauté :[/color] Gestion complète des d'erreurs, prise en charge de tous les types d'erreurs (fatales, avertissements, notifications, etc), archivage des erreurs avec interface de consultation des erreurs
+[*][color=red]Nouveauté :[/color] Création de mini menu automatisé, déplacement des menus simplifié, prise en compte de la configuration du thème choisi
+[*][color=red]Nouveauté :[/color] Système de gestion des médias, création de répertoires virtuels (galerie d'images, animations flash, etc), interface étendue aux membres avec limite d'upload configurable
+[*][color=red]Nouveauté :[/color] Possibilité de différer la date de parution d'un contenu, définir un intervalle d'affichage, à la date prévue le contenu est automatiquement affiché
+[*][color=red]Nouveauté :[/color] Ajout et gestion des champs supplémentaires dans le profil membre, différent types supportés, validation possible des données du champ (par expression régulières)
+[*][color=red]Nouveauté :[/color] Système de gestion des thèmes, upload du thème automatisé (support des fichiers zip, tar), prévisualisation possible, possibilité de restreindre le niveau d'accès du thème, de le désactiver, infos présentes pour chaque thème (description, auteurs, ...)
+[*][color=red]Nouveauté :[/color] Système de gestion des langues, upload de langue automatisé (support des fichiers zip, tar), possibilité de restreindre le niveau d'accès de la langue, de la désactiver
+[*][color=red]Nouveauté :[/color] Possibilité de bloquer l&#8217;inscription aux membres
+[*][color=red]Nouveauté :[/color] Possibilité de mettre des utilisateurs en lecture seule pour une durée déterminée (interdiction de poster)
+[*][color=red]Nouveauté :[/color] Code visuel de vérification à l'inscription, permet d'éviter les robots
+[*][color=red]Nouveauté :[/color] Rang rédacteur dans les groupes, donne accès aux news/articles/liens web dans une interface dédiée
+[*][color=red]Nouveauté :[/color] Ajout du choix d'activation, par l'administrateur, du compte membre après l'inscription (direct, mail, manuelle)
+[*][color=red]Nouveauté :[/color] Connexions multiples possibles
+[*][color=red]Nouveauté :[/color] Système d'affichage des erreurs SQL étendu, permettant un débogage plus rapide
+[*][color=red]Nouveauté :[/color] Exportation au format SQL valide. Possibilité d'exécuter des requêtes SQL, affichage du résultat et coloration syntaxique
+[*][color=red]Nouveauté :[/color] Mini calendrier Ajax, facilitant la saisie des dates, généralisé à l'ensemble des modules
+[*][color=red]Nouveauté :[/color] Possibilité d'exécuter directement des requêtes SQL dans l'administration
+[*][color=red]Nouveauté :[/color] Support complet des fichiers SQL au format classique
+[*][color=red]Nouveauté :[/color] Nouvelle interface BBCode
+[*][color=red]Nouveauté :[/color] Alerte automatique si une nouvelle version de PHPBoost est disponible
+
+
+[*]Reprise de l'intégralité des formulaires HTML
+[*]Refonte du système de message privé, utilisation simplifié pour l'intégration aux modules
+[*]Possibilité de marquer tout les messages privés comme lus
+[*]Amélioration de la gestion de l'URL Rewriting (plus performante)
+[*]Gestion de l'URL Rewriting dans la pagination
+[*]Possibilité d'uploader les smileys automatiquement sans passer par le serveur
+[*]Possibilité d'uploader les images des rangs automatiquement sans passer par le serveur
+[*]Possibilité de choisir un rang d'autorisation pour les catégories (et mise en cache) : Galerie, Liens web, Téléchargements
+[*]Possibilité d'associer une image aux catégories (news, articles, liens web et téléchargements), avec explorateur d'image
+[*]Age du profil membre remplacé par la date de naissance (jj/mm/aaaa), permet de connaitre l'age exact à tout moment
+[*]Possibilité de définir un délai après lequel les membres non approuvés sont supprimés automatiquement
+[*]Liens pour trier sur divers critères (nombre de vues, alphabet, etc...) dans les modules articles, liens web et téléchargements
+[*]Possibilité de désactiver la fonction d'upload d'avatars sur le serveur
+[*]Possibilité de définir un texte à afficher sur la page de maintenance lorsqu'elle est activée
+[*]Possibilité d'afficher (ou non) la durée de la maintenance du site, affichage du délai restant en temps réel
+[*]Restriction des balises BBcode dans certains module afin d'éviter des contenus indésirables, configurable directement dans l'administration
+[*]Statistiques dans l'administration
+[*]Balise [i][table][/i], gestion complète des tableaux imbriqués, fusion des lignes/colonnes et styles CSS
+[*]Balise [i][hide][/i], permet de cacher le texte, et l'afficher lors d'un clic sur celui-ci
+[*]Balise [i][indent][/i], permet d'indenter le texte (similaire à des tabulations)
+[*]Balise [i][anchor][/i], permet de créer des ancres vers un endroit spécifique de la page
+[*]Balise [i][float][/i], permet de déplacer des éléments en utilisant le positionnement flottant
+[*]Balise [i][sound][/i], permet de lire des musique au format mp3 avec le lecteur intégré
+[*]Balise [i][sup][/i], permet de formater le texte en exposant
+[*]Balise [i][sub][/i], permet de formater le texte en indice
+[*]Balise [i][list-][/i], améliorations et nouveaux arguments possible (listes ordonnées)
+[*]Possibilité de renvoyer le code de déverrouillage de l'administration
+[*]Connexion automatique après inscription si l'activation du compte désactivée
+[*]Redirection automatique vers l'installation de PHPBoost lors de la première connexion
+[*]Nouvelle sécurité si [i]register_globals[/i] activé
+
+
+
+
+
+--- Modules ---
+
+[b]News :[/b]
+
+
+
+[*][color=red]Nouveauté :[/color] Gestion totale de la parution des news, date de début/fin d'affichage, intervalle d'affichage
+[*][color=red]Nouveauté :[/color] Gestion des catégories pour les news, avec description et icône associé à la news (désactivable), lien permettant l'affichage des news par catégories
+[*][color=red]Nouveauté :[/color] Possibilité de tronquer l'affichage de la news, un lien permet de lire la suite
+[*][color=red]Nouveauté :[/color] Gestion du système de média intégré aux news, permet l'ajout simplifié des images
+[*][color=red]Nouveauté :[/color] Possibilité de changer la date de parution de la news (classement des news possible)
+[*][color=red]Nouveauté :[/color] Possibilité d'afficher les news sur plusieurs colonnes (configurable)
+[*]Ajout du titre de la news dans l'URL Rewriting
+
+
+[b]Forum :[/b]
+
+
+[*][color=red]Nouveauté :[/color] Création de sous-forums illimité
+[*][color=red]Nouveauté :[/color] Gestion complète des multi-groupes, gestion des droits très fine (lecture, écriture, édition) pour chaque catégorie et pour chaque groupes. Autorisations globales des groupes sur le forum (flood, marqueurs d'édition, etc..)
+[*][color=red]Nouveauté :[/color] Suppression des messages instantanés sur le forum (sans rechargement de la page grâce à Ajax)
+[*][color=red]Nouveauté :[/color] Intégration du module de gestion des médias, ajout d'images sur le forum automatisé par attachement de l'image au message
+[*][color=red]Nouveauté :[/color] Possibilité de choisir d'être prévenu (ou non) lors d'un nouveau message par messages privés ou par mails (si déconnecté du site), pour chaque sujets suivis du forum. Ajout d'une option de suppression des sujets suivis
+[*][color=red]Nouveauté :[/color] Possibilité d'afficher les derniers messages lus, afin de faciliter leur suivi
+[*][color=red]Nouveauté :[/color] Possibilité de masquer les menus de gauche et droite
+[*]Possibilité de prédéfinir un texte inséré devant le sujet, ajouté automatiquement à l'édition (ex: [Résolu] Nom du sujet)
+[*]Possibilité de choisir le contenu du message envoyé lors de l'avertissement/mise en lectures seule d'un membre
+[*]Nouvelle page de statistiques, ajout de la moyenne de sujets/messages par jour et du nombre de sujets/messages total et de la journée
+[*]Possibilité de mettre à jour les données en cache (recompte le nombre de sujets et de messages pour chaque catégories)
+
+
+[b]Articles :[/b]
+
+[*][color=red]Nouveauté :[/color] Gestion totale de la parution de l'article, date de début/fin d'affichage, intervalle d'affichage
+[*][color=red]Nouveauté :[/color] Sous-catégories infinies
+[*]Possibilité d'afficher les catégories sur plusieurs colonnes (configurable)
+
+
+[b]Téléchargements :[/b]
+
+[*][color=red]Nouveauté :[/color] Gestion totale de la parution du téléchargement, date de début/fin d'affichage, intervalle d'affichage
+[*]Possibilité d'afficher les catégories sur plusieurs colonnes (configurable)
+[*]possibilité de forcer le téléchargement
+[*]Mise en cache des catégories
+[/list]
+
+[b]Sondages :[/b]
+[list]
+[*][color=red]Nouveauté :[/color] Gestion totale de la parution des sondages, date de début/fin d'affichage, intervalle d'affichage
+[*]Refonte complète du système de sondage, moins lourd et mieux optimisé
+
+[b]Galerie :[/b]
+
+[*][color=red]Nouveauté :[/color] Refonte complète du module, avec gestion des sous-albums infinis
+[*][color=red]Nouveauté :[/color] Nouveau mode d'affichage des images (plein écran, agrandissement, etc...)
+[*][color=red]Nouveauté :[/color] Interface de visualisation avec défilement des miniatures
+[*]Menu défilant avec affichage de plusieurs photos (configurable) dans ordre aléatoire (mini galerie)
+
+[b]Commentaires :[/b]
+
+[*][color=red]Nouveauté :[/color] Code anti-robot
+[*][color=red]Nouveauté :[/color] Possibilité de verrouiller les commentaires
+
+[b]Liens web :[/b]
+
+[*]Possibilité d'afficher les catégories sur plusieurs colonnes (configurable)
+[*]Mise en cache des catégories
+
+[b]Calendrier :[/b]
+
+[*]Corrections, améliorations et intégration du mini-calendrier en popup pour la saisie des dates
+
+[b]Contact :[/b]
+
+[*]Code de vérification anti-robots
+
+[b]Livre d'or :[/b]
+
+[*]Configuration du livre d'or dans l'administration, rang pour pouvoir poster, balises interdites...
+
+[b]Shoutbox :[/b]
+
+[*]Délestage automatique des messages, configurable et désactivable
+[*]Configuration de la shoutbox dans l'administration, rang pour pouvoir poster, balises interdites...
+
+[b]Liens Web :[/b]
+
+[*]Liens en dur (adresse directe sur le bouton) avec compteur
+
+[b]Statistiques :[/b]
+
+[*]Refonte du système de détection des statistiques
+[*]Présentation graphique en "camembert" dans les statistiques
+[*]Pourcentage homme/femme
+
+[b]Wiki :[/b]
+
+[*][color=red]Nouveauté :[/color] Module Wiki, nombreuses fonctions de gestion du contenu permettant la création de données communautaire très simplement. Gestion des autorisations des groupes pour chaque action, catégories infinies, historique des actions, sauvegarde de chaque action avec retour en arrière possible, génération d'arborescence automatisé, création de liens rapides, redirections infinies, etc.
+
+[b]Corrections :[/b]
+
+[*]Bug corrigé dans les statistiques des visites
+[*]Bug corrigé dans le calcul du total des news, provoquant des problèmes d'affichage
+[/list]</#content#>

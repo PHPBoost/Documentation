@@ -1,0 +1,58 @@
+<#id#>119</#id#>
+<#id_contents#>641</#id_contents#>
+<#title#>News</#title#>
+<#encoded_title#>news</#encoded_title#>
+<#hits#>545</#hits#>
+<#id_cat#>39</#id_cat#>
+<#is_cat#>1</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>39</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>119</#cat_article_id#>
+<#con_id_contents#>641</#con_id_contents#>
+<#con_id_article#>119</#con_id_article#>
+<#menu#></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>90.6.60.78</#user_ip#>
+<#timestamp#>1355737323</#timestamp#>
+<#content#>[table style="float:right;"]
+[row]
+[head colspan="2"]News [/head]
+[/row]
+[row]
+[col]Auteur[/col]
+[col][url=/member/member-1.php]CrowkaiT[/url][/col]
+[/row]
+[row]
+[col]Version actuelle[/col]
+[col]4.0[/col]
+[/row]
+[row]
+[col]Date de sortie[/col]
+[col]juillet 2007[/col]
+[/row]
+[row]
+[col]Compatibilité[/col]
+[col]PHPBoost 4.0[/col]
+[/row]
+[row]
+[col]Démonstration[/col]
+[col][url=/news/news.php]Module News de PHPBoost[/url][/col]
+[/row][/table]
+[align=center][size=20][b]Module News[/b][/size]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/news/logo.png[/img][/align]
+
+
+
+
+
+
+
+
+
+[b]Description :[/b] Ce module est très important pour un site, car il permet bien souvent en première page d'ajouter les nouvelles du site ou une nouvelle que l'administrateur veut faire partager. Il vous procure un système de news, avec gestion complète des news par catégories, et de la date de parution. Les membres pourront proposer des news qui seront à valider par l'administrateur et laisser des commentaires afin de faire vivre votre site.
+Bref un module indispensable !</#content#>

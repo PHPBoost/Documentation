@@ -1,0 +1,50 @@
+<#id#>85</#id#>
+<#id_contents#>750</#id_contents#>
+<#title#>Cache</#title#>
+<#encoded_title#>cache</#encoded_title#>
+<#hits#>479</#hits#>
+<#id_cat#>16</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>16</#cat_id#>
+<#cat_id_parent#>10</#cat_id_parent#>
+<#cat_article_id#>16</#cat_article_id#>
+<#con_id_contents#>750</#con_id_contents#>
+<#con_id_article#>85</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_cache">Cache</a></li><li><a href="#paragraph_syndication">Syndication</a></li><li><a href="#paragraph_css">CSS</a></li><li><a href="#paragraph_configuration-du-cache">Configuration du cache</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1466</#user_id#>
+<#user_ip#>90.55.70.218</#user_ip#>
+<#timestamp#>1358178640</#timestamp#>
+<#content#>La mise en cache consiste à créer des fichiers sur le serveur qui contiennent des données rarement mises à jour, comme par exemple des variables de configuration. La lecture directe sur le serveur étant beaucoup plus rapide que l'accès à la base de données, la mise en cache augmente le confort de navigation pour vos visiteurs. Normalement la régénération du cache est automatique à chaque modification des variables concernées. Ceci dit il se peut qu'un problème soit intervenu. Dans ce cas là il faut régénérer manuellement le cache, le support vous indiquera s'il faut le faire.
+
+[style=warning]A noter que toute modification directe dans la base de données ne sera active que lorsque le cache aura été régénéré. Ainsi si vous réalisez des modifications sur votre site, n'oubliez pas d'avoir le réflexe régénération du cache.[/style]
+
+-- Cache --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/cache/regenerate_cache.png[/img][/align]
+
+Pour régénérer le cache, il suffit simplement de cliquer sur 'générer'
+
+-- Syndication --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/cache/regenerate_syndication.png[/img][/align]
+
+Les flux RSS et ATOM sont mis en cache également pour accélérer l'accès à votre site.  Si vous pensez que le cache des flux n'est pas à jour, régénérez le cache syndication.
+
+-- CSS --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/cache/regenerate_css.png[/img][/align]
+
+Les fichiers CSS des thèmes et des menus sont également mis en cache pour gagner en performance et affichage du site. Si vous avez un anomalie d'affichage du design ou d'un module, régénérer celui-ci.
+
+-- Configuration du cache --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/cache/config.png[/img][/align]
+
+Vous avez la possibilité d'activer le support de l'extension APC dans PHPBoost. Celui permet de gagner grandement en performance en stockant le cache dans la mémoire du serveur (bien plus rapide qu'un disque dur).
+
+Vous pouvez également désactiver le cache CSS ce qui vous permettra de personnaliser plus facilement votre thème.</#content#>

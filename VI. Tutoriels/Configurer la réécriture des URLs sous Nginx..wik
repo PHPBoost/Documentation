@@ -1,0 +1,97 @@
+<#id#>303</#id#>
+<#id_contents#>1374</#id_contents#>
+<#title#>Configurer la réécriture des URLs sous Nginx.</#title#>
+<#encoded_title#>configurer-la-reecriture-des-urls-sous-nginx</#encoded_title#>
+<#hits#>840</#hits#>
+<#id_cat#>54</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>54</#cat_id#>
+<#cat_id_parent#>0</#cat_id_parent#>
+<#cat_article_id#>192</#cat_article_id#>
+<#con_id_contents#>1374</#con_id_contents#>
+<#con_id_article#>303</#con_id_article#>
+<#menu#></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>4571</#user_id#>
+<#user_ip#>213.49.88.148</#user_ip#>
+<#timestamp#>1413640412</#timestamp#>
+<#content#>Vous êtes sous nginx et votre réécriture des urls pour PHPBoost ne fonctionne pas ? C'est tout à faire normal, nginx ne gère pas les .htaccess, vous êtes obligé de passer par la configuration de nginx.
+
+[style=notice]En continuant ce tutoriel, vous assumez comprendre et manipuler la configuration d'un virtual host. Si ce n'est pas le cas, je vous conseille ce turoriel : [url=https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3]https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3[/url].[/style]
+[list=ordered]
+	[*]Éditez votre [i]virtual host[/i] ou votre fichier [i]nginx.conf[/i].
+	[*]Insérez s'y le code de réécriture des URLs après la ligne [i]server_name[/i] :
+[block]rewrite "^/user/pm-?([0-9]+)-?([0-9]{0,})-?([0-9]{0,})-?([0-9]{0,})-?([a-z_]{0,})\.php$" /user/pm.php?pm=$1&amp;id=$2&amp;p=$3"e=$4 last;
+rewrite ^/admin/config/([\w/_-]*)$ /admin/config/index.php?url=/$1 last;
+rewrite ^/admin/cache/([\w/_-]*)$ /admin/cache/index.php?url=/$1 last;
+rewrite ^/admin/errors/([\w/_-]*)$ /admin/errors/index.php?url=/$1 last;
+rewrite ^/admin/themes/([\w/_-]*)$ /admin/themes/index.php?url=/$1 last;
+rewrite ^/admin/langs/([\w/_-]*)$ /admin/langs/index.php?url=/$1 last;
+rewrite ^/admin/modules/([\w/_-]*)$ /admin/modules/index.php?url=/$1 last;
+rewrite ^/admin/member/([\w/_-]*)$ /admin/member/index.php?url=/$1 last;
+rewrite ^/admin/content/([\w/_-]*)$ /admin/content/index.php?url=/$1 last;
+rewrite ^/syndication/([\w/_-]*)$ /syndication/index.php?url=/$1 last;
+rewrite ^/user/([\w/-_]*)$ /user/index.php?url=/$1 last;
+rewrite ^/QuestionCaptcha/([\w/_-]*)$ /QuestionCaptcha/index.php?url=/$1 last;
+rewrite ^/articles/([\w/_-]*)$ /articles/index.php?url=/$1 last;
+rewrite ^/calendar/([\w/_-]*)$ /calendar/index.php?url=/$1 last;
+rewrite ^/faq/faq-([0-9]+)(\+?[^.]*)\.php(\?question=([0-9]+))?$ /faq/faq.php?id=$1&amp;id_question=$3 last;
+rewrite ^/guestbook/([\w/_-]*)$ /guestbook/index.php?url=/$1 last;
+rewrite ^/news/([\w/_-]*)$ /news/index.php?url=/$1 last;
+rewrite ^/newsletter/([\w/_-]*)$ /newsletter/index.php?url=/$1 last;
+rewrite ^/online/([\w/_-]*)$ /online/index.php?url=/$1 last;
+rewrite ^/poll/poll-([0-9]+)-?([0-9]*)-?([0-9]*)\.php$ /poll/poll.php?id=$1&amp;r=$2&amp;p=$3 last;
+rewrite ^/sitemap/([\w/_-]*)$ /sitemap/index.php?url=/$1 last;
+rewrite ^/stats/stats-([a-z]+)\.php$ /stats/stats.php/$1=1 last;
+rewrite ^/wiki/([a-z0-9-]+)$ /wiki/wiki.php?title=$1 ;
+rewrite ^/customization/([\w/_-]*(?:\.css)?)$ /customization/index.php?url=/$1 last;
+rewrite ^/dictionary/dictionary-([0-9a-z]+)-?([0-9]*)(\+?[^.]*)\.php$ /dictionary/dictionary.php?l=$2&amp;cat=$3 last;
+if ($http_referer !~ "^$"){
+	set $rule_25 1$rule_25;
+}
+if ($http_referer !~ "^http://creapoint.cf"){
+	set $rule_25 2$rule_25;
+}
+if ($rule_25 = "21"){
+	break;
+}
+if ($http_user_agent ~* "libwww"){
+	set $rule_26 1;
+}
+if ($rule_26 = "1"){
+	break;
+}
+error_page 403 /user/error/403/;
+error_page 404 /user/error/404/;
+expires 604800s;
+location ~* \.(jpeg|jpg)$ {
+	expires 2592000s;
+}
+location ~* \.(png)$ {
+	expires 2592000s;
+}
+location ~* \.(gif)$ {
+	expires 2592000s;
+}
+location ~* \.(ico)$ {
+	expires 2592000s;
+}
+location ~* \.(css)$ {
+	expires 2592000s;
+}
+location ~* \.(js|jsonp)$ {
+	expires 2592000s;
+}
+location ~* \.(js)$ {
+	expires 2592000s;
+}
+location ~* \.(swf)$ {
+	expires 2592000s;
+}[/block]
+	[*]Sauvegardez le fichier.
+	[*]Relancez nginx : [b]sudo service nginx restart[/b].
+[/list]</#content#>

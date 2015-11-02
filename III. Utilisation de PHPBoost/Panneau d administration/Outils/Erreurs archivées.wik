@@ -1,0 +1,41 @@
+<#id#>87</#id#>
+<#id_contents#>161</#id_contents#>
+<#title#>Erreurs archivées</#title#>
+<#encoded_title#>erreurs-archivees</#encoded_title#>
+<#hits#>244</#hits#>
+<#id_cat#>16</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>16</#cat_id#>
+<#cat_id_parent#>10</#cat_id_parent#>
+<#cat_article_id#>16</#cat_article_id#>
+<#con_id_contents#>161</#con_id_contents#>
+<#con_id_article#>87</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_erreurs-archivees">Erreurs archivées</a></li><li><a href="#paragraph_erreurs-404">Erreurs 404</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>81.51.228.217</#user_ip#>
+<#timestamp#>1346148668</#timestamp#>
+<#content#>-- Erreurs archivées --
+
+Plusieurs types de messages d'erreur existent selon leur gravité. Le gestionnaire d'erreurs enregistre dans un fichier (cache/error.log) toutes les erreurs fatales que vous ou vos visiteurs ou vous aurez pu rencontrer.
+Il est utile de regarder de temps en temps ce fichier d'archives afin de voir si vos visiteurs ont pu rencontrer des erreurs fatales et le cas échéant les corriger car une certaine partie d'entre eux ne vous avertiront pas des erreurs qu'ils rencontrent.
+
+Lorsque vous rencontrez lors de votre navigation sur votre site un message d'erreur, il est automatiquement enregistré dans la page d'archives des erreurs : 
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/errors/archived_errors.png[/img][/align]
+
+Le fait d'archiver les messages d'erreurs permet de simplifier la communication avec le support et de régler plus facilement les problèmes.
+
+[style=notice]Si vous souhaitez contacter le support suite à une erreur qui a été archivée, il est indispensable de fournir le message d'erreur, le problème sera réglé nettement plus rapidement si vous fournissez les informations nécessaires.[/style]
+
+Enfin vous avez la possibilité d'effacer définitivement les messages d'erreur en cliquant sur 'Effacer le rapport '
+
+-- Erreurs 404 --
+
+Lorsqu'un fichier n'est plus sur le serveur et qu'il est demandé, une erreur 404 est émise. Celle ci est enregistrée dans l'administration pour vous permettre de régler le problème et de voir sur quelle page la personne était.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/errors/404_errors.png[/img][/align]</#content#>

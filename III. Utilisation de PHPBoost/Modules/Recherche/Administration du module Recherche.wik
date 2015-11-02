@@ -1,0 +1,40 @@
+<#id#>245</#id#>
+<#id_contents#>1245</#id_contents#>
+<#title#>Administration du module Recherche</#title#>
+<#encoded_title#>administration-du-module-recherche</#encoded_title#>
+<#hits#>274</#hits#>
+<#id_cat#>75</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>75</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>244</#cat_article_id#>
+<#con_id_contents#>1245</#con_id_contents#>
+<#con_id_article#>245</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_ponderation-des-resultats">Pondération des résultats</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>88.125.157.163</#user_ip#>
+<#timestamp#>1404999270</#timestamp#>
+<#content#>-- Configuration --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/config.png[/img][/align]
+[b]Paramètres :[/b]
+[list]
+[*][b]Nombre de résultats à afficher par page[/b] : nombre maximum de résultats de recherche affichés par page.
+[*][b]Modules interdits[/b] : permet de sélectionner les modules pour lesquels vous ne souhaitez pas autoriser la recherche.
+[*][b]Durée de vie du cache[/b] : durée pendant laquelle les résultats de recherche sont gardés en cache (en minutes).
+[*][b]Nombre d'utilisation maximum des résultats du cache[/b] : représente le nombre de fois qu'un résultat de recherche peut être réaffiché avant d'être recalculé.
+[/list]
+Il est possible de définir l'autorisation d'affichage du module recherche et du mini menu..
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/clean_cache.png[/img][/align]
+Il est possible de vider le cache des résultats manuellement avec ce lien.
+
+-- Pondération des résultats --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/weighting.png[/img][/align]
+Vous pouvez choisir de donner plus d'importance à certains modules qu'à d'autres en changeant le poids de chacun sur cette page.</#content#>

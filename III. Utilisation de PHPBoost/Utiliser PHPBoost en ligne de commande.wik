@@ -1,0 +1,178 @@
+<#id#>181</#id#>
+<#id_contents#>1440</#id_contents#>
+<#title#>Utiliser PHPBoost en ligne de commande</#title#>
+<#encoded_title#>utiliser-phpboost-en-ligne-de-commande</#encoded_title#>
+<#hits#>1368</#hits#>
+<#id_cat#>3</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>3</#cat_id#>
+<#cat_id_parent#>0</#cat_id_parent#>
+<#cat_article_id#>3</#cat_article_id#>
+<#con_id_contents#>1440</#con_id_contents#>
+<#con_id_article#>181</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_utilisation">Utilisation</a></li><li><a href="#paragraph_installer-phpboost">Installer PHPBoost</a></li><li><a href="#paragraph_modification-du-htaccess">Modification du .htaccess</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-du-contenu-au-fichier">Ajouter du contenu au fichier</a></li><li><a href="#paragraph_activer-ou-d-sactiver-la-r-criture-des-urls">Activer ou désactiver la réécriture des URLs</a></li></ol></li><li><a href="#paragraph_g-rer-les-utilisateurs">Gérer les utilisateurs</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-utilisateur">Ajouter un utilisateur</a></li><li><a href="#paragraph_supprimer-un-utilisateur">Supprimer un utilisateur</a><ol class="wiki_list_3"><li><a href="#paragraph_supprimer-par-son-id">Supprimer par son id</a></li><li><a href="#paragraph_supprimer-par-son-login">Supprimer par son login</a></li><li><a href="#paragraph_supprimer-par-son-email">Supprimer par son email</a></li></ol></li></ol></li><li><a href="#paragraph_faire-un-backup-sql">Faire un backup SQL</a></li><li><a href="#paragraph_restaurer-un-backup-sql">Restaurer un backup SQL</a></li><li><a href="#paragraph_r-g-n-rer-le-cache">Régénérer le cache</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>982</#user_id#>
+<#user_ip#>80.215.133.141</#user_ip#>
+<#timestamp#>1441796169</#timestamp#>
+<#content#>Depuis PHPBoost 4.0, vous pouvez installer PHPBoost en ligne de commande. 
+
+Cela permet de déployer votre site très rapidement. Vous pouvez également effectuer d'autres opérations comme la modification du .htaccess, du cache, l'import d'un backup, opérations sur les membres, ...
+
+
+-- Utilisation --
+
+Dans le pack de PHPBoost, vous avez à la racine un fichier nommé phpboost, c'est celui ci que vous allez devoir utiliser. Il devra être exécuté avec PHP CLI de cette manière :
+
+[code=bash]cd /var/www/phpboost/
+php phpboost[/code]
+
+Vous devriez avoir comme réponse (la liste va dépendre des modules disponibles) :
+
+[code=text]no command specified
+available commands are:
+	- dump: Dump database
+	- restoredb: Restore database
+	- generate-sitemap: Generates the sitemap.xml file.
+	- help: describe phpboost commands
+	- cache: manages the phpboost cache
+	- htaccess: manages the htaccess file
+	- user: manages the phpboost users
+	- install: install phpboost development environment[/code]
+
+A partir de ce moment là vous pouvez effectuer les opérations listées.
+
+-- Installer PHPBoost --
+
+Pour voir tous les paramètres de l'installateur de PHPBoost tapez :
+
+[code=bash]php phpboost install[/code]
+
+Voici la liste avec les paramètres par défaut :
+
+[code=text]DATABASE
+	--db-host localhost
+	--db-port 3306
+	--db-user root
+	--db-pwd 
+	--db-schema phpboost
+	--db-table-prefix phpboost_
+WEBSITE
+	--ws-server http://localhost
+	--ws-path /
+	--ws-name PHPBoost
+        --ws-desc PHPBoost command line installation
+	--ws-locale english
+	--ws-timezone Europe/Paris
+ADMIN
+	--u-login admin
+	--u-pwd admin
+	--u-email admin@mail.com[/code]
+
+Exemple pour installer PHPBoost :
+
+[code=bash]php phpboost install --ws-server "http://url_du_site.com" --ws-name "Nom du site" --ws-desc "description du site" --ws-locale french --db-user login_database --db-pwd mot_de_passe --db-schema database_name[/code]
+
+-- Modification du .htaccess --
+
+Accueil de la gestion :
+
+[code=bash]php phpboost htaccess[/code]
+
+[code=text]scenario: phpboost htaccess &lt;goal&gt;
+where "goal" is the name of the operation that you want to launch
+available goals are:
+	- content: Set content for htaccess file
+	- rewriting: Manage rewriting urls[/code]
+
+--- Ajouter du contenu au fichier ---
+
+[code=bash]php phpboost htaccess content add "votre contenu à ajouter"[/code]
+
+--- Activer ou désactiver la réécriture des URLs ---
+
+Pour activer la réécriture des URLs :
+
+[code=bash]php phpboost htaccess rewriting enable[/code]
+
+Pour désactiver la réécriture des URLs :
+
+[code=bash]php phpboost htaccess rewriting disable[/code]
+
+-- Gérer les utilisateurs --
+
+Accueil de la gestion :
+
+[code=bash]php phpboost user[/code]
+
+[code=text]scenario: phpboost user &lt;goal&gt;
+where "goal" is the name of the operation that you want to launch
+available goals are:
+	- add: add user
+	- delete: delete user[/code]
+
+--- Ajouter un utilisateur ---
+
+[code=bash]php phpboost user add[/code]
+
+Paramètres :
+
+[code=text]scenario: phpboost user add [args]
+	--login user
+	--email user@user.com
+	--pwd phpboost
+	--level member in possible values : member|moderator|administrator
+	--approb yes in possible values : yes|no[/code]
+
+Exemple :
+
+[code=bash]php phpboost user add --login admin --email "admin@admin.com" --pwd mot_de_passe --level administrator --approb yes[/code]
+
+--- Supprimer un utilisateur ---
+
+[code=bash]php phpboost user delete[/code]
+
+Paramètres :
+
+[code=text]scenario: phpboost user delete [args]
+	--id user id
+	 or
+	--login user login
+	 or
+	--email user email[/code]
+
+---- Supprimer par son id ----
+
+[code=bash]php phpboost user delete --id user_id[/code]
+
+---- Supprimer par son login ----
+
+[code=bash]php phpboost user delete --login login_a_supprimer[/code]
+
+---- Supprimer par son email ----
+
+[code=bash]php phpboost user delete --email "admin@admin.fr"[/code]
+
+-- Faire un backup SQL --
+
+Pour générer un dump de la base de données :
+
+[code=bash]php phpboost dump[/code]
+
+En réponse on vous donnera où est stocké le fichier (dossier cache du site)
+
+-- Restaurer un backup SQL --
+
+Pour restaurer votre base de données à partir d'un fichier :
+
+[code=bash]php phpboost restoredb "emplacement_du_fichier"[/code]
+
+-- Régénérer le cache --
+
+Pour régénérer le cache du site :
+
+[code=bash]php phpboost cache clear[/code]</#content#>

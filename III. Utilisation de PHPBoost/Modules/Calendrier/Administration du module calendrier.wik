@@ -1,0 +1,30 @@
+<#id#>22</#id#>
+<#id_contents#>171</#id_contents#>
+<#title#>Administration du module calendrier</#title#>
+<#encoded_title#>administration-du-module-calendrier</#encoded_title#>
+<#hits#>483</#hits#>
+<#id_cat#>20</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>20</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>21</#cat_article_id#>
+<#con_id_contents#>171</#con_id_contents#>
+<#con_id_article#>22</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_configurer-le-module-calendrier">Configurer le module Calendrier</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1393</#user_id#>
+<#user_ip#>81.51.228.217</#user_ip#>
+<#timestamp#>1346158474</#timestamp#>
+<#content#>L'administration du module Calendrier est très simple.
+
+-- Configurer le module Calendrier --
+
+Dans cette partie qui ressemble à l'exemple ci-dessous, vous pouvez définir les droits nécessaires à la création et la modération d'un évènement.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/calendar/config.png[/img][/align]
+
+Ainsi, seuls les membres ayant ce droit, ou le droit au-dessus, seront aptes à ajouter, modifier ou supprimer des évènements.</#content#>

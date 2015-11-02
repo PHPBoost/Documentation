@@ -1,0 +1,52 @@
+<#id#>53</#id#>
+<#id_contents#>1276</#id_contents#>
+<#title#>Utilisation du module Liens Web</#title#>
+<#encoded_title#>utilisation-du-module-liens-web</#encoded_title#>
+<#hits#>380</#hits#>
+<#id_cat#>27</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>27</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>51</#cat_article_id#>
+<#con_id_contents#>1276</#con_id_contents#>
+<#con_id_article#>53</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_les-categories">les catégories</a></li><li><a href="#paragraph_liens-d-une-categorie">Liens d'une catégorie</a></li><li><a href="#paragraph_visiter-un-lien">Visiter un lien</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>5193</#user_id#>
+<#user_ip#>88.125.157.163</#user_ip#>
+<#timestamp#>1405002474</#timestamp#>
+<#content#>Il est toujours intéressant de consulter une rubrique de gestion de lien d'un site, que ce soit par curiosité ou approfondir ses connaissances dans un domaine traité par le site que l'on consulte.
+
+-- les catégories --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/web/home.png[/img][/align]
+La page d'accueil des liens web propose les différentes catégories de liens, avec, si l'administrateur l'a complété ou non, un petit descriptif pour chaque catégorie.
+
+Pour accéder à une catégorie, il vous suffit de cliquer sur celle-ci.
+
+-- Liens d'une catégorie --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/web/category_links_table.png[/img][/align]
+[b]Les liens sont classés par ordre chronologique, mais vous avez la possibilité de les classer par :[/b]
+[list]
+[*] Nom du site
+[*] Date de création
+[*] Popularité de visite du lien
+[*] Note
+[*] Nombre de commentaires
+[/list]
+Pour accéder à un lien, cliquer sur celui-ci.
+
+-- Visiter un lien --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/web/link_details.png[/img][/align]
+Vous avez, pour chaque lien, une petite description ainsi qu'un lien "visiter". Au dessous, vous avez l'adresse vers laquelle vous allez être dirigé.
+
+Il est possible de noter le lien entre 0 et le nombre maximal d'étoiles défini dans [link=administration-du-module-liens-web]l'administration du module liens web[/link].
+
+Chaque utilisateur peut laisser un commentaire selon les autorisations mises par l'administrateur.
+Pour poster un commentaire il faut cliquer sur "poster un commentaire", un éditeur vous permettra d'écrire un nouveau commentaire et plus bas les commentaires déjà présents sont affichés.</#content#>

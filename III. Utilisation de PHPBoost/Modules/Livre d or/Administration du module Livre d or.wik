@@ -1,0 +1,31 @@
+<#id#>55</#id#>
+<#id_contents#>1279</#id_contents#>
+<#title#>Administration du module Livre d'or</#title#>
+<#encoded_title#>administration-du-module-livre-d-or</#encoded_title#>
+<#hits#>474</#hits#>
+<#id_cat#>28</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>28</#cat_id#>
+<#cat_id_parent#>13</#cat_id_parent#>
+<#cat_article_id#>54</#cat_article_id#>
+<#con_id_contents#>1279</#con_id_contents#>
+<#con_id_article#>55</#con_id_article#>
+<#menu#></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>5193</#user_id#>
+<#user_ip#>88.125.157.163</#user_ip#>
+<#timestamp#>1405003614</#timestamp#>
+<#content#>[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/guestbook/config.png[/img][/align]
+L'administration du module Livre d'or est constituée des options suivantes :
+
+[b]Nombre de messages par page[/b] : Permet de définir le nombre de messages affichés par page.
+
+[b]Formats interdits[/b] : Vous avez la possibilité de choisir les balises qui seront interdites sur le livre d'or. Par défaut certaines le sont. Cela permet d'alléger le livre d'or afin de ne pas avoir de problème d'affichage, de chargement, ..
+
+[b]Nombre de liens maximum dans le message[/b] : Permet d'éviter d'être spammé. Par défaut -1 (illimité).
+
+[b]Autorisations[/b] : Vous pouvez définir les autorisations de lecture pour visualiser la liste des messages, d'écriture et de modération (édition et suppression) du livre d'or.</#content#>

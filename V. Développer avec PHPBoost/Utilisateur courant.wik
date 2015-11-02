@@ -1,0 +1,84 @@
+<#id#>30</#id#>
+<#id_contents#>904</#id_contents#>
+<#title#>Utilisateur courant</#title#>
+<#encoded_title#>utilisateur-courant</#encoded_title#>
+<#hits#>2310</#hits#>
+<#id_cat#>5</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>5</#cat_id#>
+<#cat_id_parent#>0</#cat_id_parent#>
+<#cat_article_id#>159</#cat_article_id#>
+<#con_id_contents#>904</#con_id_contents#>
+<#con_id_article#>30</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_informations-de-l-utilisateur">Informations de l'utilisateur</a></li><li><a href="#paragraph_gestion-des-autorisations">Gestion des autorisations</a><ol class="wiki_list_2"><li><a href="#paragraph_verification-du-rang">Vérification du rang</a></li><li><a href="#paragraph_verification-sur-les-groupes">Vérification sur les groupes</a><ol class="wiki_list_3"><li><a href="#paragraph_stockage-des-regles-pour-chaque-action">Stockage des règles pour chaque action</a></li></ol></li></ol></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1837</#user_id#>
+<#user_ip#>24.201.132.222</#user_ip#>
+<#timestamp#>1363355330</#timestamp#>
+<#content#>La classe [i]CurrentUser[/i] gère l'utilisateur au cours de sa session. Elle permet notamment de récupérer ses informations et gérer les autorisations pour les niveaux et groupes d'utilisateurs, sachant qu'elle supporte le fait qu'un utilisateur soit inscrit dans plusieurs groupes.
+
+
+-- Informations de l'utilisateur --
+
+Pour récupérer une instance de la classe [i]CurrentUser[/i] il suffit d'utiliser [i]AppContext[/i] :
+
+[code=php]AppContext::get_current_user()[/code]
+
+Un certain nombre d'informations peuvent ensuite être récupérées grâce à cette classe : 
+
+[code=php]$user = AppContext::get_current_user();
+$user-&gt;get_id(); // Identifiant de l'utilisateur
+$user-&gt;get_pseudo(); // Pseudo de l'utilisateur
+$user-&gt;get_email(); // Email de l'utilisateur
+$user-&gt;get_show_email(); // Autorisation d'afficher ou non l'email de l'utilisateur
+$user-&gt;get_level(); // RangRetourne une des valeurs suivantes en fonction du rang de l'utilisateur : User::VISITOR_LEVEL, User::MEMBER_LEVEL, User::MODERATOR_LEVEL, User::ADMIN_LEVEL
+$user-&gt;get_locale(); // Langue de l'utilisateur
+$user-&gt;get_theme(); // Thème de l'utilisateur
+$user-&gt;get_timezone(); // Fuseau horaire de l'utilisateur
+$user-&gt;get_editor(); // Éditeur de texte de l'utilisateur
+$user-&gt;get_groups(); // Groupes de l'utilisateur
+$user-&gt;get_ip(); // Adresse IP de l'utilisateur[/code]
+
+
+-- Gestion des autorisations --
+
+
+--- Vérification du rang ---
+
+Un utilisateur a un rang, qui lui est assigné, qui peut aller de visiteur à administrateur. 
+
+Pour vérifier s'il a bien le rang pour accéder à une page, il faut procéder ainsi :
+
+[code=php]if (!AppContext::get_current_user()-&gt;check_level(User::MEMBER_LEVEL))
+{
+	echo 'Tu n\'es pas membre, donc tu es un visiteur !';
+}[/code]
+
+
+--- Vérification sur les groupes ---
+
+
+La gestion des groupes est à la base de la puissance du système d'autorisations sur PHPBoost. Vous pouvez donner des droits en plus des rangs. Ces droits peuvent être donnés à des utilisateurs d'un groupe, et même membre par membre.
+
+La gestion des autorisations est basée sur les opérateurs de bits. Sachant que la majorité des serveurs fonctionnent sur des architectures 32 bits (bien que les architectures 64 bits commencent à se démocratiser) nous pourrons gérer 32 types d'autorisations en une seule variable (il est fortement recommandé de ne pas dépasser ce nombre pour ne pas avoir des dépassements de capacité sur les architectures 32 bits).
+[style=warning]En réalité en PHP nous n'avons pas la maîtrise totale des types et donc les entiers sont forcément signés (c'est-à-dire qu'ils peuvent être négatifs ou positifs) et donc le bit de poids fort (le plus à gauche) est utilisé pour le signe du nombre. [b]Sur une architecture 32 bits nous pourrons effectivement uniquement gérer 31 autorisations par variable.[/b][/style]
+Dans les cas où l'on souhaite gérer plus de 31 autorisations (très très rare) il faudra gérer les droits en plusieurs variables.
+
+
+---- Stockage des règles pour chaque action ----
+
+Commençons par un schéma représentant la façon dont un ordinateur stocke des nombres (l'exemple est pris en architecture 32 bits).
+
+[align=center][img]http://resources.phpboost.com/documentation/developpement/user/bit_representation.png[/img][/align]
+
+Comme nous l'avons vu nous pouvons traiter les autorisations par séries de 31. Chaque règle (de 1 à 31) est repérée par son numéro et correspond au bit qui est à 1 si l'action est permise ou 0 sinon. Voici un schéma illustrant le stockage des autorisations de chaque utilisateur.
+
+[align=center][img]http://resources.phpboost.com/documentation/developpement/user/authorizations_representation.png[/img][/align]
+
+Utilisation :
+
+[code=php]AppContext::get_current_user()-&gt;check_auth($tableau, $bit)[/code]</#content#>

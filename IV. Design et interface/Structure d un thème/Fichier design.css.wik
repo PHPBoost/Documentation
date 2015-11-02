@@ -1,0 +1,234 @@
+<#id#>225</#id#>
+<#id_contents#>1183</#id_contents#>
+<#title#>Fichier design.css</#title#>
+<#encoded_title#>fichier-design-css</#encoded_title#>
+<#hits#>2171</#hits#>
+<#id_cat#>63</#id_cat#>
+<#is_cat#>0</#is_cat#>
+<#defined_status#>0</#defined_status#>
+<#undefined_status#></#undefined_status#>
+<#redirect#>0</#redirect#>
+<#auth#></#auth#>
+<#cat_id#>63</#cat_id#>
+<#cat_id_parent#>4</#cat_id_parent#>
+<#cat_article_id#>215</#cat_article_id#>
+<#con_id_contents#>1183</#con_id_contents#>
+<#con_id_article#>225</#con_id_article#>
+<#menu#><ol class="wiki_list_1"><li><a href="#paragraph_fixe-ou-extensible">Fixe ou extensible ?</a></li><li><a href="#paragraph_l-arriere-plan-la-couleur-taille-de-la-police">L'arrière plan, la couleur, taille de la police</a></li><li><a href="#paragraph_l-en-tete-et-le-sous-en-tete">L'en-tête et le sous en-tête</a></li><li><a href="#paragraph_le-compteur-de-visite">Le compteur de visite</a></li><li><a href="#paragraph_les-menus">Les menus</a></li><li><a href="#paragraph_le-contenu-de-la-page">Le contenu de la page</a></li><li><a href="#paragraph_la-barre-de-lien-rapide">La barre de lien rapide</a></li><li><a href="#paragraph_les-emplacements-au-dessus-et-en-dessous-des-pages">Les emplacements au dessus et en dessous des pages</a></li><li><a href="#paragraph_le-footer-ou-pied-de-page">Le footer ( ou pied de page )</a></li></ol></#menu#>
+<#activ#>1</#activ#>
+<#user_id#>1760</#user_id#>
+<#user_ip#>83.201.19.203</#user_ip#>
+<#timestamp#>1404495463</#timestamp#>
+<#content#>Le fichier [i]design.css[/i] définit en fait l'aspect général de votre thème. On y trouve les éléments importants comme la largeur de votre site, la couleur d'arrière plan, et l'organisation des zones tels que l'en-tête, le menu de gauche ou le pied de page. 
+
+Commençons par le commencement :
+
+-- Fixe ou extensible ? --
+
+Le thème peut être fixe, ou extensible.
+
+[title=4]Mais qu'est ce que cela veut dire ?[/title] 
+
+C'est simplement la taille que va prendre votre site, un thème fixe a une taille défini cela veut dire qu'en fonction de la taille de la fenêtre du visiteur ou de sa résolution, le site ne s'y adaptera pas. Un thème extensible en revanche s'adapte a la résolution d'écran et la taille de la fenêtre du navigateur, donc il va s'étirer.
+
+[title=4]La partie concernée :[/title]
+
+[code=css]/* Conteneurs 
+--------------------------------------*/
+/* ##### Conteneur global du site ###### */
+div#global {
+	width: 980px;
+	margin: 18px auto 0px auto;
+	padding-bottom: 42px; /* Taille du footer */
+}[/code]
+Le thème base est fixe mais cela peut vite se modifier en changeant simplement la taille ( width/largeur )
+
+Il vous suffira donc de faire ça comme ceci :
+
+[code=css]/* Conteneurs 
+--------------------------------------*/
+/* ##### Conteneur global du site ###### */
+div#global {
+    width:auto;
+    margin:auto;
+    padding-bottom: 42px; /* Taille du footer */
+}[/code]
+Vous constaterez aussi le padding-bottom qui correspond à la taille du footer. Sans cette astuce, le footer ne reste pas en bas de page lorsque le contenu est petit (vide en fait).
+
+-- L'arrière plan, la couleur, taille de la police --
+[code=css]body {
+	position: relative;
+	min-height: 100%;
+	height: auto;
+	background: #E8EDF3 url(images/body.png) repeat-x;
+	color: #555555;
+	font-size: 13px;
+	font-family: "Trebuchet MS", Verdana, 'Bitstream Vera Sans', Times, serif;
+}[/code]
+Le body est le premier élément du site. Tous les éléments ont donc une répercutions sur les classes suivantes.
+La taille du texte ainsi que la police doivent être définit ici pour éviter les déclarations multiples.
+
+Pour changer l'arrière plan ( background ) il vous suffira simplement de changer l'image global ainsi que la valeur de son code couleur :[code=css]background:#E9ECEF url(images/global.png)  repeat-x;[/code]repeat-x veut dire que l'on va répéter l'image tout le long (à l'horizontal).
+Pour répéter une image verticalement il vous suffira de mettre :[code=css]repeat-y[/code]
+
+Et pour que l'image ne soit pas répétée mettre : [code=css]no-repeat[/code]
+
+Bien sûr il existe encore de grandes possibilités à ce niveau.
+
+Pour la police, c'est toujours quelque chose de très simple [code=css]color:#0E2A48;[/code]
+
+Il vous suffira de changer le code couleur, pour la taille c'est à ce niveau que ça ce passe : [code=css]font-size:12px;[/code]
+
+-- L'en-tête et le sous en-tête --
+[code=css]header#header {
+	height: 174px;
+	width: 980px;
+	margin: auto;	
+}
+
+div#top-header { 
+	height: 139px;
+	display: flex;
+}
+div#sub-header { min-height: 35px;}[/code]
+Les classes "top-header" et "sub-header" définissent la hauteurs de l'en-tête. La fonction [i]display:flex;[/i] a été utilisé afin de garantir l'utilisation de toute la zone du header si disponible.
+
+[code=css]div#site-infos {
+	display: flex;
+	max-width: 940px;
+	margin: 20px 20px 0px 20px;
+}
+
+div#site-logo {
+	margin-right: 20px;
+	background: url('images/logo.png') no-repeat;
+	width: 90px;
+}
+
+div#site-name-container {
+	margin-top: 10px;
+	flex: 1;
+	height: 108px;
+	overflow: hidden;
+}
+
+a#site-name {
+	color: #F9FCFF;
+	font-size: 50px;
+	font-weight: bold;
+	line-height: 1em;
+	text-shadow: 0px 0px 0 rgb(0,0,0), 1px 0px 0 rgb(-255,-255,-255), 2px 0px 1px rgba(0,0,0,0.1), 2px 0px 1px rgba(0,0,0,0.2), 0px 0px 1px rgba(0,0,0,.1);
+	letter-spacing: 1.1pt;
+	text-decoration: none;
+	white-space: nowrap;
+}
+
+span#site-slogan {
+	display: block;
+	color: #FFFFFF;
+	font-size: 12px;
+	padding-left: 4px;
+	letter-spacing: 1.5pt;
+}[/code]
+Les classes ci-dessous permettent de définir la position du logo et du nom du site.
+
+-- Le compteur de visite --
+[code=css]div#compteur {
+	color: #E9ECD9;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	font-size: 11px;
+	margin-right: 15px;
+	text-align: right;
+}[/code]
+[indent][list]
+	[*][b]Color[/b] définit la couleur de la police, 
+	[*][b]font-size[/b] la taille, 
+	[*][b]text-align[/b] l'alignement du texte ( [b][i]center[/i][/b] pour centrer, [b][i]left[/i][/b] pour aligner à gauche et [b][i]right[/i][/b] pour aligner à droite ).
+[/list][/indent]
+
+Pour définir l'espace entre le site et le compteur ont fait toujours appelle au [b]margin[/b], ici on choisit un [b]margin-right:[color=red]15px[/color][/b], se qui veut dire qu'on aura un décalement de [i]15 pixels par la gauche[/i].
+
+-- Les menus --
+[code=css]/* Menu gauche */
+aside#menu-left {
+	float: left;
+	width: 200px;
+	margin-right: 5px;
+}
+
+/* Menu droit */
+aside#menu-right {
+	float: right;
+	width: 200px;
+	margin-left: 5px;
+}
+
+/* Taille du conteneur de page en fonction des menus droite et gauche */
+aside#menu-left + div#main { float:left; width:775px; }
+aside#menu-right + div#main { float:left; width:775px; }
+aside#menu-left + aside#menu-right + div#main { float:left; width:570px; }[/code]
+[indent][list]
+	[*][b]Float[/b] définit l'emplacement du menu, 
+	[*][b]left[/b] ( donc [i]left[/i] pour celui de gauche et [i]right[/i] pour celui de droite ), 
+	[*][b]width[/b] définit la largeur du menu, 
+	[*][b]margin-right [/b]ou [b]left[/b] l'espace entre le menu central et le menu en question.
+[/list][/indent]
+
+-- Le contenu de la page --
+[code=css]/* Contenu de la page */
+div#main { width:auto; }
+
+/* Contenu central */
+div#main-content {
+	padding: 20px 10px;
+	border-spacing: 1px;
+	border: 1px #BEBEBE solid;
+	background: #FFFFFF;
+}[/code]
+
+-- La barre de lien rapide --
+[code=css]/* Barre d'outils */
+#actions-links-menu { float:right; margin: 0 5px 5px 5px; }
+
+/* Barre de lien rapide */
+nav#breadcrumb { text-indent: 10px; margin: 0px 0px 20px 10px; }
+nav#breadcrumb ol { list-style: none; margin: 0; }
+nav#breadcrumb ol li { display: inline; }
+nav#breadcrumb ol li:not(.current):after { content: '/'; color: #616161; } /* Séparateur de lien */[/code]
+
+La barre de lien rapide est en fait le fil d'Ariane, le menu au dessus du contenu indiquant l'arborescence jusqu'à la page actuelle (Accueil &gt; Wiki ).
+
+-- Les emplacements au dessus et en dessous des pages --
+[code=css]/* Emplacement au dessus et en dessous du contenu de la page */
+div#top-content { margin: 0px auto; }
+div#bottom-content { margin: 8px 0; }
+
+/* Bloc au dessus du pied de page */
+div#top-footer { clear: both; padding: 5px 0px; }[/code]
+
+-- Le footer ( ou pied de page ) --
+[code=css]footer#footer {
+	clear: both;
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	background: #212121;
+	border-top: #336397 2px solid;
+}
+
+footer#footer .footer-content {
+	margin: 20px auto 0 auto;
+	width: 980px;
+	padding-bottom: 20px;
+	border-bottom: 2px groove #444444;
+}
+
+footer#footer .footer-infos {
+	min-height: 40px;
+	text-align: center;
+	padding-top: 10px;
+}
+
+footer#footer .footer-infos span { color: #FFFFFF; font-size: 10px; }[/code]</#content#>
