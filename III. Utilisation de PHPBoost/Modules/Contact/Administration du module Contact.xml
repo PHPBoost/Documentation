@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>26</wiki_id>
+  <wiki_id_contents>1263</wiki_id_contents>
+  <wiki_title>Administration du module Contact</wiki_title>
+  <wiki_encoded_title>administration-du-module-contact</wiki_encoded_title>
+  <wiki_hits>544</wiki_hits>
+  <wiki_id_cat>21</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>21</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>24</wiki_cat_article_id>
+  <wiki_con_id_contents>1263</wiki_con_id_contents>
+  <wiki_con_id_article>26</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_gestion-des-champs-du-formulaire">Gestion des champs du formulaire</a><ol class="wiki_list_2"><li><a href="#paragraph_liste-des-champs">Liste des champs</a></li><li><a href="#paragraph_ajouter-un-champ">Ajouter un champ</a></li><li><a href="#paragraph_champs-crees-par-defaut">Champs créés par défaut</a><ol class="wiki_list_3"><li><a href="#paragraph_adresse-mail">Adresse mail</a></li><li><a href="#paragraph_destinataire-s">Destinataire(s)</a></li><li><a href="#paragraph_objet">Objet</a></li><li><a href="#paragraph_message">Message</a></li></ol></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>5193</wiki_user_id>
+  <wiki_user_ip>88.125.157.163</wiki_user_ip>
+  <wiki_timestamp>1405001535</wiki_timestamp>
+  <wiki_content>-- Configuration --
+
+Différentes options vous permettent de personnaliser le module.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/contact/admin_config.png[/img][/align]
+[list]
+	[*] [b]Titre du formulaire[/b] : Permet de définir le titre du formulaire de contact.
+	[*] [b]Afficher la zone d'informations[/b] : Permet d'afficher des informations autour du formulaire. Si la case est cochée, la position (haut, bas, gauche, droite) par rapport au formulaire et le contenu de la zone d'informations sont demandés.
+        [*] [b]Générer un numéro de suivi pour chaque mail envoyé[/b] : Permet de générer un identifiant unique pour chaque mail envoyé et de l'inclure dans celui-ci. Si la case est cochée, une option est affichée pour inclure ou non la date dans le numéro de suivi. Si la date n'est pas inclue, le numéro est un nombre qui s'incrémente à chaque envoi de mail.
+        [*] [b]Envoyer une copie du mail à l'émetteur[/b] : Permet d'envoyer un double du mail à l'émetteur. Conseillé dans le cas où on utilise le numéro de suivi, on peut également l'activer par défaut.
+        [*] [b]Autorisations[/b] : Vous pouvez définir l'autorisation d'affichage du formulaire de contact. Par défaut les visiteurs ont le droit d'afficher le formulaire.
+[/list]
+
+-- Gestion des champs du formulaire --
+
+--- Liste des champs ---
+
+La page [b]Gestion des champs[/b] affiche la liste des champs du formulaire de contact. Il est possible de changer la position de chaque champ en utilisant les flèches [html]&lt;i class="fa fa-arrow-up"&gt;&lt;/i&gt;[/html] et [html]&lt;i class="fa fa-arrow-down"&gt;&lt;/i&gt;[/html] ou en [i]drag &amp; drop[/i].
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/contact/admin_fields_management_list.png[/img][/align]
+L'icône [html]&lt;i class="fa fa-edit"&gt;&lt;/i&gt;[/html] permet d'éditer un champ et l'icône [html]&lt;i class="fa fa-delete"&gt;&lt;/i&gt;[/html], si présente, de le supprimer (il n'est pas possible de supprimer les champs créés par défaut).
+Il est également possible de gérer l'affichage des champs directement depuis cette liste en cliquant sur l'icône en forme d&#8217;&#339;il. L'icône [html]&lt;i class="fa fa-eye"&gt;&lt;/i&gt;[/html] indique que le champ est visible. L'icône [html]&lt;i class="fa fa-eye-slash"&gt;&lt;/i&gt;[/html] indique qu'il n'est pas affiché.
+
+--- Ajouter un champ ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/contact/admin_fields_management_add.png[/img][/align]
+[list]
+	[*] [b]Nom[/b] : Nom du champ dans le formulaire de contact.
+	[*] [b]Description[/b] : Description affichée sous le nom du champ.
+        [*] [b]Type de champ[/b] : Permet de définir le type de champ (texte court, texte semi long, texte illimité, sélection unique, sélection multiple, choix unique, choix multiple ou date).
+        [*] [b]Contrôle de la forme de l'entrée[/b] : Permet de contrôler le contenu des champs de type texte. On peut vérifier que le champ contient des chiffres, des lettres, des chiffres et des lettres, un mot, un mail ou une adresse de site web. Il est également possible de définir une expression personnalisée pour la vérification (utilisateurs expérimentés). Le contrôle de la forme d'entrée ne s'affiche pas pour les champs qui ne sont pas de type texte.
+        [*] [b]Champ requis[/b] : Permet de définir si le champ est obligatoire ou non à la validation du formulaire.
+        [*] [b]Valeur par défaut[/b] : Permet de définir la valeur par défaut du champ. Pour les champs de type [i]sélection[/i] ou [i]choix[/i] (uniques ou multiples), il est remplacé par [b]Valeurs possibles[/b]. Il est possible d'y définir plusieurs valeurs à l'aide du symbole [html]&lt;i class="fa fa-plus"&gt;&lt;/i&gt;[/html] qui s'affiche et de définir la ou les valeurs par défaut.
+        [*] [b]Afficher[/b] : Permet de définir si le champ est affiché ou non.
+        [*] [b]Autorisation d'afficher le champ[/b] : Permet de définir qui a le droit d'afficher le champ. Par défaut tous les champs sont visibles pour les visiteurs mais on peut imaginer la création de champs visibles uniquement par les membres par exemple.
+[/list]
+On retrouve les mêmes champs à l'édition du champ, sauf pour les champs créés par défaut, détaillés ci-dessous.
+
+--- Champs créés par défaut ---
+
+---- Adresse mail ----
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/contact/admin_fields_sender_mail.png[/img][/align]
+Ce champ est obligatoire au bon fonctionnement du module, ses options ne peuvent donc pas être modifiées (seuls son nom et sa description peuvent l'être). Pour les visiteurs, il sera vide par défaut pour qu'ils puissent entrer leur adresse mail (valide pour pouvoir avoir une réponse). Pour les membres, le champ est pré-rempli avec l'adresse mail enregistrée dans leur profil.
+
+---- Destinataire(s) ----
+
+Un champ [b]Destinataire(s)[/b] est créé mais non affiché par défaut. Il permet de définir plusieurs destinataires pour le formulaire de contact. Par défaut seuls les administrateurs du site reçoivent le mail de contact.
+On retrouve les options d'un champ standard, à l'exception du type de champ qui contient une liste réduite (sélection unique, sélection multiple, choix unique, et choix multiple).
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/contact/admin_fields_recipients.png[/img][/align]
+Pour les valeurs possibles, il faut renseigner un nom et l'adresse(s) mail du ou des destinataires. Ajoutez autant de valeurs que vous le souhaitez avec le bouton [html]&lt;i class="fa fa-plus"&gt;&lt;/i&gt;[/html]. Il est également possible de choisir une valeur par défaut, pour que le champ du formulaire soit pré-rempli. Si aucune valeur par défaut n'est choisie, le champ sera vide par défaut dans le formulaire.
+
+[style=notice]Les utilisateurs qui enverront un mail via le formulaire ne verront jamais le ou les adresses mail des destinataires (à part s'ils ont une réponse).[/style]
+
+---- Objet ----
+
+Le champ [b]Objet[/b] permet de spécifier l'objet du mail envoyé. Il est affiché par défaut. Il est possible de choisir parmi trois types de champs pour l'objet : texte court (l'utilisateur définira l'objet du mail), sélection et choix unique (l'utilisateur choisit l'objet du mail dans une liste).
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/contact/admin_fields_subject.png[/img][/align]
+Dans le cas ou le type de champ de l'objet est sélection ou choix unique, l'option [i]valeurs possibles[/i] apparaît, il faut renseigner un libellé pour l'objet et éventuellement un destinataire (utilisé dans le cas où le champ destinataires n'est pas visible pour envoyer un mail à différentes personnes en fonction de l'objet choisi). Ajoutez autant de valeurs que vous le souhaitez avec le bouton [html]&lt;i class="fa fa-plus"&gt;&lt;/i&gt;[/html]. Il est également possible de choisir une valeur par défaut, pour que le champ du formulaire soit pré-rempli. Si aucune valeur par défaut n'est choisie, le champ sera vide par défaut dans le formulaire.
+
+---- Message ----
+
+Même principe que pour l'adresse mail, ce champ est obligatoire au bon fonctionnement du module, ses options ne peuvent donc pas être modifiées (seuls son nom et sa description peuvent l'être).</wiki_content>
+</wiki_article>

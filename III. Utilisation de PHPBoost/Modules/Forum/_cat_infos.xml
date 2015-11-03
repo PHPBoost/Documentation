@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_cat>
+  <wiki_id>44</wiki_id>
+  <wiki_id_contents>645</wiki_id_contents>
+  <wiki_title>Forum</wiki_title>
+  <wiki_encoded_title>forum</wiki_encoded_title>
+  <wiki_hits>703</wiki_hits>
+  <wiki_id_cat>25</wiki_id_cat>
+  <wiki_is_cat>1</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>25</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>44</wiki_cat_article_id>
+  <wiki_con_id_contents>645</wiki_con_id_contents>
+  <wiki_con_id_article>44</wiki_con_id_article>
+  <wiki_menu></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>90.6.60.78</wiki_user_ip>
+  <wiki_timestamp>1355737467</wiki_timestamp>
+  <wiki_content>[table style="float:right;"]
+   [row]
+      [head colspan="2"]Forum[/head]
+   [/row]
+   [row]
+      [col]Auteur[/col]
+      [col][url=/user/profile/1]CrowkaiT[/url], [url=/user/profile/2]ben.popeye[/url][/col]
+   [/row]
+   [row]
+      [col]Version actuelle[/col]
+      [col]4.0[/col]
+   [/row]
+   [row]
+      [col]Date de sortie[/col]
+      [col]juillet 2007[/col]
+   [/row]
+   [row]
+      [col]Compatibilité[/col]
+      [col]PHPBoost 4.0[/col]
+   [/row]
+   [row]
+      [col]Démonstration[/col]
+      [col][url=http://demo.phpboost.com/forum/]Module Forum[/url][/col]
+   [/row]
+[/table]
+
+[align=center]
+   [size=20][b]Module Forum[/b][/size]
+   [img]http://resources.phpboost.com/documentation/utilisation/modules/forum/logo.png[/img]
+[/align]
+
+
+
+
+
+
+[b]Description :[/b] Ce module intègre un forum très complet sur votre site, nombreuses options de modération et fonctions pour les membres.</wiki_content>
+</wiki_cat>

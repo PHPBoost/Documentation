@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>111</wiki_id>
+  <wiki_id_contents>501</wiki_id_contents>
+  <wiki_title>Opérations sur la base de données</wiki_title>
+  <wiki_encoded_title>operations-sur-la-base-de-donnees</wiki_encoded_title>
+  <wiki_hits>501</wiki_hits>
+  <wiki_id_cat>5</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>5</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>159</wiki_cat_article_id>
+  <wiki_con_id_contents>501</wiki_con_id_contents>
+  <wiki_con_id_article>111</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_les-differentes-possibilites">Les différentes possibilités</a><ol class="wiki_list_2"><li><a href="#paragraph_connaitre-la-version-de-mysql">Connaître la version de MySQL</a></li><li><a href="#paragraph_lister-les-differentes-tables">Lister les différentes tables</a></li><li><a href="#paragraph_creer-une-table">Créer une table</a></li><li><a href="#paragraph_supprimer-une-table">Supprimer une table</a></li><li><a href="#paragraph_vider-une-table">Vider une table</a></li><li><a href="#paragraph_ajouter-une-colonne-a-une-table">Ajouter une colonne à une table</a></li><li><a href="#paragraph_supprimer-une-colonne-a-une-table">Supprimer une colonne à une table</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>982</wiki_user_id>
+  <wiki_user_ip>193.164.156.12</wiki_user_ip>
+  <wiki_timestamp>1353925680</wiki_timestamp>
+  <wiki_content>PHPBoost permet de faire des interventions sur la Base de données très facilement, à travers une classe spécialement conçut pour ça.
+
+Elle a pour but de faciliter le développement et ainsi gagner en productivité.
+
+La classe qui regroupe les différentes fonctions se nomme MySQLDBMSUtils.
+
+On peut accéder à son objet avec :
+
+[code=php]PersistenceContext::get_dbms_utils()[/code]
+
+-- Les différentes possibilités --
+
+--- Connaître la version de MySQL ---
+
+Fonction : [code=php,0,1]string get_dbms_version()[/code]
+
+--- Lister les différentes tables ---
+
+Fonction : [code=php,0,1]array list_tables()[/code]
+
+--- Créer une table ---
+
+Fonction : [code=php,0,1]create_table($table_name, array $fields, array $options = array())[/code]
+
+--- Supprimer une table ---
+
+Fonction : [code=php,0,1]drop($tables)[/code]
+
+--- Vider une table ---
+
+Fonction : [code=php,0,1]truncate($tables)[/code]
+
+--- Ajouter une colonne à une table ---
+
+Fonction : [code=php,0,1]add_column($table_name, $column_name, array $column_description)[/code]
+
+--- Supprimer une colonne à une table ---
+
+Fonction : [code=php,0,1]drop_column($table_name, $column_name)[/code]</wiki_content>
+</wiki_article>

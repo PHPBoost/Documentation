@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>137</wiki_id>
+  <wiki_id_contents>799</wiki_id_contents>
+  <wiki_title>Administration du module Personnalisation</wiki_title>
+  <wiki_encoded_title>administration-du-module-personnalisation</wiki_encoded_title>
+  <wiki_hits>357</wiki_hits>
+  <wiki_id_cat>40</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>40</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>136</wiki_cat_article_id>
+  <wiki_con_id_contents>799</wiki_con_id_contents>
+  <wiki_con_id_article>137</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_personnalisation-de-l-interface">Personnalisation de l'interface</a></li><li><a href="#paragraph_personnalisation-de-la-favicon">Personnalisation de la favicon</a></li><li><a href="#paragraph_diteur-de-fichiers-css">Éditeur de fichiers CSS</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>982</wiki_user_id>
+  <wiki_user_ip>193.164.156.12</wiki_user_ip>
+  <wiki_timestamp>1358267774</wiki_timestamp>
+  <wiki_content>A partir de la 4ème version, PHPBoost permet de personnaliser certaines parties d'un site Internet. 
+
+-- Personnalisation de l'interface --
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/customization/interface_customization.png[/img][/align]
+
+La personnalisation de l'interface vous permet de modifier le logo qui sera affiché sur votre site, sur un thème donné ou pour l'ensemble des thèmes que vous avez installé. Il vous suffit de choisir le thème à personnaliser, puis de sélectionner le fichier image qui fera office de logo. La case à cocher vous permet, si vous le souhaitez, de supprimer le logo précédemment affecté au thème.
+
+-- Personnalisation de la favicon --
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/customization/favicon_customization.png[/img][/align]
+
+De la même manière, vous pouvez personnaliser la favicon (petite icône visible dans la barre de navigation de votre navigateur) de votre site. La favicon attribuée pour votre site sera la même pour tous les thèmes que vous utilisez.
+
+-- Éditeur de fichiers CSS --
+Enfin, l'éditeur de fichiers CSS vous permet, comme son nom l'indique, d'éditer en ligne les fichiers CSS du thème de votre choix. 
+
+Pour se faire, sélectionnez d'abord le thème qui contient le fichier à éditer.
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/customization/css_files_editor_theme_select.png[/img][/align]
+
+Sélectionnez ensuite le fichier à éditer. Il n'y a pas de bouton de validation, l'affichage s'effectue automatiquement une fois le fichier sélectionné.
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/customization/css_files_editor_file_select.png[/img][/align]
+
+Sélection faite, l'éditeur de fichier CSS s'ouvre et vous permet d'éditer le fichier choisi.
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/customization/css_files_editor_file_edit.png[/img][/align]
+
+[style=warning]
+La modification d'un fichier CSS est effective et définitive une fois qu'elle a été validée. Nous vous conseillons fortement de faire une sauvegarde de votre fichier avant de l'éditer, afin de pouvoir faire face à toute erreur de manipulation.
+[/style]</wiki_content>
+</wiki_article>

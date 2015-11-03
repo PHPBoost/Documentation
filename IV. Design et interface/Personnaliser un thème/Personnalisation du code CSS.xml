@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>247</wiki_id>
+  <wiki_id_contents>1362</wiki_id_contents>
+  <wiki_title>Personnalisation du code CSS</wiki_title>
+  <wiki_encoded_title>personnalisation-du-code-css</wiki_encoded_title>
+  <wiki_hits>1193</wiki_hits>
+  <wiki_id_cat>59</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>59</wiki_cat_id>
+  <wiki_cat_id_parent>4</wiki_cat_id_parent>
+  <wiki_cat_article_id>211</wiki_cat_article_id>
+  <wiki_con_id_contents>1362</wiki_con_id_contents>
+  <wiki_con_id_article>247</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_les-fichiers-css-du-theme">Les fichiers CSS du thème</a></li><li><a href="#paragraph_le-cas-du-default-css-et-print-css">Le cas du default.css et print.css</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1760</wiki_user_id>
+  <wiki_user_ip>82.224.142.186</wiki_user_ip>
+  <wiki_timestamp>1407878864</wiki_timestamp>
+  <wiki_content>-- Les fichiers CSS du thème --
+
+Nous l'avons vu dans l'article "[b][link=structure-d-un-theme]Structure d'un thème[/link][/b]", les thèmes de la version 4.1 sont constitués de 3 fichiers CSS
+
+Pour modifier le thème base à votre goût, il est préférable de modifier les fichiers CSS dans l'ordre suivant : [list]
+	[*][b][link=fichier-design-css]design.css[/link][/b] : Il contient toutes les classes de mises en forme du sites (Le gros du Design)
+	[*][b][link=fichier-content-css]content.css[/link][/b] : Il contient les classes propres au contenu du site (messages, modules).
+	[*][b][link=fichier-global-css]global.css[/link][/b] : il contient toutes les classes utiles sur le site et communes aux différents modules.
+[/list]
+La modification de ces 3 fichiers est normalement suffisantes pour vous permettre d'avoir n'importe quel rendu.
+
+
+-- Le cas du default.css et print.css --
+
+Facultativement, vous pouvez avoir besoin de modifier les fichiers du thème défault. Sachez qu'ils ne contiennent aucune information de couleur ou autre propriété susceptible d'être modifiée à chaque thème.
+[list]
+	[*][b][link=fichier-default-css]default.css[/link][/b] : Il contient les éléments génériques et les réinitialisations afin de garantir un affichage identique sur tous les navigateurs.
+	[*]print.css : Met en forme le site pour un affichage épuré destiné à l'impression.
+[/list]
+
+[style=warning]Il est vivement conseiller de ne pas faire de modification dans ces fichiers[/style]
+
+Il vaut mieux privilégier la surcharge des fichiers du thème que de toucher au fichier du répertoire [i]default[/i] qui touchera l'ensemble des thèmes et l'administration.</wiki_content>
+</wiki_article>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>263</wiki_id>
+  <wiki_id_contents>841</wiki_id_contents>
+  <wiki_title>Utilisation du module Newsletter</wiki_title>
+  <wiki_encoded_title>utilisation-du-module-newsletter</wiki_encoded_title>
+  <wiki_hits>510</wiki_hits>
+  <wiki_id_cat>46</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>46</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>166</wiki_cat_article_id>
+  <wiki_con_id_contents>841</wiki_con_id_contents>
+  <wiki_con_id_article>263</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_accueil-de-la-newsletter">Accueil de la Newsletter</a></li><li><a href="#paragraph_envoyer-une-nouvelle-newsletter">Envoyer une nouvelle newsletter</a><ol class="wiki_list_2"><li><a href="#paragraph_choix-du-formatage-du-texte">Choix du formatage du texte</a></li><li><a href="#paragraph_redaction-de-la-newsletter">Rédaction de la newsletter</a></li></ol></li><li><a href="#paragraph_consulter-les-newsletters-archivees">Consulter les newsletters archivées</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1837</wiki_user_id>
+  <wiki_user_ip>24.201.132.222</wiki_user_ip>
+  <wiki_timestamp>1358734049</wiki_timestamp>
+  <wiki_content>-- Accueil de la Newsletter --
+La page d'accueil de la newsletter propose un tableau présentant les différents flux disponibles sur le site.
+En haut du tableau, selon que vous en ayez l'autorisation, un bouton permet d'accéder au formulaire pour rédiger et envoyer une nouvelle newsletter.
+
+En deuxième ligne, deux liens vous permettent de vous abonner/désabonner aux différents flux. Selon la configurations des autorisations, l&#8217;utilisateur pourra également:
+
+[list]
+	[*] Consulter les archives des différents flux
+	[*] Consulter la liste des inscrits aux différents flux
+[/list]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_home.png[/img]
+
+
+-- Envoyer une nouvelle newsletter --
+
+--- Choix du formatage du texte ---
+La procédure de rédaction/envoi d'une newsletter se déroule en deux étapes.
+
+[list]
+	[*] La première vous permet de rédiger une newsletter au format texte simple sans encodage particulier.
+	[*] La seconde vous permet de rédiger la newsletter à l'aide du BBCode
+	[*] La troisième, plutôt destinée aux connaisseurs du langage HTML, vous permet de rédiger votre newsletter en utilisant le balisage HTML
+[/list]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_add_new_newsletter_step1.png[/img]
+
+--- Rédaction de la newsletter ---
+
+La seconde étape consiste à rédiger votre newsletter puis de l'envoyer. Peut importe le type d'encodage choisi précédemment, seul le champs texte différera. Il vous faudra:
+
+[list]
+	[*] Choisir le flux de destination de la newsletter
+	[*] Rédiger la newsletter
+	[*] Envoyer cette dernière. Un bouton vous permet de tester en amont si l'envoi de la news s'effectue correctement.
+[/list]
+Rédaction au format texte
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_add_new_newsletter_step2_text_only.png[/img]
+
+Rédaction à l'aide du BBCode
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_add_new_newsletter_step2_bbcode.png[/img]
+
+Rédaction en langage HTML
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_add_new_newsletter_step2_html.png[/img]
+
+-- Consulter les newsletters archivées --
+Dans certains cas, vous voudrez peut-être laisser libre accès aux différentes newsletters précédemment envoyées. PHPBoost vous permet de conserver les archives de chaque flux et, selon les autorisations octroyées aux utilisateurs, d'avoir accès à ces dernières.
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_see_archives.png[/img]</wiki_content>
+</wiki_article>

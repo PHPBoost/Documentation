@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>93</wiki_id>
+  <wiki_id_contents>137</wiki_id_contents>
+  <wiki_title>PHPBoost 1.5.0</wiki_title>
+  <wiki_encoded_title>phpboost-1-5-0</wiki_encoded_title>
+  <wiki_hits>451</wiki_hits>
+  <wiki_id_cat>14</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>14</wiki_cat_id>
+  <wiki_cat_id_parent>1</wiki_cat_id_parent>
+  <wiki_cat_article_id>14</wiki_cat_article_id>
+  <wiki_con_id_contents>137</wiki_con_id_contents>
+  <wiki_con_id_article>93</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>82.124.181.87</wiki_user_ip>
+  <wiki_timestamp>1346007468</wiki_timestamp>
+  <wiki_content>Sortie en juin 2006, PHPBoost 1.5.0 rime avec optimisation. Le maximum d'informations est mis en cache afin d'améliorer la rapidité, la réécriture des adresses (URL Rewriting) fait son apparition afin d'optimiser le référencement. La gestion de groupes d'utilisateurs est aussi gérée, afin de donner des autorisations spécifiques sur chaque catégorie du forum par exemple.
+
+
+-- Changelog --
+
+
+[list]
+	[*]Système de sessions intégralement recodé. Suivi des utilisateurs plus précis et lien vers la page consultée par le membre dans l'administration
+	[*]Gestion des groupes, avec autorisations d'accès, modération et autres options sur le forum accordés aux groupes paramétrable
+	[*]Sondages sur le forum
+	[*]Gestion de l'URL Rewriting
+	[*]Gestion des catégories pour les articles
+	[*]Système d'avertissements aux membres sur le forum (modérateur et administrateur), à 10 avertissements le membre est banni
+	[*]Affichage date/heure, et éditeur d'un message sur le forum. Activable/désactivable suivant configuration. Possibilité de supprimer le marqueur d'édition pour les membres d'un groupe
+	[*]Activation du compte membre par lien envoyé par mail. (Activable/désactivable)
+	[*]Liste déroulante pour changer facilement, et instantanément de forum
+	[*]Système de mise en cache des requêtes SQL "statiques"
+	[*]Nouvelles architectures orientées objets: SQL, sessions, pagination, mails, benchmark du site, et RSS
+	[*]Connexion avec les cookies bloqués possible
+	[*]Possibilité de mettre un règlement à accepter à l'inscription
+	[*]Nouvelle balise Flash [i][swf][/i]
+	[*]Nouveau champ Biographie dans le profil membre pour se décrire
+	[*]Vue de la dernière connexion dans la liste des membres et tri possible sur cette date
+	[*]Reprise du message de la page précédente sur le forum
+	[*]Possibilité de modifier l'adresse des liens ajoutés dans l'administration
+	[*]Nouvelle fonction d'ouverture des photos de la galerie en popup (plus grande)
+	[*]Statistique : Nombre de visites totales depuis le lancement du site
+	[*]Statistique : Provenance géographique des visiteurs. 
+	[*]Statistique : Vue du graphique de visites sur les mois en plus des jours
+	[*]Possibilité de modifier la durée de validité du cookie des sondages
+	[*]Nouveaux boutons sur le forum pour tous les statuts, bouton clignotant pour les sujets de plus d'une page
+	[*]Passage automatique des URLs sans la balise [i][url][/i]
+	[*]Détection des robots d'exploration par plage IP, ajout de nouveaux robots
+	[*]Meilleure intégration du moteur de recherche dans le forum
+	[*]Nouvelle interface pour la gestion des catégories du forum
+	[*]Corrections et améliorations du fonctionnement des messages vu/non vus
+	[*]Améliorations de la fonction d'insertion du BBcode
+	[*]Nombreuses optimisations SQL, et optimisations du code
+	[*]Code HTML et CSS en partie recodé
+	[*]5 nouveaux smileys, nouvelles icônes sur le forum
+[/list]</wiki_content>
+</wiki_article>

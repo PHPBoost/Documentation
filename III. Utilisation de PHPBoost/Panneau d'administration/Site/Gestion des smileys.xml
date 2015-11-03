@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>68</wiki_id>
+  <wiki_id_contents>94</wiki_id_contents>
+  <wiki_title>Gestion des smileys</wiki_title>
+  <wiki_encoded_title>gestion-des-smileys</wiki_encoded_title>
+  <wiki_hits>894</wiki_hits>
+  <wiki_id_cat>15</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>15</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>15</wiki_cat_article_id>
+  <wiki_con_id_contents>94</wiki_con_id_contents>
+  <wiki_con_id_article>68</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-smileys">Gestion des smileys</a></li><li><a href="#paragraph_ajout-d-un-smiley">Ajout d'un smiley</a><ol class="wiki_list_2"><li><a href="#paragraph_uploader-un-smiley">Uploader un smiley</a></li><li><a href="#paragraph_ajouter-un-smiley">Ajouter un smiley</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>81.51.228.217</wiki_user_ip>
+  <wiki_timestamp>1345829531</wiki_timestamp>
+  <wiki_content>-- Gestion des smileys --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/manage.png[/img][/align]
+
+Dans la gestion des smileys, vous avez la possibilité : 
+[list]
+[*] de supprimer un smiley
+[*] de l'éditer pour changer le code à insérer pour l'afficher.
+[/list]
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/edit.png[/img][/align]
+
+L'édition d'un smiley vous demande : 
+[list]
+[*] le code du smiley (ex: :D)  	
+[*] choisir le smiley parmi ceux de la liste disponible dans le répertoire /images/smileys
+[/list]
+
+-- Ajout d'un smiley --
+
+Nous allons d'abord mettre le smiley sur le serveur FTP puis nous l'inclurons dans la liste des smileys disponibles dans le BBcode.
+
+--- Uploader un smiley ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/upload.png[/img][/align]
+
+Pour ajouter, il faut que vous mettiez sur votre serveur le smiley en question. Pour cela vous avez 2 possibilités : 
+[list]
+[*] le mettre directement via ftp dans le répertoire /images/smileys/
+[*] le télécharger sur votre ftp via le formulaire proposé à cette page.
+[/list]
+
+--- Ajouter un smiley ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/add.png[/img][/align]
+
+Une fois le smiley mis sur votre ftp, il faut l'ajouter dans la base des smileys.
+
+Pour cela vous devez : 
+[list]
+[*] donner un code au smiley (ex : :ne)
+[*] choisir le smiley parmi ceux de la liste disponible
+[/list]</wiki_content>
+</wiki_article>

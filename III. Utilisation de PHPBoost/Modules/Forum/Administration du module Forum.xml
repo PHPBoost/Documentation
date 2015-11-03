@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>45</wiki_id>
+  <wiki_id_contents>848</wiki_id_contents>
+  <wiki_title>Administration du module Forum</wiki_title>
+  <wiki_encoded_title>administration-du-module-forum</wiki_encoded_title>
+  <wiki_hits>973</wiki_hits>
+  <wiki_id_cat>25</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>25</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>44</wiki_cat_article_id>
+  <wiki_con_id_contents>848</wiki_con_id_contents>
+  <wiki_con_id_article>45</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_configuration-du-forum">Configuration du forum</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-du-forum">Configuration du forum</a></li><li><a href="#paragraph_activer-le-message-devant-le-topic">Activer le message devant le topic</a></li><li><a href="#paragraph_recompter-le-nombre-de-sujets-et-de-messages">Recompter le nombre de sujets et de messages</a></li></ol></li><li><a href="#paragraph_configuration-des-groupes">Configuration des groupes</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>935</wiki_user_id>
+  <wiki_user_ip>89.90.175.161</wiki_user_ip>
+  <wiki_timestamp>1358760789</wiki_timestamp>
+  <wiki_content>-- Gestion des catégories --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_1.jpg[/img][/align]
+
+Ici vous pouvez voir toutes les catégories et sous forums de votre module forum.
+
+Chaque catégorie à la racine ne peut pas recevoir de posts, mais que des forums.
+Ensuite chaque sous forum peut contenir des sous forums, de manière infinie, mais bon évitez les sous sous (...) forums car après l'utilisateur ne s'y retrouve plus.
+
+Voici à quoi correspondent les boutons d'administration : 
+
+[list]
+[*] [img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_2.png[/img] : sert à déplacer vers le haut une catégorie ou un forum.
+[*] [img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_3.png[/img] : sert à déplacer vers le haut une catégorie ou un forum.
+[style=notice]Un forum ne peut être déplacé que dans le même type de catégorie. par exemple sur l'image ci dessus, Forum 3 ne peut pas être déplacé car il n'y a pas de forum parent de même niveau.[/style]
+[*] [img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_4.png[/img] : sert à éditer un fourm pour modifier son titre, sa catégorie, ses autorisation,...)
+[*] [img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_5.png[/img] : sert à supprimer un forum.
+[style=notice]Si le forum ou le sous forum contient des forum ou des posts, lors de la suppression, il vous sera proposé de transférer lesd messages ou les sous forums dans une autre catégorie
+[/style]
+[/list]
+
+
+-- Ajouter une catégorie --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_6.jpg[/img][/align]
+
+Vous pouvez aussi créer un forum, qui sera forcément rattaché à une catégorie. Les permissions pourront alors être gérées de manière plus fine.
+
+Vous pouvez également choisir :
+* l'approbation ou non si vous désirez qu'il soit vu ou non sur le forum général
+* le statut verrouillé ou non selon si vous désirez que les utilisateurs puissent ou non poster sur ce forum.
+
+-- Configuration du forum --
+ 	
+--- Configuration du forum ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_7.jpg[/img][/align]
+
+[i]Nom du forum[/i] : à modifier bien sur selon le nom de votre site
+
+[i]Nombre de sujets par page[/i] : à votre guise
+
+[i]Nombre de messages par page[/i] : à votre guise
+
+[i]Durée pour laquelle les messages lu par les membres sont stockés[/i] : Il s'agit des marqueurs de vus du forums, pour économiser la base de données, ils ne sont pas conservés indéfiniment, dans la procédure lancée tous les jours ils sont automatiquement supprimés si ils dépassent la valeur limite. La valeur conseillée est de 30 jours.
+
+[i]Nombre maximum possible de sujets en favoris[/i] : il est possible de mettre des messages dans ses favoris afin d'y accéder plus rapidement. Il s'agit donc du nombre maximal autorisé.
+
+[i]Marqueurs d'édition des messages[/i] : si vous activez cette option, un message précisant par qui et à quelle heure le message a été édité en dessous du message édité par un modérateur/administrateur.
+
+[i]Afficher le formulaire de connexion[/i] : Affiche le menu de connexion, comme pour se connecter sur le site. Si votre menu de connexion est déjà accessible, cette option est à désactivée.
+
+[i]Masquer les blocs de gauche du site sur le forum[/i] : cliquez sur oui si vous ne souhaitez pas avoir les zone de blocs à gauche du forum.
+
+[i]Masquer les blocs de droite du site sur le forum[/i] : cliquez sur oui si vous ne souhaitez pas avoir les zone de blocs à droite du forum.
+
+
+--- Activer le message devant le topic ---
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_8.jpg[/img][/align]
+
+[i]Activer le message devant le topic [/i] : devant les topics peut être mis une icoône donnant un statut à ce dernier. Sur le site de phpboost, cette fonction sera utilisée pour définir sir un topic est réglé ou non.
+
+[i]Message devant le titre du topic [/i] : petit message qui s'intercalera en début du titre du topic si le statut est donné.
+
+[i]Explications du message pour les membres (Si statut changé) [/i]	: en bas du forum se trouve les icônes avec leur explication c'est de cela qu'il s'agit ici : 
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_12.jpg[/img][/align]
+
+Ainsi dans le cas de phpboost, le message est : 'Sujet non réglé?'
+
+[i]Explications du message pour les membres (Si statut non changé)[/i] : C'est la même chose sauf que le message sera inversé donc dans le cas de phpboost : 'Sujet réglé?'
+[align=center]
+[img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_11.jpg[/img][/align]
+
+[i]Icône associée[/i] : c'est l'icône du lien pour donner le statut au topic (il y a déjà des icônes prédéfinies).
+
+Pour le modifier, remplacer renommez votre icône en  'msg_display.png' et mettez le via FTP dans le répertoire : ../forum/templates/images/
+
+--- Recompter le nombre de sujets et de messages ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_9.jpg[/img][/align]
+
+Tout est dans le titre, sert à recompter le nombre de messages dans votre forum. Le nombre de messages est affiché en bas de la page d'accueil du forum et dans les statistiques du forum.
+
+-- Configuration des groupes --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_10.jpg[/img][/align]
+
+Ici vous pouvez sélectionner quel type d'utilisateur (visiteur / membre / modérateur / administrateur / groupes d'utilisateurs) peuvent :
+* [i]Droit de flooder[/i] : pas de limite de temps entre 2 messages sur le forum.
+*[i] Désactivation du marqueur d'édition des messages[/i] : lors de l'édition d'un post, normalement un message est mis en bas du message désignant le modérateur qui a édité et l'heure. Vous pouvez ici choisir quels types d'utilisateurs peuvent éditer sans affichage der ce message.
+* [i]Désactivation de la limite de sujet suivis[/i]</wiki_content>
+</wiki_article>

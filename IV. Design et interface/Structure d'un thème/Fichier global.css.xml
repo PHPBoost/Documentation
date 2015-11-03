@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>226</wiki_id>
+  <wiki_id_contents>1113</wiki_id_contents>
+  <wiki_title>Fichier global.css</wiki_title>
+  <wiki_encoded_title>fichier-global-css</wiki_encoded_title>
+  <wiki_hits>912</wiki_hits>
+  <wiki_id_cat>63</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>63</wiki_cat_id>
+  <wiki_cat_id_parent>4</wiki_cat_id_parent>
+  <wiki_cat_article_id>215</wiki_cat_article_id>
+  <wiki_con_id_contents>1113</wiki_con_id_contents>
+  <wiki_con_id_article>226</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-mise-en-forme-du-texte">La mise en forme du texte</a><ol class="wiki_list_2"><li><a href="#paragraph_les-liens-du-site">Les liens du site</a></li><li><a href="#paragraph_les-liens-des-utilisateurs">Les liens des utilisateurs</a></li><li><a href="#paragraph_les-differentes-tailles-de-polices">Les différentes tailles de polices</a></li><li><a href="#paragraph_les-titres-la-balise-h">les titres (la balise h)</a></li><li><a href="#paragraph_les-titres-bbcode">Les titres &quot;BBcode&quot;</a></li><li><a href="#paragraph_les-liens-wikipedia">Les liens wikipédia</a></li></ol></li><li><a href="#paragraph_mise-en-forme-du-contenu">Mise en forme du contenu</a><ol class="wiki_list_2"><li><a href="#paragraph_affichage-du-mini-calendrier">Affichage du mini calendrier</a></li><li><a href="#paragraph_les-blocs-bbcode">Les blocs bbcode</a></li><li><a href="#paragraph_le-selecteur-de-couleurs">Le sélecteur de couleurs</a></li><li><a href="#paragraph_les-blocs-de-quotes-de-code-ou-caches">les blocs de quotes, de code, ou cachés</a></li><li><a href="#paragraph_les-autres-elements-de-positionnement">Les autres élements de positionnement</a></li><li><a href="#paragraph_les-listes-numerotees">Les listes numérotées</a></li><li><a href="#paragraph_la-recherche-de-membres-en-ajax">La recherche de membres (en AJAX)</a></li><li><a href="#paragraph_la-barre-de-progression">La barre de progression</a></li><li><a href="#paragraph_le-systeme-de-notation">Le système de notation</a></li></ol></li><li><a href="#paragraph_les-icones-specifiques-phpboost-de-fontawesome">Les Icônes spécifiques PHPBoost de FontAwesome</a></li><li><a href="#paragraph_les-differents-menus">Les différents menus</a><ol class="wiki_list_2"><li><a href="#paragraph_le-niveau-1">Le niveau 1</a></li><li><a href="#paragraph_le-niveau-2">Le niveau 2</a></li><li><a href="#paragraph_le-niveau-3">Le niveau 3</a></li><li><a href="#paragraph_les-menus-groupes">Les menus groupés</a></li><li><a href="#paragraph_les-menus-de-navigation">Les menus de navigation</a></li><li><a href="#paragraph_les-menus-des-modules">Les menus des modules</a></li><li><a href="#paragraph_l-affichage-du-menu-sur-la-droite">L'affichage du menu sur la droite</a></li><li><a href="#paragraph_le-separateurs-de-menu">Le séparateurs de menu</a></li><li><a href="#paragraph_les-menus-verticaux-en-scrolling">Les menus verticaux en scrolling</a></li><li><a href="#paragraph_les-menus-horizontaux-en-scrolling">Les menus horizontaux en scrolling</a></li><li><a href="#paragraph_les-menus-horizontaux">Les menus horizontaux</a></li><li><a href="#paragraph_les-liens-menus-verticaux">Les liens menus verticaux</a></li><li><a href="#paragraph_les-menus-de-flux">Les menus de flux</a></li></ol></li><li><a href="#paragraph_les-message-d-erreurs">Les message d'erreurs</a></li><li><a href="#paragraph_le-maintenance">Le maintenance</a></li><li><a href="#paragraph_le-systeme-d-upload">Le système d'upload</a><ol class="wiki_list_2"><li><a href="#paragraph_le-deplacement-dans-l-upload">Le déplacement dans l'upload</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1760</wiki_user_id>
+  <wiki_user_ip>82.224.142.186</wiki_user_ip>
+  <wiki_timestamp>1402254815</wiki_timestamp>
+  <wiki_content>Le fichier [i]global.css[/i] contient les classes globales du site, qui peuvent être utilisées par les modules et le noyau.
+
+-- La mise en forme du texte --
+Commençons par les éléments de mise en forme du texte
+--- Les liens du site ---
+Chaque fois qu'un lien est cliquable, c'est la balise &lt;a&gt; qui se cache derrière. Pour gérer la couleur des lien par défaut, il suffit de remplacer les valeurs de l'attribut [b][url=http://www.w3schools.com/cssref/css_colornames.asp]color[/url][/b] ci-dessous.
+[code=css]a {
+	color: #4372AA;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #2D4D73;
+	text-decoration: underline;
+}[/code]
+
+--- Les liens des utilisateurs ---
+Lorsque le lien correspond à un pseudo, nous attribuons une couleur particulière et notamment pour les admin, modo et membre. Vous pouvez personnaliser ces éléments avec le code ci-dessous.
+[code=css]a.admin { color: #FFA34F; }
+a.modo { color: #006699; }
+a.member { color: #000000; }[/code]
+
+--- Les différentes tailles de polices ---
+Afin de facilité la personnalisation, nous avons créer des tailles pour redéfinir la taille du texte dans certains cas.
+[code=css].smaller { font-size: 10px; }
+.small { font-size: 12px; }
+.big { font-size: 16px; }
+.bigger { font-size: 18px; }
+.biggest { font-size: 20px; }[/code]
+
+--- les titres (la balise h) ---
+Les balises &lt;h&gt; sont les en-têtes des différents éléments de votre site. Des tailles ont été définies pour assurer une cohérence dans la page.
+[code=css]h1 { font-size: 21px; }
+h2 { font-size: 19px; }
+h3 { font-size: 18px; }
+h4 { font-size: 17px; }
+h5 { font-size: 16px; }
+h6 { font-size: 15px; }[/code]
+
+--- Les titres &quot;BBcode&quot; ---
+Lorsque les titres sont utilisés dans un contenu tel que le forum, ils sont associés à une classe supplémentaire
+[code=css].bb-title { display: inline; }
+h3.bb-title, h4.bb-title { border-bottom: 1px solid #366393; }
+	
+/* Titre 1 */
+h1.bb-title { }
+/* Titre 2 */
+h2.bb-title { margin-left: 20px; }
+/* Sous titre 1 */
+h3.bb-title { margin-left: 40px; }
+/* Sous titre 2 */
+h4.bb-title { margin-left: 60px; }[/code]
+
+--- Les liens wikipédia ---
+Les liens Wikipédia sont précédés d'un icone.
+[code=css]a.wikipedia-link:before {
+	content: url('../../default/images/wikipedia_icon.png');
+	vertical-align: middle;
+	padding-right: 2px;
+}
+
+a.wikipedia-link { border-bottom: 1px dotted; }[/code]
+
+-- Mise en forme du contenu --
+La partie suivante correspond à la mise en forme du contenu tel que le mini-calendrier, le selecteur de couleur, les blocs.
+--- Affichage du mini calendrier ---
+Les formulaires demandes parfois la saisie d'une date. Le sélecteur est géré par le code suivant.
+[code=css].calendar-block {
+	position: absolute;
+	text-align: center;
+	background: #FFFFFF;
+	border: 1px solid #999999;
+	bottom: 0;
+	left: 100px;
+	z-index: 100;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+	color: #656766;
+}
+
+.calendar-block .date-picker {
+	background: #FFFFFF;
+	margin: 0px;
+}
+
+.calendar-block .date-picker select {
+	border: none;
+	color: #888888;
+	font-size: 10px;
+	padding: 3px 0px;
+}
+
+.calendar-block .date-picker select,
+.calendar-block .date-picker select:focus{
+	box-shadow: none;
+}
+
+.calendar-block .date-picker th {
+	padding: 1px 0px;
+	background: #FFFFFF;
+	color: #888888;
+}
+
+.calendar-block .date-picker th a { color: #888888; }
+
+.calendar-block .date-picker td { padding: 2px 4px; }
+
+.calendar-block table.date-picker thead th { border-bottom: 1px solid #999999; }
+
+.calendar-block table.date-picker tbody tr td:first-child { border-left: none; }
+.calendar-block table.date-picker tbody tr td:last-child { border-right: none; }
+.calendar-block table.date-picker tbody tr:last-child { border-bottom: none; }[/code]
+
+--- Les blocs bbcode ---
+De nombreux éléments dans le bbcode utilise un bloc pour délimiter leur zone.
+[code=css].bbcode-block {
+	position: absolute;
+	text-align: center;
+	padding: 6px 4px;
+	bottom: 2px; 
+	z-index: 100;
+	background: #F3F3F3;
+	border-radius: 3px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+	border: 1px solid #AAAAAA;
+}
+
+.bbcode-block a {
+	cursor: pointer;
+	text-decoration: none;
+}[/code]
+
+--- Le sélecteur de couleurs ---
+Il s'agit du bloc permettant de sélectionner une couleur. Il est notamment utilisé dans la barre bbcode ou les formulaires.
+[code=css].color-picker {
+	position: absolute;
+	z-index: 100;
+}
+
+.color-picker .bbcode-block { left: 80px; }
+
+.color-picker .bbcode-block table {
+	border-collapse: collapse;
+	margin: auto;
+	border: none;
+}
+
+.color-picker td {
+	padding: 0px;
+	border: 1px solid #F3F3F3;
+}
+
+.color-picker td a {
+	display: block;
+	width: 14px;
+	height: 14px;
+}[/code]
+
+--- les blocs de quotes, de code, ou cachés ---
+Lorsque vous souhaitez afficher une quote, du code ou masqué un texte, vous pouvez utiliser les class suivantes : "blockquote", "code", "hide". La class "text-" correspond à l'élément précédent le bloc.
+[code=css].text-blockquote, .text-code, .text-hide {
+	display: block;
+	width: 93%;
+	padding-bottom: 2px;
+	font-weight: bold;
+	margin: auto;
+}
+.blockquote, .code, .hide {
+	overflow: auto;
+	max-height: 500px;
+	background: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	color: #444444;
+	padding: 8px;
+	margin: 0px 25px;
+}
+
+.hide {
+	cursor: pointer;
+	height: 10px; 
+	overflow: hidden;
+}
+
+.hide2 { 
+	visibility: hidden;
+	overflow: auto;
+}[/code]
+
+--- Les autres élements de positionnement ---
+Autres codes associés aux éditeurs de texte
+[code=css].indent { margin-left: 30px; }
+
+.bb-acronym { cursor: help; }
+
+.bb-block {
+	margin: 5px 20px; 
+	padding: 5px; 
+	border: 1px solid #C4CED6;
+	display: flex;
+	justify-content: center;
+}
+
+.bb-fieldset { margin: 10px; }[/code]
+
+--- Les listes numérotées ---
+La balise &lt;ol&gt; correspond à une liste ordonnées d&#8217;élément.
+[code=css].code ol { margin-left: 3em; }[/code]
+
+--- La recherche de membres (en AJAX) ---
+Le résultat d'une recherche de membre en AJAX est affiché dans un bloc. L'attribut box-shadow permet d'afficher une légère ombre derrière se bloc.
+[code=css].xmlhttprequest-result-search {
+	overflow: auto;
+	min-height: 40px;
+	width: 100px;
+	overflow: auto;
+	background-color: #FFFFFF;
+	border: 1px solid #CCCCCC;  
+	padding: 2px;
+	margin: 2px 0px 0px 0px;
+	border-radius: 4px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.01);
+}[/code]
+
+--- La barre de progression ---
+La barre de progression utilisé lors de l'installation, dans les sondages ou tout autres utilisation que vous pourriez en faire utilise les classes suivantes. Un container, le texte, la barre en elle même, et une variante lorsque la barre est à 100%.
+[code=css].progressbar-container {
+	background: #F5F5F5;
+	margin: 4px 0px 10px;
+	border-radius: 3px;
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+.progressbar-container .progressbar-infos {
+	line-height: 13px;
+	font-size: 11px;
+	text-align: center;
+	width: 100%;
+	position: absolute;
+}
+.progressbar {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.progressbar[style*="width: 100"] {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;	
+}
+
+.progressbar-container .progressbar {
+	height: 13px;
+	background-color: #8ECF67;
+	transition: width .6s ease;
+}[/code]
+
+--- Le système de notation ---
+Certains modules autorisent la notation. Si vous souhaitez ajuster la couleur ou la taille, vous pouvez modifier l'attribut "color" ou "font-size".
+[code=css].notation,
+.static-notation { display: inline-block; }
+
+.notation .star,
+.static-notation .star { 
+	color: #E3CF7A; 
+	font-size: 14px; 
+	padding-right: 5px; 
+	text-decoration: none;
+}[/code]
+
+-- Les Icônes spécifiques PHPBoost de FontAwesome --
+La version 4.1 de PHPBoost utilise la librairie FontAwesome comme bibliothèque d'images. Certains couleurs ont été personnalisé en fonction de leur utilisation. On retrouve par exemple l'icone fa-forbidden que l'on colori en rouge #BA4B49.
+On retrouve aussi l'affichage des alertes du profil avec la double icones
+[code=css].fa-syndication:before { color: #F57900; }
+.fa-success:before { color: #478948; }
+.fa-forbidden:before { color: #BA4B49; }
+.fa-error:before { color: #BA4B49; }
+.fa-warning:before { color: #C19954; }
+.fa-ban:before { color: #BA4B49; }
+.fa-unban:before { color: #478948; }
+.fa-male:before { color: #8DC3E9; }
+.fa-female:before { color: #F49CC4; }
+.fa-online:before { color: #52D132; }
+.fa-offline:before { color: #E05759; }
+
+li.small-block .fa-stack { height: 2.34em; }
+
+.fa-circle-alert {
+	z-index: 1;
+	position: absolute;
+	top: -3px;
+	left: 20px;
+	font-size: 1.32em;
+}
+
+.fa-circle-alert span {
+	display: block;
+	position: absolute;
+	top: 4px;
+	width: 100%;
+	margin: 0 auto;
+	color: white;
+	font-size: 0.7em;
+	text-align: center;
+}[/code]
+
+-- Les différents menus --
+PHPBoost utilise un système de menu. Il est constitué de plusieurs éléments. 
+[list]
+	[*]3 Niveaux de menu sont prévus
+	[*]Il est possible de grouper visuellement des éléments. 
+	[*]Le menu est vertical ou horizontal
+	[*]Le menu est déroulant (scrolling) ou fixe
+[/list]
+[code=css].dynamic-menu { position: relative; }[/code]
+
+--- Le niveau 1 ---
+
+[code=css].dynamic-menu ul {
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style-type: none;
+	z-index: 101;
+}
+
+.dynamic-menu &gt; ul &gt; li {
+	position: relative;
+	display: inline-block !important;
+}
+
+.dynamic-menu li a,
+.dynamic-menu li span {
+	text-decoration: none;
+	display: block;
+	white-space: nowrap;
+	padding: 6px 12px;
+	font-size: 11px;
+}
+
+.dynamic-menu &gt; ul &gt; li:hover {
+	background-color: #EEEEEE;
+}
+
+.dynamic-menu &gt; ul &gt; li &gt; a,
+.dynamic-menu &gt; ul &gt; li &gt; a:hover {
+	color: inherit;
+	text-decoration: none;
+	font-weight: 300;
+}[/code]
+
+--- Le niveau 2 ---
+
+[code=css].dynamic-menu li ul {
+	position: absolute;
+	top: -99999em;
+	opacity: 0;
+	margin: 0 !important;
+	transition: opacity .2s ease-in-out,top 0 ease-in 0.2s;
+	padding: 5px 0;
+	color: #333333;
+	font-size: 11px;
+	background: #FFFFFF;
+	border-radius: 3px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+	border: 1px solid #AAAAAA;
+	z-index: 102;
+}
+
+.dynamic-menu li:hover &gt; ul {
+	opacity: 1;
+	top: 100%;
+	transition: opacity .2s ease-in-out, top 0s ease-in 0s;
+}
+
+.dynamic-menu li li {
+	clear: both;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	text-align: left;
+	position: relative;
+}
+
+.dynamic-menu li li a,
+.dynamic-menu li li span {
+	font-size: 10px;
+	display: block;
+	text-decoration: none;
+	padding: 5px 15px;
+	outline: none;
+}
+
+.dynamic-menu li li a:hover,
+.dynamic-menu li li span:hover {
+	cursor: pointer;
+	background-color: #F0F0F0;
+	text-decoration: none;
+}
+
+.dynamic-menu ul li.extend &gt; a,
+.dynamic-menu ul li.extend &gt; span { padding-right: 18px; }
+
+.dynamic-menu ul li.extend &gt; a:after,
+.dynamic-menu ul li.extend &gt; span:after {
+	position: absolute;
+	display: block;
+	right: 7px;
+	top: 50%;
+	margin-top: -5px;
+	font-family: FontAwesome;
+	content: "\F0DA";
+	color: #CCCCCC;
+	font-size: 11px;
+	font-weight: 300;
+}
+
+.dynamic-menu a img,
+.dynamic-menu span img {
+	max-width: none;
+	padding-right: 6px;
+	vertical-align: -4px;
+}[/code]
+
+--- Le niveau 3 ---
+
+[code=css].dynamic-menu li li ul {
+	left: 100%;
+	z-index: 101;
+}
+
+.dynamic-menu li li:hover &gt; ul { top: -6px; }[/code]
+
+--- Les menus groupés ---
+
+[code=css].dynamic-menu.group &gt; ul {
+	font-size: 0;
+}
+
+.dynamic-menu.group &gt; ul &gt; li {
+	border-radius: 0;
+	border-right: 1px solid #F9F9F9;
+	border-left: 1px solid #BBBBBB;
+}
+
+.dynamic-menu.group &gt; ul &gt; li:first-child {
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	border-left: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.dynamic-menu.group &gt; ul &gt; li:last-child {
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	border-right: 1px solid rgba(0, 0, 0, 0.1)
+}[/code]
+
+--- Les menus de navigation ---
+
+[code=css]nav.dynamic-menu h5 {
+	text-align: center;
+	padding: 4px 6px;
+	font-weight: bold;
+	font-size: 12px;
+	color: #515C68;
+	background: #F2F7FB;
+	border: 1px solid #C4CED6;
+	margin-right: 2px;
+}
+
+nav.dynamic-menu h5:hover {
+	color: #01528D;
+	background: #EAEDEE;
+	cursor: default;
+}
+
+nav.dynamic-menu li ul { min-width: 160px; }
+
+nav.dynamic-menu li ul li a,
+nav.dynamic-menu li ul li span { color: #0578CC; }[/code]
+
+--- Les menus des modules ---
+
+[code=css]menu.dynamic-menu { margin: 5px; }
+
+menu.dynamic-menu ul li ul {
+	margin-left: 0 !important;
+	margin-top: 1px !important;
+}
+
+menu.dynamic-menu &gt; ul &gt; li {
+	position: relative;
+	display: inline-block !important;
+	display: inline;
+	padding: 0;
+	color: #444444;
+	background-image: linear-gradient(to bottom, rgba(255,255,255,0.18) 0%, rgba(56,56,56,0.18) 100%);
+	background-color: #FFFFFF;
+	border: 1px solid #999999;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	border-bottom-color: #B3B3B3;
+	border-radius: 4px;
+	cursor: pointer;
+	text-align: center;
+}
+
+menu.dynamic-menu &gt; ul &gt; li:hover { background-color: #EEEEEE; }
+
+menu.dynamic-menu &gt; ul &gt; li.current {
+	background-image: linear-gradient(to top,  rgba(255,255,255,0.18) 0%, rgba(56,56,56,0.18) 100%);
+	background-color: #F0F0F0;
+	border-top-color: #B3B3B3;
+}
+
+menu.dynamic-menu &gt; ul &gt; li &gt; a { padding: 4px 12px; }
+menu.dynamic-menu &gt; ul &gt; li &gt; a &gt; i { font-size: 1.1em; }
+
+menu.dynamic-menu li li:hover &gt; ul { top: -7px; }
+
+menu.dynamic-menu li ul li a, menu.dynamic-menu li ul li span {
+	color: #666666;
+	font-size: 11px;
+	padding: 3px 12px;
+}
+
+menu.dynamic-menu li ul li a i,
+menu.dynamic-menu li ul li span i {
+	font-size: 14px;
+	vertical-align: -2px;
+	width: 16px;
+	display: inline-block;
+	margin-right: 4px;
+	text-align: center;
+}
+
+menu.dynamic-menu li ul li a i:before,
+menu.dynamic-menu li ul li span i:before {
+	display: block;
+	width: 16px;
+}
+
+menu.dynamic-menu ul li.extend &gt; a:after,
+menu.dynamic-menu ul li.extend &gt; span:after { margin-top: -6px; }[/code]
+
+--- L'affichage du menu sur la droite ---
+
+[code=css].dynamic-menu.right ul {
+	right: -1px;
+	left: auto;
+}
+
+.dynamic-menu.right li li ul {
+	right: 100%;
+	left: auto;
+}[/code]
+
+--- Le séparateurs de menu ---
+
+[code=css].dynamic-menu ul li.separator {
+	background: #E8EDF3;
+	height: 1px;
+}[/code]
+
+--- Les menus verticaux en scrolling ---
+
+[code=css]ul.vertical-scrolling-menu li { padding: 0px 5px 0px 5px; }
+
+ul.vertical-scrolling-menu li ul { margin-left: 155px; }
+
+ul.vertical-scrolling-menu li.first-level { padding-left: 20px; }[/code]
+
+--- Les menus horizontaux en scrolling ---
+
+[code=css]ul.horizontal-scrolling-menu li {
+	display: block;
+	padding: 0;
+}[/code]
+
+--- Les menus horizontaux ---
+
+[code=css]nav.menu-horizontal { padding: 10px; }
+
+nav.menu-horizontal ul li {
+	display: inline;
+	margin-right: 8px;
+}
+
+nav.menu-horizontal ul img { margin-right: 5px; }[/code]
+
+--- Les liens menus verticaux ---
+
+[code=css]h3.menu-vertical-0 {
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: -2px;
+	padding-bottom: 2px;
+}
+
+ul.menu-vertical a,
+ul.menu-vertical span { color: #445766; }
+
+ul.menu-vertical {
+	text-align: left;
+	margin: 0 !important;
+}
+
+ul.menu-vertical li { list-style-type: none; }
+
+ul.menu-vertical img { margin-right: 5px; }
+
+ul.menu-vertical li a,
+ul.menu-vertical li span {
+	margin-top: 3px;
+	margin-left: 10px;
+	list-style-type: none;
+	margin-left: 10px;
+}
+
+ul.menu-vertical-0 li a,ul.menu-vertical-0 li span { color: #334455; }
+
+ul.menu-vertical-1 li a,ul.menu-vertical-1 li span { color: #445566; }
+
+ul.menu-vertical-2 li a,ul.menu-vertical-2 li span {
+	color: #556677;
+	font-style: italic;
+}
+
+ul.menu-vertical-3 li { font-style: normal; }
+
+ul.menu-vertical-3 li a,ul.menu-vertical-3 li span {
+	color: #778899;
+	font-size: 80%;
+}[/code]
+
+--- Les menus de flux ---
+En plus des menus classiques, il existe un menu de liens. Vu que l'on utilise des balises &lt;ul&gt; et &lt;li&gt;, nous désactivons les puces avec l'attribut "list-style-type: none;"
+[code=css].feed-list {
+	list-style-type: none;
+	text-align: left;
+	margin: 5px 0px;
+}[/code]
+
+-- Les message d'erreurs --
+Pour personnaliser les messages d'erreurs, notice, warning, success, il suffit de modifier les attributs "border", "background" et "color" ci-dessous. Les icones utilisent la librairies font-awesome
+[code=css]div.message-helper-small { width: 50% }
+
+.error, .notice, .warning, .success, .question { 
+	height: auto;
+	padding: 10px 10px 10px 40px;
+	margin: 5px auto 15px auto;
+	line-height: 20px;
+	border: 1px solid #FFFFFF;
+	border-radius: 4px;
+	position: relative;
+	display: block;
+}
+			
+.error:before, .notice:before, .warning:before, .success:before, .question:before {
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 2em;
+	position: absolute;
+	left: 6px;
+	top: 7px;
+	width: 28px;
+	text-align: center;
+}
+			
+.error:before { content: "\f00d"; }
+.error, .error:before { color: #BA4B49; }
+.notice:before { content: "\f12a"; }
+.notice, .notice:before { color: #888888; }
+.warning:before { content: "\f071"; }
+.warning, .warning:before { color: #C19954; }
+.success:before { content: "\f00c"; }
+.success, .success:before { color: #478948; }
+.question:before { content: "\f128"; }
+.question, .question:before { color: #3B88AE; }
+			
+.question { background-color: #DAEEF8; border-color: #BDE9F2; }
+.notice { background-color: #F0F0F0; border-color: #E2E2E2; }		
+.warning { background-color: #FDF9E4; border-color: #FBECCD; }
+.error { background-color: #F3DFDF; border-color: #ECCDD2; }
+.success { background-color: #E0F1D9; border-color: #D7EAC7; }[/code]
+
+-- Le maintenance --
+Pour personnaliser le bloc du message de la maintenance, il suffit de modifier les éléments suivants.
+[code=css]div#message-maintain {
+	top: 5px;
+	width: 100%;
+	position: absolute;
+	opacity: 0.98;
+	text-align: center;
+}
+
+div#message-maintain &gt; div { margin: 0px auto;}
+
+div#release { margin-top: 20px; }[/code]
+
+-- Le système d'upload --
+Certain éléments comme la barre d'adresse ou de lien peuvent être personnaliser avec les class "upload-".
+[code=css].upload-address-bar {
+	background: #FAFAFA;
+	border: 1px solid #DDDDDD;
+	border-radius: 3px;
+	color: #444444;
+	margin: 0px 25px; 
+	padding: 6px;
+}
+
+.upload-address-bar-links {
+	float: right;
+	margin: 0 25px 25px 25px;
+}
+
+.upload-address-bar-links a { margin-left: 10px; }
+			
+#empty-folder { width: 70%; }
+			
+.upload-elements-container { margin: 0 0 0 20px; }
+			
+.upload-elements-file,
+.upload-elements-repertory { 
+	float: left; 
+	margin: 10px;
+}
+			
+.upload-elements-repertory { height: 60px; }[/code]
+
+--- Le déplacement dans l'upload ---
+
+[code=css].upload-selected-cat {
+	background: #F5FBFF;
+	border: 1px solid #2C5169;
+}[/code]</wiki_content>
+</wiki_article>

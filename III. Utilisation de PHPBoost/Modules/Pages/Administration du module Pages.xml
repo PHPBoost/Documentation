@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>161</wiki_id>
+  <wiki_id_contents>859</wiki_id_contents>
+  <wiki_title>Administration du module Pages</wiki_title>
+  <wiki_encoded_title>administration-du-module-pages</wiki_encoded_title>
+  <wiki_hits>489</wiki_hits>
+  <wiki_id_cat>44</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>44</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>160</wiki_cat_article_id>
+  <wiki_con_id_contents>859</wiki_con_id_contents>
+  <wiki_con_id_article>161</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_pages">Pages</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li><li><a href="#paragraph_gestion-des-pages">Gestion des pages</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>935</wiki_user_id>
+  <wiki_user_ip>89.90.175.161</wiki_user_ip>
+  <wiki_timestamp>1358776915</wiki_timestamp>
+  <wiki_content>[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/pages/page_2.jpg[/img][/align]
+
+-- Pages --
+
+[i] Compter le nombre de fois que la page est consultée  [/i] : permet de montrer sur chaque page le nombre de fois que la page a été vue.
+Cette option peut-être choisie au cas par cas pour chaque page lors de sa création ou édition.
+
+[i] Activer les commentaires [/i] : choisissez ici si vous souhaitez que les membres puissent écrire des commentaires sur les pages créées.
+
+-- Autorisations --
+
+Vous allez pouvoir choisir ici par défaut pour le module page les autorisations pour : 
+
+[list]
+[*] la lecture des pages
+[*] l'édition des pages
+[*] l'utilisation des commentaires
+[/list]
+
+Pour chacun, vous pouvez autoriser les visiteurs / les membres / les modérateurs / les administrateurs / les groupes de membres
+
+[style=notice]Bien sûr, pour chaque page créée vous pourrez donner des droits spécifiques.[/style]
+
+-- Gestion des pages --
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/pages/pages_pages.png[/img][/align]
+La documentation de cette zone se trouve dans [link=utilisation-du-module-pages]cet article[/link].</wiki_content>
+</wiki_article>

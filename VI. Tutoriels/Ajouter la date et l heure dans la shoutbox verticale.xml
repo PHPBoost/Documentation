@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>300</wiki_id>
+  <wiki_id_contents>1382</wiki_id_contents>
+  <wiki_title>Ajouter la date et l'heure dans la shoutbox verticale</wiki_title>
+  <wiki_encoded_title>ajouter-la-date-et-l-heure-dans-la-shoutbox-verticale</wiki_encoded_title>
+  <wiki_hits>340</wiki_hits>
+  <wiki_id_cat>54</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>54</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>192</wiki_cat_article_id>
+  <wiki_con_id_contents>1382</wiki_con_id_contents>
+  <wiki_con_id_article>300</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_les-fichiers-modifier">Les fichiers à modifier</a><ol class="wiki_list_2"><li><a href="#paragraph_code-html">Code HTML</a></li><li><a href="#paragraph_g-rer-aussi-le-rafra-chissement">Gérer aussi le rafraîchissement</a></li><li><a href="#paragraph_adaptation-css">Adaptation CSS</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>5083</wiki_user_id>
+  <wiki_user_ip>93.5.71.211</wiki_user_ip>
+  <wiki_timestamp>1423332034</wiki_timestamp>
+  <wiki_content>-- Introduction --
+
+Cette article a pour but de vous expliquer comment ajouter la date et l'heure dans la shoubox lorsqu'elle est affichée sur une colonne droite ou gauche.
+
+L'affichage dans la colonne droite ou gauche correspond à un affichage de type "vertical".
+
+
+-- Les fichiers à modifier --
+
+
+--- Code HTML ---
+
+L'affichage de la shoutbox en vertical correspond au fichier [i]shoutbox_mini.tpl[/i] du répertoire [i]\shoutbox\templates[/i].
+Et plus précisément à la partie suivante : 
+[code=template]# IF C_VERTICAL #
+	&lt;div class="module-mini-container"&gt;
+		&lt;div class="module-mini-top"&gt;
+			&lt;h5 class="sub-title"&gt;{L_SHOUTBOX}&lt;/h5&gt;
+		&lt;/div&gt;
+		&lt;div class="module-mini-contents"&gt;
+			&lt;div id="shout-container"&gt;
+				# START shout #
+				&lt;p id="shout-container-{shout.IDMSG}"&gt;&lt;span class="small"&gt;{shout.PSEUDO} : {shout.CONTENTS}&lt;/span&gt;&lt;/p&gt;
+				# END shout #
+			&lt;/div&gt;
+			# IF C_VISIBLE_SHOUT #
+			&lt;label for="shout_pseudo"&gt;&lt;span class="small"&gt;{L_PSEUDO}&lt;/span&gt;&lt;/label&gt;
+			&lt;input size="16" maxlength="25" type="text" name="shout_pseudo" id="shout_pseudo" value="{SHOUTBOX_PSEUDO}"&gt;
+			# ENDIF #
+			# IF C_HIDDEN_SHOUT #
+			&lt;input size="16" maxlength="25" type="hidden" name="shout_pseudo" id="shout_pseudo" value="{SHOUTBOX_PSEUDO}"&gt;
+			# ENDIF #
+			&lt;br /&gt;
+			&lt;label for="shout_contents"&gt;&lt;span class="small"&gt;{L_MESSAGE}&lt;/span&gt;&lt;/label&gt;
+			&lt;textarea id="shout_contents" name="shout_contents" rows="4" cols="16"&gt;&lt;/textarea&gt;
+				
+			&lt;p class="shout-spacing"&gt;
+				&lt;button onclick="XMLHttpRequest_shoutmsg();" type="button"&gt;{L_SUBMIT}&lt;/button&gt;
+				&lt;a href="javascript:XMLHttpRequest_shoutrefresh();" title="{L_REFRESH}"&gt;&lt;i class="fa fa-refresh" id="shoutimg"&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/p&gt;
+			&lt;a class="small" href="{PATH_TO_ROOT}/shoutbox/shoutbox.php{SID}" title=""&gt;{L_ARCHIVES}&lt;/a&gt;
+		&lt;/div&gt;
+		&lt;div class="module-mini-bottom"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+# ELSE #[/code]
+
+Pour afficher la date, il suffit d'ajouter à la place de la ligne 126 : 
+[code=tpl]&lt;p id="shout-container-{shout.IDMSG}"&gt;&lt;span class="small"&gt;{shout.PSEUDO} : {shout.CONTENTS}&lt;/span&gt;&lt;/p&gt;[/code]
+l&#8217;élément suivant :
+[code=tpl]&lt;span class="small"&gt; {shout.DATE} : &lt;/span&gt;[/code]
+Ce qui donne : 
+[code=tpl]&lt;p id="shout-container-{shout.IDMSG}"&gt;
+	&lt;span class="small"&gt; {shout.DATE} : &lt;/span&gt;&lt;br /&gt;
+	&lt;span class="small"&gt;{shout.PSEUDO} : {shout.CONTENTS}&lt;/span&gt;
+&lt;/p&gt;[/code]
+
+
+--- Gérer aussi le rafraîchissement ---
+
+Afin d'actualiser les messages au fil du temps, il y a une gestion en AJAX des messages.
+Pour cela il suffit de modifier la ligne 83 : 
+[code=tpl]var xhr_object = xmlhttprequest_init('{PATH_TO_ROOT}/shoutbox/xmlhttprequest.php?refresh=1# IF C_HORIZONTAL #&amp;display_date=1# ENDIF #&amp;token={TOKEN}');[/code]
+par celle-ci : 
+[code=tpl]var xhr_object = xmlhttprequest_init('{PATH_TO_ROOT}/shoutbox/xmlhttprequest.php?refresh=1&amp;display_date=1&amp;token={TOKEN}');[/code]
+
+
+--- Adaptation CSS ---
+
+Afin d'optimiser l'affichage, il sera sûrement nécessaire d'agrandir la surface d'affichage.
+Le CSS du mini_module Shoutbox est le fichier [i]shoutbox_mini.css[/i] du répertoire [i]\shoutbox\templates[/i].
+
+Je conseil d'ajouter en fin de fichier la classe suivante : 
+[code=css]div#shout-container {
+	width: 95%;
+}[/code]</wiki_content>
+</wiki_article>

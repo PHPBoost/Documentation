@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>182</wiki_id>
+  <wiki_id_contents>945</wiki_id_contents>
+  <wiki_title>Installer PHPBoost 4 chez Free</wiki_title>
+  <wiki_encoded_title>installer-phpboost-4-chez-free</wiki_encoded_title>
+  <wiki_hits>1332</wiki_hits>
+  <wiki_id_cat>49</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>49</wiki_cat_id>
+  <wiki_cat_id_parent>2</wiki_cat_id_parent>
+  <wiki_cat_article_id>171</wiki_cat_article_id>
+  <wiki_con_id_contents>945</wiki_con_id_contents>
+  <wiki_con_id_article>182</wiki_con_id_article>
+  <wiki_menu></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1760</wiki_user_id>
+  <wiki_user_ip>82.224.142.186</wiki_user_ip>
+  <wiki_timestamp>1377552470</wiki_timestamp>
+  <wiki_content>L&#8217;hébergement d'un site web PHPBoost 4.0 sur free est possible mais cela nécessite une petite manipulation.
+
+La nouvelle version de PHPBoost nécessite [b]PHP 5.1.2[/b] au minimum. 
+Par défaut, Free utilise la version [b]4.4.3-dev[/b].
+
+[title=3]Activation du PHP 5 : [/title]
+Il existe deux solutions pour utiliser la version supérieure [b]5.1.3RC4-dev[/b]
+
+Par défaut les fichiers portant l&#8217;extension ".php" sont interprétés par PHP 4.
+[list]
+	[*] [s]utiliser des fichiers avec l&#8217;extension ".php5"[/s] =&gt; Bon courage, il faut tout renommer
+	[*] créer un fichier ".htaccess" comportant la mention "PHP 1" =&gt; Beaucoup mieux
+[/list]
+
+[title=3]Le fichier .htaccess : [/title]
+Le fichier ".htaccess" doit en théorie être présent à la racine de votre site Web.
+
+Editer le fichier en ajoutant la ligne suivante : 
+[code=text]PHP 1[/code] (Ne pas oublier l'espace entre php et 1) 
+
+
+Si jamais il n'existe pas : 
+[hide][list=ordered]
+	[*]Créer avec le bloc-note (Notepad++) un fichier nommé htaccess.txt et saisir la seule ligne nécessaire ici : [code=text]PHP 1[/code] (Ne pas oublier l'espace entre php et 1) 
+	[*]Envoyer ce fichier (par logiciel FTP, comme Filezilla) à la racine du site
+	[*]Renommer le fichier en .htaccess (Le fichier devient "invisible" aux internautes)
+[/list][/hide]
+
+[style=notice]Vous pouvez maintenant installer sans soucis, PHPBoost 4.0 Sirroco.[/style]
+
+[title=3]Application définitive : [/title]
+
+Néanmoins, nous n'avons pas fini. En effet, en cas de "régénération du cache", ce fichier serait purger de notre modification et votre site serait inaccessible.
+
+Pour cela nous avons tous prévu : 
+[list]
+	[*]Rendez-vous dans l'administration avancé de PHPBoost 4.0 : /admin/config/?url=/advanced/
+	[*]Ajouter l&#8217;élément "PHP 1" dans la zone de texte ".htaccess". N'oubliez pas de valider.
+[align=center][img style="width:600px"]http://resources.phpboost.com/documentation/installation/installationfreefr/Contenu_htaccess.png[/img][/align]
+[/list]
+
+
+
+[style=warning]Suite à des problèmes Apache chez Free, veuillez désactiver le Cache CSS dans la configuration du cache.[/style]</wiki_content>
+</wiki_article>

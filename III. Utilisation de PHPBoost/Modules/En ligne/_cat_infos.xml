@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_cat>
+  <wiki_id>34</wiki_id>
+  <wiki_id_contents>1266</wiki_id_contents>
+  <wiki_title>En ligne</wiki_title>
+  <wiki_encoded_title>en-ligne</wiki_encoded_title>
+  <wiki_hits>538</wiki_hits>
+  <wiki_id_cat>23</wiki_id_cat>
+  <wiki_is_cat>1</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>23</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>34</wiki_cat_article_id>
+  <wiki_con_id_contents>1266</wiki_con_id_contents>
+  <wiki_con_id_article>34</wiki_con_id_article>
+  <wiki_menu></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>5193</wiki_user_id>
+  <wiki_user_ip>88.125.157.163</wiki_user_ip>
+  <wiki_timestamp>1405001805</wiki_timestamp>
+  <wiki_content>[table style="float:right;width:50%;"]
+   [row]
+      [head colspan="2"]En ligne[/head]
+   [/row]
+   [row]
+      [col]Auteur[/col]
+      [col][url=/user/profile/1]CrowkaiT[/url][/col]
+   [/row]
+   [row]
+      [col]Version actuelle[/col]
+      [col]4.1[/col]
+   [/row]
+   [row]
+      [col]Compatibilité[/col]
+      [col]PHPBoost 4.1[/col]
+   [/row]
+   [row]
+      [col]Démonstration[/col]
+      [col][url=http://demo.phpboost.com/online/]Module En ligne[/url][/col]
+   [/row]
+[/table]
+
+[align=center]
+   [size=20][b]Module En ligne[/b][/size]
+   [img]http://resources.phpboost.com/documentation/utilisation/modules/online/logo.png[/img]
+[/align]
+
+
+
+
+
+
+[b]Description :[/b] Ce module affiche sur votre site les membres connectés et leur rang, ce nombre peut être limité dans la configuration.</wiki_content>
+</wiki_cat>

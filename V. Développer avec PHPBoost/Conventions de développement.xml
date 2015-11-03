@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>29</wiki_id>
+  <wiki_id_contents>1298</wiki_id_contents>
+  <wiki_title>Conventions de développement</wiki_title>
+  <wiki_encoded_title>conventions-de-developpement</wiki_encoded_title>
+  <wiki_hits>917</wiki_hits>
+  <wiki_id_cat>5</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>5</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>159</wiki_cat_article_id>
+  <wiki_con_id_contents>1298</wiki_con_id_contents>
+  <wiki_con_id_article>29</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_indentation">Indentation</a><ol class="wiki_list_2"><li><a href="#paragraph_les-conditions">Les conditions</a><ol class="wiki_list_3"><li><a href="#paragraph_conditions-simples">Conditions simples</a></li><li><a href="#paragraph_traitement-sur-plusieurs-lignes">Traitement sur plusieurs lignes</a></li><li><a href="#paragraph_avec-imbrication">Avec imbrication</a></li></ol></li><li><a href="#paragraph_les-boucles">Les boucles</a></li></ol></li><li><a href="#paragraph_les-variables">Les variables</a></li><li><a href="#paragraph_les-classes">Les classes</a><ol class="wiki_list_2"><li><a href="#paragraph_nommage">Nommage</a></li><li><a href="#paragraph_les-fonctions">Les fonctions</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1760</wiki_user_id>
+  <wiki_user_ip>82.224.142.186</wiki_user_ip>
+  <wiki_timestamp>1405162535</wiki_timestamp>
+  <wiki_content>Il est important dans un projet que les développeurs adoptent un style de développement identique. Ceci favorise la relecture du code et le débogage.
+
+Ces règles n'est pas obligatoire, mais très fortement recommandée pour vos développements.
+
+-- Indentation --
+
+Le style d'indentation adopté sur PHPBoost permet de gagner en lisibilité et en clarté du code.
+L'utilisation des tabulations et des espaces est très importante dans le code. Il faut aérer votre code pour le rendre plus lisible.
+
+Nous allons voir plusieurs exemple ci-dessous.
+
+
+--- Les conditions ---
+
+Un espace avant la parenthèse. Les accolades ne sont pas sur la même ligne que la condition.
+Il faut indenter le code.
+
+---- Conditions simples ----
+
+[code=php]if ($var == 2)
+{
+	echo 'La variable vaut 2';
+}[/code]
+
+---- Traitement sur plusieurs lignes ----
+
+[code=php]if ($var == 2)
+{
+	echo 'test';
+}
+elseif ($var == 3)
+{
+	echo 'La variable vaut 3';
+}
+else
+{
+	echo 'La variable ne vaut ni 2, ni 3';
+}[/code]
+
+---- Avec imbrication ----
+
+[code=php]if ($var &gt; 0)
+{
+	if ($var == 2)
+	{
+		echo 'test';
+	}
+	elseif ($var == 3)
+	{
+		echo 'La variable vaut 3';
+	}
+	else
+	{
+		echo 'La variable ne vaut ni 2, ni 3';
+	}
+}[/code]
+
+Il s'agit donc d'indenter le code et non la partie déclarative.
+
+
+--- Les boucles ---
+
+[code=php]for ($i = 0; $i &lt; 5; $i++)
+{
+	echo $i;
+}[/code]
+
+[code=php]$i = 0;
+while ($i &lt; 5)
+{
+	echo $i;
+	$i++;
+}[/code]
+
+
+-- Les variables --
+
+Par convention, toutes les variables, y compris les variables de classes, doivent commencer par une minuscule.
+
+Si la variable est une suite de mots, ils devront être séparés d'un tiret bas ou underscore (_).
+
+Exemple : 
+
+[code=php]$ma_variable[/code]
+
+-- Les classes --
+
+Les classes ont également un traitement particulier en terme de convention.
+
+
+--- Nommage ---
+
+
+Les classes doivent toujours commencer par une majuscule :
+
+[code=php]class Class
+{
+
+}[/code]
+
+Si la classe est une suite de mot, chaque mot commence par une majuscule et ne sera séparé d'aucune manière :
+
+[code=php]class MyClass
+{
+
+}[/code]
+
+
+--- Les fonctions ---
+
+Les fonctions doivent être en minuscule avec un underscore entre chaque mot. 
+
+[code=php]class MyClass
+{
+	private $name = 'PHPBoost';
+	
+	public function get_name()
+	{
+		return $this-&gt;name;
+	}
+}[/code]</wiki_content>
+</wiki_article>

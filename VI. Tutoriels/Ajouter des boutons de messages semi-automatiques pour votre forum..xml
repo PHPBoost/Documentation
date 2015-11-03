@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>196</wiki_id>
+  <wiki_id_contents>961</wiki_id_contents>
+  <wiki_title>Ajouter des boutons de messages semi-automatiques pour votre forum.</wiki_title>
+  <wiki_encoded_title>ajouter-des-boutons-de-messages-semi-automatiques-pour-votre-forum</wiki_encoded_title>
+  <wiki_hits>420</wiki_hits>
+  <wiki_id_cat>54</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>54</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>192</wiki_cat_article_id>
+  <wiki_con_id_contents>961</wiki_con_id_contents>
+  <wiki_con_id_article>196</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a><ol class="wiki_list_2"><li><a href="#paragraph_header-tpl">Header.tpl</a></li><li><a href="#paragraph_forum-topic-tpl">forum_topic.tpl</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>3023</wiki_user_id>
+  <wiki_user_ip>109.190.164.162</wiki_user_ip>
+  <wiki_timestamp>1385588995</wiki_timestamp>
+  <wiki_content>-- Introduction --
+Vous souhaitez gagner un temps précieux sur votre forum, des utilisateurs se trompent de catégorie, respecte pas la charte d'utilisation de votre forum, et vous en avez un peu marre d'écrire toujours le même message ? Aujourd'hui vous allez mettre en place un petit système qui vous permet d'afficher directement le message de votre choix dans un textearea, c'est-à-dire que lorsque vous cliquerez sur l'un de vos boutons, un message prédéfini s'affichera dans le formulaire, vous n'aurez plus qu'à cliquer sur «Envoyer».
+
+
+--- Header.tpl ---
+Pour commencer vous devez ouvrir votre fichier header.tpl qui se trouve dans /template/votre-theme/header.tpl, puis entre les balises &lt;head&gt; &lt;/head, veuillez insérer le code suivant Javascript suivant:
+
+[code=javascript]
+ &lt;script language="javascript" type="text/javascript"&gt;
+   function insert_phpboost(texte)
+   {
+    //Emplacement
+       var ou = document.getElementsByName("contents")[0]; //Contents est le nom du textearea. Normalement vous ne devez pas y toucher.
+	//Texte à insérer + espace
+       var phrase = texte +" ";
+	//Contenu déjà présent + Texte à insérer
+       ou.value += phrase;
+	//Positionnement du curseur
+       ou.focus();
+   }
+&lt;/script&gt;[/code]
+
+Enregistrer les modification et fermer le fichier header.tpl.
+
+
+--- forum_topic.tpl ---
+Maintenant ouvrez le fichier forum_topic.tpl se trouvant dans /template/votre-theme/modules/forum/ si vous ne le trouvez pas allez dans /forum/templates/ copier le fichier forum_topic.tpl et mettez-le dans /template/votre-theme/modules/forum.
+
+Une fois que votre fichier est ouvert, rendez-vous à la ligne 357 et ajoutez ceci: 
+
+[code=html]
+
+&lt;a href="#" onclick="insert_phpboost('Bonjour, ceci est un message semi-automatique activé par un administrateur, ce message vous informe que votre sujet a été verrouiller pour le motif suivant: Le langage SMS est à proscrire.  ')"&gt;Langage SMS&lt;/a&gt; - 
+&lt;a href="#" onclick="insert_phpboost('Bonjour, ceci est un message semi-automatique activé par un administrateur, ce message vous informe que votre sujet a été verrouiller pour le motif suivant: Non-respect de la charte du forum.')"&gt;Non-respect de la charte&lt;/a&gt; - 
+&lt;a href="#" onclick="insert_phpboost('Bonjour, ceci est un message semi-automatique activé par un administrateur, ce message vous informe que votre sujet a été déplacer pour le motif suivant: BlaBlaBlaBla ')"&gt;Mauvaise section&lt;/a&gt; -[/code]
+
+Remplacez les messages prédéfinis par les vôtre vous pouvez créer autant de bouton que vous le souhaitez.</wiki_content>
+</wiki_article>

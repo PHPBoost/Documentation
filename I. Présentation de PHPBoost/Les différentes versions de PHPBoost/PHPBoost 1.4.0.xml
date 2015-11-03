@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>91</wiki_id>
+  <wiki_id_contents>135</wiki_id_contents>
+  <wiki_title>PHPBoost 1.4.0</wiki_title>
+  <wiki_encoded_title>phpboost-1-4-0</wiki_encoded_title>
+  <wiki_hits>466</wiki_hits>
+  <wiki_id_cat>14</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>14</wiki_cat_id>
+  <wiki_cat_id_parent>1</wiki_cat_id_parent>
+  <wiki_cat_article_id>14</wiki_cat_article_id>
+  <wiki_con_id_contents>135</wiki_con_id_contents>
+  <wiki_con_id_article>91</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>82.124.181.87</wiki_user_ip>
+  <wiki_timestamp>1346007386</wiki_timestamp>
+  <wiki_content>Sortie en janvier 2006, PHPBoost 1.4.0 intègre une nouvelle fonctionnalité importante : c'est dorénavant un logiciel multilingue. Au début, seulement le français et l'anglais sont gérés, mais maintenant, n'importe quelle langue peut être supportée. Plusieurs modifications mineures ont accompagné cette mise à jour.
+
+-- Changelog --
+
+[list]
+	[*]Gestion totale des langues (Anglais inclus). Les utilisateurs peuvent changer la langue par défaut du site à l'inscription et dans le profil
+	[*]Les utilisateurs peuvent changer le thème par défaut du site à l'inscription et dans le profil
+	[*]Notation dans les modules Téléchargement et Liens web
+	[*]Ajout de la prévisualisation dans les modules Forum, Liens web, Téléchargements, Messages privés
+	[*]Renforcement de la sécurité (vérifications)
+	[*]Balise [i][code][/i] fonctionnelle, permet d'afficher du code sans qu'il soit exécuté (BBcode y compris), avec coloration synthaxique PHP. 
+	[*]Galerie photo : Amélioration du système de redirection vers les pages de la galerie
+	[*]Possibilité de modifier le nom du cookie des sondages (utile lorsque plusieurs portails sur le même serveur). 
+	[*]Ajout de 4 nouveaux smileys, et ajout des smileys en popup (si + de 28 smileys installés)
+	[*]Gestion des blocs par l'administrateur (activation/désactivation) déplacé dans "Gestion des blocs" (dans l'administration) 
+	[*]Limite d'upload d'images (dans la galerie) des membres et modérateurs fonctionnelle
+	[*]Redirection après édition d'un message sur un sujet de plusieurs page correcte
+	[*]Possibilité de changer les noms des rangs spéciaux (Administrateurs et modérateurs)
+	[*]Possibilité de forcer un Avatar par défaut aux membres lorsqu'ils n'en ont pas
+	[*]Possibilité d'attacher une image au pseudo du membre suivant le rang
+	[*]Refonte du système de sondage
+	[*]Confirmation du mot de passe dans "Gestion des membres" (administration), lors d'un changement
+	[*]Ajout de champs dans le profil membre : Age et Sexe
+	[*]Choix de l'avatar lors de l'inscription
+	[*]Nouveau système de confirmation après une action
+	[*]Fonctionnement balises [i]size[/i] et [i]color[/i] modifiés
+	[*]Ajout du champ "description" dans les flux RSS
+	[*]Optimisation de la gestion des sujets lus/non lus (Forum)
+	[*]Optimisations, et nombreuses corrections diverses
+[/list]</wiki_content>
+</wiki_article>

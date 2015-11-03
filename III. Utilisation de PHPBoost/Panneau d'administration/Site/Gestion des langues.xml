@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>88</wiki_id>
+  <wiki_id_contents>765</wiki_id_contents>
+  <wiki_title>Gestion des langues</wiki_title>
+  <wiki_encoded_title>gestion-des-langues</wiki_encoded_title>
+  <wiki_hits>446</wiki_hits>
+  <wiki_id_cat>15</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>15</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>15</wiki_cat_article_id>
+  <wiki_con_id_contents>765</wiki_con_id_contents>
+  <wiki_con_id_article>88</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-langues">Gestion des langues</a></li><li><a href="#paragraph_ajouter-une-langue">Ajouter une langue</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1466</wiki_user_id>
+  <wiki_user_ip>90.55.70.218</wiki_user_ip>
+  <wiki_timestamp>1358183554</wiki_timestamp>
+  <wiki_content>-- Gestion des langues --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/langs/manage.png[/img][/align]
+
+[style=warning]La langue par défaut ne peut pas être désinstallée, désactivée, ou réservée pour un type de membre, ceci afin que le logiciel ait toujours un fichier langue disponible pour son bon fonctionnement.[/style]
+
+Pour chaque langue vous avez un descriptif sur : 
+[list]
+[*] ses auteurs
+[*] sa compatibilité avec les versions de PHPBoost.
+[/list]
+
+Vous pouvez
+[list] 
+[*] activer ou non une langue
+[*] désinstaller une langue
+[*] Choisir pour chaque langue le niveau d'autorisation d'utilisateur minimum pour l'utiliser.
+[/list]
+
+-- Ajouter une langue --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/langs/add.png[/img][/align]
+
+Le fichier langue à installer peut : 
+[list] 
+[*] se trouver sur votre disque dur et vous l'uploadez via ce formulaire. Il doit être en format ZIP ou TAR.
+[*] être disponible dans le répertoire '../lang' de votre site puisque vous l'aurez préalablement déposé à cet endroit via un logiciel FTP.
+[/list]
+[style=notice]La langue par défaut est choisie dans la configuration du site.
+Si plusieurs langues sont installées, chaque membre pourra choisir sa langue dans son profil. [/style]
+
+Pour installer une langue, il suffit de choisir le niveau d'autorisations d'accès à la langue et de cliquer sur 'installer'</wiki_content>
+</wiki_article>

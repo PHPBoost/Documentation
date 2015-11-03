@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>306</wiki_id>
+  <wiki_id_contents>1417</wiki_id_contents>
+  <wiki_title>HomeCustom : Personnalisez votre accueil !</wiki_title>
+  <wiki_encoded_title>homecustom-personnalisez-votre-accueil</wiki_encoded_title>
+  <wiki_hits>524</wiki_hits>
+  <wiki_id_cat>54</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>54</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>192</wiki_cat_article_id>
+  <wiki_con_id_contents>1417</wiki_con_id_contents>
+  <wiki_con_id_article>306</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_modification-des-fichiers">Modification des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_homecustomhomepageextensionpoint-class-php">HomeCustomHomePageExtensionPoint.class.php</a><ol class="wiki_list_3"><li><a href="#paragraph_ce-que-vous-avez">Ce que vous avez</a></li><li><a href="#paragraph_le-nouveau-code">Le nouveau code</a></li></ol></li><li><a href="#paragraph_home-tpl">home.tpl</a><ol class="wiki_list_3"><li><a href="#paragraph_ce-que-vous-avez">Ce que vous avez</a></li><li><a href="#paragraph_le-nouveau-code">Le nouveau code</a></li></ol></li></ol></li><li><a href="#paragraph_cr-ation-des-fichiers">Création des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_articles-tpl">articles.tpl</a><ol class="wiki_list_3"><li><a href="#paragraph_le-code">Le code</a></li><li><a href="#paragraph_les-diff-rentes-variables-possibles">Les différentes variables possibles</a><ol class="wiki_list_4"><li><a href="#paragraph_les-variables-d-affichage">Les variables d'affichage</a><ol class="wiki_list_5"><li><a href="#paragraph_les-variables-du-module-articles">Les variables du module Articles</a></li><li><a href="#paragraph_les-nouvelles-variables">Les nouvelles variables</a></li></ol></li><li><a href="#paragraph_les-variables-de-conditions">Les variables de conditions</a></li></ol></li></ol></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>5143</wiki_user_id>
+  <wiki_user_ip>82.242.233.155</wiki_user_ip>
+  <wiki_timestamp>1426534694</wiki_timestamp>
+  <wiki_content>[style=notice]Dans ce tutoriel nous ne cherchons pas à ce que votre Page d'Accueil soit la plus esthétique possible, nous nous concentrerons donc uniquement sur la personnalisation fonctionnelle. Nous utiliserons ainsi très peu le langage HTML et CSS mais davantage le langage PHP et MySQL. En d'autre terme, bien que ce tutoriel soit adapté pour tout le monde, il est quand même recommandé d'avoir quelques notions dans ces divers langages et en algorithme.[/style]
+
+-- Introduction --
+
+Dans ce tutoriel je vais pouvoir vous expliquer comment personnaliser votre petit module [b]HomeCustom[/b]. En effet, il est toujours plus agréable d'avoir une page d'accueil qui reprend les diverses activité de votre site : 
+
+[list=ordered]
+	[*]Les dernières news, 
+	[*]Les derniers articles,
+	[*]Et enfin les prochains événements à venir.
+[/list]
+
+En somme visuellement pour faire un petit schéma récapitulatif voici à quoi ressemblera votre page d'Accueil :
+[table]
+	[row]
+		[head][size=20]Votre page d'accueil[/size][/head]
+	[/row]
+	[row]
+		[col][size=15]Vos 3 derniers Articles[/size][/col]
+	[/row]
+	[row]
+		[col]Article 3[/col]
+	[/row]
+	[row]
+		[col]Article 2[/col]
+	[/row]
+	[row]
+		[col]Article 1[/col]
+	[/row]
+	[row]
+		[col][size=15]Vos 3 dernières News[/size][/col]
+	[/row]
+	[row]
+		[col]News 3[/col]
+	[/row]
+	[row]
+		[col]News 2[/col]
+	[/row]
+	[row]
+		[col]News 1[/col]
+	[/row]
+	[row]
+		[col][size=15]Vos 3 prochains Evénements[/size][/col]
+	[/row]
+	[row]
+		[col]Evénement 1[/col]
+	[/row]
+	[row]
+		[col]Evénement 2[/col]
+	[/row]
+	[row]
+		[col]Evénement 3[/col]
+	[/row]
+[/table]
+
+[style=question][title=4]Heu... :hum Il y quelques chose que je ne comprends pas, les articles et les news sont classé par ordre décroissant mais pas les événements, est-ce normal ?[/title]
+
+[i]Très bien vu, la question est forte intéressante puisque effectivement le dernier article et la dernière news arrivera bien en tête de liste, ce qui est totalement normal. 
+En ce qui concerne les événements, on affiche les [u]prochains[/u] donc ils doivent apparaitre par ordre chronologique on ne va pas afficher d'abord l'événement de Juin 20XX avant celui de Janvier 20XX. Mais par contre il faudra penser à ne pas afficher les événements qui sont passés.[/i] [b]Eh oui il faut penser à tous quand on code !  :)  [/b][/style]
+
+Alors pour ce faire, il faudra modifier 2 fichiers ([i]HomeCustomHomePageExtensionPoint.class.php[/i] et [i]home.tpl[/i]) et créer 3 fichiers ([i]articles.tpl[/i], [i]news.tpl[/i] et [i]events.tpl[/i]).
+
+-- Modification des fichiers --
+
+Dans un premier je vous propose de modifier d'abord le [i]HomeCustomHomePageExtensionPoint.class.php[/i] puis le fichier [i]home.tpl[/i].
+
+--- HomeCustomHomePageExtensionPoint.class.php ---
+
+Ici nous accorderons une grande partie du tutoriel car c'est la partie la plus technique. C'est ici que nous coderons en PHP &amp; MySQL, nous irons chercher toutes les informations dont nous avons besoin dans la Base De Donnée (BDD).
+
+[style=question][title=4]Tu es bien gentil mais où ce trouve ce fichier HomeCustomPagetrucclasse...php que tu nous dis de modifier ?[/title]
+
+[i]Oui, au temps pour moi ^^ ce fichier ce trouve ici : HomeCustom/phpboost/HomeCustomHomePageExtensionPoint.class.php[/i][/style]
+
+---- Ce que vous avez ----
+
+Voici le code que contient ce fichier :
+[code=php]
+&lt;?php
+/*##################################################
+ *                     HomeCustomHomePageExtensionPoint.class.php
+ *                            -------------------
+ *   begin                : August 25, 2012
+ *   copyright            : (C) 2012 Kevin MASSY
+ *   email                : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class HomeCustomHomePageExtensionPoint implements HomePageExtensionPoint
+{
+	private $template;
+	
+	public function get_home_page()
+	{
+		return new DefaultHomePage($this-&gt;get_title(), $this-&gt;get_view());
+	}
+
+	private function get_title()
+	{
+		return LangLoader::get_message('title', 'common', 'HomeCustom');
+	}
+	
+	private function get_view()
+	{
+		$this-&gt;template = new FileTemplate('HomeCustom/home.tpl');
+				
+		return $this-&gt;template;
+	}
+		
+}
+?&gt;
+[/code]
+
+---- Le nouveau code ----
+
+[style=notice]Je ne sais pas s'il serait de grande utilité de vous faire un cours et de vous amener petit à petit pour créer votre fichier puisque la plupart des personnes feront un copié collé de la solution. Néanmoins, pour les plus courageux ne vous inquiétez pas, le fichier contient pleins de commentaires, en Français et en Anglais (Vous n'avez donc aucune excuse :devil ), pour réussir à comprendre la logique du code.[/style]
+
+[code=php]
+&lt;?php
+/*##################################################
+ *					   HomeCustomHomePageExtensionPoint.class.php
+ *							  -------------------
+ *	 begin				  : August 25, 2012
+ *	 copyright			  : (C) 2012 Kevin MASSY
+ *	 email				  : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class HomeCustomHomePageExtensionPoint implements HomePageExtensionPoint
+{
+	private $template;
+
+	public function get_home_page()
+	{
+		$columns_disabled = Environment::get_graphical_environment()-&gt;get_columns_disabled();
+		$columns_disabled-&gt;set_disable_left_columns(false); //passer à "true" pour désactiver
+		$columns_disabled-&gt;set_disable_right_columns(false);
+		$columns_disabled-&gt;set_disable_top_central(false);
+		$columns_disabled-&gt;set_disable_bottom_central(false);
+		return new DefaultHomePage($this-&gt;get_title(), $this-&gt;get_view());
+	}
+
+	private function get_title()
+	{
+		return LangLoader::get_message('title', 'common', 'HomeCustom');
+	}
+
+	private function get_view()
+	{
+		$this-&gt;template = new FileTemplate('HomeCustom/home.tpl');
+
+		$this-&gt;build_view();
+
+		return $this-&gt;template;
+	}
+
+	private function build_view()
+	{
+		// ici on définit la date en Français
+		// for the French date
+		setlocale(LC_ALL, 'french', 'fr_FR.UTF8', 'fr.UTF8', 'fr_FR.UTF-8', 'fr.UTF-8', 'fr_FR');
+		$this-&gt;build_articles_view($this-&gt;articles_results());
+		$this-&gt;build_news_view($this-&gt;news_results());
+		$this-&gt;build_events_view($this-&gt;events_results());
+	}
+
+	private function articles_results()
+	{
+		$now = new Date();
+		$querier = PersistenceContext::get_querier();
+		$results = $querier-&gt;select('SELECT articles.*, member.*, com.number_comments, notes.average_notes, notes.number_notes, note.note, cat.rewrited_name AS rewrited_name_cat
+			FROM ' . PREFIX . 'articles articles
+			LEFT JOIN ' . PREFIX . 'articles_cats cat ON cat.id = articles.id_category
+			LEFT JOIN ' . DB_TABLE_MEMBER . ' member ON member.user_id = articles.author_user_id
+			LEFT JOIN ' . DB_TABLE_COMMENTS_TOPIC . ' com ON com.id_in_module = articles.id AND com.module_id = \'articles\'
+			LEFT JOIN ' . DB_TABLE_AVERAGE_NOTES . ' notes ON notes.id_in_module = articles.id AND notes.module_name = \'articles\'
+			LEFT JOIN ' . DB_TABLE_NOTE . ' note ON note.id_in_module = articles.id AND note.module_name = \'articles\' AND note.user_id = :user_id
+			AND (published = 1 OR (published = 2 AND publishing_start_date &lt; :timestamp_now AND (publishing_end_date &gt; :timestamp_now OR publishing_end_date = 0)))
+			ORDER BY articles.date_created DESC
+			LIMIT 3',
+			array(
+				'user_id' =&gt; AppContext::get_current_user()-&gt;get_id(),
+				'timestamp_now' =&gt; $now-&gt;get_timestamp()
+			));
+			/*
+			SELECT = On selectionne tous les champs liés aux articles
+			FROM = Dans quelles entités sont issues les champs
+			LEFT JOIN = On fait les jointure afin de dire que les clefs primaire sont identiques
+			AND = On fait bien attention a récupérer un article qui a été publié avec autorisation ou différé après heure
+			ODRDER BY = On classe les articles par la date de création et par ordre décroissant (DESC, le plus récent en premier et le plus ancien en dernier)
+			LIMIT = On récupère uniquement les 3 derniers articles
+		*/
+		return $results;
+	}
+
+	private function news_results()
+	{
+		$now = new Date();
+		$querier = PersistenceContext::get_querier();
+		$results = $querier-&gt;select('SELECT news.*, member.*, cat.rewrited_name AS rewrited_name_cat
+			FROM ' . PREFIX . 'news news
+			LEFT JOIN ' . PREFIX . 'news_cats cat ON cat.id = news.id_category
+			LEFT JOIN ' . DB_TABLE_MEMBER . ' member ON member.user_id = news.author_user_id
+			AND (approbation_type = 1 OR (approbation_type = 2 AND start_date &lt; :timestamp_now AND (end_date &gt; :timestamp_now OR end_date = 0)))
+			ORDER BY news.creation_date DESC
+			LIMIT 3', array(
+			'timestamp_now' =&gt; $now-&gt;get_timestamp()
+		));
+		/*
+			SELECT = On selectionne tous les champs liés aux news
+			FROM = Dans quelles entités sont issues les champs
+			LEFT JOIN = On fait la jointure afin de dire que les clefs primaire sont identiques
+			AND = On fait bien attention a récupérer une news qui a été publiée avec autorisation ou différé après heure.
+			ODRDER BY = On classe les news par la date de création et par ordre décroissant (DESC, le plus récent en premier et le plus ancien en dernier)
+			LIMIT = On récupère uniquement les 3 dernières news.
+		*/
+		return $results;
+	}
+
+	private function events_results()
+	{
+		$now = new Date();
+		$today = strtotime(date("Y-m-d", $now-&gt;get_timestamp()));
+		$querier = PersistenceContext::get_querier();
+		$results = $querier-&gt;select('SELECT *
+			FROM '. PREFIX . 'calendar_events event
+			LEFT JOIN ' . PREFIX . 'calendar_events_content event_content ON event_content.id = event.content_id
+			LEFT JOIN ' . DB_TABLE_MEMBER . ' member ON member.user_id = event_content.author_id
+			LEFT JOIN '. PREFIX . 'calendar_cats cat ON cat.id = event_content.id_category
+			WHERE approved = 1
+			AND start_date &gt;= :timestamp_now
+			ORDER BY start_date
+			LIMIT 3
+			', array(
+				'timestamp_now' =&gt; $today
+			));
+		/*
+			SELECT = On selectionne tous les champs liés aux événements
+			FROM = Dans quelles entités sont issues les champs
+			LEFT JOIN = On fait la jointure afin de dire que les clefs primaire sont identiques
+			WHERE On fait bien attention a récupérer un événement qui a été publié
+			AND = On récupère uniquement un prochain événement (les événements passés on ne les veut pas)
+			ODRDER BY = On classe les événements par date de début par ordre chronologique (ASC, inutile de le préciser, on précise uniquement le DESC)
+			LIMIT = On récupère uniquement les 3 prochains événements
+		*/
+		return $results;
+	}
+
+	private function build_articles_view(SelectQueryResult $results)
+	{
+		// ici les résultats seront envoyés dans articles.tpl
+		// results send in articles.tpl
+		$tpl = new FileTemplate('HomeCustom/articles.tpl');
+		
+		while($row = $results-&gt;fetch())
+		{
+			$article = new Article();
+			$article-&gt;set_properties($row);
+			
+			$tpl-&gt;assign_block_vars('articles_items', $article-&gt;get_tpl_vars());
+			
+			// create a new custom TPL variable made with the help of $article
+			// ici on créeait une nouvelle variable personnalisée avec l'aide de $article 
+			$tpl-&gt;put_all(array(
+				'DATE_DAY' =&gt; strftime('%d', $article-&gt;get_date_created()-&gt;get_timestamp()),
+				'DATE_MONTH_A' =&gt; strftime('%b', $article-&gt;get_date_created()-&gt;get_timestamp()),
+			));
+		}
+		
+		// ici c'est pour "pousser" articles.tpl via # INCLUDE ARTICLES # dans le home.tpl
+		// "push" articles.tpl with # INCLUDE ARTICLES # in home.tpl
+		$this-&gt;template-&gt;put('ARTICLES', $tpl);
+	}
+
+	private function build_news_view(SelectQueryResult $results)
+	{
+		// ici les résultats seront envoyés dans news.tpl
+		// results send in news.tpl
+		$tpl = new FileTemplate('HomeCustom/news.tpl');
+		while ($row = $results-&gt;fetch())
+		{
+			$news = new News();
+			$news-&gt;set_properties($row);
+			
+			$tpl-&gt;assign_block_vars('news_items', $news-&gt;get_array_tpl_vars());
+		}
+		// ici c'est pour "pousser" news.tpl via # INCLUDE NEWS # dans le home.tpl
+		// "push" news.tpl with # INCLUDE NEWS # in home.tpl
+		$this-&gt;template-&gt;put('NEWS', $tpl);
+	}
+
+	private function build_events_view(SelectQueryResult $results)
+	{
+		// ici les résultats seront envoyés dans events.tpl
+		// results send in events.tpl
+		$tpl = new FileTemplate('HomeCustom/events.tpl');
+		foreach ($results as $row)
+		{
+
+		// si "rewrited_name" est vide c'est que c'est la categorie racine (root)
+		// if "rewrited_name" is empty it's root category (root)
+		$row['rewrited_name'] = !empty($row['id_category']) ? $row['rewrited_name_cat'] : 'root';
+
+		// je me prend pas la tête j'utilise le builder du module calendar, comme ça je suis sure que le lien généré sera correcte.
+		// using the "CalendarUrlBuilder" to build link
+		$link = CalendarUrlBuilder::display_event($row['id_category'], $row['rewrited_name'], $row['id_event'], $row['rewrited_title']);
+		
+		// ici sa boucle et on fait correspondre le tableau extrait de la BDD avec des variables TPL
+		// here is the loop to correspond the row in database with the right TPL variable
+			$tpl-&gt;assign_block_vars('events_items', array(
+				'U_LINK' =&gt; $link-&gt;absolute(),
+				'TITLE' =&gt; $row['title'],
+				'CONTENTS' =&gt; $row['contents'],
+				'PSEUDO' =&gt; $row['login'],
+				'LOCATION' =&gt; $row['location'],
+				'LAST_DATE' =&gt; strftime('%d/%m/%Y', $row['last_registration_date']),
+				'MAX_MEMBER' =&gt; $row['max_registered_members'],
+				'START_DATE' =&gt; strftime('%d/%m/%Y', $row['start_date']),
+				'END_DATE' =&gt; strftime('%d/%m/%Y', $row['end_date']),
+				'CAT' =&gt; $row['name'],
+				'START_DATE_FULL' =&gt; strftime('%d %B %Y', $row['start_date']),
+				
+				// date de début jour
+				// start date of day
+				'START_DATE_DAY_FULL' =&gt; strftime('%A', $row['start_date']),
+				'START_DATE_DAY_SHORT' =&gt; strftime('%a', $row['start_date']),
+				'START_DATE_DAY_FIGURE' =&gt; strftime('%d', $row['start_date']),
+				
+				// date de début mois
+				// start date of month
+				'START_DATE_MONTH_FULL' =&gt; strftime('%B', $row['start_date']),
+				'START_DATE_MONTH_SHORT' =&gt; strftime('%b', $row['start_date']),
+				'START_DATE_MONTH_FIGURE' =&gt; strftime('%m', $row['start_date']),
+				
+				// date de début année
+				// start date of year
+				'START_DATE_YEAR_FULL' =&gt; gmdate_format('%Y', $row['start_date']),
+				'START_DATE_YEAR_SHORT' =&gt; gmdate_format('%y', $row['start_date']),
+			));
+		}
+		// ici c'est pour "pousser" events.tpl via # INCLUDE EVENTS # dans le home.tpl
+		// "push" events.tpl with # INCLUDE EVENTS # in home.tpl
+		$this-&gt;template-&gt;put('EVENTS', $tpl);
+	}
+}
+?&gt;
+[/code]
+
+--- home.tpl ---
+
+Ensuite il nous faut de modifier le home.tpl parce que c'est bien beau d'avoir un fichier PHP bien remplis mais si on n'utilise pas ses variables il nous sert strictement à rien.  :crazy
+
+[style=success][i]Celui-ci se trouve ici :  HomeCustom/template/home.tpl[/i][/style]
+
+---- Ce que vous avez ----
+
+Non ! :lol Quand même je ne vais pas vous dire ce que vous avez, votre fichier est quasiment vide ! Ce serait vous manquer de respect tout ça, le plus simple et de tout supprimer ! :cool
+
+---- Le nouveau code ----
+
+Ah je vous avez prévenu le code est très basique, en d'autre terme il est horriblement moche ! Mais il fonctionne je vous le garanti, libre à votre imagination de le rendre plus esthétique. :D 
+
+[code=TPL]
+&lt;div class="center"&gt;&lt;h1&gt;Votre Page d'accueil&lt;/h1&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class="center"&gt;&lt;h2&gt;Les 3 derniers articles&lt;/h2&gt;&lt;/div&gt;
+# INCLUDE ARTICLES #
+&lt;div class="center"&gt;&lt;h2&gt;Les 3 derni&amp;egrave;res news&lt;/h2&gt;&lt;/div&gt;
+# INCLUDE NEWS #
+&lt;div class="center"&gt;&lt;h2&gt;Les 3 prochains &amp;eacute;v&amp;eacute;nements&lt;/h2&gt;&lt;/div&gt;
+# INCLUDE EVENTS #
+[/code]
+
+[style=error]Non, votre page n'est pas encore fonctionnelle ! Rappelez-vous, il nous faut modifier 2 fichiers et nous devons en créer 3. La on vient de finir la première partie soit la modification des 2 fichiers.
+Ceci-dit je vous l'accorde dans la logique des choses, le fichier home.tpl est la fichier que l'on doit s'occuper en dernier puisqu'il représente le résultat final. :) [/style]
+
+-- Création des fichiers --
+
+Enfin vous allez pouvoir créer des fichiers, tout le monde aime créer (sauf moi :D ).
+Comme je vous l'ai dis plus haut, on va créer 3 fichier :
+
+[list=ordered]
+	[*] articles.tpl
+	[*] news.tpl
+	[*] events.tpl
+[/list]
+
+
+--- articles.tpl ---
+
+Cette page .tpl permettra de mettre en forme ([i]oui j'ai compris elle est pas si jolie que ça la forme ! :whistle [/i]) vos derniers articles.
+
+---- Le code ----
+
+[code=TPL]# START articles_items #
+&lt;hr&gt;
+&lt;div&gt;
+	&lt;a href="{articles_items.U_ARTICLE}"&gt;&lt;p&gt;{articles_items.TITLE}&lt;/p&gt;&lt;/a&gt;
+		&lt;p&gt;{articles_items.DESCRIPTION}... &lt;a href="{articles_items.U_ARTICLE}"&gt;[${LangLoader::get_message('read-more', 'common')}]&lt;/a&gt;&lt;/p&gt;
+		&lt;p&gt;${TextHelper::lowercase_first(LangLoader::get_message('the', 'common'))}  : {articles_items.DATE}&lt;/p&gt;
+		# IF articles_items.C_AUTHOR_DISPLAYED #
+		&lt;p&gt;${LangLoader::get_message('by', 'common')} : &lt;span&gt;{articles_items.PSEUDO}&lt;/span&gt;&lt;/p&gt;
+		# ENDIF #
+&lt;/div&gt;
+# END articles_items #[/code]
+
+---- Les différentes variables possibles ----
+
+Oui, il serait judicieux de vous dire ce qu'il peut être rajouter aussi ! Vous l'avez bien compris les variables sont belle est bien repris du module articles... Mais pas toutes ! Il y en a 2 qui ont étaient créées ! :)
+
+Toutefois, il est important de préciser qu'il existe plusieurs types de variables : 
+
+[list]
+	[*][u][b]Les variables d&#8217;affichage :[/b][/u] Le résultat affiché est très explicite.
+	[*][b][u]Les variable de conditions :[/u][/b] Le résultat affiché ne veut pas dire grand chose pour les visiteurs.
+[/list]
+
+En d'autre terme, vous l'aurez compris, les variables d'affichage se servent des variables de conditions. Par exemple, on ne va pas afficher un bouton de suppression d'article si l'utilisateur lambda n'a pas les droits requis [i](surtout pas le lien de suppression ! :crazy )[/i] alors :
+
+[code=TPL]
+# IF articles_items.C_DELETE #
+	&lt;a href="{articles_items.U_DELETE_ARTICLE}" class="fa fa-delete" data-confirmation="delete-element"&gt;&lt;/a&gt;
+# ENDIF #
+[/code]
+
+[style=question][title=4]Je ne suis pas à l'aise avec ça ! Il me manque quelques explications sur l'utilisation des variables tu peux m'expliquer ?[/title]
+[i]Non ! :devil J'évite de trop m'écarter du sujet principal, Ici je vous donne uniquement une sorte de "lexique" des différentes variables utilisable. En revanche, si la partie variable de conditions vous reste ambiguë ou si vous souhaitez simplement avoir quelques explications supplémentaires, ne vous inquiétez pas, un article lui est consacré dans la documentation de PHPBoost (On ne va réinventer la roue quand même ! ;) ) voici son lien :) :[/i] [link=systeme-de-templates#paragraph_conditions][CLIQUEZ ICI][/link][/style]
+
+
+----- Les variables d'affichage -----
+
+
+------ Les variables du module Articles ------
+
+
+[table style="border:0px;border: 0px;"] [row]
+[head colspan="1"]NOMS[/head]
+[head colspan="1"]SIGNIFICATIONS[/head]
+[head colspan="1"]UTILISATIONS[/head]
+[head colspan="1"]EXEMPLE[/head][/row]
+[row] [col]TITLE[/col] [col]Affiche le titre de l'article[/col] [col]{articles_item.TITLE}[/col] [col]Article 1[/col] 
+[/row] [row] [col]DATE[/col] [col]Affiche la date de création de l'article [/col] [col]{articles_item.DATE}[/col] [col]Samedi 14 Mars 2015 à 14h50[/col] 
+[/row] [row] [col]DATE_ISO8601[/col] [col]Affiche la date de création de l'article [/col] [col]{articles_item.DATE-ISO8601}[/col] [col]2015-03-14T14:50:00+01:00[/col] 
+[/row] [row] [col]DATE_SHORT[/col] [col]Affiche la date de création de l'article[/col] [col]{articles_item.DATE_SHORT}[/col] [col]14/03/2015[/col] 
+[/row] [row] [col]PUBLISHING_START_DATE[/col] [col]Affiche la date de publication de l'article s'il a été poster en différé[/col] [col]{articles_item.PUBLISHING_START_DATE}[/col] [col]14/04/2015[/col]
+[/row] [row] [col]PUBLISHING_START_DATE_ISO8601[/col] [col]Affiche la date de publication de l'article s'il a été poster en différé[/col] [col]{articles_item.PUBLISHING_START_DATE}[/col] [col]2015-04-14T14:50:00+01:00[/col]
+[/row] [row] [col]PUBLISHING_END_DATE[/col] [col]Affiche la date de fin de publication de l'article s'il a été poster en différé[/col] [col]{articles_item.PUBLISHING_END_DATE}[/col] [col]14/05/2015[/col]
+[/row] [row] [col]PUBLISHING_END_DATE_ISO8601[/col] [col]Affiche la date de fin de publication de l'article s'il a été poster en différé[/col] [col]{articles_item.PUBLISHING_START_DATE}[/col] [col]2015-05-14T14:50:00+01:00[/col]
+[/row] [row] [col]DATE_UPDATED[/col] [col]Affiche la dernière date de modification de l'article[/col] [col]{articles_item.DATE_UPDATE}[/col] [col]14/03/2015[/col] 
+[/row] [row] [col]L_COMMENTS[/col] [col]Affiche "Poster commentaire" [/col] [col]{articles_item.L_COMMENTS}[/col] [col]Poster un commentaire[/col] 
+[/row] [row] [col]NUMBER_COMMENTS[/col] [col]Affiche le nombre de commentaires sur l'article[/col] [col]{articles_item.NUMBER_COMMENTS}[/col] [col]0, 1, 2, 3 ...[/col] 
+[/row] [row] [col]NUMBER_VIEW[/col] [col]Affiche le nombre de vues de l'article[/col] [col]{articles_item.NUMBER_VIEW}[/col] [col]0, 1, 2, 3...[/col] 
+[/row] [row] [col]NOTE[/col] [col]Affiche les petites étoiles de notation[/col] [col]{articles_item.NOTE}[/col] [col]Les petites étoiles[/col] 
+[/row] [row] [col]PSEUDO[/col] [col]Affiche le pseudo de l'auteur de l'article[/col] [col]{articles_item.PSEUDO}[/col] [col]janus57, jpalbert92 ...[/col] 
+[/row] [row] [col]DESCRIPTION[/col] [col]Affiche la description de l'article [/col] [col]{articles_item.DESCRIPTION}[/col] [col]Ceci est la description de l'article 1[/col] 
+[/row] [row] [col]PICTURE[/col] [col]Affiche le lien de la photo de l'article[/col] [col]{articles_item.PICTURE}[/col] [col]/phpboost_v4-1/articles/templates/images/default.png[/col] 
+[/row] [row] [col]USER_LEVEL_CLASS[/col] [col]Affiche le niveau de l'auteur[/col] [col]{articles_item.USER_LEVEL_CLASS}[/col] [col]admin, modo, membre, visiteur[/col] 
+[/row] [row] [col]USER_GROUP_COLOR[/col] [col]Donne le code héxadécimal de la couleur du groupe qui a été configuré dans l'administration via le système de groupe[/col] [col]{articles_item.USER_GROUP_COLOR}[/col] [col]/[/col] 
+[/row] [row] [col]CATEGORY_ID[/col] [col]Affiche le numéro de la catégorie de l'article[/col] [col]{articles_item.CATEGORY_ID}[/col] [col]1, 2, 3 ...[/col] 
+[/row] [row] [col]CATEGORY_NAME[/col] [col]Affiche le nom de la catégorie de l'article[/col] [col]{articles_item.CATEGORY_NAME}[/col] [col]catégorie 1[/col] 
+[/row] [row] [col]CATEGORY_DESCRIPTION[/col] [col]Affiche la description de la catégorie de l'article[/col] [col] {articles_item.DESCRIPTION} [/col] [col]Ceci est la description de la cat 1[/col] 
+[/row] [row] [col]CATEGORY_IMAGE[/col] [col]Affiche le lien de l'image de la catégorie de l'article[/col] [col]{articles_item.CATEGORY_IMAGE}[/col] [col]/phpboost_v4-1/articles/articles.png[/col] 
+[/row] [row] [col]U_COMMENTS[/col] [col]Affiche le lien de la partie commentaires de l'article[/col] [col]{articles_item.U_COMMENTS}[/col] [col]/phpboost_v4-1/articles/?url=/1-cat-1/5-article-4-cat-1/[/col] 
+[/row] [row] [col]U_AUTHOR[/col] [col]Affiche le lien vers le profil de l'auteur de l'article[/col] [col]{articles_item.U_AUTHOR}[/col] [col]/phpboost_v4-1/user/profile/1[/col] 
+[/row] [row] [col]U_CATEGORY[/col] [col]Affiche le lien vers la catégorie de l'article[/col] [col]{articles_item.U_CATEGORY}[/col] [col]/phpboost_v4-1/articles/1-cat-1/[/col] 
+[/row] [row] [col]U_ARTICLE[/col] [col]Affiche le lien de l'article[/col] [col]{articles_item.U_ARTICLE}[/col] [col]/phpboost_v4-1/articles/1-cat-1/5-article-4-cat-1/[/col] 
+[/row] [row] [col]U_EDIT_ARTICLE[/col] [col]Affiche le lien d'édition de l'article[/col] [col]{articles_item.U_EDIT_ARTICLE}[/col] [col]/phpboost_v4-1/articles/5/edit/[/col] 
+[/row] [row] [col]U_DELETE_ARTICLE[/col] [col]Affiche le lien de suppression de l'article[/col] [col]{articles_item.U_DELETE_ARTICLE}[/col] [col]/phpboost_v4-1/articles/5/delete/?token=88baada266a37da1[/col] 
+[/row] [row] [col]U_SYNDICATION[/col] [col]Affiche le flux RSS[/col] [col]{articles_item.U_SYNDICATION}[/col] [col]/phpboost_v4-1/syndication/rss/articles/1[/col] 
+[/row] [row] [col]U_PRINT_ARTICLE[/col] [col]Affiche la version imprimable de l'article[/col] [col]{articles_item.U_PRINT_ARTICLE}[/col] [col]/phpboost_v4-1/articles/print/5-article-4-cat-1/[/col] 
+[/row] 
+[/table]
+
+------ Les nouvelles variables ------
+
+Jusqu'ici nous avons repris les variables d'affichages du module news, mais nous avons créé 2 nouvelles variables dans le fichier PHP :
+
+[table]
+	[row]
+[head colspan="1"]NOMS[/head]
+[head colspan="1"]SIGNIFICATIONS[/head]
+[head colspan="1"]UTILISATIONS[/head]
+[head colspan="1"]EXEMPLE[/head]
+	[/row]
+	[row]
+		[col]DATE_DAY[/col]
+		[col]Affiche le jour de la date de création de l'article[/col]
+		[col]{DATE_DAY}[/col]
+		[col]01, 02, 03 ... 29, 30, 31[/col]
+	[/row]
+	[row]
+		[col]DATE_MONTH_A[/col]
+		[col]Affiche le mois abrégé de la date de création de l'article [/col]
+		[col]{DATE_MONTH_A}[/col]
+		[col]Jan, Févr, Mars, Avr, Mai, Juin, Juil, Août ... Nov, Déc[/col]
+	[/row]
+[/table]
+
+----- Les variables de conditions -----
+
+[table style="border:0px;border: 0px;"]  [row][head colspan="1"]NOMS[/head]
+[head colspan="1"]SIGNIFICATIONS[/head]
+[head colspan="1"]UTILISATIONS[/head][/row] 
+[row] [col] C_EDIT [/col] [col]Si l'utilisateur peut supprimer[/col] [col] # IF  articles_items.C_EDIT  # 
+[/col] [/row] [row] [col] C_DELETE [/col] [col]Si l'utilisateur peut supprimer[/col] [col] # IF  articles_items.C_DELETE  # 
+[/col] [/row] [row] [col] C_HAS_PICTURE [/col] [col]S'il y a une photo sur l'article[/col] [col] # IF  articles_items.C_HAS_PICTURE  # 
+[/col] [/row] [row] [col] C_USER_GROUP_COLOR [/col] [col]Si l'auteur est associé à un groupe avec une couleur[/col] [col] # IF  articles_items.C_USER_GROUP_COLOR  # 
+[/col] [/row] [row] [col] C_PUBLISHED [/col] [col]Si l'article est publié[/col] [col] # IF  articles_items.C_PUBLISHED  # 
+[/col] [/row] [row] [col] C_PUBLISHING_START_AND_END_DATE [/col] [col]Si l'article à une date de début de publication et une date de fin de publication[/col] [col] # IF  C_PUBLISHING_START_AND_END_DATE  # 
+[/col] [/row] [row] [col] C_PUBLISHING_START_DATE [/col] [col]Si l'article à une date de début de publication[/col] [col] # IF  articles_items.C_PUBLISHING_START_DATE  # 
+[/col] [/row] [row] [col] C_PUBLISHING_END_DATE [/col] [col]Si l'article à une date de fin de publication[/col] [col] # IF  articles_items.C_PUBLISHING_END_DATE  # 
+[/col] [/row] [row] [col] C_DATE_UPDATED [/col] [col]Si l'article à été modifié[/col] [col] # IF  articles_items.C_DATE_UPDATED  # 
+[/col] [/row] [row] [col] C_AUTHOR_DISPLAYED [/col] [col]Si l'affichage de l'auteur est activé[/col] [col] # IF  articles_items.C_AUTHOR_DISPLAYED  # 
+[/col] [/row] [row] [col] C_NOTATION_ENABLED [/col] [col]Si la notation est activé[/col] [col] # IF  articles_items.C_NOTATION_ENABLED  # 
+[/col] [/row] [row] [col] C_AUTHOR_EXIST [/col] [col]Si l'auteur exist[/col] [col] # IF  articles_items.C_AUTHOR_EXIST  #  
+[/col] [/row]  [/table]
+
+[style=error]ATTENTION : J'insiste car 90% des erreurs sont lié au fait qu'on oublie de fermé le # IF ... # . En fait c'est comme si vous ne terminez pas votre phrase. En algorithme cela se traduit par un FIN SI autrement dit en anglais ENDIF on rajoute alors # ENDIF #. [/style]</wiki_content>
+</wiki_article>

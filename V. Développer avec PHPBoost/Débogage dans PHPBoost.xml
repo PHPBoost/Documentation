@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>33</wiki_id>
+  <wiki_id_contents>1250</wiki_id_contents>
+  <wiki_title>Débogage dans PHPBoost</wiki_title>
+  <wiki_encoded_title>debogage-dans-phpboost</wiki_encoded_title>
+  <wiki_hits>886</wiki_hits>
+  <wiki_id_cat>5</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>5</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>159</wiki_cat_article_id>
+  <wiki_con_id_contents>1250</wiki_con_id_contents>
+  <wiki_con_id_article>33</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_fichier-de-log-des-erreurs">Fichier de log des erreurs</a></li><li><a href="#paragraph_configuration-du-debogage">Configuration du débogage</a></li><li><a href="#paragraph_utilisation-avancee-avec-la-classe-debug">Utilisation avancée avec la classe Debug</a></li><li><a href="#paragraph_deboguer-un-template">Déboguer un template</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>5193</wiki_user_id>
+  <wiki_user_ip>88.125.157.163</wiki_user_ip>
+  <wiki_timestamp>1404999795</wiki_timestamp>
+  <wiki_content>Cette page décrit les différents éléments qui ont été mis en place dans PHPBoost pour déboguer du code, afin d'améliorer la qualité du logiciel et de gagner en productivité.
+
+-- Fichier de log des erreurs --
+
+Tout d'abord, sachez que peut importe la configuration d'un site PHPBoost, les erreurs, notifications et avertissements trouvés sont stockés dans un fichier de log : /cache/error.log. Celui-ci contient toutes les erreurs. Vous pouvez le lire plus facilement en vous rendant dans l'administration, puis dans [i]Outils -&gt; Erreurs archivées[/i].
+
+-- Configuration du débogage --
+
+L'activation du mode débogage dans l'administration permet d'afficher explicitement les erreurs lors de la navigation sur le site, ce qui vous évite de travailler avec le fichier error.log.
+
+Le mode à également plusieurs niveaux : Normal et Strict.
+
+Si le mode strict est activé, il arrête le chargement de la page lorsqu'une erreur est rencontrée.
+
+Vous pouvez également choisir d'afficher les requêtes SQL générées sur les pages en cours. Il y aura également tout le suivi de la requête pour identifier sur quel fichier et quelle ligne la requête est exécutée.
+
+-- Utilisation avancée avec la classe Debug --
+
+[code=php,0,1]Debug::fatal(Exception $exception);[/code] permet d'afficher les informations sur une exception ainsi que le stacktrace.
+
+[code=php,0,1]Debug::dump($object);[/code] affiche les informations $object en clair (ex : la valeur d'un tableau).
+
+[code=php,0,1]Debug::stop($object);[/code] fait la même chose que dump() mais affiche le stacktrace et stoppe l&#8217;exécution de la page.
+
+-- Déboguer un template --
+
+Vous avez la possibilité d'activer le mode strict dans les templates en utilisant la fonction enable_strict_mode() sur votre objet Template.
+
+Exemple :
+
+[code=php]$view = new Template('votre_template.tpl');
+$view-&gt;enable_strict_mode();[/code]
+
+S'afficheront les erreurs qui peuvent être présentes dans votre fichier tpl ou dans vos déclarations de variables tpl.</wiki_content>
+</wiki_article>

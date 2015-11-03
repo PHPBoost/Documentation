@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>139</wiki_id>
+  <wiki_id_contents>500</wiki_id_contents>
+  <wiki_title>Fichiers de langue</wiki_title>
+  <wiki_encoded_title>fichiers-de-langue</wiki_encoded_title>
+  <wiki_hits>891</wiki_hits>
+  <wiki_id_cat>5</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>5</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>159</wiki_cat_article_id>
+  <wiki_con_id_contents>500</wiki_con_id_contents>
+  <wiki_con_id_article>139</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_fichiers-de-langues-principaux">Fichiers de langues principaux</a></li><li><a href="#paragraph_fichiers-de-langues-des-modules">Fichiers de langues des modules</a><ol class="wiki_list_2"><li><a href="#paragraph_mise-en-situation">Mise en situation</a></li></ol></li><li><a href="#paragraph_chargement-de-la-langue">Chargement de la langue</a><ol class="wiki_list_2"><li><a href="#paragraph_chargement-d-un-fichier-de-langue-en-entier">Chargement d'un fichier de langue en entier</a></li><li><a href="#paragraph_chargement-d-un-seul-message">Chargement d'un seul message</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>982</wiki_user_id>
+  <wiki_user_ip>193.164.156.12</wiki_user_ip>
+  <wiki_timestamp>1353925570</wiki_timestamp>
+  <wiki_content>Dans PHPBoost, nous utilisons des fichiers de langues pour permettre l'utilisation de plusieurs langues sur le CMS.
+
+Il y a des fichiers de langues principaux (utilisés dans beaucoup d'endroit) et ceux des modules.
+
+-- Fichiers de langues principaux --
+
+Les principaux fichiers de langues sont stockés dans le dossier [i]lang[/i] à la racine de votre site. Ils contiennent les textes de l'administration, de la gestion utilisateurs, mais aussi certains textes souvent utilisés.
+
+Les fichiers présent dans ce dossier ne doivent pas être modifiés, ils sont gérés par l'équipe de développement et toute modification pourra être perdue lors d'une mise à jour. Si vous avez des propositions, n'hésitez pas à nous contacter par le biais du forum.
+
+-- Fichiers de langues des modules --
+
+Les fichiers de langues des modules sont stockés directement dans le dossier des modules. A la racine d'un module, il y a un dossier lang.
+
+Ce répertoire contient un dossier par langue dont le nom est le nom anglais de la langue. Par exemple pour le français vous trouverez un dossier [i]/lang/french[/i] contenant un fichier php contenant la déclaration d'un tableau associatif. Ce dernier associe à chaque identifiant l'expression écrite dans la langue correspondante au fichier. L'identifiant étant invariable de la langue de l'utilisateur, il est utilisé dans le code pour identifier une expression et le noyau y associera automatiquement l'expression dans la langue de l'utilisateur.
+
+Vous pouvez donner n'importe quel nom à votre fichier php mais il doit être le même pour toutes les langues.
+
+--- Mise en situation ---
+
+Créez deux dossiers dans le dossier [i]lang[/i] de votre module : [i]english[/i] et [i]french[/i]
+
+Dans ces deux dossiers créez un fichier [i]nom_du_module_common.php[/i] (avec [i]nom_du_module[/i] le nom de votre module) avec comme contenu pour la langue française :
+
+[code=php]$lang = array();
+$lang['module_title'] = 'Titre de votre module';[/code]
+
+Et pour la langue anglaise :
+
+[code=php]$lang = array();
+$lang['module_title'] = 'Module title';[/code]
+
+-- Chargement de la langue --
+
+Pour utiliser les fichiers de langue, rien de plus simple, une classe permet de les gérer : [i]LangLoader[/i]
+
+--- Chargement d'un fichier de langue en entier ---
+
+Pour charger un fichier de langue en entier, vous pouvez utiliser :
+
+[code=php]$lang = LangLoader::get('nom_du_module_common', 'nom_du_module');[/code]
+
+--- Chargement d'un seul message ---
+
+Si le message fait partie des fichiers de langue principaux :
+
+[code=php]$msg = LangLoader::get_message('identifiant_du_message', 'nom_du_fichier');
+
+// Exemple
+
+$lang_guest = LangLoader::get_message('guest', 'main');[/code]
+
+Si le message fait partie du fichier de langue du module :
+
+[code=php]$msg = LangLoader::get_message('identifiant_du_message', 'nom_du_module_common', 'nom_du_module');[/code]</wiki_content>
+</wiki_article>

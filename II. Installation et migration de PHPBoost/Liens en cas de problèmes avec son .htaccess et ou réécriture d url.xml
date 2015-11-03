@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>308</wiki_id>
+  <wiki_id_contents>1422</wiki_id_contents>
+  <wiki_title>Liens en cas de problèmes avec son .htaccess et/ou réécriture d'url</wiki_title>
+  <wiki_encoded_title>liens-en-cas-de-probl-mes-avec-son-htaccess-et-ou-r-criture-d-url</wiki_encoded_title>
+  <wiki_hits>146</wiki_hits>
+  <wiki_id_cat>2</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>2</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>2</wiki_cat_article_id>
+  <wiki_con_id_contents>1422</wiki_con_id_contents>
+  <wiki_con_id_article>308</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_liens">Liens</a><ol class="wiki_list_2"><li><a href="#paragraph_administration">Administration</a></li><li><a href="#paragraph_utilisateur">Utilisateur</a></li></ol></li><li><a href="#paragraph_remarques">Remarques</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>440</wiki_user_id>
+  <wiki_user_ip>92.138.198.63</wiki_user_ip>
+  <wiki_timestamp>1430410280</wiki_timestamp>
+  <wiki_content>Voici les liens les plus importants pour accéder à son site en V4.1 après avoir supprimé ou modifié son .htaccess alors que l'on avait la réécriture d'url activé.
+
+
+-- Liens --
+
+--- Administration ---
+
+Configuration avancée : [url=http://www.example.org/admin/config/?url=/advanced/]http://www.example.org/admin/config/?url=/advanced/[/url]
+Cache : [url=http://www.example.org/admin/cache/?url=/data]http://www.example.org/admin/cache/?url=/data[/url]
+Maintenance : [url=http://www.example.org/admin/admin_maintain.php]http://www.example.org//admin/admin_maintain.php[/url]
+
+
+--- Utilisateur ---
+
+Connexion : [url=http://www.example.org/user/?url=/connect/]http://www.example.org/user/?url=/connect/[/url]
+
+
+-- Remarques --
+
+Le lien de connexion sert si on a pas le cookie d'autoconnexion d'activé pour accéder à l'administration.
+Les liens de Configuration avancée et cache peuvent permettre la remise en place du .htaccess
+
+Ne pas oublier de remplacer [url=http://www.example.org]http://www.example.org[/url] par votre NDD (Nom De Domaine)</wiki_content>
+</wiki_article>

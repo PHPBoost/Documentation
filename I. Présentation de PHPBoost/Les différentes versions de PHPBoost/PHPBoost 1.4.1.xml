@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>92</wiki_id>
+  <wiki_id_contents>136</wiki_id_contents>
+  <wiki_title>PHPBoost 1.4.1</wiki_title>
+  <wiki_encoded_title>phpboost-1-4-1</wiki_encoded_title>
+  <wiki_hits>504</wiki_hits>
+  <wiki_id_cat>14</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>14</wiki_cat_id>
+  <wiki_cat_id_parent>1</wiki_cat_id_parent>
+  <wiki_cat_article_id>14</wiki_cat_article_id>
+  <wiki_con_id_contents>136</wiki_con_id_contents>
+  <wiki_con_id_article>92</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>82.124.181.87</wiki_user_ip>
+  <wiki_timestamp>1346007427</wiki_timestamp>
+  <wiki_content>Sortie en mars 2006, PHPBoost 1.4.1 comporte un nouveau module de statistiques, comprenant un compteur de visites journalières et mensuelles, avec un affichage graphique, des statistiques sur les navigateurs des visiteurs, sur leurs systèmes d'exploitation ainsi que des Fournisseurs d'Accès Internet. Un calendrier a aussi fait son apparition, ainsi qu'une première version du système de gestion des messages non vus sur le forum.
+
+-- Changelog --
+
+
+[list]
+	[*]Module Statistiques
+	[*]Module Calendrier, avec commentaires
+	[*]Lien: "Voir les nouveaux messages" depuis la dernière visite sur le forum
+	[*]Icône fille/garçon associée aux membres, avec changement de couleur, si connecté au site
+	[*]Fonction de débogage, avec affichage du fichier concerné, et la ligne de l'erreur
+	[*]Gestion des titres de pages (support des langues), localisation plus précise en fonction du fichier consulté
+	[*]Possibilité de forcer un thème par défaut aux membres
+	[*]Possibilité de modifier la place du module de connexion, et des menus de liens (gestion des blocs)
+	[*]Possibilité de désactiver les blocs de droite sur le forum
+	[*]Possibilité de supprimer plusieurs Messages privés en même temps
+	[*]Possibilité d'éditer le pseudo de l'invité (commentaires, livre d'or et shoutbox)
+	[*]Possibilité pour le membre de supprimer son compte (messages du forum non supprimés)
+	[*]Ajout d'un lien vers les commentaires dans la liste téléchargement, et des liens web
+	[*]Choix de langue et thème lors de l'inscription basé sur langue et thème par défaut du site
+	[*]Ajout du statut du membre dans le profil
+	[*]Ajout de la dernière connexion du membre dans le profil
+	[*]Gestion des photos dans l'administration après suppression de leur catégorie
+	[*]Si ouverture des photos (Galerie) en nouvelle fenêtre, activation des commentaires en popup
+	[*]Lors de la suppression d'un thème par l'administrateur, PHPBoost met le thème par défaut du site aux membres qui avait choisi ce thème
+	[*]Amélioration dans les sessions (plus rapide pour les invités)
+	[*]Restructuration du forum pour plus de rapidité
+	[*]Login sensible à la casse (majuscules) lors de la connexion
+	[*]Nouveau compteur (plus rapide)
+	[*]Correction des problèmes d'URL avec la balise [i][url][/i]
+	[*]Nombreuses optimisations SQL
+	[*]Corrections, Optimisations du code
+	[*]4 nouveaux smileys
+[/list]</wiki_content>
+</wiki_article>

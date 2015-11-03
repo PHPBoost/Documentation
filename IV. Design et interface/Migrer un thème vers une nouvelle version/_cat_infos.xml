@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_cat>
+  <wiki_id>145</wiki_id>
+  <wiki_id_contents>1239</wiki_id_contents>
+  <wiki_title>Migrer un thème vers une nouvelle version</wiki_title>
+  <wiki_encoded_title>migrer-un-theme-vers-une-nouvelle-version</wiki_encoded_title>
+  <wiki_hits>955</wiki_hits>
+  <wiki_id_cat>42</wiki_id_cat>
+  <wiki_is_cat>1</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>42</wiki_cat_id>
+  <wiki_cat_id_parent>4</wiki_cat_id_parent>
+  <wiki_cat_article_id>145</wiki_cat_article_id>
+  <wiki_con_id_contents>1239</wiki_con_id_contents>
+  <wiki_con_id_article>145</wiki_con_id_article>
+  <wiki_menu></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>88.125.157.163</wiki_user_ip>
+  <wiki_timestamp>1404998806</wiki_timestamp>
+  <wiki_content>Migrer un thème d'une version à l'autre.
+
+Les articles ci-dessous vont vous permettre de convertir vos anciens thèmes vers la dernière version de PHPBoost.
+
+Si vous souhaitez passer plusieurs versions, il est conseillé de suivre les tutoriels un par un, dans l'ordre des évolutions.</wiki_content>
+</wiki_cat>

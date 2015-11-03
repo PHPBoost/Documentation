@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>210</wiki_id>
+  <wiki_id_contents>1354</wiki_id_contents>
+  <wiki_title>Passer son site 4.0 en version 4.1</wiki_title>
+  <wiki_encoded_title>passer-son-site-4-0-en-version-4-1</wiki_encoded_title>
+  <wiki_hits>2035</wiki_hits>
+  <wiki_id_cat>48</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>48</wiki_cat_id>
+  <wiki_cat_id_parent>2</wiki_cat_id_parent>
+  <wiki_cat_article_id>170</wiki_cat_article_id>
+  <wiki_con_id_contents>1354</wiki_con_id_contents>
+  <wiki_con_id_article>210</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_pre-requis">Pré-requis</a></li><li><a href="#paragraph_preparer-votre-site">Préparer votre site</a></li><li><a href="#paragraph_mise-a-jour-du-site">Mise à jour du site</a></li><li><a href="#paragraph_configurez-votre-site-sur-phpboost-4-1">Configurez votre site sur PHPBoost 4.1</a></li><li><a href="#paragraph_mise-en-place-des-redirections-301-pour-les-anciens-liens-de-phpboost-4-0">Mise en place des redirections 301 pour les anciens liens de PHPBoost 4.0</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>2666</wiki_user_id>
+  <wiki_user_ip>84.5.127.1</wiki_user_ip>
+  <wiki_timestamp>1407186051</wiki_timestamp>
+  <wiki_content>Pour pouvoir passer de la version 4.0 à la 4.1, il ne suffit pas de remplacer les fichiers ou d'appliquer un patch comme les mises à jours mineures.
+
+Etant donné qu'il y a eu plusieurs changements au niveau de la base de données, il faut faire des conversions pour que la nouvelle version fonctionne correctement, nous allons donc voir au cours de cet article les différentes choses à faire pour migrer vers PHPBoost 4.1.
+
+[style=warning]N'oubliez pas de faire des sauvegardes de [b]vos fichiers[/b] et de [b]la base de données[/b] avant la procédure !
+
+Il est nécessaire d'utiliser une [b]version php supérieure ou égale à 5.3[/b] pour installer PHPBoost 4.1. Assurez de modifier la configuration de votre serveur (dans le fichier htaccess si besoin pour certains hébergeurs) avant de transférer les fichiers de la 4.1 sur le serveur.
+[/style]
+
+-- Pré-requis --
+
+En premier lieu, nous vous conseillons très fortement d'effectuer une sauvegarde de tout votre site. Que ce soit au niveau de l'hébergement des répertoires et fichiers constituant le site, ou au niveau de la base de données.[indent][list]
+	[*][i] Pour la base de données, nous vous invitons à regarder cet [link=gestion-de-la-base-de-donnees#paragraph_sauvegarder-une-table-ou-l-ensemble-des-tables]article[/link].[/i]
+	[*][i] Pour le contenu de votre site, nous vous invitons à regarder cet [link=transfert-des-fichiers-via-logiciel-ftp]article[/link] (au lieu de copier vers le serveur en ligne, vous copierez vers le serveur local ou nouveau serveur)[/i][/list][/indent]
+En second lieu, suivant le système d'exploitation de votre machine à partir de laquelle vous allez effectuer cette opération, certains fichiers composant la fourniture de la version PHPBoost 4.1 correspondent à des fichiers cachés de type .nom-fichier (avec le point devant). Il sera donc nécessaire que vous régliez votre explorateur de fichiers pour les rendre visibles.
+
+En troisième lieu, cette migration ne vaut que pour le noyau du CMS ainsi que ses modules associés. Les thèmes et les modules non-officiels, eux, devront être migrés à part avec la procédure les affairant. [indent][list]
+	[*][i]Il est préférable de désactiver tous vos modules non-officiels avant de procéder à la migration.[/i]
+[/list][/indent]Il sera aussi important de sauvegarder la/les versions 4.0 se trouvant dans le répertoire [b]/templates[/b] parce que le premier redémarrage se fera avec le thème base de la version 4.1.[indent][list]
+	[*][i] Nous vous invitons à regarder cet [link=mettre-a-jour-son-theme-4-0-en-4-1]article[/link][/i].
+[/list][/indent]
+Enfin, il sera nécessaire que vous fassiez le recensement de tous les répertoires et fichiers que vous avez ajoutés en plus de ceux constituant le CMS PHPBoost 4.0 pour bien les identifier avant de suivre cette procédure.
+
+-- Préparer votre site --
+
+1 - Téléchargez la version complète de [url=/download/]PHPBoost 4.1[/url].
+
+2 - Décompressez l'archive et transférez [b][u]tous[/u][/b] les fichiers et dossiers de la version 4.1 sur votre serveur dans le même répertoire de la version 4.0. Contrairement aux versions précédentes, le script de mise à jour se charge automatiquement des fichiers ajoutés/supprimés sur le serveur. Il n'y a plus d'opération manuelle.
+
+3 - Récupérez ensuite le pack de mise à jour à cette adresse : [url=/download/download-300+pack-de-mise-a-jour-4-0-vers-4-1.php]PHPBoost 4.0 vers PHPBoost 4.1[/url]
+
+4 - Décompressez l'archive et téléchargez le dossier [b]update[/b] dans le répertoire PHPBoost de votre serveur.
+
+5 - Si le module Rapport de bug est installé sur votre site, veuillez le [url=/download/download-328+rapport-de-bugs.php]télécharger[/url] et mettre le répertoire sur votre FTP.
+
+-- Mise à jour du site --
+
+- Lancez l'adresse suivante : [code=text,0,1]http://www.monsite.com/update/[/code]
+(en remplaçant [code=text,0,1]http://www.monsite.com[/code] par l'adresse de votre site)
+
+- Là vous pouvez suivre les différentes étapes, qui sont proches de la procédure de l'installation de PHPBoost que vous avez connu au moment de la création de votre site PHPBoost version 4.0. A noter que les informations de base de donnée n'ont pas besoin d'être renseignées puisqu'elles l'ont déjà été à l'installation. Le temps de la conversion peut être plus où moins long suivant la taille de la base de données. En moyenne comptez une à deux minutes.
+
+[style=notice] Si vous ne l'aviez pas déjà fait avant de lancer la mise à jour, votre site sera automatiquement placé en maintenance au début de la mise à jour.[/style]
+
+-- Configurez votre site sur PHPBoost 4.1 --
+
+- En premier lieu [u]supprimez le dossier /update et /install de votre serveur[/u], une personne mal intentionnée pourrait endommager votre site le cas échéant.
+
+- Passez en revue l'ensemble des données, configurations et autorisations puis désactivez la maintenance pour ré-ouvrir le site.
+
+-- Mise en place des redirections 301 pour les anciens liens de PHPBoost 4.0 --
+
+Pour éviter que vous tombiez sur des erreurs 404, nous avons développé un module qui met en place tout seul des redirections 301.
+Cela va permettre également aux moteurs de recherche de savoir qu'une page à changé d'url.
+
+Le module est à installer comme un module standard et vous n'avez pas besoin de vous en occuper.
+
+Vous pouvez le télécharger ici : [url=/download/download-341+urlupdater.php]Télécharger le module UrlUpdater[/url]
+
+Au moindre problème contactez le support sur le [url=/forum/index.php]forum PHPBoost[/url].
+
+Bonne continuation sur PHPBoost 4.1 !</wiki_content>
+</wiki_article>

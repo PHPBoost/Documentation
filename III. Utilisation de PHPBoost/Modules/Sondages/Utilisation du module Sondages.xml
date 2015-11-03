@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>62</wiki_id>
+  <wiki_id_contents>804</wiki_id_contents>
+  <wiki_title>Utilisation du module Sondages</wiki_title>
+  <wiki_encoded_title>utilisation-du-module-sondages</wiki_encoded_title>
+  <wiki_hits>327</wiki_hits>
+  <wiki_id_cat>30</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>30</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>60</wiki_cat_article_id>
+  <wiki_con_id_contents>804</wiki_con_id_contents>
+  <wiki_con_id_article>62</wiki_con_id_article>
+  <wiki_menu></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>982</wiki_user_id>
+  <wiki_user_ip>193.164.156.11</wiki_user_ip>
+  <wiki_timestamp>1358328918</wiki_timestamp>
+  <wiki_content>L'utilisation de ce module est très simple.
+
+Il vous suffit d'aller dans la partie Sondages du site (à l'adresse /poll/poll.php) et de choisir dans une liste, le sondage auquel vous voulez participer.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/poll/poll_4.jpg[/img][/align]
+
+S'il existe un ou plusieurs sondages en archives, un lien [b]Archives[/b] sera ajouté et il montrera tous les résultats des sondages placés en archive, auxquels vous ne pouvez plus participer.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/poll/poll_5.jpg[/img][/align]
+
+Lorsque vous choisissez un sondage, la page vous permettant de voter s'affiche. La question est posée en haut, puis les réponses sont affichées les unes à la suite des autres en-dessous. Suivant le type de sondage choisi (unique ou multiple), vous pouvez cocher une ou plusieurs réponses. Il y a le bouton d'envoi, un lien vers les résultats et le nombre de votes affichés en bas à gauche du module ainsi que la date de création du sondage en bas à droite.</wiki_content>
+</wiki_article>

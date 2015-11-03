@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>78</wiki_id>
+  <wiki_id_contents>993</wiki_id_contents>
+  <wiki_title>Choix du serveur en ligne</wiki_title>
+  <wiki_encoded_title>choix-du-serveur-en-ligne</wiki_encoded_title>
+  <wiki_hits>1693</wiki_hits>
+  <wiki_id_cat>49</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>49</wiki_cat_id>
+  <wiki_cat_id_parent>2</wiki_cat_id_parent>
+  <wiki_cat_article_id>171</wiki_cat_article_id>
+  <wiki_con_id_contents>993</wiki_con_id_contents>
+  <wiki_con_id_article>78</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_comment-heberger-son-site">Comment héberger son site</a><ol class="wiki_list_2"><li><a href="#paragraph_souscrire-un-contrat-d-hebergement">Souscrire un contrat d'hébergement</a></li><li><a href="#paragraph_heberger-sois-meme-son-site">Héberger sois-même son site</a></li></ol></li><li><a href="#paragraph_liste-d-hebergeurs-gratuits-et-payants">Liste d'hébergeurs (gratuits et payants)</a><ol class="wiki_list_2"><li><a href="#paragraph_hebergeurs-gratuits">Hébergeurs gratuits</a></li><li><a href="#paragraph_hebergeurs-micro-paiement">Hébergeurs micro-paiement</a></li><li><a href="#paragraph_hebergeurs-payants">Hébergeurs payants</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>88.125.157.163</wiki_user_ip>
+  <wiki_timestamp>1393582293</wiki_timestamp>
+  <wiki_content>-- Comment héberger son site --
+
+--- Souscrire un contrat d'hébergement ---
+
+Sur internet, de nombreuses sociétés proposent d'héberger votre site internet. Certains hébergeurs sont gratuits, d'autres sont payants. Il existe des hébergeurs gratuits qui fournissent de bons services, mais ils se font rares. Une grande majorité d'entre eux sont payants et proposent un service plus ou moins fiables. Nous vous proposerons, dans cet articles, plusieurs hébergeurs, gratuits comme payants, fournissant de bonnes prestations.
+
+--- Héberger sois-même son site ---
+
+Une grande partie des développeurs travaillent sur leur propre ordinateur, en installant un serveur local. Mais certains préfèrent carrément publier leur site hébergé sur leur propre ordinateur. Il faut savoir que c'est tout à fait faisable, sur n'importe quel système d'exploitation mais cela demande des connaissances importantes, et cela entraine des contraintes non négligeables. C'est pourquoi nous ne rentrerons pas dans les détails à ce niveau, trop peu de gens seraient intéressés.
+
+-- Liste d'hébergeurs (gratuits et payants) --
+
+[style=warning]Cette liste n'est pas exhaustive, l'installation de PHPBoost est possible sur ces serveurs sans soucis.
+Les hébergeurs sont classés par ordre alphabétique, afin de ne pas privilégier l'un par rapport à l'autre.[/style]
+
+Voici une petite liste d'hébergeurs gratuits et payants, afin d'aider les futurs utilisateurs de PHPBoost dans leur choix.
+
+Avant de commencer, voici deux guides qui vous aideront à choisir votre hébergement : 
+
+[list]
+	[*][url=http://www.guide-hebergeur.fr/]Guide Hébergeur[/url]
+	[*][url=http://www.hebtoweb.com/]Guide de l'hébergement Internet[/url]
+[/list]
+
+--- Hébergeurs gratuits ---
+
+[title=4]123.fr [/title]
+
+Hébergement avec publicité à placer soit même sur votre site. Modules pré-installés. Réponses du support rapides. Les nouveaux se perdront surement dans l'espace membre qui est un peu dense.
+
+[url=http://123.fr/hebergementgratuit.html]http://123.fr/hebergementgratuit.html[/url]
+
+[style=notice]L'installation de PHPBoost est réalisable, il faudra juste mettre les répertoires inscriptibles (voir l'installation de PHPBoost, à la 3ème étape) en CHMOD 777[/style]
+
+[title=4]C-WebHosting[/title]
+
+Hébergeur gratuit, avec hébergement de taille modeste (500 MO). Pas de publicité. Il est nécessaire de faire une demande pour être accepté. Pour plus de détails, voir [url=http://www.c-webhosting.org/pages.php?id=37&amp;p=3] ici[/url]. 
+
+[url=http://www.c-webhosting.org/index.php]http://www.c-webhosting.org/index.php[/url]
+
+[style=notice]L'installation de PHPBoost est réalisable, il faudra juste mettre les répertoires inscriptibles (voir l'installation de PHPBoost, à la 3ème étape) en CHMOD 777[/style]
+
+[title=4]LegTux[/title]
+
+Hébergeur de très bonne qualité, aucunes publicités, un compte Mail, Jabber, Upload, ... Support très réactif via forum. Soumission du projet pour que le compte soit ouvert.
+Adresse par défaut du type [i]Mon-site.legtux.org[/i].
+
+[url=http://www.legtux.org/]http://www.legtux.org/[/url]
+
+[title=4]Léoserveur[/title]
+
+Aucune publicité. De 10 MO à 1 GO, et plus encore. Packs personnalisés suivant vos besoins. Les inscriptions peuvent être fermées en raison d'une trop grande demande d'hébergements.
+
+[url=http://www.leobaillard.org/?p=offres]http://www.leobaillard.org/?p=offres[/url]
+
+[title=4]LesCigales[/title]
+
+Hébergeur sérieux. Pas de publicité. Hébergement modeste (100 MO). Les places sont limitées.
+
+[url=http://www.lescigales.org/]http://www.lescigales.org/[/url]
+
+[title=4]Olympe Network[/title]
+
+Hébergeur de qualité et sans publicités. Impose des quotas sur le nombre d'usages, il faut être patient et chanceux.
+
+[url=http://www.olympe-network.com/]http://www.olympe-network.com/[/url]
+
+--- Hébergeurs micro-paiement ---
+
+[title=4]Allo-Heberge[/title]
+
+Recommandé par les utilisateurs, aucun problème à signaler.
+
+[url=http://www.allo-heberge.com/]http://www.allo-heberge.com/[/url]
+
+[title=4]Redby[/title]
+
+Le serveur propose un hébergement alternatif pour les sites web, les projets, publications, essais, etc. Supporte comme langage de programmation, soit PHP5 soit Ruby On Rails, couplé à une base de données MySQL.
+
+[url=http://www.redby.fr/]http://www.redby.fr/[/url]
+
+[title=4]Easy Hébergement[/title]
+
+Hébergeur reconnu. Solutions 100% info-gérées, adaptées à tous les besoins et tous les budgets.
+
+[url=http://www.easy-hebergement.fr/hebergement-micropaiement]http://www.easy-hebergement.fr/hebergement-micropaiement[/url]
+
+--- Hébergeurs payants ---
+
+[title=4]Nuxit[/title]
+
+PHPBoost dispose d'un partenariat avec l'hébergeur web [i]Nuxit[/i] qui prête gracieusement un serveur dédié à la communauté PHPBoost, sur lequel sont hébergés l'ensemble des sites de la communauté (sites français et anglais, site de démonstration, téléchargements).
+Nous vous recommandons cet hébergeur qui propose différentes offres s'adaptant aux besoins de chacun (du petit hébergement mutualisé, au gros serveur dédié) et une excellente qualité de service, tout ceci à un bon rapport qualité prix. La fidélité des clients est récompensée.
+Le support est très réactif (déjà eu des réponses dans la demi-heure à des questions posées à 3h du matin...). 
+Nuxit propose également un forum d'entraide entre clients.
+
+[title=4]1and1[/title]
+
+Hébergeur reconnu de grande qualité, avec support réactif. 
+
+[url=http://www.1and1.fr]http://www.1and1.fr[/url]
+
+[title=4]Amen[/title]
+
+Hébergeur de qualité, compétitif, avec des offres pour tous.
+
+[url=http://www.amen.fr]http://www.amen.fr[/url]
+
+[title=4]Hebeh[/title]
+
+De 250 MO à 60 GO, aux tarifs de 1 à 5.23&#8364; HT par mois, trafic illimité, même avec la solution de base. Support réactif.
+
+[url=http://www.hebeh.com/]http://www.hebeh.com/[/url]
+
+[title=4]Infomaniak[/title]
+
+Offre attractive, mais à prix un peu élevé. 60 Go d'espace disque pour 90&#8364; TTC par an (uniquement la 1ère année).
+
+[url=http://www.infomaniak.com/]http://www.infomaniak.com/[/url]
+
+[title=4]Maven Hosting[/title]
+
+Hébergement disposant de bons prix, très bon support, serveurs hébergés en France, très bonne qualité.
+
+[url=https://www.mavenhosting.com/]https://www.mavenhosting.com/[/url]
+
+[title=4]nfrance[/title]
+
+Hébergement de qualité. Plusieurs formules avec rapport Prix/Services plutôt moyen. 
+
+[url=http://www.nfrance.com/]http://www.nfrance.com/[/url]
+Forum d'entraide : [url=http://forum.nfrance.com/]http://forum.nfrance.com/[/url]
+
+[title=4]OVH[/title]
+
+Hébergeur très connu mondialement, avec des offres relativement très compétitives : rapport qualité/prix/services excellent. Bonne rapidité des serveurs, aucun problème à signaler.
+
+[url=http://www.ovh.com/fr/hebergement_mutualise/]http://www.ovh.com/fr/hebergement_mutualise/[/url]
+
+[title=4]PHPNET[/title]
+
+Des offres compétitives, côté espace d'hébergement à cout défiant toute concurrence.
+Équipe sympathique et réaction rapide aux problèmes.
+
+[url=http://www.phpnet.org/mutualise.php]http://www.phpnet.org/mutualise.php[/url]
+
+[title=4]Planet-Work[/title]
+
+Hébergeur depuis 9 ans, de très bonne qualité. Offres nombreuses.
+
+[url=http://www.planet-work.fr/index.html]http://www.planet-work.fr/index.html[/url]
+
+[title=4]Rapidenet[/title]
+
+Hébergeur jeune, mais de qualité. Offres plus ou moins avantageuses (Attention : paiement en Dollars).
+
+[url=http://www.rapidenet.ca/]http://www.rapidenet.ca/[/url]
+
+[title=3]Sivit[/title]
+
+Hébergeur efficace, bonne interface d'administration et en particulier pour ceux qui ont des parties à protéger, dans des répertoires qui peuvent être placés en amont de la racine du site.
+
+[url=http://www.sivit.fr/fr/index.php]http://www.sivit.fr/fr/index.php[/url]
+Forum d'entraide : [url=http://forum.sivit.fr/.]http://forum.sivit.fr/.[/url]
+
+[title=4]Strato[/title]
+
+Hébergement à de bons prix. Assistance téléphonique gratuite.
+
+[url=http://www.strato-hebergement.fr]http://www.strato-hebergement.fr[/url]</wiki_content>
+</wiki_article>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_cat>
+  <wiki_id>215</wiki_id>
+  <wiki_id_contents>1424</wiki_id_contents>
+  <wiki_title>Structure d'un thème</wiki_title>
+  <wiki_encoded_title>structure-d-un-theme</wiki_encoded_title>
+  <wiki_hits>3318</wiki_hits>
+  <wiki_id_cat>63</wiki_id_cat>
+  <wiki_is_cat>1</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>63</wiki_cat_id>
+  <wiki_cat_id_parent>4</wiki_cat_id_parent>
+  <wiki_cat_article_id>215</wiki_cat_article_id>
+  <wiki_con_id_contents>1424</wiki_con_id_contents>
+  <wiki_con_id_article>215</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction </a></li><li><a href="#paragraph_la-racine-du-th-me">La racine du thème</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-body-tpl">Le fichier body.tpl</a></li><li><a href="#paragraph_le-fichier-config-ini">Le fichier config.ini</a></li><li><a href="#paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</a></li></ol></li><li><a href="#paragraph_le-r-pertoire-images">Le répertoire images</a></li><li><a href="#paragraph_le-r-pertoire-lang-et-le-fichier-desc-ini">Le répertoire lang et le fichier desc.ini</a></li><li><a href="#paragraph_le-r-pertoire-theme">Le répertoire theme</a><ol class="wiki_list_2"><li><a href="#paragraph_les-fichiers-css">Les fichiers CSS</a></li><li><a href="#paragraph_le-r-pertoire-images">Le répertoire images</a></li></ol></li><li><a href="#paragraph_le-r-pertoire-modules">Le répertoire modules</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>5484</wiki_user_id>
+  <wiki_user_ip>86.217.134.235</wiki_user_ip>
+  <wiki_timestamp>1438956275</wiki_timestamp>
+  <wiki_content>Nous allons présenter, ici, la structure d'un thème PHPBoost 4.1. 
+
+[style=notice]Nous avons pris pour exemple le thème de base.[/style]
+
+-- Introduction  --
+
+Un thème est composé de plusieurs types de fichiers :
+[list]
+	[*][b]CSS[/b] : CSS (Cascading Style Sheet ou feuilles de style en cascade) est un langage de style qui définit la présentation des documents HTML. Par exemple, CSS couvre les polices, les couleurs, les marges, les lignes, la hauteur, la largeur, les images d'arrière-plan, les positionnements évolués et bien d'autres choses sont possibles). Le CSS est la partie concernant la forme du document. Ces fichiers ont l'extension .css.
+	[*][b]Templates[/b] : Un fichier template (patron en français) permet de faire l'interface entre PHP (générateur de contenu) et le code HTML généré. Ces fichiers sont en langage HTML (HyperText Markup Language) et contiennent les emplacements des variables que PHP doit assigner. Le HTML concerne le fond du document. Ces fichiers ont l'extension .tpl.
+	[*][b]Images[/b] : En plus du CSS, la mise en forme est appuyée par des images. Les images d'un thème se trouvent dans le dossier images du thème.
+[/list]
+
+Le répertoire d'un thème est constitué de la manière suivante :
+
+[list]
+	[*] /images
+	[*] /lang
+	[*] /theme
+	[*] body.tpl
+	[*] config.ini
+	[*] frame.tpl
+[/list]
+
+-- La racine du thème --
+
+On retrouve à la racine du thème les fichiers [i]body.tpl[/i], [i]config.ini[/i] et [i]frame.tpl[/i].
+
+--- Le fichier body.tpl ---
+
+Le fichier [i]body.tpl[/i] contient le contenu de la balise html &lt;body&gt; qui encadre le code html.
+On y retrouve l'architecture même du site web avec le positionnement des éléments tels que l'en-tête, la colonne de gauche, le contenu central ou le pied de page. Si vous souhaitez positionner les éléments d'une manière différente, c'est le fichier à modifier.
+
+[code=html]	# INCLUDE MAINTAIN #
+	&lt;header id="header"&gt;
+		&lt;div id="top-header"&gt;
+			&lt;div id="site-infos"&gt;
+				&lt;div id="site-logo" # IF C_HEADER_LOGO #style="background: url('{HEADER_LOGO}') no-repeat;"# ENDIF #&gt;&lt;/div&gt;
+				&lt;div id="site-name-container"&gt;
+					&lt;a id="site-name" href="{PATH_TO_ROOT}/"&gt;{SITE_NAME}&lt;/a&gt;
+					&lt;span id="site-slogan"&gt;{SITE_SLOGAN}&lt;/span&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+			# IF C_MENUS_HEADER_CONTENT #
+			{MENUS_HEADER_CONTENT}
+			# ENDIF #
+		&lt;/div&gt;
+		&lt;div id="sub-header"&gt;
+			# IF C_MENUS_SUB_HEADER_CONTENT #
+			{MENUS_SUB_HEADER_CONTENT}
+			# ENDIF #
+		&lt;/div&gt;
+		&lt;div class="spacer"&gt;&lt;/div&gt;
+	&lt;/header&gt;
+	
+	&lt;div id="global"&gt;
+		# IF C_COMPTEUR #
+		&lt;div id="compteur"&gt;
+			&lt;span class="text-strong"&gt;{L_VISIT}:&lt;/span&gt; {COMPTEUR_TOTAL}
+			&lt;br /&gt;
+			&lt;span class="text-strong"&gt;{L_TODAY}:&lt;/span&gt; {COMPTEUR_DAY}
+		&lt;/div&gt;
+		# ENDIF #
+		
+		# IF C_MENUS_LEFT_CONTENT #
+		&lt;aside id="menu-left"&gt;
+			{MENUS_LEFT_CONTENT}
+		&lt;/aside&gt;
+		# ENDIF #
+		
+		# IF C_MENUS_RIGHT_CONTENT #
+		&lt;aside id="menu-right"&gt;
+			{MENUS_RIGHT_CONTENT}
+		&lt;/aside&gt;
+		# ENDIF #
+		
+		&lt;div id="main" role="main"&gt;
+			# IF C_MENUS_TOPCENTRAL_CONTENT #
+			&lt;div id="top-content"&gt;
+				{MENUS_TOPCENTRAL_CONTENT}
+			&lt;/div&gt;
+			&lt;div class="spacer"&gt;&lt;/div&gt;
+			# ENDIF #
+			&lt;div id="main-content" itemprop="mainContentOfPage"&gt;
+				# INCLUDE ACTIONS_MENU #
+				&lt;nav id="breadcrumb" itemprop="breadcrumb"&gt;
+					&lt;ol&gt;
+						&lt;li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"&gt;
+							&lt;a href="{START_PAGE}" title="{L_INDEX}" itemprop="url"&gt;
+								&lt;span itemprop="title"&gt;{L_INDEX}&lt;/span&gt;
+							&lt;/a&gt;
+						&lt;/li&gt;
+						# START link_bread_crumb #
+							&lt;li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" # IF link_bread_crumb.C_CURRENT # class="current" # ENDIF #&gt;
+								# IF link_bread_crumb.C_CURRENT #
+								&lt;span itemprop="title"&gt;{link_bread_crumb.TITLE}&lt;/span&gt;
+								# ELSE #
+								&lt;a href="{link_bread_crumb.URL}" title="{link_bread_crumb.TITLE}" itemprop="url"&gt;
+									&lt;span itemprop="title"&gt;{link_bread_crumb.TITLE}&lt;/span&gt;
+								&lt;/a&gt;
+								# ENDIF #
+							&lt;/li&gt;
+						# END link_bread_crumb #
+					&lt;/ol&gt;
+				&lt;/nav&gt;
+				{CONTENT}
+			&lt;/div&gt;
+			# IF C_MENUS_BOTTOM_CENTRAL_CONTENT #
+	        &lt;div id="bottom-content"&gt;
+				{MENUS_BOTTOMCENTRAL_CONTENT}
+			&lt;/div&gt;
+			# ENDIF #
+		&lt;/div&gt;
+		# IF C_MENUS_TOP_FOOTER_CONTENT #
+		&lt;div id="top-footer"&gt;
+			{MENUS_TOP_FOOTER_CONTENT}
+			&lt;div class="spacer"&gt;&lt;/div&gt;
+		&lt;/div&gt;
+		# ENDIF #
+		
+		&lt;div class="spacer"&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;footer id="footer"&gt;
+		# IF C_MENUS_FOOTER_CONTENT #
+		&lt;div class="footer-content"&gt;
+			{MENUS_FOOTER_CONTENT}
+		&lt;/div&gt;
+		# ENDIF #
+		&lt;div class="footer-infos"&gt;
+			&lt;span&gt;
+				{L_POWERED_BY} &lt;a href="http://www.phpboost.com" title="PHPBoost"&gt;PHPBoost {PHPBOOST_VERSION}&lt;/a&gt; {L_PHPBOOST_RIGHT}
+			&lt;/span&gt;	
+			# IF C_DISPLAY_BENCH #
+			&lt;span&gt;
+				&amp;nbsp;|&amp;nbsp;		
+				{L_ACHIEVED} {BENCH}{L_UNIT_SECOND} - {REQ} {L_REQ} - {MEMORY_USED}
+			&lt;/span&gt;	
+			# ENDIF #
+			# IF C_DISPLAY_AUTHOR_THEME #
+			&lt;span&gt;
+				| {L_THEME} {L_THEME_NAME} {L_BY} &lt;a href="{U_THEME_AUTHOR_LINK}"&gt;{L_THEME_AUTHOR}&lt;/a&gt;
+			&lt;/span&gt;
+			# ENDIF #
+		&lt;/div&gt;
+	&lt;/footer&gt;[/code]
+
+--- Le fichier config.ini ---
+
+Le fichier [i]config.ini[/i] permet d'afficher des informations sur le thème et de lui attribuer une configuration par défaut qui sera appliquée lorsque celui-ci sera installé.
+
+L'article [b][link=fichier-de-configuration-d-un-theme-config-ini]Fichier de configuration d'un thème [i]config.ini[/i][/link][/b] détaille le contenu du fichier afin de vous permettre de le modifier simplement.
+
+[code=txt]author="PHPBoost"
+author_mail="contact@phpboost.com"
+author_link="http://www.phpboost.com"
+version=4.1
+date="05/08/12"
+compatibility=4.1
+require_copyright=0
+html_version=5.0 Strict
+css_version=3.0
+columns_disabled=right
+variable_width=0
+width="980px"
+pictures="theme/images/theme.jpg,theme/images/admin.jpg"[/code]
+
+--- Le fichier frame.tpl ---
+
+Le fichier [b]frame.tpl[/b] contient la partie structurante de la page html. Il contient la balise d'en-tête HTML &lt;head&gt;.
+La modification de ce fichier n'est nécessaire que si vous souhaitez ajouter un nouveau fichier css ou du code javascript sur l'ensemble du site.
+
+[code=html]&lt;!DOCTYPE html&gt;
+&lt;html lang="{L_XML_LANGUAGE}"&gt;
+	&lt;head&gt;
+		&lt;title&gt;{TITLE}&lt;/title&gt;
+		&lt;meta charset="iso-8859-1" /&gt;
+		&lt;meta name="description" content="{SITE_DESCRIPTION}" /&gt;
+		&lt;meta name="keywords" content="{SITE_KEYWORD}" /&gt;
+		&lt;meta name="generator" content="PHPBoost {PHPBOOST_VERSION}" /&gt;
+		
+		&lt;!-- Theme CSS --&gt;
+		# IF C_CSS_CACHE_ENABLED #
+		&lt;link rel="stylesheet" href="${CSSCacheManager::get_css_path('/templates/default/theme/default.css;/kernel/lib/css/font-awesome/css/font-awesome.css;/templates/{THEME}/theme/design.css;/templates/{THEME}/theme/global.css;/templates/{THEME}/theme/content.css')}" type="text/css" media="screen, print, handheld" /&gt;
+		# ELSE #
+		&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/default/theme/default.css" type="text/css" media="screen, print, handheld" /&gt;
+		&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/kernel/lib/css/font-awesome/css/font-awesome.css" /&gt;
+		&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/design.css" type="text/css" media="screen" /&gt;
+		&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/global.css" type="text/css" media="screen, print, handheld" /&gt;
+		&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/content.css" type="text/css" media="screen, print, handheld" /&gt;
+		# ENDIF #
+		
+		&lt;!-- Modules CSS --&gt;
+		{MODULES_CSS}
+
+		# IF C_FAVICON #
+		&lt;link rel="shortcut icon" href="{FAVICON}" type="{FAVICON_TYPE}" /&gt;
+		# ENDIF #
+		
+		# INCLUDE JS_TOP #
+	&lt;/head&gt;
+
+	&lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+		# INCLUDE BODY #
+		# INCLUDE JS_BOTTOM #
+	&lt;/body&gt;
+&lt;/html&gt;[/code]
+
+-- Le répertoire images --
+
+Le répertoire images contient les images du thème qui ne sont pas associées à un fichier CSS.
+Par défaut, le répertoire ne contient que l'image [i]no_avatar.png[/i].
+
+-- Le répertoire lang et le fichier desc.ini --
+
+Le répertoire lang contient un répertoire par langue.
+Par défaut, celui-ci contient un répertoire [i]english[/i] et [i]french[/i].
+Chaque répertoire ne contient qu'un seul fichier [i]desc.ini[/i].
+
+Le fichier desc.ini contient les éléments identifiants le thème que l'on retrouve dans l'administration des thèmes du panneau d'administration. On y retrouve le nom du thème [i]name[/i], la description [i]desc[/i] et les couleurs principales [i]main_color[/i]. [style=notice]La valeur de [i]name[/i] peut être différente du nom du répertoire.[/style]
+[code=text]name="Base"
+desc="The PHPBoost official theme."
+main_color="White, Blue"[/code]
+
+-- Le répertoire theme --
+
+Le répertoire thème contient les différents fichiers CSS du thème ainsi que les images associés à ce thème.
+
+--- Les fichiers CSS ---
+
+Chaque thème est constitué des 3 fichiers CSS suivant : [list]
+	[*][b][link=fichier-content-css]content.css[/link][/b] : Il contient les classes propres au contenu du site (messages, modules).
+	[*][b][link=fichier-design-css]design.css[/link][/b] : Il contient toutes les classes de mises en forme du sites (Le gros du Design)
+	[*][b][link=fichier-global-css]global.css[/link][/b] : il contient toutes les classes utiles sur le site et communes aux différents modules.
+[/list] Vous retrouverez le contenu de chaque fichier dans l'article associé à chaque fichier.
+
+--- Le répertoire images ---
+
+Le répertoire images du sous dossier [i]theme[/i], contient les images appelées par les fichiers CSS ou TPL du thème.
+Pour le thème de base on y retrouve : [list]
+	[*][i]admin.jpg[/i] : Un rendu du panneau d'administration
+	[*][i]body.png[/i] : L'image de fond du body
+	[*][i]logo.png[/i] : Le logo de base
+	[*][i]theme.png[/i] : Un rendu du thème (Vu du site)
+[/list]
+La grande différence avec un thème 4.0 est la quantité d'images. L'utilisation de la librairie Font-Awesome a permis de réduire considérablement le nombre d'image dans un thème et donc la taille. Si néanmoins vous souhaitez revenir à des images, lisez l'article suivant pour voir un exemple de modification.
+
+-- Le répertoire modules --
+
+Ce répertoire n'est pas obligatoire, il est nécessaire uniquement lorsque vous souhaitez appliquer des modifications au design d'un module de façon spécifique à un thème.
+
+S'il existe, son contenu est le suivant : 
+
+[list]
+	[*] /connect
+		[indent][list]
+			[*] connect_mini.css
+			[*] connect_mini.tpl
+			[*]...
+		[/list][/indent]
+	[*] /forum
+	[*] ...
+[/list]
+
+Il contient un répertoire par module. 
+Le nom du répertoire doit être identique au module que l'on souhaite surcharger. Les fichiers contenus dans ce répertoire remplacent les fichiers des modules.
+
+Chaque répertoire de module peut contenir les fichiers .tpl ou .css que l'on souhaite remplacer.
+
+Pour en savoir plus sur la personnalisation d'un thème, vous pouvez consulter [b][link=personnaliser-un-theme]cet article[/link][/b].
+
+[style=notice]D'une manière générale il est préférable de modifier un thème que de modifier le module. Cela permet notamment de faciliter les mises à jours des modules.[/style]</wiki_content>
+</wiki_cat>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>130</wiki_id>
+  <wiki_id_contents>1254</wiki_id_contents>
+  <wiki_title>Configuration</wiki_title>
+  <wiki_encoded_title>configuration</wiki_encoded_title>
+  <wiki_hits>868</wiki_hits>
+  <wiki_id_cat>15</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>15</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>15</wiki_cat_article_id>
+  <wiki_con_id_contents>1254</wiki_con_id_contents>
+  <wiki_con_id_article>130</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_configuration-avancee">Configuration avancée</a><ol class="wiki_list_2"><li><a href="#paragraph_activation-de-la-reecriture-des-urls">Activation de la réécriture des URLs</a></li><li><a href="#paragraph_contenu-du-fichier-htaccess">Contenu du fichier .htaccess</a></li><li><a href="#paragraph_connexion-utilisateurs">Connexion utilisateurs</a></li><li><a href="#paragraph_divers">Divers</a></li></ol></li><li><a href="#paragraph_configuration-de-l-envoi-des-emails">Configuration de l'envoi des emails</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>88.125.157.163</wiki_user_ip>
+  <wiki_timestamp>1405000313</wiki_timestamp>
+  <wiki_content>-- Configuration générale --
+
+L'onglet "Configuration Générale" vous permet de régler les paramètres globaux de votre site. 
+
+En effet, dans cette partie, vous pouvez spécifier:
+[list]
+	[*] Le nom de votre site
+	[*] Le slogan de votre site (affiché sous le nom du site)
+	[*] La description de votre site
+	[*] Les mots clés associés à votre site
+[/list]
+Vous pouvez aussi configurer la langue principale de votre site ainsi que le thème utilisé par défaut. 
+
+Pour personnaliser votre page d'accueil vous pouvez :
+[list]
+	[*] Affecter un module au chargement de votre site
+	[*] Développer et configurer une page spécifique qui fera office d'index pour votre site. Il vous faudra alors indiquer l'URL de la page en question
+[/list]
+Enfin, vous pouvez choisir d'afficher ou non la vitesse de chargement des pages, le compteur de visites, ainsi que les informations liées au thème que vous utilisez.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/configuration/general_configuration.png[/img][/align]
+
+-- Configuration avancée --
+
+Ici, vous pouvez définir l'URL du serveur de votre site ainsi que le chemin d'accès à ce dernier s'il n'est pas installé à la racine du serveur. Vous avez aussi la possibilité de spécifier le fuseau horaire qui correspond. 
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/configuration/advanced_configuration.png[/img][/align]
+
+--- Activation de la réécriture des URLs ---
+
+L'activation de la réécriture des URLs permet d'obtenir des URLs bien plus simples et claires sur votre site. Ces adresses seront donc bien mieux compréhensibles pour vos visiteurs, mais surtout pour les robots d'indexation des moteurs de recherche. Votre référencement sera grandement optimisé grâce à cette option.
+
+Cette option n'est malheureusement pas disponible chez tous les hébergeurs et nous ne pouvons pas toujours faire détecter si cette option est activée ou non, c'est pour cela que certains verront 'indéterminé'. Cette page va vous permettre de tester si votre serveur supporte la réécriture des URLs. Si la réécriture est supportée, elle est activée par défaut lors de l'installation de PHPBoost.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/configuration/url_rewriting_activation.png[/img][/align]
+
+--- Contenu du fichier .htaccess ---
+
+[style=warning]Ne pas modifier si vous ne savez pas ce que vous faites.[/style]
+L'adresse de redirection en cas de page inexistante est déjà inclue dans le fichier. Vous pouvez par contre ici mettre des paramètres particuliers pour avoir une configuration de votre hébergement comme vous le souhaitez.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/configuration/htaccess_file_content.png[/img][/align]
+
+--- Connexion utilisateurs ---
+
+[style=warning]Ne pas modifier si vous ne savez pas ce que vous faites.[/style]
+
+[b]Nom du cookie[/b] : à modifier si vous avez 2 sites PHPBoost sur le même hébergement. Le cookie est une indication que vous envoyez à chaque fois que vous demandez une page qui permet de savoir qui vous êtes. Lorsque vous avez plusieurs sites sur le même nom de domaine, les cookies entrent en collision si leurs noms sont identiques. Il faut donc changer le nom pour un des deux sites.
+
+[b]Durée de la session[/b] : durée en secondes correspondant par défaut à 1 heure, vous pouvez le modifier. C'est le temps au bout duquel la session d'un utilisateur sera fermée si ce dernier n'est pas actif.
+
+[b]Durée utilisateurs actifs[/b] : durée en secondes (5 minutes par défaut) pendant laquelle un utilisateur est considéré comme actif. Après cette durée, l'utilisateur peut toujours avoir une session valide mais ne sera pas considéré comme en ligne.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/configuration/users_connection.png[/img][/align]
+
+--- Divers ---
+
+[b]Activation de la compression des pages[/b] : ceci permet l'accélération de l'affichage des pages, donc ceci est conseillé à activer. Cependant ceci consomme des ressources serveur, à vous de voir. 
+
+[b]Renvoyer le code de déverrouillage[/b] : ce code permet le déverrouillage de l'administration en cas de tentative d'intrusion dans l'administration par un utilisateur mal intentionné. Si vous avez perdu ce code de déverrouillage de l'administration, vous pouvez vous le faire renvoyer via ce lien.
+
+[b]Mode Debug[/b] : L'activation du mode débogage dans l'administration permet d'afficher explicitement les erreurs lors de la navigation sur le site.
+Le mode à également plusieurs niveaux : Normal et Strict.
+Si le mode strict est activé, il arrête le chargement de la page lorsqu'une erreur est rencontrée sinon il continue le chargement et affiche l'erreur.
+Le mode débogage permet également d'activer l'affichage et le suivi des requêtes SQL si besoin (dans le cas du développement d'un module par exemple).
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/configuration/miscellaneous.png[/img][/align]
+
+-- Configuration de l'envoi des emails --
+
+[b]Adresse de l'expéditeur par défaut[/b] : C'est l'adresse mail qui apparaîtra dans la partie "expéditeur" des emails envoyés depuis votre site.
+
+[b]Adresses des administrateurs[/b] : Dans le cadre d'un site géré par plusieurs personnes, vous avez la possibilité de spécifier plusieurs adresses mails (séparées par une virgule) afin que chaque administrateur puisse recevoir une copie du message envoyé depuis le site, à destination des administrateurs.
+
+[b]Signature du mail[/b] : à personnaliser, se trouvera en bas de tous les mails envoyés par le site aux membres (lors de l'inscription, newsletter,...).
+
+[b]Protocole d'envoi[/b] : cette option vous permet de choisir un serveur SMTP alternatif à celui utilisé nativement par votre serveur web.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/configuration/sending_mail_configuration.png[/img][/align]</wiki_content>
+</wiki_article>

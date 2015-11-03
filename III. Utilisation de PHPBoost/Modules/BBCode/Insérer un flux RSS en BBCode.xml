@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>141</wiki_id>
+  <wiki_id_contents>1441</wiki_id_contents>
+  <wiki_title>Insérer un flux RSS en BBCode</wiki_title>
+  <wiki_encoded_title>inserer-un-flux-rss-en-bbcode</wiki_encoded_title>
+  <wiki_hits>1006</wiki_hits>
+  <wiki_id_cat>34</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>34</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>79</wiki_cat_article_id>
+  <wiki_con_id_contents>1441</wiki_con_id_contents>
+  <wiki_con_id_article>141</wiki_con_id_article>
+  <wiki_menu></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>982</wiki_user_id>
+  <wiki_user_ip>193.164.156.11</wiki_user_ip>
+  <wiki_timestamp>1444215955</wiki_timestamp>
+  <wiki_content>Vous souhaitez afficher sur votre site un flux RSS via le BBCode, c'est maintenant possible et il n'y a rien de plus simple !
+
+Il faut utiliser la balise feed : 
+
+[code=bbcode][feed]le_nom_du_module[/feed][/code]
+
+Vous avez la possibilité de personnaliser l'affichage : 
+[list]
+	[*][b]cat="numéro de la catégorie du flux dans le module"[/b]
+Pour connaître le numéro de la catégorie du flux, allez dans le module souhaité, allez dans la catégorie souhaitée et cliquez sur cette icone [html]&lt;i class="fa fa-syndication"&gt;&lt;/i&gt;[/html], vous allez être redirigé vers une page avec ce type d'adresse : /syndication/rss/forum/4
+Cela correspond au module forum et la catégorie est la n° 4.
+Si vous souhaitez afficher tous les flux d'un module, dans ce cas ne mettez pas cat"x"
+	[*][b]number="nombre de flux à afficher"[/b]
+[/list]
+
+Exemple : afficher les 5 derniers flux du module téléchargement de la catégorie 3
+
+[code=bbcode][feed cat="3" number="5"]download[/feed][/code]</wiki_content>
+</wiki_article>

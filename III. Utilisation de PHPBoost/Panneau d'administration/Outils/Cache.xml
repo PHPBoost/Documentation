@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>85</wiki_id>
+  <wiki_id_contents>750</wiki_id_contents>
+  <wiki_title>Cache</wiki_title>
+  <wiki_encoded_title>cache</wiki_encoded_title>
+  <wiki_hits>479</wiki_hits>
+  <wiki_id_cat>16</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>16</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>16</wiki_cat_article_id>
+  <wiki_con_id_contents>750</wiki_con_id_contents>
+  <wiki_con_id_article>85</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_cache">Cache</a></li><li><a href="#paragraph_syndication">Syndication</a></li><li><a href="#paragraph_css">CSS</a></li><li><a href="#paragraph_configuration-du-cache">Configuration du cache</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1466</wiki_user_id>
+  <wiki_user_ip>90.55.70.218</wiki_user_ip>
+  <wiki_timestamp>1358178640</wiki_timestamp>
+  <wiki_content>La mise en cache consiste à créer des fichiers sur le serveur qui contiennent des données rarement mises à jour, comme par exemple des variables de configuration. La lecture directe sur le serveur étant beaucoup plus rapide que l'accès à la base de données, la mise en cache augmente le confort de navigation pour vos visiteurs. Normalement la régénération du cache est automatique à chaque modification des variables concernées. Ceci dit il se peut qu'un problème soit intervenu. Dans ce cas là il faut régénérer manuellement le cache, le support vous indiquera s'il faut le faire.
+
+[style=warning]A noter que toute modification directe dans la base de données ne sera active que lorsque le cache aura été régénéré. Ainsi si vous réalisez des modifications sur votre site, n'oubliez pas d'avoir le réflexe régénération du cache.[/style]
+
+-- Cache --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/cache/regenerate_cache.png[/img][/align]
+
+Pour régénérer le cache, il suffit simplement de cliquer sur 'générer'
+
+-- Syndication --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/cache/regenerate_syndication.png[/img][/align]
+
+Les flux RSS et ATOM sont mis en cache également pour accélérer l'accès à votre site.  Si vous pensez que le cache des flux n'est pas à jour, régénérez le cache syndication.
+
+-- CSS --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/cache/regenerate_css.png[/img][/align]
+
+Les fichiers CSS des thèmes et des menus sont également mis en cache pour gagner en performance et affichage du site. Si vous avez un anomalie d'affichage du design ou d'un module, régénérer celui-ci.
+
+-- Configuration du cache --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/cache/config.png[/img][/align]
+
+Vous avez la possibilité d'activer le support de l'extension APC dans PHPBoost. Celui permet de gagner grandement en performance en stockant le cache dans la mémoire du serveur (bien plus rapide qu'un disque dur).
+
+Vous pouvez également désactiver le cache CSS ce qui vous permettra de personnaliser plus facilement votre thème.</wiki_content>
+</wiki_article>

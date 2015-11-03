@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>262</wiki_id>
+  <wiki_id_contents>840</wiki_id_contents>
+  <wiki_title>Administration du module Newsletter</wiki_title>
+  <wiki_encoded_title>administration-du-module-newsletter</wiki_encoded_title>
+  <wiki_hits>507</wiki_hits>
+  <wiki_id_cat>46</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>46</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>166</wiki_cat_article_id>
+  <wiki_con_id_contents>840</wiki_con_id_contents>
+  <wiki_con_id_article>262</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-newsletter">Configuration de la Newsletter</a></li><li><a href="#paragraph_gestion-des-flux">Gestion des flux</a></li><li><a href="#paragraph_ajout-de-flux">Ajout de flux</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1837</wiki_user_id>
+  <wiki_user_ip>24.201.132.222</wiki_user_ip>
+  <wiki_timestamp>1358733845</wiki_timestamp>
+  <wiki_content>Le module newsletter vous permet de gérer les flux de multiples newsletters, centralisés au sein d'un seul et même site. 
+Le système de configuration des droits d'accès est puissant et vous permet de contrôler avec précision quelles sont les actions que peuvent effectuer vos membres et visiteurs.
+
+-- Configuration de la Newsletter --
+
+Via le panel d'administration de votre site, vous accédez à la configuration du module newsletter via le menu : "modules" --&gt; "newsletter" -&gt; "configuration".
+
+Cette page présente un long formulaire vous permettant de régler les autorisations par défaut de l'ensemble des newsletter qui seront gérées via votre site Internet. Vous pouvez définir qui peut créer, voir, accéder, modifier une newsletter et qui peut s'y s'inscrire.
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/admin_newsletter/newsletter_configuration.png[/img]
+
+-- Gestion des flux --
+La gestion des flux vous dresse la liste des flux (newsletter) active sur votre site. Le tableau vous permet de modifier et/ou supprimer les flux existants. Un lien dans la partie haute du tableau vous permet d'accéder directement à la page d'ajout/création de nouveaux flux.
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/admin_newsletter/newsletter_flow_managment.png[/img]
+
+-- Ajout de flux --
+La page "Ajout de flux" comme son nom l'indique, vous permet de créer de nouveaux flux (newsletter). 
+
+[img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/admin_newsletter/newsletter_add_new_flow.png[/img]</wiki_content>
+</wiki_article>

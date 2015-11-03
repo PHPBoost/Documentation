@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>74</wiki_id>
+  <wiki_id_contents>1315</wiki_id_contents>
+  <wiki_title>Gestion des fichiers</wiki_title>
+  <wiki_encoded_title>gestion-des-fichiers</wiki_encoded_title>
+  <wiki_hits>1076</wiki_hits>
+  <wiki_id_cat>18</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>18</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>18</wiki_cat_article_id>
+  <wiki_con_id_contents>1315</wiki_con_id_contents>
+  <wiki_con_id_article>74</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-fichiers">Configuration des fichiers</a></li><li><a href="#paragraph_gestion-des-fichiers">Gestion des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_fonctions-disponibles">Fonctions disponibles</a><ol class="wiki_list_3"><li><a href="#paragraph_supprimer-tout-le-contenu-du-dossier-d-un-membre">Supprimer tout le contenu du dossier d'un membre</a></li><li><a href="#paragraph_ajout-de-repertoires">Ajout de répertoires</a></li><li><a href="#paragraph_ajout-de-fichiers">Ajout de fichiers</a></li><li><a href="#paragraph_suppression-de-fichiers-ou-de-repertoires">Suppression de fichiers ou de répertoires</a></li><li><a href="#paragraph_dition-de-repertoire-ou-de-fichiers">Édition de répertoire ou de fichiers</a></li></ol></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>982</wiki_user_id>
+  <wiki_user_ip>83.204.255.203</wiki_user_ip>
+  <wiki_timestamp>1405484611</wiki_timestamp>
+  <wiki_content>Au niveau de l'administration, vous allez avoir accès à tous les fichiers que les utilisateurs ont déposé dans leur zone, mais également créer d'autres répertoires pour gérer vos propres fichiers, afin d'éviter de passer par le transfert de fichier FTP.
+
+[style=notice]Tous les fichiers déposés par les membres, ou bien au niveau de cette zone d'upload par vous même, se trouvent sur votre serveur dans le répertoire ../upload [/style]
+
+[style=notice]Vous pouvez également parcourir les répertoires de vos membres en revenant à la racine de l'arborescence de fichier, puis entrer dans le dossier "Membres"[/style]
+
+-- Configuration des fichiers --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/files/config.png[/img][/align]
+
+[b][u]Autorisation requise pour l'activation de l'interface de fichiers[/u][/b] : définissez ici quel type de membre peut accéder à son gestionnaire de fichier.
+
+[b][u]Taille maximum des uploads autorisés aux membres [/u][/b]: vous pouvez ici limiter la taille maximum d'upload de fichiers pour chacun de vos membres. Attention à ne pas mettre un espace trop important surtout si vous avez une grande communauté, sinon il vous faudra un hébergement avec un espace conséquent.
+
+[b][u]Protection de la bande passante[/u][/b] :  interdiction d'accès aux fichiers du répertoire upload depuis un autre serveur. En effet, vos membres peuvent stocker des données sur votre serveur et ensuite utiliser ces fichiers sur des sites comme par exemple un avatar sur un forum. Cela entraine une utilisation non voulue de votre part de la bande passante de votre site, vous pouvez ainsi désactiver cette fonction.
+
+[b][u]Extensions autorisées[/u][/b] : choisissez parmi la liste les extension des fichiers que les membres pourront uploader.
+
+[b][u]Extensions autorisées supplémentaires[/u][/b] : vous avez la possibilité d'autoriser des extensions supplémentaires,  séparez les par des virgules.
+
+-- Gestion des fichiers --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/files/manage_root.png[/img][/align]
+
+Vous avez accès à tous les répertoires des membres dans le répertoire 'membres', mais vous pouvez créer d'autres répertoires pour stocker vos données sans passer par le FTP.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/files/manage_folders.png[/img][/align]
+
+Vous avez accès à tous les répertoires des membres comme vous le montre la photo ci dessus.
+
+[style=notice]Un répertoire est créé pour un membre UNIQUEMENT à la première utilisation de cette fonction par celui-ci.[/style]
+
+Vous pourrez modérer ou parcourir les répertoires de vos membres.
+
+
+--- Fonctions disponibles ---
+
+---- Supprimer tout le contenu du dossier d'un membre ----
+
+Cliquez sur [html]&lt;i class="fa fa-delete"&gt;&lt;/i&gt;[/html] au dessous du répertoire du membre et tout le contenu du dossier sera supprimé.
+
+---- Ajout de répertoires ----
+
+Cliquez sur 'Nouveau dossier' puis tapez le nom de votre répertoire puis sur la touche 'entrer' de votre clavier (ou cliquez en dehors du champs).
+
+---- Ajout de fichiers ----
+
+Les fichiers doivent être présents sur votre disque dur.
+Allez dans la zone 'Ajouter un fichier' puis par le bouton parcourir choisissez sur votre disque dur le fichier que vous souhaitez uploader et cliquez sur ouvrir. Enfin cliquez sur uploader.
+
+[style=warning]Ne choisissez pas un fichier supérieur à la taille maximum autorisée par l'administrateur (en bas de votre zone d'upload se trouve un rapport statistique de vos fichiers et de la taille utilisée sur la taille maximum autorisée.[/style]
+
+---- Suppression de fichiers ou de répertoires ----
+
+Il suffit de cliquer sur [html]&lt;i class="fa fa-delete"&gt;&lt;/i&gt;[/html] au niveau de votre fichier ou de votre répertoire que vous souhaitez supprimer.
+
+[style=warning]La suppression est définitive et aucun message de confirmation ne vous sera demandé.[/style]
+
+---- Édition de répertoire ou de fichiers ----
+
+Il suffit de cliquer sur [html]&lt;i class="fa fa-edit"&gt;&lt;/i&gt;[/html] au niveau de votre fichier ou de votre répertoire et de le renommer comme vous le souhaitez.</wiki_content>
+</wiki_article>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>70</wiki_id>
+  <wiki_id_contents>556</wiki_id_contents>
+  <wiki_title>Gestion des groupes</wiki_title>
+  <wiki_encoded_title>gestion-des-groupes</wiki_encoded_title>
+  <wiki_hits>463</wiki_hits>
+  <wiki_id_cat>17</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>17</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>17</wiki_cat_article_id>
+  <wiki_con_id_contents>556</wiki_con_id_contents>
+  <wiki_con_id_article>70</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_interet-des-groupes">Intérêt des groupes ?</a></li><li><a href="#paragraph_gestion-des-groupes">Gestion des groupes</a><ol class="wiki_list_2"><li><a href="#paragraph_edition-d-un-groupe">Edition d'un groupe</a><ol class="wiki_list_3"><li><a href="#paragraph_gestion-des-groupes">Gestion des groupes</a></li><li><a href="#paragraph_membres-du-groupe">Membres du groupe</a></li><li><a href="#paragraph_ajouter-un-membre">Ajouter un membre</a></li></ol></li></ol></li><li><a href="#paragraph_ajouter-un-groupe">Ajouter un groupe</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>86.204.93.107</wiki_user_ip>
+  <wiki_timestamp>1354873703</wiki_timestamp>
+  <wiki_content>-- Intérêt des groupes ? --
+
+Les groupes permettent de rassembler un certain nombre d'utilisateurs qui ont les mêmes caractéristiques et de leur donner des droits particuliers.
+
+Les autorisations se font à plusieurs niveaux :
+[list]
+[*]Dans le noyau :
+[list]
+[*]Autorisation à accéder à différents modules (voir [link=gestion-des-modules]gestion des modules[/link]).
+[*]Autres configurations (marqueur d'édition, nombre de messages privés autorisés...)
+[*]...
+[/list]
+[*]Dans chaque module, cela dépend de leur nature, voici des exemples :
+[list][*]Sur le forum possibilité de restreindre l'accès en lecture / écriture / édition dans chaque sous forum selon les groupes
+[*]Sur le wiki possibilité d'autoriser seulement certains groupes à faire certaines actions et pas les autres
+[*]...
+[/list]
+[/list]
+
+-- Gestion des groupes --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/groups/manage.png[/img][/align]
+
+Vous voyez ici la liste des groupes de votre site.
+Pour chaque groupes vous allez pouvoir : 
+[list]
+[*] l'éditer pour gérer les membres, donner des droits, etc...
+[*] le supprimer
+[/list]
+
+--- Edition d'un groupe ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/groups/edit.png[/img][/align]
+
+---- Gestion des groupes ----
+
+[b][u]Nom[/u][/b] : mettez ici le nom de votre groupe.
+
+[b][u]Autorisation de flooder[/u][/b] : permet aux membres du groupe de poster avant le délai minimum entre 2 posts que vous avez fixé dans l'administration du site.
+
+[b][u]Limite de messages privés[/u][/b] : décidez ici le nombre maximum de messages privés que les membres d'un groupe peuvent avoir dans leur messagerie.
+
+[b][u]Limite de données uploadables[/u][/b] : mettez ici la valeur maximale en Mega Octets autorisée qu'un membre du groupe dispose dans son gestionnaire de fichiers.
+
+[b][u]Image associée au groupe[/u][/b] :  choisissez l'image qui représentera le groupe parmi celles présentes sur le serveur. Pour en rajouter, il faut les transférer via FTP dans le dossier ../images/group/
+
+Cette image sera visible dans le profil du membre. Exemple : 
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/groups/profile.png[/img][/align]
+
+---- Membres du groupe ----
+
+Vous pouvez voir les membres appartenant au groupe. Vous pouvez les supprimer.
+
+---- Ajouter un membre ----
+
+Rentrez le pseudo du membre et cliquez sur 'ajouter', sinon mettez les premières lettres du pseudo puis cliquez sur rechercher, choisissez le membre et cliquez sur ajouter.
+
+-- Ajouter un groupe --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/groups/add.png[/img][/align]
+
+[b][u]Nom[/u][/b] : mettez ici le nom de votre groupe.
+
+[b][u]Autorisation de flooder[/u][/b] : permet aux membres du groupe de poster avant le délai minimum entre 2 posts que vous avez fixé dans l'administration du site.
+
+[b][u]Limite de messages privés[/u][/b] : décidez ici le nombre maximum de messages privés que les membres d'un groupe peuvent avoir   dans leur messagerie.
+
+[b][u]Limite de données uploadables[/u][/b] : mettez ici la valeur maximale en Mega Octets autoriée qu'un membre du groupe dispose dans son gestionnaire de fichiers.
+
+[b][u]Image associée au groupe[/u][/b] :  choisissez l'image qui représentera le groupe parmi celles présentes sur le serveur. Pour en rajouter, il faut les transférer via FTP dans le dossier /images/group/</wiki_content>
+</wiki_article>

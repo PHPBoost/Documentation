@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>150</wiki_id>
+  <wiki_id_contents>903</wiki_id_contents>
+  <wiki_title>La communication entre modules</wiki_title>
+  <wiki_encoded_title>la-communication-entre-modules</wiki_encoded_title>
+  <wiki_hits>1302</wiki_hits>
+  <wiki_id_cat>5</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>5</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>159</wiki_cat_article_id>
+  <wiki_con_id_contents>903</wiki_con_id_contents>
+  <wiki_con_id_article>150</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_mise-en-pratique">Mise en pratique</a></li><li><a href="#paragraph_les-differentes-possibilites">Les différentes possibilités</a><ol class="wiki_list_2"><li><a href="#paragraph_la-reecriture-des-urls">La réécriture des urls</a></li><li><a href="#paragraph_les-menus">Les menus</a></li><li><a href="#paragraph_page-d-accueil">Page d'accueil</a></li><li><a href="#paragraph_fichiers-css">Fichiers CSS</a></li><li><a href="#paragraph_sitemap">Sitemap</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1837</wiki_user_id>
+  <wiki_user_ip>24.201.132.222</wiki_user_ip>
+  <wiki_timestamp>1363354030</wiki_timestamp>
+  <wiki_content>-- Introduction --
+
+Certains modules doivent communiquer avec les autres pour avoir différentes informations.
+
+C'est le cas du module recherche par exemple qui a besoin de connaitre un certain nombre de choses.
+
+Cette communication n'est pas seulement limitée aux modules, elle peut également se faire entre plusieurs modules, l'administration ou le noyau.
+
+-- Mise en pratique --
+
+Nous avons besoin de créer un seul et même fichier dans notre module. Celui-ci contiendra une classe. 
+
+La syntaxe est là suivante : [b]LeNomDeVotreModuleExtensionPointProvider[/b].
+Par exemple, pour le module newsletter, la syntaxe est : NewsletterExtensionPointProvider. 
+
+Nous allons donc créer un fichier LeNomDeVotreModuleExtensionPointProvider.class.php.
+
+A l'intérieur de ce fichier, nous allons créer une classe fille de ExtensionPointProvider avec comme nom : LeNomDeVotreModuleExtensionPointProvider.
+Le constructeur de la classe attend un paramètre qui est l'identifiant du module (le nom du dossier du module).
+
+Cela donne : 
+
+[code=php]class LeNomDeVotreModuleExtensionPointProvider extends ExtensionPointProvider
+{
+	public function __construct()
+	{
+		parent::__construct('VotreModule');
+	}
+}
+?&gt;[/code]
+
+Notre fichier de communication est fin prêt à être utilisé.
+
+-- Les différentes possibilités --
+
+Maintenant que votre fichier est prêt, il faut implémenter diverses fonctions.
+
+Nous allons citer les principales interfaces présentes au sein de PHPBoost. 
+
+--- La réécriture des urls ---
+
+Pour ajouter la règle de réécriture des urls dans le htaccess de manière automatique, vous devez ajouter une fonction [i]url_mappings()[/i] à votre ExtensionPointProvider.
+
+Celle-ci devra retourner un objet de la classe [i]UrlMappings[/i] prennant en paramètre un tableau avec la liste des fichiers que vous utilisez comme Dispatcher.
+
+Exemple :
+
+[code=php]public function url_mappings()
+{
+	return new UrlMappings(array(new DispatcherUrlMapping('/contact/index.php')));
+}[/code]
+
+--- Les menus ---
+
+Pour ajouter un ou plusieurs menus, vous devez ajouter une fonction [i]menus()[/i] à votre ExtensionPointProvider.
+Elle doit retourner un objet [i]ModuleMenus[/i] qui prend en paramètre un tableau contenant les objets de vos menus.
+
+[code=php]public function menus()
+{
+	return new ModuleMenus(array(
+		new NewsletterModuleMiniMenu()
+	));
+}[/code]
+
+Ensuite il vous faut créer le menu en question. Pour l'exemple plus haut (module newsletter) voici le contenu de la classe [i]NewsletterModuleMiniMenu[/i] :
+
+[code=php]&lt;?php
+/*##################################################
+ *                          NewsletterModuleMiniMenu.class.php
+ *                            -------------------
+ *   begin                : October 08, 2011
+ *   copyright            : (C) 2011 Kevin MASSY
+ *   email                : soldier.weasel@gmail.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class NewsletterModuleMiniMenu extends ModuleMiniMenu
+{    
+    public function get_default_block()
+    {
+    	// Retourne la position du block par défaut, se référer au constantes dans la classe Menu
+    	return self::BLOCK_POSITION__TOP_FOOTER;
+    }
+    
+    public function admin_display()
+    {
+    	// Retourne ce qui doit être affiché dans la gestion des menus
+        return '';
+    }
+
+    public function display($tpl = false)
+    {
+    	$tpl = new FileTemplate('newsletter/newsletter_mini.tpl');
+    	
+    	// Permet d'assigner les variables tpl au template pour pouvoir ensuite donner un affichage différent selon la colonne où est situé le menu
+	    MenuService::assign_positions_conditions($tpl, $this-&gt;get_block());
+	    
+	    $lang = LangLoader::get('newsletter_common', 'newsletter');
+	    $tpl-&gt;put_all(array(
+	    	'SUBSCRIBE' =&gt; $lang['newsletter.subscribe_newsletters'],
+	    	'UNSUBSCRIBE' =&gt; $lang['newsletter.unsubscribe_newsletters'],
+	    	'USER_MAIL' =&gt; (AppContext::get_current_user()-&gt;get_attribute('user_mail') != '') ? AppContext::get_current_user()-&gt;get_attribute('user_mail') : '',
+	    	'L_NEWSLETTER' =&gt; $lang['newsletter'],
+	    	'L_SUBMIT' =&gt; $lang['newsletter.submit'],
+	    	'L_ARCHIVES' =&gt; $lang['newsletter.archives']
+	    ));
+	
+	    // Retourne l'affichage du menu
+	    return $tpl-&gt;render();
+    }
+}
+?&gt;[/code]
+
+--- Page d'accueil ---
+
+Vous pouvez à travers votre module, ajouter une page d'accueil pour pouvoir ensuite la définir en tant qu'index de votre site.
+
+Vous devez créer une classe (et donc un fichier) [i]MonModuleHomePageExtensionPoint[/i].
+
+Cette classe doit implémenter l'interface [i]HomePageExtensionPoint[/i] et contenir une fonction [i]get_home_page()[/i] renvoyant une instance de la classe [i]DefaultHomePage[/i].
+
+Exemple :
+
+[code=php]&lt;?php
+/*##################################################
+ *                     NewsletterHomePageExtensionPoint.class.php
+ *                            -------------------
+ *   begin                : February 12, 2012
+ *   copyright            : (C) 2012 Julien BRISWALTER
+ *   email                : julien.briswalter@gmail.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class NewsletterHomePageExtensionPoint implements HomePageExtensionPoint
+{
+	public function get_home_page()
+	{
+		return new DefaultHomePage($this-&gt;get_title(), $this-&gt;get_view());
+	}
+
+	private function get_title()
+	{
+		// Titre de la page
+		return LangLoader::get_message('newsletter', 'newsletter_common', 'newsletter');
+	}
+	
+	private function get_view()
+	{
+		// Retourne un object Template (StringTemplate ou FileTemplate)
+		return NewsletterModuleHomePage::get_view();
+	}
+}
+?&gt;[/code]
+
+Ensuite, vous devez ajouter une fonction [i]home_page()[/i] à votre ExtensionPointProvider.
+Elle doit retourner l'objet de la classe que vous venez de créer précédemment.
+
+--- Fichiers CSS ---
+
+Pour profiter du système de cache CSS et permettre la personnalisation de vos modules dans les différents thèmes, vous devez ajouter une fonction [i]css_files()[/i] à votre ExtensionPointProvider.
+
+Celle-ci doit renvoyer un objet de la classe ModuleCssFiles.
+
+Exemple :
+
+[code=php]public function css_files()
+{
+	$module_css_files = new ModuleCssFiles();
+        $module_css_files-&gt;adding_running_module_displayed_file('ce_fichier_est_chargé_seulement_sur_le_module.css');
+	$module_css_files-&gt;adding_always_displayed_file('ce_fichier_est_chargé_sur_toute_les_pages_du_site.css');
+	return $module_css_files;
+}[/code]
+
+--- Sitemap ---
+
+Pour intégrer votre module au sitemap et au plan du site, il faut créer une classe [i]MonModuleSitemapExtensionPoint [/i]qui implémente l'interface [i]SitemapExtensionPoint[/i].
+
+Deux fonctions devront être présentes dans cette classe : [i]get_public_sitemap()[/i] et [i]get_user_sitemap()[/i].
+
+Les deux sont identiques, sauf sur un point : l'une renvoie le sitemap public, et l'autre le sitemap pour les utilisateurs connectés.
+
+Vous devrez renvoyer un objet [i]ModuleMap[/i].
+
+Voici une implémentation type :
+
+[code=php]&lt;?php
+/*##################################################
+ *                       NewsletterSitemapExtensionPoint.class.php
+*                            -------------------
+*   begin                : May 30, 2012
+*   copyright            : (C) 2012 Kevin MASSY
+*   email                : soldier.weasel@gmail.com
+*
+*
+###################################################
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*
+###################################################*/
+
+class NewsletterSitemapExtensionPoint implements SitemapExtensionPoint
+{
+	public function get_public_sitemap()
+	{
+		return $this-&gt;get_module_map(Sitemap::AUTH_PUBLIC);
+	}
+
+	public function get_user_sitemap()
+	{
+		return $this-&gt;get_module_map(Sitemap::AUTH_USER);
+	}
+
+	private function get_module_map($auth_mode)
+	{
+		$lang = LangLoader::get('newsletter_common', 'newsletter');
+		
+		// Informations : nom du module, url vers le module et fréquence de mise à jour du sitemap
+		$link = new SitemapLink($lang['newsletter'], NewsletterUrlBuilder::home(), Sitemap::FREQ_MONTHLY, Sitemap::PRIORITY_MAX);
+		//SitemapLink et en deuxième paramètre l'identifiant du module (le nom du dossier du module)
+		$module_map = new ModuleMap($link, 'newsletter');
+
+		$streams = NewsletterStreamsCache::load()-&gt;get_streams();
+		$config = NewsletterConfig::load();
+		$user = AppContext::get_current_user();
+		foreach ($streams as $id =&gt; $properties)
+		{			
+			if ($auth_mode == Sitemap::AUTH_PUBLIC)
+			{
+				$is_authorized = is_array($properties['authorizations']) ? Authorizations::check_auth(RANK_TYPE, User::VISITOR_LEVEL, $properties['authorizations'], NewsletterAuthorizationsService::AUTH_READ) : Authorizations::check_auth(RANK_TYPE, User::VISITOR_LEVEL, $config-&gt;get_authorizations(), NewsletterAuthorizationsService::AUTH_READ);
+			}
+			else
+			{
+				$is_authorized = is_array($properties['authorizations']) ? $user-&gt;check_auth($properties['authorizations'], NewsletterAuthorizationsService::AUTH_READ) : $user-&gt;check_auth($config-&gt;get_authorizations(), NewsletterAuthorizationsService::AUTH_READ);
+			}
+			
+			if ($is_authorized &amp;&amp; $properties['visible'])
+			{
+				// On créer une section du sitemap avec le lien qui contient le nom du lien et son url
+				$link = new SitemapLink($properties['name'], NewsletterUrlBuilder::archives($id));
+				$section = new SitemapSection($link);
+				// On ajoute la section au module map
+				$module_map-&gt;add($section);
+			}
+		}
+
+		//On renvoie l'objet
+		return $module_map;
+	}
+}
+?&gt;[/code]</wiki_content>
+</wiki_article>

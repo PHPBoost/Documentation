@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>132</wiki_id>
+  <wiki_id_contents>767</wiki_id_contents>
+  <wiki_title>Gestion des champs étendus</wiki_title>
+  <wiki_encoded_title>gestion-des-champs-etendus</wiki_encoded_title>
+  <wiki_hits>427</wiki_hits>
+  <wiki_id_cat>17</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>17</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>17</wiki_cat_article_id>
+  <wiki_con_id_contents>767</wiki_con_id_contents>
+  <wiki_con_id_article>132</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-champs-etendus">Gestion des champs étendus</a></li><li><a href="#paragraph_ajouter-un-champ-etendu">Ajouter un champ étendu</a><ol class="wiki_list_2"><li><a href="#paragraph_specificites">Spécificités</a><ol class="wiki_list_3"><li><a href="#paragraph_champs-textes">Champs textes</a></li><li><a href="#paragraph_champs-selections-et-choix">Champs sélections et choix</a></li></ol></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1466</wiki_user_id>
+  <wiki_user_ip>90.55.70.218</wiki_user_ip>
+  <wiki_timestamp>1358189376</wiki_timestamp>
+  <wiki_content>Vous avez la possibilité ici de gérer de nouveaux champs dans le profil de vos utilisateurs. Ainsi vous allez pouvoir personnaliser les champs à votre guise. De nombreuses possibilités vous sont offertes, nous allons les découvrir dans cet article.
+
+-- Gestion des champs étendus --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/extended-fields/manage.png[/img][/align]
+
+Vous pouvez modifier, supprimer et déplacer la position des champs étendus. Un simple glisser-déplacer et quand vous aurez fini, cliquez sur "modifier".
+
+-- Ajouter un champ étendu --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/extended-fields/add.png[/img][/align]
+
+[list]
+	[*] [b]Nom[/b] : Le nom que votre champ devra avoir dans le profil du membre
+	[*] [b]Description[/b] : La description sera présente juste en dessous du nom du champ dans le profil du membre
+	[*] [b]Type de champ[/b] : Dans cette liste déroulante, vous devez sélectionner le type de champ. Par défaut, il y en a un certain nombre, mais sachez également que selon les modules installés, vous pouvez en avoir d'autres (ex : Le module newsletter ajoute un champ dans le profil pour pouvoir gérer les abonnements).
+	[*] [b]Champ requis[/b] : Cochez oui si vous souhaitez que l'utilisateur soit forcé de donner une valeur.
+	[*] [b]Afficher[/b] : Si vous souhaitez afficher/activer le champ
+	[*] [b]Autorisations de lecture du champ dans le profil[/b] : Niveau d'autorisation d'accès en lecture au champ lors de la visualisation du profil d'un membre
+	[*] [b]Autorisations de lecture du champ dans la création ou la modification d'un profil[/b] : Niveau d'autorisation d'accès lors de la création ou la modification d'un profil (si vous souhaitez afficher un champ seulement pour les membres par exemple)
+[/list]
+
+--- Spécificités ---
+
+Selon le champ, vous pouvez avoir d'autres informations à saisir :
+
+---- Champs textes ----
+
+[list]
+	[*] [b]Contrôle de la forme de l'entrée[/b] : Vous permet de choisir dans le cas d'un champ texte court, un type d'entré (ex : email, site web, ...) ou une regex personnalisée.
+[/list]
+
+---- Champs sélections et choix ----
+
+[list]
+	[*] [b]Valeurs possibles[/b] : Vous permet de donner les valeurs possibles. Ex pour avoir une liste déroulante avec trois valeurs : Rouge, Bleu, Vert, il vous faudra donner comme valeur : Rouge|Bleu|Vert
+        [*] [b]Valeurs par défaut [/b] : Le champs valeurs par défaut vous permet de définir les valeurs qui doivent être sélectionnées/cochées par défaut. Si il y en a plusieurs, elles doivent être séparées par | .
+[/list]</wiki_content>
+</wiki_article>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>87</wiki_id>
+  <wiki_id_contents>161</wiki_id_contents>
+  <wiki_title>Erreurs archivées</wiki_title>
+  <wiki_encoded_title>erreurs-archivees</wiki_encoded_title>
+  <wiki_hits>244</wiki_hits>
+  <wiki_id_cat>16</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>16</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>16</wiki_cat_article_id>
+  <wiki_con_id_contents>161</wiki_con_id_contents>
+  <wiki_con_id_article>87</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_erreurs-archivees">Erreurs archivées</a></li><li><a href="#paragraph_erreurs-404">Erreurs 404</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>1393</wiki_user_id>
+  <wiki_user_ip>81.51.228.217</wiki_user_ip>
+  <wiki_timestamp>1346148668</wiki_timestamp>
+  <wiki_content>-- Erreurs archivées --
+
+Plusieurs types de messages d'erreur existent selon leur gravité. Le gestionnaire d'erreurs enregistre dans un fichier (cache/error.log) toutes les erreurs fatales que vous ou vos visiteurs ou vous aurez pu rencontrer.
+Il est utile de regarder de temps en temps ce fichier d'archives afin de voir si vos visiteurs ont pu rencontrer des erreurs fatales et le cas échéant les corriger car une certaine partie d'entre eux ne vous avertiront pas des erreurs qu'ils rencontrent.
+
+Lorsque vous rencontrez lors de votre navigation sur votre site un message d'erreur, il est automatiquement enregistré dans la page d'archives des erreurs : 
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/errors/archived_errors.png[/img][/align]
+
+Le fait d'archiver les messages d'erreurs permet de simplifier la communication avec le support et de régler plus facilement les problèmes.
+
+[style=notice]Si vous souhaitez contacter le support suite à une erreur qui a été archivée, il est indispensable de fournir le message d'erreur, le problème sera réglé nettement plus rapidement si vous fournissez les informations nécessaires.[/style]
+
+Enfin vous avez la possibilité d'effacer définitivement les messages d'erreur en cliquant sur 'Effacer le rapport '
+
+-- Erreurs 404 --
+
+Lorsqu'un fichier n'est plus sur le serveur et qu'il est demandé, une erreur 404 est émise. Celle ci est enregistrée dans l'administration pour vous permettre de régler le problème et de voir sur quelle page la personne était.
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/errors/404_errors.png[/img][/align]</wiki_content>
+</wiki_article>

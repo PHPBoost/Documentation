@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>113</wiki_id>
+  <wiki_id_contents>1318</wiki_id_contents>
+  <wiki_title>Gestion des menus</wiki_title>
+  <wiki_encoded_title>gestion-des-menus</wiki_encoded_title>
+  <wiki_hits>971</wiki_hits>
+  <wiki_id_cat>18</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>18</wiki_cat_id>
+  <wiki_cat_id_parent>10</wiki_cat_id_parent>
+  <wiki_cat_article_id>18</wiki_cat_article_id>
+  <wiki_con_id_contents>1318</wiki_con_id_contents>
+  <wiki_con_id_article>113</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-menus">Gestion des menus</a></li><li><a href="#paragraph_ajouter-un-menu">Ajouter un menu</a><ol class="wiki_list_2"><li><a href="#paragraph_ajout-menu-de-lien">Ajout menu de lien</a></li><li><a href="#paragraph_ajout-menu-de-contenu">Ajout menu de contenu</a></li><li><a href="#paragraph_ajout-de-flux">Ajout de flux</a></li><li><a href="#paragraph_les-filtres">Les filtres</a></li></ol></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>982</wiki_user_id>
+  <wiki_user_ip>193.164.156.10</wiki_user_ip>
+  <wiki_timestamp>1405504629</wiki_timestamp>
+  <wiki_content>La page d'accueil contient par défaut des blocs (ou menus) en fonction des modules que vous avez installés, ils se trouvent à gauche et à droite en haut et en bas de la page selon vos préférences.
+
+Ces menus peuvent être déplacés comme bon vous semble, et de nouveaux peuvent également être crées afin de personnaliser au maximum votre site.
+
+[style=warning]Attention l'affichage prend automatiquement en compte la disposition des blocs sur le thème courant (une colonne à droite, à gauche, les deux ou aucune des deux, de même en hauteur). Ainsi l'interface d'administration reflète la position réelle des blocs sur le site.[/style]
+
+-- Gestion des menus --
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/menus/menus.png[/img][/align]
+
+Les menus ou blocs peuvent être disposés sur 8 zones délimitées en pointillés et organisées comme suit:
+[list]
+[*] Tête de page : correspond au header de votre page
+[*] Sous entête : correspond au sub-header avec les liens se connecter, administration, etc... qui se trouvent sous la bannière du header.
+[*] Menu gauche
+[*] Menu central haut : se trouve entre le sous entête et le contenu central de la page, en général un module
+[*] Menu central bas : se trouve entre le contenu central de la page et le pied de page
+[*] Menu droit
+[*] Sur pied de page : zone entre le cadre central ou se trouve le module et le bas de la page
+[*] Pied de page : correspond au footer où se trouvent les copyrights de PHPboost.
+[/list]
+
+Vous pouvez déplacer chaque menu dans la zone de votre choix, par l'action d'un simple cliquer/déplacer.
+
+Enfin vous pouvez éditer [html]&lt;i class="fa fa-edit"&gt;&lt;/i&gt;[/html] et supprimer [html]&lt;i class="fa fa-delete"&gt;&lt;/i&gt;[/html] les menus et modules que vous souhaitez.
+
+[b]Nota Bene:[/b] Les menus désactivés apparaissent grisés.
+
+-- Ajouter un menu --
+
+En plus des menus des modules, vous pouvez également créer des menus personnalisés.
+
+--- Ajout menu de lien ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/menus/add_link_menu.png[/img][/align]
+
+[list]
+	[*][b]Nom[/b] : donnez un nom à votre menu
+	[*][b]Adresse[/b] : facultatif, correspond à l'adresse du lien du titre du menu 
+	[*][b]Image[/b] : facultatif, vous pouvez mettre ici l'adresse d'une image représentant le menu.
+	[*][b]Type[/b] : vous allez avoir le choix entre : 
+[/list]
+[list]
+	[*] Menu horizontal
+	[*]Menu horizontal déroulant
+	[*]Menu vertical
+	[*]Menu vertical déroulant
+[/list]
+[list]
+	[*][b]Emplacement[/b] : Une fois encore, à l'aide d'un cliquer/déplacer, vous pouvez placer votre menu où vous le souhaitez, dans l'une des 8 zones prédéfinies (cf plus haut) 
+
+	[*][b]Statut[/b] : activé ou désactivé si vous souhaitez qu'ils soit affiché ou non sur le site
+	[*][b]Autorisations[/b] : définissez ici quel type de membre peut voir ce menu.
+	[*][b]Contenu[/b] : vous allez mettre ici la liste des liens de votre menu avec un nom de votre lien, une adresse et la possibilité de mettre une icône personnalisée pour chaque lien.
+[/list]
+
+--- Ajout menu de contenu ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/menus/add_content_menu.png[/img][/align]
+
+[list]
+	[*][b]Nom[/b] : donnez un nom à votre menu
+	[*][b]Emplacement[/b] : choisissez l'emplacement de votre menu (cf plus haut) 
+	[*][b]Contenu[/b] : mettez ici le contenu de votre menu, cela peut être du texte, des images, de la vidéos, du contenu html, etc...
+	[*][b]Statut[/b] : activé ou désactivé si vous souhaitez qu'ils soit affiché ou non sur le site
+	[*][b]Autorisations[/b] : définissez ici quel type de membre peut voir ce menu.	
+[/list]	
+
+--- Ajout de flux ---
+	
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/menus/add_syndication_menu.png[/img][/align]	
+	
+Vous pouvez créer un menu contenant l'un des flux de votre site.
+
+[list]
+	[*][b]Nom[/b] : donnez un nom à votre menu
+	[*][b]Emplacement[/b] : choisissez l'emplacement de votre menu (cf plus haut) 
+	[*][b]Flux[/b] : choisissez parmi la liste le flux que vous souhaitez afficher 	
+	[*][b]Statut[/b] : activé ou désactivé si vous souhaitez qu'ils soit affiché ou non sur le site
+	[*][b]Autorisations[/b] : définissez ici quel type de membre peut voir ce menu.	
+[/list]
+
+--- Les filtres ---
+
+[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/menus/filters.jpg[/img][/align]
+
+Les filtres vous permettent de définir sur quelle(s) page(s) devra/devront apparaître vos menus. Que ce soit sur des pages statiques, ou bien sur un ou des modules particulier.</wiki_content>
+</wiki_article>

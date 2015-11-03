@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_article>
+  <wiki_id>305</wiki_id>
+  <wiki_id_contents>1376</wiki_id_contents>
+  <wiki_title>Ajout d'un champ dans un module</wiki_title>
+  <wiki_encoded_title>ajout-d-un-champ-dans-un-module</wiki_encoded_title>
+  <wiki_hits>318</wiki_hits>
+  <wiki_id_cat>54</wiki_id_cat>
+  <wiki_is_cat>0</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>54</wiki_cat_id>
+  <wiki_cat_id_parent>0</wiki_cat_id_parent>
+  <wiki_cat_article_id>192</wiki_cat_article_id>
+  <wiki_con_id_contents>1376</wiki_con_id_contents>
+  <wiki_con_id_article>305</wiki_con_id_article>
+  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_mise-en-place-du-nouveau-champ">Mise en place du nouveau champ</a><ol class="wiki_list_2"><li><a href="#paragraph_objet-principal-du-module-et-insertion-en-base-de-donnees">Objet principal du module et insertion en base de données</a></li><li><a href="#paragraph_variables-de-langue">Variables de langue</a></li><li><a href="#paragraph_formulaire">Formulaire</a></li></ol></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>982</wiki_user_id>
+  <wiki_user_ip>86.195.77.164</wiki_user_ip>
+  <wiki_timestamp>1414747431</wiki_timestamp>
+  <wiki_content>-- Introduction --
+Il est possible d'ajouter des champs assez simplement pour les modules en MVC (exemple : articles, news, calendrier, livre d'or), le tout n'étant évidemment pas d'ajouter uniquement une information à saisir dans le formulaire, mais également afficher cet élément à l'endroit voulu.
+
+Vous n'avez besoin d'aucune connaissance particulière en programmation, mais il va falloir être méthodique dans la procédure à suivre pour mettre en place le nouvel élément.
+
+Les ajouts peuvent être effectués avec un simple éditeur de texte (exemple : [url=http://notepad-plus-plus.org/fr]notepad++[/url]).
+
+La mise en place du nouveau champ se fait en 3 étapes : Modification de l'objet du module, ajout de variables de langue et création du champ dans le formulaire de saisie.
+
+Dans cette exemple nous nous appuierons sur le module articles, avec l'ajout d'un champ "Activer les commentaires" (pour pouvoir choisir d'afficher ou non les commentaires pour chaque article).
+
+-- Mise en place du nouveau champ --
+
+--- Objet principal du module et insertion en base de données ---
+Editez tout d'abord le l'objet principal du module. Dans le cas du module [b]articles[/b], il s'agit du fichier [i]/articles/services/Article.class.php[/i].
+Il faut ici créer la variable correspondant à votre nouveau champ, créer les méthodes [i]get[/i] et [i]set[/i] pour le récupérer et le modifier, l'ajouter à la fonction pour récupérer ou ajouter les différents paramètres, et enfin ajouter une variable dans la liste des variables envoyées au template.
+
+[u]Exemple dans notre cas[/u] :
+[code=php]
+...
+	private $comments_enabled;
+...
+	public function get_comments_enabled()
+	{
+		return $this-&gt;comments_enabled;
+	}
+
+	public function set_comments_enabled($enabled) 
+	{
+		$this-&gt;comments_enabled = $enabled;
+	}
+...
+	public function get_properties()
+	{
+		return array(
+			...
+			'comments_enabled' =&gt; $this-&gt;get_comments_enabled(),
+			...
+		);
+	}
+
+	public function set_properties(array $properties)
+	{
+		...
+		$this-&gt;set_comments_enabled($properties['comments_enabled']);
+		...
+	}
+
+	/* Ajoutez ceci si vous souhaitez cocher la case ou remplir une valeur par défaut dans d'autres cas */
+	public function init_default_properties($id_category = Category::ROOT_CATEGORY)
+	{
+		...
+		$this-&gt;comments_enabled = true;
+		...
+	}
+...
+	/* Ajout d'une variable dans la liste des variables envoyées aux templates */
+	public function get_tpl_vars()
+	{
+		...
+		return array(
+			...
+			'C_ARTICLE_COMMENTS_ENABLED' =&gt; $this-&gt;get_comments_enabled(),
+			...
+		);
+	}
+...
+[/code]
+Editez ensuite le fichier d'installation du module. Dans le cas du module [b]articles[/b], il s'agit du fichier [i]/articles/phpboost/ArticlesSetup.class.php[/i].
+Ajoutez votre champ dans la méthode [b]create_table()[/b] (dans le cas du module articles : [b]create_articles_table()[/b]) pour qu'il soit créé à l'installation. Dans certains modules on trouve également la méthode [b]insert_data()[/b] pour l'objet créé par défaut, pensez à le mettre à jour aussi dans ce cas là.
+
+[u]Exemple dans notre cas[/u] :
+[code=php]
+...
+	private function create_articles_table()
+	{
+		$fields = array(
+			...
+			'comments_enabled' =&gt; array('type' =&gt; 'boolean', 'notnull' =&gt; 1, 'default' =&gt; 1),
+			...
+		);
+		...
+	}
+...
+	/* Ajout du paramètre pour l'article par défaut */
+	private function insert_articles_data()
+	{
+		PersistenceContext::get_querier()-&gt;insert(self::$articles_table, array(
+			...
+			'comments_enabled' =&gt; true,
+			...
+		);
+	}
+...
+[/code]
+[style=notice]Si vous avez déjà installé le module, il va falloir ajouter le champ en base de données via une requête SQL :
+ALTER TABLE nom_table ADD nom_colonne type_donnees[/style]
+[u]Exemple dans notre cas[/u] :
+[code=sql]ALTER TABLE phpboost_articles ADD comments_enabled TinyInt NOT NULL DEFAULT 1;[/code]
+--- Variables de langue ---
+Il va falloir créer une variable de langue pour son titre dans le formulaire.
+Editez le fichier [i]/articles/lang/french/common.php[/i] et ajoutez une variable de langue du type :
+[code=php]$lang['mavariable'] = 'ma variable';[/code]
+[u]Exemple dans notre cas[/u] :
+[code=php]
+...
+	$lang['articles.form.comments_enabled'] = 'Autoriser les commentaires sur l\'article';
+...
+[/code]
+Si vous souhaitez ajouter une explication sous le titre dans le formulaire, ajouter une deuxième variable :
+[code=php]$lang['mavariable.explain'] = 'explication de ma variable';[/code]
+Vous pouvez répéter l'opération pour la langue anglaise si besoin.
+
+--- Formulaire ---
+Editez ensuite le formulaire du module. Dans le cas du module [b]articles[/b], il s'agit du fichier [i]/articles/controllers/ArticlesFormController.class.php[/i].
+Ajoutez votre champ dans la méthode [b]build_form()[/b] pour l'afficher et dans la méthode [b]save()[/b] pour l'enregistrer.
+
+[u]Exemple dans notre cas[/u] :
+[code=php]
+...
+	private function build_form(HTTPRequestCustom $request)
+	{
+		...
+		/* Ligne 128 */
+	$other_fieldset-&gt;add_field(new FormFieldCheckbox('comments_enabled', $this-&gt;lang['articles.form.comments_enabled'], $this-&gt;get_article()-&gt;get_comments_enabled()));
+		...
+	}
+...
+	private function save()
+	{
+		...
+		/* Ligne 304 */
+		$article-&gt;set_comments_enabled((bool)$this-&gt;form-&gt;get_value('comments_enabled'));
+		...
+	}
+...
+[/code]
+-- Conclusion --
+Vous pouvez maintenant afficher votre nouveau champ directement dans les templates du module.
+
+[u]Exemple dans notre cas[/u] : Editer le fichier [i]/articles/templates/ArticlesDisplayArticlesController.tpl[/i] ou copiez le dans votre thème avant de le faire.
+[code=tpl]
+...
+	&lt;!-- Remplacez les lignes 25 à 27 par --&gt;
+	# IF C_COMMENTS_ENABLED #
+		# IF C_ARTICLE_COMMENTS_ENABLED #
+			&amp;nbsp;|&amp;nbsp;&lt;i class="fa fa-comment" title="${LangLoader::get_message('comments', 'comments-common')}"&gt;&lt;/i&gt;&lt;a itemprop="discussionUrl" class="small" href="{U_COMMENTS}"&gt;&amp;nbsp;{L_COMMENTS}&lt;/a&gt;
+		# ENDIF #
+	# ENDIF #
+...
+	&lt;!-- Remplacez les lignes 92 à 94 par --&gt;
+	# IF C_COMMENTS_ENABLED #
+		# IF C_ARTICLE_COMMENTS_ENABLED #
+			# INCLUDE COMMENTS #
+		# ENDIF #
+	# ENDIF #
+...
+[/code]
+Voilà votre champ ajouté et opérationnel.
+Ces différentes étapes peuvent être adaptées pour tout type de champ et pour tout module en MVC.
+[style=warning]Ces modifications seront à refaire en cas de mise à jour du module en question par l'équipe.[/style]</wiki_content>
+</wiki_article>

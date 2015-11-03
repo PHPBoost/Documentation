@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<wiki_cat>
+  <wiki_id>79</wiki_id>
+  <wiki_id_contents>1383</wiki_id_contents>
+  <wiki_title>BBCode</wiki_title>
+  <wiki_encoded_title>bbcode</wiki_encoded_title>
+  <wiki_hits>14576</wiki_hits>
+  <wiki_id_cat>34</wiki_id_cat>
+  <wiki_is_cat>1</wiki_is_cat>
+  <wiki_defined_status>0</wiki_defined_status>
+  <wiki_undefined_status></wiki_undefined_status>
+  <wiki_redirect>0</wiki_redirect>
+  <wiki_auth></wiki_auth>
+  <wiki_cat_id>34</wiki_cat_id>
+  <wiki_cat_id_parent>13</wiki_cat_id_parent>
+  <wiki_cat_article_id>79</wiki_cat_article_id>
+  <wiki_con_id_contents>1383</wiki_con_id_contents>
+  <wiki_con_id_article>79</wiki_con_id_article>
+  <wiki_menu></wiki_menu>
+  <wiki_activ>1</wiki_activ>
+  <wiki_user_id>5083</wiki_user_id>
+  <wiki_user_ip>93.5.71.211</wiki_user_ip>
+  <wiki_timestamp>1423332203</wiki_timestamp>
+  <wiki_content>[table style="float:right;"]
+   [row]
+      [head colspan="2"]BBCode[/head]
+   [/row]
+   [row]
+      [col]Auteur[/col]
+      [col][url=/user/profile/1]CrowkaiT[/url][/col]
+   [/row]
+   [row]
+      [col]Version actuelle[/col]
+      [col]4.0[/col]
+   [/row]
+   [row]
+      [col]Date de sortie[/col]
+      [col]juillet 2007[/col]
+   [/row]
+   [row]
+      [col]Compatibilité[/col]
+      [col]PHPBoost 4.0[/col]
+   [/row]
+[/table]
+
+[align=center]
+   [size=20][b]Module BBCode[/b][/size]
+   [img]http://resources.phpboost.com/documentation/utilisation/modules/BBCode/logo.png[/img]
+[/align]
+
+
+
+
+
+
+[b]Description :[/b] Ce module vous permet d'afficher une barre BBCode au dessus des champs texte qui permet de formater votre texte.</wiki_content>
+</wiki_cat>
