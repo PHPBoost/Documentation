@@ -7,17 +7,21 @@ class WikiEIController  extends ModuleController
 	private static $cats_table;
 	private static $contents_table;
 	
+	/** @var	string	Dossier d'export */
 	private static $export_folder = 'export';
 	
 	public function execute(\HTTPRequestCustom $request)
 	{
 		$this->check_directory();
 		$this->init_tables();
-		
+
 		$this->recursive_search(0, self::$export_folder);
 		
 	}
 	
+	/**
+	 * Initialisation des tables de la DB
+	 */
 	private function init_tables()
 	{
 		self::$articles_table = PREFIX . 'wiki_articles';
@@ -25,6 +29,9 @@ class WikiEIController  extends ModuleController
 		self::$contents_table = PREFIX . 'wiki_contents';
 	}
 	
+	/**
+	 * Test de l'existence du dossier d'export cible, si non on le créé
+	 */
 	private function check_directory()
 	{
 		if (!file_exists(self::$export_folder))
@@ -33,30 +40,40 @@ class WikiEIController  extends ModuleController
 		}
 	}
 	
+	/**
+	 * Recherche recursive des articles et catégories pour l'export
+	 * 
+	 * @param type $id_cat
+	 * @param type $curr_dir
+	 */
 	private function recursive_search($id_cat, $curr_dir)
 	{
+		// Récupération des articles actifs de la catégorie en cours
 		$files_result = PersistenceContext::get_querier()->select($this->get_articles_query(), array(
 			'id' => $id_cat
 		), SelectQueryResult::FETCH_ASSOC);
 			
 		while($rowfiles = $files_result->fetch())
 		{
-			$file = new EIFile($curr_dir);
+			$file = new WikiEIArticle($curr_dir);
 			$file->hydrate_by_sql($rowfiles);
-			$file->export_to_files();
+			$file->export();
+
 		}
-			
+		
+		// Récupération des catégories contenues dans la catégorie en cours
 		$result = PersistenceContext::get_querier()->select($this->get_cats_query(), array(
 			'id' => $id_cat
 		), SelectQueryResult::FETCH_ASSOC);
 		
 		while($row = $result->fetch())
 		{
-			$cat = new EIFolder( $curr_dir);
+			$cat = new WikiEICategorie($curr_dir);
 			$cat->hydrate_by_sql($row);
-			$cat->export_to_files();
+			$cat->export();
 			
-			$this->recursive_search($cat->getId_cat(), $cat->getReal_path());
+			// Pour chaque catégorie, on relance la recherche
+			$this->recursive_search($cat->id_cat, $cat->real_path);
 		}
 		$result->dispose();
 	}

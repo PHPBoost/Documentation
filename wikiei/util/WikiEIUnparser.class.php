@@ -1,6 +1,6 @@
 <?php
 
-class EIUnparser
+class WikiEIUnparser
 {
 	protected $content;
 	
