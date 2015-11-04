@@ -11,9 +11,6 @@
   <wiki_undefined_status></wiki_undefined_status>
   <wiki_redirect>0</wiki_redirect>
   <wiki_auth></wiki_auth>
-  <wiki_cat_id>49</wiki_cat_id>
-  <wiki_cat_id_parent>2</wiki_cat_id_parent>
-  <wiki_cat_article_id>171</wiki_cat_article_id>
   <wiki_con_id_contents>1242</wiki_con_id_contents>
   <wiki_con_id_article>104</wiki_con_id_article>
   <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_installation">Installation</a><ol class="wiki_list_2"><li><a href="#paragraph_preambule">Préambule</a></li><li><a href="#paragraph_acceptation-de-la-licence">Acceptation de la licence</a></li><li><a href="#paragraph_configuration-du-serveur">Configuration du serveur</a><ol class="wiki_list_3"><li><a href="#paragraph_version-de-php">Version de PHP</a></li><li><a href="#paragraph_extensions">Extensions</a></li><li><a href="#paragraph_autorisations-des-dossiers">Autorisations des dossiers</a></li></ol></li><li><a href="#paragraph_configuration-de-la-base-de-donnees">Configuration de la base de données</a><ol class="wiki_list_3"><li><a href="#paragraph_parametres-d-acces-au-sgbd">Paramètres d'accès au SGBD</a></li><li><a href="#paragraph_proprietes-de-la-base-de-donnees">Propriétés de la base de données</a></li></ol></li><li><a href="#paragraph_configuration-du-site">Configuration du site</a></li><li><a href="#paragraph_compte-administrateur">Compte Administrateur</a></li><li><a href="#paragraph_fin-de-l-installation">Fin de l'installation</a></li></ol></li><li><a href="#paragraph_configurez-votre-site">Configurez votre site !</a></li></ol></wiki_menu>

@@ -11,9 +11,6 @@
   <wiki_undefined_status></wiki_undefined_status>
   <wiki_redirect>0</wiki_redirect>
   <wiki_auth></wiki_auth>
-  <wiki_cat_id>42</wiki_cat_id>
-  <wiki_cat_id_parent>4</wiki_cat_id_parent>
-  <wiki_cat_article_id>145</wiki_cat_article_id>
   <wiki_con_id_contents>1311</wiki_con_id_contents>
   <wiki_con_id_article>146</wiki_con_id_article>
   <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-config-ini">Le fichier config.ini</a></li><li><a href="#paragraph_le-header-tpl">Le header.tpl</a><ol class="wiki_list_2"><li><a href="#paragraph_le-cache-css">Le Cache CSS</a></li><li><a href="#paragraph_les-fichiers-css-des-modules">Les fichiers CSS des modules</a></li><li><a href="#paragraph_le-favicon">Le favicon</a></li><li><a href="#paragraph_javascript">Javascript</a></li><li><a href="#paragraph_tinymce">TinyMCE</a></li><li><a href="#paragraph_le-logo">Le logo</a></li><li><a href="#paragraph_code-de-la-maintenance">Code de la maintenance</a></li></ol></li><li><a href="#paragraph_le-content-css">Le content.css</a></li><li><a href="#paragraph_fichiers-images-a-deplacer-et-creer">Fichiers images à déplacer et créer</a></li><li><a href="#paragraph_la-preview-du-theme">La preview du thème</a></li><li><a href="#paragraph_fichiers-css-devenus-inutiles">Fichiers CSS devenus inutiles</a></li></ol></wiki_menu>

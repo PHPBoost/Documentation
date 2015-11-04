@@ -11,9 +11,6 @@
   <wiki_undefined_status></wiki_undefined_status>
   <wiki_redirect>0</wiki_redirect>
   <wiki_auth></wiki_auth>
-  <wiki_cat_id>54</wiki_cat_id>
-  <wiki_cat_id_parent>0</wiki_cat_id_parent>
-  <wiki_cat_article_id>192</wiki_cat_article_id>
   <wiki_con_id_contents>1417</wiki_con_id_contents>
   <wiki_con_id_article>306</wiki_con_id_article>
   <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_modification-des-fichiers">Modification des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_homecustomhomepageextensionpoint-class-php">HomeCustomHomePageExtensionPoint.class.php</a><ol class="wiki_list_3"><li><a href="#paragraph_ce-que-vous-avez">Ce que vous avez</a></li><li><a href="#paragraph_le-nouveau-code">Le nouveau code</a></li></ol></li><li><a href="#paragraph_home-tpl">home.tpl</a><ol class="wiki_list_3"><li><a href="#paragraph_ce-que-vous-avez">Ce que vous avez</a></li><li><a href="#paragraph_le-nouveau-code">Le nouveau code</a></li></ol></li></ol></li><li><a href="#paragraph_cr-ation-des-fichiers">Création des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_articles-tpl">articles.tpl</a><ol class="wiki_list_3"><li><a href="#paragraph_le-code">Le code</a></li><li><a href="#paragraph_les-diff-rentes-variables-possibles">Les différentes variables possibles</a><ol class="wiki_list_4"><li><a href="#paragraph_les-variables-d-affichage">Les variables d'affichage</a><ol class="wiki_list_5"><li><a href="#paragraph_les-variables-du-module-articles">Les variables du module Articles</a></li><li><a href="#paragraph_les-nouvelles-variables">Les nouvelles variables</a></li></ol></li><li><a href="#paragraph_les-variables-de-conditions">Les variables de conditions</a></li></ol></li></ol></li></ol></li></ol></wiki_menu>

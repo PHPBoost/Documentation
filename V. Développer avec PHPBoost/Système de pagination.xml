@@ -11,9 +11,6 @@
   <wiki_undefined_status></wiki_undefined_status>
   <wiki_redirect>0</wiki_redirect>
   <wiki_auth></wiki_auth>
-  <wiki_cat_id>5</wiki_cat_id>
-  <wiki_cat_id_parent>0</wiki_cat_id_parent>
-  <wiki_cat_article_id>159</wiki_cat_article_id>
   <wiki_con_id_contents>1251</wiki_con_id_contents>
   <wiki_con_id_article>142</wiki_con_id_article>
   <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_utilisation-de-la-classe-modulepagination">Utilisation de la classe ModulePagination</a></li><li><a href="#paragraph_liste-des-fonctions-disponible">Liste des fonctions disponible</a><ol class="wiki_list_2"><li><a href="#paragraph_definir-l-url-de-la-pagination">Définir l'url de la pagination</a></li><li><a href="#paragraph_afficher-la-pagination">Afficher la pagination</a></li><li><a href="#paragraph_recuperer-le-nombre-d-elements-par-page">Récupérer le nombre d'éléments par page</a></li><li><a href="#paragraph_savoir-si-la-page-actuelle-possede-des-elements-ou-non">Savoir si la page actuelle possède des éléments ou non</a></li><li><a href="#paragraph_savoir-s-il-y-a-besoin-de-la-pagination-ou-non">Savoir s'il y a besoin de la pagination ou non</a></li><li><a href="#paragraph_recuperer-le-nombre-de-pages">Récupérer le nombre de pages</a></li><li><a href="#paragraph_recuperer-le-nombre-a-partir-duquel-vous-devez-recuperer-les-elements-en-base-de-donnees">Récupérer le nombre à partir duquel vous devez récupérer les éléments en base de données</a></li></ol></li></ol></wiki_menu>

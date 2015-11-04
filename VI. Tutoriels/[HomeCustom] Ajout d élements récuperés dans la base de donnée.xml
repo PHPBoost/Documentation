@@ -11,9 +11,6 @@
   <wiki_undefined_status></wiki_undefined_status>
   <wiki_redirect>0</wiki_redirect>
   <wiki_auth></wiki_auth>
-  <wiki_cat_id>54</wiki_cat_id>
-  <wiki_cat_id_parent>0</wiki_cat_id_parent>
-  <wiki_cat_article_id>192</wiki_cat_article_id>
   <wiki_con_id_contents>1372</wiki_con_id_contents>
   <wiki_con_id_article>301</wiki_con_id_article>
   <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_la-fonction-php">La fonction PHP</a><ol class="wiki_list_2"><li><a href="#paragraph_recuperer-les-donnees-de-la-base-de-donnee">Récupérer les données de la base de donnée</a></li><li><a href="#paragraph_le-traitement-des-donnees">Le traitement des données</a></li><li><a href="#paragraph_faire-appel-a-notre-nouvelle-fonction">Faire appel à notre nouvelle fonction</a></li><li><a href="#paragraph_le-code-complet">Le code complet</a></li></ol></li><li><a href="#paragraph_le-code-html">Le code HTML</a></li><li><a href="#paragraph_utilisation-des-flux">Utilisation des flux</a></li></ol></wiki_menu>

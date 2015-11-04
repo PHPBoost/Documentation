@@ -11,9 +11,6 @@
   <wiki_undefined_status></wiki_undefined_status>
   <wiki_redirect>0</wiki_redirect>
   <wiki_auth></wiki_auth>
-  <wiki_cat_id>5</wiki_cat_id>
-  <wiki_cat_id_parent>0</wiki_cat_id_parent>
-  <wiki_cat_article_id>159</wiki_cat_article_id>
   <wiki_con_id_contents>937</wiki_con_id_contents>
   <wiki_con_id_article>35</wiki_con_id_article>
   <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_les-requetes">Les requêtes</a><ol class="wiki_list_2"><li><a href="#paragraph_insert">INSERT</a></li><li><a href="#paragraph_update">UPDATE</a></li><li><a href="#paragraph_delete">DELETE</a></li></ol></li><li><a href="#paragraph_select">SELECT</a><ol class="wiki_list_2"><li><a href="#paragraph_selectionner-un-seul-element">Sélectionner un seul élément</a></li><li><a href="#paragraph_selectionner-une-seule-colonne">Sélectionner une seule colonne</a></li><li><a href="#paragraph_selectionner-plusieurs-colonnes">Sélectionner plusieurs colonnes</a></li><li><a href="#paragraph_select-personnalise">SELECT personnalisé</a></li></ol></li><li><a href="#paragraph_count">COUNT</a></li><li><a href="#paragraph_truncate">TRUNCATE</a></li></ol></wiki_menu>

@@ -11,9 +11,6 @@
   <wiki_undefined_status></wiki_undefined_status>
   <wiki_redirect>0</wiki_redirect>
   <wiki_auth></wiki_auth>
-  <wiki_cat_id>5</wiki_cat_id>
-  <wiki_cat_id_parent>0</wiki_cat_id_parent>
-  <wiki_cat_article_id>159</wiki_cat_article_id>
   <wiki_con_id_contents>1209</wiki_con_id_contents>
   <wiki_con_id_article>253</wiki_con_id_article>
   <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_creer-une-notation-dynamique">Créer une notation dynamique</a></li><li><a href="#paragraph_recuperer-la-note-d-un-element">Récupérer la note d'un élément</a></li><li><a href="#paragraph_recuperer-le-nombre-de-note-d-un-element">Récupérer le nombre de note d'un élément</a><ol class="wiki_list_2"><li><a href="#paragraph_afficher-la-note-sous-forme-graphique">Afficher la note sous forme graphique</a></li></ol></li><li><a href="#paragraph_autre-traitement-sur-les-notes">Autre traitement sur les notes</a><ol class="wiki_list_2"><li><a href="#paragraph_mettre-a-jour-l-echelle-de-notation">Mettre à jour l'échelle de notation</a></li><li><a href="#paragraph_supprimer-les-notes-d-un-element-supprime">Supprimer les notes d'un élément supprimé</a></li></ol></li></ol></wiki_menu>
