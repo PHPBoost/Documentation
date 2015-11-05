@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>141</wiki_id>
-  <wiki_id_contents>1441</wiki_id_contents>
-  <wiki_title>Insérer un flux RSS en BBCode</wiki_title>
-  <wiki_encoded_title>inserer-un-flux-rss-en-bbcode</wiki_encoded_title>
-  <wiki_hits>1006</wiki_hits>
-  <wiki_id_cat>34</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1441</wiki_con_id_contents>
-  <wiki_con_id_article>141</wiki_con_id_article>
-  <wiki_menu></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.11</wiki_user_ip>
-  <wiki_timestamp>1444215955</wiki_timestamp>
-  <wiki_content>Vous souhaitez afficher sur votre site un flux RSS via le BBCode, c'est maintenant possible et il n'y a rien de plus simple !
+  <wiki_articles_fields>
+    <wiki_id>141</wiki_id>
+    <wiki_id_contents>1441</wiki_id_contents>
+    <wiki_title>Insérer un flux RSS en BBCode</wiki_title>
+    <wiki_encoded_title>inserer-un-flux-rss-en-bbcode</wiki_encoded_title>
+    <wiki_hits>1006</wiki_hits>
+    <wiki_id_cat>34</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1441</wiki_con_id_contents>
+    <wiki_con_id_article>141</wiki_con_id_article>
+    <wiki_menu></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.11</wiki_user_ip>
+    <wiki_timestamp>1444215955</wiki_timestamp>
+    <wiki_content>Vous souhaitez afficher sur votre site un flux RSS via le BBCode, c'est maintenant possible et il n'y a rien de plus simple !
 
 Il faut utiliser la balise feed : 
 
@@ -36,4 +39,5 @@ Si vous souhaitez afficher tous les flux d'un module, dans ce cas ne mettez pas 
 Exemple : afficher les 5 derniers flux du module téléchargement de la catégorie 3
 
 [code=bbcode][feed cat="3" number="5"]download[/feed][/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

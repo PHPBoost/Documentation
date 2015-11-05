@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>262</wiki_id>
-  <wiki_id_contents>840</wiki_id_contents>
-  <wiki_title>Administration du module Newsletter</wiki_title>
-  <wiki_encoded_title>administration-du-module-newsletter</wiki_encoded_title>
-  <wiki_hits>507</wiki_hits>
-  <wiki_id_cat>46</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>840</wiki_con_id_contents>
-  <wiki_con_id_article>262</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-newsletter">Configuration de la Newsletter</a></li><li><a href="#paragraph_gestion-des-flux">Gestion des flux</a></li><li><a href="#paragraph_ajout-de-flux">Ajout de flux</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1837</wiki_user_id>
-  <wiki_user_ip>24.201.132.222</wiki_user_ip>
-  <wiki_timestamp>1358733845</wiki_timestamp>
-  <wiki_content>Le module newsletter vous permet de gérer les flux de multiples newsletters, centralisés au sein d'un seul et même site. 
+  <wiki_articles_fields>
+    <wiki_id>262</wiki_id>
+    <wiki_id_contents>840</wiki_id_contents>
+    <wiki_title>Administration du module Newsletter</wiki_title>
+    <wiki_encoded_title>administration-du-module-newsletter</wiki_encoded_title>
+    <wiki_hits>507</wiki_hits>
+    <wiki_id_cat>46</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>840</wiki_con_id_contents>
+    <wiki_con_id_article>262</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-newsletter">Configuration de la Newsletter</a></li><li><a href="#paragraph_gestion-des-flux">Gestion des flux</a></li><li><a href="#paragraph_ajout-de-flux">Ajout de flux</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1837</wiki_user_id>
+    <wiki_user_ip>24.201.132.222</wiki_user_ip>
+    <wiki_timestamp>1358733845</wiki_timestamp>
+    <wiki_content>Le module newsletter vous permet de gérer les flux de multiples newsletters, centralisés au sein d'un seul et même site. 
 Le système de configuration des droits d'accès est puissant et vous permet de contrôler avec précision quelles sont les actions que peuvent effectuer vos membres et visiteurs.
 
 -- Configuration de la Newsletter --
@@ -38,4 +41,5 @@ La gestion des flux vous dresse la liste des flux (newsletter) active sur votre 
 La page "Ajout de flux" comme son nom l'indique, vous permet de créer de nouveaux flux (newsletter). 
 
 [img]http://resources.phpboost.com/documentation/utilisation/modules/newsletter/admin_newsletter/newsletter_add_new_flow.png[/img]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

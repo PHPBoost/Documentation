@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>133</wiki_id>
-  <wiki_id_contents>1398</wiki_id_contents>
-  <wiki_title>Gestion des thèmes</wiki_title>
-  <wiki_encoded_title>gestion-des-themes</wiki_encoded_title>
-  <wiki_hits>1676</wiki_hits>
-  <wiki_id_cat>15</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1398</wiki_con_id_contents>
-  <wiki_con_id_article>133</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_th-mes-install-s">Thèmes installés</a></li><li><a href="#paragraph_ajouter-un-th-me">Ajouter un thème</a></li><li><a href="#paragraph_installer-un-th-me">Installer un thème</a></li><li><a href="#paragraph_conseils-pour-choisir-le-th-me-de-son-site">Conseils pour choisir le thème de son site</a><ol class="wiki_list_2"><li><a href="#paragraph_mettre-le-th-me-par-d-faut-de-votre-site">Mettre le thème par défaut de votre site</a></li><li><a href="#paragraph_vous-souhaitez-que-tous-les-membres-aient-le-m-me-th-me">Vous souhaitez que tous les membres aient le même thème?</a></li><li><a href="#paragraph_vous-souhaitez-que-les-membres-puissent-choisir-leur-th-me">Vous souhaitez que les membres puissent choisir leur thème?</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5083</wiki_user_id>
-  <wiki_user_ip>90.16.36.10</wiki_user_ip>
-  <wiki_timestamp>1423580748</wiki_timestamp>
-  <wiki_content>-- Thèmes installés --
+  <wiki_articles_fields>
+    <wiki_id>133</wiki_id>
+    <wiki_id_contents>1398</wiki_id_contents>
+    <wiki_title>Gestion des thèmes</wiki_title>
+    <wiki_encoded_title>gestion-des-themes</wiki_encoded_title>
+    <wiki_hits>1676</wiki_hits>
+    <wiki_id_cat>15</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1398</wiki_con_id_contents>
+    <wiki_con_id_article>133</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_th-mes-install-s">Thèmes installés</a></li><li><a href="#paragraph_ajouter-un-th-me">Ajouter un thème</a></li><li><a href="#paragraph_installer-un-th-me">Installer un thème</a></li><li><a href="#paragraph_conseils-pour-choisir-le-th-me-de-son-site">Conseils pour choisir le thème de son site</a><ol class="wiki_list_2"><li><a href="#paragraph_mettre-le-th-me-par-d-faut-de-votre-site">Mettre le thème par défaut de votre site</a></li><li><a href="#paragraph_vous-souhaitez-que-tous-les-membres-aient-le-m-me-th-me">Vous souhaitez que tous les membres aient le même thème?</a></li><li><a href="#paragraph_vous-souhaitez-que-les-membres-puissent-choisir-leur-th-me">Vous souhaitez que les membres puissent choisir leur thème?</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>90.16.36.10</wiki_user_ip>
+    <wiki_timestamp>1423580748</wiki_timestamp>
+    <wiki_content>-- Thèmes installés --
 
 Vous avez la possibilité ici de voir tous les thèmes installés sur votre site.
 
@@ -88,4 +91,5 @@ Installez plusieurs thèmes .Chaque membre pourra choisir son thème dans son prof
 	[*] Choisissez dans la configuration le thème par défaut pour les visiteurs.
 	[*]dans le panel de configuration / membres / membres/ configuration des membres au niveau 'Permission aux membres de choisir leur thème' cochez 'OUI' (à partir de la version 4.1 de PHPBoost, cette option a été retirée, tous les membres ont la possibilité de choisir leur thème).
 [/list]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

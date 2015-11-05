@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>162</wiki_id>
-  <wiki_id_contents>847</wiki_id_contents>
-  <wiki_title>Utilisation du module Pages</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-pages</wiki_encoded_title>
-  <wiki_hits>1020</wiki_hits>
-  <wiki_id_cat>44</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>847</wiki_con_id_contents>
-  <wiki_con_id_article>162</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-du-module-page">Gestion du module page</a></li><li><a href="#paragraph_outils-du-module-pages">Outils du module pages</a><ol class="wiki_list_2"><li><a href="#paragraph_modifier-cette-page">Modifier cette page</a></li><li><a href="#paragraph_renommer">Renommer</a></li><li><a href="#paragraph_supprimer-cette-page">Supprimer cette page</a></li><li><a href="#paragraph_gestion-des-redirections">Gestion des redirections</a></li><li><a href="#paragraph_creer-une-categorie-page">Créer une catégorie/page</a><ol class="wiki_list_3"><li><a href="#paragraph_difference-entre-une-categorie-page">Différence entre une catégorie/page</a></li><li><a href="#paragraph_creer-une-page-categorie">Créer une page/catégorie</a><ol class="wiki_list_4"><li><a href="#paragraph_creation-d-une-page">Création d'une page</a></li><li><a href="#paragraph_emplacement">Emplacement</a></li><li><a href="#paragraph_proprietes">Propriétés</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li></ol></li><li><a href="#paragraph_explorateur">Explorateur</a></li></ol></li><li><a href="#paragraph_redirections-de-toutes-les-pages">Redirections de toutes les pages</a></li><li><a href="#paragraph_commentaires">Commentaires</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.12</wiki_user_ip>
-  <wiki_timestamp>1358759112</wiki_timestamp>
-  <wiki_content>-- Gestion du module page --
+  <wiki_articles_fields>
+    <wiki_id>162</wiki_id>
+    <wiki_id_contents>847</wiki_id_contents>
+    <wiki_title>Utilisation du module Pages</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-pages</wiki_encoded_title>
+    <wiki_hits>1020</wiki_hits>
+    <wiki_id_cat>44</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>847</wiki_con_id_contents>
+    <wiki_con_id_article>162</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-du-module-page">Gestion du module page</a></li><li><a href="#paragraph_outils-du-module-pages">Outils du module pages</a><ol class="wiki_list_2"><li><a href="#paragraph_modifier-cette-page">Modifier cette page</a></li><li><a href="#paragraph_renommer">Renommer</a></li><li><a href="#paragraph_supprimer-cette-page">Supprimer cette page</a></li><li><a href="#paragraph_gestion-des-redirections">Gestion des redirections</a></li><li><a href="#paragraph_creer-une-categorie-page">Créer une catégorie/page</a><ol class="wiki_list_3"><li><a href="#paragraph_difference-entre-une-categorie-page">Différence entre une catégorie/page</a></li><li><a href="#paragraph_creer-une-page-categorie">Créer une page/catégorie</a><ol class="wiki_list_4"><li><a href="#paragraph_creation-d-une-page">Création d'une page</a></li><li><a href="#paragraph_emplacement">Emplacement</a></li><li><a href="#paragraph_proprietes">Propriétés</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li></ol></li><li><a href="#paragraph_explorateur">Explorateur</a></li></ol></li><li><a href="#paragraph_redirections-de-toutes-les-pages">Redirections de toutes les pages</a></li><li><a href="#paragraph_commentaires">Commentaires</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1358759112</wiki_timestamp>
+    <wiki_content>-- Gestion du module page --
 
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/pages/page_3.jpg[/img][/align]
 
@@ -170,4 +173,5 @@ A la page d'accueil vous avez un lien vers les redirections. Vous accédez à une 
 -- Commentaires --
 
 Si l'administrateur l'a autorisé, les utilisateurs peuvent laisser des commentaires sur les pages. Pour cela il faut cliquer sur 'Commentaires' et le remplir ;). Vous pourrez lire les commentaires déjà postés en dessous.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

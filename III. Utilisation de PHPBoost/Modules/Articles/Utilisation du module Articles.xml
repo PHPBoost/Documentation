@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>118</wiki_id>
-  <wiki_id_contents>753</wiki_id_contents>
-  <wiki_title>Utilisation du module Articles</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-articles</wiki_encoded_title>
-  <wiki_hits>702</wiki_hits>
-  <wiki_id_cat>36</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>753</wiki_con_id_contents>
-  <wiki_con_id_article>118</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_index-des-articles">Index des articles</a></li><li><a href="#paragraph_lire-un-article">Lire un article</a><ol class="wiki_list_2"><li><a href="#paragraph_noter-un-article">Noter un article</a></li><li><a href="#paragraph_commenter-un-article">Commenter un article</a></li></ol></li><li><a href="#paragraph_creer-un-article">Créer un article</a><ol class="wiki_list_2"><li><a href="#paragraph_diviser-son-article-en-pages">Diviser son article en pages</a></li><li><a href="#paragraph_articles-en-attentes">Articles en attentes</a></li></ol></li><li><a href="#paragraph_contribution-d-un-article">Contribution d'un article</a></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>86.204.211.123</wiki_user_ip>
-  <wiki_timestamp>1358179365</wiki_timestamp>
-  <wiki_content>Ici nous verrons comment marche le module Articles du côté utilisateur.
+  <wiki_articles_fields>
+    <wiki_id>118</wiki_id>
+    <wiki_id_contents>753</wiki_id_contents>
+    <wiki_title>Utilisation du module Articles</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-articles</wiki_encoded_title>
+    <wiki_hits>702</wiki_hits>
+    <wiki_id_cat>36</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>753</wiki_con_id_contents>
+    <wiki_con_id_article>118</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_index-des-articles">Index des articles</a></li><li><a href="#paragraph_lire-un-article">Lire un article</a><ol class="wiki_list_2"><li><a href="#paragraph_noter-un-article">Noter un article</a></li><li><a href="#paragraph_commenter-un-article">Commenter un article</a></li></ol></li><li><a href="#paragraph_creer-un-article">Créer un article</a><ol class="wiki_list_2"><li><a href="#paragraph_diviser-son-article-en-pages">Diviser son article en pages</a></li><li><a href="#paragraph_articles-en-attentes">Articles en attentes</a></li></ol></li><li><a href="#paragraph_contribution-d-un-article">Contribution d'un article</a></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.211.123</wiki_user_ip>
+    <wiki_timestamp>1358179365</wiki_timestamp>
+    <wiki_content>Ici nous verrons comment marche le module Articles du côté utilisateur.
 
 -- Index des articles --
 
@@ -117,4 +120,5 @@ Vous pouvez soumettre un article à contribution. Nous ne verrons pas tout en dét
 -- Conclusion --
 
 Comme vous l'avez vu, le module Articles n'est pas très compliqué et est un bon moyen de promouvoir des tutoriels, ... De plus, étant soumis à contribution il vous permettra de dynamiser votre site en proposant aux membres de rédiger leurs propres articles.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>292</wiki_id>
-  <wiki_id_contents>1349</wiki_id_contents>
-  <wiki_title>Architecture technique de PHPBoost</wiki_title>
-  <wiki_encoded_title>architecture-technique-de-phpboost</wiki_encoded_title>
-  <wiki_hits>1525</wiki_hits>
-  <wiki_id_cat>1</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1349</wiki_con_id_contents>
-  <wiki_con_id_article>292</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_architecture-generale">Architecture générale</a><ol class="wiki_list_2"><li><a href="#paragraph_definition-d-une-couche">Définition d'une couche</a></li><li><a href="#paragraph_les-differentes-couches-presentes-dans-phpboost">Les différentes couches présentes dans PHPBoost</a></li></ol></li><li><a href="#paragraph_couche-client">Couche client</a><ol class="wiki_list_2"><li><a href="#paragraph_comment-l-utilisateur-obtient-il-la-page-qu-il-souhaite">Comment l'utilisateur obtient-il la page qu'il souhaite ?</a></li><li><a href="#paragraph_l-interchangeabilite-de-l-interface">L'interchangeabilité de l'interface</a></li><li><a href="#paragraph_resume-de-la-couche-presentation">Résumé de la couche présentation</a></li><li><a href="#paragraph_en-savoir-plus">En savoir plus</a></li></ol></li><li><a href="#paragraph_couche-application">Couche application</a><ol class="wiki_list_2"><li><a href="#paragraph_reception-de-la-requete">Réception de la requête</a></li><li><a href="#paragraph_traitement-de-la-requete">Traitement de la requête</a><ol class="wiki_list_3"><li><a href="#paragraph_le-noyau">Le noyau</a></li><li><a href="#paragraph_le-framework">Le framework</a></li><li><a href="#paragraph_les-modules">Les modules</a></li></ol></li><li><a href="#paragraph_en-savoir-plus">En savoir plus</a></li></ol></li><li><a href="#paragraph_couche-base-de-donnees">Couche base de données</a><ol class="wiki_list_2"><li><a href="#paragraph_un-sgbd-c-est-quoi">Un SGBD c'est quoi ?</a></li><li><a href="#paragraph_comment-communique-t-on-avec-lui">Comment communique-t-on avec lui ?</a></li><li><a href="#paragraph_phpboost-est-il-compatible-avec-d-autres-sgbd-que-mysql">PHPBoost est-il compatible avec d'autres SGBD que MySQL ?</a></li><li><a href="#paragraph_comment-eviter-de-multiplier-les-acces-au-sgbd">Comment éviter de multiplier les accès au SGBD ?</a></li><li><a href="#paragraph_en-savoir-plus">En savoir plus</a></li></ol></li><li><a href="#paragraph_conclusion">Conclusion</a><ol class="wiki_list_2"><li><a href="#paragraph_recapitulatif">Récapitulatif</a></li><li><a href="#paragraph_pourquoi-un-tel-decoupage">Pourquoi un tel découpage ?</a></li><li><a href="#paragraph_en-savoir-plus">En savoir plus</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1406668246</wiki_timestamp>
-  <wiki_content>-- Introduction --
+  <wiki_articles_fields>
+    <wiki_id>292</wiki_id>
+    <wiki_id_contents>1349</wiki_id_contents>
+    <wiki_title>Architecture technique de PHPBoost</wiki_title>
+    <wiki_encoded_title>architecture-technique-de-phpboost</wiki_encoded_title>
+    <wiki_hits>1525</wiki_hits>
+    <wiki_id_cat>1</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1349</wiki_con_id_contents>
+    <wiki_con_id_article>292</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_architecture-generale">Architecture générale</a><ol class="wiki_list_2"><li><a href="#paragraph_definition-d-une-couche">Définition d'une couche</a></li><li><a href="#paragraph_les-differentes-couches-presentes-dans-phpboost">Les différentes couches présentes dans PHPBoost</a></li></ol></li><li><a href="#paragraph_couche-client">Couche client</a><ol class="wiki_list_2"><li><a href="#paragraph_comment-l-utilisateur-obtient-il-la-page-qu-il-souhaite">Comment l'utilisateur obtient-il la page qu'il souhaite ?</a></li><li><a href="#paragraph_l-interchangeabilite-de-l-interface">L'interchangeabilité de l'interface</a></li><li><a href="#paragraph_resume-de-la-couche-presentation">Résumé de la couche présentation</a></li><li><a href="#paragraph_en-savoir-plus">En savoir plus</a></li></ol></li><li><a href="#paragraph_couche-application">Couche application</a><ol class="wiki_list_2"><li><a href="#paragraph_reception-de-la-requete">Réception de la requête</a></li><li><a href="#paragraph_traitement-de-la-requete">Traitement de la requête</a><ol class="wiki_list_3"><li><a href="#paragraph_le-noyau">Le noyau</a></li><li><a href="#paragraph_le-framework">Le framework</a></li><li><a href="#paragraph_les-modules">Les modules</a></li></ol></li><li><a href="#paragraph_en-savoir-plus">En savoir plus</a></li></ol></li><li><a href="#paragraph_couche-base-de-donnees">Couche base de données</a><ol class="wiki_list_2"><li><a href="#paragraph_un-sgbd-c-est-quoi">Un SGBD c'est quoi ?</a></li><li><a href="#paragraph_comment-communique-t-on-avec-lui">Comment communique-t-on avec lui ?</a></li><li><a href="#paragraph_phpboost-est-il-compatible-avec-d-autres-sgbd-que-mysql">PHPBoost est-il compatible avec d'autres SGBD que MySQL ?</a></li><li><a href="#paragraph_comment-eviter-de-multiplier-les-acces-au-sgbd">Comment éviter de multiplier les accès au SGBD ?</a></li><li><a href="#paragraph_en-savoir-plus">En savoir plus</a></li></ol></li><li><a href="#paragraph_conclusion">Conclusion</a><ol class="wiki_list_2"><li><a href="#paragraph_recapitulatif">Récapitulatif</a></li><li><a href="#paragraph_pourquoi-un-tel-decoupage">Pourquoi un tel découpage ?</a></li><li><a href="#paragraph_en-savoir-plus">En savoir plus</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1406668246</wiki_timestamp>
+    <wiki_content>-- Introduction --
 
 Comme toute application Web, PHPBoost est naturellement structuré en deux principales couches, le Web étant basé sur le modèle client-serveur. En effet sur une telle application intervient un traitement côté serveur (générateur de page) et un traitement côté client (navigateur web). On distingue donc aisément deux niveaux. En allant plus loin, ce que nous ferons dans la suite, nous verrons qu'en réalité le traitement côté serveur se décompose lui-même en plusieurs couches. Nous aboutirons à une architecture n tiers (en anglais), à comprendre au sens de n étages ou n couches. 
 
@@ -234,4 +237,5 @@ Le découpage en couches semble a priori complexe à mettre en place et peu utile.
 --- En savoir plus ---
 
 Ce dossier contient beaucoup de notions qui sont assez complexes techniquement. Si quelque chose n'est pas clair, n'hésitez pas à en discuter dans les commentaires de l'article par exemple.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

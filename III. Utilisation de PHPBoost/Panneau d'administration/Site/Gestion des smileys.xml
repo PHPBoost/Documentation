@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>68</wiki_id>
-  <wiki_id_contents>94</wiki_id_contents>
-  <wiki_title>Gestion des smileys</wiki_title>
-  <wiki_encoded_title>gestion-des-smileys</wiki_encoded_title>
-  <wiki_hits>894</wiki_hits>
-  <wiki_id_cat>15</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>94</wiki_con_id_contents>
-  <wiki_con_id_article>68</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-smileys">Gestion des smileys</a></li><li><a href="#paragraph_ajout-d-un-smiley">Ajout d'un smiley</a><ol class="wiki_list_2"><li><a href="#paragraph_uploader-un-smiley">Uploader un smiley</a></li><li><a href="#paragraph_ajouter-un-smiley">Ajouter un smiley</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>81.51.228.217</wiki_user_ip>
-  <wiki_timestamp>1345829531</wiki_timestamp>
-  <wiki_content>-- Gestion des smileys --
+  <wiki_articles_fields>
+    <wiki_id>68</wiki_id>
+    <wiki_id_contents>94</wiki_id_contents>
+    <wiki_title>Gestion des smileys</wiki_title>
+    <wiki_encoded_title>gestion-des-smileys</wiki_encoded_title>
+    <wiki_hits>894</wiki_hits>
+    <wiki_id_cat>15</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>94</wiki_con_id_contents>
+    <wiki_con_id_article>68</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-smileys">Gestion des smileys</a></li><li><a href="#paragraph_ajout-d-un-smiley">Ajout d'un smiley</a><ol class="wiki_list_2"><li><a href="#paragraph_uploader-un-smiley">Uploader un smiley</a></li><li><a href="#paragraph_ajouter-un-smiley">Ajouter un smiley</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>81.51.228.217</wiki_user_ip>
+    <wiki_timestamp>1345829531</wiki_timestamp>
+    <wiki_content>-- Gestion des smileys --
 
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/manage.png[/img][/align]
 
@@ -61,4 +64,5 @@ Pour cela vous devez :
 [*] donner un code au smiley (ex : :ne)
 [*] choisir le smiley parmi ceux de la liste disponible
 [/list]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>74</wiki_id>
-  <wiki_id_contents>1315</wiki_id_contents>
-  <wiki_title>Gestion des fichiers</wiki_title>
-  <wiki_encoded_title>gestion-des-fichiers</wiki_encoded_title>
-  <wiki_hits>1076</wiki_hits>
-  <wiki_id_cat>18</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1315</wiki_con_id_contents>
-  <wiki_con_id_article>74</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-fichiers">Configuration des fichiers</a></li><li><a href="#paragraph_gestion-des-fichiers">Gestion des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_fonctions-disponibles">Fonctions disponibles</a><ol class="wiki_list_3"><li><a href="#paragraph_supprimer-tout-le-contenu-du-dossier-d-un-membre">Supprimer tout le contenu du dossier d'un membre</a></li><li><a href="#paragraph_ajout-de-repertoires">Ajout de répertoires</a></li><li><a href="#paragraph_ajout-de-fichiers">Ajout de fichiers</a></li><li><a href="#paragraph_suppression-de-fichiers-ou-de-repertoires">Suppression de fichiers ou de répertoires</a></li><li><a href="#paragraph_dition-de-repertoire-ou-de-fichiers">Édition de répertoire ou de fichiers</a></li></ol></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>83.204.255.203</wiki_user_ip>
-  <wiki_timestamp>1405484611</wiki_timestamp>
-  <wiki_content>Au niveau de l'administration, vous allez avoir accès à tous les fichiers que les utilisateurs ont déposé dans leur zone, mais également créer d'autres répertoires pour gérer vos propres fichiers, afin d'éviter de passer par le transfert de fichier FTP.
+  <wiki_articles_fields>
+    <wiki_id>74</wiki_id>
+    <wiki_id_contents>1315</wiki_id_contents>
+    <wiki_title>Gestion des fichiers</wiki_title>
+    <wiki_encoded_title>gestion-des-fichiers</wiki_encoded_title>
+    <wiki_hits>1076</wiki_hits>
+    <wiki_id_cat>18</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1315</wiki_con_id_contents>
+    <wiki_con_id_article>74</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-fichiers">Configuration des fichiers</a></li><li><a href="#paragraph_gestion-des-fichiers">Gestion des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_fonctions-disponibles">Fonctions disponibles</a><ol class="wiki_list_3"><li><a href="#paragraph_supprimer-tout-le-contenu-du-dossier-d-un-membre">Supprimer tout le contenu du dossier d'un membre</a></li><li><a href="#paragraph_ajout-de-repertoires">Ajout de répertoires</a></li><li><a href="#paragraph_ajout-de-fichiers">Ajout de fichiers</a></li><li><a href="#paragraph_suppression-de-fichiers-ou-de-repertoires">Suppression de fichiers ou de répertoires</a></li><li><a href="#paragraph_dition-de-repertoire-ou-de-fichiers">Édition de répertoire ou de fichiers</a></li></ol></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>83.204.255.203</wiki_user_ip>
+    <wiki_timestamp>1405484611</wiki_timestamp>
+    <wiki_content>Au niveau de l'administration, vous allez avoir accès à tous les fichiers que les utilisateurs ont déposé dans leur zone, mais également créer d'autres répertoires pour gérer vos propres fichiers, afin d'éviter de passer par le transfert de fichier FTP.
 
 [style=notice]Tous les fichiers déposés par les membres, ou bien au niveau de cette zone d'upload par vous même, se trouvent sur votre serveur dans le répertoire ../upload [/style]
 
@@ -79,4 +82,5 @@ Il suffit de cliquer sur [html]&lt;i class="fa fa-delete"&gt;&lt;/i&gt;[/html] a
 ---- Édition de répertoire ou de fichiers ----
 
 Il suffit de cliquer sur [html]&lt;i class="fa fa-edit"&gt;&lt;/i&gt;[/html] au niveau de votre fichier ou de votre répertoire et de le renommer comme vous le souhaitez.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

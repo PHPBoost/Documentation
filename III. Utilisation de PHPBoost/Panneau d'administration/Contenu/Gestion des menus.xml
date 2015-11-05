@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>113</wiki_id>
-  <wiki_id_contents>1318</wiki_id_contents>
-  <wiki_title>Gestion des menus</wiki_title>
-  <wiki_encoded_title>gestion-des-menus</wiki_encoded_title>
-  <wiki_hits>971</wiki_hits>
-  <wiki_id_cat>18</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1318</wiki_con_id_contents>
-  <wiki_con_id_article>113</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-menus">Gestion des menus</a></li><li><a href="#paragraph_ajouter-un-menu">Ajouter un menu</a><ol class="wiki_list_2"><li><a href="#paragraph_ajout-menu-de-lien">Ajout menu de lien</a></li><li><a href="#paragraph_ajout-menu-de-contenu">Ajout menu de contenu</a></li><li><a href="#paragraph_ajout-de-flux">Ajout de flux</a></li><li><a href="#paragraph_les-filtres">Les filtres</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.10</wiki_user_ip>
-  <wiki_timestamp>1405504629</wiki_timestamp>
-  <wiki_content>La page d'accueil contient par défaut des blocs (ou menus) en fonction des modules que vous avez installés, ils se trouvent à gauche et à droite en haut et en bas de la page selon vos préférences.
+  <wiki_articles_fields>
+    <wiki_id>113</wiki_id>
+    <wiki_id_contents>1318</wiki_id_contents>
+    <wiki_title>Gestion des menus</wiki_title>
+    <wiki_encoded_title>gestion-des-menus</wiki_encoded_title>
+    <wiki_hits>971</wiki_hits>
+    <wiki_id_cat>18</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1318</wiki_con_id_contents>
+    <wiki_con_id_article>113</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-menus">Gestion des menus</a></li><li><a href="#paragraph_ajouter-un-menu">Ajouter un menu</a><ol class="wiki_list_2"><li><a href="#paragraph_ajout-menu-de-lien">Ajout menu de lien</a></li><li><a href="#paragraph_ajout-menu-de-contenu">Ajout menu de contenu</a></li><li><a href="#paragraph_ajout-de-flux">Ajout de flux</a></li><li><a href="#paragraph_les-filtres">Les filtres</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.10</wiki_user_ip>
+    <wiki_timestamp>1405504629</wiki_timestamp>
+    <wiki_content>La page d'accueil contient par défaut des blocs (ou menus) en fonction des modules que vous avez installés, ils se trouvent à gauche et à droite en haut et en bas de la page selon vos préférences.
 
 Ces menus peuvent être déplacés comme bon vous semble, et de nouveaux peuvent également être crées afin de personnaliser au maximum votre site.
 
@@ -105,4 +108,5 @@ Vous pouvez créer un menu contenant l'un des flux de votre site.
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/menus/filters.jpg[/img][/align]
 
 Les filtres vous permettent de définir sur quelle(s) page(s) devra/devront apparaître vos menus. Que ce soit sur des pages statiques, ou bien sur un ou des modules particulier.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

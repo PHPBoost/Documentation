@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>140</wiki_id>
-  <wiki_id_contents>473</wiki_id_contents>
-  <wiki_title>PHPBoost 4.0</wiki_title>
-  <wiki_encoded_title>phpboost-4-0</wiki_encoded_title>
-  <wiki_hits>1270</wiki_hits>
-  <wiki_id_cat>14</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>473</wiki_con_id_contents>
-  <wiki_con_id_article>140</wiki_con_id_article>
-  <wiki_menu></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>90.40.105.71</wiki_user_ip>
-  <wiki_timestamp>1353689443</wiki_timestamp>
-  <wiki_content>[b]Framework :[/b]
+  <wiki_articles_fields>
+    <wiki_id>140</wiki_id>
+    <wiki_id_contents>473</wiki_id_contents>
+    <wiki_title>PHPBoost 4.0</wiki_title>
+    <wiki_encoded_title>phpboost-4-0</wiki_encoded_title>
+    <wiki_hits>1270</wiki_hits>
+    <wiki_id_cat>14</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>473</wiki_con_id_contents>
+    <wiki_con_id_article>140</wiki_con_id_article>
+    <wiki_menu></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>90.40.105.71</wiki_user_ip>
+    <wiki_timestamp>1353689443</wiki_timestamp>
+    <wiki_content>[b]Framework :[/b]
 
 [list]
 [*] [color=red]Nouveauté :[/color] Passage à PHP5 de l'ensemble du framework.
@@ -238,4 +241,5 @@
 [*] Gestion des archives avec tries sur les types de newsletter.
 [*] Inscription aux newsletters dès l'enregistrement/l'édition d'un membre
 [/list]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

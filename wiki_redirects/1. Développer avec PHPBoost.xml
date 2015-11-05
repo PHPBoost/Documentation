@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_redirect>
-  <wiki_id>5</wiki_id>
-  <wiki_id_contents>0</wiki_id_contents>
-  <wiki_title>1. Développer avec PHPBoost</wiki_title>
-  <wiki_encoded_title>1-developper-avec-phpboost</wiki_encoded_title>
-  <wiki_hits>207</wiki_hits>
-  <wiki_id_cat>5</wiki_id_cat>
-  <wiki_is_cat>1</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>159</wiki_redirect>
-  <wiki_auth></wiki_auth>
+  <wiki_articles_fields>
+    <wiki_id>5</wiki_id>
+    <wiki_id_contents>0</wiki_id_contents>
+    <wiki_title>1. Développer avec PHPBoost</wiki_title>
+    <wiki_encoded_title>1-developper-avec-phpboost</wiki_encoded_title>
+    <wiki_hits>207</wiki_hits>
+    <wiki_id_cat>5</wiki_id_cat>
+    <wiki_is_cat>1</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>159</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
 </wiki_redirect>

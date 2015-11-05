@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>134</wiki_id>
-  <wiki_id_contents>773</wiki_id_contents>
-  <wiki_title>Gestion des utilisateurs</wiki_title>
-  <wiki_encoded_title>gestion-des-utilisateurs</wiki_encoded_title>
-  <wiki_hits>1164</wiki_hits>
-  <wiki_id_cat>17</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>773</wiki_con_id_contents>
-  <wiki_con_id_article>134</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-membres">Gestion des membres</a></li><li><a href="#paragraph_ajouter-un-membre">Ajouter un membre</a></li><li><a href="#paragraph_configuration-des-membres">Configuration des membres</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-des-membres">Configuration des membres</a></li><li><a href="#paragraph_gestion-des-avatars">Gestion des avatars</a></li><li><a href="#paragraph_gestion-des-autorisations">Gestion des autorisations</a></li><li><a href="#paragraph_message-a-tous-les-membres">Message à tous les membres</a></li><li><a href="#paragraph_reglement-d-inscription">Règlement d'inscription</a></li></ol></li><li><a href="#paragraph_gestion-des-sanctions">Gestion des sanctions</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-avertissements">Gestion des avertissements</a></li><li><a href="#paragraph_gestion-des-sanctions">Gestion des sanctions</a></li><li><a href="#paragraph_gestion-des-bannissements">Gestion des bannissements</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1466</wiki_user_id>
-  <wiki_user_ip>90.55.70.218</wiki_user_ip>
-  <wiki_timestamp>1358190246</wiki_timestamp>
-  <wiki_content>PHPBoost propose un système de complet de gestion des membres. Ce système repose sur :
+  <wiki_articles_fields>
+    <wiki_id>134</wiki_id>
+    <wiki_id_contents>773</wiki_id_contents>
+    <wiki_title>Gestion des utilisateurs</wiki_title>
+    <wiki_encoded_title>gestion-des-utilisateurs</wiki_encoded_title>
+    <wiki_hits>1164</wiki_hits>
+    <wiki_id_cat>17</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>773</wiki_con_id_contents>
+    <wiki_con_id_article>134</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-membres">Gestion des membres</a></li><li><a href="#paragraph_ajouter-un-membre">Ajouter un membre</a></li><li><a href="#paragraph_configuration-des-membres">Configuration des membres</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-des-membres">Configuration des membres</a></li><li><a href="#paragraph_gestion-des-avatars">Gestion des avatars</a></li><li><a href="#paragraph_gestion-des-autorisations">Gestion des autorisations</a></li><li><a href="#paragraph_message-a-tous-les-membres">Message à tous les membres</a></li><li><a href="#paragraph_reglement-d-inscription">Règlement d'inscription</a></li></ol></li><li><a href="#paragraph_gestion-des-sanctions">Gestion des sanctions</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-avertissements">Gestion des avertissements</a></li><li><a href="#paragraph_gestion-des-sanctions">Gestion des sanctions</a></li><li><a href="#paragraph_gestion-des-bannissements">Gestion des bannissements</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1466</wiki_user_id>
+    <wiki_user_ip>90.55.70.218</wiki_user_ip>
+    <wiki_timestamp>1358190246</wiki_timestamp>
+    <wiki_content>PHPBoost propose un système de complet de gestion des membres. Ce système repose sur :
 [list]
 	[*] La gestion globale des membres
 	[*] L'ajout manuel de membres
@@ -166,4 +169,5 @@ Attribution d'un bannissement à un membre avec choix de la durée du bannissement
 [style=notice]
 Pour les sanctions et bannissements, vous disposez aussi de la possibilité d'écrire un message à l'attention du membre, pour lui expliquer les raisons de la modération.
 [/style]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

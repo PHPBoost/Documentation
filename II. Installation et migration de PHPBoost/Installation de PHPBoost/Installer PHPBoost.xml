@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>104</wiki_id>
-  <wiki_id_contents>1242</wiki_id_contents>
-  <wiki_title>Installer PHPBoost</wiki_title>
-  <wiki_encoded_title>installer-phpboost</wiki_encoded_title>
-  <wiki_hits>3737</wiki_hits>
-  <wiki_id_cat>49</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1242</wiki_con_id_contents>
-  <wiki_con_id_article>104</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_installation">Installation</a><ol class="wiki_list_2"><li><a href="#paragraph_preambule">Préambule</a></li><li><a href="#paragraph_acceptation-de-la-licence">Acceptation de la licence</a></li><li><a href="#paragraph_configuration-du-serveur">Configuration du serveur</a><ol class="wiki_list_3"><li><a href="#paragraph_version-de-php">Version de PHP</a></li><li><a href="#paragraph_extensions">Extensions</a></li><li><a href="#paragraph_autorisations-des-dossiers">Autorisations des dossiers</a></li></ol></li><li><a href="#paragraph_configuration-de-la-base-de-donnees">Configuration de la base de données</a><ol class="wiki_list_3"><li><a href="#paragraph_parametres-d-acces-au-sgbd">Paramètres d'accès au SGBD</a></li><li><a href="#paragraph_proprietes-de-la-base-de-donnees">Propriétés de la base de données</a></li></ol></li><li><a href="#paragraph_configuration-du-site">Configuration du site</a></li><li><a href="#paragraph_compte-administrateur">Compte Administrateur</a></li><li><a href="#paragraph_fin-de-l-installation">Fin de l'installation</a></li></ol></li><li><a href="#paragraph_configurez-votre-site">Configurez votre site !</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5193</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1404999089</wiki_timestamp>
-  <wiki_content>Vous avez décidé d'installer PHPBoost pour réaliser votre site internet ? 
+  <wiki_articles_fields>
+    <wiki_id>104</wiki_id>
+    <wiki_id_contents>1242</wiki_id_contents>
+    <wiki_title>Installer PHPBoost</wiki_title>
+    <wiki_encoded_title>installer-phpboost</wiki_encoded_title>
+    <wiki_hits>3737</wiki_hits>
+    <wiki_id_cat>49</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1242</wiki_con_id_contents>
+    <wiki_con_id_article>104</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_installation">Installation</a><ol class="wiki_list_2"><li><a href="#paragraph_preambule">Préambule</a></li><li><a href="#paragraph_acceptation-de-la-licence">Acceptation de la licence</a></li><li><a href="#paragraph_configuration-du-serveur">Configuration du serveur</a><ol class="wiki_list_3"><li><a href="#paragraph_version-de-php">Version de PHP</a></li><li><a href="#paragraph_extensions">Extensions</a></li><li><a href="#paragraph_autorisations-des-dossiers">Autorisations des dossiers</a></li></ol></li><li><a href="#paragraph_configuration-de-la-base-de-donnees">Configuration de la base de données</a><ol class="wiki_list_3"><li><a href="#paragraph_parametres-d-acces-au-sgbd">Paramètres d'accès au SGBD</a></li><li><a href="#paragraph_proprietes-de-la-base-de-donnees">Propriétés de la base de données</a></li></ol></li><li><a href="#paragraph_configuration-du-site">Configuration du site</a></li><li><a href="#paragraph_compte-administrateur">Compte Administrateur</a></li><li><a href="#paragraph_fin-de-l-installation">Fin de l'installation</a></li></ol></li><li><a href="#paragraph_configurez-votre-site">Configurez votre site !</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1404999089</wiki_timestamp>
+    <wiki_content>Vous avez décidé d'installer PHPBoost pour réaliser votre site internet ? 
 Tout d'abord, merci de faire confiance à PHPBoost et nous espérons que vous en serez satisfait.
 
 Installer PHPBoost est très simple. Cet article va vous aider en vous apportant quelques notions. Après avoir transféré les fichiers de PHPBoost sur votre serveur, l'installation vous prendra moins de 5 minutes.
@@ -199,4 +202,5 @@ Votre site est désormais installé,il va donc falloir maintenant le configurer !
 [link=configurez-votre-site]Cet article[/link] a été réalisé pour vous expliquer clairement comment bien configurer votre site PHPBoost. 
 
 [align=center][b]Merci d'utiliser PHPBoost ! Toute l'équipe de PHPBoost souhaite longue vie à votre site ![/b][/align]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

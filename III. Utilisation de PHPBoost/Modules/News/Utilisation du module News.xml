@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>259</wiki_id>
-  <wiki_id_contents>837</wiki_id_contents>
-  <wiki_title>Utilisation du module News</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-news</wiki_encoded_title>
-  <wiki_hits>623</wiki_hits>
-  <wiki_id_cat>39</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>837</wiki_con_id_contents>
-  <wiki_con_id_article>259</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_lire-une-news">Lire une news</a><ol class="wiki_list_2"><li><a href="#paragraph_news-normale">News normale</a></li><li><a href="#paragraph_news-etendue">News étendue</a></li></ol></li><li><a href="#paragraph_creer-une-news">Créer une news</a><ol class="wiki_list_2"><li><a href="#paragraph_news-en-attente">News en attente</a></li></ol></li><li><a href="#paragraph_voir-les-news-d-une-categorie">Voir les news d'une catégorie</a></li><li><a href="#paragraph_poster-un-commentaire">Poster un commentaire</a></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1837</wiki_user_id>
-  <wiki_user_ip>24.201.132.222</wiki_user_ip>
-  <wiki_timestamp>1358733575</wiki_timestamp>
-  <wiki_content>L'utilisation de ce module est relativement aisée.
+  <wiki_articles_fields>
+    <wiki_id>259</wiki_id>
+    <wiki_id_contents>837</wiki_id_contents>
+    <wiki_title>Utilisation du module News</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-news</wiki_encoded_title>
+    <wiki_hits>623</wiki_hits>
+    <wiki_id_cat>39</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>837</wiki_con_id_contents>
+    <wiki_con_id_article>259</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_lire-une-news">Lire une news</a><ol class="wiki_list_2"><li><a href="#paragraph_news-normale">News normale</a></li><li><a href="#paragraph_news-etendue">News étendue</a></li></ol></li><li><a href="#paragraph_creer-une-news">Créer une news</a><ol class="wiki_list_2"><li><a href="#paragraph_news-en-attente">News en attente</a></li></ol></li><li><a href="#paragraph_voir-les-news-d-une-categorie">Voir les news d'une catégorie</a></li><li><a href="#paragraph_poster-un-commentaire">Poster un commentaire</a></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1837</wiki_user_id>
+    <wiki_user_ip>24.201.132.222</wiki_user_ip>
+    <wiki_timestamp>1358733575</wiki_timestamp>
+    <wiki_content>L'utilisation de ce module est relativement aisée.
 
 -- Lire une news --
 
@@ -85,4 +88,5 @@ Pour ajouter un commentaire ou lire les commentaires d'une news, il suffit de cl
 
 Un système de flux RSS est mis en place sur le module de news pour vous permettre d'être au courant des nouveautés sans vous connecter sur le site.
 Cliquez sur l'icône RSS et votre navigateur vous proposera de vous abonner à ce flux RSS.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

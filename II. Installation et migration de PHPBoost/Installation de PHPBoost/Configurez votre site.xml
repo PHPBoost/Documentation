@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>138</wiki_id>
-  <wiki_id_contents>1397</wiki_id_contents>
-  <wiki_title>Configurez votre site</wiki_title>
-  <wiki_encoded_title>configurez-votre-site</wiki_encoded_title>
-  <wiki_hits>1752</wiki_hits>
-  <wiki_id_cat>49</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1397</wiki_con_id_contents>
-  <wiki_con_id_article>138</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_mettre-le-site-en-maintenance">Mettre le site en maintenance</a></li><li><a href="#paragraph_configuration-g-n-rale-du-site">Configuration générale du site</a></li><li><a href="#paragraph_comment-les-visiteurs-vont-s-inscrire">Comment les visiteurs vont s'inscrire ?</a></li><li><a href="#paragraph_quels-modules-peuvent-tre-vus-par-quel-type-de-membres">Quels modules peuvent être vus par quel type de membres ?</a></li><li><a href="#paragraph_quel-s-th-me-s-voulez-vous-utiliser">Quel(s) thème(s) voulez vous utiliser ?</a></li><li><a href="#paragraph_configurer-les-modules">Configurer les modules</a></li><li><a href="#paragraph_supprimer-la-maintenance-du-site">Supprimer la maintenance du site</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5083</wiki_user_id>
-  <wiki_user_ip>90.16.36.10</wiki_user_ip>
-  <wiki_timestamp>1423580312</wiki_timestamp>
-  <wiki_content>Vous venez d'installer votre site avec PHPBoost ? On ne vous avait pas menti c'était très simple. 
+  <wiki_articles_fields>
+    <wiki_id>138</wiki_id>
+    <wiki_id_contents>1397</wiki_id_contents>
+    <wiki_title>Configurez votre site</wiki_title>
+    <wiki_encoded_title>configurez-votre-site</wiki_encoded_title>
+    <wiki_hits>1752</wiki_hits>
+    <wiki_id_cat>49</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1397</wiki_con_id_contents>
+    <wiki_con_id_article>138</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_mettre-le-site-en-maintenance">Mettre le site en maintenance</a></li><li><a href="#paragraph_configuration-g-n-rale-du-site">Configuration générale du site</a></li><li><a href="#paragraph_comment-les-visiteurs-vont-s-inscrire">Comment les visiteurs vont s'inscrire ?</a></li><li><a href="#paragraph_quels-modules-peuvent-tre-vus-par-quel-type-de-membres">Quels modules peuvent être vus par quel type de membres ?</a></li><li><a href="#paragraph_quel-s-th-me-s-voulez-vous-utiliser">Quel(s) thème(s) voulez vous utiliser ?</a></li><li><a href="#paragraph_configurer-les-modules">Configurer les modules</a></li><li><a href="#paragraph_supprimer-la-maintenance-du-site">Supprimer la maintenance du site</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>90.16.36.10</wiki_user_ip>
+    <wiki_timestamp>1423580312</wiki_timestamp>
+    <wiki_content>Vous venez d'installer votre site avec PHPBoost ? On ne vous avait pas menti c'était très simple. 
 
 Maintenant il vous reste 2 phases : 
 [list]
@@ -85,4 +88,5 @@ Il ne vous reste plus qu'à vous mettre au boulot pour le remplir.
 Et n'oubliez pas, pour toute question, consultez la documentation ou demandez sur le forum si vous ne trouvez pas !
 
 [align=center][b]Merci d'utiliser PHPBoost, bon courage et longue vie à votre site ![/b][/align]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>186</wiki_id>
-  <wiki_id_contents>926</wiki_id_contents>
-  <wiki_title>Utilisation du module Rapport de bugs</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-rapport-de-bugs</wiki_encoded_title>
-  <wiki_hits>801</wiki_hits>
-  <wiki_id_cat>50</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>926</wiki_con_id_contents>
-  <wiki_con_id_article>186</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_presentation-du-module">Présentation du module</a><ol class="wiki_list_2"><li><a href="#paragraph_bugs-non-resolus">Bugs non résolus</a></li><li><a href="#paragraph_bugs-resolus">Bugs résolus</a></li><li><a href="#paragraph_feuille-de-route">Feuille de route</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol></li><li><a href="#paragraph_rapporter-un-bug">Rapporter un bug</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>935</wiki_user_id>
-  <wiki_user_ip>89.90.175.161</wiki_user_ip>
-  <wiki_timestamp>1368007640</wiki_timestamp>
-  <wiki_content>Une fois le module "rapport de bugs" activé et configuré, il vous faudra le rendre accessible aux membres ayant une autorisation d'accès. Pour cela, vous pouvez créer un lien direct vers l'URL [code=text]http://monsite.com/bugtracker/[/code] dans un menu de liens par exemple.
+  <wiki_articles_fields>
+    <wiki_id>186</wiki_id>
+    <wiki_id_contents>926</wiki_id_contents>
+    <wiki_title>Utilisation du module Rapport de bugs</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-rapport-de-bugs</wiki_encoded_title>
+    <wiki_hits>801</wiki_hits>
+    <wiki_id_cat>50</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>926</wiki_con_id_contents>
+    <wiki_con_id_article>186</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_presentation-du-module">Présentation du module</a><ol class="wiki_list_2"><li><a href="#paragraph_bugs-non-resolus">Bugs non résolus</a></li><li><a href="#paragraph_bugs-resolus">Bugs résolus</a></li><li><a href="#paragraph_feuille-de-route">Feuille de route</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol></li><li><a href="#paragraph_rapporter-un-bug">Rapporter un bug</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1368007640</wiki_timestamp>
+    <wiki_content>Une fois le module "rapport de bugs" activé et configuré, il vous faudra le rendre accessible aux membres ayant une autorisation d'accès. Pour cela, vous pouvez créer un lien direct vers l'URL [code=text]http://monsite.com/bugtracker/[/code] dans un menu de liens par exemple.
 
 Seuls les membres ayant les autorisations nécessaires pourront accéder au module.
 
@@ -122,4 +125,5 @@ En fonction de la configuration du module, l'utilisateur pourra être averti par 
 Chaque MP contient un lien pointant vers la page du bug avec sa présentation et les commentaires (s'il y en a) qui ont été postés sur la fiche en présence.
 
 [img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/fiche_bug.jpg[/img]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

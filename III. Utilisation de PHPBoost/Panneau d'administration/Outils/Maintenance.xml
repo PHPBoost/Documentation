@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>86</wiki_id>
-  <wiki_id_contents>1345</wiki_id_contents>
-  <wiki_title>Maintenance</wiki_title>
-  <wiki_encoded_title>maintenance</wiki_encoded_title>
-  <wiki_hits>700</wiki_hits>
-  <wiki_id_cat>16</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1345</wiki_con_id_contents>
-  <wiki_con_id_article>86</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_maintenance">Maintenance</a><ol class="wiki_list_2"><li><a href="#paragraph_mettre-le-site-en-maintenance">Mettre le site en maintenance</a></li><li><a href="#paragraph_afficher-la-duree-de-la-maintenance">Afficher la durée de la maintenance</a></li><li><a href="#paragraph_afficher-la-duree-de-la-maintenance-a-l-administrateur">Afficher la durée de la maintenance à l'administrateur</a></li><li><a href="#paragraph_texte-a-afficher-lorsque-la-maintenance-du-site-est-en-cours">Texte à afficher lorsque la maintenance du site est en cours</a></li></ol></li><li><a href="#paragraph_choix-du-niveau-d-acces-au-site-pendant-la-maintenance">Choix du niveau d'accès au site pendant la maintenance</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1406663402</wiki_timestamp>
-  <wiki_content>-- Maintenance --
+  <wiki_articles_fields>
+    <wiki_id>86</wiki_id>
+    <wiki_id_contents>1345</wiki_id_contents>
+    <wiki_title>Maintenance</wiki_title>
+    <wiki_encoded_title>maintenance</wiki_encoded_title>
+    <wiki_hits>700</wiki_hits>
+    <wiki_id_cat>16</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1345</wiki_con_id_contents>
+    <wiki_con_id_article>86</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_maintenance">Maintenance</a><ol class="wiki_list_2"><li><a href="#paragraph_mettre-le-site-en-maintenance">Mettre le site en maintenance</a></li><li><a href="#paragraph_afficher-la-duree-de-la-maintenance">Afficher la durée de la maintenance</a></li><li><a href="#paragraph_afficher-la-duree-de-la-maintenance-a-l-administrateur">Afficher la durée de la maintenance à l'administrateur</a></li><li><a href="#paragraph_texte-a-afficher-lorsque-la-maintenance-du-site-est-en-cours">Texte à afficher lorsque la maintenance du site est en cours</a></li></ol></li><li><a href="#paragraph_choix-du-niveau-d-acces-au-site-pendant-la-maintenance">Choix du niveau d'accès au site pendant la maintenance</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1406663402</wiki_timestamp>
+    <wiki_content>-- Maintenance --
 
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/maintain/config.png[/img][/align]
 
@@ -64,4 +67,5 @@ Vous pouvez choisir ce que la page de maintenance va afficher aux visiteurs. Vou
 -- Choix du niveau d'accès au site pendant la maintenance --
 
 Vous avez la possibilité d'autoriser l'accès à votre site par un ou plusieurs membres ou en fonction des rangs.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

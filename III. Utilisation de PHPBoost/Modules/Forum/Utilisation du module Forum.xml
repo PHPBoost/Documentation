@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>47</wiki_id>
-  <wiki_id_contents>849</wiki_id_contents>
-  <wiki_title>Utilisation du module Forum</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-forum</wiki_encoded_title>
-  <wiki_hits>1225</wiki_hits>
-  <wiki_id_cat>25</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>849</wiki_con_id_contents>
-  <wiki_con_id_article>47</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_accueil-du-forum">Accueil du forum</a></li><li><a href="#paragraph_les-categories-et-les-forums">Les catégories et les forums</a><ol class="wiki_list_2"><li><a href="#paragraph_les-categories">Les catégories</a></li><li><a href="#paragraph_les-forums">Les forums</a></li></ol></li><li><a href="#paragraph_creer-un-sujet-repondre-a-un-message">Créer un sujet / répondre à un message</a><ol class="wiki_list_2"><li><a href="#paragraph_creer-un-post">Créer un post</a></li><li><a href="#paragraph_creer-un-sondage">Créer un sondage</a></li><li><a href="#paragraph_repondre-a-un-sujet">Répondre à un sujet</a></li></ol></li><li><a href="#paragraph_outils-a-disposition">Outils à disposition</a><ol class="wiki_list_2"><li><a href="#paragraph_editer-citer-un-message">Editer / citer un message</a><ol class="wiki_list_3"><li><a href="#paragraph_editer-un-de-ses-messages">Editer un de ses messages</a></li><li><a href="#paragraph_citer-un-message">Citer un message</a></li></ol></li><li><a href="#paragraph_voir-les-derniers-messages-messages-non-lus">Voir les derniers messages/messages non lus</a><ol class="wiki_list_3"><li><a href="#paragraph_messages-non-lus">Messages non lus</a></li><li><a href="#paragraph_marquer-les-messages-comme-lus">Marquer les messages comme lus</a></li><li><a href="#paragraph_derniers-messages-lus">Derniers messages lus</a></li><li><a href="#paragraph_rechercher-un-message">Rechercher un message</a></li></ol></li><li><a href="#paragraph_suivre-un-topic-topic-regle-alerter-un-moderateur">Suivre un topic / Topic réglé / Alerter un modérateur</a><ol class="wiki_list_3"><li><a href="#paragraph_suivre-un-topic">Suivre un topic</a></li><li><a href="#paragraph_topic-regle">Topic réglé</a></li><li><a href="#paragraph_alerter-un-moderateur">Alerter un modérateur</a></li></ol></li></ol></li><li><a href="#paragraph_profil-des-membres">Profil des membres</a></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>935</wiki_user_id>
-  <wiki_user_ip>89.90.175.161</wiki_user_ip>
-  <wiki_timestamp>1358761753</wiki_timestamp>
-  <wiki_content>Le forum est un module vaste, son utilisation est au plus simple, voici une petite description.
+  <wiki_articles_fields>
+    <wiki_id>47</wiki_id>
+    <wiki_id_contents>849</wiki_id_contents>
+    <wiki_title>Utilisation du module Forum</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-forum</wiki_encoded_title>
+    <wiki_hits>1225</wiki_hits>
+    <wiki_id_cat>25</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>849</wiki_con_id_contents>
+    <wiki_con_id_article>47</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_accueil-du-forum">Accueil du forum</a></li><li><a href="#paragraph_les-categories-et-les-forums">Les catégories et les forums</a><ol class="wiki_list_2"><li><a href="#paragraph_les-categories">Les catégories</a></li><li><a href="#paragraph_les-forums">Les forums</a></li></ol></li><li><a href="#paragraph_creer-un-sujet-repondre-a-un-message">Créer un sujet / répondre à un message</a><ol class="wiki_list_2"><li><a href="#paragraph_creer-un-post">Créer un post</a></li><li><a href="#paragraph_creer-un-sondage">Créer un sondage</a></li><li><a href="#paragraph_repondre-a-un-sujet">Répondre à un sujet</a></li></ol></li><li><a href="#paragraph_outils-a-disposition">Outils à disposition</a><ol class="wiki_list_2"><li><a href="#paragraph_editer-citer-un-message">Editer / citer un message</a><ol class="wiki_list_3"><li><a href="#paragraph_editer-un-de-ses-messages">Editer un de ses messages</a></li><li><a href="#paragraph_citer-un-message">Citer un message</a></li></ol></li><li><a href="#paragraph_voir-les-derniers-messages-messages-non-lus">Voir les derniers messages/messages non lus</a><ol class="wiki_list_3"><li><a href="#paragraph_messages-non-lus">Messages non lus</a></li><li><a href="#paragraph_marquer-les-messages-comme-lus">Marquer les messages comme lus</a></li><li><a href="#paragraph_derniers-messages-lus">Derniers messages lus</a></li><li><a href="#paragraph_rechercher-un-message">Rechercher un message</a></li></ol></li><li><a href="#paragraph_suivre-un-topic-topic-regle-alerter-un-moderateur">Suivre un topic / Topic réglé / Alerter un modérateur</a><ol class="wiki_list_3"><li><a href="#paragraph_suivre-un-topic">Suivre un topic</a></li><li><a href="#paragraph_topic-regle">Topic réglé</a></li><li><a href="#paragraph_alerter-un-moderateur">Alerter un modérateur</a></li></ol></li></ol></li><li><a href="#paragraph_profil-des-membres">Profil des membres</a></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1358761753</wiki_timestamp>
+    <wiki_content>Le forum est un module vaste, son utilisation est au plus simple, voici une petite description.
 
 -- Accueil du forum --
 
@@ -241,4 +244,5 @@ Vous pourrez voir :
 [*] Les 10 sujets les plus populaires 
 [*]Les 10 sujets ayant eu le plus de réponses
 [/list]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

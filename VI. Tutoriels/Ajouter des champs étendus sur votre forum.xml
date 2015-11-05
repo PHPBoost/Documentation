@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>193</wiki_id>
-  <wiki_id_contents>954</wiki_id_contents>
-  <wiki_title>Ajouter des champs étendus sur votre forum</wiki_title>
-  <wiki_encoded_title>ajouter-des-champs-etendus-sur-votre-forum</wiki_encoded_title>
-  <wiki_hits>485</wiki_hits>
-  <wiki_id_cat>54</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>954</wiki_con_id_contents>
-  <wiki_con_id_article>193</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_creer-le-champ-etendu">Créer le champ étendu</a></li><li><a href="#paragraph_l-image">L' image</a></li><li><a href="#paragraph_recuperation-du-champ-etendu">Récupération du champ étendu</a></li><li><a href="#paragraph_l-affichage">L'affichage</a></li><li><a href="#paragraph_resultat">Résultat</a></li><li><a href="#paragraph_ca-ne-fonctionne-pas">Ca ne fonctionne pas !</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>4652</wiki_user_id>
-  <wiki_user_ip>31.32.177.198</wiki_user_ip>
-  <wiki_timestamp>1382998766</wiki_timestamp>
-  <wiki_content>-- Introduction --
+  <wiki_articles_fields>
+    <wiki_id>193</wiki_id>
+    <wiki_id_contents>954</wiki_id_contents>
+    <wiki_title>Ajouter des champs étendus sur votre forum</wiki_title>
+    <wiki_encoded_title>ajouter-des-champs-etendus-sur-votre-forum</wiki_encoded_title>
+    <wiki_hits>485</wiki_hits>
+    <wiki_id_cat>54</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>954</wiki_con_id_contents>
+    <wiki_con_id_article>193</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_creer-le-champ-etendu">Créer le champ étendu</a></li><li><a href="#paragraph_l-image">L' image</a></li><li><a href="#paragraph_recuperation-du-champ-etendu">Récupération du champ étendu</a></li><li><a href="#paragraph_l-affichage">L'affichage</a></li><li><a href="#paragraph_resultat">Résultat</a></li><li><a href="#paragraph_ca-ne-fonctionne-pas">Ca ne fonctionne pas !</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>4652</wiki_user_id>
+    <wiki_user_ip>31.32.177.198</wiki_user_ip>
+    <wiki_timestamp>1382998766</wiki_timestamp>
+    <wiki_content>-- Introduction --
 
 Le présent tutoriel a pour but de vous aider à ajouter simplement des champs personnalisés dans les messages du forum.
 Nous vous montrerons la procédure pas à pas simplement, en mettant en place un champ Facebook.
@@ -104,4 +107,5 @@ Assurez-vous d'avoir :
 	[*] Vidé le cache après avoir effectué toutes les manipulations
 	[*] Bien effectué toutes les opérations décrites ci-dessus
 [/list]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

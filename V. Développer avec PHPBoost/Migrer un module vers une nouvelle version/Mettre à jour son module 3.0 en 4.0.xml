@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>127</wiki_id>
-  <wiki_id_contents>901</wiki_id_contents>
-  <wiki_title>Mettre à jour son module 3.0 en 4.0</wiki_title>
-  <wiki_encoded_title>mettre-a-jour-son-module-3-0-en-4-0</wiki_encoded_title>
-  <wiki_hits>596</wiki_hits>
-  <wiki_id_cat>41</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>901</wiki_con_id_contents>
-  <wiki_con_id_article>127</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-de-configuration">Le fichier de configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-de-configuration-config-ini">Le fichier de configuration : config.ini</a></li><li><a href="#paragraph_le-fichier-de-description-desc-ini">Le fichier de description : desc.ini</a></li></ol></li><li><a href="#paragraph_creation-et-suppression-des-tables-du-module">Création et suppression des tables du module</a></li><li><a href="#paragraph_les-extensionpointprovider">Les ExtensionPointProvider</a></li><li><a href="#paragraph_changements-dans-l-api">Changements dans l'API</a><ol class="wiki_list_2"><li><a href="#paragraph_templates">Templates</a></li><li><a href="#paragraph_gestion-des-erreurs">Gestion des erreurs</a></li><li><a href="#paragraph_editeurs-de-texte">Editeurs de texte</a></li><li><a href="#paragraph_divers">Divers</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.11</wiki_user_ip>
-  <wiki_timestamp>1361203826</wiki_timestamp>
-  <wiki_content>[style=warning]Si aucun des éléments se trouvant dans cette documentation ne vous aide, référez-vous au forum et demandez de l'aide.[/style]
+  <wiki_articles_fields>
+    <wiki_id>127</wiki_id>
+    <wiki_id_contents>901</wiki_id_contents>
+    <wiki_title>Mettre à jour son module 3.0 en 4.0</wiki_title>
+    <wiki_encoded_title>mettre-a-jour-son-module-3-0-en-4-0</wiki_encoded_title>
+    <wiki_hits>596</wiki_hits>
+    <wiki_id_cat>41</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>901</wiki_con_id_contents>
+    <wiki_con_id_article>127</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-de-configuration">Le fichier de configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-de-configuration-config-ini">Le fichier de configuration : config.ini</a></li><li><a href="#paragraph_le-fichier-de-description-desc-ini">Le fichier de description : desc.ini</a></li></ol></li><li><a href="#paragraph_creation-et-suppression-des-tables-du-module">Création et suppression des tables du module</a></li><li><a href="#paragraph_les-extensionpointprovider">Les ExtensionPointProvider</a></li><li><a href="#paragraph_changements-dans-l-api">Changements dans l'API</a><ol class="wiki_list_2"><li><a href="#paragraph_templates">Templates</a></li><li><a href="#paragraph_gestion-des-erreurs">Gestion des erreurs</a></li><li><a href="#paragraph_editeurs-de-texte">Editeurs de texte</a></li><li><a href="#paragraph_divers">Divers</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.11</wiki_user_ip>
+    <wiki_timestamp>1361203826</wiki_timestamp>
+    <wiki_content>[style=warning]Si aucun des éléments se trouvant dans cette documentation ne vous aide, référez-vous au forum et demandez de l'aide.[/style]
 
 -- Le fichier de configuration --
 
@@ -116,4 +119,5 @@ $editor-&gt;display();[/code]
 - La classe utilisée dans la version 3.0 pour la pagination se nomme maintenant [code=php,0,1]DeprecatedPagination[/code]. Si vous souhaitez utiliser la nouvelle classe, référez vous à cet [link=systeme-de-pagination]article[/link].
 - Pour créer une redirection, utilisez [code=php,0,1]AppContext::get_response()-&gt;redirect()[/code]
 - L'utilisation de la fonction [code=php,0,1]import()[/code] n'est plus utile, les classes sont automatiquement chargées à travers l'autoload.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

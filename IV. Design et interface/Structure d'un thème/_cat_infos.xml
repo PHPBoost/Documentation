@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_cat>
-  <wiki_id>215</wiki_id>
-  <wiki_id_contents>1424</wiki_id_contents>
-  <wiki_title>Structure d'un thème</wiki_title>
-  <wiki_encoded_title>structure-d-un-theme</wiki_encoded_title>
-  <wiki_hits>3318</wiki_hits>
-  <wiki_id_cat>63</wiki_id_cat>
-  <wiki_is_cat>1</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_cat_id>63</wiki_cat_id>
-  <wiki_cat_id_parent>4</wiki_cat_id_parent>
-  <wiki_cat_article_id>215</wiki_cat_article_id>
-  <wiki_con_id_contents>1424</wiki_con_id_contents>
-  <wiki_con_id_article>215</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction </a></li><li><a href="#paragraph_la-racine-du-th-me">La racine du thème</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-body-tpl">Le fichier body.tpl</a></li><li><a href="#paragraph_le-fichier-config-ini">Le fichier config.ini</a></li><li><a href="#paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</a></li></ol></li><li><a href="#paragraph_le-r-pertoire-images">Le répertoire images</a></li><li><a href="#paragraph_le-r-pertoire-lang-et-le-fichier-desc-ini">Le répertoire lang et le fichier desc.ini</a></li><li><a href="#paragraph_le-r-pertoire-theme">Le répertoire theme</a><ol class="wiki_list_2"><li><a href="#paragraph_les-fichiers-css">Les fichiers CSS</a></li><li><a href="#paragraph_le-r-pertoire-images">Le répertoire images</a></li></ol></li><li><a href="#paragraph_le-r-pertoire-modules">Le répertoire modules</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5484</wiki_user_id>
-  <wiki_user_ip>86.217.134.235</wiki_user_ip>
-  <wiki_timestamp>1438956275</wiki_timestamp>
-  <wiki_content>Nous allons présenter, ici, la structure d'un thème PHPBoost 4.1. 
+  <wiki_articles_fields>
+    <wiki_id>215</wiki_id>
+    <wiki_id_contents>1424</wiki_id_contents>
+    <wiki_title>Structure d'un thème</wiki_title>
+    <wiki_encoded_title>structure-d-un-theme</wiki_encoded_title>
+    <wiki_hits>3318</wiki_hits>
+    <wiki_id_cat>63</wiki_id_cat>
+    <wiki_is_cat>1</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_cats_fields>
+    <wiki_cat_id>63</wiki_cat_id>
+    <wiki_cat_id_parent>4</wiki_cat_id_parent>
+    <wiki_cat_article_id>215</wiki_cat_article_id>
+  </wiki_cats_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1424</wiki_con_id_contents>
+    <wiki_con_id_article>215</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction </a></li><li><a href="#paragraph_la-racine-du-th-me">La racine du thème</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-body-tpl">Le fichier body.tpl</a></li><li><a href="#paragraph_le-fichier-config-ini">Le fichier config.ini</a></li><li><a href="#paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</a></li></ol></li><li><a href="#paragraph_le-r-pertoire-images">Le répertoire images</a></li><li><a href="#paragraph_le-r-pertoire-lang-et-le-fichier-desc-ini">Le répertoire lang et le fichier desc.ini</a></li><li><a href="#paragraph_le-r-pertoire-theme">Le répertoire theme</a><ol class="wiki_list_2"><li><a href="#paragraph_les-fichiers-css">Les fichiers CSS</a></li><li><a href="#paragraph_le-r-pertoire-images">Le répertoire images</a></li></ol></li><li><a href="#paragraph_le-r-pertoire-modules">Le répertoire modules</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5484</wiki_user_id>
+    <wiki_user_ip>86.217.134.235</wiki_user_ip>
+    <wiki_timestamp>1438956275</wiki_timestamp>
+    <wiki_content>Nous allons présenter, ici, la structure d'un thème PHPBoost 4.1. 
 
 [style=notice]Nous avons pris pour exemple le thème de base.[/style]
 
@@ -292,4 +297,5 @@ Chaque répertoire de module peut contenir les fichiers .tpl ou .css que l'on sou
 Pour en savoir plus sur la personnalisation d'un thème, vous pouvez consulter [b][link=personnaliser-un-theme]cet article[/link][/b].
 
 [style=notice]D'une manière générale il est préférable de modifier un thème que de modifier le module. Cela permet notamment de faciliter les mises à jours des modules.[/style]</wiki_content>
+  </wiki_contents_fields>
 </wiki_cat>

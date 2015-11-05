@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_cat>
-  <wiki_id>171</wiki_id>
-  <wiki_id_contents>1394</wiki_id_contents>
-  <wiki_title>Installation de PHPBoost</wiki_title>
-  <wiki_encoded_title>installation-de-phpboost</wiki_encoded_title>
-  <wiki_hits>4943</wiki_hits>
-  <wiki_id_cat>49</wiki_id_cat>
-  <wiki_is_cat>1</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_cat_id>49</wiki_cat_id>
-  <wiki_cat_id_parent>2</wiki_cat_id_parent>
-  <wiki_cat_article_id>171</wiki_cat_article_id>
-  <wiki_con_id_contents>1394</wiki_con_id_contents>
-  <wiki_con_id_article>171</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_avant-propos-et-explications">Avant propos et explications</a></li><li><a href="#paragraph_syst-me-d-exploitation">Système d'exploitation</a></li><li><a href="#paragraph_php">PHP</a></li><li><a href="#paragraph_serveur-http">Serveur HTTP</a></li><li><a href="#paragraph_base-de-donn-es">Base de données</a></li><li><a href="#paragraph_modules-compl-mentaires-pouvant-tre-int-ressant">Modules complémentaires pouvant être intéressant</a></li><li><a href="#paragraph_modules-officiellement-maintenus-par-l-quipe-phpboost">Modules officiellement maintenus par l'équipe PHPBoost</a></li><li><a href="#paragraph_t-l-chargement">Téléchargement</a></li><li><a href="#paragraph_transfert-des-fichiers">Transfert des fichiers</a></li><li><a href="#paragraph_installer-phpboost">Installer PHPBoost</a></li><li><a href="#paragraph_configurez-votre-site">Configurez votre site !</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5083</wiki_user_id>
-  <wiki_user_ip>90.16.36.10</wiki_user_ip>
-  <wiki_timestamp>1423577082</wiki_timestamp>
-  <wiki_content>Cette page va vous expliquer ce qu'est, brièvement, un serveur Web, la configuration minimale qu'il faut avoir pour installer PHPBoost et toutes les informations qui vont vous permettre de réaliser une installation optimale et rapide. Ce tutoriel vous permettra donc de partir avec de bonnes bases avant l'installation.
+  <wiki_articles_fields>
+    <wiki_id>171</wiki_id>
+    <wiki_id_contents>1394</wiki_id_contents>
+    <wiki_title>Installation de PHPBoost</wiki_title>
+    <wiki_encoded_title>installation-de-phpboost</wiki_encoded_title>
+    <wiki_hits>4943</wiki_hits>
+    <wiki_id_cat>49</wiki_id_cat>
+    <wiki_is_cat>1</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_cats_fields>
+    <wiki_cat_id>49</wiki_cat_id>
+    <wiki_cat_id_parent>2</wiki_cat_id_parent>
+    <wiki_cat_article_id>171</wiki_cat_article_id>
+  </wiki_cats_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1394</wiki_con_id_contents>
+    <wiki_con_id_article>171</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_avant-propos-et-explications">Avant propos et explications</a></li><li><a href="#paragraph_syst-me-d-exploitation">Système d'exploitation</a></li><li><a href="#paragraph_php">PHP</a></li><li><a href="#paragraph_serveur-http">Serveur HTTP</a></li><li><a href="#paragraph_base-de-donn-es">Base de données</a></li><li><a href="#paragraph_modules-compl-mentaires-pouvant-tre-int-ressant">Modules complémentaires pouvant être intéressant</a></li><li><a href="#paragraph_modules-officiellement-maintenus-par-l-quipe-phpboost">Modules officiellement maintenus par l'équipe PHPBoost</a></li><li><a href="#paragraph_t-l-chargement">Téléchargement</a></li><li><a href="#paragraph_transfert-des-fichiers">Transfert des fichiers</a></li><li><a href="#paragraph_installer-phpboost">Installer PHPBoost</a></li><li><a href="#paragraph_configurez-votre-site">Configurez votre site !</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>90.16.36.10</wiki_user_ip>
+    <wiki_timestamp>1423577082</wiki_timestamp>
+    <wiki_content>Cette page va vous expliquer ce qu'est, brièvement, un serveur Web, la configuration minimale qu'il faut avoir pour installer PHPBoost et toutes les informations qui vont vous permettre de réaliser une installation optimale et rapide. Ce tutoriel vous permettra donc de partir avec de bonnes bases avant l'installation.
 
 -- Avant propos et explications --
 
@@ -112,4 +117,5 @@ Votre site est désormais installé, il va donc falloir maintenant le configurer !
 [link=configurez-votre-site]Cet article[/link] a été réalisé pour vous expliquer clairement comment bien configurer votre site PHPBoost. 
 
 [align=center][b]Merci d'utiliser PHPBoost ! Toute l'équipe de PHPBoost souhaite longue vie à votre site ![/b][/align]</wiki_content>
+  </wiki_contents_fields>
 </wiki_cat>

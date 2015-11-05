@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>38</wiki_id>
-  <wiki_id_contents>1270</wiki_id_contents>
-  <wiki_title>Utilisation du module En ligne</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-en-ligne</wiki_encoded_title>
-  <wiki_hits>325</wiki_hits>
-  <wiki_id_cat>23</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1270</wiki_con_id_contents>
-  <wiki_con_id_article>38</wiki_con_id_article>
-  <wiki_menu></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5193</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1405001982</wiki_timestamp>
-  <wiki_content>Sur la page d'accueil, si le bloc 'En ligne' est activé par l'administrateur, vous allez pouvoir voir le nombre d'utilisateurs en ligne sur le site, ainsi que leur rang, avec un lien vers leur profil.
+  <wiki_articles_fields>
+    <wiki_id>38</wiki_id>
+    <wiki_id_contents>1270</wiki_id_contents>
+    <wiki_title>Utilisation du module En ligne</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-en-ligne</wiki_encoded_title>
+    <wiki_hits>325</wiki_hits>
+    <wiki_id_cat>23</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1270</wiki_con_id_contents>
+    <wiki_con_id_article>38</wiki_con_id_article>
+    <wiki_menu></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1405001982</wiki_timestamp>
+    <wiki_content>Sur la page d'accueil, si le bloc 'En ligne' est activé par l'administrateur, vous allez pouvoir voir le nombre d'utilisateurs en ligne sur le site, ainsi que leur rang, avec un lien vers leur profil.
 
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/online/menu.png[/img][/align]
 
@@ -29,4 +32,5 @@ Si le quota de membres est supérieur à celui décidé par l'administrateur, il s'a
 Ce lien renvoie vers la page /online/ qui contient la liste de tous les membres présents sur le site et la page sur laquelle ils naviguent.
 
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/online/home.png[/img][/align]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

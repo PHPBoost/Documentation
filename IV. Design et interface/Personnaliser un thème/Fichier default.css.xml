@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>272</wiki_id>
-  <wiki_id_contents>1324</wiki_id_contents>
-  <wiki_title>Fichier default.css</wiki_title>
-  <wiki_encoded_title>fichier-default-css</wiki_encoded_title>
-  <wiki_hits>1022</wiki_hits>
-  <wiki_id_cat>59</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1324</wiki_con_id_contents>
-  <wiki_con_id_article>272</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_le-fichier-default-css">Le fichier default.css</a></li><li><a href="#paragraph_le-contenu">Le contenu</a><ol class="wiki_list_2"><li><a href="#paragraph_les-resets">Les resets</a></li><li><a href="#paragraph_l-alignement">L'alignement</a></li><li><a href="#paragraph_la-mise-en-forme-du-texte">la mise en forme du texte</a></li><li><a href="#paragraph_la-gestion-des-images">La gestion des images</a></li><li><a href="#paragraph_les-champs-de-formulaire">Les champs de formulaire</a></li><li><a href="#paragraph_l-opacite">L'opacité</a></li><li><a href="#paragraph_la-pagination">La pagination</a></li><li><a href="#paragraph_les-erreurs-et-le-debug">Les erreurs et le debug</a></li><li><a href="#paragraph_la-previsualisation">La prévisualisation</a></li><li><a href="#paragraph_la-syndication">La Syndication</a></li><li><a href="#paragraph_les-flux-rss">Les flux RSS</a></li><li><a href="#paragraph_le-cas-d-impression">Le cas d'impression</a></li><li><a href="#paragraph_les-tableaux">Les tableaux</a></li><li><a href="#paragraph_l-effet-lightbox">L'effet lightbox</a></li><li><a href="#paragraph_l-effet-blink-sur-les-icones">L'Effet blink sur les icones</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1760</wiki_user_id>
-  <wiki_user_ip>82.224.142.186</wiki_user_ip>
-  <wiki_timestamp>1405939749</wiki_timestamp>
-  <wiki_content>-- Introduction --
+  <wiki_articles_fields>
+    <wiki_id>272</wiki_id>
+    <wiki_id_contents>1324</wiki_id_contents>
+    <wiki_title>Fichier default.css</wiki_title>
+    <wiki_encoded_title>fichier-default-css</wiki_encoded_title>
+    <wiki_hits>1022</wiki_hits>
+    <wiki_id_cat>59</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1324</wiki_con_id_contents>
+    <wiki_con_id_article>272</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_le-fichier-default-css">Le fichier default.css</a></li><li><a href="#paragraph_le-contenu">Le contenu</a><ol class="wiki_list_2"><li><a href="#paragraph_les-resets">Les resets</a></li><li><a href="#paragraph_l-alignement">L'alignement</a></li><li><a href="#paragraph_la-mise-en-forme-du-texte">la mise en forme du texte</a></li><li><a href="#paragraph_la-gestion-des-images">La gestion des images</a></li><li><a href="#paragraph_les-champs-de-formulaire">Les champs de formulaire</a></li><li><a href="#paragraph_l-opacite">L'opacité</a></li><li><a href="#paragraph_la-pagination">La pagination</a></li><li><a href="#paragraph_les-erreurs-et-le-debug">Les erreurs et le debug</a></li><li><a href="#paragraph_la-previsualisation">La prévisualisation</a></li><li><a href="#paragraph_la-syndication">La Syndication</a></li><li><a href="#paragraph_les-flux-rss">Les flux RSS</a></li><li><a href="#paragraph_le-cas-d-impression">Le cas d'impression</a></li><li><a href="#paragraph_les-tableaux">Les tableaux</a></li><li><a href="#paragraph_l-effet-lightbox">L'effet lightbox</a></li><li><a href="#paragraph_l-effet-blink-sur-les-icones">L'Effet blink sur les icones</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1405939749</wiki_timestamp>
+    <wiki_content>-- Introduction --
 
 Le fichier [i]default.css[/i] contient des classes destinées à tout le site. Il sert notamment à réinitialiser certains attributs qui peuvent varier en fonction des navigateurs. 
 
@@ -318,4 +321,5 @@ ul.rss-feed li { text-align: left; }[/code]
 	-moz-animation: blink 1.5s ease-in-out infinite;
 	-webkit-animation: blink 1.5s ease-in-out infinite;
 }[/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

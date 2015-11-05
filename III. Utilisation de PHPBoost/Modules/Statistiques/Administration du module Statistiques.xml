@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>64</wiki_id>
-  <wiki_id_contents>1320</wiki_id_contents>
-  <wiki_title>Administration du module Statistiques</wiki_title>
-  <wiki_encoded_title>administration-du-module-statistiques</wiki_encoded_title>
-  <wiki_hits>756</wiki_hits>
-  <wiki_id_cat>31</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1320</wiki_con_id_contents>
-  <wiki_con_id_article>64</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_site">Site</a></li><li><a href="#paragraph_configuration-des-membres">Configuration des Membres</a><ol class="wiki_list_2"><li><a href="#paragraph_membres">Membres</a></li><li><a href="#paragraph_themes">Thèmes</a></li><li><a href="#paragraph_sexe-des-membres">Sexe des membres</a></li><li><a href="#paragraph_top-10-des-posteurs">Top 10 des posteurs</a></li></ol></li><li><a href="#paragraph_visiteurs">Visiteurs</a></li><li><a href="#paragraph_pages-vues">Pages vues</a></li><li><a href="#paragraph_navigateurs">Navigateurs</a></li><li><a href="#paragraph_systemes-d-exploitation">Systèmes d'exploitation</a></li><li><a href="#paragraph_pays-des-visiteurs">Pays des visiteurs</a></li><li><a href="#paragraph_sites-referents">Sites référents</a></li><li><a href="#paragraph_mots-cles">Mots clés</a></li><li><a href="#paragraph_robots">Robots</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>83.204.255.203</wiki_user_ip>
-  <wiki_timestamp>1405843176</wiki_timestamp>
-  <wiki_content>Les statistiques sont toujours intéressantes pour évaluer la fréquentation d'un site, les pages les plus vues, etc...
+  <wiki_articles_fields>
+    <wiki_id>64</wiki_id>
+    <wiki_id_contents>1320</wiki_id_contents>
+    <wiki_title>Administration du module Statistiques</wiki_title>
+    <wiki_encoded_title>administration-du-module-statistiques</wiki_encoded_title>
+    <wiki_hits>756</wiki_hits>
+    <wiki_id_cat>31</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1320</wiki_con_id_contents>
+    <wiki_con_id_article>64</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_site">Site</a></li><li><a href="#paragraph_configuration-des-membres">Configuration des Membres</a><ol class="wiki_list_2"><li><a href="#paragraph_membres">Membres</a></li><li><a href="#paragraph_themes">Thèmes</a></li><li><a href="#paragraph_sexe-des-membres">Sexe des membres</a></li><li><a href="#paragraph_top-10-des-posteurs">Top 10 des posteurs</a></li></ol></li><li><a href="#paragraph_visiteurs">Visiteurs</a></li><li><a href="#paragraph_pages-vues">Pages vues</a></li><li><a href="#paragraph_navigateurs">Navigateurs</a></li><li><a href="#paragraph_systemes-d-exploitation">Systèmes d'exploitation</a></li><li><a href="#paragraph_pays-des-visiteurs">Pays des visiteurs</a></li><li><a href="#paragraph_sites-referents">Sites référents</a></li><li><a href="#paragraph_mots-cles">Mots clés</a></li><li><a href="#paragraph_robots">Robots</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>83.204.255.203</wiki_user_ip>
+    <wiki_timestamp>1405843176</wiki_timestamp>
+    <wiki_content>Les statistiques sont toujours intéressantes pour évaluer la fréquentation d'un site, les pages les plus vues, etc...
 Découvrons ensemble les statistiques générées par PHPBoost.
 
 A la page d'accueil du module (dans l'administration ou sur le site), vous arrivez sur une page avec toutes les rubriques de statistiques :
@@ -141,4 +144,5 @@ Ces statistiques peuvent également être disponibles sur le site et/ou dans un mi
  
 D'autres statistiques sont également disponibles en cliquant sur le lien 'Statistiques' en bas du forum.
 Pour accéder à la documentation des statistiques du forum, cliquez [link=utilisation-du-module-forum#paragraph_statistiques]ici[/link]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

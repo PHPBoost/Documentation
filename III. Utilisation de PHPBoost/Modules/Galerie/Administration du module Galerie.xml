@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>49</wiki_id>
-  <wiki_id_contents>781</wiki_id_contents>
-  <wiki_title>Administration du module Galerie</wiki_title>
-  <wiki_encoded_title>administration-du-module-galerie</wiki_encoded_title>
-  <wiki_hits>976</wiki_hits>
-  <wiki_id_cat>26</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>781</wiki_con_id_contents>
-  <wiki_con_id_article>49</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-de-la-galerie">Gestion de la galerie</a></li><li><a href="#paragraph_ajout-d-images">Ajout d'images</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-une-image">Ajouter une image</a></li><li><a href="#paragraph_images-disponibles-sur-le-serveur">Images disponibles sur le serveur</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_configuration-de-la-galerie">Configuration de la galerie</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_options-d-affichage">Options d'affichage</a></li><li><a href="#paragraph_defilement-des-miniatures">Défilement des miniatures</a></li><li><a href="#paragraph_protection-des-images">Protection des images</a></li><li><a href="#paragraph_upload-des-images">Upload des images</a></li><li><a href="#paragraph_cache">Cache</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>935</wiki_user_id>
-  <wiki_user_ip>89.90.175.161</wiki_user_ip>
-  <wiki_timestamp>1358243731</wiki_timestamp>
-  <wiki_content>-- Gestion de la galerie --
+  <wiki_articles_fields>
+    <wiki_id>49</wiki_id>
+    <wiki_id_contents>781</wiki_id_contents>
+    <wiki_title>Administration du module Galerie</wiki_title>
+    <wiki_encoded_title>administration-du-module-galerie</wiki_encoded_title>
+    <wiki_hits>976</wiki_hits>
+    <wiki_id_cat>26</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>781</wiki_con_id_contents>
+    <wiki_con_id_article>49</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-de-la-galerie">Gestion de la galerie</a></li><li><a href="#paragraph_ajout-d-images">Ajout d'images</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-une-image">Ajouter une image</a></li><li><a href="#paragraph_images-disponibles-sur-le-serveur">Images disponibles sur le serveur</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_configuration-de-la-galerie">Configuration de la galerie</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_options-d-affichage">Options d'affichage</a></li><li><a href="#paragraph_defilement-des-miniatures">Défilement des miniatures</a></li><li><a href="#paragraph_protection-des-images">Protection des images</a></li><li><a href="#paragraph_upload-des-images">Upload des images</a></li><li><a href="#paragraph_cache">Cache</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1358243731</wiki_timestamp>
+    <wiki_content>-- Gestion de la galerie --
 
 Dans cette zone, vous pouvez parcourir toutes les catégories avec toutes les images de votre galerie. Vous pourrez pour chaque catégorie et chaque image les administrer.
 
@@ -170,4 +173,5 @@ Vous avez la possibilité de marquer vos images d'un logo comme cet exemple vous 
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_cache_config.png[/img][/align]
 Vous allez pouvoir vider le cache si vous avez changé la configuration des miniatures. Elles seront ainsi régénérées sous la nouvelle configuration.
 Par la même occasion, les images seront recomptées.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

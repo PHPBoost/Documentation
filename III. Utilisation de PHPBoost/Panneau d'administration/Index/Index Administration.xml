@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>313</wiki_id>
-  <wiki_id_contents>1437</wiki_id_contents>
-  <wiki_title>Index : Administration</wiki_title>
-  <wiki_encoded_title>index-administration</wiki_encoded_title>
-  <wiki_hits>40</wiki_hits>
-  <wiki_id_cat>82</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1437</wiki_con_id_contents>
-  <wiki_con_id_article>313</wiki_con_id_article>
-  <wiki_menu></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>787</wiki_user_id>
-  <wiki_user_ip>171.16.210.9</wiki_user_ip>
-  <wiki_timestamp>1439299420</wiki_timestamp>
-  <wiki_content>Permet de retourner à l'Index de l'Administration, autrement dit la page principale.</wiki_content>
+  <wiki_articles_fields>
+    <wiki_id>313</wiki_id>
+    <wiki_id_contents>1437</wiki_id_contents>
+    <wiki_title>Index : Administration</wiki_title>
+    <wiki_encoded_title>index-administration</wiki_encoded_title>
+    <wiki_hits>40</wiki_hits>
+    <wiki_id_cat>82</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1437</wiki_con_id_contents>
+    <wiki_con_id_article>313</wiki_con_id_article>
+    <wiki_menu></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>787</wiki_user_id>
+    <wiki_user_ip>171.16.210.9</wiki_user_ip>
+    <wiki_timestamp>1439299420</wiki_timestamp>
+    <wiki_content>Permet de retourner à l'Index de l'Administration, autrement dit la page principale.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

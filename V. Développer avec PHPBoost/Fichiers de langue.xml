@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>139</wiki_id>
-  <wiki_id_contents>500</wiki_id_contents>
-  <wiki_title>Fichiers de langue</wiki_title>
-  <wiki_encoded_title>fichiers-de-langue</wiki_encoded_title>
-  <wiki_hits>891</wiki_hits>
-  <wiki_id_cat>5</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>500</wiki_con_id_contents>
-  <wiki_con_id_article>139</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_fichiers-de-langues-principaux">Fichiers de langues principaux</a></li><li><a href="#paragraph_fichiers-de-langues-des-modules">Fichiers de langues des modules</a><ol class="wiki_list_2"><li><a href="#paragraph_mise-en-situation">Mise en situation</a></li></ol></li><li><a href="#paragraph_chargement-de-la-langue">Chargement de la langue</a><ol class="wiki_list_2"><li><a href="#paragraph_chargement-d-un-fichier-de-langue-en-entier">Chargement d'un fichier de langue en entier</a></li><li><a href="#paragraph_chargement-d-un-seul-message">Chargement d'un seul message</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.12</wiki_user_ip>
-  <wiki_timestamp>1353925570</wiki_timestamp>
-  <wiki_content>Dans PHPBoost, nous utilisons des fichiers de langues pour permettre l'utilisation de plusieurs langues sur le CMS.
+  <wiki_articles_fields>
+    <wiki_id>139</wiki_id>
+    <wiki_id_contents>500</wiki_id_contents>
+    <wiki_title>Fichiers de langue</wiki_title>
+    <wiki_encoded_title>fichiers-de-langue</wiki_encoded_title>
+    <wiki_hits>891</wiki_hits>
+    <wiki_id_cat>5</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>500</wiki_con_id_contents>
+    <wiki_con_id_article>139</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_fichiers-de-langues-principaux">Fichiers de langues principaux</a></li><li><a href="#paragraph_fichiers-de-langues-des-modules">Fichiers de langues des modules</a><ol class="wiki_list_2"><li><a href="#paragraph_mise-en-situation">Mise en situation</a></li></ol></li><li><a href="#paragraph_chargement-de-la-langue">Chargement de la langue</a><ol class="wiki_list_2"><li><a href="#paragraph_chargement-d-un-fichier-de-langue-en-entier">Chargement d'un fichier de langue en entier</a></li><li><a href="#paragraph_chargement-d-un-seul-message">Chargement d'un seul message</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1353925570</wiki_timestamp>
+    <wiki_content>Dans PHPBoost, nous utilisons des fichiers de langues pour permettre l'utilisation de plusieurs langues sur le CMS.
 
 Il y a des fichiers de langues principaux (utilisés dans beaucoup d'endroit) et ceux des modules.
 
@@ -73,4 +76,5 @@ $lang_guest = LangLoader::get_message('guest', 'main');[/code]
 Si le message fait partie du fichier de langue du module :
 
 [code=php]$msg = LangLoader::get_message('identifiant_du_message', 'nom_du_module_common', 'nom_du_module');[/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

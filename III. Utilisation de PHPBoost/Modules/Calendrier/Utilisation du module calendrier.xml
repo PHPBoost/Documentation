@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>25</wiki_id>
-  <wiki_id_contents>1260</wiki_id_contents>
-  <wiki_title>Utilisation du module calendrier</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-calendrier</wiki_encoded_title>
-  <wiki_hits>1449</wiki_hits>
-  <wiki_id_cat>20</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1260</wiki_con_id_contents>
-  <wiki_con_id_article>25</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_page-d-accueil-du-calendrier">Page d'accueil du calendrier</a></li><li><a href="#paragraph_gestion-des-evenements">Gestion des événements</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-evenement">Ajouter un événement</a></li><li><a href="#paragraph_modifier-les-evenements">Modifier les événements</a></li><li><a href="#paragraph_supprimer-les-evenements">Supprimer les événements</a></li><li><a href="#paragraph_commenter-les-evenements">Commenter les événements</a></li></ol></li><li><a href="#paragraph_affichage-des-evenements">Affichage des événements</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5193</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1405000992</wiki_timestamp>
-  <wiki_content>-- Page d'accueil du calendrier --
+  <wiki_articles_fields>
+    <wiki_id>25</wiki_id>
+    <wiki_id_contents>1260</wiki_id_contents>
+    <wiki_title>Utilisation du module calendrier</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-calendrier</wiki_encoded_title>
+    <wiki_hits>1449</wiki_hits>
+    <wiki_id_cat>20</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1260</wiki_con_id_contents>
+    <wiki_con_id_article>25</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_page-d-accueil-du-calendrier">Page d'accueil du calendrier</a></li><li><a href="#paragraph_gestion-des-evenements">Gestion des événements</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-evenement">Ajouter un événement</a></li><li><a href="#paragraph_modifier-les-evenements">Modifier les événements</a></li><li><a href="#paragraph_supprimer-les-evenements">Supprimer les événements</a></li><li><a href="#paragraph_commenter-les-evenements">Commenter les événements</a></li></ol></li><li><a href="#paragraph_affichage-des-evenements">Affichage des événements</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1405000992</wiki_timestamp>
+    <wiki_content>-- Page d'accueil du calendrier --
 
 Lorsque vous arrivez sur la page d'accueil, vous avez, devant vous un calendrier qui ressemble à ça :
 
@@ -91,4 +94,5 @@ Lorsqu'on est inscrit, on a la possibilité de se désinscrire tant que l'événemen
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/calendar/unsuscribe.png[/img][/align]
 
 Si le nombre de places est limité, un message l'indique lorsqu'il ne reste plus beaucoup de places. Si la date est dépassée, il n'est plus possible de s'inscrire.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

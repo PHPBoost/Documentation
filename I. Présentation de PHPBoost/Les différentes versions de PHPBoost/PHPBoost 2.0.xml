@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>95</wiki_id>
-  <wiki_id_contents>893</wiki_id_contents>
-  <wiki_title>PHPBoost 2.0</wiki_title>
-  <wiki_encoded_title>phpboost-2-0</wiki_encoded_title>
-  <wiki_hits>2097</wiki_hits>
-  <wiki_id_cat>14</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>893</wiki_con_id_contents>
-  <wiki_con_id_article>95</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a><ol class="wiki_list_2"><li><a href="#paragraph_noyau">Noyau</a></li><li><a href="#paragraph_modules">Modules</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>3484</wiki_user_id>
-  <wiki_user_ip>90.61.173.190</wiki_user_ip>
-  <wiki_timestamp>1359218446</wiki_timestamp>
-  <wiki_content>Sortie le 4 novembre 2007, après 3 mois de tests en version bêta et plus d'un mois de tests en version RC, la version 2.0 de PHPBoost est enfin arrivée. Ces longues périodes de test lui auront permis d'acquérir une stabilité conséquente, elle est maintenant suffisamment fiable pour faire un site sans problèmes.
+  <wiki_articles_fields>
+    <wiki_id>95</wiki_id>
+    <wiki_id_contents>893</wiki_id_contents>
+    <wiki_title>PHPBoost 2.0</wiki_title>
+    <wiki_encoded_title>phpboost-2-0</wiki_encoded_title>
+    <wiki_hits>2097</wiki_hits>
+    <wiki_id_cat>14</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>893</wiki_con_id_contents>
+    <wiki_con_id_article>95</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a><ol class="wiki_list_2"><li><a href="#paragraph_noyau">Noyau</a></li><li><a href="#paragraph_modules">Modules</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>3484</wiki_user_id>
+    <wiki_user_ip>90.61.173.190</wiki_user_ip>
+    <wiki_timestamp>1359218446</wiki_timestamp>
+    <wiki_content>Sortie le 4 novembre 2007, après 3 mois de tests en version bêta et plus d'un mois de tests en version RC, la version 2.0 de PHPBoost est enfin arrivée. Ces longues périodes de test lui auront permis d'acquérir une stabilité conséquente, elle est maintenant suffisamment fiable pour faire un site sans problèmes.
 Niveau nouveautés, tout a été revu. Le code a entièrement été réécrit, la structure a complètement changé, puisque maintenant PHPBoost est un noyau qui permet de faire tourner des modules. Ces deux parties sont indépendantes, on peut très facilement installer des modules ou en supprimer, elle est entièrement modulable.
 
 
@@ -197,4 +200,5 @@ Niveau nouveautés, tout a été revu. Le code a entièrement été réécrit, la struct
 [*]Bug corrigé dans les statistiques des visites
 [*]Bug corrigé dans le calcul du total des news, provoquant des problèmes d'affichage
 [/list]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

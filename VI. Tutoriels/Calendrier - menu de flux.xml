@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>302</wiki_id>
-  <wiki_id_contents>1402</wiki_id_contents>
-  <wiki_title>Calendrier - menu de flux</wiki_title>
-  <wiki_encoded_title>calendrier-menu-de-flux</wiki_encoded_title>
-  <wiki_hits>554</wiki_hits>
-  <wiki_id_cat>54</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1402</wiki_con_id_contents>
-  <wiki_con_id_article>302</wiki_con_id_article>
-  <wiki_menu></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5083</wiki_user_id>
-  <wiki_user_ip>90.16.59.222</wiki_user_ip>
-  <wiki_timestamp>1425644820</wiki_timestamp>
-  <wiki_content>Par défaut les menus de flux sont quasiment identiques et affichent les entrées d'un module dans l'ordre décroissant de création.
+  <wiki_articles_fields>
+    <wiki_id>302</wiki_id>
+    <wiki_id_contents>1402</wiki_id_contents>
+    <wiki_title>Calendrier - menu de flux</wiki_title>
+    <wiki_encoded_title>calendrier-menu-de-flux</wiki_encoded_title>
+    <wiki_hits>554</wiki_hits>
+    <wiki_id_cat>54</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1402</wiki_con_id_contents>
+    <wiki_con_id_article>302</wiki_con_id_article>
+    <wiki_menu></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>90.16.59.222</wiki_user_ip>
+    <wiki_timestamp>1425644820</wiki_timestamp>
+    <wiki_content>Par défaut les menus de flux sont quasiment identiques et affichent les entrées d'un module dans l'ordre décroissant de création.
 
 Je vous propose d'améliorer le menu de flux du module Calendrier afin d'obtenir un menu affichant les prochaines entrées dans un ordre croissant de rendez-vous.
 
@@ -47,4 +50,5 @@ vous pouvez créer autant de menus que de catégories - par défaut la catégorie "r
 exemple pour des événements tous créés à la même date (09-09): [img]http://i.imgur.com/9mdFDQY.png[/img]
 
 [style=warning]Pensez à vider le cache syndication pour mettre à jour les menus de flux existants.[/style]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

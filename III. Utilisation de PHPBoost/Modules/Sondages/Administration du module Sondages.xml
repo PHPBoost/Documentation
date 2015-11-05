@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>61</wiki_id>
-  <wiki_id_contents>803</wiki_id_contents>
-  <wiki_title>Administration du module Sondages</wiki_title>
-  <wiki_encoded_title>administration-du-module-sondages</wiki_encoded_title>
-  <wiki_hits>536</wiki_hits>
-  <wiki_id_cat>30</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>803</wiki_con_id_contents>
-  <wiki_con_id_article>61</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-gestion-des-sondages">La gestion des sondages</a><ol class="wiki_list_2"><li><a href="#paragraph_la-liste-des-sondages">La liste des sondages</a></li></ol></li><li><a href="#paragraph_creation-d-un-sondage">Création d'un sondage</a><ol class="wiki_list_2"><li><a href="#paragraph_modifier-un-sondage">Modifier un sondage</a></li></ol></li><li><a href="#paragraph_configuration-des-sondages">Configuration des sondages</a><ol class="wiki_list_2"><li><a href="#paragraph_mini-sondages">Mini-sondages</a></li><li><a href="#paragraph_configuration-avancee">Configuration avancée</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.12</wiki_user_ip>
-  <wiki_timestamp>1358328847</wiki_timestamp>
-  <wiki_content>L'administration de ce module est séparée en trois parties.
+  <wiki_articles_fields>
+    <wiki_id>61</wiki_id>
+    <wiki_id_contents>803</wiki_id_contents>
+    <wiki_title>Administration du module Sondages</wiki_title>
+    <wiki_encoded_title>administration-du-module-sondages</wiki_encoded_title>
+    <wiki_hits>536</wiki_hits>
+    <wiki_id_cat>30</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>803</wiki_con_id_contents>
+    <wiki_con_id_article>61</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-gestion-des-sondages">La gestion des sondages</a><ol class="wiki_list_2"><li><a href="#paragraph_la-liste-des-sondages">La liste des sondages</a></li></ol></li><li><a href="#paragraph_creation-d-un-sondage">Création d'un sondage</a><ol class="wiki_list_2"><li><a href="#paragraph_modifier-un-sondage">Modifier un sondage</a></li></ol></li><li><a href="#paragraph_configuration-des-sondages">Configuration des sondages</a><ol class="wiki_list_2"><li><a href="#paragraph_mini-sondages">Mini-sondages</a></li><li><a href="#paragraph_configuration-avancee">Configuration avancée</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1358328847</wiki_timestamp>
+    <wiki_content>L'administration de ce module est séparée en trois parties.
 
 -- La gestion des sondages --
 
@@ -74,4 +77,5 @@ Ensuite, vous pouvez décider du rang minimum pour poster. Vous avez le choix ent
 --- Configuration avancée ---
 
 Vous pouvez ici décider du nom du cookie qui sera stocké dans le navigateur du visiteur qui contiendra les sondages où le visiteur a déjà voté et sa durée de validité.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

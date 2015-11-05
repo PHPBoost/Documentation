@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>46</wiki_id>
-  <wiki_id_contents>1285</wiki_id_contents>
-  <wiki_title>Modération du Forum</wiki_title>
-  <wiki_encoded_title>moderation-du-forum</wiki_encoded_title>
-  <wiki_hits>816</wiki_hits>
-  <wiki_id_cat>25</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1285</wiki_con_id_contents>
-  <wiki_con_id_article>46</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_moderation-des-sujets-posts">Modération des sujets / posts</a><ol class="wiki_list_2"><li><a href="#paragraph_diter-un-post">Éditer un post</a></li><li><a href="#paragraph_supprimer-un-post-un-topic">Supprimer un post / un topic</a></li><li><a href="#paragraph_verrouiller-un-sujet">Verrouiller un sujet</a></li><li><a href="#paragraph_deplacer-un-sujet-de-forum">Déplacer un sujet de forum</a></li><li><a href="#paragraph_scinder-un-sujet-en-2-sujets">Scinder un sujet en 2 sujets</a></li></ol></li><li><a href="#paragraph_moderation-des-membres-et-des-alertes">Modération des membres et des alertes</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.11</wiki_user_ip>
-  <wiki_timestamp>1405093068</wiki_timestamp>
-  <wiki_content>Nous voici dans une zone importante du forum : la modération! [b]Tout modérateur d'un site créé avec PHPBoost devrait le lire pour bien connaître les outils dont il dispose.[/b]
+  <wiki_articles_fields>
+    <wiki_id>46</wiki_id>
+    <wiki_id_contents>1285</wiki_id_contents>
+    <wiki_title>Modération du Forum</wiki_title>
+    <wiki_encoded_title>moderation-du-forum</wiki_encoded_title>
+    <wiki_hits>816</wiki_hits>
+    <wiki_id_cat>25</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1285</wiki_con_id_contents>
+    <wiki_con_id_article>46</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_moderation-des-sujets-posts">Modération des sujets / posts</a><ol class="wiki_list_2"><li><a href="#paragraph_diter-un-post">Éditer un post</a></li><li><a href="#paragraph_supprimer-un-post-un-topic">Supprimer un post / un topic</a></li><li><a href="#paragraph_verrouiller-un-sujet">Verrouiller un sujet</a></li><li><a href="#paragraph_deplacer-un-sujet-de-forum">Déplacer un sujet de forum</a></li><li><a href="#paragraph_scinder-un-sujet-en-2-sujets">Scinder un sujet en 2 sujets</a></li></ol></li><li><a href="#paragraph_moderation-des-membres-et-des-alertes">Modération des membres et des alertes</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.11</wiki_user_ip>
+    <wiki_timestamp>1405093068</wiki_timestamp>
+    <wiki_content>Nous voici dans une zone importante du forum : la modération! [b]Tout modérateur d'un site créé avec PHPBoost devrait le lire pour bien connaître les outils dont il dispose.[/b]
 
 Voici un sujet de base vu par un modérateur : 
 
@@ -88,4 +91,5 @@ Et voila 2 sujets qui remplace le sujet initial.
 -- Modération des membres et des alertes --
 
 Pour tout connaitre sur la modération des membres, allez voir [link=panneau-de-moderation]ici[/link]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

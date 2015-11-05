@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>307</wiki_id>
-  <wiki_id_contents>1420</wiki_id_contents>
-  <wiki_title>Changement d'hébergement ou de serveur avec phpMyAdmin</wiki_title>
-  <wiki_encoded_title>changement-d-h-bergement-ou-de-serveur-avec-phpmyadmin</wiki_encoded_title>
-  <wiki_hits>218</wiki_hits>
-  <wiki_id_cat>2</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1420</wiki_con_id_contents>
-  <wiki_con_id_article>307</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_sauvegarde-de-la-base-de-donn-es">Sauvegarde de la base de données</a></li><li><a href="#paragraph_transfert-des-fichiers">Transfert des fichiers</a></li><li><a href="#paragraph_restauration-de-la-base-de-donn-es-chez-l-h-bergeur">Restauration de la base de données chez l'hébergeur</a></li><li><a href="#paragraph_migration-du-serveur">Migration du serveur</a></li><li><a href="#paragraph_ajustement-de-la-configuration-du-nouveau-site">Ajustement de la configuration du nouveau site</a></li><li><a href="#paragraph_r-g-n-ration-globale-du-cache">Régénération globale du cache</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>440</wiki_user_id>
-  <wiki_user_ip>92.138.95.52</wiki_user_ip>
-  <wiki_timestamp>1430052191</wiki_timestamp>
-  <wiki_content>Transférer son site d'un hébergeur Web à un autre ou d'un serveur local vers un hébergement Web avec PHPBoost est très simple. Nous allons voir cela ensemble.
+  <wiki_articles_fields>
+    <wiki_id>307</wiki_id>
+    <wiki_id_contents>1420</wiki_id_contents>
+    <wiki_title>Changement d'hébergement ou de serveur avec phpMyAdmin</wiki_title>
+    <wiki_encoded_title>changement-d-h-bergement-ou-de-serveur-avec-phpmyadmin</wiki_encoded_title>
+    <wiki_hits>218</wiki_hits>
+    <wiki_id_cat>2</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1420</wiki_con_id_contents>
+    <wiki_con_id_article>307</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_sauvegarde-de-la-base-de-donn-es">Sauvegarde de la base de données</a></li><li><a href="#paragraph_transfert-des-fichiers">Transfert des fichiers</a></li><li><a href="#paragraph_restauration-de-la-base-de-donn-es-chez-l-h-bergeur">Restauration de la base de données chez l'hébergeur</a></li><li><a href="#paragraph_migration-du-serveur">Migration du serveur</a></li><li><a href="#paragraph_ajustement-de-la-configuration-du-nouveau-site">Ajustement de la configuration du nouveau site</a></li><li><a href="#paragraph_r-g-n-ration-globale-du-cache">Régénération globale du cache</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>440</wiki_user_id>
+    <wiki_user_ip>92.138.95.52</wiki_user_ip>
+    <wiki_timestamp>1430052191</wiki_timestamp>
+    <wiki_content>Transférer son site d'un hébergeur Web à un autre ou d'un serveur local vers un hébergement Web avec PHPBoost est très simple. Nous allons voir cela ensemble.
 
 -- Sauvegarde de la base de données --
 
@@ -291,4 +294,5 @@ Dans le panneau d'administration du site (que vous avez transféré), allez dans [
 Pour éviter les soucis, il est recommandé de régénérer l'ensemble du cache, même si ce n'est pas obligatoire. Pour cela, il faut aller dans le panneau d'administration [i]Outils-&gt;Cache[/i], puis cliquez sur [i]vider[/i].
 
 Voilà, votre site devrait être transféré correctement. Si vous rencontrez des difficultés, n'hésitez pas à demander de l'aide sur le [url=/forum/forum-5+support-installation-mise-jour.php]forum de support[/url].</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>199</wiki_id>
-  <wiki_id_contents>1379</wiki_id_contents>
-  <wiki_title>Mettre à jour son thème 4.0 en 4.1</wiki_title>
-  <wiki_encoded_title>mettre-a-jour-son-theme-4-0-en-4-1</wiki_encoded_title>
-  <wiki_hits>3515</wiki_hits>
-  <wiki_id_cat>42</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth>a:12:{s:2:"r1";i:2044;i:1;i:16;i:4;i:16;i:5;i:16;i:6;i:16;i:7;i:1020;i:8;i:16;i:9;i:16;i:13;i:16;i:15;i:16;i:16;i:16;i:18;i:16;}</wiki_auth>
-  <wiki_con_id_contents>1379</wiki_con_id_contents>
-  <wiki_con_id_article>199</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_avant-de-commencer">Avant de commencer</a></li><li><a href="#paragraph_modification-de-la-structure-du-theme">Modification de la structure du thème</a><ol class="wiki_list_2"><li><a href="#paragraph_les-fichiers-de-configuration">Les fichiers de configuration</a></li><li><a href="#paragraph_les-fichiers-header-tpl-et-footer-tpl">Les fichiers header.tpl et footer.tpl</a></li><li><a href="#paragraph_les-fichiers-css">Les fichiers CSS</a></li><li><a href="#paragraph_les-fichiers-images-du-repertoire-theme-images">Les fichiers images du répertoire /theme/images</a></li><li><a href="#paragraph_les-fichiers-images-du-repertoire-images">Les fichiers images du répertoire /images</a></li></ol></li><li><a href="#paragraph_modification-du-code-html">Modification du code html</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</a></li><li><a href="#paragraph_le-fichier-body-tpl">Le fichier body.tpl</a></li></ol></li><li><a href="#paragraph_modification-du-code-css">Modification du code CSS</a><ol class="wiki_list_2"><li><a href="#paragraph_generic-css">generic.css</a></li><li><a href="#paragraph_global-css">global.css</a></li><li><a href="#paragraph_design-css">design.css</a></li><li><a href="#paragraph_content-css">content.css</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1760</wiki_user_id>
-  <wiki_user_ip>82.224.142.186</wiki_user_ip>
-  <wiki_timestamp>1415911805</wiki_timestamp>
-  <wiki_content>Nous allons voir au fil de cet article la manière de modifier un thème 4.0 afin de pouvoir l'utiliser sur la version 4.1 de PHPBoost.
+  <wiki_articles_fields>
+    <wiki_id>199</wiki_id>
+    <wiki_id_contents>1379</wiki_id_contents>
+    <wiki_title>Mettre à jour son thème 4.0 en 4.1</wiki_title>
+    <wiki_encoded_title>mettre-a-jour-son-theme-4-0-en-4-1</wiki_encoded_title>
+    <wiki_hits>3515</wiki_hits>
+    <wiki_id_cat>42</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth>a:12:{s:2:"r1";i:2044;i:1;i:16;i:4;i:16;i:5;i:16;i:6;i:16;i:7;i:1020;i:8;i:16;i:9;i:16;i:13;i:16;i:15;i:16;i:16;i:16;i:18;i:16;}</wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1379</wiki_con_id_contents>
+    <wiki_con_id_article>199</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_avant-de-commencer">Avant de commencer</a></li><li><a href="#paragraph_modification-de-la-structure-du-theme">Modification de la structure du thème</a><ol class="wiki_list_2"><li><a href="#paragraph_les-fichiers-de-configuration">Les fichiers de configuration</a></li><li><a href="#paragraph_les-fichiers-header-tpl-et-footer-tpl">Les fichiers header.tpl et footer.tpl</a></li><li><a href="#paragraph_les-fichiers-css">Les fichiers CSS</a></li><li><a href="#paragraph_les-fichiers-images-du-repertoire-theme-images">Les fichiers images du répertoire /theme/images</a></li><li><a href="#paragraph_les-fichiers-images-du-repertoire-images">Les fichiers images du répertoire /images</a></li></ol></li><li><a href="#paragraph_modification-du-code-html">Modification du code html</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</a></li><li><a href="#paragraph_le-fichier-body-tpl">Le fichier body.tpl</a></li></ol></li><li><a href="#paragraph_modification-du-code-css">Modification du code CSS</a><ol class="wiki_list_2"><li><a href="#paragraph_generic-css">generic.css</a></li><li><a href="#paragraph_global-css">global.css</a></li><li><a href="#paragraph_design-css">design.css</a></li><li><a href="#paragraph_content-css">content.css</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1415911805</wiki_timestamp>
+    <wiki_content>Nous allons voir au fil de cet article la manière de modifier un thème 4.0 afin de pouvoir l'utiliser sur la version 4.1 de PHPBoost.
 
 -- Avant de commencer --
 
@@ -899,4 +902,5 @@ Afin de faciliter la conversion de vos thèmes, des tableaux de synthèse présenta
 		[col]content.css[/col]
 	[/row]
 [/table]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>37</wiki_id>
-  <wiki_id_contents>963</wiki_id_contents>
-  <wiki_title>Système de Templates</wiki_title>
-  <wiki_encoded_title>systeme-de-templates</wiki_encoded_title>
-  <wiki_hits>1220</wiki_hits>
-  <wiki_id_cat>5</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>963</wiki_con_id_contents>
-  <wiki_con_id_article>37</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-syntaxe-des-templates">La syntaxe des templates</a></li><li><a href="#paragraph_texte-simple">Texte simple</a></li><li><a href="#paragraph_variables">Variables</a><ol class="wiki_list_2"><li><a href="#paragraph_variable-simple">Variable Simple</a></li><li><a href="#paragraph_variable-de-langue">Variable de langue</a></li></ol></li><li><a href="#paragraph_conditions">Conditions</a><ol class="wiki_list_2"><li><a href="#paragraph_condition-simple">Condition simple</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li></ol></li><li><a href="#paragraph_condition-negative">Condition négative</a></li></ol></li><li><a href="#paragraph_boucles">Boucles</a><ol class="wiki_list_2"><li><a href="#paragraph_boucle-simple">Boucle simple</a></li><li><a href="#paragraph_boucle-simple-avec-des-variables">Boucle simple avec des variables</a></li><li><a href="#paragraph_boucles-imbriquees">Boucles imbriquées</a></li></ol></li><li><a href="#paragraph_inclusions">Inclusions</a><ol class="wiki_list_2"><li><a href="#paragraph_inclusion-directe">Inclusion directe</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li><li><a href="#paragraph_le-template-a-inclure">Le template à inclure</a></li><li><a href="#paragraph_le-php">Le PHP</a></li><li><a href="#paragraph_le-resultat">Le résultat</a></li></ol></li><li><a href="#paragraph_inclusion-dans-une-boucle">Inclusion dans une boucle</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li></ol></li></ol></li><li><a href="#paragraph_expressions-qui-ecrivent-dans-le-template">Expressions qui écrivent dans le template</a><ol class="wiki_list_2"><li><a href="#paragraph_methodes-de-templates">Méthodes de templates</a></li><li><a href="#paragraph_methode-statique">Méthode statique</a></li></ol></li><li><a href="#paragraph_expressions-qui-n-ecrivent-pas-dans-le-template">Expressions qui n'écrivent pas dans le template</a><ol class="wiki_list_2"><li><a href="#paragraph_association-d-un-fichier-de-langue">Association d'un fichier de langue</a></li></ol></li><li><a href="#paragraph_php">PHP</a><ol class="wiki_list_2"><li><a href="#paragraph_exemple">Exemple</a></li></ol></li><li><a href="#paragraph_les-templates-en-php">Les Templates en PHP</a></li><li><a href="#paragraph_creation-instanciation-d-un-objet-template">Création / instanciation d'un objet Template</a><ol class="wiki_list_2"><li><a href="#paragraph_a-partir-d-un-fichier-filetemplate">A partir d'un fichier : FileTemplate</a></li><li><a href="#paragraph_a-partir-d-une-chaine-de-caractere-stringtemplate">A partir d'une chaîne de caractère : StringTemplate</a></li></ol></li><li><a href="#paragraph_assignation-automatique">Assignation automatique</a></li><li><a href="#paragraph_compatibilite">Compatibilité</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1386876575</wiki_timestamp>
-  <wiki_content>Afin d'offrir de nouvelles possibilités, le moteur de template de PHPBoost 4.0 a été entièrement revu.
+  <wiki_articles_fields>
+    <wiki_id>37</wiki_id>
+    <wiki_id_contents>963</wiki_id_contents>
+    <wiki_title>Système de Templates</wiki_title>
+    <wiki_encoded_title>systeme-de-templates</wiki_encoded_title>
+    <wiki_hits>1220</wiki_hits>
+    <wiki_id_cat>5</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>963</wiki_con_id_contents>
+    <wiki_con_id_article>37</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-syntaxe-des-templates">La syntaxe des templates</a></li><li><a href="#paragraph_texte-simple">Texte simple</a></li><li><a href="#paragraph_variables">Variables</a><ol class="wiki_list_2"><li><a href="#paragraph_variable-simple">Variable Simple</a></li><li><a href="#paragraph_variable-de-langue">Variable de langue</a></li></ol></li><li><a href="#paragraph_conditions">Conditions</a><ol class="wiki_list_2"><li><a href="#paragraph_condition-simple">Condition simple</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li></ol></li><li><a href="#paragraph_condition-negative">Condition négative</a></li></ol></li><li><a href="#paragraph_boucles">Boucles</a><ol class="wiki_list_2"><li><a href="#paragraph_boucle-simple">Boucle simple</a></li><li><a href="#paragraph_boucle-simple-avec-des-variables">Boucle simple avec des variables</a></li><li><a href="#paragraph_boucles-imbriquees">Boucles imbriquées</a></li></ol></li><li><a href="#paragraph_inclusions">Inclusions</a><ol class="wiki_list_2"><li><a href="#paragraph_inclusion-directe">Inclusion directe</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li><li><a href="#paragraph_le-template-a-inclure">Le template à inclure</a></li><li><a href="#paragraph_le-php">Le PHP</a></li><li><a href="#paragraph_le-resultat">Le résultat</a></li></ol></li><li><a href="#paragraph_inclusion-dans-une-boucle">Inclusion dans une boucle</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li></ol></li></ol></li><li><a href="#paragraph_expressions-qui-ecrivent-dans-le-template">Expressions qui écrivent dans le template</a><ol class="wiki_list_2"><li><a href="#paragraph_methodes-de-templates">Méthodes de templates</a></li><li><a href="#paragraph_methode-statique">Méthode statique</a></li></ol></li><li><a href="#paragraph_expressions-qui-n-ecrivent-pas-dans-le-template">Expressions qui n'écrivent pas dans le template</a><ol class="wiki_list_2"><li><a href="#paragraph_association-d-un-fichier-de-langue">Association d'un fichier de langue</a></li></ol></li><li><a href="#paragraph_php">PHP</a><ol class="wiki_list_2"><li><a href="#paragraph_exemple">Exemple</a></li></ol></li><li><a href="#paragraph_les-templates-en-php">Les Templates en PHP</a></li><li><a href="#paragraph_creation-instanciation-d-un-objet-template">Création / instanciation d'un objet Template</a><ol class="wiki_list_2"><li><a href="#paragraph_a-partir-d-un-fichier-filetemplate">A partir d'un fichier : FileTemplate</a></li><li><a href="#paragraph_a-partir-d-une-chaine-de-caractere-stringtemplate">A partir d'une chaîne de caractère : StringTemplate</a></li></ol></li><li><a href="#paragraph_assignation-automatique">Assignation automatique</a></li><li><a href="#paragraph_compatibilite">Compatibilité</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1386876575</wiki_timestamp>
+    <wiki_content>Afin d'offrir de nouvelles possibilités, le moteur de template de PHPBoost 4.0 a été entièrement revu.
 
 Cette page décrit en détails les possibilités (les nouvelles comme les anciennes) offertes par le moteur de template de PHPBoost.
 
@@ -281,4 +284,5 @@ Le moteur de templates de PHPBoost 4.0 est (presque) entièrement compatible avec
 [style=notice]Ceci signifie que tous les templates de la 3.0 continueront à fonctionner sans nécessiter d'adaptation sur la 4.0 (à de rares exceptions près).
 Pour adapter un thème 3.0 en version 4.0, utilisez cette procédure : [link=mettre-a-jour-son-theme-3-0-en-4-0]Mettre à jour son thème 3.0 en 4.0[/link]
 [/style]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

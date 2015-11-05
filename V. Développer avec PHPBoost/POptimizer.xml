@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>178</wiki_id>
-  <wiki_id_contents>868</wiki_id_contents>
-  <wiki_title>POptimizer</wiki_title>
-  <wiki_encoded_title>poptimizer</wiki_encoded_title>
-  <wiki_hits>879</wiki_hits>
-  <wiki_id_cat>5</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>868</wiki_con_id_contents>
-  <wiki_con_id_article>178</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_optimiser-pourquoi-comment">Optimiser, pourquoi ? comment ?</a><ol class="wiki_list_2"><li><a href="#paragraph_php-un-langage-de-script-interprete">PHP, un langage de script interprété</a></li><li><a href="#paragraph_l-enjeu">L'enjeu</a><ol class="wiki_list_3"><li><a href="#paragraph_un-fichier-source-contient-de-nombreux-caracteres-inutiles-pour-l-interpreteur">Un fichier source contient de nombreux caractères inutiles pour l'interpréteur</a></li><li><a href="#paragraph_exemple-de-codes-equivalents">Exemple de codes équivalents</a></li><li><a href="#paragraph_le-but-de-poptimizer">Le but de POptimizer</a></li></ol></li></ol></li><li><a href="#paragraph_telechargement-de-poptimizer">Téléchargement de POptimizer</a><ol class="wiki_list_2"><li><a href="#paragraph_l-executable">L'exécutable</a></li><li><a href="#paragraph_le-code-source">Le code source</a></li></ol></li><li><a href="#paragraph_utilisation-de-poptimizer">Utilisation de POptimizer</a><ol class="wiki_list_2"><li><a href="#paragraph_lancer-poptimizer">Lancer POptimizer</a></li><li><a href="#paragraph_les-options">Les options</a><ol class="wiki_list_3"><li><a href="#paragraph_fichiers-a-optimiser">Fichiers à optimiser</a></li><li><a href="#paragraph_repertoire-cible">Répertoire cible</a></li><li><a href="#paragraph_fichiers-dossiers-a-exclure">Fichiers/dossiers à exclure</a></li><li><a href="#paragraph_choix-des-modules-d-optimisation">Choix des modules d'optimisation</a></li><li><a href="#paragraph_encodage-des-fichiers">Encodage des fichiers</a></li><li><a href="#paragraph_autres">Autres</a></li></ol></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>86.204.86.165</wiki_user_ip>
-  <wiki_timestamp>1358790167</wiki_timestamp>
-  <wiki_content>POptimizer (pour PHP Optimizer) est un optimiseur de code source en PHP distribué sous licence GNU/GPL. Cet outil a été développé par l'équipe de développement du noyau de PHPBoost afin d'améliorer ses performances.
+  <wiki_articles_fields>
+    <wiki_id>178</wiki_id>
+    <wiki_id_contents>868</wiki_id_contents>
+    <wiki_title>POptimizer</wiki_title>
+    <wiki_encoded_title>poptimizer</wiki_encoded_title>
+    <wiki_hits>879</wiki_hits>
+    <wiki_id_cat>5</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>868</wiki_con_id_contents>
+    <wiki_con_id_article>178</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_optimiser-pourquoi-comment">Optimiser, pourquoi ? comment ?</a><ol class="wiki_list_2"><li><a href="#paragraph_php-un-langage-de-script-interprete">PHP, un langage de script interprété</a></li><li><a href="#paragraph_l-enjeu">L'enjeu</a><ol class="wiki_list_3"><li><a href="#paragraph_un-fichier-source-contient-de-nombreux-caracteres-inutiles-pour-l-interpreteur">Un fichier source contient de nombreux caractères inutiles pour l'interpréteur</a></li><li><a href="#paragraph_exemple-de-codes-equivalents">Exemple de codes équivalents</a></li><li><a href="#paragraph_le-but-de-poptimizer">Le but de POptimizer</a></li></ol></li></ol></li><li><a href="#paragraph_telechargement-de-poptimizer">Téléchargement de POptimizer</a><ol class="wiki_list_2"><li><a href="#paragraph_l-executable">L'exécutable</a></li><li><a href="#paragraph_le-code-source">Le code source</a></li></ol></li><li><a href="#paragraph_utilisation-de-poptimizer">Utilisation de POptimizer</a><ol class="wiki_list_2"><li><a href="#paragraph_lancer-poptimizer">Lancer POptimizer</a></li><li><a href="#paragraph_les-options">Les options</a><ol class="wiki_list_3"><li><a href="#paragraph_fichiers-a-optimiser">Fichiers à optimiser</a></li><li><a href="#paragraph_repertoire-cible">Répertoire cible</a></li><li><a href="#paragraph_fichiers-dossiers-a-exclure">Fichiers/dossiers à exclure</a></li><li><a href="#paragraph_choix-des-modules-d-optimisation">Choix des modules d'optimisation</a></li><li><a href="#paragraph_encodage-des-fichiers">Encodage des fichiers</a></li><li><a href="#paragraph_autres">Autres</a></li></ol></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.86.165</wiki_user_ip>
+    <wiki_timestamp>1358790167</wiki_timestamp>
+    <wiki_content>POptimizer (pour PHP Optimizer) est un optimiseur de code source en PHP distribué sous licence GNU/GPL. Cet outil a été développé par l'équipe de développement du noyau de PHPBoost afin d'améliorer ses performances.
 
 -- Optimiser, pourquoi ? comment ? --
 
@@ -180,4 +183,5 @@ Il est à noter qu'il est possible de préciser seulement un des deux encodages. D
 L'option [code=bash,0,1]-h[/code] permet d'obtenir de l'aide sur la commande. S'affiche alors un résumé de cette page de documentation.
 
 L'option [code=bash,0,1]-v[/code] permet d'obtenir la version de POptimizer que vous utilisez.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

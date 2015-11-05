@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>94</wiki_id>
-  <wiki_id_contents>138</wiki_id_contents>
-  <wiki_title>PHPBoost 1.6.0</wiki_title>
-  <wiki_encoded_title>phpboost-1-6-0</wiki_encoded_title>
-  <wiki_hits>597</wiki_hits>
-  <wiki_id_cat>14</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>138</wiki_con_id_contents>
-  <wiki_con_id_article>94</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>82.124.181.87</wiki_user_ip>
-  <wiki_timestamp>1346007502</wiki_timestamp>
-  <wiki_content>Sortie le 10 septembre 2006, PHPBoost 1.6.0 est le fruit de 3 mois de développement intensif. De nombreuses nouveautés font leur apparition, comme notamment un module de gestion de contenu en BBCode ou HTML, une newsletter avec 3 formats d'envoi, un système de messagerie privée plus approfondi avec accusé de réception, un module de sauvegarde et de restauration de base de données avec stockage des sauvegardes directement sur le serveur, un système de suivi des messages sur le forum avec possibilité de notification de réponse par mail, flux RSS sur le forum et sur les articles, une nouvelle interface d'administration plus claire et intuitive, la possibilité de choisir la page de démarrage (vous n'êtes plus obligé d'avoir les news en accueil), une nouvelle barre d'arborescence pour un meilleur confort de navigation.
+  <wiki_articles_fields>
+    <wiki_id>94</wiki_id>
+    <wiki_id_contents>138</wiki_id_contents>
+    <wiki_title>PHPBoost 1.6.0</wiki_title>
+    <wiki_encoded_title>phpboost-1-6-0</wiki_encoded_title>
+    <wiki_hits>597</wiki_hits>
+    <wiki_id_cat>14</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>138</wiki_con_id_contents>
+    <wiki_con_id_article>94</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>82.124.181.87</wiki_user_ip>
+    <wiki_timestamp>1346007502</wiki_timestamp>
+    <wiki_content>Sortie le 10 septembre 2006, PHPBoost 1.6.0 est le fruit de 3 mois de développement intensif. De nombreuses nouveautés font leur apparition, comme notamment un module de gestion de contenu en BBCode ou HTML, une newsletter avec 3 formats d'envoi, un système de messagerie privée plus approfondi avec accusé de réception, un module de sauvegarde et de restauration de base de données avec stockage des sauvegardes directement sur le serveur, un système de suivi des messages sur le forum avec possibilité de notification de réponse par mail, flux RSS sur le forum et sur les articles, une nouvelle interface d'administration plus claire et intuitive, la possibilité de choisir la page de démarrage (vous n'êtes plus obligé d'avoir les news en accueil), une nouvelle barre d'arborescence pour un meilleur confort de navigation.
 
 
 -- Changelog --
@@ -62,4 +65,5 @@
 [*]Suppression d'un bug présent dans la balise [i][swf][/i]
 [*]Corrections diverses de bugs mineurs
 [/list]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

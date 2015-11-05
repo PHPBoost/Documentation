@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>89</wiki_id>
-  <wiki_id_contents>494</wiki_id_contents>
-  <wiki_title>Transfert des fichiers via logiciel FTP</wiki_title>
-  <wiki_encoded_title>transfert-des-fichiers-via-logiciel-ftp</wiki_encoded_title>
-  <wiki_hits>1913</wiki_hits>
-  <wiki_id_cat>49</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>494</wiki_con_id_contents>
-  <wiki_con_id_article>89</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_preparatifs">Préparatifs</a></li><li><a href="#paragraph_enregistrer-les-parametres-de-son-site">Enregistrer les paramètres de son site</a></li><li><a href="#paragraph_transferer-les-fichiers">Transférer les fichiers</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>81.51.251.247</wiki_user_ip>
-  <wiki_timestamp>1353921725</wiki_timestamp>
-  <wiki_content>-- Préparatifs --
+  <wiki_articles_fields>
+    <wiki_id>89</wiki_id>
+    <wiki_id_contents>494</wiki_id_contents>
+    <wiki_title>Transfert des fichiers via logiciel FTP</wiki_title>
+    <wiki_encoded_title>transfert-des-fichiers-via-logiciel-ftp</wiki_encoded_title>
+    <wiki_hits>1913</wiki_hits>
+    <wiki_id_cat>49</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>494</wiki_con_id_contents>
+    <wiki_con_id_article>89</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_preparatifs">Préparatifs</a></li><li><a href="#paragraph_enregistrer-les-parametres-de-son-site">Enregistrer les paramètres de son site</a></li><li><a href="#paragraph_transferer-les-fichiers">Transférer les fichiers</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>81.51.251.247</wiki_user_ip>
+    <wiki_timestamp>1353921725</wiki_timestamp>
+    <wiki_content>-- Préparatifs --
 
 Après avoir téléchargé les fichiers de PHPBoost à cette [url=/download/] [i][u]adresse[/u][/i][/url], vient la phase de les transférer sur le serveur de votre hébergement Web.
 
@@ -80,4 +83,5 @@ Le transfert se réalise :
 [align=center][img]http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_5.png[/img][/align]
 
 Une fois que tous les fichiers sont transférés, passez à l'installation de PHPBoost.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

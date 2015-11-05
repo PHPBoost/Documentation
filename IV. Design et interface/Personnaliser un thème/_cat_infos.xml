@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_cat>
-  <wiki_id>211</wiki_id>
-  <wiki_id_contents>1425</wiki_id_contents>
-  <wiki_title>Personnaliser un thème</wiki_title>
-  <wiki_encoded_title>personnaliser-un-theme</wiki_encoded_title>
-  <wiki_hits>10967</wiki_hits>
-  <wiki_id_cat>59</wiki_id_cat>
-  <wiki_is_cat>1</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_cat_id>59</wiki_cat_id>
-  <wiki_cat_id_parent>4</wiki_cat_id_parent>
-  <wiki_cat_article_id>211</wiki_cat_article_id>
-  <wiki_con_id_contents>1425</wiki_con_id_contents>
-  <wiki_con_id_article>211</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_faut-il-des-connaissances-particuli-res">Faut-il des connaissances particulières ?</a></li><li><a href="#paragraph_recommandations">Recommandations</a></li><li><a href="#paragraph_la-structure-des-th-mes">La structure des thèmes</a></li><li><a href="#paragraph_personnaliser-un-th-me">Personnaliser un thème</a><ol class="wiki_list_2"><li><a href="#paragraph_la-personnalisation-des-fichiers-css">La personnalisation des fichiers CSS</a></li><li><a href="#paragraph_la-personnalisation-des-fichiers-html">La personnalisation des fichiers HTML</a></li><li><a href="#paragraph_la-personnalisation-des-fichiers-images">La personnalisation des fichiers images</a></li></ol></li><li><a href="#paragraph_finaliser-son-th-me">Finaliser son thème</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>787</wiki_user_id>
-  <wiki_user_ip>78.225.116.39</wiki_user_ip>
-  <wiki_timestamp>1439109846</wiki_timestamp>
-  <wiki_content>-- Introduction --
+  <wiki_articles_fields>
+    <wiki_id>211</wiki_id>
+    <wiki_id_contents>1425</wiki_id_contents>
+    <wiki_title>Personnaliser un thème</wiki_title>
+    <wiki_encoded_title>personnaliser-un-theme</wiki_encoded_title>
+    <wiki_hits>10967</wiki_hits>
+    <wiki_id_cat>59</wiki_id_cat>
+    <wiki_is_cat>1</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_cats_fields>
+    <wiki_cat_id>59</wiki_cat_id>
+    <wiki_cat_id_parent>4</wiki_cat_id_parent>
+    <wiki_cat_article_id>211</wiki_cat_article_id>
+  </wiki_cats_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1425</wiki_con_id_contents>
+    <wiki_con_id_article>211</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_faut-il-des-connaissances-particuli-res">Faut-il des connaissances particulières ?</a></li><li><a href="#paragraph_recommandations">Recommandations</a></li><li><a href="#paragraph_la-structure-des-th-mes">La structure des thèmes</a></li><li><a href="#paragraph_personnaliser-un-th-me">Personnaliser un thème</a><ol class="wiki_list_2"><li><a href="#paragraph_la-personnalisation-des-fichiers-css">La personnalisation des fichiers CSS</a></li><li><a href="#paragraph_la-personnalisation-des-fichiers-html">La personnalisation des fichiers HTML</a></li><li><a href="#paragraph_la-personnalisation-des-fichiers-images">La personnalisation des fichiers images</a></li></ol></li><li><a href="#paragraph_finaliser-son-th-me">Finaliser son thème</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>787</wiki_user_id>
+    <wiki_user_ip>78.225.116.39</wiki_user_ip>
+    <wiki_timestamp>1439109846</wiki_timestamp>
+    <wiki_content>-- Introduction --
 
 Sachez d'abord que ces articles n'ont pas pour but de vous aider à créer un thème à partir d'une feuille blanche. 
 Au travers des articles qui vont suivre, vous allez pouvoir comprendre et maîtriser l'architecture d'un thème PHPBoost afin de pouvoir réaliser votre propre thème à votre image, à votre goût, mais surtout un thème dédié à votre projet. 
@@ -73,4 +78,5 @@ Dans certains cas, vous pouvez être amené à modifier certaines images afin d'app
 
 Maintenant que vous avez modifier votre thème pour qu'il soit à l'image de votre site web, nous pouvons passer à la dernière étape.
 Il faut maintenant préparer votre thème à l'exportation. L'article [b][link=finalisation-du-theme]Finalisation du thème[/link][/b] vous présente quelques conseils afin de pouvoir partager votre création.</wiki_content>
+  </wiki_contents_fields>
 </wiki_cat>

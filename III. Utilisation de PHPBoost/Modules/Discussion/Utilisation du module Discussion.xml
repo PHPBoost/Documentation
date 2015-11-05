@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>32</wiki_id>
-  <wiki_id_contents>1329</wiki_id_contents>
-  <wiki_title>Utilisation du module Discussion</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-discussion</wiki_encoded_title>
-  <wiki_hits>616</wiki_hits>
-  <wiki_id_cat>22</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1329</wiki_con_id_contents>
-  <wiki_con_id_article>32</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_module-discussion">Module discussion</a><ol class="wiki_list_2"><li><a href="#paragraph_lire-les-messages">Lire les messages</a></li><li><a href="#paragraph_ajouter-un-message">Ajouter un message</a></li><li><a href="#paragraph_diter-un-message">Éditer un message</a></li><li><a href="#paragraph_supprimer-un-message">Supprimer un message</a></li></ol></li><li><a href="#paragraph_mini-module-discussion">Mini-module discussion</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-message">Ajouter un message</a></li><li><a href="#paragraph_diter-un-message">Éditer un message</a></li><li><a href="#paragraph_supprimer-un-message">Supprimer un message</a></li><li><a href="#paragraph_rafraichir-le-mini-module">Rafraîchir le mini-module</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>82.124.251.75</wiki_user_ip>
-  <wiki_timestamp>1406090369</wiki_timestamp>
-  <wiki_content>-- Module discussion --
+  <wiki_articles_fields>
+    <wiki_id>32</wiki_id>
+    <wiki_id_contents>1329</wiki_id_contents>
+    <wiki_title>Utilisation du module Discussion</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-discussion</wiki_encoded_title>
+    <wiki_hits>616</wiki_hits>
+    <wiki_id_cat>22</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1329</wiki_con_id_contents>
+    <wiki_con_id_article>32</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_module-discussion">Module discussion</a><ol class="wiki_list_2"><li><a href="#paragraph_lire-les-messages">Lire les messages</a></li><li><a href="#paragraph_ajouter-un-message">Ajouter un message</a></li><li><a href="#paragraph_diter-un-message">Éditer un message</a></li><li><a href="#paragraph_supprimer-un-message">Supprimer un message</a></li></ol></li><li><a href="#paragraph_mini-module-discussion">Mini-module discussion</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-message">Ajouter un message</a></li><li><a href="#paragraph_diter-un-message">Éditer un message</a></li><li><a href="#paragraph_supprimer-un-message">Supprimer un message</a></li><li><a href="#paragraph_rafraichir-le-mini-module">Rafraîchir le mini-module</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>82.124.251.75</wiki_user_ip>
+    <wiki_timestamp>1406090369</wiki_timestamp>
+    <wiki_content>-- Module discussion --
 
 L'utilisation de ce module est très simple. Il vous permet de discuter entre membres et à l'aide du module de discussion rapide. Il contient un formulaire dans lequel vous tapez votre message. Vous pouvez le mettre en forme à l'aide des balises de BBcode [b][i]choisies[/i][/b] par l'administrateur.
 
@@ -69,4 +72,5 @@ Pour supprimer un message, il suffit simplement de cliquer sur le bouton [html]&
 --- Rafraîchir le mini-module ---
 
 Si vous souhaitez rafraîchir le contenu du mini-module il suffit de cliquer sur le bouton [html]&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;[/html].</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

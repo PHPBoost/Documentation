@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>30</wiki_id>
-  <wiki_id_contents>904</wiki_id_contents>
-  <wiki_title>Utilisateur courant</wiki_title>
-  <wiki_encoded_title>utilisateur-courant</wiki_encoded_title>
-  <wiki_hits>2310</wiki_hits>
-  <wiki_id_cat>5</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>904</wiki_con_id_contents>
-  <wiki_con_id_article>30</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_informations-de-l-utilisateur">Informations de l'utilisateur</a></li><li><a href="#paragraph_gestion-des-autorisations">Gestion des autorisations</a><ol class="wiki_list_2"><li><a href="#paragraph_verification-du-rang">Vérification du rang</a></li><li><a href="#paragraph_verification-sur-les-groupes">Vérification sur les groupes</a><ol class="wiki_list_3"><li><a href="#paragraph_stockage-des-regles-pour-chaque-action">Stockage des règles pour chaque action</a></li></ol></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1837</wiki_user_id>
-  <wiki_user_ip>24.201.132.222</wiki_user_ip>
-  <wiki_timestamp>1363355330</wiki_timestamp>
-  <wiki_content>La classe [i]CurrentUser[/i] gère l'utilisateur au cours de sa session. Elle permet notamment de récupérer ses informations et gérer les autorisations pour les niveaux et groupes d'utilisateurs, sachant qu'elle supporte le fait qu'un utilisateur soit inscrit dans plusieurs groupes.
+  <wiki_articles_fields>
+    <wiki_id>30</wiki_id>
+    <wiki_id_contents>904</wiki_id_contents>
+    <wiki_title>Utilisateur courant</wiki_title>
+    <wiki_encoded_title>utilisateur-courant</wiki_encoded_title>
+    <wiki_hits>2310</wiki_hits>
+    <wiki_id_cat>5</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>904</wiki_con_id_contents>
+    <wiki_con_id_article>30</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_informations-de-l-utilisateur">Informations de l'utilisateur</a></li><li><a href="#paragraph_gestion-des-autorisations">Gestion des autorisations</a><ol class="wiki_list_2"><li><a href="#paragraph_verification-du-rang">Vérification du rang</a></li><li><a href="#paragraph_verification-sur-les-groupes">Vérification sur les groupes</a><ol class="wiki_list_3"><li><a href="#paragraph_stockage-des-regles-pour-chaque-action">Stockage des règles pour chaque action</a></li></ol></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1837</wiki_user_id>
+    <wiki_user_ip>24.201.132.222</wiki_user_ip>
+    <wiki_timestamp>1363355330</wiki_timestamp>
+    <wiki_content>La classe [i]CurrentUser[/i] gère l'utilisateur au cours de sa session. Elle permet notamment de récupérer ses informations et gérer les autorisations pour les niveaux et groupes d'utilisateurs, sachant qu'elle supporte le fait qu'un utilisateur soit inscrit dans plusieurs groupes.
 
 
 -- Informations de l'utilisateur --
@@ -81,4 +84,5 @@ Comme nous l'avons vu nous pouvons traiter les autorisations par séries de 31. C
 Utilisation :
 
 [code=php]AppContext::get_current_user()-&gt;check_auth($tableau, $bit)[/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

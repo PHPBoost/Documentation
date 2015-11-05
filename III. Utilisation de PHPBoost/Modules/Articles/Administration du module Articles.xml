@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>112</wiki_id>
-  <wiki_id_contents>752</wiki_id_contents>
-  <wiki_title>Administration du module Articles</wiki_title>
-  <wiki_encoded_title>administration-du-module-articles</wiki_encoded_title>
-  <wiki_hits>377</wiki_hits>
-  <wiki_id_cat>36</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>752</wiki_con_id_contents>
-  <wiki_con_id_article>112</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_administrer-les-articles">Administrer les articles</a><ol class="wiki_list_2"><li><a href="#paragraph_la-gestion-des-articles">La gestion des articles</a></li></ol></li><li><a href="#paragraph_administrer-les-categories">Administrer les catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_la-creation-d-une-categorie">La création d'une catégorie</a><ol class="wiki_list_3"><li><a href="#paragraph_permissions">Permissions</a></li></ol></li></ol></li><li><a href="#paragraph_configuration">Configuration</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>86.204.211.123</wiki_user_ip>
-  <wiki_timestamp>1358179293</wiki_timestamp>
-  <wiki_content>Vous allez maintenant découvrir la façon dont le module Articles est administrable.
+  <wiki_articles_fields>
+    <wiki_id>112</wiki_id>
+    <wiki_id_contents>752</wiki_id_contents>
+    <wiki_title>Administration du module Articles</wiki_title>
+    <wiki_encoded_title>administration-du-module-articles</wiki_encoded_title>
+    <wiki_hits>377</wiki_hits>
+    <wiki_id_cat>36</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>752</wiki_con_id_contents>
+    <wiki_con_id_article>112</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_administrer-les-articles">Administrer les articles</a><ol class="wiki_list_2"><li><a href="#paragraph_la-gestion-des-articles">La gestion des articles</a></li></ol></li><li><a href="#paragraph_administrer-les-categories">Administrer les catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_la-creation-d-une-categorie">La création d'une catégorie</a><ol class="wiki_list_3"><li><a href="#paragraph_permissions">Permissions</a></li></ol></li></ol></li><li><a href="#paragraph_configuration">Configuration</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.211.123</wiki_user_ip>
+    <wiki_timestamp>1358179293</wiki_timestamp>
+    <wiki_content>Vous allez maintenant découvrir la façon dont le module Articles est administrable.
 
 -- Administrer les articles --
 
@@ -99,4 +102,5 @@ Ici, vous avez toutes les options concernant les articles.
 La deuxième partie concerne les permissions globales du module.
 
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_6.jpg[/img][/align]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

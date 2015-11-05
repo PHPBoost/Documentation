@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>305</wiki_id>
-  <wiki_id_contents>1376</wiki_id_contents>
-  <wiki_title>Ajout d'un champ dans un module</wiki_title>
-  <wiki_encoded_title>ajout-d-un-champ-dans-un-module</wiki_encoded_title>
-  <wiki_hits>318</wiki_hits>
-  <wiki_id_cat>54</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1376</wiki_con_id_contents>
-  <wiki_con_id_article>305</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_mise-en-place-du-nouveau-champ">Mise en place du nouveau champ</a><ol class="wiki_list_2"><li><a href="#paragraph_objet-principal-du-module-et-insertion-en-base-de-donnees">Objet principal du module et insertion en base de données</a></li><li><a href="#paragraph_variables-de-langue">Variables de langue</a></li><li><a href="#paragraph_formulaire">Formulaire</a></li></ol></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>86.195.77.164</wiki_user_ip>
-  <wiki_timestamp>1414747431</wiki_timestamp>
-  <wiki_content>-- Introduction --
+  <wiki_articles_fields>
+    <wiki_id>305</wiki_id>
+    <wiki_id_contents>1376</wiki_id_contents>
+    <wiki_title>Ajout d'un champ dans un module</wiki_title>
+    <wiki_encoded_title>ajout-d-un-champ-dans-un-module</wiki_encoded_title>
+    <wiki_hits>318</wiki_hits>
+    <wiki_id_cat>54</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1376</wiki_con_id_contents>
+    <wiki_con_id_article>305</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_mise-en-place-du-nouveau-champ">Mise en place du nouveau champ</a><ol class="wiki_list_2"><li><a href="#paragraph_objet-principal-du-module-et-insertion-en-base-de-donnees">Objet principal du module et insertion en base de données</a></li><li><a href="#paragraph_variables-de-langue">Variables de langue</a></li><li><a href="#paragraph_formulaire">Formulaire</a></li></ol></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>86.195.77.164</wiki_user_ip>
+    <wiki_timestamp>1414747431</wiki_timestamp>
+    <wiki_content>-- Introduction --
 Il est possible d'ajouter des champs assez simplement pour les modules en MVC (exemple : articles, news, calendrier, livre d'or), le tout n'étant évidemment pas d'ajouter uniquement une information à saisir dans le formulaire, mais également afficher cet élément à l'endroit voulu.
 
 Vous n'avez besoin d'aucune connaissance particulière en programmation, mais il va falloir être méthodique dans la procédure à suivre pour mettre en place le nouvel élément.
@@ -179,4 +182,5 @@ Vous pouvez maintenant afficher votre nouveau champ directement dans les templat
 Voilà votre champ ajouté et opérationnel.
 Ces différentes étapes peuvent être adaptées pour tout type de champ et pour tout module en MVC.
 [style=warning]Ces modifications seront à refaire en cas de mise à jour du module en question par l'équipe.[/style]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

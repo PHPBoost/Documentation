@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_cat>
-  <wiki_id>11</wiki_id>
-  <wiki_id_contents>777</wiki_id_contents>
-  <wiki_title>Panneau de modération</wiki_title>
-  <wiki_encoded_title>panneau-de-moderation</wiki_encoded_title>
-  <wiki_hits>1089</wiki_hits>
-  <wiki_id_cat>11</wiki_id_cat>
-  <wiki_is_cat>1</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_cat_id>11</wiki_cat_id>
-  <wiki_cat_id_parent>3</wiki_cat_id_parent>
-  <wiki_cat_article_id>11</wiki_cat_article_id>
-  <wiki_con_id_contents>777</wiki_con_id_contents>
-  <wiki_con_id_article>11</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_presentation">Présentation</a><ol class="wiki_list_2"><li><a href="#paragraph_les-avertissements">Les avertissements</a></li><li><a href="#paragraph_les-sanctions">Les sanctions</a></li><li><a href="#paragraph_les-bannissements">Les bannissements</a></li><li><a href="#paragraph_les-alertes">Les alertes</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1466</wiki_user_id>
-  <wiki_user_ip>90.55.70.218</wiki_user_ip>
-  <wiki_timestamp>1358193255</wiki_timestamp>
-  <wiki_content>Dans cet article, nous découvrirons pas à pas le panneau de modération de PHPBoost. 
+  <wiki_articles_fields>
+    <wiki_id>11</wiki_id>
+    <wiki_id_contents>777</wiki_id_contents>
+    <wiki_title>Panneau de modération</wiki_title>
+    <wiki_encoded_title>panneau-de-moderation</wiki_encoded_title>
+    <wiki_hits>1089</wiki_hits>
+    <wiki_id_cat>11</wiki_id_cat>
+    <wiki_is_cat>1</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_cats_fields>
+    <wiki_cat_id>11</wiki_cat_id>
+    <wiki_cat_id_parent>3</wiki_cat_id_parent>
+    <wiki_cat_article_id>11</wiki_cat_article_id>
+  </wiki_cats_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>777</wiki_con_id_contents>
+    <wiki_con_id_article>11</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_presentation">Présentation</a><ol class="wiki_list_2"><li><a href="#paragraph_les-avertissements">Les avertissements</a></li><li><a href="#paragraph_les-sanctions">Les sanctions</a></li><li><a href="#paragraph_les-bannissements">Les bannissements</a></li><li><a href="#paragraph_les-alertes">Les alertes</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1466</wiki_user_id>
+    <wiki_user_ip>90.55.70.218</wiki_user_ip>
+    <wiki_timestamp>1358193255</wiki_timestamp>
+    <wiki_content>Dans cet article, nous découvrirons pas à pas le panneau de modération de PHPBoost. 
 Celui-ci va vous permettre de gérer les avertissements des utilisateurs.
 
 
@@ -111,4 +116,5 @@ Vous pouvez donc traiter cette alerte du panneau de contribution, en cliquant de
 Pour la traiter, cliquez dessus, puis cliquez sur [i]Mettre en résolu[/i]. Après, à vous de régler le problème signalé (par messages privés, ...). Sachez que toute alerte peut être ré-ouverte. Pour cela cliquez sur l'alerte déjà traitée, puis cliquez sur [i]Mettre en attente de traitement[/i].
 
 Voilà, maintenant vous savez vous servir du panneau de modération de PHPBoost ! Utilisez le à bon escient ;)</wiki_content>
+  </wiki_contents_fields>
 </wiki_cat>

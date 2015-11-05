@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>187</wiki_id>
-  <wiki_id_contents>939</wiki_id_contents>
-  <wiki_title>Système de commentaires</wiki_title>
-  <wiki_encoded_title>systeme-de-commentaires</wiki_encoded_title>
-  <wiki_hits>1028</wiki_hits>
-  <wiki_id_cat>5</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>939</wiki_con_id_contents>
-  <wiki_con_id_article>187</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_implementation-de-l-extension-point">Implémentation de l'extension point</a></li><li><a href="#paragraph_appel-de-la-classe">Appel de la classe</a></li><li><a href="#paragraph_affichage-du-systeme-de-commentaires">Affichage du système de commentaires</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.12</wiki_user_ip>
-  <wiki_timestamp>1371137835</wiki_timestamp>
-  <wiki_content>Cet article indique les différents éléments à mettre en place pour gérer et afficher les commentaires dans un module.
+  <wiki_articles_fields>
+    <wiki_id>187</wiki_id>
+    <wiki_id_contents>939</wiki_id_contents>
+    <wiki_title>Système de commentaires</wiki_title>
+    <wiki_encoded_title>systeme-de-commentaires</wiki_encoded_title>
+    <wiki_hits>1028</wiki_hits>
+    <wiki_id_cat>5</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>939</wiki_con_id_contents>
+    <wiki_con_id_article>187</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_implementation-de-l-extension-point">Implémentation de l'extension point</a></li><li><a href="#paragraph_appel-de-la-classe">Appel de la classe</a></li><li><a href="#paragraph_affichage-du-systeme-de-commentaires">Affichage du système de commentaires</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1371137835</wiki_timestamp>
+    <wiki_content>Cet article indique les différents éléments à mettre en place pour gérer et afficher les commentaires dans un module.
 
 -- Implémentation de l'extension point --
 
@@ -93,4 +96,5 @@ Ajouter le code suivant dans le template appelé par votre contrôleur à l'endroit
 [code=tpl]
 # INCLUDE  COMMENTS #
 [/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

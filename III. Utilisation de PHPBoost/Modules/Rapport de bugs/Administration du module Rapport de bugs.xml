@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>185</wiki_id>
-  <wiki_id_contents>916</wiki_id_contents>
-  <wiki_title>Administration du module Rapport de bugs</wiki_title>
-  <wiki_encoded_title>administration-du-module-rapport-de-bugs</wiki_encoded_title>
-  <wiki_hits>625</wiki_hits>
-  <wiki_id_cat>50</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>916</wiki_con_id_contents>
-  <wiki_con_id_article>185</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_description-par-defaut-des-bugs">Description par défaut des bugs</a></li><li><a href="#paragraph_types-de-bugs">Types de bugs</a></li><li><a href="#paragraph_categories-des-bugs">Catégories des bugs</a></li><li><a href="#paragraph_niveaux-des-bugs">Niveaux des bugs</a></li><li><a href="#paragraph_priorites-des-bugs">Priorités des bugs</a></li><li><a href="#paragraph_versions-des-bugs">Versions des bugs</a></li></ol></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.11</wiki_user_ip>
-  <wiki_timestamp>1366197276</wiki_timestamp>
-  <wiki_content>-- Configuration --
+  <wiki_articles_fields>
+    <wiki_id>185</wiki_id>
+    <wiki_id_contents>916</wiki_id_contents>
+    <wiki_title>Administration du module Rapport de bugs</wiki_title>
+    <wiki_encoded_title>administration-du-module-rapport-de-bugs</wiki_encoded_title>
+    <wiki_hits>625</wiki_hits>
+    <wiki_id_cat>50</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>916</wiki_con_id_contents>
+    <wiki_con_id_article>185</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_description-par-defaut-des-bugs">Description par défaut des bugs</a></li><li><a href="#paragraph_types-de-bugs">Types de bugs</a></li><li><a href="#paragraph_categories-des-bugs">Catégories des bugs</a></li><li><a href="#paragraph_niveaux-des-bugs">Niveaux des bugs</a></li><li><a href="#paragraph_priorites-des-bugs">Priorités des bugs</a></li><li><a href="#paragraph_versions-des-bugs">Versions des bugs</a></li></ol></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.11</wiki_user_ip>
+    <wiki_timestamp>1366197276</wiki_timestamp>
+    <wiki_content>-- Configuration --
 
 La page "configuration" du module "Rapport de bugs" se divise en plusieurs parties distinctes.
 --- Configuration ---
@@ -122,4 +125,5 @@ Le fonctionnement du système d'autorisation reste inchangé. Un appui sur la touc
 N'oubliez pas de valider le formulaire en cliquant sur le bouton "Modifier" ;)
 
 [img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/autorisations.jpg[/img]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

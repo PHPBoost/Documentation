@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>41</wiki_id>
-  <wiki_id_contents>828</wiki_id_contents>
-  <wiki_title>Administration du module FAQ</wiki_title>
-  <wiki_encoded_title>administration-du-module-faq</wiki_encoded_title>
-  <wiki_hits>351</wiki_hits>
-  <wiki_id_cat>24</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>828</wiki_con_id_contents>
-  <wiki_con_id_article>41</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a></li><li><a href="#paragraph_autorisations-generales">Autorisations générales</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_recompter-le-nombre-de-questions">Recompter le nombre de questions</a></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li></ol></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_liste-des-questions">Liste des questions</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1837</wiki_user_id>
-  <wiki_user_ip>24.201.132.222</wiki_user_ip>
-  <wiki_timestamp>1358464337</wiki_timestamp>
-  <wiki_content>-- Configuration de la FAQ --
+  <wiki_articles_fields>
+    <wiki_id>41</wiki_id>
+    <wiki_id_contents>828</wiki_id_contents>
+    <wiki_title>Administration du module FAQ</wiki_title>
+    <wiki_encoded_title>administration-du-module-faq</wiki_encoded_title>
+    <wiki_hits>351</wiki_hits>
+    <wiki_id_cat>24</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>828</wiki_con_id_contents>
+    <wiki_con_id_article>41</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a></li><li><a href="#paragraph_autorisations-generales">Autorisations générales</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_recompter-le-nombre-de-questions">Recompter le nombre de questions</a></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li></ol></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_liste-des-questions">Liste des questions</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1837</wiki_user_id>
+    <wiki_user_ip>24.201.132.222</wiki_user_ip>
+    <wiki_timestamp>1358464337</wiki_timestamp>
+    <wiki_content>-- Configuration de la FAQ --
 
 --- Configuration de la FAQ ---
 [align=center]
@@ -90,4 +93,5 @@ Vous avez ici l'arborescence complète des catégories de votre FAQ. Pour chaque c
 Vous avez ici la liste complète des questions avec leur date de création et leur catégorie.
 
 [style=notice]Si une question n'a pas de catégorie, c'est qu'elle se trouve a la racine de l'arborescence des catégories.[/style]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

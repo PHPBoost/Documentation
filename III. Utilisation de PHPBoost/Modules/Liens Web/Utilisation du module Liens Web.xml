@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>53</wiki_id>
-  <wiki_id_contents>1276</wiki_id_contents>
-  <wiki_title>Utilisation du module Liens Web</wiki_title>
-  <wiki_encoded_title>utilisation-du-module-liens-web</wiki_encoded_title>
-  <wiki_hits>380</wiki_hits>
-  <wiki_id_cat>27</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1276</wiki_con_id_contents>
-  <wiki_con_id_article>53</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_les-categories">les catégories</a></li><li><a href="#paragraph_liens-d-une-categorie">Liens d'une catégorie</a></li><li><a href="#paragraph_visiter-un-lien">Visiter un lien</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5193</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1405002474</wiki_timestamp>
-  <wiki_content>Il est toujours intéressant de consulter une rubrique de gestion de lien d'un site, que ce soit par curiosité ou approfondir ses connaissances dans un domaine traité par le site que l'on consulte.
+  <wiki_articles_fields>
+    <wiki_id>53</wiki_id>
+    <wiki_id_contents>1276</wiki_id_contents>
+    <wiki_title>Utilisation du module Liens Web</wiki_title>
+    <wiki_encoded_title>utilisation-du-module-liens-web</wiki_encoded_title>
+    <wiki_hits>380</wiki_hits>
+    <wiki_id_cat>27</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1276</wiki_con_id_contents>
+    <wiki_con_id_article>53</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_les-categories">les catégories</a></li><li><a href="#paragraph_liens-d-une-categorie">Liens d'une catégorie</a></li><li><a href="#paragraph_visiter-un-lien">Visiter un lien</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1405002474</wiki_timestamp>
+    <wiki_content>Il est toujours intéressant de consulter une rubrique de gestion de lien d'un site, que ce soit par curiosité ou approfondir ses connaissances dans un domaine traité par le site que l'on consulte.
 
 -- les catégories --
 
@@ -49,4 +52,5 @@ Il est possible de noter le lien entre 0 et le nombre maximal d'étoiles défini d
 
 Chaque utilisateur peut laisser un commentaire selon les autorisations mises par l'administrateur.
 Pour poster un commentaire il faut cliquer sur "poster un commentaire", un éditeur vous permettra d'écrire un nouveau commentaire et plus bas les commentaires déjà présents sont affichés.</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

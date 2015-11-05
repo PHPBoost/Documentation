@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>181</wiki_id>
-  <wiki_id_contents>1440</wiki_id_contents>
-  <wiki_title>Utiliser PHPBoost en ligne de commande</wiki_title>
-  <wiki_encoded_title>utiliser-phpboost-en-ligne-de-commande</wiki_encoded_title>
-  <wiki_hits>1368</wiki_hits>
-  <wiki_id_cat>3</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1440</wiki_con_id_contents>
-  <wiki_con_id_article>181</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_utilisation">Utilisation</a></li><li><a href="#paragraph_installer-phpboost">Installer PHPBoost</a></li><li><a href="#paragraph_modification-du-htaccess">Modification du .htaccess</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-du-contenu-au-fichier">Ajouter du contenu au fichier</a></li><li><a href="#paragraph_activer-ou-d-sactiver-la-r-criture-des-urls">Activer ou désactiver la réécriture des URLs</a></li></ol></li><li><a href="#paragraph_g-rer-les-utilisateurs">Gérer les utilisateurs</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-utilisateur">Ajouter un utilisateur</a></li><li><a href="#paragraph_supprimer-un-utilisateur">Supprimer un utilisateur</a><ol class="wiki_list_3"><li><a href="#paragraph_supprimer-par-son-id">Supprimer par son id</a></li><li><a href="#paragraph_supprimer-par-son-login">Supprimer par son login</a></li><li><a href="#paragraph_supprimer-par-son-email">Supprimer par son email</a></li></ol></li></ol></li><li><a href="#paragraph_faire-un-backup-sql">Faire un backup SQL</a></li><li><a href="#paragraph_restaurer-un-backup-sql">Restaurer un backup SQL</a></li><li><a href="#paragraph_r-g-n-rer-le-cache">Régénérer le cache</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>80.215.133.141</wiki_user_ip>
-  <wiki_timestamp>1441796169</wiki_timestamp>
-  <wiki_content>Depuis PHPBoost 4.0, vous pouvez installer PHPBoost en ligne de commande. 
+  <wiki_articles_fields>
+    <wiki_id>181</wiki_id>
+    <wiki_id_contents>1440</wiki_id_contents>
+    <wiki_title>Utiliser PHPBoost en ligne de commande</wiki_title>
+    <wiki_encoded_title>utiliser-phpboost-en-ligne-de-commande</wiki_encoded_title>
+    <wiki_hits>1368</wiki_hits>
+    <wiki_id_cat>3</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1440</wiki_con_id_contents>
+    <wiki_con_id_article>181</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_utilisation">Utilisation</a></li><li><a href="#paragraph_installer-phpboost">Installer PHPBoost</a></li><li><a href="#paragraph_modification-du-htaccess">Modification du .htaccess</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-du-contenu-au-fichier">Ajouter du contenu au fichier</a></li><li><a href="#paragraph_activer-ou-d-sactiver-la-r-criture-des-urls">Activer ou désactiver la réécriture des URLs</a></li></ol></li><li><a href="#paragraph_g-rer-les-utilisateurs">Gérer les utilisateurs</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-utilisateur">Ajouter un utilisateur</a></li><li><a href="#paragraph_supprimer-un-utilisateur">Supprimer un utilisateur</a><ol class="wiki_list_3"><li><a href="#paragraph_supprimer-par-son-id">Supprimer par son id</a></li><li><a href="#paragraph_supprimer-par-son-login">Supprimer par son login</a></li><li><a href="#paragraph_supprimer-par-son-email">Supprimer par son email</a></li></ol></li></ol></li><li><a href="#paragraph_faire-un-backup-sql">Faire un backup SQL</a></li><li><a href="#paragraph_restaurer-un-backup-sql">Restaurer un backup SQL</a></li><li><a href="#paragraph_r-g-n-rer-le-cache">Régénérer le cache</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>80.215.133.141</wiki_user_ip>
+    <wiki_timestamp>1441796169</wiki_timestamp>
+    <wiki_content>Depuis PHPBoost 4.0, vous pouvez installer PHPBoost en ligne de commande. 
 
 Cela permet de déployer votre site très rapidement. Vous pouvez également effectuer d'autres opérations comme la modification du .htaccess, du cache, l'import d'un backup, opérations sur les membres, ...
 
@@ -175,4 +178,5 @@ Pour restaurer votre base de données à partir d'un fichier :
 Pour régénérer le cache du site :
 
 [code=bash]php phpboost cache clear[/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

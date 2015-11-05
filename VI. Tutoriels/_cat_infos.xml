@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_cat>
-  <wiki_id>192</wiki_id>
-  <wiki_id_contents>951</wiki_id_contents>
-  <wiki_title>VI. Tutoriels</wiki_title>
-  <wiki_encoded_title>tutoriels</wiki_encoded_title>
-  <wiki_hits>577</wiki_hits>
-  <wiki_id_cat>54</wiki_id_cat>
-  <wiki_is_cat>1</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_cat_id>54</wiki_cat_id>
-  <wiki_cat_id_parent>0</wiki_cat_id_parent>
-  <wiki_cat_article_id>192</wiki_cat_article_id>
-  <wiki_con_id_contents>951</wiki_con_id_contents>
-  <wiki_con_id_article>192</wiki_con_id_article>
-  <wiki_menu></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1381850343</wiki_timestamp>
-  <wiki_content>Tutoriels</wiki_content>
+  <wiki_articles_fields>
+    <wiki_id>192</wiki_id>
+    <wiki_id_contents>951</wiki_id_contents>
+    <wiki_title>VI. Tutoriels</wiki_title>
+    <wiki_encoded_title>tutoriels</wiki_encoded_title>
+    <wiki_hits>577</wiki_hits>
+    <wiki_id_cat>54</wiki_id_cat>
+    <wiki_is_cat>1</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_cats_fields>
+    <wiki_cat_id>54</wiki_cat_id>
+    <wiki_cat_id_parent>0</wiki_cat_id_parent>
+    <wiki_cat_article_id>192</wiki_cat_article_id>
+  </wiki_cats_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>951</wiki_con_id_contents>
+    <wiki_con_id_article>192</wiki_con_id_article>
+    <wiki_menu></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1381850343</wiki_timestamp>
+    <wiki_content>Tutoriels</wiki_content>
+  </wiki_contents_fields>
 </wiki_cat>

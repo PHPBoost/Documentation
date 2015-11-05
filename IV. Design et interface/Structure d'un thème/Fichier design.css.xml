@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>225</wiki_id>
-  <wiki_id_contents>1183</wiki_id_contents>
-  <wiki_title>Fichier design.css</wiki_title>
-  <wiki_encoded_title>fichier-design-css</wiki_encoded_title>
-  <wiki_hits>2171</wiki_hits>
-  <wiki_id_cat>63</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1183</wiki_con_id_contents>
-  <wiki_con_id_article>225</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_fixe-ou-extensible">Fixe ou extensible ?</a></li><li><a href="#paragraph_l-arriere-plan-la-couleur-taille-de-la-police">L'arrière plan, la couleur, taille de la police</a></li><li><a href="#paragraph_l-en-tete-et-le-sous-en-tete">L'en-tête et le sous en-tête</a></li><li><a href="#paragraph_le-compteur-de-visite">Le compteur de visite</a></li><li><a href="#paragraph_les-menus">Les menus</a></li><li><a href="#paragraph_le-contenu-de-la-page">Le contenu de la page</a></li><li><a href="#paragraph_la-barre-de-lien-rapide">La barre de lien rapide</a></li><li><a href="#paragraph_les-emplacements-au-dessus-et-en-dessous-des-pages">Les emplacements au dessus et en dessous des pages</a></li><li><a href="#paragraph_le-footer-ou-pied-de-page">Le footer ( ou pied de page )</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1760</wiki_user_id>
-  <wiki_user_ip>83.201.19.203</wiki_user_ip>
-  <wiki_timestamp>1404495463</wiki_timestamp>
-  <wiki_content>Le fichier [i]design.css[/i] définit en fait l'aspect général de votre thème. On y trouve les éléments importants comme la largeur de votre site, la couleur d'arrière plan, et l'organisation des zones tels que l'en-tête, le menu de gauche ou le pied de page. 
+  <wiki_articles_fields>
+    <wiki_id>225</wiki_id>
+    <wiki_id_contents>1183</wiki_id_contents>
+    <wiki_title>Fichier design.css</wiki_title>
+    <wiki_encoded_title>fichier-design-css</wiki_encoded_title>
+    <wiki_hits>2171</wiki_hits>
+    <wiki_id_cat>63</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1183</wiki_con_id_contents>
+    <wiki_con_id_article>225</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_fixe-ou-extensible">Fixe ou extensible ?</a></li><li><a href="#paragraph_l-arriere-plan-la-couleur-taille-de-la-police">L'arrière plan, la couleur, taille de la police</a></li><li><a href="#paragraph_l-en-tete-et-le-sous-en-tete">L'en-tête et le sous en-tête</a></li><li><a href="#paragraph_le-compteur-de-visite">Le compteur de visite</a></li><li><a href="#paragraph_les-menus">Les menus</a></li><li><a href="#paragraph_le-contenu-de-la-page">Le contenu de la page</a></li><li><a href="#paragraph_la-barre-de-lien-rapide">La barre de lien rapide</a></li><li><a href="#paragraph_les-emplacements-au-dessus-et-en-dessous-des-pages">Les emplacements au dessus et en dessous des pages</a></li><li><a href="#paragraph_le-footer-ou-pied-de-page">Le footer ( ou pied de page )</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>83.201.19.203</wiki_user_ip>
+    <wiki_timestamp>1404495463</wiki_timestamp>
+    <wiki_content>Le fichier [i]design.css[/i] définit en fait l'aspect général de votre thème. On y trouve les éléments importants comme la largeur de votre site, la couleur d'arrière plan, et l'organisation des zones tels que l'en-tête, le menu de gauche ou le pied de page. 
 
 Commençons par le commencement :
 
@@ -231,4 +234,5 @@ footer#footer .footer-infos {
 }
 
 footer#footer .footer-infos span { color: #FFFFFF; font-size: 10px; }[/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>161</wiki_id>
-  <wiki_id_contents>859</wiki_id_contents>
-  <wiki_title>Administration du module Pages</wiki_title>
-  <wiki_encoded_title>administration-du-module-pages</wiki_encoded_title>
-  <wiki_hits>489</wiki_hits>
-  <wiki_id_cat>44</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>859</wiki_con_id_contents>
-  <wiki_con_id_article>161</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_pages">Pages</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li><li><a href="#paragraph_gestion-des-pages">Gestion des pages</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>935</wiki_user_id>
-  <wiki_user_ip>89.90.175.161</wiki_user_ip>
-  <wiki_timestamp>1358776915</wiki_timestamp>
-  <wiki_content>[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/pages/page_2.jpg[/img][/align]
+  <wiki_articles_fields>
+    <wiki_id>161</wiki_id>
+    <wiki_id_contents>859</wiki_id_contents>
+    <wiki_title>Administration du module Pages</wiki_title>
+    <wiki_encoded_title>administration-du-module-pages</wiki_encoded_title>
+    <wiki_hits>489</wiki_hits>
+    <wiki_id_cat>44</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>859</wiki_con_id_contents>
+    <wiki_con_id_article>161</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_pages">Pages</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li><li><a href="#paragraph_gestion-des-pages">Gestion des pages</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1358776915</wiki_timestamp>
+    <wiki_content>[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/pages/page_2.jpg[/img][/align]
 
 -- Pages --
 
@@ -44,4 +47,5 @@ Pour chacun, vous pouvez autoriser les visiteurs / les membres / les modérateurs
 -- Gestion des pages --
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/pages/pages_pages.png[/img][/align]
 La documentation de cette zone se trouve dans [link=utilisation-du-module-pages]cet article[/link].</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

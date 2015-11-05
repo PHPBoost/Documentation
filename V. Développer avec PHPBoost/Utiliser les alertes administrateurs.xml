@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>148</wiki_id>
-  <wiki_id_contents>503</wiki_id_contents>
-  <wiki_title>Utiliser les alertes administrateurs</wiki_title>
-  <wiki_encoded_title>utiliser-les-alertes-administrateurs</wiki_encoded_title>
-  <wiki_hits>491</wiki_hits>
-  <wiki_id_cat>5</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>503</wiki_con_id_contents>
-  <wiki_con_id_article>148</wiki_con_id_article>
-  <wiki_menu></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>982</wiki_user_id>
-  <wiki_user_ip>193.164.156.12</wiki_user_ip>
-  <wiki_timestamp>1353926369</wiki_timestamp>
-  <wiki_content>PHPBoost est doté d'un système permettant d'envoyer des alertes aux administrateurs. Ce système est notamment utilisé quand un utilisateur souhaite s'inscrire et qu'il faut l'approbation d'un administrateur ou bien encore pour alerter d'une mise à jour d'un module ou de PHPBoost.
+  <wiki_articles_fields>
+    <wiki_id>148</wiki_id>
+    <wiki_id_contents>503</wiki_id_contents>
+    <wiki_title>Utiliser les alertes administrateurs</wiki_title>
+    <wiki_encoded_title>utiliser-les-alertes-administrateurs</wiki_encoded_title>
+    <wiki_hits>491</wiki_hits>
+    <wiki_id_cat>5</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>503</wiki_con_id_contents>
+    <wiki_con_id_article>148</wiki_con_id_article>
+    <wiki_menu></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1353926369</wiki_timestamp>
+    <wiki_content>PHPBoost est doté d'un système permettant d'envoyer des alertes aux administrateurs. Ce système est notamment utilisé quand un utilisateur souhaite s'inscrire et qu'il faut l'approbation d'un administrateur ou bien encore pour alerter d'une mise à jour d'un module ou de PHPBoost.
 
 Pour ajouter une alerte, rien de plus simple, il vous faudra instancier la classe [code=php,0,1]AdministratorAlert[/code] et définir un certain nombre d'informations aux variables de cette classe.
 
@@ -46,4 +49,5 @@ Pour enregistrer ou modifier l'alerte :
 Pour la supprimer utilisez :
 
 [code=php]AdministratorAlertService::delete_alert($alert);[/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>147</wiki_id>
-  <wiki_id_contents>1249</wiki_id_contents>
-  <wiki_title>Constantes chargées avec l'environnement PHPBoost</wiki_title>
-  <wiki_encoded_title>constantes-chargees-avec-l-environnement-phpboost</wiki_encoded_title>
-  <wiki_hits>843</wiki_hits>
-  <wiki_id_cat>5</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1249</wiki_con_id_contents>
-  <wiki_con_id_article>147</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_divers">Divers</a></li><li><a href="#paragraph_operations-sur-la-base-de-donnees">Opérations sur la base de données</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>5193</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1404999636</wiki_timestamp>
-  <wiki_content>Un certain nombre de constantes sont chargées avec l'environnement PHPBoost.
+  <wiki_articles_fields>
+    <wiki_id>147</wiki_id>
+    <wiki_id_contents>1249</wiki_id_contents>
+    <wiki_title>Constantes chargées avec l'environnement PHPBoost</wiki_title>
+    <wiki_encoded_title>constantes-chargees-avec-l-environnement-phpboost</wiki_encoded_title>
+    <wiki_hits>843</wiki_hits>
+    <wiki_id_cat>5</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1249</wiki_con_id_contents>
+    <wiki_con_id_article>147</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_divers">Divers</a></li><li><a href="#paragraph_operations-sur-la-base-de-donnees">Opérations sur la base de données</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1404999636</wiki_timestamp>
+    <wiki_content>Un certain nombre de constantes sont chargées avec l'environnement PHPBoost.
 
 -- Divers --
 
@@ -56,4 +59,5 @@ define('DB_TABLE_SESSIONS', PREFIX . 'sessions');
 define('DB_TABLE_SMILEYS', PREFIX . 'smileys');
 define('DB_TABLE_UPLOAD', PREFIX . 'upload');
 define('DB_TABLE_UPLOAD_CAT', PREFIX . 'upload_cat');[/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

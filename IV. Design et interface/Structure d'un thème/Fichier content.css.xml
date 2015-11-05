@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>224</wiki_id>
-  <wiki_id_contents>1111</wiki_id_contents>
-  <wiki_title>Fichier content.css</wiki_title>
-  <wiki_encoded_title>fichier-content-css</wiki_encoded_title>
-  <wiki_hits>826</wiki_hits>
-  <wiki_id_cat>63</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1111</wiki_con_id_contents>
-  <wiki_con_id_article>224</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_les-conteneurs">Les conteneurs</a></li><li><a href="#paragraph_les-blocks">Les blocks</a></li><li><a href="#paragraph_la-pagination">La pagination</a></li><li><a href="#paragraph_l-explorateur">L'explorateur</a></li><li><a href="#paragraph_les-tableaux">Les tableaux</a></li><li><a href="#paragraph_les-boutons">Les boutons</a></li><li><a href="#paragraph_les-formulaires">Les formulaires</a></li><li><a href="#paragraph_les-mini-modules">Les mini-modules</a></li><li><a href="#paragraph_les-messages">Les messages</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1760</wiki_user_id>
-  <wiki_user_ip>82.224.142.186</wiki_user_ip>
-  <wiki_timestamp>1402254719</wiki_timestamp>
-  <wiki_content>-- Introduction --
+  <wiki_articles_fields>
+    <wiki_id>224</wiki_id>
+    <wiki_id_contents>1111</wiki_id_contents>
+    <wiki_title>Fichier content.css</wiki_title>
+    <wiki_encoded_title>fichier-content-css</wiki_encoded_title>
+    <wiki_hits>826</wiki_hits>
+    <wiki_id_cat>63</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1111</wiki_con_id_contents>
+    <wiki_con_id_article>224</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_les-conteneurs">Les conteneurs</a></li><li><a href="#paragraph_les-blocks">Les blocks</a></li><li><a href="#paragraph_la-pagination">La pagination</a></li><li><a href="#paragraph_l-explorateur">L'explorateur</a></li><li><a href="#paragraph_les-tableaux">Les tableaux</a></li><li><a href="#paragraph_les-boutons">Les boutons</a></li><li><a href="#paragraph_les-formulaires">Les formulaires</a></li><li><a href="#paragraph_les-mini-modules">Les mini-modules</a></li><li><a href="#paragraph_les-messages">Les messages</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1402254719</wiki_timestamp>
+    <wiki_content>-- Introduction --
 Cet article va décrire le contenu du fichier [i]content.css[/i], celui-ci inclut le design de tout ce qui touche les modules, les minis modules ainsi que les commentaires et encore bien d'autres choses que vous allez découvrir au fur et à mesure.
 
 -- Les conteneurs --
@@ -737,4 +740,5 @@ i.message-announce-track { font-size: 1.6em; }
 
 i.message-announce { color: #D1D2D4; }
 i.message-announce-new { color: #4372AA; }[/code] L'affichage des messages et des commentaires est géré par les classes "message-"</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

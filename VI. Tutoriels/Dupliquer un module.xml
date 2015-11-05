@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>194</wiki_id>
-  <wiki_id_contents>1012</wiki_id_contents>
-  <wiki_title>Dupliquer un module</wiki_title>
-  <wiki_encoded_title>dupliquer-un-module</wiki_encoded_title>
-  <wiki_hits>1257</wiki_hits>
-  <wiki_id_cat>54</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1012</wiki_con_id_contents>
-  <wiki_con_id_article>194</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-theorie">La théorie</a></li><li><a href="#paragraph_la-pratique">La pratique</a><ol class="wiki_list_2"><li><a href="#paragraph_remplacer-le-nom-du-module-dans-le-contenu-de-chaque-fichier">Remplacer le nom du module dans le contenu de chaque fichier</a></li><li><a href="#paragraph_remplacer-le-nom-des-fichiers">Remplacer le nom des fichiers</a></li><li><a href="#paragraph_ajustements">Ajustements</a></li><li><a href="#paragraph_installation">Installation</a></li></ol></li><li><a href="#paragraph_les-mises-a-jours">Les mises à jours</a></li><li><a href="#paragraph_bonus">Bonus</a><ol class="wiki_list_2"><li><a href="#paragraph_module-blog">Module blog</a></li><li><a href="#paragraph_appel-des-5-derniers-billets-du-blog-dans-homecustom">Appel des 5 derniers billets du blog dans HomeCustom </a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>768</wiki_user_id>
-  <wiki_user_ip>78.122.32.202</wiki_user_ip>
-  <wiki_timestamp>1395674240</wiki_timestamp>
-  <wiki_content>-- La théorie --
+  <wiki_articles_fields>
+    <wiki_id>194</wiki_id>
+    <wiki_id_contents>1012</wiki_id_contents>
+    <wiki_title>Dupliquer un module</wiki_title>
+    <wiki_encoded_title>dupliquer-un-module</wiki_encoded_title>
+    <wiki_hits>1257</wiki_hits>
+    <wiki_id_cat>54</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1012</wiki_con_id_contents>
+    <wiki_con_id_article>194</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-theorie">La théorie</a></li><li><a href="#paragraph_la-pratique">La pratique</a><ol class="wiki_list_2"><li><a href="#paragraph_remplacer-le-nom-du-module-dans-le-contenu-de-chaque-fichier">Remplacer le nom du module dans le contenu de chaque fichier</a></li><li><a href="#paragraph_remplacer-le-nom-des-fichiers">Remplacer le nom des fichiers</a></li><li><a href="#paragraph_ajustements">Ajustements</a></li><li><a href="#paragraph_installation">Installation</a></li></ol></li><li><a href="#paragraph_les-mises-a-jours">Les mises à jours</a></li><li><a href="#paragraph_bonus">Bonus</a><ol class="wiki_list_2"><li><a href="#paragraph_module-blog">Module blog</a></li><li><a href="#paragraph_appel-des-5-derniers-billets-du-blog-dans-homecustom">Appel des 5 derniers billets du blog dans HomeCustom </a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>768</wiki_user_id>
+    <wiki_user_ip>78.122.32.202</wiki_user_ip>
+    <wiki_timestamp>1395674240</wiki_timestamp>
+    <wiki_content>-- La théorie --
 Il est possible de dupliquer un module, soit pour le renommer à son goût, soit pour utiliser simultanément plusieurs fois le même module dans des situations différentes .
 
 Il suffit de remplacer le nom du module partout où il apparaît en respectant bien la casse (majuscules/minuscules), dans sa version [u]non-installée[/u].
@@ -267,4 +270,5 @@ Fichier [i]home.tpl[/i] :
 	&lt;p&gt;{blog.CONTENT}&lt;/p&gt;
 &lt;/div&gt;
 # END blog #[/code]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

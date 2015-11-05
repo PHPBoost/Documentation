@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>132</wiki_id>
-  <wiki_id_contents>767</wiki_id_contents>
-  <wiki_title>Gestion des champs étendus</wiki_title>
-  <wiki_encoded_title>gestion-des-champs-etendus</wiki_encoded_title>
-  <wiki_hits>427</wiki_hits>
-  <wiki_id_cat>17</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>767</wiki_con_id_contents>
-  <wiki_con_id_article>132</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-champs-etendus">Gestion des champs étendus</a></li><li><a href="#paragraph_ajouter-un-champ-etendu">Ajouter un champ étendu</a><ol class="wiki_list_2"><li><a href="#paragraph_specificites">Spécificités</a><ol class="wiki_list_3"><li><a href="#paragraph_champs-textes">Champs textes</a></li><li><a href="#paragraph_champs-selections-et-choix">Champs sélections et choix</a></li></ol></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1466</wiki_user_id>
-  <wiki_user_ip>90.55.70.218</wiki_user_ip>
-  <wiki_timestamp>1358189376</wiki_timestamp>
-  <wiki_content>Vous avez la possibilité ici de gérer de nouveaux champs dans le profil de vos utilisateurs. Ainsi vous allez pouvoir personnaliser les champs à votre guise. De nombreuses possibilités vous sont offertes, nous allons les découvrir dans cet article.
+  <wiki_articles_fields>
+    <wiki_id>132</wiki_id>
+    <wiki_id_contents>767</wiki_id_contents>
+    <wiki_title>Gestion des champs étendus</wiki_title>
+    <wiki_encoded_title>gestion-des-champs-etendus</wiki_encoded_title>
+    <wiki_hits>427</wiki_hits>
+    <wiki_id_cat>17</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>767</wiki_con_id_contents>
+    <wiki_con_id_article>132</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-champs-etendus">Gestion des champs étendus</a></li><li><a href="#paragraph_ajouter-un-champ-etendu">Ajouter un champ étendu</a><ol class="wiki_list_2"><li><a href="#paragraph_specificites">Spécificités</a><ol class="wiki_list_3"><li><a href="#paragraph_champs-textes">Champs textes</a></li><li><a href="#paragraph_champs-selections-et-choix">Champs sélections et choix</a></li></ol></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1466</wiki_user_id>
+    <wiki_user_ip>90.55.70.218</wiki_user_ip>
+    <wiki_timestamp>1358189376</wiki_timestamp>
+    <wiki_content>Vous avez la possibilité ici de gérer de nouveaux champs dans le profil de vos utilisateurs. Ainsi vous allez pouvoir personnaliser les champs à votre guise. De nombreuses possibilités vous sont offertes, nous allons les découvrir dans cet article.
 
 -- Gestion des champs étendus --
 
@@ -56,4 +59,5 @@ Selon le champ, vous pouvez avoir d'autres informations à saisir :
 	[*] [b]Valeurs possibles[/b] : Vous permet de donner les valeurs possibles. Ex pour avoir une liste déroulante avec trois valeurs : Rouge, Bleu, Vert, il vous faudra donner comme valeur : Rouge|Bleu|Vert
         [*] [b]Valeurs par défaut [/b] : Le champs valeurs par défaut vous permet de définir les valeurs qui doivent être sélectionnées/cochées par défaut. Si il y en a plusieurs, elles doivent être séparées par | .
 [/list]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

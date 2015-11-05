@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>288</wiki_id>
-  <wiki_id_contents>1339</wiki_id_contents>
-  <wiki_title>Règles de ponctuation et de typographie</wiki_title>
-  <wiki_encoded_title>regles-de-ponctuation-et-de-typographie</wiki_encoded_title>
-  <wiki_hits>797</wiki_hits>
-  <wiki_id_cat>3</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1339</wiki_con_id_contents>
-  <wiki_con_id_article>288</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a><ol class="wiki_list_2"><li><a href="#paragraph_espace">Espace</a></li><li><a href="#paragraph_signes">Signes</a></li></ol></li><li><a href="#paragraph_les-regles-de-ponctuation">Les règles de ponctuation</a></li><li><a href="#paragraph_divers">Divers</a><ol class="wiki_list_2"><li><a href="#paragraph_titres-et-abreviations">Titres et abréviations</a></li><li><a href="#paragraph_unites">Unités</a></li><li><a href="#paragraph_citations-tronquees">Citations tronquées</a></li><li><a href="#paragraph_etc-et-les-points-de-suspension">&quot;etc.&quot; et les points de suspension</a></li><li><a href="#paragraph_acronymes">Acronymes</a></li><li><a href="#paragraph_accents-et-majuscules">Accents et majuscules</a></li><li><a href="#paragraph_numeration">Énumération</a></li><li><a href="#paragraph_siecles">Siècles</a></li><li><a href="#paragraph_noms-et-prenoms">Noms et prénoms</a></li></ol></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1406534170</wiki_timestamp>
-  <wiki_content>-- Introduction --
+  <wiki_articles_fields>
+    <wiki_id>288</wiki_id>
+    <wiki_id_contents>1339</wiki_id_contents>
+    <wiki_title>Règles de ponctuation et de typographie</wiki_title>
+    <wiki_encoded_title>regles-de-ponctuation-et-de-typographie</wiki_encoded_title>
+    <wiki_hits>797</wiki_hits>
+    <wiki_id_cat>3</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1339</wiki_con_id_contents>
+    <wiki_con_id_article>288</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a><ol class="wiki_list_2"><li><a href="#paragraph_espace">Espace</a></li><li><a href="#paragraph_signes">Signes</a></li></ol></li><li><a href="#paragraph_les-regles-de-ponctuation">Les règles de ponctuation</a></li><li><a href="#paragraph_divers">Divers</a><ol class="wiki_list_2"><li><a href="#paragraph_titres-et-abreviations">Titres et abréviations</a></li><li><a href="#paragraph_unites">Unités</a></li><li><a href="#paragraph_citations-tronquees">Citations tronquées</a></li><li><a href="#paragraph_etc-et-les-points-de-suspension">&quot;etc.&quot; et les points de suspension</a></li><li><a href="#paragraph_acronymes">Acronymes</a></li><li><a href="#paragraph_accents-et-majuscules">Accents et majuscules</a></li><li><a href="#paragraph_numeration">Énumération</a></li><li><a href="#paragraph_siecles">Siècles</a></li><li><a href="#paragraph_noms-et-prenoms">Noms et prénoms</a></li></ol></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1406534170</wiki_timestamp>
+    <wiki_content>-- Introduction --
 
 --- Espace ---
 
@@ -286,4 +289,5 @@ Le XIXe s. ap. J.-C. [/style]
 [/list]
 
 [style=notice]John DOE[/style]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>

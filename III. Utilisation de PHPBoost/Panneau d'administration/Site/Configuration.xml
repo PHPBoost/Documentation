@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <wiki_article>
-  <wiki_id>130</wiki_id>
-  <wiki_id_contents>1254</wiki_id_contents>
-  <wiki_title>Configuration</wiki_title>
-  <wiki_encoded_title>configuration</wiki_encoded_title>
-  <wiki_hits>868</wiki_hits>
-  <wiki_id_cat>15</wiki_id_cat>
-  <wiki_is_cat>0</wiki_is_cat>
-  <wiki_defined_status>0</wiki_defined_status>
-  <wiki_undefined_status></wiki_undefined_status>
-  <wiki_redirect>0</wiki_redirect>
-  <wiki_auth></wiki_auth>
-  <wiki_con_id_contents>1254</wiki_con_id_contents>
-  <wiki_con_id_article>130</wiki_con_id_article>
-  <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_configuration-avancee">Configuration avancée</a><ol class="wiki_list_2"><li><a href="#paragraph_activation-de-la-reecriture-des-urls">Activation de la réécriture des URLs</a></li><li><a href="#paragraph_contenu-du-fichier-htaccess">Contenu du fichier .htaccess</a></li><li><a href="#paragraph_connexion-utilisateurs">Connexion utilisateurs</a></li><li><a href="#paragraph_divers">Divers</a></li></ol></li><li><a href="#paragraph_configuration-de-l-envoi-des-emails">Configuration de l'envoi des emails</a></li></ol></wiki_menu>
-  <wiki_activ>1</wiki_activ>
-  <wiki_user_id>1393</wiki_user_id>
-  <wiki_user_ip>88.125.157.163</wiki_user_ip>
-  <wiki_timestamp>1405000313</wiki_timestamp>
-  <wiki_content>-- Configuration générale --
+  <wiki_articles_fields>
+    <wiki_id>130</wiki_id>
+    <wiki_id_contents>1254</wiki_id_contents>
+    <wiki_title>Configuration</wiki_title>
+    <wiki_encoded_title>configuration</wiki_encoded_title>
+    <wiki_hits>868</wiki_hits>
+    <wiki_id_cat>15</wiki_id_cat>
+    <wiki_is_cat>0</wiki_is_cat>
+    <wiki_defined_status>0</wiki_defined_status>
+    <wiki_undefined_status></wiki_undefined_status>
+    <wiki_redirect>0</wiki_redirect>
+    <wiki_auth></wiki_auth>
+  </wiki_articles_fields>
+  <wiki_contents_fields>
+    <wiki_con_id_contents>1254</wiki_con_id_contents>
+    <wiki_con_id_article>130</wiki_con_id_article>
+    <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_configuration-avancee">Configuration avancée</a><ol class="wiki_list_2"><li><a href="#paragraph_activation-de-la-reecriture-des-urls">Activation de la réécriture des URLs</a></li><li><a href="#paragraph_contenu-du-fichier-htaccess">Contenu du fichier .htaccess</a></li><li><a href="#paragraph_connexion-utilisateurs">Connexion utilisateurs</a></li><li><a href="#paragraph_divers">Divers</a></li></ol></li><li><a href="#paragraph_configuration-de-l-envoi-des-emails">Configuration de l'envoi des emails</a></li></ol></wiki_menu>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1405000313</wiki_timestamp>
+    <wiki_content>-- Configuration générale --
 
 L'onglet "Configuration Générale" vous permet de régler les paramètres globaux de votre site. 
 
@@ -97,4 +100,5 @@ Le mode débogage permet également d'activer l'affichage et le suivi des requêtes
 [b]Protocole d'envoi[/b] : cette option vous permet de choisir un serveur SMTP alternatif à celui utilisé nativement par votre serveur web.
 
 [align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/configuration/sending_mail_configuration.png[/img][/align]</wiki_content>
+  </wiki_contents_fields>
 </wiki_article>
