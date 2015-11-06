@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>210</wiki_id>
     <wiki_id_contents>1354</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1354</wiki_con_id_contents>
     <wiki_con_id_article>210</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_pre-requis">Pré-requis</a></li><li><a href="#paragraph_preparer-votre-site">Préparer votre site</a></li><li><a href="#paragraph_mise-a-jour-du-site">Mise à jour du site</a></li><li><a href="#paragraph_configurez-votre-site-sur-phpboost-4-1">Configurez votre site sur PHPBoost 4.1</a></li><li><a href="#paragraph_mise-en-place-des-redirections-301-pour-les-anciens-liens-de-phpboost-4-0">Mise en place des redirections 301 pour les anciens liens de PHPBoost 4.0</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>2666</wiki_user_id>
-    <wiki_user_ip>84.5.127.1</wiki_user_ip>
-    <wiki_timestamp>1407186051</wiki_timestamp>
     <wiki_content>Pour pouvoir passer de la version 4.0 à la 4.1, il ne suffit pas de remplacer les fichiers ou d'appliquer un patch comme les mises à jours mineures.
 
 Etant donné qu'il y a eu plusieurs changements au niveau de la base de données, il faut faire des conversions pour que la nouvelle version fonctionne correctement, nous allons donc voir au cours de cet article les différentes choses à faire pour migrer vers PHPBoost 4.1.
@@ -83,5 +79,9 @@ Vous pouvez le télécharger ici : [url=/download/download-341+urlupdater.php]Télé
 Au moindre problème contactez le support sur le [url=/forum/index.php]forum PHPBoost[/url].
 
 Bonne continuation sur PHPBoost 4.1 !</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>2666</wiki_user_id>
+    <wiki_user_ip>84.5.127.1</wiki_user_ip>
+    <wiki_timestamp>1407186051</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

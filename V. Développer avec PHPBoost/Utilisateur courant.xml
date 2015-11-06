@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>30</wiki_id>
     <wiki_id_contents>904</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>904</wiki_con_id_contents>
     <wiki_con_id_article>30</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_informations-de-l-utilisateur">Informations de l'utilisateur</a></li><li><a href="#paragraph_gestion-des-autorisations">Gestion des autorisations</a><ol class="wiki_list_2"><li><a href="#paragraph_verification-du-rang">Vérification du rang</a></li><li><a href="#paragraph_verification-sur-les-groupes">Vérification sur les groupes</a><ol class="wiki_list_3"><li><a href="#paragraph_stockage-des-regles-pour-chaque-action">Stockage des règles pour chaque action</a></li></ol></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1837</wiki_user_id>
-    <wiki_user_ip>24.201.132.222</wiki_user_ip>
-    <wiki_timestamp>1363355330</wiki_timestamp>
     <wiki_content>La classe [i]CurrentUser[/i] gère l'utilisateur au cours de sa session. Elle permet notamment de récupérer ses informations et gérer les autorisations pour les niveaux et groupes d'utilisateurs, sachant qu'elle supporte le fait qu'un utilisateur soit inscrit dans plusieurs groupes.
 
 
@@ -75,14 +71,18 @@ Dans les cas où l'on souhaite gérer plus de 31 autorisations (très très rare) il
 
 Commençons par un schéma représentant la façon dont un ordinateur stocke des nombres (l'exemple est pris en architecture 32 bits).
 
-[align=center][img]http://resources.phpboost.com/documentation/developpement/user/bit_representation.png[/img][/align]
+[align=center][img]images/developpement/user/bit_representation.png[/img][/align]
 
 Comme nous l'avons vu nous pouvons traiter les autorisations par séries de 31. Chaque règle (de 1 à 31) est repérée par son numéro et correspond au bit qui est à 1 si l'action est permise ou 0 sinon. Voici un schéma illustrant le stockage des autorisations de chaque utilisateur.
 
-[align=center][img]http://resources.phpboost.com/documentation/developpement/user/authorizations_representation.png[/img][/align]
+[align=center][img]images/developpement/user/authorizations_representation.png[/img][/align]
 
 Utilisation :
 
 [code=php]AppContext::get_current_user()-&gt;check_auth($tableau, $bit)[/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1837</wiki_user_id>
+    <wiki_user_ip>24.201.132.222</wiki_user_ip>
+    <wiki_timestamp>1363355330</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

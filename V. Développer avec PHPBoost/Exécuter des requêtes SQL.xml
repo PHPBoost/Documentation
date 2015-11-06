@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>35</wiki_id>
     <wiki_id_contents>937</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>937</wiki_con_id_contents>
     <wiki_con_id_article>35</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_les-requetes">Les requêtes</a><ol class="wiki_list_2"><li><a href="#paragraph_insert">INSERT</a></li><li><a href="#paragraph_update">UPDATE</a></li><li><a href="#paragraph_delete">DELETE</a></li></ol></li><li><a href="#paragraph_select">SELECT</a><ol class="wiki_list_2"><li><a href="#paragraph_selectionner-un-seul-element">Sélectionner un seul élément</a></li><li><a href="#paragraph_selectionner-une-seule-colonne">Sélectionner une seule colonne</a></li><li><a href="#paragraph_selectionner-plusieurs-colonnes">Sélectionner plusieurs colonnes</a></li><li><a href="#paragraph_select-personnalise">SELECT personnalisé</a></li></ol></li><li><a href="#paragraph_count">COUNT</a></li><li><a href="#paragraph_truncate">TRUNCATE</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.12</wiki_user_ip>
-    <wiki_timestamp>1369987305</wiki_timestamp>
     <wiki_content>PHPBoost possède son propre système de gestion des requêtes SQL.
 
 Il a pour but de faciliter le développement et ainsi gagner en productivité.
@@ -135,5 +131,9 @@ Fonction : [code=php,0,1]int count($table_name, $condition = 'WHERE 1', $paramet
 Fonction : [code=php,0,1]truncate($table_name)[/code]
 
 [code=php]PersistenceContext::get_querier()-&gt;truncate('la_table_de_votre_module');[/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1369987305</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

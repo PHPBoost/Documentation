@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>47</wiki_id>
     <wiki_id_contents>849</wiki_id_contents>
@@ -17,15 +17,11 @@
     <wiki_con_id_contents>849</wiki_con_id_contents>
     <wiki_con_id_article>47</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_accueil-du-forum">Accueil du forum</a></li><li><a href="#paragraph_les-categories-et-les-forums">Les catégories et les forums</a><ol class="wiki_list_2"><li><a href="#paragraph_les-categories">Les catégories</a></li><li><a href="#paragraph_les-forums">Les forums</a></li></ol></li><li><a href="#paragraph_creer-un-sujet-repondre-a-un-message">Créer un sujet / répondre à un message</a><ol class="wiki_list_2"><li><a href="#paragraph_creer-un-post">Créer un post</a></li><li><a href="#paragraph_creer-un-sondage">Créer un sondage</a></li><li><a href="#paragraph_repondre-a-un-sujet">Répondre à un sujet</a></li></ol></li><li><a href="#paragraph_outils-a-disposition">Outils à disposition</a><ol class="wiki_list_2"><li><a href="#paragraph_editer-citer-un-message">Editer / citer un message</a><ol class="wiki_list_3"><li><a href="#paragraph_editer-un-de-ses-messages">Editer un de ses messages</a></li><li><a href="#paragraph_citer-un-message">Citer un message</a></li></ol></li><li><a href="#paragraph_voir-les-derniers-messages-messages-non-lus">Voir les derniers messages/messages non lus</a><ol class="wiki_list_3"><li><a href="#paragraph_messages-non-lus">Messages non lus</a></li><li><a href="#paragraph_marquer-les-messages-comme-lus">Marquer les messages comme lus</a></li><li><a href="#paragraph_derniers-messages-lus">Derniers messages lus</a></li><li><a href="#paragraph_rechercher-un-message">Rechercher un message</a></li></ol></li><li><a href="#paragraph_suivre-un-topic-topic-regle-alerter-un-moderateur">Suivre un topic / Topic réglé / Alerter un modérateur</a><ol class="wiki_list_3"><li><a href="#paragraph_suivre-un-topic">Suivre un topic</a></li><li><a href="#paragraph_topic-regle">Topic réglé</a></li><li><a href="#paragraph_alerter-un-moderateur">Alerter un modérateur</a></li></ol></li></ol></li><li><a href="#paragraph_profil-des-membres">Profil des membres</a></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>935</wiki_user_id>
-    <wiki_user_ip>89.90.175.161</wiki_user_ip>
-    <wiki_timestamp>1358761753</wiki_timestamp>
     <wiki_content>Le forum est un module vaste, son utilisation est au plus simple, voici une petite description.
 
 -- Accueil du forum --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_21.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_21.jpg[/img][/align]
 
 voici une vue globale d'un forum sous PHPBoost :
  
@@ -49,7 +45,7 @@ A l'intérieur de ces catégories, se trouvent les forums. On ne peut pas poster d
 
 --- Les forums ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_22.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_22.jpg[/img][/align]
 
 Nous voici dans un forum, chaque ligne est composée d'un sujet, et est elle même divisée en 6 colonnes :
 [list]
@@ -70,11 +66,11 @@ Par ordre des messages on a :
  
 Pour créer un topic, rendez vous dans un forum puis cliquez sur poster comme le montre l'exemple : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_23.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_23.jpg[/img][/align]
 
 --- Créer un post ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_24.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_24.jpg[/img][/align]
 
 Vous voici pour créer un post! Rien de plus simple!
 
@@ -97,7 +93,7 @@ Voila votre post est créé!
 
 --- Créer un sondage ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_25.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_25.jpg[/img][/align]
 
 La manipulation débute comme pour créer un topic. La différence est qu'en bas il faut cliquer sur 'ouvrir le menu sondage'
 
@@ -113,7 +109,7 @@ Vous avez la possibilité de réaliser 2 types de sondages
 
 --- Répondre à un sujet ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_26.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_26.jpg[/img][/align]
 
 En bas de chaque sujet se trouve cette interface de réponse. Remplissez la et cliquez sur envoyer!
 
@@ -124,15 +120,15 @@ En bas de chaque sujet se trouve cette interface de réponse. Remplissez la et cl
 
 ---- Editer un de ses messages ----
 
-Vous souhaitez éditer un de vos messages pour en modifier le contenu ? Rien de plus simple, rendez vous sur le message en question et cliquez sur [img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_4.png[/img]
+Vous souhaitez éditer un de vos messages pour en modifier le contenu ? Rien de plus simple, rendez vous sur le message en question et cliquez sur [img]images/utilisation/modules/forum/forum_4.png[/img]
 
 ---- Citer un message ----
 
-Vous souhaitez citer un post pour le commenter dans un nouveau message, cliquez sur [img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_27.png[/img]
+Vous souhaitez citer un post pour le commenter dans un nouveau message, cliquez sur [img]images/utilisation/modules/forum/forum_27.png[/img]
 
 --- Voir les derniers messages/messages non lus ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_28.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_28.jpg[/img][/align]
 
 ---- Messages non lus ----
 
@@ -148,7 +144,7 @@ Cliquez dessus si vous souhaitez voir les derniers messages que vous avez consul
 
 ---- Rechercher un message ----
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_29.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_29.jpg[/img][/align]
 
 Vous recherchez un message ? Remplissez le formulaire avec des mots clés et une liste de tous les messages contenant les mots clés (que vous avez rentré) s'affichera.
 
@@ -156,7 +152,7 @@ Vous recherchez un message ? Remplissez le formulaire avec des mots clés et une 
 
 Rendez vous en bas de chaque sujet : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_30.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_30.jpg[/img][/align]
 
 ---- Suivre un topic ----
 
@@ -166,7 +162,7 @@ Pour voir vos messages suivis, dans la barre en haut du forum, cliquez sur 'suje
 
 Vous accédez au panel des sujets suivi : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_31.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_31.jpg[/img][/align]
 
 Pour chacun vous pouvez :
 [list]
@@ -175,7 +171,7 @@ Pour chacun vous pouvez :
 
 ---- Topic réglé ----
 
-Le modérateur peut estimer qu'un message a été réglé pour une facilité de gestion du forum. L'icône  [img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_36.png[/img] s'affichera devant les topics concernés.
+Le modérateur peut estimer qu'un message a été réglé pour une facilité de gestion du forum. L'icône  [img]images/utilisation/modules/forum/forum_36.png[/img] s'affichera devant les topics concernés.
  
 
 ---- Alerter un modérateur ----
@@ -187,7 +183,7 @@ Vous estimez qu'un topic nécessite l'intervention d'un modérateur ? Cliquez sur 
 
 Pour chaque post se trouve à sa gauche une zone de description du membre.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_32.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_32.jpg[/img][/align]
 
 Vous pouvez voir  : 
 [list][*]le profil du membre en cliquant sur son pseudo
@@ -217,17 +213,17 @@ Les navigateurs (internet explorer, firefox,...) permette de s'abonner aux flux 
 
 Pour s'abonner au flux RSS, cliquez sur l'icône RSS qui se trouve à côté de chaque catégorie : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_33.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_33.jpg[/img][/align]
 
 En cliquant dessus, vous accèderez à une page (sous Firefox) : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_34.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_34.jpg[/img][/align]
 
 -- Statistiques --
 
 Les statistiques se trouvent en bas du forum en cliquant sur le lien 'statistiques' : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/forum/forum_35.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/forum/forum_35.jpg[/img][/align]
 
 Vous pourrez voir : 
 
@@ -244,5 +240,9 @@ Vous pourrez voir :
 [*] Les 10 sujets les plus populaires 
 [*]Les 10 sujets ayant eu le plus de réponses
 [/list]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1358761753</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>305</wiki_id>
     <wiki_id_contents>1376</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1376</wiki_con_id_contents>
     <wiki_con_id_article>305</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_mise-en-place-du-nouveau-champ">Mise en place du nouveau champ</a><ol class="wiki_list_2"><li><a href="#paragraph_objet-principal-du-module-et-insertion-en-base-de-donnees">Objet principal du module et insertion en base de données</a></li><li><a href="#paragraph_variables-de-langue">Variables de langue</a></li><li><a href="#paragraph_formulaire">Formulaire</a></li></ol></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>86.195.77.164</wiki_user_ip>
-    <wiki_timestamp>1414747431</wiki_timestamp>
     <wiki_content>-- Introduction --
 Il est possible d'ajouter des champs assez simplement pour les modules en MVC (exemple : articles, news, calendrier, livre d'or), le tout n'étant évidemment pas d'ajouter uniquement une information à saisir dans le formulaire, mais également afficher cet élément à l'endroit voulu.
 
@@ -182,5 +178,9 @@ Vous pouvez maintenant afficher votre nouveau champ directement dans les templat
 Voilà votre champ ajouté et opérationnel.
 Ces différentes étapes peuvent être adaptées pour tout type de champ et pour tout module en MVC.
 [style=warning]Ces modifications seront à refaire en cas de mise à jour du module en question par l'équipe.[/style]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>86.195.77.164</wiki_user_ip>
+    <wiki_timestamp>1414747431</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

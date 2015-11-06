@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>66</wiki_id>
     <wiki_id_contents>805</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>805</wiki_con_id_contents>
     <wiki_con_id_article>66</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-telechargements">Configuration des téléchargements</a><ol class="wiki_list_2"><li><a href="#paragraph_permissions-globales">Permissions globales</a></li><li><a href="#paragraph_configuration-des-telechargements">Configuration des téléchargements</a></li></ol></li><li><a href="#paragraph_categories">Catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li></ol></li><li><a href="#paragraph_gerer-les-fichiers">Gérer les fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_liste-des-fichiers">Liste des fichiers</a></li><li><a href="#paragraph_ajouter-un-fichier">Ajouter un fichier</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.12</wiki_user_ip>
-    <wiki_timestamp>1358351391</wiki_timestamp>
     <wiki_content>Dans cette partie nous allons voir comment administrer le module téléchargement.
 
 -- Configuration des téléchargements --
@@ -29,7 +25,7 @@
 
 Vous pouvez définir ici les permissions globales du module. Vous pourrez changer ces permissions localement sur chaque catégorie.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_1.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_1.jpg[/img][/align]
 
 [b]Permissions :[/b]
 
@@ -41,7 +37,7 @@ Vous pouvez définir ici les permissions globales du module. Vous pourrez changer
 
 --- Configuration des téléchargements ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_2.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_2.jpg[/img][/align]
 
 [b]Liste des paramètres disponibles :[/b]
 
@@ -58,11 +54,11 @@ Vous pouvez définir ici les permissions globales du module. Vous pourrez changer
 
 Cette page vous permet de gérer vos catégories de téléchargement, les rendre visibles ou non, les modifier, les supprimer ou les classer.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_3.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_3.jpg[/img][/align]
 
 --- Ajouter une catégorie ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_4.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_4.jpg[/img][/align]
 
 [b]Vous pouvez créer de nouvelles catégories, pour cela vous devez remplir les informations suivantes :[/b]
 
@@ -81,12 +77,12 @@ Cette page vous permet de gérer vos catégories de téléchargement, les rendre vis
 
 Cette page vous permet de voir tous vos téléchargements, de les modifier et si besoin de les supprimer.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_5.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_5.jpg[/img][/align]
 
 --- Ajouter un fichier ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_6.jpg[/img][/align]
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_7.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_6.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_7.jpg[/img][/align]
 
 [b]Vous pouvez ajouter un nouveau fichier en téléchargement, pour cela vous devez remplir les informations suivantes :[/b]
 
@@ -106,5 +102,9 @@ Cette page vous permet de voir tous vos téléchargements, de les modifier et si b
 [*][b]Parution du fichier[/b] : permet de choisir la durée de visibilité du fichier en téléchargement, ou bien l'approbation ou non de celui-ci. Si vous choisissez une période précise, au delà de cette période, le fichier sera désapprouvé.
 [*][b]Approuvé[/b] : définit si le fichier est approuvé ou non, tant qu'un fichier n'est pas approuvé il ne s'affichera pas.
 [/list]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1358351391</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

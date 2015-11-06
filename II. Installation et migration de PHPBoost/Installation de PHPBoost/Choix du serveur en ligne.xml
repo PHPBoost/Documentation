@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>78</wiki_id>
     <wiki_id_contents>993</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>993</wiki_con_id_contents>
     <wiki_con_id_article>78</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_comment-heberger-son-site">Comment héberger son site</a><ol class="wiki_list_2"><li><a href="#paragraph_souscrire-un-contrat-d-hebergement">Souscrire un contrat d'hébergement</a></li><li><a href="#paragraph_heberger-sois-meme-son-site">Héberger sois-même son site</a></li></ol></li><li><a href="#paragraph_liste-d-hebergeurs-gratuits-et-payants">Liste d'hébergeurs (gratuits et payants)</a><ol class="wiki_list_2"><li><a href="#paragraph_hebergeurs-gratuits">Hébergeurs gratuits</a></li><li><a href="#paragraph_hebergeurs-micro-paiement">Hébergeurs micro-paiement</a></li><li><a href="#paragraph_hebergeurs-payants">Hébergeurs payants</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1393582293</wiki_timestamp>
     <wiki_content>-- Comment héberger son site --
 
 --- Souscrire un contrat d'hébergement ---
@@ -191,5 +187,9 @@ Forum d'entraide : [url=http://forum.sivit.fr/.]http://forum.sivit.fr/.[/url]
 Hébergement à de bons prix. Assistance téléphonique gratuite.
 
 [url=http://www.strato-hebergement.fr]http://www.strato-hebergement.fr[/url]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1393582293</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

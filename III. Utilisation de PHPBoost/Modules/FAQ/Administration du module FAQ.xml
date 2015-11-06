@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>41</wiki_id>
     <wiki_id_contents>828</wiki_id_contents>
@@ -17,15 +17,11 @@
     <wiki_con_id_contents>828</wiki_con_id_contents>
     <wiki_con_id_article>41</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a></li><li><a href="#paragraph_autorisations-generales">Autorisations générales</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_recompter-le-nombre-de-questions">Recompter le nombre de questions</a></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li></ol></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_liste-des-questions">Liste des questions</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1837</wiki_user_id>
-    <wiki_user_ip>24.201.132.222</wiki_user_ip>
-    <wiki_timestamp>1358464337</wiki_timestamp>
     <wiki_content>-- Configuration de la FAQ --
 
 --- Configuration de la FAQ ---
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_1.jpg[/img]
+[img]images/utilisation/modules/faq/faq_1.jpg[/img]
 [/align]
 [b]Nom de la FAQ [/b] : donnez un nom à votre module FAQ
 
@@ -40,7 +36,7 @@
 
 --- Autorisations générales ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_2.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/faq/faq_2.jpg[/img][/align]
 
 Vous allez pouvoir choisir les droits aux membres pour la lecture de la FAQ et de l'écriture de nouvelles questions.
 
@@ -54,7 +50,7 @@ Vous allez pouvoir inclure :
 
 -- Gestion des catégories --
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_3.jpg[/img][/align]
+[img]images/utilisation/modules/faq/faq_3.jpg[/img][/align]
 
 --- Recompter le nombre de questions ---
 
@@ -76,7 +72,7 @@ Vous avez ici l'arborescence complète des catégories de votre FAQ. Pour chaque c
 
 -- Ajouter une catégorie --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_4.jpg[/img]
+[align=center][img]images/utilisation/modules/faq/faq_4.jpg[/img]
 [/align]
 [b]Nom de la catégorie[/b] : donnez un nom à votre catégorie
 
@@ -88,10 +84,14 @@ Vous avez ici l'arborescence complète des catégories de votre FAQ. Pour chaque c
 
 -- Liste des questions --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/faq/faq_5.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/faq/faq_5.jpg[/img][/align]
 
 Vous avez ici la liste complète des questions avec leur date de création et leur catégorie.
 
 [style=notice]Si une question n'a pas de catégorie, c'est qu'elle se trouve a la racine de l'arborescence des catégories.[/style]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1837</wiki_user_id>
+    <wiki_user_ip>24.201.132.222</wiki_user_ip>
+    <wiki_timestamp>1358464337</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

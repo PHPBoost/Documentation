@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>140</wiki_id>
     <wiki_id_contents>473</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>473</wiki_con_id_contents>
     <wiki_con_id_article>140</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>90.40.105.71</wiki_user_ip>
-    <wiki_timestamp>1353689443</wiki_timestamp>
     <wiki_content>[b]Framework :[/b]
 
 [list]
@@ -241,5 +237,9 @@
 [*] Gestion des archives avec tries sur les types de newsletter.
 [*] Inscription aux newsletters dès l'enregistrement/l'édition d'un membre
 [/list]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>90.40.105.71</wiki_user_ip>
+    <wiki_timestamp>1353689443</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

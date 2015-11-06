@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>32</wiki_id>
     <wiki_id_contents>1329</wiki_id_contents>
@@ -17,40 +17,36 @@
     <wiki_con_id_contents>1329</wiki_con_id_contents>
     <wiki_con_id_article>32</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_module-discussion">Module discussion</a><ol class="wiki_list_2"><li><a href="#paragraph_lire-les-messages">Lire les messages</a></li><li><a href="#paragraph_ajouter-un-message">Ajouter un message</a></li><li><a href="#paragraph_diter-un-message">Éditer un message</a></li><li><a href="#paragraph_supprimer-un-message">Supprimer un message</a></li></ol></li><li><a href="#paragraph_mini-module-discussion">Mini-module discussion</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-message">Ajouter un message</a></li><li><a href="#paragraph_diter-un-message">Éditer un message</a></li><li><a href="#paragraph_supprimer-un-message">Supprimer un message</a></li><li><a href="#paragraph_rafraichir-le-mini-module">Rafraîchir le mini-module</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>82.124.251.75</wiki_user_ip>
-    <wiki_timestamp>1406090369</wiki_timestamp>
     <wiki_content>-- Module discussion --
 
 L'utilisation de ce module est très simple. Il vous permet de discuter entre membres et à l'aide du module de discussion rapide. Il contient un formulaire dans lequel vous tapez votre message. Vous pouvez le mettre en forme à l'aide des balises de BBcode [b][i]choisies[/i][/b] par l'administrateur.
 
 --- Lire les messages ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/display_messages.png[/img][/align]
+[align=center][img]images/utilisation/modules/shoutbox/display_messages.png[/img][/align]
 Voici un message posté par un visiteur nommé [i]Equipe PHPBoost[/i]. Si vous avez l'autorisation de modération, vous pourrez alors éditer ([html]&lt;i class="fa fa-edit"&gt;&lt;/i&gt;[/html]) ou supprimer ([html]&lt;i class="fa fa-delete"&gt;&lt;/i&gt;[/html]) le message.
 
 --- Ajouter un message ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/add_message.png[/img][/align]
+[align=center][img]images/utilisation/modules/shoutbox/add_message.png[/img][/align]
 [b]Message :[/b] Dans ce champ, vous saisissez le message que vous souhaitez ajouter, si vous voulez avoir une idée du rendu vous pouvez cliquer sur le bouton [i]Prévisualiser[/i]. Sinon cliquez sur le bouton [i]Envoyer[/i].
 
 [style=notice]Vous pouvez remarquer que les icônes des [link=administration-du-module-discussion]balises interdites[/link] sont désactivées et inutilisables.[/style]
 
 --- Éditer un message ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/edit_message.png[/img][/align]
+[align=center][img]images/utilisation/modules/shoutbox/edit_message.png[/img][/align]
 [b]Pseudo :[/b] Vous pouvez éventuellement modifier le pseudo de la personne qui a posté le message
 [b]Message :[/b] Vous pouvez modifier le message, si vous voulez avoir une idée du rendu vous pouvez cliquer sur le bouton [i]Prévisualiser[/i]. Sinon cliquez sur le bouton [i]Envoyer[/i]
 
 --- Supprimer un message ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/delete_message.png[/img][/align]
+[align=center][img]images/utilisation/modules/shoutbox/delete_message.png[/img][/align]
 Une fenêtre de confirmation apparaît afin de vérifier que vous souhaitez bien supprimer le message.
 
 -- Mini-module discussion --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/display_messages.png[/img][/align]
+[align=center][img]images/utilisation/modules/shoutbox/display_messages.png[/img][/align]
 Vous pouvez disposer sur toutes les pages de votre site un mini-module afin de pouvoir discuter, lire les derniers messages et poster de nouveaux messages lorsque vous naviguez sur le site.
 
 --- Ajouter un message ---
@@ -67,10 +63,14 @@ Pour éditer un message, il faut se rendre sur la page [i]Archives[/i], à l'aide 
 
 Pour supprimer un message, il suffit simplement de cliquer sur le bouton [html]&lt;i class="fa fa-remove"&gt;&lt;/i&gt;[/html]. Vous aurez alors un fenêtre de confirmation. Puis le message sera supprimé.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/delete_mini_message.png[/img][/align]
+[align=center][img]images/utilisation/modules/shoutbox/delete_mini_message.png[/img][/align]
 [style=notice]Attention, si vous avez posté votre message en tant que visiteur, vous ne pourrez pas le supprimer.[/style]
 --- Rafraîchir le mini-module ---
 
 Si vous souhaitez rafraîchir le contenu du mini-module il suffit de cliquer sur le bouton [html]&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;[/html].</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>82.124.251.75</wiki_user_ip>
+    <wiki_timestamp>1406090369</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

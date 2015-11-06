@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>70</wiki_id>
     <wiki_id_contents>556</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>556</wiki_con_id_contents>
     <wiki_con_id_article>70</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_interet-des-groupes">Intérêt des groupes ?</a></li><li><a href="#paragraph_gestion-des-groupes">Gestion des groupes</a><ol class="wiki_list_2"><li><a href="#paragraph_edition-d-un-groupe">Edition d'un groupe</a><ol class="wiki_list_3"><li><a href="#paragraph_gestion-des-groupes">Gestion des groupes</a></li><li><a href="#paragraph_membres-du-groupe">Membres du groupe</a></li><li><a href="#paragraph_ajouter-un-membre">Ajouter un membre</a></li></ol></li></ol></li><li><a href="#paragraph_ajouter-un-groupe">Ajouter un groupe</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>86.204.93.107</wiki_user_ip>
-    <wiki_timestamp>1354873703</wiki_timestamp>
     <wiki_content>-- Intérêt des groupes ? --
 
 Les groupes permettent de rassembler un certain nombre d'utilisateurs qui ont les mêmes caractéristiques et de leur donner des droits particuliers.
@@ -42,7 +38,7 @@ Les autorisations se font à plusieurs niveaux :
 
 -- Gestion des groupes --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/groups/manage.png[/img][/align]
+[align=center][img]images/utilisation/administration/user/groups/manage.png[/img][/align]
 
 Vous voyez ici la liste des groupes de votre site.
 Pour chaque groupes vous allez pouvoir : 
@@ -53,7 +49,7 @@ Pour chaque groupes vous allez pouvoir :
 
 --- Edition d'un groupe ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/groups/edit.png[/img][/align]
+[align=center][img]images/utilisation/administration/user/groups/edit.png[/img][/align]
 
 ---- Gestion des groupes ----
 
@@ -69,7 +65,7 @@ Pour chaque groupes vous allez pouvoir :
 
 Cette image sera visible dans le profil du membre. Exemple : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/groups/profile.png[/img][/align]
+[align=center][img]images/utilisation/administration/user/groups/profile.png[/img][/align]
 
 ---- Membres du groupe ----
 
@@ -81,7 +77,7 @@ Rentrez le pseudo du membre et cliquez sur 'ajouter', sinon mettez les premières
 
 -- Ajouter un groupe --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/user/groups/add.png[/img][/align]
+[align=center][img]images/utilisation/administration/user/groups/add.png[/img][/align]
 
 [b][u]Nom[/u][/b] : mettez ici le nom de votre groupe.
 
@@ -92,5 +88,9 @@ Rentrez le pseudo du membre et cliquez sur 'ajouter', sinon mettez les premières
 [b][u]Limite de données uploadables[/u][/b] : mettez ici la valeur maximale en Mega Octets autoriée qu'un membre du groupe dispose dans son gestionnaire de fichiers.
 
 [b][u]Image associée au groupe[/u][/b] :  choisissez l'image qui représentera le groupe parmi celles présentes sur le serveur. Pour en rajouter, il faut les transférer via FTP dans le dossier /images/group/</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.93.107</wiki_user_ip>
+    <wiki_timestamp>1354873703</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

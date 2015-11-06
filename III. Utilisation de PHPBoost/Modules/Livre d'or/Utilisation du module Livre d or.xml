@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>56</wiki_id>
     <wiki_id_contents>1281</wiki_id_contents>
@@ -17,16 +17,16 @@
     <wiki_con_id_contents>1281</wiki_con_id_contents>
     <wiki_con_id_article>56</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5193</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1405003672</wiki_timestamp>
-    <wiki_content>[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/guestbook/home.png[/img][/align]
+    <wiki_content>[align=center][img]images/utilisation/modules/guestbook/home.png[/img][/align]
 
 Si vous en avez l'autorisation, vous pouvez saisir un message dans le champ prévu à cet effet. Ce message s'ajoutera à la liste des messages qui se trouvent en-dessous.
 Si les visiteurs sont autorisés à poster (autorisés par défaut), ils doivent saisir un pseudo et le code de vérification en plus du message. Pour les membres enregistrés sur le site ces champs n'apparaissent pas.
 Les messages seront affichés du plus récent au plus ancien. La date du message ainsi que les informations du membre qui l'a posté sont précisées autour du message.
 
 [style=warning]Attention ! Il est possible que l'administrateur du site ait bloqué certaines balises de BBCode. Dans ce cas, elles ne vous seront pas accessibles et ne seront pas "parsées" (transformées en code HTML) par le code PHP. Inutile de tenter de les saisir manuellement dans ce cas.[/style]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1405003672</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>90</wiki_id>
     <wiki_id_contents>134</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>134</wiki_con_id_contents>
     <wiki_con_id_article>90</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>82.124.181.87</wiki_user_ip>
-    <wiki_timestamp>1346007340</wiki_timestamp>
     <wiki_content>La première version de PHPBoost distribuée au public est lancée le 18 novembre 2005, en version 1.3.1. Elle est immédiatement remplacée par PHPBoost 1.3.1b, mise à jour corrigeant les erreurs de jeunesse qui sont difficiles à prévoir.
 Les fonctionnalités sont très réduites, mais le fonctionnement global est passable. 
 
@@ -38,5 +34,9 @@ Les fonctionnalités sont très réduites, mais le fonctionnement global est passab
 	[*]Amélioration de la régénération du cache des miniatures de la galerie 
 	[*]Optimisation des requêtes SQL
 [/list]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>82.124.181.87</wiki_user_ip>
+    <wiki_timestamp>1346007340</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

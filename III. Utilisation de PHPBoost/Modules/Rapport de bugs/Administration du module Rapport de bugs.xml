@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>185</wiki_id>
     <wiki_id_contents>916</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>916</wiki_con_id_contents>
     <wiki_con_id_article>185</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_description-par-defaut-des-bugs">Description par défaut des bugs</a></li><li><a href="#paragraph_types-de-bugs">Types de bugs</a></li><li><a href="#paragraph_categories-des-bugs">Catégories des bugs</a></li><li><a href="#paragraph_niveaux-des-bugs">Niveaux des bugs</a></li><li><a href="#paragraph_priorites-des-bugs">Priorités des bugs</a></li><li><a href="#paragraph_versions-des-bugs">Versions des bugs</a></li></ol></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.11</wiki_user_ip>
-    <wiki_timestamp>1366197276</wiki_timestamp>
     <wiki_content>-- Configuration --
 
 La page "configuration" du module "Rapport de bugs" se divise en plusieurs parties distinctes.
@@ -39,7 +35,7 @@ Vous pouvez y définir:
 	[*] L'activation ou non de l'envoi de messages privés en cas de réponse à un bug, de son édition, de sa suppression, de son rejet, de sa réouverture et de son assignation.
 [/list]
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/configuration.jpg[/img]
+[img]images/utilisation/modules/bugtracker/administration/configuration.jpg[/img]
 
 
 --- Description par défaut des bugs ---
@@ -48,7 +44,7 @@ La section "Description des bugs" vous permet d'indiquer les champs que vous sou
 
 Par défaut cette section vous propose d'indiquer le système d'exploitation, le navigateur utilisé, la version de PHPBoost... c'est à vous qu'il revient de configurer cette section comme vous le souhaitez.
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/description.jpg[/img]
+[img]images/utilisation/modules/bugtracker/administration/description.jpg[/img]
 
 
 --- Types de bugs ---
@@ -60,7 +56,7 @@ Vous pouvez choisir de rendre le choix du type obligatoire via la section "type"
 
 Enfin, vous avez la possibilité d'ajouter de nouveaux types via le champ visible sous le tableau des types.
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/types.jpg[/img]
+[img]images/utilisation/modules/bugtracker/administration/types.jpg[/img]
 
 
 --- Catégories des bugs ---
@@ -75,7 +71,7 @@ Toujours par défaut, les catégories proposées sont liées à l'utilisation même de
 
 Enfin, vous avez la possibilité d'ajouter de nouvelles catégories via le champ visible sous le tableau des catégories.
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/categories.jpg[/img]
+[img]images/utilisation/modules/bugtracker/administration/categories.jpg[/img]
 
 
 --- Niveaux des bugs ---
@@ -88,7 +84,7 @@ Vous pouvez choisir de rendre le choix du niveau obligatoire via la section "niv
 
 Sous le tableau, un champ vous permet d'ajouter de nouveaux niveaux et d'y associer la couleur de votre choix.
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/niveaux.jpg[/img]
+[img]images/utilisation/modules/bugtracker/administration/niveaux.jpg[/img]
 
 
 --- Priorités des bugs ---
@@ -101,7 +97,7 @@ Vous pouvez choisir de rendre le choix du niveau obligatoire via la section "pri
 
 Sous le tableau, un champ vous permet d'ajouter de nouvelles priorités.
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/priorites.jpg[/img]
+[img]images/utilisation/modules/bugtracker/administration/priorites.jpg[/img]
 
 
 --- Versions des bugs ---
@@ -113,7 +109,7 @@ Vous pouvez choisir de rendre le choix de la version obligatoire via la section 
 
 Sous le tableau, un champ vous permet d'ajouter de nouvelles versions et de choisir si elles sont affichées dans la liste lors de la création d'un bug. Une version peut par exemple ne pas apparaître dans cette liste tant qu'elle n'est pas sortie, les personnes qui détectent un bug ne pourront donc pas la choisir. Une fois la version sortie, il faudra cocher la case correspondante pour l'afficher dans la liste.
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/versions.jpg[/img]
+[img]images/utilisation/modules/bugtracker/administration/versions.jpg[/img]
 
 
 -- Autorisations --
@@ -124,6 +120,10 @@ Le fonctionnement du système d'autorisation reste inchangé. Un appui sur la touc
 
 N'oubliez pas de valider le formulaire en cliquant sur le bouton "Modifier" ;)
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/autorisations.jpg[/img]</wiki_content>
+[img]images/utilisation/modules/bugtracker/administration/autorisations.jpg[/img]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.11</wiki_user_ip>
+    <wiki_timestamp>1366197276</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

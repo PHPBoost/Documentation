@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>200</wiki_id>
     <wiki_id_contents>1211</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1211</wiki_con_id_contents>
     <wiki_con_id_article>200</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-de-configuration">Le fichier de configuration</a></li><li><a href="#paragraph_changements-dans-l-api">Changements dans l'API</a><ol class="wiki_list_2"><li><a href="#paragraph_systeme-de-categories">Système de catégories</a></li><li><a href="#paragraph_liens-dans-l-administration">Liens dans l'administration</a></li><li><a href="#paragraph_pagination">Pagination</a><ol class="wiki_list_3"><li><a href="#paragraph_fichiers-php">Fichiers php</a></li><li><a href="#paragraph_templates">Templates</a></li></ol></li><li><a href="#paragraph_notation">Notation</a></li></ol></li><li><a href="#paragraph_templates">Templates</a><ol class="wiki_list_2"><li><a href="#paragraph_tableaux">Tableaux</a></li><li><a href="#paragraph_icones">Icônes</a></li><li><a href="#paragraph_boutons">Boutons</a></li><li><a href="#paragraph_formulaires">Formulaires</a></li><li><a href="#paragraph_templates-des-pages">Templates des pages</a></li><li><a href="#paragraph_mini-modules">Mini-modules</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5193</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1404746880</wiki_timestamp>
     <wiki_content>[style=warning]Si aucun des éléments se trouvant dans cette documentation ne vous aide, référez-vous au forum et demandez de l'aide.[/style]
 Cette documentation permet de rendre votre module compatible avec la version 4.1 de PHPBoost sans trop de modifications dans le code. Elle n'a pas pour but de le convertir en utilisant le modèle MVC et d'utiliser les nouvelles fonctionnalités. Effectuez les différentes étapes suivantes (peu importe l'ordre) pour mettre à jour votre module.
 
@@ -347,5 +343,9 @@ Remplacez les _ dans les noms des classes CSS par des -. Ce qui donne :
 	&lt;div class="module-mini-bottom"&gt;&lt;/div&gt;
 &lt;/div&gt;
 [/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1404746880</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

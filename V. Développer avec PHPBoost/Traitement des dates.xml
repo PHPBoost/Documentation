@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>174</wiki_id>
     <wiki_id_contents>855</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>855</wiki_con_id_contents>
     <wiki_con_id_article>174</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_les-referentiels-temporels">Les référentiels temporels</a><ol class="wiki_list_2"><li><a href="#paragraph_les-differents-referentiels">Les différents référentiels</a></li><li><a href="#paragraph_quel-referentiel-utiliser">Quel référentiel utiliser ?</a></li></ol></li><li><a href="#paragraph_initialiser-la-classe">Initialiser la classe</a><ol class="wiki_list_2"><li><a href="#paragraph_date-actuelle">Date actuelle</a></li><li><a href="#paragraph_annee-mois-jour-heure-minutes-secondes">Année, mois, jour, heure, minutes, secondes</a></li><li><a href="#paragraph_timestamp">Timestamp</a></li><li><a href="#paragraph_chaine-de-caractere">Chaîne de caractère</a></li></ol></li><li><a href="#paragraph_traitement-sur-l-objet-date">Traitement sur l'objet Date</a><ol class="wiki_list_2"><li><a href="#paragraph_obtenir-le-timestamp">Obtenir le timestamp</a></li><li><a href="#paragraph_obtenir-l-annee-de-la-date">Obtenir l'année de la date</a></li><li><a href="#paragraph_obtenir-le-mois-de-la-date">Obtenir le mois de la date</a></li><li><a href="#paragraph_obtenir-le-jour-de-la-date">Obtenir le jour de la date</a></li><li><a href="#paragraph_obtenir-l-heure-de-la-date">Obtenir l'heure de la date</a></li><li><a href="#paragraph_obtenir-les-minutes-de-la-date">Obtenir les minutes de la date</a></li><li><a href="#paragraph_obtenir-les-secondes-de-la-date">Obtenir les secondes de la date</a></li><li><a href="#paragraph_exporter-sous-format-annee-mois-jour">Exporter sous format année-mois-jour</a></li><li><a href="#paragraph_verifier-si-la-date-est-anterieure-a-une-autre-date">Vérifier si la date est antérieure à une autre date</a></li><li><a href="#paragraph_verifier-si-la-date-est-posterieure-a-une-autre-date">Vérifier si la date est postérieure à une autre date</a></li><li><a href="#paragraph_verifier-si-la-date-est-egale-a-une-autre-date">Vérifier si la date est égale à une autre date</a></li></ol></li><li><a href="#paragraph_modifier-les-donnees-d-une-date-apres-sa-creation">Modifier les données d'une date après sa création</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>86.204.86.165</wiki_user_ip>
-    <wiki_timestamp>1358773264</wiki_timestamp>
     <wiki_content>PHPBoost possède une classe permettant d'effectuer plusieurs traitements sur les dates. Nous allons vous la présenter au cours de cet article.
 
 La classe va vous permettre de formater une date dans différents référentiels horaires et de récupérer plusieurs informations dessus.
@@ -147,5 +143,9 @@ $date-&gt;set_day($day); // Change le jour
 $date-&gt;set_hours($hours): // Change l'heure
 $date-&gt;set_minutes($minutes); // Change les minutes
 $date-&gt;set_seconds($second); // Change les secondes[/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.86.165</wiki_user_ip>
+    <wiki_timestamp>1358773264</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

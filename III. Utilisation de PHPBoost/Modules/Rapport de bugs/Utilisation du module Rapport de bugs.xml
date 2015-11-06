@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>186</wiki_id>
     <wiki_id_contents>926</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>926</wiki_con_id_contents>
     <wiki_con_id_article>186</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_presentation-du-module">Présentation du module</a><ol class="wiki_list_2"><li><a href="#paragraph_bugs-non-resolus">Bugs non résolus</a></li><li><a href="#paragraph_bugs-resolus">Bugs résolus</a></li><li><a href="#paragraph_feuille-de-route">Feuille de route</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol></li><li><a href="#paragraph_rapporter-un-bug">Rapporter un bug</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>935</wiki_user_id>
-    <wiki_user_ip>89.90.175.161</wiki_user_ip>
-    <wiki_timestamp>1368007640</wiki_timestamp>
     <wiki_content>Une fois le module "rapport de bugs" activé et configuré, il vous faudra le rendre accessible aux membres ayant une autorisation d'accès. Pour cela, vous pouvez créer un lien direct vers l'URL [code=text]http://monsite.com/bugtracker/[/code] dans un menu de liens par exemple.
 
 Seuls les membres ayant les autorisations nécessaires pourront accéder au module.
@@ -57,7 +53,7 @@ Cet onglet présente la liste des bugs non encore résolus. On y trouve les colonn
 
 [style=notice]La colonne "Actions" n'est affichée que si l'utilisateur a le droit de modération sur le module.[/style]
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/bugs_non_resolus.jpg[/img]
+[img]images/utilisation/modules/bugtracker/utilisation/bugs_non_resolus.jpg[/img]
 
 
 --- Bugs résolus ---
@@ -66,7 +62,7 @@ L'onglet "bugs résolus" affiche un tableau assez similaire au précédent avec cep
 
 [style=notice]La colonne "Actions" n'est affichée que si l'utilisateur a le droit de modération sur le module.[/style]
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/bugs_resolus.jpg[/img]
+[img]images/utilisation/modules/bugtracker/utilisation/bugs_resolus.jpg[/img]
 
 --- Feuille de route ---
 
@@ -78,7 +74,7 @@ L'onglet feuille de route liste les bugs corrigés pour chaque version. Cet ongle
 
 La feuille de route pour une version comprend les bugs corrigés (ID barré) ou à corriger (ID non barré) pour celle-ci. Une liste déroulante positionnée au dessus du tableau vous permet de choisir la version à afficher.
  
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/feuille_de_route.jpg[/img]
+[img]images/utilisation/modules/bugtracker/utilisation/feuille_de_route.jpg[/img]
 
 
 --- Statistiques ---
@@ -92,7 +88,7 @@ Parmi les informations listées on trouve :
 	[*] Le top 10 des personnes ayant détecté des bugs avec le détail du nombre de bugs pour chaque participant
 [/list]
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/statistiques.jpg[/img]
+[img]images/utilisation/modules/bugtracker/utilisation/statistiques.jpg[/img]
 
 
 -- Rapporter un bug --
@@ -111,7 +107,7 @@ Vous aurez à renseigner:
 	[*] La méthode de reproduction du bug.
 [/list]
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/ajout_bug.jpg[/img]
+[img]images/utilisation/modules/bugtracker/utilisation/ajout_bug.jpg[/img]
 
 Après avoir validé le formulaire, le bug ainsi rapporté ira rejoindre le haut de la liste du tableau présentant les bugs résolus.
 En fonction de la configuration du module, l'utilisateur pourra être averti par MP de :
@@ -124,6 +120,10 @@ En fonction de la configuration du module, l'utilisateur pourra être averti par 
 
 Chaque MP contient un lien pointant vers la page du bug avec sa présentation et les commentaires (s'il y en a) qui ont été postés sur la fiche en présence.
 
-[img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/fiche_bug.jpg[/img]</wiki_content>
+[img]images/utilisation/modules/bugtracker/utilisation/fiche_bug.jpg[/img]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1368007640</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>307</wiki_id>
     <wiki_id_contents>1420</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1420</wiki_con_id_contents>
     <wiki_con_id_article>307</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_sauvegarde-de-la-base-de-donn-es">Sauvegarde de la base de données</a></li><li><a href="#paragraph_transfert-des-fichiers">Transfert des fichiers</a></li><li><a href="#paragraph_restauration-de-la-base-de-donn-es-chez-l-h-bergeur">Restauration de la base de données chez l'hébergeur</a></li><li><a href="#paragraph_migration-du-serveur">Migration du serveur</a></li><li><a href="#paragraph_ajustement-de-la-configuration-du-nouveau-site">Ajustement de la configuration du nouveau site</a></li><li><a href="#paragraph_r-g-n-ration-globale-du-cache">Régénération globale du cache</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>440</wiki_user_id>
-    <wiki_user_ip>92.138.95.52</wiki_user_ip>
-    <wiki_timestamp>1430052191</wiki_timestamp>
     <wiki_content>Transférer son site d'un hébergeur Web à un autre ou d'un serveur local vers un hébergement Web avec PHPBoost est très simple. Nous allons voir cela ensemble.
 
 -- Sauvegarde de la base de données --
@@ -275,7 +271,7 @@ legend {
 
 Après avoir rentré l'adresse, vous tomberez sur : 
 
-[img]http://resources.phpboost.com/documentation/installation/migration/migration.jpg[/img]
+[img]images/installation/migration/migration.jpg[/img]
 
 Le champ URL correspondant à la nouvelle adresse de votre site. Par exemple, avant c'était [i]www.mon-site.fr[/i] et dans votre nouvel hébergement vous avez choisi [i]www.ton-site.fr[/i], vous mettrez donc [i]www.ton-site.fr[/i].
 
@@ -294,5 +290,9 @@ Dans le panneau d'administration du site (que vous avez transféré), allez dans [
 Pour éviter les soucis, il est recommandé de régénérer l'ensemble du cache, même si ce n'est pas obligatoire. Pour cela, il faut aller dans le panneau d'administration [i]Outils-&gt;Cache[/i], puis cliquez sur [i]vider[/i].
 
 Voilà, votre site devrait être transféré correctement. Si vous rencontrez des difficultés, n'hésitez pas à demander de l'aide sur le [url=/forum/forum-5+support-installation-mise-jour.php]forum de support[/url].</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>440</wiki_user_id>
+    <wiki_user_ip>92.138.95.52</wiki_user_ip>
+    <wiki_timestamp>1430052191</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>68</wiki_id>
     <wiki_id_contents>94</wiki_id_contents>
@@ -17,13 +17,9 @@
     <wiki_con_id_contents>94</wiki_con_id_contents>
     <wiki_con_id_article>68</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-smileys">Gestion des smileys</a></li><li><a href="#paragraph_ajout-d-un-smiley">Ajout d'un smiley</a><ol class="wiki_list_2"><li><a href="#paragraph_uploader-un-smiley">Uploader un smiley</a></li><li><a href="#paragraph_ajouter-un-smiley">Ajouter un smiley</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>81.51.228.217</wiki_user_ip>
-    <wiki_timestamp>1345829531</wiki_timestamp>
     <wiki_content>-- Gestion des smileys --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/manage.png[/img][/align]
+[align=center][img]images/utilisation/administration/site/smileys/manage.png[/img][/align]
 
 Dans la gestion des smileys, vous avez la possibilité : 
 [list]
@@ -31,7 +27,7 @@ Dans la gestion des smileys, vous avez la possibilité :
 [*] de l'éditer pour changer le code à insérer pour l'afficher.
 [/list]
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/edit.png[/img][/align]
+[align=center][img]images/utilisation/administration/site/smileys/edit.png[/img][/align]
 
 L'édition d'un smiley vous demande : 
 [list]
@@ -45,7 +41,7 @@ Nous allons d'abord mettre le smiley sur le serveur FTP puis nous l'inclurons da
 
 --- Uploader un smiley ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/upload.png[/img][/align]
+[align=center][img]images/utilisation/administration/site/smileys/upload.png[/img][/align]
 
 Pour ajouter, il faut que vous mettiez sur votre serveur le smiley en question. Pour cela vous avez 2 possibilités : 
 [list]
@@ -55,7 +51,7 @@ Pour ajouter, il faut que vous mettiez sur votre serveur le smiley en question. 
 
 --- Ajouter un smiley ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/site/smileys/add.png[/img][/align]
+[align=center][img]images/utilisation/administration/site/smileys/add.png[/img][/align]
 
 Une fois le smiley mis sur votre ftp, il faut l'ajouter dans la base des smileys.
 
@@ -64,5 +60,9 @@ Pour cela vous devez :
 [*] donner un code au smiley (ex : :ne)
 [*] choisir le smiley parmi ceux de la liste disponible
 [/list]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>81.51.228.217</wiki_user_ip>
+    <wiki_timestamp>1345829531</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

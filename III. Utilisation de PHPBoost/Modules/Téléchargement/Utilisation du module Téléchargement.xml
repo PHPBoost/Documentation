@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>67</wiki_id>
     <wiki_id_contents>806</wiki_id_contents>
@@ -17,21 +17,17 @@
     <wiki_con_id_contents>806</wiki_con_id_contents>
     <wiki_con_id_article>67</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_categories">Catégories</a></li><li><a href="#paragraph_telecharger-un-fichier">Télécharger un fichier</a><ol class="wiki_list_2"><li><a href="#paragraph_signaler-un-lien-mort">Signaler un lien mort</a></li><li><a href="#paragraph_note">Note</a></li><li><a href="#paragraph_commentaires">Commentaires</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.11</wiki_user_ip>
-    <wiki_timestamp>1358351524</wiki_timestamp>
     <wiki_content>Cette article traite de l'utilisation du module Téléchargement.
 
 -- Catégories --
 
 Lorsque vous accédez à la page d'accueil des téléchargements, une page avec plusieurs catégories est proposée.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_8.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_8.jpg[/img][/align]
 
 Pour voir les fichiers disponibles dans une catégorie, cliquez sur celle-ci.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_9.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_9.jpg[/img][/align]
 
 [b]Vous pourrez classer les téléchargement par ordre croissant ou décroissant selon : [/b]
 
@@ -47,7 +43,7 @@ Pour voir les fichiers disponibles dans une catégorie, cliquez sur celle-ci.
 
 Pour accéder à un fichier, cliquez sur celui-ci.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_10.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_10.jpg[/img][/align]
 
 Cliquez sur "Télécharger" pour enregistrer le fichier sur votre ordinateur.
 
@@ -57,7 +53,7 @@ Vous pouvez signaler un lien mort (qui n'est plus valide et qui est impossible à
 
 Votre demande apparaîtra dans le panneau de contribution : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/download/download_11.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/download/download_11.jpg[/img][/align]
 
 --- Note ---
 
@@ -66,5 +62,9 @@ Vous avez la possibilité de noter le fichier en téléchargement. Pour cela clique
 --- Commentaires ---
 
 Vous avez la possibilité de laisser un commentaire pour chaque fichier. Pour cela cliquez sur "Poster un commentaire" et laissez votre appréciation.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.11</wiki_user_ip>
+    <wiki_timestamp>1358351524</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

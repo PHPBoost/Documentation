@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>49</wiki_id>
     <wiki_id_contents>781</wiki_id_contents>
@@ -17,15 +17,11 @@
     <wiki_con_id_contents>781</wiki_con_id_contents>
     <wiki_con_id_article>49</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_gestion-de-la-galerie">Gestion de la galerie</a></li><li><a href="#paragraph_ajout-d-images">Ajout d'images</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-une-image">Ajouter une image</a></li><li><a href="#paragraph_images-disponibles-sur-le-serveur">Images disponibles sur le serveur</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_configuration-de-la-galerie">Configuration de la galerie</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_options-d-affichage">Options d'affichage</a></li><li><a href="#paragraph_defilement-des-miniatures">Défilement des miniatures</a></li><li><a href="#paragraph_protection-des-images">Protection des images</a></li><li><a href="#paragraph_upload-des-images">Upload des images</a></li><li><a href="#paragraph_cache">Cache</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>935</wiki_user_id>
-    <wiki_user_ip>89.90.175.161</wiki_user_ip>
-    <wiki_timestamp>1358243731</wiki_timestamp>
     <wiki_content>-- Gestion de la galerie --
 
 Dans cette zone, vous pouvez parcourir toutes les catégories avec toutes les images de votre galerie. Vous pourrez pour chaque catégorie et chaque image les administrer.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_managment.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_managment.png[/img][/align]
 -- Ajout d'images --
 	
 [b]Vous avez 2 moyens d'ajouter des images dans votre galerie : [/b]
@@ -36,7 +32,7 @@ Dans cette zone, vous pouvez parcourir toutes les catégories avec toutes les ima
 
 --- Ajouter une image ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_add_picture.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_add_picture.png[/img][/align]
 
 [b]Paramètre des images :[/b]
 [list][*]Extensions autorisées : JPEG, GIF, PNG, toutes les autres extensions d'images ne peuvent être intégrées dans la galerie.
@@ -61,20 +57,20 @@ NB : vous pouvez bien sur cliquer sur 'supprimer' si vous ne souhaitez pas mettr
 
 -- Gestion des catégories --
  	
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_cat_managment.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_cat_managment.png[/img][/align]
 
 [b]Pour chaque catégorie ou sous catégorie vous allez pouvoir : [/b]
 [list]
-[*][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_edit.png[/img] : éditer la catégorie pour changer son titre, la mettre dans une autre catégorie...
-[*][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_move_up.png[/img][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_move_down.png[/img]  : mettre la catégorie au dessus ou au dessous  des autres. Seuls les déplacements se feront pour les catégorie de même nature.
-[*][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_delete.png[/img] : supprimer une catégorie. Si des images se trouvent dans la catégorie en cours de suppression, un message vous demandera si vous souhaitez déplacer les images de cette catégorie dans une autre ou bien si vous souhaitez les supprimer en même temps.
+[*][img]images/utilisation/modules/gallery/gallery_edit.png[/img] : éditer la catégorie pour changer son titre, la mettre dans une autre catégorie...
+[*][img]images/utilisation/modules/gallery/gallery_move_up.png[/img][img]images/utilisation/modules/gallery/gallery_move_down.png[/img]  : mettre la catégorie au dessus ou au dessous  des autres. Seuls les déplacements se feront pour les catégorie de même nature.
+[*][img]images/utilisation/modules/gallery/gallery_delete.png[/img] : supprimer une catégorie. Si des images se trouvent dans la catégorie en cours de suppression, un message vous demandera si vous souhaitez déplacer les images de cette catégorie dans une autre ou bien si vous souhaitez les supprimer en même temps.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_would_you_mode_file.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_would_you_mode_file.png[/img][/align]
 [/list]
 
 -- Ajouter une catégorie --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_add_new_cat.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_add_new_cat.png[/img][/align]
 [b]Champs à renseigner :[/b]
 [list]
 [*]Catégorie parente  : choisissez dans quelle catégorie vous souhaitez créer une nouvelle catégorie. Cela peut être à la racine de l'album ou bien dans une catégorie déjà présente.
@@ -94,7 +90,7 @@ NB : vous pouvez bien sur cliquer sur 'supprimer' si vous ne souhaitez pas mettr
 
 --- Configuration générale ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_general_config.png[/img][/align][b]Paramètres :[/b]
+[align=center][img]images/utilisation/modules/gallery/gallery_configuration_general_config.png[/img][/align][b]Paramètres :[/b]
 [list]
 [*]Largeur max photos : taille à mettre en pixels. Évitez de dépasser 800px pour gardez une bonne visualisation des pages.
 [*]Hauteur max photos : taille à mettre en pixels. Évitez de dépasser 600px pour gardez une bonne visualisation des pages.
@@ -108,7 +104,7 @@ NB : vous pouvez bien sur cliquer sur 'supprimer' si vous ne souhaitez pas mettr
 
 --- Options d'affichage ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_display_option.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_configuration_display_option.png[/img][/align]
 [b]Mode d'agrandissement des images :[/b]
 [list]
 [*] Nouvelle page : ouvre l'image dans une page de phpboost AVEC toutes les caractéristiques de l'image sous celle ci.
@@ -130,7 +126,7 @@ NB : vous pouvez bien sur cliquer sur 'supprimer' si vous ne souhaitez pas mettr
 
 --- Défilement des miniatures ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_scrolling_thumbnails.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_configuration_scrolling_thumbnails.png[/img][/align]
 Cette zone correspond au mini module galerie que l'on peut positionner dans différentes zone du site selon le choix de l'administrateur du site. Dans ce mini module sont affichées des miniatures des images de la galerie.
 
 [b] Type de défilement [/b] : 
@@ -150,7 +146,7 @@ Cette zone correspond au mini module galerie que l'on peut positionner dans diff
 
 Vous avez la possibilité de marquer vos images d'un logo comme cet exemple vous le montre.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_pictures_protection.png[/img][/align][b]Paramètres :[/b]
+[align=center][img]images/utilisation/modules/gallery/gallery_configuration_pictures_protection.png[/img][/align][b]Paramètres :[/b]
 [list]
 [*]Activer Logo  : un logo sera incrusté en bas à droite sur la photo
 [*]Adresse du logo : Vous pouvez créer votre propre logo. Mettez le dans le dossier /gallery et indiquez ici son nom. Attention, veillez à avoir un logo pas très imposant sinon il risque de couvrir une grosse partie la photo.
@@ -161,7 +157,7 @@ Vous avez la possibilité de marquer vos images d'un logo comme cet exemple vous 
 --- Upload des images ---
 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_upload_pictures.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_configuration_upload_pictures.png[/img][/align]
 [b]Paramètre :[/b]
 [list]
 [*]Nombre de photos maximum (membres) : nombre maximal d'images qu'un membre pourra proposer dans la galerie. Ce sera illimité si invités y seront autorisés)  	
@@ -170,8 +166,12 @@ Vous avez la possibilité de marquer vos images d'un logo comme cet exemple vous 
 
 --- Cache ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_cache_config.png[/img][/align]
+[align=center][img]images/utilisation/modules/gallery/gallery_configuration_cache_config.png[/img][/align]
 Vous allez pouvoir vider le cache si vous avez changé la configuration des miniatures. Elles seront ainsi régénérées sous la nouvelle configuration.
 Par la même occasion, les images seront recomptées.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1358243731</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

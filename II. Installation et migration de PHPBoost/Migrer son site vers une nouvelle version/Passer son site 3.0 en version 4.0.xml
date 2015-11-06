@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>172</wiki_id>
     <wiki_id_contents>942</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>942</wiki_con_id_contents>
     <wiki_con_id_article>172</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_pre-requis">Pré-requis</a></li><li><a href="#paragraph_preparer-votre-site">Préparer votre site</a></li><li><a href="#paragraph_mise-a-jour-du-site">Mise à jour du site</a></li><li><a href="#paragraph_configurez-votre-site-sur-phpboost-4-0">Configurez votre site sur PHPBoost 4.0</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1760</wiki_user_id>
-    <wiki_user_ip>82.224.142.186</wiki_user_ip>
-    <wiki_timestamp>1372004416</wiki_timestamp>
     <wiki_content>Pour pouvoir passer de la version 3.0 à la 4.0, il ne suffit pas de remplacer les fichiers ou d'appliquer un patch comme les mises à jours mineures.
 
 Etant donné qu'il y a eu plusieurs changements au niveau de la base de données, il faut faire des conversions pour que la nouvelle version fonctionne correctement, nous allons donc voir au cours de cet article les différentes choses à faire pour migrer vers PHPBoost 4.0.
@@ -90,5 +86,9 @@ Enfin, il sera nécessaire que vous fassiez le recensement de tous les répertoire
 Au moindre problème contactez le support sur le [url=/forum/index.php]forum PHPBoost[/url].
 
 Bonne continuation sur PHPBoost 4.0 !</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1372004416</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

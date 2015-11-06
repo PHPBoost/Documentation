@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_cat>
+<wiki_cat_infos>
   <wiki_articles_fields>
     <wiki_id>184</wiki_id>
     <wiki_id_contents>936</wiki_id_contents>
@@ -22,10 +22,6 @@
     <wiki_con_id_contents>936</wiki_con_id_contents>
     <wiki_con_id_article>184</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.12</wiki_user_ip>
-    <wiki_timestamp>1369224833</wiki_timestamp>
     <wiki_content>[table style="float:right;"]
    [row]
       [head colspan="2"]Rapport de bugs[/head]
@@ -54,7 +50,7 @@
 
 [align=center]
    [size=20][b]Module Rapport de bugs[/b][/size]
-   [img]http://resources.phpboost.com/documentation/utilisation/modules/bugtracker/logo.png[/img]
+   [img]images/utilisation/modules/bugtracker/logo.png[/img]
 [/align]
 
 
@@ -65,5 +61,9 @@
 
 [b]Description :[/b] Le module "Rapport de bugs" vous permet de mettre en place un système de gestion des bugs présents sur votre site ou  le suivi de l'évolution de n'importe quel produit en cours de développement. 
 Les utilisateurs peuvent rapporter les bugs détectés via un formulaire dynamiquement généré via l'administration du module. Les champs du formulaire sont définis selon les options choisies et configurées par l'administrateur du site.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1369224833</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_cat>

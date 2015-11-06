@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>83</wiki_id>
     <wiki_id_contents>1344</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1344</wiki_con_id_contents>
     <wiki_con_id_article>83</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_smileys">Smileys</a></li><li><a href="#paragraph_mise-en-forme-du-texte">Mise en forme du texte</a><ol class="wiki_list_2"><li><a href="#paragraph_mises-en-forme-de-base-gras-italique-souligne-et-barre">Mises en forme de base : gras, italique, souligné et barré</a></li><li><a href="#paragraph_taille-du-texte">Taille du texte</a></li><li><a href="#paragraph_couleur">Couleur</a></li><li><a href="#paragraph_alignement">Alignement</a></li><li><a href="#paragraph_lement-flottant">Élément flottant</a></li><li><a href="#paragraph_les-titres">Les titres</a></li><li><a href="#paragraph_les-conteneurs">Les conteneurs</a></li><li><a href="#paragraph_les-styles">Les styles</a></li></ol></li><li><a href="#paragraph_autres-balises-utiles">Autres balises utiles</a><ol class="wiki_list_2"><li><a href="#paragraph_liens">Liens</a></li><li><a href="#paragraph_images">Images</a></li><li><a href="#paragraph_lightbox">Lightbox</a></li><li><a href="#paragraph_texte-cache">Texte caché</a></li><li><a href="#paragraph_citation">Citation</a></li><li><a href="#paragraph_tableaux">Tableaux</a></li><li><a href="#paragraph_listes">Listes</a></li><li><a href="#paragraph_inserer-du-code">Insérer du code</a><ol class="wiki_list_3"><li><a href="#paragraph_preciser-le-type-de-code-insere">Préciser le type de code inséré</a></li><li><a href="#paragraph_afficher-les-lignes">Afficher les lignes</a></li></ol></li><li><a href="#paragraph_multimedia">Multimédia</a><ol class="wiki_list_3"><li><a href="#paragraph_flash">Flash</a></li><li><a href="#paragraph_videos">Vidéos</a></li><li><a href="#paragraph_son">Son</a></li></ol></li><li><a href="#paragraph_inserer-des-expressions-mathematiques">Insérer des expressions mathématiques</a></li><li><a href="#paragraph_ancres">Ancres</a><ol class="wiki_list_3"><li><a href="#paragraph_qu-est-ce-qu-une-ancre">Qu'est-ce qu'une ancre?</a></li><li><a href="#paragraph_creer-une-ancre">Créer une ancre</a></li><li><a href="#paragraph_faire-pointer-un-lien-vers-une-ancre">Faire pointer un lien vers une ancre</a></li></ol></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1406663038</wiki_timestamp>
     <wiki_content>PHPBoost gère la mise en forme des messages du forum, articles, commentaires, etc... avec un "langage" simplifié. En effet, qui n'a jamais entendu parler du BBCode ? C'est un langage inventé, qui permet de faciliter la mise en forme d'un message et qui permet entre autres de mettre du texte en gras, de le souligner, de faire un lien ou bien d'autres choses encore. Il permet à des utilisateurs ne connaissant pas du tout l'html de formater leur messages.
 
 Niveau fonctionnement, pour ceux qui sont intéressés, des expressions régulières reconnaissent les balises BBcode et remplacent ce language à balises à crochets [] par les balises XHTML et CSS correspondantes.
@@ -408,5 +404,9 @@ Si vous souhaitez afficher tous les flux d'un module, dans ce cas ne mettez pas 
 Exemple pour afficher les 5 derniers flux du module téléchargement de la catégorie 3 :
 
 [code=bbcode][feed cat"3" number="5"]download[/feed][/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1406663038</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_cat>
+<wiki_cat_infos>
   <wiki_articles_fields>
     <wiki_id>6</wiki_id>
     <wiki_id_contents>511</wiki_id_contents>
@@ -22,14 +22,14 @@
     <wiki_con_id_contents>511</wiki_con_id_contents>
     <wiki_con_id_article>6</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.12</wiki_user_ip>
-    <wiki_timestamp>1354022136</wiki_timestamp>
     <wiki_content>Pour créer un menu, vous allez devoir créer un module :
 
 - [link=les-bases]La création d'un module[/link]
 - [link=la-communication-entre-modules]La communication entre modules[/link]
 - [link=la-communication-entre-modules#paragraph_les-menus]Intégration d'un ou plusieurs menus[/link]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1354022136</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_cat>

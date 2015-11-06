@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>275</wiki_id>
     <wiki_id_contents>1361</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1361</wiki_con_id_contents>
     <wiki_con_id_article>275</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_les-images-de-previsualisation">Les images de prévisualisation</a></li><li><a href="#paragraph_le-fichier-de-configuration-d-un-theme">Le fichier de configuration d'un thème</a></li><li><a href="#paragraph_le-nom-de-votre-theme">Le nom de votre thème</a></li><li><a href="#paragraph_faire-le-menage">Faire le ménage</a></li><li><a href="#paragraph_l-archivage">L'archivage</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1760</wiki_user_id>
-    <wiki_user_ip>82.224.142.186</wiki_user_ip>
-    <wiki_timestamp>1407878716</wiki_timestamp>
     <wiki_content>-- Les images de prévisualisation --
 
 Afin de reconnaître votre thème parmi les autres, nous utilisons de petites images appeler Screen ou images de prévisualisation.
@@ -65,5 +61,9 @@ Le thème est maintenant entièrement finalisé. Il est nécessaire de l'archiver en
 Préférer l'archive classique .zip qui est lisible par la plus part des systèmes sans outil supplémentaire.
 
 Le nom de l'archive n'a pas vraiment d'importance, mais il est important d'archiver le répertoire complet (exemple : base) et non pas l'ensemble des fichiers et répertoire de votre thème de façon à conserver le répertoire lors de l'installation.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1407878716</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

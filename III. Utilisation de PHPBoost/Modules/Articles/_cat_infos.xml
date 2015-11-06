@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_cat>
+<wiki_cat_infos>
   <wiki_articles_fields>
     <wiki_id>108</wiki_id>
     <wiki_id_contents>929</wiki_id_contents>
@@ -22,10 +22,6 @@
     <wiki_con_id_contents>929</wiki_con_id_contents>
     <wiki_con_id_article>108</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>935</wiki_user_id>
-    <wiki_user_ip>89.90.175.161</wiki_user_ip>
-    <wiki_timestamp>1368008111</wiki_timestamp>
     <wiki_content>[table style="float:right;"]
    [row]
       [head colspan="2"]Articles[/head]
@@ -54,7 +50,7 @@
 
 [align=center]
    [size=20][b]Module Articles[/b][/size]
-   [img]http://resources.phpboost.com/documentation/utilisation/modules/articles/logo.png[/img]
+   [img]images/utilisation/modules/articles/logo.png[/img]
 [/align]
 
 
@@ -67,5 +63,9 @@
 Chaque article pourra être proposé par les membres et validé par l'administrateur ou les modérateurs. Un système de gestion de parution est utilisé pour gérer les dates de parutions d'un article. Enfin, ils peuvent être commentés et notés par les utilisateurs.
 Les catégories sont illimitées avec un choix d'autorisation pour tel type d'utilisateur (visiteur, membre, modérateur, administrateur).
 [i]Voici donc un module très complet qui est à utiliser pour tout site nécessitant un système de gestion d'articles, avec gestion des parutions et des droits d'autorisations.[/i]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1368008111</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_cat>

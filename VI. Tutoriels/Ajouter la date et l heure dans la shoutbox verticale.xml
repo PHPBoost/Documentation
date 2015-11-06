@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>300</wiki_id>
     <wiki_id_contents>1382</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1382</wiki_con_id_contents>
     <wiki_con_id_article>300</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_les-fichiers-modifier">Les fichiers à modifier</a><ol class="wiki_list_2"><li><a href="#paragraph_code-html">Code HTML</a></li><li><a href="#paragraph_g-rer-aussi-le-rafra-chissement">Gérer aussi le rafraîchissement</a></li><li><a href="#paragraph_adaptation-css">Adaptation CSS</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5083</wiki_user_id>
-    <wiki_user_ip>93.5.71.211</wiki_user_ip>
-    <wiki_timestamp>1423332034</wiki_timestamp>
     <wiki_content>-- Introduction --
 
 Cette article a pour but de vous expliquer comment ajouter la date et l'heure dans la shoubox lorsqu'elle est affichée sur une colonne droite ou gauche.
@@ -96,5 +92,9 @@ Je conseil d'ajouter en fin de fichier la classe suivante :
 [code=css]div#shout-container {
 	width: 95%;
 }[/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>93.5.71.211</wiki_user_ip>
+    <wiki_timestamp>1423332034</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

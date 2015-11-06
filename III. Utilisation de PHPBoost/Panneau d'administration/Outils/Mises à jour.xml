@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>124</wiki_id>
     <wiki_id_contents>759</wiki_id_contents>
@@ -17,23 +17,19 @@
     <wiki_con_id_contents>759</wiki_con_id_contents>
     <wiki_con_id_article>124</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_mises-a-jour-disponibles">Mises à jour disponibles</a></li><li><a href="#paragraph_pas-de-mise-a-jour-disponible">Pas de mise à jour disponible</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1466</wiki_user_id>
-    <wiki_user_ip>90.55.70.218</wiki_user_ip>
-    <wiki_timestamp>1358180945</wiki_timestamp>
     <wiki_content>-- Mises à jour disponibles --
 
 Vous allez être averti lorsqu'une mise à jour du noyau, d'un module ou d'un  thème va être disponible au niveau du menu 'connexion' lorsque vous êtes connecté avec un chiffre à côté de 'Panneau d'administration ' : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/updates/alert.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/updates/alert.png[/img][/align]
 
 Puis si une mise à jour est disponible, elle s'affichera dans les alertes : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/updates/alerts.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/updates/alerts.png[/img][/align]
 
 Vous pouvez également vous rendre sur la page : "Outils/Mises à jour" et vous verrez les mises à jour disponibles : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/updates/updates.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/updates/updates.png[/img][/align]
 
 Pour chaque mise à jour, vous allez avoir 
 [list]
@@ -47,7 +43,7 @@ Pour chaque mise à jour, vous allez avoir
 
 Voyons le détail d'une mise à jour : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/updates/update_info.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/updates/update_info.png[/img][/align]
 
 L'affichage est divisé en 2 : 
 [list]
@@ -64,6 +60,10 @@ Une fois la mise à jour appliquée, l'alerte mise à jour disparaitra.
 
 S'il n'y a pas de mise à jour disponible, au niveau de la section mise à jour, vous aurez ce message : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/updates/no_updates.png[/img][/align]</wiki_content>
+[align=center][img]images/utilisation/administration/tools/updates/no_updates.png[/img][/align]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1466</wiki_user_id>
+    <wiki_user_ip>90.55.70.218</wiki_user_ip>
+    <wiki_timestamp>1358180945</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

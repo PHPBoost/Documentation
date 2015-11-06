@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>161</wiki_id>
     <wiki_id_contents>859</wiki_id_contents>
@@ -17,11 +17,7 @@
     <wiki_con_id_contents>859</wiki_con_id_contents>
     <wiki_con_id_article>161</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_pages">Pages</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li><li><a href="#paragraph_gestion-des-pages">Gestion des pages</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>935</wiki_user_id>
-    <wiki_user_ip>89.90.175.161</wiki_user_ip>
-    <wiki_timestamp>1358776915</wiki_timestamp>
-    <wiki_content>[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/pages/page_2.jpg[/img][/align]
+    <wiki_content>[align=center][img]images/utilisation/modules/pages/page_2.jpg[/img][/align]
 
 -- Pages --
 
@@ -45,7 +41,11 @@ Pour chacun, vous pouvez autoriser les visiteurs / les membres / les modérateurs
 [style=notice]Bien sûr, pour chaque page créée vous pourrez donner des droits spécifiques.[/style]
 
 -- Gestion des pages --
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/pages/pages_pages.png[/img][/align]
+[align=center][img]images/utilisation/modules/pages/pages_pages.png[/img][/align]
 La documentation de cette zone se trouve dans [link=utilisation-du-module-pages]cet article[/link].</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>935</wiki_user_id>
+    <wiki_user_ip>89.90.175.161</wiki_user_ip>
+    <wiki_timestamp>1358776915</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

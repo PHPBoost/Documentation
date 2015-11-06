@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>61</wiki_id>
     <wiki_id_contents>803</wiki_id_contents>
@@ -17,17 +17,13 @@
     <wiki_con_id_contents>803</wiki_con_id_contents>
     <wiki_con_id_article>61</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-gestion-des-sondages">La gestion des sondages</a><ol class="wiki_list_2"><li><a href="#paragraph_la-liste-des-sondages">La liste des sondages</a></li></ol></li><li><a href="#paragraph_creation-d-un-sondage">Création d'un sondage</a><ol class="wiki_list_2"><li><a href="#paragraph_modifier-un-sondage">Modifier un sondage</a></li></ol></li><li><a href="#paragraph_configuration-des-sondages">Configuration des sondages</a><ol class="wiki_list_2"><li><a href="#paragraph_mini-sondages">Mini-sondages</a></li><li><a href="#paragraph_configuration-avancee">Configuration avancée</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.12</wiki_user_ip>
-    <wiki_timestamp>1358328847</wiki_timestamp>
     <wiki_content>L'administration de ce module est séparée en trois parties.
 
 -- La gestion des sondages --
 
 --- La liste des sondages ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/poll/poll_1.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/poll/poll_1.jpg[/img][/align]
 
 Cette première partie affiche la liste des sondages existants dans un tableau. Voici les informations fournies par ce tableau :
 
@@ -44,7 +40,7 @@ Cette première partie affiche la liste des sondages existants dans un tableau. V
 
 -- Création d'un sondage --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/poll/poll_2.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/poll/poll_2.jpg[/img][/align]
 
 Créer un sondage est relativement intuitif.
 Il y a plusieurs options à renseigner.
@@ -65,7 +61,7 @@ Ces options sont les mêmes que pour la 'création d'un sondage'.
 
 -- Configuration des sondages --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/poll/poll_3.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/poll/poll_3.jpg[/img][/align]
 
 Dans cette dernière partie de l'administration, vous pouvez configurer les sondages.
 
@@ -77,5 +73,9 @@ Ensuite, vous pouvez décider du rang minimum pour poster. Vous avez le choix ent
 --- Configuration avancée ---
 
 Vous pouvez ici décider du nom du cookie qui sera stocké dans le navigateur du visiteur qui contiendra les sondages où le visiteur a déjà voté et sa durée de validité.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1358328847</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

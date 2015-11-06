@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>52</wiki_id>
     <wiki_id_contents>1274</wiki_id_contents>
@@ -17,13 +17,9 @@
     <wiki_con_id_contents>1274</wiki_con_id_contents>
     <wiki_con_id_article>52</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion">Gestion</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li></ol></li><li><a href="#paragraph_creer-un-nouveau-lien">Créer un nouveau lien</a></li><li><a href="#paragraph_gestion-des-liens">Gestion des liens</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5193</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1405002401</wiki_timestamp>
     <wiki_content>-- Configuration --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/web/config.png[/img][/align]
+[align=center][img]images/utilisation/modules/web/config.png[/img][/align]
 [b]Paramètres :[/b]
 [list]
 [*][b]Nombre maximum de liens web affichés[/b] : nombre maximum de liens qui seront référencés par page.
@@ -37,7 +33,7 @@ Il est possible de définir l'autorisation à partir de laquelle les liens peuvent
 
 --- Gestion ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/web/categories_management.png[/img][/align]
+[align=center][img]images/utilisation/modules/web/categories_management.png[/img][/align]
 [b]Tous les paramètres des catégories peuvent être modifiés :[/b]
 [list]
 [*]Le nom
@@ -50,7 +46,7 @@ Il est possible de définir l'autorisation à partir de laquelle les liens peuvent
 [/list]
 --- Ajouter une catégorie ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/web/add_category.png[/img][/align]
+[align=center][img]images/utilisation/modules/web/add_category.png[/img][/align]
 [b]Champs à renseigner :[/b]
 [list]
 [*][b]Nom[/b] : nom de la catégorie.
@@ -61,7 +57,7 @@ Il est possible de définir l'autorisation à partir de laquelle les liens peuvent
 [/list]
 -- Créer un nouveau lien --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/web/add_link.png[/img][/align]
+[align=center][img]images/utilisation/modules/web/add_link.png[/img][/align]
 [b]Champs à renseigner :[/b]
 [list]
 [*][b]Catégorie[/b] : catégorie dans laquelle sera mis votre lien.
@@ -73,7 +69,11 @@ Il est possible de définir l'autorisation à partir de laquelle les liens peuvent
 [/list]
 -- Gestion des liens --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/web/links_management.png[/img][/align]
+[align=center][img]images/utilisation/modules/web/links_management.png[/img][/align]
 Ici vous avez la possibilité de supprimer et d'éditer chaque lien pour le modifier, changer son approbation, sa catégorie, etc.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1405002401</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>81</wiki_id>
     <wiki_id_contents>113</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>113</wiki_con_id_contents>
     <wiki_con_id_article>81</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_liste-de-base">Liste de base</a></li><li><a href="#paragraph_liste-numerotee">Liste numérotée</a></li><li><a href="#paragraph_imbrication">Imbrication</a></li><li><a href="#paragraph_personnalisation-supplementaire">Personnalisation supplémentaire</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>81.51.228.217</wiki_user_ip>
-    <wiki_timestamp>1345885245</wiki_timestamp>
     <wiki_content>Dans cet article nous allons voir comment créer des listes en langage BBCode.
 
 -- Liste de base --
@@ -77,5 +73,9 @@ Voici un exemple :
 [*]Elément 2[/list][/code]
 
 Vous retrouverez les propriétés CSS disponibles pour les listes dans ce récapitulatif du Site du Zér0 : [url=http://www.siteduzero.com/tuto-3-1938-1-liste-des-proprietes-css.html#ss_part_5]Propriétés des listes[/url]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>81.51.228.217</wiki_user_ip>
+    <wiki_timestamp>1345885245</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

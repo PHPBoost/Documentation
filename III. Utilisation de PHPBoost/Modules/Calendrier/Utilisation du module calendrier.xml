@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>25</wiki_id>
     <wiki_id_contents>1260</wiki_id_contents>
@@ -17,15 +17,11 @@
     <wiki_con_id_contents>1260</wiki_con_id_contents>
     <wiki_con_id_article>25</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_page-d-accueil-du-calendrier">Page d'accueil du calendrier</a></li><li><a href="#paragraph_gestion-des-evenements">Gestion des événements</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-evenement">Ajouter un événement</a></li><li><a href="#paragraph_modifier-les-evenements">Modifier les événements</a></li><li><a href="#paragraph_supprimer-les-evenements">Supprimer les événements</a></li><li><a href="#paragraph_commenter-les-evenements">Commenter les événements</a></li></ol></li><li><a href="#paragraph_affichage-des-evenements">Affichage des événements</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5193</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1405000992</wiki_timestamp>
     <wiki_content>-- Page d'accueil du calendrier --
 
 Lorsque vous arrivez sur la page d'accueil, vous avez, devant vous un calendrier qui ressemble à ça :
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/calendar/home.png[/img][/align]
+[align=center][img]images/utilisation/modules/calendar/home.png[/img][/align]
 Tout d'abord, vous pouvez naviguer simplement entre les mois et les années à l'aide des deux listes déroulantes.
 Ensuite, les flèches de gauche et de droite sont là pour vous donner la possibilité de passer au mois précédent et au mois suivant. On retrouve le mois en cours entre les deux.
 
@@ -43,7 +39,7 @@ Vous avez également la possibilité de positionner un mini-menu (par défaut à gau
 Vous avez la possibilité d'ajouter un événement (si vous avez les droits d'écriture ou de contribution) en cliquant sur le lien d'ajout sur le menu en haut à droite du calendrier.
 [style=warning]Attention, suivant le rang demandé pour effectuer cette tâche, défini dans l'administration, vous pouvez ou non ajouter un événement. Dans le cas où vous n'en avez pas le droit, vous ne pouvez pas voir le menu. [link=administration-du-module-calendrier]Se référer à la section suivante[/link] pour plus d'informations sur l'administration du module Calendrier.[/style]
 Lorsque vous souhaitez créer un événement, vous parvenez à un formulaire de ce type :
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/calendar/form.png[/img][/align]
+[align=center][img]images/utilisation/modules/calendar/form.png[/img][/align]
 [b]Titre[/b] : permet de définir le titre de l'événement.
 [b]Catégorie[/b] : permet de choisir la catégorie de l'événement.
 [b]Contenu[/b] : permet de décrire l'événement.
@@ -56,7 +52,7 @@ Lorsque vous souhaitez créer un événement, vous parvenez à un formulaire de ce t
 
 Lorsque l'inscription des membres est activée, les champs suivants apparaissent :
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/calendar/enable_member_subscription.png[/img][/align]
+[align=center][img]images/utilisation/modules/calendar/enable_member_subscription.png[/img][/align]
 [b]Nombre de participants maximum[/b] : permet de limiter le nombre de participants à l'événement. Laissez à 0 si vous ne souhaitez pas limiter le nombre de participants.
 [b]Définir une date limite d'inscription[/b] : permet de choisir une date à partir de laquelle il ne sera plus possible de s'inscrire. Un champ supplémentaire avec un calendrier apparaît avec un calendrier pour choisir cette date une fois la case cochée.
 [b]Autorisation d'afficher la liste des inscrits[/b] : permet de définir qui a le droit de voir la liste des inscrits.
@@ -64,7 +60,7 @@ Lorsque l'inscription des membres est activée, les champs suivants apparaissent 
 
 Un utilisateur qui n'a pas les droits d'écriture mais a les droits de contribution sur le calendrier aura le champ suivant à la place du calendrier pour éventuellement préciser sa demande de création d'événement aux modérateurs.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/calendar/contribution.png[/img][/align]
+[align=center][img]images/utilisation/modules/calendar/contribution.png[/img][/align]
 Une fois l'événement ajouté, on est redirigé vers le jour de l'événement sur le calendrier si celui-ci est approuvé ou vers la liste des événements en attente s'il ne l'est pas.
 
 --- Modifier les événements ---
@@ -87,12 +83,16 @@ En utilisant le formulaire qui apparaît à la suite de l'événement, vous avez ain
 Vous retrouverez la liste des événements du jour choisi dans le calendrier sous celui-ci. Pour avoir le détail d'un événement il suffit de cliquer sur son titre.
 Lorsque l'inscription est activée, le détail de l'événement ressemble à ceci :
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/calendar/suscribe.png[/img][/align]
+[align=center][img]images/utilisation/modules/calendar/suscribe.png[/img][/align]
 
 Lorsqu'on est inscrit, on a la possibilité de se désinscrire tant que l'événement n'est pas commencé :
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/calendar/unsuscribe.png[/img][/align]
+[align=center][img]images/utilisation/modules/calendar/unsuscribe.png[/img][/align]
 
 Si le nombre de places est limité, un message l'indique lorsqu'il ne reste plus beaucoup de places. Si la date est dépassée, il n'est plus possible de s'inscrire.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1405000992</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

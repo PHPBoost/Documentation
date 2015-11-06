@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>187</wiki_id>
     <wiki_id_contents>939</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>939</wiki_con_id_contents>
     <wiki_con_id_article>187</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_implementation-de-l-extension-point">Implémentation de l'extension point</a></li><li><a href="#paragraph_appel-de-la-classe">Appel de la classe</a></li><li><a href="#paragraph_affichage-du-systeme-de-commentaires">Affichage du système de commentaires</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.12</wiki_user_ip>
-    <wiki_timestamp>1371137835</wiki_timestamp>
     <wiki_content>Cet article indique les différents éléments à mettre en place pour gérer et afficher les commentaires dans un module.
 
 -- Implémentation de l'extension point --
@@ -96,5 +92,9 @@ Ajouter le code suivant dans le template appelé par votre contrôleur à l'endroit
 [code=tpl]
 # INCLUDE  COMMENTS #
 [/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.12</wiki_user_ip>
+    <wiki_timestamp>1371137835</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

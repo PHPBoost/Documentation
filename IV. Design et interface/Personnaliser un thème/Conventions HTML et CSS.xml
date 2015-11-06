@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>293</wiki_id>
     <wiki_id_contents>1356</wiki_id_contents>
     <wiki_title>Conventions HTML et CSS</wiki_title>
     <wiki_encoded_title>conventions-html-et-css</wiki_encoded_title>
-    <wiki_hits>1035</wiki_hits>
+    <wiki_hits>1036</wiki_hits>
     <wiki_id_cat>59</wiki_id_cat>
     <wiki_is_cat>0</wiki_is_cat>
     <wiki_defined_status>0</wiki_defined_status>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1356</wiki_con_id_contents>
     <wiki_con_id_article>293</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_indentation">Indentation</a><ol class="wiki_list_2"><li><a href="#paragraph_un-seul-attribut">Un seul attribut</a></li><li><a href="#paragraph_plusieurs-attributs">Plusieurs attributs</a></li></ol></li><li><a href="#paragraph_les-attributs-pour-plusieurs-classes">Les attributs pour plusieurs classes</a></li><li><a href="#paragraph_les-espaces-dans-les-attributs">Les espaces dans les attributs</a></li><li><a href="#paragraph_le-nom-des-classes">Le nom des classes</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1760</wiki_user_id>
-    <wiki_user_ip>82.224.142.186</wiki_user_ip>
-    <wiki_timestamp>1407877213</wiki_timestamp>
     <wiki_content>Il est important dans un projet que les développeurs adoptent un style d&#8217;écriture identique. Ceci favorise la relecture du code par tout le monde et facilite grandement le débogage.
 
 Depuis l'intégration du cache CSS, il n'est plus question d'optimiser le fichier CSS pour accélérer le chargement web (le cache CSS s'en occupe), mais plutôt de gagner en lisibilité dans le développement.
@@ -80,5 +76,9 @@ Les règles sont simples :
 La classe [i]header[/i] est faite pour l'en-tête du site, la classe [i]content[/i] pour le contenu du site.
 
 [style=notice]Il reste encore quelques underscore "_" dans certains noms de classes, mais ils seront remplacés dans les versions futures. Ce choix permet de distinguer un nom de classe CSS et d'une variable PHP[/style]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1407877213</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

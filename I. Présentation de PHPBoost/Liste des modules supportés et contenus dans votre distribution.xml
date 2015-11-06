@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>77</wiki_id>
     <wiki_id_contents>1342</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1342</wiki_con_id_contents>
     <wiki_con_id_article>77</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1406535472</wiki_timestamp>
     <wiki_content>Un des choix technique de l'équipe de PHPBoost a été de développer et de maintenir les modules en même temps que le noyau.
 
 Cette approche permet d'avoir un environnement graphique unique et homogène : tous thèmes modifiés ou créés s'appliquent à l'ensemble du logiciel et de ses modules.
@@ -196,5 +192,9 @@ L'utilisateur est certain que d'une version à l'autre de PHPBoost les modules se
 		[col][/col]
 	[/row]
 [/table]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1406535472</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>93</wiki_id>
     <wiki_id_contents>137</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>137</wiki_con_id_contents>
     <wiki_con_id_article>93</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>82.124.181.87</wiki_user_ip>
-    <wiki_timestamp>1346007468</wiki_timestamp>
     <wiki_content>Sortie en juin 2006, PHPBoost 1.5.0 rime avec optimisation. Le maximum d'informations est mis en cache afin d'améliorer la rapidité, la réécriture des adresses (URL Rewriting) fait son apparition afin d'optimiser le référencement. La gestion de groupes d'utilisateurs est aussi gérée, afin de donner des autorisations spécifiques sur chaque catégorie du forum par exemple.
 
 
@@ -62,5 +58,9 @@
 	[*]Code HTML et CSS en partie recodé
 	[*]5 nouveaux smileys, nouvelles icônes sur le forum
 [/list]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>82.124.181.87</wiki_user_ip>
+    <wiki_timestamp>1346007468</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

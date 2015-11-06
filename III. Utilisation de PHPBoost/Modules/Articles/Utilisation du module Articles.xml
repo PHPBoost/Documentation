@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>118</wiki_id>
     <wiki_id_contents>753</wiki_id_contents>
@@ -17,17 +17,13 @@
     <wiki_con_id_contents>753</wiki_con_id_contents>
     <wiki_con_id_article>118</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_index-des-articles">Index des articles</a></li><li><a href="#paragraph_lire-un-article">Lire un article</a><ol class="wiki_list_2"><li><a href="#paragraph_noter-un-article">Noter un article</a></li><li><a href="#paragraph_commenter-un-article">Commenter un article</a></li></ol></li><li><a href="#paragraph_creer-un-article">Créer un article</a><ol class="wiki_list_2"><li><a href="#paragraph_diviser-son-article-en-pages">Diviser son article en pages</a></li><li><a href="#paragraph_articles-en-attentes">Articles en attentes</a></li></ol></li><li><a href="#paragraph_contribution-d-un-article">Contribution d'un article</a></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>86.204.211.123</wiki_user_ip>
-    <wiki_timestamp>1358179365</wiki_timestamp>
     <wiki_content>Ici nous verrons comment marche le module Articles du côté utilisateur.
 
 -- Index des articles --
 
 Nous voici donc dans le module Articles : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_8.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_8.jpg[/img][/align]
 
 Ceci est la page d'accueil du module. Nous pouvons voir les différentes catégories qui ont été crées, les articles placés à la racine du module (ici [i]Titre art[/i]), c'est-à-dire les articles qui ne figurent dans aucune catégorie, les articles en attentes (en haut à droite, nous y reviendrons plus tard).
 
@@ -37,7 +33,7 @@ Pour accéder à une catégorie, rien de plus simple : il vous suffit de cliquer su
 
 Pour lire un article, cliquer sur son nom. Nous voici dans la lecture d'un article : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_9.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_9.jpg[/img][/align]
 
 En haut, au-dessus du séparateur (la petite barre) il y a, à gauche le nom de l'article que vous lisez, à droite, la possibilité de poster un commentaire (nous y reviendrons plus tard), la possibilité de modifier l'article en question, la possibilité de le supprimer, et la possibilité d'obtenir une version imprimable de cet article. Bien-sûr ces options n'apparaîtront pas pour tout le monde (lisez l'article sur l'administration de ce module pour en savoir plus sur les permissions).
 
@@ -47,7 +43,7 @@ En bas à gauche se trouve la notation de l'article (lire ci-dessus pour plus de 
 
 Avec PHPBoost, vous avez la possibilité de noter les articles. Pour noter un article, rendez-vous en bas de ce même article, à gauche. Vous devriez voir ça : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_10.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_10.jpg[/img][/align]
 
 Pour noter l'article, déplacez votre curseur sur les étoiles, et choisissez la note que vous voulez lui attribuer en cliquant sur l'étoile (sachant que celle tout à gauche représentera une note de 1/5 et celle tout à droite une note de 5/5). Il n'est pas possible d'attribuer une note de 0. Vous ne pouvez noter l'article qu'une seule fois, si vous tentez de le noter une seconde fois, une petite fenêtre apparaîtra vous disant que vous avez déjà noté l'article.
 
@@ -61,17 +57,17 @@ En effet, si un ou plusieurs commentaires ont déjà été postés, le lien changera 
 
 Cliquez sur le lien, une fenêtre de message apparaîtra en bas de l'article, comme ceci : 
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_11.jpg[/img][/align]
+[img]images/utilisation/modules/articles/article_11.jpg[/img][/align]
 
 Renseignez donc le contenu de votre commentaire, et cliquez sur [i]Envoyer[/i]. Vous pourrez ensuite voir votre commentaire à la suite des autres (s'il y en a) : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_12.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_12.jpg[/img][/align]
 
 -- Créer un article --
 
 Nous allons voir ici comment créer un article, en détaillant toutes les options possibles. Pour créer un article, cliquez sur la petite case [i]Ajout[/i] en haut à droite du module. Vous devriez voir ceci : 
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_13.jpg[/img][/align]
+[img]images/utilisation/modules/articles/article_13.jpg[/img][/align]
 
 Détaillons ensemble l'écran qui se présente à vous :
 
@@ -102,7 +98,7 @@ le contenu de la page 2[/code]
 
 Voici un exemple concret d'un article comportant plusieurs pages : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_14.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_14.jpg[/img][/align]
 
 Donc comme vous pouvez le voir, un sommaire déroulant est apparu en haut à droite, qui permettra une navigation rapide. En bas les numéros des pages sont apparu, et les boutons [i]page suivante[/i] et [i]page précédente[/i].
 
@@ -120,5 +116,9 @@ Vous pouvez soumettre un article à contribution. Nous ne verrons pas tout en dét
 -- Conclusion --
 
 Comme vous l'avez vu, le module Articles n'est pas très compliqué et est un bon moyen de promouvoir des tutoriels, ... De plus, étant soumis à contribution il vous permettra de dynamiser votre site en proposant aux membres de rédiger leurs propres articles.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.211.123</wiki_user_ip>
+    <wiki_timestamp>1358179365</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

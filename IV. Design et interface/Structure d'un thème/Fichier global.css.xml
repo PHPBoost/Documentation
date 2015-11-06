@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>226</wiki_id>
     <wiki_id_contents>1113</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1113</wiki_con_id_contents>
     <wiki_con_id_article>226</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-mise-en-forme-du-texte">La mise en forme du texte</a><ol class="wiki_list_2"><li><a href="#paragraph_les-liens-du-site">Les liens du site</a></li><li><a href="#paragraph_les-liens-des-utilisateurs">Les liens des utilisateurs</a></li><li><a href="#paragraph_les-differentes-tailles-de-polices">Les différentes tailles de polices</a></li><li><a href="#paragraph_les-titres-la-balise-h">les titres (la balise h)</a></li><li><a href="#paragraph_les-titres-bbcode">Les titres &quot;BBcode&quot;</a></li><li><a href="#paragraph_les-liens-wikipedia">Les liens wikipédia</a></li></ol></li><li><a href="#paragraph_mise-en-forme-du-contenu">Mise en forme du contenu</a><ol class="wiki_list_2"><li><a href="#paragraph_affichage-du-mini-calendrier">Affichage du mini calendrier</a></li><li><a href="#paragraph_les-blocs-bbcode">Les blocs bbcode</a></li><li><a href="#paragraph_le-selecteur-de-couleurs">Le sélecteur de couleurs</a></li><li><a href="#paragraph_les-blocs-de-quotes-de-code-ou-caches">les blocs de quotes, de code, ou cachés</a></li><li><a href="#paragraph_les-autres-elements-de-positionnement">Les autres élements de positionnement</a></li><li><a href="#paragraph_les-listes-numerotees">Les listes numérotées</a></li><li><a href="#paragraph_la-recherche-de-membres-en-ajax">La recherche de membres (en AJAX)</a></li><li><a href="#paragraph_la-barre-de-progression">La barre de progression</a></li><li><a href="#paragraph_le-systeme-de-notation">Le système de notation</a></li></ol></li><li><a href="#paragraph_les-icones-specifiques-phpboost-de-fontawesome">Les Icônes spécifiques PHPBoost de FontAwesome</a></li><li><a href="#paragraph_les-differents-menus">Les différents menus</a><ol class="wiki_list_2"><li><a href="#paragraph_le-niveau-1">Le niveau 1</a></li><li><a href="#paragraph_le-niveau-2">Le niveau 2</a></li><li><a href="#paragraph_le-niveau-3">Le niveau 3</a></li><li><a href="#paragraph_les-menus-groupes">Les menus groupés</a></li><li><a href="#paragraph_les-menus-de-navigation">Les menus de navigation</a></li><li><a href="#paragraph_les-menus-des-modules">Les menus des modules</a></li><li><a href="#paragraph_l-affichage-du-menu-sur-la-droite">L'affichage du menu sur la droite</a></li><li><a href="#paragraph_le-separateurs-de-menu">Le séparateurs de menu</a></li><li><a href="#paragraph_les-menus-verticaux-en-scrolling">Les menus verticaux en scrolling</a></li><li><a href="#paragraph_les-menus-horizontaux-en-scrolling">Les menus horizontaux en scrolling</a></li><li><a href="#paragraph_les-menus-horizontaux">Les menus horizontaux</a></li><li><a href="#paragraph_les-liens-menus-verticaux">Les liens menus verticaux</a></li><li><a href="#paragraph_les-menus-de-flux">Les menus de flux</a></li></ol></li><li><a href="#paragraph_les-message-d-erreurs">Les message d'erreurs</a></li><li><a href="#paragraph_le-maintenance">Le maintenance</a></li><li><a href="#paragraph_le-systeme-d-upload">Le système d'upload</a><ol class="wiki_list_2"><li><a href="#paragraph_le-deplacement-dans-l-upload">Le déplacement dans l'upload</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1760</wiki_user_id>
-    <wiki_user_ip>82.224.142.186</wiki_user_ip>
-    <wiki_timestamp>1402254815</wiki_timestamp>
     <wiki_content>Le fichier [i]global.css[/i] contient les classes globales du site, qui peuvent être utilisées par les modules et le noyau.
 
 -- La mise en forme du texte --
@@ -762,5 +758,9 @@ Certain éléments comme la barre d'adresse ou de lien peuvent être personnaliser 
 	background: #F5FBFF;
 	border: 1px solid #2C5169;
 }[/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1402254815</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

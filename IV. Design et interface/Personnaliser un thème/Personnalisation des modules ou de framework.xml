@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>248</wiki_id>
     <wiki_id_contents>1198</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1198</wiki_con_id_contents>
     <wiki_con_id_article>248</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_comment-ca-marche">Comment ça marche ?</a></li><li><a href="#paragraph_que-peut-on-modifier">Que peut-on modifier ?</a></li><li><a href="#paragraph_les-templates">Les templates</a><ol class="wiki_list_2"><li><a href="#paragraph_les-modules">Les modules</a></li><li><a href="#paragraph_le-framework">Le framework</a></li><li><a href="#paragraph_l-administration">L'administration</a></li></ol></li><li><a href="#paragraph_les-css">Les CSS</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1404743990</wiki_timestamp>
     <wiki_content>Nous verrons ici comment modifier les templates et CSS d'un module, du panneau d'administration ou du framework sur un thème en particulier.
 
 
@@ -93,5 +89,9 @@ Il suffit ensuite de faire un copier/coller du fichier CSS afin d'en faire une c
 Il est alors possible de modifier tous les styles de vos modules, afin qu'aucun élément ne fasse 'dépareillé'.
 
 [style=warning]NB : Dans certains modules, les images sont appelées par le CSS, comme le module 'forum'. Si vous choisissez de modifier le CSS du module, le chemin indiqué dans le fichier de style ne sera plus bon. Il faudra alors copier l'intégralité du dossier [i]images[/i] contenu dans le module ou redéfinir chaque URL du CSS.[/style]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1404743990</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

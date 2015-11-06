@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_cat>
+<wiki_cat_infos>
   <wiki_articles_fields>
     <wiki_id>12</wiki_id>
     <wiki_id_contents>875</wiki_id_contents>
@@ -22,10 +22,6 @@
     <wiki_con_id_contents>875</wiki_con_id_contents>
     <wiki_con_id_article>12</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_creer-une-contribution">Créer une contribution</a></li><li><a href="#paragraph_validation-des-contributions">Validation des contributions</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>3484</wiki_user_id>
-    <wiki_user_ip>90.61.235.44</wiki_user_ip>
-    <wiki_timestamp>1358947426</wiki_timestamp>
     <wiki_content>Le panneau de contribution est un outil permettant de faciliter la collaboration entre les différents contributeurs du site.
 
 En comparaison, sur d'autres CMS, il est nécessaire d'être administrateur ou d'avoir un rang particulier pour pouvoir interagir sur le contenu du site. 
@@ -47,7 +43,7 @@ Pour ce tutoriel, nous nous servirons du module multimédia.
 
 Il suffit de vous rendre dans le menu connexion (ou votre profil) et de cliquer sur [i]Panneau de contribution[/i] . Vous vous trouverez ensuite dans le panneau de contribution.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/contribution/contribution_1.jpg[/img][/align]
+[align=center][img]images/utilisation/contribution/contribution_1.jpg[/img][/align]
 
 Vous avez ici 2 zones : 
 
@@ -61,7 +57,7 @@ Pour proposer une contribution, il suffit de cliquer sur le module souhaité.
 
 Dans notre cas, nous allons ajouter un fichier multimédia, nous cliquons donc sur [i]Multimédia[/i].
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/contribution/contribution_2.jpg[/img][/align]
+[align=center][img]images/utilisation/contribution/contribution_2.jpg[/img][/align]
 
 Il faut maintenant renseigner les différents champs.
 
@@ -71,30 +67,30 @@ Il faut maintenant renseigner les différents champs.
 
 Une fois rempli, cliquez sur envoyer pour proposer votre contribution. Un message de succès apparaîtra :
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/contribution/contribution_3.jpg[/img][/align]
+[align=center][img]images/utilisation/contribution/contribution_3.jpg[/img][/align]
 
 En retournant dans le panneau de contribution, vous apercevez votre contribution et pourrez suivre son statut et son éventuel validation.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/contribution/contribution_4.jpg[/img][/align]
+[align=center][img]images/utilisation/contribution/contribution_4.jpg[/img][/align]
 
 
 -- Validation des contributions --
 
 Quand une contribution est en cours de traitement, les validateurs en sont informés dans le [i]menu de connexion[/i].
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/contribution/contribution_5.jpg[/img][/align]
+[align=center][img]images/utilisation/contribution/contribution_5.jpg[/img][/align]
 
 Il suffit de cliquer sur le lien du panneau de contribution pour y accéder.
 
 Vous avez ici accès à toutes les contributions de votre site avec le statut. On voit ici que la contribution faite ci-dessus est en attente de traitement. Nous allons voir les différentes étapes de validation. Cliquez sur l'intitulé de la contribution à traiter :
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/contribution/contribution_6.jpg[/img][/align]
+[align=center][img]images/utilisation/contribution/contribution_6.jpg[/img][/align]
 
 Un résumé de la contribution avec le commentaire facultatif qu'a pu mettre le contributeur apparaît. Vous pouvez commenter la contribution et discuter avec le contributeur si souhaité. 
 
 Pour la traiter, cliquez sur [i]traiter la contribution[/i].
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/contribution/contribution_7.jpg[/img][/align]
+[align=center][img]images/utilisation/contribution/contribution_7.jpg[/img][/align]
 
 Vous pouvez ici modifier les paramètres du fichiers ainsi que la description. 
 
@@ -102,6 +98,10 @@ Vous pouvez ici modifier les paramètres du fichiers ainsi que la description.
 
 Cliquez ensuite sur modifier pour valider les modification et accepter la contribution. 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/contribution/contribution_8.jpg[/img][/align]</wiki_content>
+[align=center][img]images/utilisation/contribution/contribution_8.jpg[/img][/align]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>3484</wiki_user_id>
+    <wiki_user_ip>90.61.235.44</wiki_user_ip>
+    <wiki_timestamp>1358947426</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_cat>

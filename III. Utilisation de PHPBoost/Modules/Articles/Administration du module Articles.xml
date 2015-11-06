@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>112</wiki_id>
     <wiki_id_contents>752</wiki_id_contents>
     <wiki_title>Administration du module Articles</wiki_title>
     <wiki_encoded_title>administration-du-module-articles</wiki_encoded_title>
-    <wiki_hits>377</wiki_hits>
+    <wiki_hits>378</wiki_hits>
     <wiki_id_cat>36</wiki_id_cat>
     <wiki_is_cat>0</wiki_is_cat>
     <wiki_defined_status>0</wiki_defined_status>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>752</wiki_con_id_contents>
     <wiki_con_id_article>112</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_administrer-les-articles">Administrer les articles</a><ol class="wiki_list_2"><li><a href="#paragraph_la-gestion-des-articles">La gestion des articles</a></li></ol></li><li><a href="#paragraph_administrer-les-categories">Administrer les catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_la-creation-d-une-categorie">La création d'une catégorie</a><ol class="wiki_list_3"><li><a href="#paragraph_permissions">Permissions</a></li></ol></li></ol></li><li><a href="#paragraph_configuration">Configuration</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>86.204.211.123</wiki_user_ip>
-    <wiki_timestamp>1358179293</wiki_timestamp>
     <wiki_content>Vous allez maintenant découvrir la façon dont le module Articles est administrable.
 
 -- Administrer les articles --
@@ -29,7 +25,7 @@
 
 Lorsque vous arrivez sur l'administration des articles, vous avez devant vous une liste des articles existants.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_1.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_1.jpg[/img][/align]
 
 Ils sont classés par date de création. Ce tableau vous donne plusieurs informations :
 
@@ -52,7 +48,7 @@ Cette valeur vous permet, si par exemple vous commencez à rédiger un article, de
 
 De la même manière que pour les articles, vous pouvez gérer les catégories. Lorsque vous vous rendez dans cette section, vous vous trouvez nez-à-nez avec une liste un peu particulière des catégories. Cette liste se présente sous forme  d'arborescence en fait, détaillant quelle catégorie appartient à quelle catégorie.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_2.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_2.jpg[/img][/align]
 
 Dans chaque rectangle correspondant à une catégorie sont indiqués :
 
@@ -67,7 +63,7 @@ Dans chaque rectangle correspondant à une catégorie sont indiqués :
 
 Nous voici maintenant dans le panneau de création d'une catégorie.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_3.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_3.jpg[/img][/align]
 
 [list]
 	[*][b]Nom de la catégorie[/b] : donc ce sera le nom de votre catégorie
@@ -82,7 +78,7 @@ Nous voici maintenant dans le panneau de création d'une catégorie.
 
 Chaque catégorie peut disposer de permissions spécifiques. Nous allons voir ça ensemble. Pour faire apparaître les permissions, cochez la petite case juste à côté.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_4.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_4.jpg[/img][/align]
 
 [list]
 	[*][b]Permission de lecture :[/b] Cela vous permettra de définir qui peut voir la catégorie.
@@ -95,12 +91,16 @@ Chaque catégorie peut disposer de permissions spécifiques. Nous allons voir ça e
 
 Cliquez sur Configuration des articles pour avoir accès à la configuration. Elle se compose en deux parties. En premier, la configuration des articles :
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_5.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_5.jpg[/img][/align]
 
 Ici, vous avez toutes les options concernant les articles. 
 
 La deuxième partie concerne les permissions globales du module.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_6.jpg[/img][/align]</wiki_content>
+[align=center][img]images/utilisation/modules/articles/article_6.jpg[/img][/align]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.211.123</wiki_user_ip>
+    <wiki_timestamp>1358179293</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

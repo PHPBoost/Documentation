@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>245</wiki_id>
     <wiki_id_contents>1245</wiki_id_contents>
@@ -17,13 +17,9 @@
     <wiki_con_id_contents>1245</wiki_con_id_contents>
     <wiki_con_id_article>245</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_ponderation-des-resultats">Pondération des résultats</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1404999270</wiki_timestamp>
     <wiki_content>-- Configuration --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/config.png[/img][/align]
+[align=center][img]images/utilisation/modules/search/config.png[/img][/align]
 [b]Paramètres :[/b]
 [list]
 [*][b]Nombre de résultats à afficher par page[/b] : nombre maximum de résultats de recherche affichés par page.
@@ -33,12 +29,16 @@
 [/list]
 Il est possible de définir l'autorisation d'affichage du module recherche et du mini menu..
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/clean_cache.png[/img][/align]
+[align=center][img]images/utilisation/modules/search/clean_cache.png[/img][/align]
 Il est possible de vider le cache des résultats manuellement avec ce lien.
 
 -- Pondération des résultats --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/search/weighting.png[/img][/align]
+[align=center][img]images/utilisation/modules/search/weighting.png[/img][/align]
 Vous pouvez choisir de donner plus d'importance à certains modules qu'à d'autres en changeant le poids de chacun sur cette page.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1404999270</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

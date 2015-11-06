@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_cat>
+<wiki_cat_infos>
   <wiki_articles_fields>
     <wiki_id>1</wiki_id>
     <wiki_id_contents>1380</wiki_id_contents>
@@ -22,10 +22,6 @@
     <wiki_con_id_contents>1380</wiki_con_id_contents>
     <wiki_con_id_article>1</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_presentation-generale">Présentation générale</a></li><li><a href="#paragraph_historique">Historique</a></li><li><a href="#paragraph_organisation-de-la-communaute-francaise">Organisation de la communauté française</a></li><li><a href="#paragraph_ressources-utilisees">Ressources utilisées</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1875</wiki_user_id>
-    <wiki_user_ip>92.138.136.62</wiki_user_ip>
-    <wiki_timestamp>1417554641</wiki_timestamp>
     <wiki_content>-- Présentation générale --
 
 [align=left][img]http://resources.phpboost.com/phpboost/logo.png[/img][/align] PHPBoost est un CMS ([i]Content Managing System[/i] ou [i]système de gestion de contenu[/i]) [b]français[/b]. C'est un [wikipedia]logiciel libre[/wikipedia] distribué sous la licence [wikipedia]GNU/GPL[/wikipedia]. Il permet à n'importe qui de créer son site de façon très simple, tout est assisté. Conçu pour satisfaire les débutants, il devrait également ravir les utilisateurs expérimentés qui souhaiteraient pousser son fonctionnement ou encore développer leurs propres modules.
@@ -211,5 +207,9 @@ script.aculo.us est une bibliothèque (ou Framework) JavaScript et AJAX offrant d
 [title=4][url=http://www.xm1math.net/phpmathpublisher/index_fr.html]PHPMathPublisher [/url][/title]
 
 PHPMathPublisher est un ensemble de fonctions permettant de mettre en forme des formules mathématiques à partir d'une syntaxe proche de celle du [url=http://fr.wikipedia.org/wiki/LaTeX]LaTeX[/url].</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1875</wiki_user_id>
+    <wiki_user_ip>92.138.136.62</wiki_user_ip>
+    <wiki_timestamp>1417554641</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_cat>

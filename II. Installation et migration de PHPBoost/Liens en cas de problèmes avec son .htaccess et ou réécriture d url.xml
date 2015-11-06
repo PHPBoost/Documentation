@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>308</wiki_id>
     <wiki_id_contents>1422</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1422</wiki_con_id_contents>
     <wiki_con_id_article>308</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_liens">Liens</a><ol class="wiki_list_2"><li><a href="#paragraph_administration">Administration</a></li><li><a href="#paragraph_utilisateur">Utilisateur</a></li></ol></li><li><a href="#paragraph_remarques">Remarques</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>440</wiki_user_id>
-    <wiki_user_ip>92.138.198.63</wiki_user_ip>
-    <wiki_timestamp>1430410280</wiki_timestamp>
     <wiki_content>Voici les liens les plus importants pour accéder à son site en V4.1 après avoir supprimé ou modifié son .htaccess alors que l'on avait la réécriture d'url activé.
 
 
@@ -44,5 +40,9 @@ Le lien de connexion sert si on a pas le cookie d'autoconnexion d'activé pour ac
 Les liens de Configuration avancée et cache peuvent permettre la remise en place du .htaccess
 
 Ne pas oublier de remplacer [url=http://www.example.org]http://www.example.org[/url] par votre NDD (Nom De Domaine)</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>440</wiki_user_id>
+    <wiki_user_ip>92.138.198.63</wiki_user_ip>
+    <wiki_timestamp>1430410280</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

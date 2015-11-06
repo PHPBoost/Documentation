@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>76</wiki_id>
     <wiki_id_contents>1393</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1393</wiki_con_id_contents>
     <wiki_con_id_article>76</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_windows">Windows</a><ol class="wiki_list_2"><li><a href="#paragraph_installer-les-modules-compl-mentaires">Installer les modules complémentaires</a></li><li><a href="#paragraph_identifiant-et-mot-de-passe">Identifiant et mot de passe</a></li><li><a href="#paragraph_emplacement-des-fichiers">Emplacement des fichiers</a></li><li><a href="#paragraph_cr-er-une-base-de-donn-es">Créer une base de données</a></li></ol></li><li><a href="#paragraph_mac">Mac</a></li><li><a href="#paragraph_linux">Linux</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5083</wiki_user_id>
-    <wiki_user_ip>90.16.36.10</wiki_user_ip>
-    <wiki_timestamp>1423576654</wiki_timestamp>
     <wiki_content>Dans cet article, nous nous intéresseront donc à l'installation d'un serveur local sur votre ordinateur sous différents système d'exploitation, à savoir Windows, Mac et Linux.
 
 Si vous choisissez d'installer votre site sur un serveur local, c'est que vous voulez travailler tranquillement sur celui-ci qui ne sera accessible qu'à vous et donc qui ne le sera pas sur Internet. Ceci étant conseillé pour préparer votre site pour qu'il soit prêt et opérationnel pour ensuite le transférer sur un serveur en ligne et ainsi le rendre accessible à tout le monde.
@@ -59,7 +55,7 @@ Pour accéder au site par votre navigateur, cliquez sur l'icône WAMP dans la barr
 PHPBoost utilise une base de données pour sauvegarder le contenu de votre site. Cette base de données est accessible via [i]PhpMyAdmin[/i], qui a été installé lorsque vous avez installé WAMPServer.
 Ouvrez [i]PHPMyAdmin[/i] en cliquant sur l'icône WAMP, dans la barre des taches, puis sur [i]PHPMyAdmin[/i].
 
-[img]http://resources.phpboost.com/documentation/installation/local_server/phpmyadmin.png[/img]
+[img]images/installation/local_server/phpmyadmin.png[/img]
 
 Pour créer une base de données, ils vous suffit de cliquer sur [i]Bases de données[/i] en haut. Entrez le nom de votre base de données et cliquez sur [i]Créer[/i]. Voilà, votre base de données est créée et prête à être utilisée !
 
@@ -78,5 +74,9 @@ Pour ceux ne souhaitant pas faire cela, vous pouvez vous diriger vers [url=http:
 Pour Linux, il existe le package XAMPP (le même que pour Mac). Vous pouvez le télécharger à [url=http://www.apachefriends.org/fr/xampp-linux.html] cette adresse[/url]. L'installation est très simple, et se fait en seulement 4 étapes. L'ensemble de la documentation et de l'utilisation de XAMPP est accessible à la même adresse (en français).
 
 Vous avez également une autre solution, télécharger tous les packages nécessaires via votre distribution, mais ici la démarche se complique. Selon votre distribution, selon les packages sélectionnés, à l'installation, Apache et MySQL seront ou non installés. Pour en savoir plus, merci de vous reporter à la documentation de votre distribution afin de savoir si le serveur est installé, lancé et si ce n'est pas le cas, pour savoir comment l'installer.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>90.16.36.10</wiki_user_ip>
+    <wiki_timestamp>1423576654</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

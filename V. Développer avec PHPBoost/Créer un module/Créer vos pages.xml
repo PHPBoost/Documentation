@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>128</wiki_id>
     <wiki_id_contents>1016</wiki_id_contents>
     <wiki_title>Créer vos pages</wiki_title>
     <wiki_encoded_title>creer-vos-pages</wiki_encoded_title>
-    <wiki_hits>2088</wiki_hits>
+    <wiki_hits>2089</wiki_hits>
     <wiki_id_cat>7</wiki_id_cat>
     <wiki_is_cat>0</wiki_is_cat>
     <wiki_defined_status>0</wiki_defined_status>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1016</wiki_con_id_contents>
     <wiki_con_id_article>128</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-index-php">Le fichier index.php</a></li><li><a href="#paragraph_les-controleurs">Les Contrôleurs</a><ol class="wiki_list_2"><li><a href="#paragraph_cas-particulier-jsonresponse">Cas particulier : JSONResponse</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>193.164.156.11</wiki_user_ip>
-    <wiki_timestamp>1397128871</wiki_timestamp>
     <wiki_content>Si vous êtes familier avec la [wikipedia]Programmation orientée objet[/wikipedia] et le modèle [wikipedia]MVC[/wikipedia] vous ne devriez pas avoir beaucoup de problèmes pour créer vos pages.
 
 -- Le fichier index.php --
@@ -232,5 +228,9 @@ class MyModuleJSONController extends ModuleController
 	}
 }
 ?&gt;[/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>193.164.156.11</wiki_user_ip>
+    <wiki_timestamp>1397128871</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

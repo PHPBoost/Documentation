@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_cat>
+<wiki_cat_infos>
   <wiki_articles_fields>
     <wiki_id>57</wiki_id>
     <wiki_id_contents>869</wiki_id_contents>
@@ -22,10 +22,6 @@
     <wiki_con_id_contents>869</wiki_con_id_contents>
     <wiki_con_id_article>57</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>86.204.86.165</wiki_user_ip>
-    <wiki_timestamp>1358792476</wiki_timestamp>
     <wiki_content>[table style="float:right;"]
    [row]
       [head colspan="2"]Multimédia[/head]
@@ -54,7 +50,7 @@
 
 [align=center]
    [size=20][b]Module Multimédia[/b][/size]
-   [img]http://resources.phpboost.com/documentation/utilisation/modules/media/logo.png[/img]
+   [img]images/utilisation/modules/media/logo.png[/img]
 [/align]
 
 
@@ -63,5 +59,9 @@
 
 
 [b]Description :[/b] Ce module vous permettra d'afficher des vidéos et de la musique sur votre site PHPboost !</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.86.165</wiki_user_ip>
+    <wiki_timestamp>1358792476</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_cat>

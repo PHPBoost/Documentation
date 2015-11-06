@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>82</wiki_id>
     <wiki_id_contents>114</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>114</wiki_con_id_contents>
     <wiki_con_id_article>82</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_syntaxe">Syntaxe</a></li><li><a href="#paragraph_exemples">Exemples</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>81.51.228.217</wiki_user_ip>
-    <wiki_timestamp>1345885285</wiki_timestamp>
     <wiki_content>-- Introduction --
 
 Bien qu'elle permette une mise en forme assez poussée, l'utilisation du BBCode atteint ses limites, notamment en ce qui concerne l'affichage de formules mathématiques. Pour cela, il existe sur PHPBoost un interpréteur de langage mathématique. Il utilise [url=http://www.xm1math.net/phpmathpublisher/index_fr.html]PHPMathPublisher[/url], un logiciel libre qui permet de transformer le langage en images, ce qui est compatible avec tous les navigateurs. Il a été légèrement modifié afin de gérer la mise en cache des images, leur génération étant une opération gourmande en ressources. Les images sont ainsi conservées pendant 1 semaine, puis elles sont supprimées. Si elles sont à nouveau demandées, alors elles sont régénérées immédiatement.
@@ -49,5 +45,9 @@ C'est assez simple, pour cela rien ne vaut [url=http://www.xm1math.net/phpmathpu
 [u]Moment cinétique du solide écrit en O:[/u]
 [code]vec{sigma_O}=tripleint{v}{}{vec{OA}wedge{vec{v(P)}.dm(P)}}[/code]
 [math]vec{sigma_O}=tripleint{v}{}{vec{OA}wedge{vec{v(P)}.dm(P)}}[/math]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>81.51.228.217</wiki_user_ip>
+    <wiki_timestamp>1345885285</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

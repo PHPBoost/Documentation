@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>258</wiki_id>
     <wiki_id_contents>836</wiki_id_contents>
@@ -17,15 +17,11 @@
     <wiki_con_id_contents>836</wiki_con_id_contents>
     <wiki_con_id_article>258</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-gestion-des-news">La gestion des news</a></li><li><a href="#paragraph_administrer-les-categories">Administrer les catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_la-creation-d-une-categorie">La création d'une catégorie</a><ol class="wiki_list_3"><li><a href="#paragraph_permissions">Permissions</a></li></ol></li></ol></li><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_le-message-en-page-d-accueil">Le message en page d'accueil</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1837</wiki_user_id>
-    <wiki_user_ip>24.201.132.222</wiki_user_ip>
-    <wiki_timestamp>1358733406</wiki_timestamp>
     <wiki_content>Ce document vous expliquera comment configurer le module News.
 
 -- La gestion des news --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_1.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/news/news_1.jpg[/img][/align]
 
 Tout d'abord, vous avez un tableau dans la partie "Gestion des news" qui liste les news existantes, en fournissant plusieurs informations :
 
@@ -43,7 +39,7 @@ Tout d'abord, vous avez un tableau dans la partie "Gestion des news" qui liste l
 
 De la même manière que pour les articles, vous pouvez gérer les catégories. Lorsque vous vous rendez dans cette section, vous vous trouvez nez-à-nez avec une liste un peu particulière des catégories. Cette liste se présente sous forme  d'arborescence détaillant quelle catégorie appartient à quelle catégorie.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/articles/article_2.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/articles/article_2.jpg[/img][/align]
 
 Dans chaque rectangle correspondant à une catégorie sont indiqués :
 
@@ -59,7 +55,7 @@ Dans chaque rectangle correspondant à une catégorie sont indiqués :
 
 Nous voici maintenant dans le panneau de création d'une catégorie.
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_5.jpg[/img][/align]
+[img]images/utilisation/modules/news/news_5.jpg[/img][/align]
 
 [list]
 	[*][b]Nom de la catégorie[/b] : le nom qu'aura votre catégorie
@@ -74,7 +70,7 @@ Nous voici maintenant dans le panneau de création d'une catégorie.
 
 Chaque catégorie peut disposer de permissions spécifiques. Nous allons voir ça ensemble. Pour faire apparaitre les permissions, cochez la petite case juste à côté.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_6.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/news/news_6.jpg[/img][/align]
 
 [list]
 	[*][b]Permission de lecture :[/b] Cela vous permettra de définir qui peut voir la catégorie.
@@ -86,7 +82,7 @@ Chaque catégorie peut disposer de permissions spécifiques. Nous allons voir ça e
 
 Nous allons voir cela en deux étapes : la configuration générale et les permissions globales.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_2.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/news/news_2.jpg[/img][/align]
 
 [list]
 	[*]Le [b]nombre de news par page :[/b] Ce nombre, par défaut à 5, permet d'alléger ou d'allonger la page des news. Tout dépend bien sûr de la longueur moyenne des news rédigées.
@@ -103,13 +99,17 @@ Pour les permissions globales, ce sont les mêmes que pour les permissions spécif
 
 --- Le message en page d'accueil ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_3.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/news/news_3.jpg[/img][/align]
 
 Activer ce message va rajouter un bloc en haut de la page des news (un édito), qui aura pour titre celui que vous lui donnerez et qui contiendra le message entré dans la zone de texte.
 Vous pouvez ainsi rédiger un message d'accueil. Attention, ce message disparaitra de votre page d'accueil si vous choisissez de mettre un autre module que celui-ci en page d'accueil (il n'est présent qu'avec le module news d'affiché).
 
 Un exemple avec l'édito activé : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_4.jpg[/img][/align]</wiki_content>
+[align=center][img]images/utilisation/modules/news/news_4.jpg[/img][/align]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1837</wiki_user_id>
+    <wiki_user_ip>24.201.132.222</wiki_user_ip>
+    <wiki_timestamp>1358733406</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

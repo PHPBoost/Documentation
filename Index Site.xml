@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>312</wiki_id>
     <wiki_id_contents>1436</wiki_id_contents>
@@ -17,10 +17,10 @@
     <wiki_con_id_contents>1436</wiki_con_id_contents>
     <wiki_con_id_article>312</wiki_con_id_article>
     <wiki_menu></wiki_menu>
+    <wiki_content>Lien permettant de retourner à l'Index de votre Site, c'est à dire à la page d'Accueil.</wiki_content>
     <wiki_activ>1</wiki_activ>
     <wiki_user_id>787</wiki_user_id>
     <wiki_user_ip>171.16.210.9</wiki_user_ip>
     <wiki_timestamp>1439299281</wiki_timestamp>
-    <wiki_content>Lien permettant de retourner à l'Index de votre Site, c'est à dire à la page d'Accueil.</wiki_content>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>89</wiki_id>
     <wiki_id_contents>494</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>494</wiki_con_id_contents>
     <wiki_con_id_article>89</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_preparatifs">Préparatifs</a></li><li><a href="#paragraph_enregistrer-les-parametres-de-son-site">Enregistrer les paramètres de son site</a></li><li><a href="#paragraph_transferer-les-fichiers">Transférer les fichiers</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>81.51.251.247</wiki_user_ip>
-    <wiki_timestamp>1353921725</wiki_timestamp>
     <wiki_content>-- Préparatifs --
 
 Après avoir téléchargé les fichiers de PHPBoost à cette [url=/download/] [i][u]adresse[/u][/i][/url], vient la phase de les transférer sur le serveur de votre hébergement Web.
@@ -31,7 +27,7 @@ Installez le sur votre ordinateur, puis démarrez le.
 
 Voici l'affichage que vous obtenez : 
 
-[align=center][img]http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_1.png[/img][/align]
+[align=center][img]images/installation/ftp_transfert/ftp_1.png[/img][/align]
 
 -- Enregistrer les paramètres de son site --
 
@@ -41,7 +37,7 @@ Afin d'éviter de devoir retaper systématiquement les identifiants de connexion, 
 	[*]Cliquez sur [i]Fichiers[/i] puis [i]Gestionnaire de sites[/i]
 [/list]
 
-[align=center][img]http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_2.png[/img][/align]
+[align=center][img]images/installation/ftp_transfert/ftp_2.png[/img][/align]
 
 [list]
 	[*]Cliquez sur [i]Nouveau site[/i]
@@ -60,11 +56,11 @@ Cliquez ensuite sur [i]Connexion[/i].
 
 Par la suite pour vous connecter à votre site, il suffira de cliquer sur l'icône ordinateur et cliquer sur le nom que vous avez donné à votre site, comme ceci :
 
-[align=center][img]http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_3.png[/img][/align]
+[align=center][img]images/installation/ftp_transfert/ftp_3.png[/img][/align]
 
 -- Transférer les fichiers --
 
-[align=center][img]http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_4.png[/img][/align]
+[align=center][img]images/installation/ftp_transfert/ftp_4.png[/img][/align]
 
 La partie gauche correspond aux fichiers contenus dans le dossier que vous avez choisi d'afficher.
 La partie droite correspond aux fichiers de votre hébergement. 
@@ -80,8 +76,12 @@ Après avoir choisi une des deux solutions, sélectionnez tous les fichiers et rép
 
 Le transfert se réalise : 
 
-[align=center][img]http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_5.png[/img][/align]
+[align=center][img]images/installation/ftp_transfert/ftp_5.png[/img][/align]
 
 Une fois que tous les fichiers sont transférés, passez à l'installation de PHPBoost.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>81.51.251.247</wiki_user_ip>
+    <wiki_timestamp>1353921725</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

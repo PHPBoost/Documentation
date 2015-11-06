@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>74</wiki_id>
     <wiki_id_contents>1315</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1315</wiki_con_id_contents>
     <wiki_con_id_article>74</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-fichiers">Configuration des fichiers</a></li><li><a href="#paragraph_gestion-des-fichiers">Gestion des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_fonctions-disponibles">Fonctions disponibles</a><ol class="wiki_list_3"><li><a href="#paragraph_supprimer-tout-le-contenu-du-dossier-d-un-membre">Supprimer tout le contenu du dossier d'un membre</a></li><li><a href="#paragraph_ajout-de-repertoires">Ajout de répertoires</a></li><li><a href="#paragraph_ajout-de-fichiers">Ajout de fichiers</a></li><li><a href="#paragraph_suppression-de-fichiers-ou-de-repertoires">Suppression de fichiers ou de répertoires</a></li><li><a href="#paragraph_dition-de-repertoire-ou-de-fichiers">Édition de répertoire ou de fichiers</a></li></ol></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>982</wiki_user_id>
-    <wiki_user_ip>83.204.255.203</wiki_user_ip>
-    <wiki_timestamp>1405484611</wiki_timestamp>
     <wiki_content>Au niveau de l'administration, vous allez avoir accès à tous les fichiers que les utilisateurs ont déposé dans leur zone, mais également créer d'autres répertoires pour gérer vos propres fichiers, afin d'éviter de passer par le transfert de fichier FTP.
 
 [style=notice]Tous les fichiers déposés par les membres, ou bien au niveau de cette zone d'upload par vous même, se trouvent sur votre serveur dans le répertoire ../upload [/style]
@@ -29,7 +25,7 @@
 
 -- Configuration des fichiers --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/files/config.png[/img][/align]
+[align=center][img]images/utilisation/administration/content/files/config.png[/img][/align]
 
 [b][u]Autorisation requise pour l'activation de l'interface de fichiers[/u][/b] : définissez ici quel type de membre peut accéder à son gestionnaire de fichier.
 
@@ -43,11 +39,11 @@
 
 -- Gestion des fichiers --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/files/manage_root.png[/img][/align]
+[align=center][img]images/utilisation/administration/content/files/manage_root.png[/img][/align]
 
 Vous avez accès à tous les répertoires des membres dans le répertoire 'membres', mais vous pouvez créer d'autres répertoires pour stocker vos données sans passer par le FTP.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/content/files/manage_folders.png[/img][/align]
+[align=center][img]images/utilisation/administration/content/files/manage_folders.png[/img][/align]
 
 Vous avez accès à tous les répertoires des membres comme vous le montre la photo ci dessus.
 
@@ -82,5 +78,9 @@ Il suffit de cliquer sur [html]&lt;i class="fa fa-delete"&gt;&lt;/i&gt;[/html] a
 ---- Édition de répertoire ou de fichiers ----
 
 Il suffit de cliquer sur [html]&lt;i class="fa fa-edit"&gt;&lt;/i&gt;[/html] au niveau de votre fichier ou de votre répertoire et de le renommer comme vous le souhaitez.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>982</wiki_user_id>
+    <wiki_user_ip>83.204.255.203</wiki_user_ip>
+    <wiki_timestamp>1405484611</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

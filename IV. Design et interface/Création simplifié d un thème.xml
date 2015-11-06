@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>309</wiki_id>
     <wiki_id_contents>1432</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1432</wiki_con_id_contents>
     <wiki_con_id_article>309</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_pr-paration-des-fichiers-du-futur-th-me">Préparation des fichiers du futur thème</a></li><li><a href="#paragraph_configuration-du-th-me">Configuration du thème</a></li><li><a href="#paragraph_transformation-du-th-me-base-en-mon-theme">Transformation du thème base en mon_theme</a><ol class="wiki_list_2"><li><a href="#paragraph_images">images</a></li><li><a href="#paragraph_lang">lang</a></li><li><a href="#paragraph_theme">theme</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>787</wiki_user_id>
-    <wiki_user_ip>78.225.116.39</wiki_user_ip>
-    <wiki_timestamp>1439164644</wiki_timestamp>
     <wiki_content>-- Introduction --
 
 Dans cette partie de la documentation, vous allez apprendre comment créer un thème étape par étape à partir du thème de base.
@@ -100,5 +96,9 @@ Ce dossier contient des fichiers [b]CSS[/b], ils sont à modifier pour modifier u
 Quand au dossier [b]images[/b], il contient des images d'aperçus du thème ainsi que le Logo de celui-ci ainsi que l'image d'arrière plan, répétée ou non selon sa définition dans les fichiers CSS
 
 Une fois vos modifications effectuées, pensez à installer votre thème via le panneau d'administration.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>787</wiki_user_id>
+    <wiki_user_ip>78.225.116.39</wiki_user_ip>
+    <wiki_timestamp>1439164644</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

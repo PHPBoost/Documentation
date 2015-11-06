@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>142</wiki_id>
     <wiki_id_contents>1251</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1251</wiki_con_id_contents>
     <wiki_con_id_article>142</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_utilisation-de-la-classe-modulepagination">Utilisation de la classe ModulePagination</a></li><li><a href="#paragraph_liste-des-fonctions-disponible">Liste des fonctions disponible</a><ol class="wiki_list_2"><li><a href="#paragraph_definir-l-url-de-la-pagination">Définir l'url de la pagination</a></li><li><a href="#paragraph_afficher-la-pagination">Afficher la pagination</a></li><li><a href="#paragraph_recuperer-le-nombre-d-elements-par-page">Récupérer le nombre d'éléments par page</a></li><li><a href="#paragraph_savoir-si-la-page-actuelle-possede-des-elements-ou-non">Savoir si la page actuelle possède des éléments ou non</a></li><li><a href="#paragraph_savoir-s-il-y-a-besoin-de-la-pagination-ou-non">Savoir s'il y a besoin de la pagination ou non</a></li><li><a href="#paragraph_recuperer-le-nombre-de-pages">Récupérer le nombre de pages</a></li><li><a href="#paragraph_recuperer-le-nombre-a-partir-duquel-vous-devez-recuperer-les-elements-en-base-de-donnees">Récupérer le nombre à partir duquel vous devez récupérer les éléments en base de données</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5193</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1404999981</wiki_timestamp>
     <wiki_content>Le framework de PHPBoost intègre une classe vous permettant de générer très facilement une pagination complète.
 
 Nous allons voir comment l'utiliser.
@@ -94,5 +90,9 @@ Pour le récupérer : [code=php]$pagination-&gt;get_number_pages();[/code]
 Selon la page demandée, vous n'allez pas afficher les mêmes éléments. Pour connaitre à partir de quel élément vous devez récupérer vos articles par exemple, il faut s'aider de cette fonction :
 
 [code=php]$pagination-&gt;get_display_from();[/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1404999981</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

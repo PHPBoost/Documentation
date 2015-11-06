@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>143</wiki_id>
     <wiki_id_contents>1388</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1388</wiki_con_id_contents>
     <wiki_con_id_article>143</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_quel-format-choisir">Quel format choisir ?</a></li><li><a href="#paragraph_premi-re-tape-h-berger-la-vid-o">Première étape : héberger la vidéo</a><ol class="wiki_list_2"><li><a href="#paragraph_dailymotion">Dailymotion</a></li><li><a href="#paragraph_youtube">Youtube</a></li><li><a href="#paragraph_autres-h-bergeurs-vid-os">Autres hébergeurs vidéos</a></li></ol></li><li><a href="#paragraph_j-ai-mon-lecteur-flash">J'ai mon lecteur flash</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5083</wiki_user_id>
-    <wiki_user_ip>93.5.71.211</wiki_user_ip>
-    <wiki_timestamp>1423341322</wiki_timestamp>
     <wiki_content>Comment insérer une vidéo dans PHPBoost grâce au BBCode ?
 La question a été posée à  plusieurs reprises sur le forum, nous allons ici y répondre en traitant plusieurs cas.
 
@@ -80,5 +76,9 @@ Pour l'insérer dans PHPBoost il vous suffit simplement de repérer la hauteur, la
 [code=bbcode][swf=largeur,hauteur]adresse[/swf][/code]
 
 N'hésitez pas à poser des questions sur le forum pour avoir des éclaircissements ou des précisions.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>93.5.71.211</wiki_user_ip>
+    <wiki_timestamp>1423341322</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

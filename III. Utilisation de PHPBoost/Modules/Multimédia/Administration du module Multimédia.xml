@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>58</wiki_id>
     <wiki_id_contents>870</wiki_id_contents>
@@ -17,24 +17,20 @@
     <wiki_con_id_contents>870</wiki_con_id_contents>
     <wiki_con_id_article>58</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_configuration-du-module-multimedia">Configuration du module multimédia</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_configuration-de-l-affichage">Configuration de l'affichage</a></li><li><a href="#paragraph_autorisations-generales">Autorisations générales</a></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_affichage">Affichage</a></li><li><a href="#paragraph_autorisations-speciales">Autorisations spéciales</a></li></ol></li><li><a href="#paragraph_liste-des-fichiers-multimedias-panneau-de-moderation">Liste des fichiers multimédias : panneau de modération</a></li><li><a href="#paragraph_ajouter-un-fichier-multimedia">Ajouter un fichier multimédia</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>86.204.86.165</wiki_user_ip>
-    <wiki_timestamp>1358792508</wiki_timestamp>
     <wiki_content>-- Configuration du module multimédia --
 
 --- Configuration générale ---
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/multimedia/media.jpg[/img][/align]
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_2.jpg[/img][/align]
+[img]images/utilisation/modules/multimedia/media.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/media/multimedia_2.jpg[/img][/align]
 
 [b][u]Nom du module[/u][/b] : donnez un titre au module (multimedia par défaut), ilsera affiché dans l'arborescence du module : 
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_4.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/media/multimedia_4.jpg[/img][/align]
 
 [b][u]Description du module[/u][/b] : C'est le message qui s'affichera à la page d'accueil du module. Vous pouvez le personnalisez à votre guise.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_3.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/media/multimedia_3.jpg[/img][/align]
 
 [b][u]Types de fichiers autorisés[/u][/b] : choisissez ici si votre module doit contenir :
 [list]
@@ -45,7 +41,7 @@
 
 --- Configuration de l'affichage ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_5.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/media/multimedia_5.jpg[/img][/align]
 
 [b][u]Nombre de catégories par colonne[/u][/b] : définissez ici le nombre de catégories que vous souhaitez voir figuré dans le module. L'affichage se fait sur 2 colonnes.
 
@@ -82,21 +78,21 @@ Configurez ici quel type de membre aura les
 
 --- Gestion des catégories ---
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_6.jpg[/img][/align]
+[img]images/utilisation/modules/media/multimedia_6.jpg[/img][/align]
 
 Vous allez ici pouvoir gérer vos catégorie en
 
 [list]
-	[*]les déplaçant les unes par rapport aux autres via les icônes [img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_7.png[/img] et [img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_8.png[/img]
-	[*]les rendant visibles ou non ([img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_9.png[/img] et [img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_10.png[/img])
-	[*]les éditant ([img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_11.png[/img])
-	[*]les supprimant ([img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_12.png[/img]) : si une catégorie contient des fichiers, un message vous demandera si vous souhaitez déplacer le contenu du répertoire dans un autre
+	[*]les déplaçant les unes par rapport aux autres via les icônes [img]images/utilisation/modules/media/multimedia_7.png[/img] et [img]images/utilisation/modules/media/multimedia_8.png[/img]
+	[*]les rendant visibles ou non ([img]images/utilisation/modules/media/multimedia_9.png[/img] et [img]images/utilisation/modules/media/multimedia_10.png[/img])
+	[*]les éditant ([img]images/utilisation/modules/media/multimedia_11.png[/img])
+	[*]les supprimant ([img]images/utilisation/modules/media/multimedia_12.png[/img]) : si une catégorie contient des fichiers, un message vous demandera si vous souhaitez déplacer le contenu du répertoire dans un autre
 [/list]
 
 --- Ajouter une catégorie ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_13.jpg[/img][/align]
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_14.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/media/multimedia_13.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/media/multimedia_14.jpg[/img][/align]
 
 [b][u]Nom de la catégorie[/u][/b] : donnez un nom à votre nouvelle catégorie
 
@@ -144,7 +140,7 @@ Configurez ici quel type de membre aura les
 
 -- Liste des fichiers multimédias : panneau de modération --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_15.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/media/multimedia_15.jpg[/img][/align]
 
 Vous voyez ici tous les fichiers contenus dans votre module. Des codes couleurs existent pour classer les fichiers : 
 [list]
@@ -164,7 +160,7 @@ Enfin vous avez dessous un lien pour recompter le nombre de fichiers par catégor
  
 -- Ajouter un fichier multimédia --
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/media/multimedia_16.jpg[/img][/align]
+[align=center][img]images/utilisation/modules/media/multimedia_16.jpg[/img][/align]
 
 [b][u]Titre du fichier multimédia[/u][/b] : donnez un titre à votre fichier
 
@@ -177,5 +173,9 @@ Enfin vous avez dessous un lien pour recompter le nombre de fichiers par catégor
  [b][u] Lien du fichier multimédia[/u][/b] : mettez ici le lien de votre fichier
 
  [b][u]Description du fichier multimédia[/u][/b]: décrivez ici votre fichier, vous pouyvez personnaliser le descriptif à votre guise.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>86.204.86.165</wiki_user_ip>
+    <wiki_timestamp>1358792508</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

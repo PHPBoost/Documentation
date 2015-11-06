@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>96</wiki_id>
     <wiki_id_contents>140</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>140</wiki_con_id_contents>
     <wiki_con_id_article>96</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1393</wiki_user_id>
-    <wiki_user_ip>82.124.181.87</wiki_user_ip>
-    <wiki_timestamp>1346007593</wiki_timestamp>
     <wiki_content>A l'origine, lorsque le développement a commencé il s'agissait simplement d'une évolution, celle-ci visait à améliorer des fonctionnalités et en ajouter de nouvelles. Cependant notre vision de la programmation sur le web, et en général, évoluant de pair avec PHPBoost, nous avons voulu moderniser notre code en profondeur. En effet l'architecture interne ne nous convenait plus, et était devenue limitée.
 
 Le temps de développement conséquent est le fait de notre décision de repartir sur une base saine. Le framework PHPBoost 3.0 est le fruit de ce travail en interne. Il n'apporte pas de fonction visible car c'est le moteur qui se situe en dessous des modules. Cependant c'est bien à ce nouveau framework que l'on doit les nouvelles fonctions implémentées. Ce nouvel environnement de développement offre aux développeurs du noyau et des modules des outils permettant d'accélérer leur travail.
@@ -388,5 +384,9 @@ Un article plus complet détaille l'ensemble des évolutions majeures apportées pa
 [list]
 [*] [color=red]Nouveauté :[/color] Module Recherche. Possibilité de faire des recherches globales dans les modules (proposant la fonction) et coloration des résultats
 [/list]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1393</wiki_user_id>
+    <wiki_user_ip>82.124.181.87</wiki_user_ip>
+    <wiki_timestamp>1346007593</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

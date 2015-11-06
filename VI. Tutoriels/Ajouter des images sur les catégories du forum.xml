@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>287</wiki_id>
     <wiki_id_contents>1336</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1336</wiki_con_id_contents>
     <wiki_con_id_article>287</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-base-de-donnee">La base de donnée</a></li><li><a href="#paragraph_les-variables-de-langues">Les variables de langues</a></li><li><a href="#paragraph_modification-php">Modification php</a><ol class="wiki_list_2"><li><a href="#paragraph_admin-forum-php">admin_forum.php</a></li><li><a href="#paragraph_admin-forum-add-php">admin_forum_add.php</a></li><li><a href="#paragraph_forumextensionpointprovider-class-php">ForumExtensionPointProvider.class.php</a></li><li><a href="#paragraph_forumhomepageextensionpoint-class-php">ForumHomePageExtensionPoint.class.php</a></li></ol></li><li><a href="#paragraph_fichier-tpl">Fichier TPL</a><ol class="wiki_list_2"><li><a href="#paragraph_l-administration">L'administration</a><ol class="wiki_list_3"><li><a href="#paragraph_admin-forum-add-tpl">admin_forum_add.tpl</a></li><li><a href="#paragraph_admin-forum-cats-edit-tpl">admin_forum_cats_edit.tpl</a></li></ol></li><li><a href="#paragraph_le-forum">Le forum</a><ol class="wiki_list_3"><li><a href="#paragraph_forum-forum-tpl">forum_forum.tpl</a></li><li><a href="#paragraph_forum-index-tpl">forum_index.tpl</a></li></ol></li></ol></li><li><a href="#paragraph_fichier-css">Fichier CSS</a></li><li><a href="#paragraph_fichiers-modifies">Fichiers modifiés</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1760</wiki_user_id>
-    <wiki_user_ip>82.224.142.186</wiki_user_ip>
-    <wiki_timestamp>1406456254</wiki_timestamp>
     <wiki_content>[style=notice]Ce Tutorial est réalisé pour la version V4.1[/style]
 
 Ce Tutorial a pour objectif d'ajouter une icône à chaque catégorie de votre forum.
@@ -286,5 +282,9 @@ Ajouter dans le forum.css après la ligne 80 la classe suivante :
 
 Pour ceux qui le souhaite, voici les fichiers modifiés à mettre dans les bons répertoire : [url=/upload/icones_forum.zip]fichiers[/url]
 [style=warning]Attention car ces fichiers ne prennent pas en compte vos éventuelles modifications. Il ne peuvent être appliqués que sur un site non modifié[/style]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1406456254</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>117</wiki_id>
     <wiki_id_contents>239</wiki_id_contents>
@@ -17,12 +17,12 @@
     <wiki_con_id_contents>239</wiki_con_id_contents>
     <wiki_con_id_article>117</wiki_con_id_article>
     <wiki_menu></wiki_menu>
+    <wiki_content>L'utilisation du module Plan du site se limite à l'affichage de toutes les catégories du site. Modules, gestion des membres, accueil ...
+
+[align=center][img]images/utilisation/modules/sitemap/home.png[/img][/align]</wiki_content>
     <wiki_activ>1</wiki_activ>
     <wiki_user_id>1393</wiki_user_id>
     <wiki_user_ip>81.51.228.217</wiki_user_ip>
     <wiki_timestamp>1346253885</wiki_timestamp>
-    <wiki_content>L'utilisation du module Plan du site se limite à l'affichage de toutes les catégories du site. Modules, gestion des membres, accueil ...
-
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/sitemap/home.png[/img][/align]</wiki_content>
   </wiki_contents_fields>
 </wiki_article>

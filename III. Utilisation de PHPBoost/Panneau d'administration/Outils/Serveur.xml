@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>84</wiki_id>
     <wiki_id_contents>761</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>761</wiki_con_id_contents>
     <wiki_con_id_article>84</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_phpinfo">PHPinfo</a></li><li><a href="#paragraph_rapport-systeme">Rapport système</a><ol class="wiki_list_2"><li><a href="#paragraph_serveur">Serveur</a></li><li><a href="#paragraph_configuration-de-phpboost">Configuration de PHPBoost</a></li><li><a href="#paragraph_autorisation-des-repertoires">Autorisation des répertoires</a></li><li><a href="#paragraph_recapitulatif">Récapitulatif</a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1466</wiki_user_id>
-    <wiki_user_ip>90.55.70.218</wiki_user_ip>
-    <wiki_timestamp>1358181112</wiki_timestamp>
     <wiki_content>Cette partie de l'administration va être intéressante en cas de soucis avec votre site. Elle permettra de donner au support des informations utiles sur la configuration de votre serveur et de votre site, informations qui permettront d'accélérer l'aide.
 
 -- PHPinfo --
@@ -28,7 +24,7 @@
 
 Le PHPinfo est un script qui va donner la configuration complète de votre serveur avec les configurations de PHP, MySQL, Apache. Cela permettra au support de mieux connaître l'environnement de votre hébergement et ainsi de savoir si certaines options sont activées ou non au sein de votre serveur.
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/server/phpinfo.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/server/phpinfo.png[/img][/align]
 
 -- Rapport système --
 
@@ -38,13 +34,13 @@ Le rapport système est un récapitulatif des informations les plus importantes po
 
 --- Serveur ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/server/server.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/server/server.png[/img][/align]
  
 Vous retrouvez ici les informations les plus générales sur la configuration de votre serveur avec la version de PHP, de MySQL, de la présence ou non de la librairie GD2 pour la gestion des images, la réécriture des url, l'activation ou non de l'option register globals.
 
 --- Configuration de PHPBoost ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/server/config.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/server/config.png[/img][/align]
 
 Vous retrouvez ici 
 [list]
@@ -58,14 +54,18 @@ Vous retrouvez ici
 
 --- Autorisation des répertoires ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/server/folder_chmod.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/server/folder_chmod.png[/img][/align]
 
 Ici sont référencés certains répertoires où les droits d'écriture sont très importants. Tous doivent avoir l'icône validée [img]/templates/base/images/success.png[/img]
 
 --- Récapitulatif ---
 
-[align=center][img]http://resources.phpboost.com/documentation/utilisation/administration/tools/server/summary.png[/img][/align]
+[align=center][img]images/utilisation/administration/tools/server/summary.png[/img][/align]
 
 Le récapitulatif est une version facilement copiable qu'il faudra fournir dans le post de demande d'aide au support. Dedans se retrouvent toutes les informations que nous avons vu ci dessus.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1466</wiki_user_id>
+    <wiki_user_ip>90.55.70.218</wiki_user_ip>
+    <wiki_timestamp>1358181112</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

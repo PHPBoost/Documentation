@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>182</wiki_id>
     <wiki_id_contents>945</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>945</wiki_con_id_contents>
     <wiki_con_id_article>182</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1760</wiki_user_id>
-    <wiki_user_ip>82.224.142.186</wiki_user_ip>
-    <wiki_timestamp>1377552470</wiki_timestamp>
     <wiki_content>L&#8217;hébergement d'un site web PHPBoost 4.0 sur free est possible mais cela nécessite une petite manipulation.
 
 La nouvelle version de PHPBoost nécessite [b]PHP 5.1.2[/b] au minimum. 
@@ -65,5 +61,9 @@ Pour cela nous avons tous prévu :
 
 
 [style=warning]Suite à des problèmes Apache chez Free, veuillez désactiver le Cache CSS dans la configuration du cache.[/style]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>82.224.142.186</wiki_user_ip>
+    <wiki_timestamp>1377552470</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

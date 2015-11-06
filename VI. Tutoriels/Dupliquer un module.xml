@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>194</wiki_id>
     <wiki_id_contents>1012</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1012</wiki_con_id_contents>
     <wiki_con_id_article>194</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_la-theorie">La théorie</a></li><li><a href="#paragraph_la-pratique">La pratique</a><ol class="wiki_list_2"><li><a href="#paragraph_remplacer-le-nom-du-module-dans-le-contenu-de-chaque-fichier">Remplacer le nom du module dans le contenu de chaque fichier</a></li><li><a href="#paragraph_remplacer-le-nom-des-fichiers">Remplacer le nom des fichiers</a></li><li><a href="#paragraph_ajustements">Ajustements</a></li><li><a href="#paragraph_installation">Installation</a></li></ol></li><li><a href="#paragraph_les-mises-a-jours">Les mises à jours</a></li><li><a href="#paragraph_bonus">Bonus</a><ol class="wiki_list_2"><li><a href="#paragraph_module-blog">Module blog</a></li><li><a href="#paragraph_appel-des-5-derniers-billets-du-blog-dans-homecustom">Appel des 5 derniers billets du blog dans HomeCustom </a></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>768</wiki_user_id>
-    <wiki_user_ip>78.122.32.202</wiki_user_ip>
-    <wiki_timestamp>1395674240</wiki_timestamp>
     <wiki_content>-- La théorie --
 Il est possible de dupliquer un module, soit pour le renommer à son goût, soit pour utiliser simultanément plusieurs fois le même module dans des situations différentes .
 
@@ -270,5 +266,9 @@ Fichier [i]home.tpl[/i] :
 	&lt;p&gt;{blog.CONTENT}&lt;/p&gt;
 &lt;/div&gt;
 # END blog #[/code]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>768</wiki_user_id>
+    <wiki_user_ip>78.122.32.202</wiki_user_ip>
+    <wiki_timestamp>1395674240</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>80</wiki_id>
     <wiki_id_contents>1386</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1386</wiki_con_id_contents>
     <wiki_con_id_article>80</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_tableau-de-base">Tableau de base</a></li><li><a href="#paragraph_fusion-de-cellules">Fusion de cellules</a><ol class="wiki_list_2"><li><a href="#paragraph_fusion-de-colonnes">Fusion de colonnes</a></li><li><a href="#paragraph_fusion-de-lignes">Fusion de lignes</a></li><li><a href="#paragraph_fusion-horizontale-et-verticale">Fusion horizontale et verticale</a></li></ol></li><li><a href="#paragraph_mise-en-forme-avanc-e">Mise en forme avancée</a><ol class="wiki_list_2"><li><a href="#paragraph_cellules-d-en-t-te">Cellules d'en-tête</a></li><li><a href="#paragraph_personnalisation-du-tableau-gr-ce-au-css">Personnalisation du tableau grâce au CSS</a><ol class="wiki_list_3"><li><a href="#paragraph_personnalisation-du-tableau-en-lui-m-me">Personnalisation du tableau en lui-même</a></li><li><a href="#paragraph_personnalisation-des-cellules">Personnalisation des cellules</a></li></ol></li></ol></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5083</wiki_user_id>
-    <wiki_user_ip>93.5.71.211</wiki_user_ip>
-    <wiki_timestamp>1423340272</wiki_timestamp>
     <wiki_content>Depuis PHPBoost 2.0 il est possible de faire des tableaux en BBCode.
 Cette nouvelle balise supporte les imbrications infinies et elle permet une personnalisation presque totale puisqu'elle permet de définir au tableau des propriétés graphiques en CSS.
 
@@ -492,5 +488,9 @@ Vous allez aussi pouvoir personnaliser vos cellules ([col] et [head]) grâce au c
 		[*]valeur: en pixels (50px par exemple)[/list][/col]
 	[/row]
 [/table]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>93.5.71.211</wiki_user_ip>
+    <wiki_timestamp>1423340272</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

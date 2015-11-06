@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>138</wiki_id>
     <wiki_id_contents>1397</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1397</wiki_con_id_contents>
     <wiki_con_id_article>138</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_mettre-le-site-en-maintenance">Mettre le site en maintenance</a></li><li><a href="#paragraph_configuration-g-n-rale-du-site">Configuration générale du site</a></li><li><a href="#paragraph_comment-les-visiteurs-vont-s-inscrire">Comment les visiteurs vont s'inscrire ?</a></li><li><a href="#paragraph_quels-modules-peuvent-tre-vus-par-quel-type-de-membres">Quels modules peuvent être vus par quel type de membres ?</a></li><li><a href="#paragraph_quel-s-th-me-s-voulez-vous-utiliser">Quel(s) thème(s) voulez vous utiliser ?</a></li><li><a href="#paragraph_configurer-les-modules">Configurer les modules</a></li><li><a href="#paragraph_supprimer-la-maintenance-du-site">Supprimer la maintenance du site</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5083</wiki_user_id>
-    <wiki_user_ip>90.16.36.10</wiki_user_ip>
-    <wiki_timestamp>1423580312</wiki_timestamp>
     <wiki_content>Vous venez d'installer votre site avec PHPBoost ? On ne vous avait pas menti c'était très simple. 
 
 Maintenant il vous reste 2 phases : 
@@ -88,5 +84,9 @@ Il ne vous reste plus qu'à vous mettre au boulot pour le remplir.
 Et n'oubliez pas, pour toute question, consultez la documentation ou demandez sur le forum si vous ne trouvez pas !
 
 [align=center][b]Merci d'utiliser PHPBoost, bon courage et longue vie à votre site ![/b][/align]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5083</wiki_user_id>
+    <wiki_user_ip>90.16.36.10</wiki_user_ip>
+    <wiki_timestamp>1423580312</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

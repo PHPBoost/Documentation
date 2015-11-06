@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>301</wiki_id>
     <wiki_id_contents>1372</wiki_id_contents>
@@ -17,10 +17,6 @@
     <wiki_con_id_contents>1372</wiki_con_id_contents>
     <wiki_con_id_article>301</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_la-fonction-php">La fonction PHP</a><ol class="wiki_list_2"><li><a href="#paragraph_recuperer-les-donnees-de-la-base-de-donnee">Récupérer les données de la base de donnée</a></li><li><a href="#paragraph_le-traitement-des-donnees">Le traitement des données</a></li><li><a href="#paragraph_faire-appel-a-notre-nouvelle-fonction">Faire appel à notre nouvelle fonction</a></li><li><a href="#paragraph_le-code-complet">Le code complet</a></li></ol></li><li><a href="#paragraph_le-code-html">Le code HTML</a></li><li><a href="#paragraph_utilisation-des-flux">Utilisation des flux</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1760</wiki_user_id>
-    <wiki_user_ip>163.116.6.12</wiki_user_ip>
-    <wiki_timestamp>1409052890</wiki_timestamp>
     <wiki_content>-- Introduction --
 
 Ce tutoriel va vous expliquer comment ajouter dans votre page d'accueil des éléments provenant de la base de donnée.
@@ -264,5 +260,9 @@ Pour ce faire, il vous suffit :
 	[*]Faire appel au nouveau tpl dans le [i]home.tpl[/i] :
 [code=tpl]{FEED_NEWS}[/code]
 [/list]</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1760</wiki_user_id>
+    <wiki_user_ip>163.116.6.12</wiki_user_ip>
+    <wiki_timestamp>1409052890</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

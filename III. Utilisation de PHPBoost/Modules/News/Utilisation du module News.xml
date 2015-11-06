@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>259</wiki_id>
     <wiki_id_contents>837</wiki_id_contents>
@@ -17,24 +17,20 @@
     <wiki_con_id_contents>837</wiki_con_id_contents>
     <wiki_con_id_article>259</wiki_con_id_article>
     <wiki_menu><ol class="wiki_list_1"><li><a href="#paragraph_lire-une-news">Lire une news</a><ol class="wiki_list_2"><li><a href="#paragraph_news-normale">News normale</a></li><li><a href="#paragraph_news-etendue">News étendue</a></li></ol></li><li><a href="#paragraph_creer-une-news">Créer une news</a><ol class="wiki_list_2"><li><a href="#paragraph_news-en-attente">News en attente</a></li></ol></li><li><a href="#paragraph_voir-les-news-d-une-categorie">Voir les news d'une catégorie</a></li><li><a href="#paragraph_poster-un-commentaire">Poster un commentaire</a></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li></ol></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>1837</wiki_user_id>
-    <wiki_user_ip>24.201.132.222</wiki_user_ip>
-    <wiki_timestamp>1358733575</wiki_timestamp>
     <wiki_content>L'utilisation de ce module est relativement aisée.
 
 -- Lire une news --
 
 --- News normale ---
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_7.jpg[/img][/align]
+[img]images/utilisation/modules/news/news_7.jpg[/img][/align]
 
 L'ensemble du contenu de la news est présenté directement à l&#8217;utilisateur, contrairement à la news étendue, ou une partie sera masquée.
 
 --- News étendue ---
 
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_8.jpg[/img][/align]
+[img]images/utilisation/modules/news/news_8.jpg[/img][/align]
 
 Tout le contenu n'est pas affiché ici, il faut cliquer sur le petit lien "Lire la suite", situé en bas à gauche pour faire apparaitre la partie cachée.
 
@@ -43,7 +39,7 @@ Tout le contenu n'est pas affiché ici, il faut cliquer sur le petit lien "Lire l
 Nous allons séparer cette étape en deux parties, pour plus de lisibilité.
 
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_9.jpg[/img][/align]
+[img]images/utilisation/modules/news/news_9.jpg[/img][/align]
 
 Donc, tout en haut renseignez le titre de votre news, ainsi que la catégorie dans laquelle elle apparaitra.
 Ensuite renseignez le contenu qu'elle aura. Pour créer une news étendue, il vous suffit de mettre la partie qui sera cachée dans le cadre News étendue.
@@ -52,7 +48,7 @@ La date de parution est intéressante si vous voulez ne publiez votre news que du
 Maintenant la seconde partie :
 
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_10.jpg[/img][/align]
+[img]images/utilisation/modules/news/news_10.jpg[/img][/align]
 
 Dans la partie Interface image, vous pourrez mettre une image, qui sera par défaut à droite. Elle sera accompagnée d'un lien pointant vers la catégorie, où seront affichées les news de la même catégorie que la news sur laquelle vous vous trouvez (utile si vous avez différentes rubriques, et que vous utilisez) un logo pour les actus, un pour les tests, ...).
 Et enfin, vous pouvez ajouter des sources à votre article, si vous l'avez pioché sur le Net par exemple.
@@ -62,12 +58,12 @@ Et enfin, vous pouvez ajouter des sources à votre article, si vous l'avez pioché
 Je vous en ai parlé plus haut, vous pouvez mettre des news en attentes, par exemple si elles sont en cours de rédaction. Pour accéder aux news en attentes, cliquez sur le petit logo formant un journal en haut à droite du module, à côté du bouton ajout.
 
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_11.jpg[/img][/align]
+[img]images/utilisation/modules/news/news_11.jpg[/img][/align]
 
 Apparaitront alors toutes les news en attentes de publication.
 
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_12.jpg[/img][/align]
+[img]images/utilisation/modules/news/news_12.jpg[/img][/align]
 
 -- Voir les news d'une catégorie --
 
@@ -76,7 +72,7 @@ Si l'administrateur a mis une icône pour une catégorie de news, sur la news se t
 Par exemple pour cette news : 
 
 [align=center]
-[img]http://resources.phpboost.com/documentation/utilisation/modules/news/news_13.jpg[/img][/align]
+[img]images/utilisation/modules/news/news_13.jpg[/img][/align]
 
 L'icône de la catégorie est le petit journal, tout à droite. En cliquant dessus, vous accédez à toutes les news de cette catégorie.
 
@@ -88,5 +84,9 @@ Pour ajouter un commentaire ou lire les commentaires d'une news, il suffit de cl
 
 Un système de flux RSS est mis en place sur le module de news pour vous permettre d'être au courant des nouveautés sans vous connecter sur le site.
 Cliquez sur l'icône RSS et votre navigateur vous proposera de vous abonner à ce flux RSS.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>1837</wiki_user_id>
+    <wiki_user_ip>24.201.132.222</wiki_user_ip>
+    <wiki_timestamp>1358733575</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>

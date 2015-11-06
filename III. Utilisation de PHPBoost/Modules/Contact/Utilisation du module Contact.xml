@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_article>
+<wiki_article_infos>
   <wiki_articles_fields>
     <wiki_id>27</wiki_id>
     <wiki_id_contents>1265</wiki_id_contents>
@@ -17,11 +17,7 @@
     <wiki_con_id_contents>1265</wiki_con_id_contents>
     <wiki_con_id_article>27</wiki_con_id_article>
     <wiki_menu></wiki_menu>
-    <wiki_activ>1</wiki_activ>
-    <wiki_user_id>5193</wiki_user_id>
-    <wiki_user_ip>88.125.157.163</wiki_user_ip>
-    <wiki_timestamp>1405001643</wiki_timestamp>
-    <wiki_content>[align=center][img]http://resources.phpboost.com/documentation/utilisation/modules/contact/home.png[/img][/align]
+    <wiki_content>[align=center][img]images/utilisation/modules/contact/home.png[/img][/align]
 Le formulaire de contact est composé de différents champs par défaut. Il est possible d'en ajouter via l'administration du module.
 [list]
 	[*][b]Adresse mail :[/b] Votre adresse mail (valide). Nécessaire si vous souhaitez recevoir une réponse de la part des administrateurs. Le champ est pré-rempli pour les membres avec leur adresse mail présente dans le profil.
@@ -30,5 +26,9 @@ Le formulaire de contact est composé de différents champs par défaut. Il est pos
 [/list]
 Il est possible d'activer le choix du destinataire dans l'administration du module si vous souhaitez donner la possibilité de pouvoir contacter plusieurs personnes distinctes. Il est également possible de prédéfinir une liste d'objets par défaut (et d'associer chaque objet à un destinataire si le champ Destinataire(s) n'est pas affiché).
 Le code de vérification est uniquement affiché pour les visiteurs pour éviter le spam.</wiki_content>
+    <wiki_activ>1</wiki_activ>
+    <wiki_user_id>5193</wiki_user_id>
+    <wiki_user_ip>88.125.157.163</wiki_user_ip>
+    <wiki_timestamp>1405001643</wiki_timestamp>
   </wiki_contents_fields>
 </wiki_article>
