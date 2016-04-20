@@ -1,6 +1,7 @@
 # PHPBoost Documentation 
 
-Ce repo contient la source de la documentation officielle du CMS PHPBoost.
-Destin� � faciliter les modifications et l'historique de la documentation, il n'en est pas un moyen de lecture.
+Ce repository contient la source de la documentation officielle du CMS PHPBoost.
+Destiné à faciliter les modifications et l'historique de la documentation, il n'en est pas un moyen de lecture.
+Il contient également toutes les images utilisées dans la documentation officielle.
 
 Pour consulter la documentation de PHPBoost, rendez-vous ici : [Documentation de PHPBoost](http://www.phpboost.com/wiki)
