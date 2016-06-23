@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>112</id>
+    <id_contents>1613</id_contents>
+    <title><![CDATA[Administration du module Articles]]></title>
+    <encoded_title><![CDATA[administration-du-module-articles]]></encoded_title>
+    <hits>640</hits>
+    <id_cat>36</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>36</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>108</cat_article_id>
+    <con_id_contents>1613</con_id_contents>
+    <con_id_article>112</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_administrer-les-articles">Administrer les articles</a><ol class="wiki_list_2"><li><a href="#paragraph_la-gestion-des-articles">La gestion des articles</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_la-creation-d-une-categorie">La création d'une catégorie</a><ol class="wiki_list_3"><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_options">Options</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li></ol></li><li><a href="#paragraph_configuration">Configuration</a></li></ol>]]></menu>
+    <content><![CDATA[Vous allez maintenant découvrir la façon dont le module Articles est administrable.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_administrer-les-articles">Administrer les articles</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-gestion-des-articles">La gestion des articles</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_1.jpg" alt="" /></p><br />
+<br />
+Cette page recense tous les articles du même module, classés par date de création. Ce tableau vous donne plusieurs informations :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Le titre
+</li><li class="formatter-li">La catégorie, ou sous-catégorie
+</li><li class="formatter-li">L'auteur
+</li><li class="formatter-li">La date de création
+</li><li class="formatter-li">Le statut
+</li><li class="formatter-li">Modifier l'article
+</li><li class="formatter-li">Supprimer l'article<br />
+</li></ul><br />
+Une petite précision est nécessaire pour la <strong>catégorie</strong>. En effet, comme vous l'avez-vu, seule est indiquée la catégorie <em>parente et directe</em> de l'article. Le chemin complet n'est donc pas spécifié. Si vous voulez avoir plus d'informations sur la catégorie de tel ou tel article, vous pouvez cliquer sur le nom de la catégorie dans le tableau, ce qui vous redirigera vers l'écran de la catégorie. De même, en cliquant sur le nom de l'article, vous pouvez bien sûr accéder à l'article lui-même.<br />
+<br />
+<span class="question"><strong>Le statut ???</strong></span><br />
+Cette valeur vous permet, si par exemple vous commencez à rédiger un article, de le mettre en ligne afin de le modifier plus tard sans toutefois le mettre en libre accès aux visiteurs et aux membres. Il ne sera donc pas approuvé et ne sera visible que par vous.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-categories">Gestion des catégories</h1><br />
+
+<br />
+De la même manière que pour les articles, vous pouvez gérer les catégories. Lorsque vous vous rendez dans cette section, vous vous trouvez nez-à-nez avec une liste un peu particulière des catégories. Cette liste se présente sous forme  d'arborescence en fait, détaillant quelle catégorie appartient à quelle catégorie.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_2.jpg" alt="" /></p><br />
+<br />
+Dans chaque rectangle correspondant à une catégorie sont indiqués :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Le titre de la catégorie, accompagné d'un lien vous amenant vers l'écran de la catégorie.
+</li><li class="formatter-li">Un lien permettant de modifier la catégorie.
+</li><li class="formatter-li">Un lien pour supprimer, après vérification, la catégorie.<br />
+</li></ul><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-creation-d-une-categorie">La création d'une catégorie</h2><br />
+
+<br />
+Nous voici maintenant dans le panneau de création d'une catégorie.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_3.jpg" alt="" /></p><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h3><br />
+
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nom</strong> : nom de votre catégorie
+</li><li class="formatter-li"><strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée
+</li><li class="formatter-li"><strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre catégorie. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-)
+</li><li class="formatter-li"><strong>Emplacement</strong> : la place qu'aura votre catégorie dans l'arborescence<br />
+       Exemple : Racine, puis --- une catégorie, puis -------- une sous-catégorie, etc.<br />
+</li></ul><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_options">Options</h3><br />
+
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Description</strong> : rédigez ici une courte description de la catégorie
+</li><li class="formatter-li"><strong>Image</strong> : vous permet d'associer une image à votre catégorie. Veillez à ne pas mettre d'images trop grosses afin de ne pas gêner la navigation des membres. Juste en dessous, vous pourrez voir une prévisualisation de cette image.<br />
+</li></ul><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_autorisations">Autorisations</h3><br />
+
+<br />
+Chaque catégorie peut disposer de permissions spécifiques. Nous allons voir ça ensemble. Pour faire apparaître les permissions, cochez la petite case juste à côté.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_4.jpg" alt="" /></p><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Autorisation de lecture :</strong> Cela vous permettra de définir qui peut voir la catégorie.
+</li><li class="formatter-li"><strong>Autorisation d'écriture :</strong> vous permettra de définir qui peut ajouter une catégorie
+</li><li class="formatter-li"><strong>Autorisation de contribution :</strong> vous permettra de définir qui peut proposer un article (si vous ne savez pas ce qu'est le panneau de contribution, dirigez-vous <a href="/wiki/panneau-de-contribution">ici</a>)
+</li><li class="formatter-li"><strong>Autorisation de modération :</strong> vous permettra de définir qui peut modifier une catégorie<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configuration">Configuration</h1><br />
+
+<br />
+Cliquez sur Configuration des articles pour avoir accès à la configuration. Elle se compose en deux parties. En premier, la configuration des articles :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_5.jpg" alt="" /></p><br />
+<br />
+Ici, vous avez toutes les options concernant les articles. <br />
+<br />
+La deuxième partie concerne les autorisations globales du module.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_6.jpg" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>86.242.34.177</user_ip>
+    <timestamp>1459745304</timestamp>
+  </article>
+</articles>

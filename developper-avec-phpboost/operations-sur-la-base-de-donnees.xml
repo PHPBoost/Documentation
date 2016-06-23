@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>111</id>
+    <id_contents>501</id_contents>
+    <title><![CDATA[Opérations sur la base de données]]></title>
+    <encoded_title><![CDATA[operations-sur-la-base-de-donnees]]></encoded_title>
+    <hits>722</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>501</con_id_contents>
+    <con_id_article>111</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_les-differentes-possibilites">Les différentes possibilités</a><ol class="wiki_list_2"><li><a href="#paragraph_connaitre-la-version-de-mysql">Connaître la version de MySQL</a></li><li><a href="#paragraph_lister-les-differentes-tables">Lister les différentes tables</a></li><li><a href="#paragraph_creer-une-table">Créer une table</a></li><li><a href="#paragraph_supprimer-une-table">Supprimer une table</a></li><li><a href="#paragraph_vider-une-table">Vider une table</a></li><li><a href="#paragraph_ajouter-une-colonne-a-une-table">Ajouter une colonne à une table</a></li><li><a href="#paragraph_supprimer-une-colonne-a-une-table">Supprimer une colonne à une table</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[PHPBoost permet de faire des interventions sur la Base de données très facilement, à travers une classe spécialement conçut pour ça.<br />
+<br />
+Elle a pour but de faciliter le développement et ainsi gagner en productivité.<br />
+<br />
+La classe qui regroupe les différentes fonctions se nomme MySQLDBMSUtils.<br />
+<br />
+On peut accéder à son objet avec :<br />
+<br />
+[[CODE=php]]PersistenceContext::get_dbms_utils()[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-differentes-possibilites">Les différentes possibilités</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_connaitre-la-version-de-mysql">Connaître la version de MySQL</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]string get_dbms_version()[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_lister-les-differentes-tables">Lister les différentes tables</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]array list_tables()[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creer-une-table">Créer une table</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]create_table($table_name, array $fields, array $options = array())[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_supprimer-une-table">Supprimer une table</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]drop($tables)[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_vider-une-table">Vider une table</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]truncate($tables)[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-une-colonne-a-une-table">Ajouter une colonne à une table</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]add_column($table_name, $column_name, array $column_description)[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_supprimer-une-colonne-a-une-table">Supprimer une colonne à une table</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]drop_column($table_name, $column_name)[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.12</user_ip>
+    <timestamp>1353925680</timestamp>
+  </article>
+</articles>

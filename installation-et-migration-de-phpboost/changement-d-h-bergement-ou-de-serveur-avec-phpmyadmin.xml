@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>307</id>
+    <id_contents>1420</id_contents>
+    <title><![CDATA[Changement d'hébergement ou de serveur avec phpMyAdmin]]></title>
+    <encoded_title><![CDATA[changement-d-h-bergement-ou-de-serveur-avec-phpmyadmin]]></encoded_title>
+    <hits>644</hits>
+    <id_cat>2</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>2</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>2</cat_article_id>
+    <con_id_contents>1420</con_id_contents>
+    <con_id_article>307</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_sauvegarde-de-la-base-de-donn-es">Sauvegarde de la base de données</a></li><li><a href="#paragraph_transfert-des-fichiers">Transfert des fichiers</a></li><li><a href="#paragraph_restauration-de-la-base-de-donn-es-chez-l-h-bergeur">Restauration de la base de données chez l'hébergeur</a></li><li><a href="#paragraph_migration-du-serveur">Migration du serveur</a></li><li><a href="#paragraph_ajustement-de-la-configuration-du-nouveau-site">Ajustement de la configuration du nouveau site</a></li><li><a href="#paragraph_r-g-n-ration-globale-du-cache">Régénération globale du cache</a></li></ol>]]></menu>
+    <content><![CDATA[Transférer son site d'un hébergeur Web à un autre ou d'un serveur local vers un hébergement Web avec PHPBoost est très simple. Nous allons voir cela ensemble.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_sauvegarde-de-la-base-de-donn-es">Sauvegarde de la base de données</h1><br />
+
+<br />
+La totalité du contenu de votre site est stockée dans une base de données. Celle-ci fournit un service de stockage et récupération de données. <br />
+<br />
+Pour récupérer votre site exactement comme il était avant, vous allez devoir faire une sauvegarde de votre base de données actuelle.<br />
+Pour cela il vous suffit de vous connecter au panel phpMyAdmin (en général tous les hébergeurs le proposent).<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_transfert-des-fichiers">Transfert des fichiers</h1><br />
+
+<br />
+Transférez <strong>tous</strong> les fichiers et répertoires de votre serveur FTP de l'ancien hébergement vers le serveur FTP du nouvel hébergement (ou du local vers votre hébergeur). Pour cela, nous vous invitons à regarder cet <a href="/wiki/transfert-des-fichiers-via-logiciel-ftp">article</a> (Au lieu de copier vers le serveur en ligne, vous copierez vers le serveur local ou nouveau serveur)<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_restauration-de-la-base-de-donn-es-chez-l-h-bergeur">Restauration de la base de données chez l'hébergeur</h1><br />
+
+<br />
+Une fois le transfert des fichiers vers l'hébergeur terminé allez sur le FTP, cherchez le dossier "kernel" puis "db" puis editer le fichier nommé "config.php" (le chemin complet est donc /kernel/db/config.php)<br />
+<br />
+Ce fichier devrait alors être ceci (sauf les valeurs bien sûr).<br />
+[[CODE=php]]
+&lt;?php
+$db_connection_data = array (
+  'dbms' =&gt; 1,
+  'dsn' =&gt; 'mysql:host=127.0.0.1;port=3306dbname=phpboost',
+  'driver_options' =&gt; 
+  array (
+  ),
+  'host' =&gt; '127.0.0.1',
+  'port' =&gt; '3306',
+  'login' =&gt; 'phpboost',
+  'password' =&gt; 'lovephpboost',
+  'database' =&gt; 'phpboost',
+);
+
+defined('PREFIX') or define('PREFIX' , 'phpboost_');
+defined('PHPBOOST_INSTALLED') or define('PHPBOOST_INSTALLED', true);
+require_once PATH_TO_ROOT . '/kernel/db/tables.php';
+?&gt;
+[[/CODE]]<br />
+<br />
+Maintenant vous allez adapter ce fichier par rapport aux informations de votre hébergeur.<br />
+Par exemple cela pourrait donner :<br />
+[[CODE=php]]
+&lt;?php
+$db_connection_data = array (
+  'dbms' =&gt; 1,
+  'dsn' =&gt; 'mysql:host=sql1;port=3306dbname=janus57phpboost',
+  'driver_options' =&gt; 
+  array (
+  ),
+  'host' =&gt; 'sql1',
+  'port' =&gt; '3306',
+  'login' =&gt; 'janus57phpboost',
+  'password' =&gt; 'lovephpboost',
+  'database' =&gt; 'janus57phpboost',
+);
+
+defined('PREFIX') or define('PREFIX' , 'phpboost_');
+defined('PHPBOOST_INSTALLED') or define('PHPBOOST_INSTALLED', true);
+require_once PATH_TO_ROOT . '/kernel/db/tables.php';
+?&gt;
+[[/CODE]]<br />
+<br />
+Voici en <strong>gras</strong> les informations à changer :<br />
+<span class="formatter-blockquote">Citation:</span><div class="blockquote"><br />
+&lt;?php<br />
+$db_connection_data = array (<br />
+  'dbms' =&gt; 1,<br />
+  'dsn' =&gt; 'mysql:host=<strong>sql1</strong>;port=3306dbname=<span style="color:purple;"><strong>janus57phpboost</strong></span>',<br />
+  'driver_options' =&gt; <br />
+  array (<br />
+  ),<br />
+  'host' =&gt; '<strong>sql1</strong>',<br />
+  'port' =&gt; '3306',<br />
+  'login' =&gt; '<span style="color:red;"><strong>janus57phpboost</strong></span>',<br />
+  'password' =&gt; 'lovephpboost',<br />
+  'database' =&gt; '<span style="color:purple;"><strong>janus57phpboost</strong></span>',<br />
+);<br />
+<br />
+defined('PREFIX') or define('PREFIX' , 'phpboost_');<br />
+defined('PHPBOOST_INSTALLED') or define('PHPBOOST_INSTALLED', true);<br />
+require_once PATH_TO_ROOT . '/kernel/db/tables.php';<br />
+?&gt;<br />
+</div><br />
+<strong>sql1</strong> = l'adresse du serveur SQL fournit par votre hébergeur<br />
+<span style="color:red;">janus57phpboost</span> = le login SQL fournit par votre hébergeur<br />
+<span style="color:purple;">janus57phpboost</span> = le nom de la BDD (Base De Donnée) qui soit est fournit par votre hébergeur soit vous l'avez définit (cela dépend des hébergeurs)<br />
+<span class="success">À ce stade les informations nécessaires pour que PHPBoost se connecte au serveur MySQL devraient être correctes</span><br />
+<br />
+Maintenant il faut reste juste à importer la sauvegarde (toujours via phpMyAdmin) que vous avez exportée via votre phpMyAdmin local ou chez votre ancien hébergeur.<br />
+<span class="success">À ce stade, les informations nécessaires pour que PHPBoost se connecte au serveur MySQL devraient être correctes.<br />
+De plus maintenant les données de votre ancienne BDD sont maintenant dans la nouvelle chez votre nouvel hébergeur/serveur, vous pouvez donc passer à l'étape suivante.</span><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_migration-du-serveur">Migration du serveur</h1><br />
+
+<br />
+Après avoir fait une sauvegarde de votre base de données (<strong>impératif</strong>), et transféré l'ensemble des fichiers, maintenant vient le moment du transfert de l'adresse du site. Et là encore, rien de bien difficile. <br />
+<br />
+Copiez/collez ce code dans un éditeur de texte (Notepad++, ...)<br />
+<br />
+[[CODE=php]]&lt;?php
+/*##################################################
+ *                                index.php
+*                            -------------------
+*   begin                : May 14, 2012
+*   copyright            : (C) 2012 Kévin MASSY
+*   email                : soldier.weasel@gmail.com
+*
+*
+###################################################
+*
+* This program is free software; you can redistribute it and/or modify
+* it under the terms of the GNU General Public License as published by
+* the Free Software Foundation; either version 2 of the License, or
+* (at your option) any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+* GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with this program; if not, write to the Free Software
+* Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+*
+###################################################*/
+ 
+define('PATH_TO_ROOT', '.');
+ 
+require_once PATH_TO_ROOT . '/kernel/framework/io/data/cache/CacheData.class.php';
+require_once PATH_TO_ROOT . '/kernel/framework/io/data/config/ConfigData.class.php';
+require_once PATH_TO_ROOT . '/kernel/framework/io/data/config/AbstractConfigData.class.php';
+require_once PATH_TO_ROOT . '/kernel/framework/phpboost/config/GeneralConfig.class.php';
+ 
+define('TIMEZONE_USER', 3);
+require_once PATH_TO_ROOT . '/kernel/framework/util/Date.class.php';
+ 
+$config_file = PATH_TO_ROOT . '/cache/CacheManager-kernel-general-config.data';
+ 
+if (file_exists($config_file))
+{
+ $general_config = unserialize(file_get_contents($config_file));
+}
+else
+{
+ $general_config = new GeneralConfig();
+ $general_config-&gt;set_default_values();
+}
+ 
+if (isset($_POST['url']) &amp;&amp; isset($_POST['path']))
+{
+ $general_config-&gt;set_site_url($_POST['url']);
+ $general_config-&gt;set_site_path($_POST['path']);
+ file_put_contents($config_file, serialize($general_config));
+ 
+ echo 'Success';
+}
+ 
+$site_url = $general_config-&gt;get_site_url();
+$site_path = $general_config-&gt;get_site_path();
+?&gt;
+ 
+&lt;form action="" method="post"&gt;
+ &lt;fieldset&gt;
+  &lt;legend&gt;Migration&lt;/legend&gt;
+  &lt;dl&gt;
+   &lt;dd&gt;
+    &lt;label&gt;Url :&amp;nbsp;&lt;/label&gt;&lt;input type="text" size="65" maxlength="100" id="url" name="url" value="&lt;?php echo $site_url ?&gt;" class="text" /&gt;
+   &lt;/dd&gt;
+   &lt;dd&gt;
+    &lt;label&gt;Path :&amp;nbsp;&lt;/label&gt;&lt;input type="text" size="65" maxlength="100" id="path" name="path" value="&lt;?php echo $site_path ?&gt;" class="text" /&gt;
+   &lt;/dd&gt; 
+  &lt;/dl&gt;
+  &lt;div&gt;
+   &lt;input type="submit" name="submit" value="Submit" class="submit" /&gt;
+  &lt;/div&gt;
+ &lt;/fieldset&gt;
+&lt;/form&gt;
+&lt;style&gt;
+&lt;!--
+textarea {
+ display:block;
+ width:94%;
+ margin:auto;
+ -moz-border-radius:5px;
+ -khtml-border-radius:5px;
+ -webkit-border-radius:5px;
+}
+div {
+ text-align:center;
+}
+input.text{
+ padding:2px; 
+ -moz-border-radius:3px;
+ -khtml-border-radius:3px;
+ -webkit-border-radius:3px;
+ width:400px;
+ margin-top:5px;
+}
+ label {
+ width:50px;
+ margin-top:5px;
+ text-align:right;
+ display:inline;
+ float:left;
+}
+input.submit, button.submit{
+ padding:1px 2px;
+ font-family:Verdana, 'Bitstream Vera Sans', Times, serif;
+ border:1px solid #515C68;
+ border-top:1px solid #8498ae;
+ color:#515C68;
+ font-weight:bold;
+ font-size:10px;
+ -moz-border-radius:5px;
+ -khtml-border-radius:5px;
+ -webkit-border-radius:5px;
+ border-radius:5px;
+ cursor:pointer;
+ margin:7px auto;
+}
+fieldset{
+ width: 500px;
+ font-family:"Lucida Grande","Lucida Sans Unicode",Verdana,'Bitstream Vera Sans',Times,serif;
+ margin:20px auto;
+ padding:6px;
+ border:1px solid #CCCCCC;
+ color:#445766;
+ background:#eceeef;
+ position:relative;
+ -moz-border-radius:5px;
+ -khtml-border-radius:5px;
+ -webkit-border-radius:5px;
+}
+legend {
+ background:#7191AA;
+ color:#FFF;
+ -moz-border-radius:5px;
+ -khtml-border-radius:5px;
+ -webkit-border-radius:5px;
+ border-radius:5px;
+ padding:3px 5px;
+ border: 1px solid #CCC;
+}
+--&gt;
+&lt;/style&gt;[[/CODE]]<br />
+<br />
+<ul class="formatter-ul">
+ <li class="formatter-li">Enregistrez ce code où vous le souhaitez, au format PHP, et nommez le <em><strong>server_migration</strong></em> (<em>Vous pouvez aussi récupérer le fichier "zippé" <a href="/upload/server_migration.zip">server_migration.zip</a></em>)
+ </li><li class="formatter-li">Transférez-le sur le FTP du nouveau site, à la racine du dossier, si vous avez mis PHPBoost dans un dossier, ou à la racine du serveur, si PHPBoost est à la racine de votre serveur
+ </li><li class="formatter-li">Ensuite, vous allez de voir l'appeler. Pour cela entrez l'adresse du nouveau site et rajoutez à la fin <em>server_migration.php</em> (<strong>Attention</strong>, ne mettez pas <em>www.example.org/news/news.php/server_migration.php</em>, mais <em>www.example.org/server_migration.php</em>. Si PHPBoost est dans un dossier, ce sera <em>www.example.org/dossier/server_migration.php</em>)<br />
+</li></ul><br />
+<br />
+Après avoir rentré l'adresse, vous tomberez sur : <br />
+<br />
+<img src="http://resources.phpboost.com/documentation/installation/migration/migration.jpg" alt="" /><br />
+<br />
+Le champ URL correspondant à la nouvelle adresse de votre site. Par exemple, avant c'était <em>www.mon-site.fr</em> et dans votre nouvel hébergement vous avez choisi <em>www.ton-site.fr</em>, vous mettrez donc <em>www.ton-site.fr</em>.<br />
+<br />
+Le champ Path correspondant à l'emplacement qu'aura PHPBoost sur votre hébergement. Si vous avez choisi de le transférer à la racine, ce sera seulement <strong>/</strong>, si vous avez décidez de le mettre dans un dossier, ce sera <strong>/nom_du_dossier</strong>.<br />
+<br />
+<span class="notice">Il faudra impérativement supprimer le fichier <em>server_migration.php</em> après la migration, pour des raisons de sécurité !</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajustement-de-la-configuration-du-nouveau-site">Ajustement de la configuration du nouveau site</h1><br />
+
+<br />
+<span class="notice">Votre nouveau site doit maintenant fonctionner, mais il faut faire en sorte de <span style="text-decoration: underline;">pérenniser le changement</span> que nous venons de faire en le faisant rentrer dans la base de données (le cache n'est qu'une photo à un instant donné du contenu de la base de données), si le cache est régénéré, ce sont les valeurs de la base de données qui seront utilisées.</span><br />
+Dans le panneau d'administration du site (que vous avez transféré), allez dans <em>Administration-&gt;Configuration-&gt;Configuration avancée</em> puis vérifiez que l'adresse et le chemin du site sont les bons (sinon modifiez-les) puis cliquez sur <em>envoyer</em> de façon à enregistrer en base de données les informations.<br />
+<span class="success">A ce stade une fois les bonnes informations validées elles sont enregistrées en BDD, vous pouvez donc effectuer la dernière étape.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_r-g-n-ration-globale-du-cache">Régénération globale du cache</h1><br />
+
+<br />
+Pour éviter les soucis, il est recommandé de régénérer l'ensemble du cache, même si ce n'est pas obligatoire. Pour cela, il faut aller dans le panneau d'administration <em>Outils-&gt;Cache</em>, puis cliquez sur <em>vider</em>.<br />
+<br />
+Voilà, votre site devrait être transféré correctement. Si vous rencontrez des difficultés, n'hésitez pas à demander de l'aide sur le <a href="/forum/forum-5+support-installation-mise-jour.php">forum de support</a>.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>92.138.95.52</user_ip>
+    <timestamp>1430052191</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>28</id>
+    <id_contents>1637</id_contents>
+    <title><![CDATA[Discussion]]></title>
+    <encoded_title><![CDATA[discussion]]></encoded_title>
+    <hits>914</hits>
+    <id_cat>22</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>22</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>28</cat_article_id>
+    <con_id_contents>1637</con_id_contents>
+    <con_id_article>28</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<table class="formatter-table" style="float:right;width:50%;">
+   <tr class="formatter-table-row">
+      <th class="formatter-table-head" colspan="2">Discussion</th>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Auteur</td>
+      <td class="formatter-table-col"><a href="/user/profile/1">CrowkaiT</a></td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Version actuelle</td>
+      <td class="formatter-table-col">5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Compatibilité</td>
+      <td class="formatter-table-col">PHPBoost 5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Démonstration</td>
+      <td class="formatter-table-col"><a href="http://demo.phpboost.com/shoutbox/">Module Discussion</a></td>
+   </tr>
+</table><br />
+<br />
+<p style="text-align:center"><br />
+   <span style="font-size: 20px;"><strong>Module Discussion</strong></span><br />
+   <img src="https://resources.phpboost.com/documentation/utilisation/modules/shoutbox/logo.png" alt="" /><br />
+</p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<strong>Description :</strong> Ce module vous procure une boîte de discussion entre les membres.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965806</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>141</id>
+    <id_contents>1441</id_contents>
+    <title><![CDATA[Insérer un flux RSS en BBCode]]></title>
+    <encoded_title><![CDATA[inserer-un-flux-rss-en-bbcode]]></encoded_title>
+    <hits>2021</hits>
+    <id_cat>34</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>34</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>79</cat_article_id>
+    <con_id_contents>1441</con_id_contents>
+    <con_id_article>141</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Vous souhaitez afficher sur votre site un flux RSS via le BBCode, c'est maintenant possible et il n'y a rien de plus simple !<br />
+<br />
+Il faut utiliser la balise feed : <br />
+<br />
+[[CODE=bbcode]][feed]le_nom_du_module[/feed][[/CODE]]<br />
+<br />
+Vous avez la possibilité de personnaliser l'affichage : <br />
+<ul class="formatter-ul">
+	<li class="formatter-li"><strong>cat="numéro de la catégorie du flux dans le module"</strong><br />
+Pour connaître le numéro de la catégorie du flux, allez dans le module souhaité, allez dans la catégorie souhaitée et cliquez sur cette icone <!-- START HTML -->
+<i class="fa fa-syndication"></i>
+<!-- END HTML -->, vous allez être redirigé vers une page avec ce type d'adresse : /syndication/rss/forum/4<br />
+Cela correspond au module forum et la catégorie est la n° 4.<br />
+Si vous souhaitez afficher tous les flux d'un module, dans ce cas ne mettez pas cat"x"
+	</li><li class="formatter-li"><strong>number="nombre de flux à afficher"</strong><br />
+</li></ul><br />
+<br />
+Exemple : afficher les 5 derniers flux du module téléchargement de la catégorie 3<br />
+<br />
+[[CODE=bbcode]][feed cat="3" number="5"]download[/feed][[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.11</user_ip>
+    <timestamp>1444215955</timestamp>
+  </article>
+</articles>

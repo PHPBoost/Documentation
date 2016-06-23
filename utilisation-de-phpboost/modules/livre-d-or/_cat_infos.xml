@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>54</id>
+    <id_contents>1685</id_contents>
+    <title><![CDATA[Livre d'or]]></title>
+    <encoded_title><![CDATA[livre-d-or]]></encoded_title>
+    <hits>886</hits>
+    <id_cat>28</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>28</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>54</cat_article_id>
+    <con_id_contents>1685</con_id_contents>
+    <con_id_article>54</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<table class="formatter-table" style="float:right;width:50%;">
+   <tr class="formatter-table-row">
+      <th class="formatter-table-head" colspan="2">Livre d'or</th>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Auteur</td>
+      <td class="formatter-table-col"><a href="/user/profile/982">j1.seth</a></td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Version actuelle</td>
+      <td class="formatter-table-col">5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Compatibilité</td>
+      <td class="formatter-table-col">PHPBoost 5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Démonstration</td>
+      <td class="formatter-table-col"><a href="http://demo.phpboost.com/guestbook/">Module Livre d'or</a></td>
+   </tr>
+</table><br />
+<br />
+<p style="text-align:center"><br />
+   <span style="font-size: 20px;"><strong>Module Livre d'or</strong></span><br />
+   <img src="https://resources.phpboost.com/documentation/utilisation/modules/guestbook/logo.png" alt="" /><br />
+</p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<strong>Description :</strong> Ce module permet aux visiteurs et aux membres de donner leur avis sur le site.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1460609168</timestamp>
+  </article>
+</articles>

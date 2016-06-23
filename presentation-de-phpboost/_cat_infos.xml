@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>1</id>
+    <id_contents>1738</id_contents>
+    <title><![CDATA[I. Présentation de PHPBoost]]></title>
+    <encoded_title><![CDATA[presentation-de-phpboost]]></encoded_title>
+    <hits>7412</hits>
+    <id_cat>1</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>1</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>1</cat_article_id>
+    <con_id_contents>1738</con_id_contents>
+    <con_id_article>1</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_presentation-generale">Présentation générale</a></li><li><a href="#paragraph_historique">Historique</a></li><li><a href="#paragraph_organisation-de-la-communaute-francaise">Organisation de la communauté française</a></li><li><a href="#paragraph_ressources-utilisees">Ressources utilisées</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_presentation-generale">Présentation générale</h1><br />
+
+<br />
+<p style="text-align:left"><img src="/templates/phpboost/theme/images/logo.png" alt="" /></p> PHPBoost est un CMS (<em>Content Managing System</em> ou <em>système de gestion de contenu</em>) <strong>français</strong>. C'est un <a href="http://fr.wikipedia.org/wiki/logiciel libre" class="wikipedia-link">logiciel libre</a> distribué sous la licence <a href="http://fr.wikipedia.org/wiki/GNU/GPL" class="wikipedia-link">GNU/GPL</a>. Il permet à n'importe qui de créer son site de façon très simple, tout est assisté. Conçu pour satisfaire les débutants, il devrait également ravir les utilisateurs expérimentés qui souhaiteraient pousser son fonctionnement ou encore développer leurs propres modules.<br />
+<br />
+Comme son nom l'indique, PHPBoost utilise le <a href="http://fr.wikipedia.org/wiki/PHP" class="wikipedia-link">PHP</a> comme langage de programmation principal, mais aussi, comme toute application Web, le <a href="http://fr.wikipedia.org/wiki/HTML" class="wikipedia-link">HTML</a> et les CSS (<a href="http://fr.wikipedia.org/wiki/Feuilles de style en cascade" class="wikipedia-link">Feuilles de style en cascade</a>) pour la mise en forme des pages, le <a href="http://fr.wikipedia.org/wiki/Javascript" class="wikipedia-link">Javascript</a> pour ajouter une touche dynamique sur celles-ci, ainsi que du SQL (<a href="http://fr.wikipedia.org/wiki/Structured Query Language" class="wikipedia-link">Structured Query Language</a>) pour effectuer des opérations dans la base de données. Il s'installe sur un serveur Web et se paramètre à distance.<br />
+<br />
+Comme pour une grande majorité de logiciels libres, la communauté de PHPBoost permet d'avoir une grande fiabilité. Beaucoup d'utilisateurs ont testé chaque version et les ont ainsi approuvées. Il bénéficie par ailleurs d'une évolution rapide, ainsi nous essayons d'être le plus possible à l'écoute des commentaires et des propositions de chacun. Même si tout le monde ne participe pas à son développement, beaucoup de personnes nous ont aidés, rien qu'en nous donnant des idées, en nous suggérant des modifications ou encore des fonctionnalités supplémentaires. PHPBoost est donc fait à l'image de ses utilisateurs.<br />
+<br />
+Si vous ne deviez retenir que quelques points essentiels sur le projet, ce seraient ceux-ci :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Projet Open Source sous licence <a href="http://fr.wikipedia.org/wiki/GNU/GPL" class="wikipedia-link">GNU/GPL</a>
+</li><li class="formatter-li"> Code XHTML 1.0 strict et sémantique
+</li><li class="formatter-li"> Multilingue
+</li><li class="formatter-li"> Facilement personnalisable grâce aux différents thèmes et templates
+</li><li class="formatter-li"> Gestion poussée d'édition des membres (ajouts/suppressions de champs, restrictions, ...)
+</li><li class="formatter-li"> Gestion fine des droits et des groupes pour chaque utilisateur
+</li><li class="formatter-li"> URL Rewriting
+</li><li class="formatter-li"> Installation et mise à jour automatisées des modules et du noyau
+</li><li class="formatter-li"> Aide au développement de nouveaux modules grâce au Framework de PHPBoost
+</li><li class="formatter-li"> Installation et gestion du CMS en ligne de commande possible<br />
+</li></ul><br />
+Pour en savoir plus concernant les différentes fonctionnalités, vous pouvez <a href="http://demo.phpboost.com">tester la dernière version de PHPBoost</a> ou vous référer à cet <a href="/pages/fonctionnalites-de-phpboost">article</a>.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_historique">Historique</h1><br />
+
+<br />
+Le projet PHPBoost a été envisagé début juin 2005 et son développement a débuté quelques semaines plus tard, le 17 juin 2005 pour être précis. Courant 2011, les fondateurs originaires de PHPBoost ont décidés de céder leurs places. C'est alors <em>ReidLos</em> qui reprend les rennes du projet, suivi par toute une équipe soudée et prête à sortir la 4.0 prévue pour début 2013. Notre CMS a déjà plus de dix ans et dispose ainsi d'une certaine maturité.<br />
+<br />
+Voici ensuite la liste des différentes versions qui ont été publiées depuis sa sortie :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Novembre 2005 : <a href="/wiki/phpboost-1-3-1">PHPBoost 1.3.1</a> - <strong>Première version publique</strong>
+</li><li class="formatter-li"> Janvier 2006 : <a href="/wiki/phpboost-1-4-0">PHPBoost 1.4.0</a>
+</li><li class="formatter-li"> Mars 2006 : <a href="/wiki/phpboost-1-4-1">PHPBoost 1.4.1</a>
+</li><li class="formatter-li"> Juin 2006 : <a href="/wiki/phpboost-1-5-0">PHPBoost 1.5.0</a>
+</li><li class="formatter-li"> Septembre 2006 : <a href="/wiki/phpboost-1-6-0">PHPBoost 1.6.0</a>
+</li><li class="formatter-li"> Novembre 2007 : <a href="/wiki/phpboost-2-0">PHPBoost 2.0</a>
+</li><li class="formatter-li"> Juillet 2009 : <a href="/wiki/phpboost-3-0">PHPBoost 3.0</a>
+</li><li class="formatter-li"> Janvier 2013 : <a href="/wiki/phpboost-4-0">PHPBoost 4.0</a> -
+</li><li class="formatter-li"> Juillet 2014 : <a href="/wiki/phpboost-4-1">PHPBoost 4.1</a>
+</li><li class="formatter-li"> Janvier 2016 : <a href="/wiki/phpboost-5-0">PHPBoost 5.0 - <strong>Version courante</strong></a>
+</li><li class="formatter-li"> Juillet 2016 : PHPBoost 5.1 - <strong>Version en développement</strong><br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_organisation-de-la-communaute-francaise">Organisation de la communauté française</h1><br />
+
+<br />
+PHPBoost étant un logiciel français, la communauté française est la plus développée. Elle est dirigée par le chef de projet et comporte plusieurs équipes qui se partagent les rôles afin d'assurer la continuité du développement de PHPBoost.<br />
+Le support du logiciel est géré par les différentes équipes en s'effectuant sur le <strong> <a href="/forum/"><em>forum</em></a></strong>.<br />
+<br />
+Voyons maintenant les différentes équipes travaillant sur PHPBoost :<br />
+<br />
+<table class="formatter-table" style="margin:auto;"><tr class="formatter-table-row"><th class="formatter-table-head">Équipe</th><th class="formatter-table-head">Objectifs</th></tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/1"><img src="/images/group/chef.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><ul class="formatter-ul">
+<li class="formatter-li"> Gestion du projet (prise de décisions, ...)
+</li><li class="formatter-li"> Coordination des équipes
+</li><li class="formatter-li"> Direction de la communauté française<br />
+</li></ul><br />
+</td>
+</tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/8"><img src="/images/group/kernel.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Développement du noyau de PHPBoost
+</li><li class="formatter-li"> Rédaction de la documentation de développement<br />
+</li></ul><br />
+</td>
+</tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/6"><img src="/images/group/modules.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><ul class="formatter-ul">
+<li class="formatter-li"> Développement de nouveaux modules en utilisant le Framework PHPBoost
+</li><li class="formatter-li"> Mise à jour des modules déjà existants
+</li><li class="formatter-li"> Rédaction de la documentation de développement<br />
+</li></ul><br />
+</td>
+</tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/7"><img src="/images/group/redaction.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><ul class="formatter-ul">
+<li class="formatter-li"> Rédaction de la documentation sur l'ensemble des aspects de PHPBoost
+</li><li class="formatter-li"> Aide aux utilisateurs<br />
+</li></ul><br />
+</td>
+</tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/5"><img src="/images/group/traduction.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><ul class="formatter-ul">
+<li class="formatter-li">Traduction du  logiciel dans différentes langues étrangères
+</li><li class="formatter-li"> Création et développement des communautés dans chaque pays<br />
+</li></ul><br />
+</td>
+</tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/4"><img src="/images/group/graphisme.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><ul class="formatter-ul">
+<li class="formatter-li"> Création de thèmes pour PHPBoost (à la demande d'utilisateurs ou selon leurs propres idées)
+</li><li class="formatter-li"> Aide aux utilisateurs désirant créer leur thème
+</li><li class="formatter-li"> Rédaction de la partie graphisme de la documentation<br />
+</li></ul><br />
+</td>
+</tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/13"><img src="/images/group/moderation.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><ul class="formatter-ul">
+<li class="formatter-li"> Gestion du forum (règles d'utilisation, ...)
+</li><li class="formatter-li"> Aide aux utilisateurs de PHPBoost
+</li><li class="formatter-li"> Gestion des sanctions et avertissements<br />
+</li></ul><br />
+</td>
+</tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/16"><img src="/images/group/communication.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><ul class="formatter-ul">
+<li class="formatter-li"> Diffusion  des news de PHPBoost sur le site
+</li><li class="formatter-li"> Promotion de PHPBoost à l’extérieur (sites, forums, ...)
+</li><li class="formatter-li"> Gestion des règles d'utilisation du forum en coopération avec l'équipe Modération<br />
+</li></ul><br />
+</td>
+</tr>
+<tr class="formatter-table-row"><td class="formatter-table-col" style="text-align:center;"><a href="/user/groups/15"><img src="/images/group/historique.png" alt="" /></a><br />
+</td>
+<td class="formatter-table-col"><ul class="formatter-ul">
+<li class="formatter-li"> Anciens chefs de projet et créateurs de PHPBoost.
+</li><li class="formatter-li"> Sans leur fabuleux travail nous n'en serions jamais là !
+</li><li class="formatter-li"> Nous les remercions !<br />
+</li></ul><br />
+</td>
+</tr>
+</table><br />
+<br />
+L'équipe est toujours en recherche de nouveaux éléments. Pour en savoir plus, dirigez vous <a href="/pages/phpboost-recrute">ici</a>.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ressources-utilisees">Ressources utilisées</h1><br />
+
+<br />
+Vous pourrez retrouver ici la liste des projets et/ou Logiciels Libres que nous avons utilisé dans PHPBoost. Merci à toutes les personnes qui s'investissent dans ces différents projets et nous fournissent des outils de qualité, sur lesquels nous pouvons nous appuyer pour proposer à notre tour notre projet.<br />
+<br />
+<h4 class="formatter-title"><a href="http://notepad-plus.sourceforge.net/">Notepad ++</a></h4><br />
+<br />
+Notepad ++ est un éditeur libre. PHPBoost a été écrit entièrement grâce à ce magnifique éditeur très performant et intuitif. Merci à son équipe de développement.<br />
+<br />
+<h4 class="formatter-title"><a href="http://fortawesome.github.io/Font-Awesome">Librairie Font-Awesome</a></h4><br />
+<br />
+La librairie Font-Awesome est un projet d'icônes vectorielles évolutives qui peuvent instantanément être personnalisés en taille, couleur, ombre et tout ce qui peut être fait en CSS. L'utilisation des icônes vectorielles a permis de réduire la quantité d'image nécessaire sur PHPBoost.<br />
+<br />
+<h4 class="formatter-title"><a href="http://www.eclipse.org/"> Eclipse PDT</a></h4><br />
+<br />
+Eclipse est un projet visant à développer tout un environnement de développement libre, extensible et polyvalent. Son objectif est de produire et fournir divers outils gravitant autour de la réalisation de logiciel, englobant les activités de codage logiciel, de modélisation, de conception, etc.<br />
+PHPBoost utilise "IDE PHP" (outil de développement PHP) basé sur Eclipse. <br />
+<br />
+<h4 class="formatter-title"><a href="http://www.tinymce.com/"> TinyMCE</a></h4><br />
+<br />
+TinyMCE est un éditeur HTML WYSIWYG (What You See Is What You Get) développé en JavaScript.<br />
+Cet éditeur transforme un champ de formulaire web en une zone d'édition dotée d'une barre d'icônes. Cette zone peut ensuite être utilisée comme un traitement de texte pour produire du code HTML sans en connaître la syntaxe.<br />
+<br />
+<h4 class="formatter-title"><a href="http://www.phpconcept.net/pclzip/">PCLZIP</a></h4><br />
+<br />
+Développé par PHPConcept, PCLZIP est une librairie permettant de travailler sur des archives au format Zip en PHP. Elle est utilisée à plusieurs reprises dans PHPBoost.<br />
+<br />
+<h4 class="formatter-title"><a href="http://qbnz.com/highlighter/"> GeSHi</a></h4><br />
+<br />
+GeSHi (Generic Syntax Highlighter) est un script PHP qui permet de colorer syntaxiquement de nombreux langages informatiques.<br />
+<br />
+<h4 class="formatter-title"><a href="http://jquery.com"> jQuery</a></h4><br />
+<br />
+jQuery est une bibliothèque (ou Framework) JavaScript et AJAX offrant des effets visuels dynamiques et des éléments d'interface utilisateur.<br />
+<br />
+<h4 class="formatter-title"><a href="http://www.xm1math.net/phpmathpublisher/index_fr.html">PHPMathPublisher </a></h4><br />
+<br />
+PHPMathPublisher est un ensemble de fonctions permettant de mettre en forme des formules mathématiques à partir d'une syntaxe proche de celle du <a href="http://fr.wikipedia.org/wiki/LaTeX">LaTeX</a>.<br />
+<h4 class="formatter-title"><a href="http://flowplayer.org">Flowplayer </a></h4><br />
+<br />
+Lecteur vidéo au format flash.<br />
+<h4 class="formatter-title"><a href="http://cornel.bopp-art.com/lightcase">Lightcase.js </a></h4><br />
+<br />
+Lightbox responsive.<br />
+<h4 class="formatter-title"><a href="https://github.com/cssmenumaker/jQuery-Plugin-Responsive-Drop-Down">CssMenuMaker.js </a></h4><br />
+<br />
+Librairie permettant de créer des menus en responsive pour qu'ils s'adaptent à n'importe quel support.<br />
+<h4 class="formatter-title"><a href="http://www.jerrylow.com/basictable">BasicTable.js </a></h4><br />
+<br />
+Librairie permettant de créer des tableaux en responsive pour qu'ils s'adaptent à n'importe quel support.]]></content>
+    <activ>1</activ>
+    <user_id>5773</user_id>
+    <user_ip>2.1.7.178</user_ip>
+    <timestamp>1465375746</timestamp>
+  </article>
+</articles>

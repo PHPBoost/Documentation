@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>323</id>
+    <id_contents>1601</id_contents>
+    <title><![CDATA[Mettre à jour son module 4.1 en 5.0]]></title>
+    <encoded_title><![CDATA[mettre-a-jour-son-module-4-1-en-5-0]]></encoded_title>
+    <hits>171</hits>
+    <id_cat>41</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>41</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>144</cat_article_id>
+    <con_id_contents>1601</con_id_contents>
+    <con_id_article>323</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-de-configuration">Le fichier de configuration</a></li><li><a href="#paragraph_changements-dans-l-api">Changements dans l'API</a><ol class="wiki_list_2"><li><a href="#paragraph_requetes-sql">Requêtes SQL</a></li><li><a href="#paragraph_suppression-de-certaines-variables-globales">Suppression de certaines variables globales</a></li><li><a href="#paragraph_fonctions-relatives-aux-utilisateurs">Fonctions relatives aux utilisateurs</a></li><li><a href="#paragraph_classe-date">classe Date</a></li><li><a href="#paragraph_configuration-du-module">Configuration du module</a></li><li><a href="#paragraph_systeme-de-categories">Système de catégories</a></li><li><a href="#paragraph_mini-modules">Mini-modules</a></li><li><a href="#paragraph_javascript">Javascript</a></li><li><a href="#paragraph_constantes-pour-les-messages-d-erreur">Constantes pour les messages d'erreur</a></li></ol></li><li><a href="#paragraph_securite">Sécurité</a></li><li><a href="#paragraph_templates-d-administration">Templates d'administration</a></li></ol>]]></menu>
+    <content><![CDATA[<span class="warning">Si aucun des éléments se trouvant dans cette documentation ne vous aide, référez-vous au forum et demandez de l'aide.</span><br />
+Cette documentation permet de rendre votre module compatible avec la version 5.0 de PHPBoost sans trop de modifications dans le code. Elle n'a pas pour but de le convertir en utilisant le modèle MVC et d'utiliser les nouvelles fonctionnalités. Effectuez les différentes étapes suivantes (peu importe l'ordre) pour mettre à jour votre module.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-fichier-de-configuration">Le fichier de configuration</h1><br />
+
+<br />
+Le seul changement à effectuer dans le fichier <em>/module/config.ini</em> pour rendre votre module compatible avec la nouvelle version est le paramètre "compatibility". Remplacez la valeur par <strong>5.0</strong>.<br />
+Pensez également à mettre à jour le numéro de version de votre module pour plus de cohérence.<br />
+[[CODE=text]]compatibility="5.0"[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_changements-dans-l-api">Changements dans l'API</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_requetes-sql">Requêtes SQL</h2><br />
+
+<br />
+L'ancien système utilisé pour les requêtes Sql (PersistenceContext::get_sql(), variable $Sql, requêtes se terminant par [[CODE=php,0,1]]__LINE__, __FILE__[[/CODE]]) a été complètement supprimé.<br />
+Référez-vous à cette documentation pour convertir vos requêtes Sql : <a href="/wiki/executer-des-requetes-sql">Exécuter des requêtes SQL</a>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_suppression-de-certaines-variables-globales">Suppression de certaines variables globales</h2><br />
+
+<br />
+Les variables globales suivantes ont été supprimées : [[CODE=php,0,1]]$Sql, $Session, $User, $Template, $Cache[[/CODE]].<br />
+<br />
+Equivalents :<br />
+Remplacer [[CODE=php,0,1]]$Sql[[/CODE]] par [[CODE=php,0,1]]PersistenceContext::get_querier()[[/CODE]].<br />
+Remplacer [[CODE=php,0,1]]$Session[[/CODE]] par [[CODE=php,0,1]]AppContext::get_session()[[/CODE]].<br />
+Remplacer [[CODE=php,0,1]]$User[[/CODE]] par [[CODE=php,0,1]]AppContext::get_current_user()[[/CODE]].<br />
+<br />
+La variable [[CODE=php,0,1]]$Template[[/CODE]] est dépréciée depuis la 4.1. Utilisez la documentation pour <a href="/wiki/systeme-de-templates#paragraph_les-templates-en-php">déclarer les templates en PHP</a>.<br />
+La variable [[CODE=php,0,1]]$Cache[[/CODE]] est dépréciée et a été supprimée. Si vous avez vraiment besoin d'un cache pour votre module (pour affichage d'éléments dans un mini module par exemple), prenez exemple sur celui du module Téléchargements par exemple.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_fonctions-relatives-aux-utilisateurs">Fonctions relatives aux utilisateurs</h2><br />
+
+<br />
+Pensez à remplacer [[CODE=text,0,1]]login[[/CODE]] par [[CODE=text,0,1]]display_name[[/CODE]] dans vos requêtes faisant appel à la table member.<br />
+<br />
+Remplacer [[CODE=php,0,1]]get_utheme()[[/CODE]] par [[CODE=php,0,1]]AppContext::get_current_user()->get_theme()[[/CODE]].<br />
+Remplacer [[CODE=php,0,1]]get_ulang()[[/CODE]] par [[CODE=php,0,1]]AppContext::get_current_user()->get_locale()[[/CODE]].<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_classe-date">classe Date</h2><br />
+
+<br />
+La fonction [[CODE=php,0,1]]gmdate()[[/CODE]] a été supprimée.<br />
+Proccédez de la manière suivante pour récupérer une date à partir d'un timestamp stocké en base de données (pour afficher la date au format JJ/MM/AAAA par exemple) :<br />
+[[CODE=php]]$date = !empty($row['timestamp']) ? new Date($row['timestamp'], Timezone::SERVER_TIMEZONE) : null;
+$tpl->put_all(array(
+    'DATE' => (!empty($date)) ? $date->format(Date::FORMAT_DAY_MONTH_YEAR) : ''
+));
+[[/CODE]]<br />
+Consultez la documentation sur le <a href="/wiki/traitement-des-dates">traitement des dates</a> pour obtenir les autres formats d'affichage.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-du-module">Configuration du module</h2><br />
+
+<br />
+L'utilisation des paramètres de configuration serialisés dans le fichier desc.ini a été supprimée.<br />
+Utilisez la documentation <a href="/wiki/creer-une-configuration-pour-votre-module">créer une configuration pour votre module</a> pour convertir les paramètres de configuration du module.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_systeme-de-categories">Système de catégories</h2><br />
+
+<br />
+L'ancien système de catégories a été complètement supprimé.<br />
+Pour utiliser le nouveau système de catégories, consultez <a href="/wiki/systeme-de-categories-utilisation-basique">cette documentation</a>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_mini-modules">Mini-modules</h2><br />
+
+<br />
+Si vous utilisez un mini-module, ajoutez les fonctions suivantes dans la classe <em>NomDeVotreModuleModuleMiniMenu.class.php</em> :<br />
+[[CODE=php]]
+public function get_menu_id()
+{
+    return 'module-mini-nomdumodule';
+}
+public function get_menu_title()
+{
+    return 'Module title';
+}
+public function is_displayed()
+{
+    //Vérifiez ici les autorisations d'affichage si besoin
+    return true;
+}
+[[/CODE]]<br />
+Remplacez la fonction [[CODE=php,0,1]]display()[[/CODE]] par [[CODE=php,0,1]]get_menu_content()[[/CODE]].<br />
+<br />
+Au niveau du template lié au mini-module, supprimez les div [[CODE=text,0,1]]module-mini-container[[/CODE]], [[CODE=text,0,1]]module-mini-top[[/CODE]], [[CODE=text,0,1]]module-mini-contents[[/CODE]] et [[CODE=text,0,1]]module-mini-bottom[[/CODE]] pour ne garder que le contenu.<br />
+Remplacez :<br />
+[[CODE=tpl]]
+<div class="module-mini-container"# IF C_HORIZONTAL # style="width:auto;"# ENDIF #>
+<div class="module-mini-top">
+<h5 class="sub-title">Titre</h5>
+</div>
+<div class="module-mini-contents">
+Contenu
+</div>
+<div class="module-mini-bottom"></div>
+</div>
+[[/CODE]]<br />
+Par :<br />
+[[CODE=tpl]]
+Contenu
+[[/CODE]]<br />
+<h2 class="wiki_paragraph2" id="paragraph_javascript">Javascript</h2><br />
+
+<br />
+Remplacez les fonctions spécifiques javascript scriptaculous par leur équivalent jQuery dans tous vox fichiers de templates si vous utilisiez des fonctions spécifiques comme Effect par exemple.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_constantes-pour-les-messages-d-erreur">Constantes pour les messages d'erreur</h2><br />
+
+<br />
+Les anciennes constantes pour les messages d'erreur ont été supprimées.<br />
+Effectuez les remplacement suivants :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><span style="font-family: courier new;">E_USER_SUCCESS</span> à remplacer par <span style="font-family: courier new;">MessageHelper::SUCCESS</span>
+</li><li class="formatter-li"><span style="font-family: courier new;">E_USER_NOTICE</span> à remplacer par <span style="font-family: courier new;">MessageHelper::NOTICE</span>
+</li><li class="formatter-li"><span style="font-family: courier new;">E_USER_WARNING</span> à remplacer par <span style="font-family: courier new;">MessageHelper::WARNING</span>
+</li><li class="formatter-li"><span style="font-family: courier new;">E_USER_ERROR</span> à remplacer par <span style="font-family: courier new;">MessageHelper::ERROR</span><br />
+</li></ul><br />
+<h1 class="wiki_paragraph1" id="paragraph_securite">Sécurité</h1><br />
+
+<br />
+La sécurité de l'ensemble de PHPBoost a été renforcée dans cette nouvelle version.<br />
+<br />
+Assurez-vous d'avoir l'input token dans tous vos formulaires :<br />
+[[CODE=tpl]]
+<input type="hidden" name="token" value="{TOKEN}">
+[[/CODE]]<br />
+Supprimez tous les accès directs aux variables [[CODE=php,0,1]]$_GET[[/CODE]] et [[CODE=php,0,1]]$_POST[[/CODE]].<br />
+Utilisez la fonction [[CODE=php,0,1]]retrieve($var_type, $var_name, $default_value, $force_type = NULL, $flags = 0)[[/CODE]] à la place.<br />
+Exemple :<br />
+[[CODE=php]]$id = retrieve(POST, 'id', 0, TINTEGER);
+[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_templates-d-administration">Templates d'administration</h1><br />
+
+<br />
+Les liens dans les templates d'administration doivent être mis à jour pour être affichés correctement dans le nouveau design de l'administration.<br />
+Remplacez :<br />
+[[CODE=tpl]]
+<div id="admin-quick-menu">
+    <ul>
+        <li class="title-menu">{TITLE}</li>
+        <li>
+            <a href="admin_menu_1.php"><img src="icone.png" alt="{L_MENU_1}" /></a>
+            
+            <a href="admin_menu_1.php" class="quick-link">{L_MENU_1}</a>
+        </li>
+        <li>
+            <a href="admin_menu_2.php"><img src="icone.png" alt="{L_MENU_2}" /></a>
+            
+            <a href="admin_menu_2.php" class="quick-link">{L_MENU_2}</a>
+        </li>
+    </ul>
+</div>
+[[/CODE]]<br />
+Par :<br />
+[[CODE=tpl]]
+<nav id="admin-quick-menu">
+    <a href="" class="js-menu-button" onclick="open_submenu('admin-quick-menu');return false;" title="{L_MANAGEMENT}">
+        <i class="fa fa-bars"></i> {L_MANAGEMENT}
+    </a>
+    <ul>
+        <li>
+            <a href="admin_menu_1.php" class="quick-link">{L_MENU_1}</a>
+        </li>
+        <li>
+            <a href="admin_menu_2.php" class="quick-link">{L_MENU_2}</a>
+        </li>
+    </ul>
+</nav>
+[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.12</user_ip>
+    <timestamp>1457951009</timestamp>
+  </article>
+</articles>

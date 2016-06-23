@@ -1,0 +1,1245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>215</id>
+    <id_contents>1614</id_contents>
+    <title><![CDATA[Structure d'un thème]]></title>
+    <encoded_title><![CDATA[structure-d-un-theme]]></encoded_title>
+    <hits>5468</hits>
+    <id_cat>63</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>63</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>215</cat_article_id>
+    <con_id_contents>1614</con_id_contents>
+    <con_id_article>215</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction </a></li><li><a href="#paragraph_la-racine-du-theme">La racine du thème</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-body-tpl">Le fichier body.tpl</a></li><li><a href="#paragraph_le-fichier-config-ini">Le fichier config.ini</a></li><li><a href="#paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</a></li></ol></li><li><a href="#paragraph_le-repertoire-images">Le répertoire images</a></li><li><a href="#paragraph_le-repertoire-lang-et-le-fichier-desc-ini">Le répertoire lang et le fichier desc.ini</a></li><li><a href="#paragraph_le-repertoire-theme">Le répertoire theme</a><ol class="wiki_list_2"><li><a href="#paragraph_les-fichiers-css">Les fichiers CSS</a></li><li><a href="#paragraph_le-repertoire-images">Le répertoire images</a></li></ol></li><li><a href="#paragraph_le-repertoire-modules">Le répertoire modules</a></li></ol>]]></menu>
+    <content><![CDATA[Nous allons présenter, ici, la structure d'un thème PHPBoost 5.0. <br />
+<br />
+<span class="notice">Nous avons pris pour exemple le thème de base.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction </h1><br />
+
+<br />
+Un thème est composé de plusieurs types de fichiers :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>CSS</strong> : CSS (Cascading Style Sheet ou feuilles de style en cascade) est un langage de style qui définit la présentation des documents HTML. Par exemple, CSS couvre les polices, les couleurs, les marges, les lignes, la hauteur, la largeur, les images d'arrière-plan, les positionnements évolués et bien d'autres choses sont possibles). Le CSS est la partie concernant la forme du document. Ces fichiers ont l'extension .css.
+</li><li class="formatter-li"><strong>Templates</strong> : Un fichier template (patron en français) permet de faire l'interface entre PHP (générateur de contenu) et le code HTML généré. Ces fichiers sont en langage HTML (HyperText Markup Language) et contiennent les emplacements des variables que PHP doit assigner. Le HTML concerne le fond du document. Ces fichiers ont l'extension .tpl.
+</li><li class="formatter-li"><strong>Images</strong> : En plus du CSS, la mise en forme est appuyée par des images. Les images d'un thème se trouvent dans le dossier images du thème.<br />
+</li></ul><br />
+<br />
+Le répertoire d'un thème est constitué de la manière suivante :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> /images
+</li><li class="formatter-li"> /lang
+</li><li class="formatter-li"> /theme
+</li><li class="formatter-li"> body.tpl
+</li><li class="formatter-li"> config.ini
+</li><li class="formatter-li"> frame.tpl<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-racine-du-theme">La racine du thème</h1><br />
+
+<br />
+On retrouve à la racine du thème les fichiers <em>body.tpl</em>, <em>config.ini</em> et <em>frame.tpl</em>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-body-tpl">Le fichier body.tpl</h2><br />
+
+<br />
+Le fichier <em>body.tpl</em> contient le contenu de la balise html &lt;body&gt; qui encadre le code html.<br />
+On y retrouve l'architecture même du site web avec le positionnement des éléments tels que l'en-tête, la colonne de gauche, le contenu central ou le pied de page. Si vous souhaitez positionner les éléments d'une manière différente, c'est le fichier à modifier.<br />
+<br />
+[[CODE=html]]    # INCLUDE MAINTAIN #
+    &lt;header id="header"&gt;
+        &lt;div id="top-header"&gt;
+            &lt;div id="site-infos"&gt;
+                &lt;div id="site-logo" # IF C_HEADER_LOGO #style="background-image: url('{HEADER_LOGO}');"# ENDIF #&gt;&lt;/div&gt;
+                &lt;div id="site-name-container"&gt;
+                    &lt;a id="site-name" href="{PATH_TO_ROOT}/"&gt;{SITE_NAME}&lt;/a&gt;
+                    &lt;span id="site-slogan"&gt;{SITE_SLOGAN}&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div id="top-header-content"&gt;
+            # IF C_MENUS_HEADER_CONTENT #
+                # START menus_header #
+                {menus_header.MENU}
+                # END menus_header #
+            # ENDIF #
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div id="sub-header"&gt;
+            &lt;div id="sub-header-content"&gt;
+            # IF C_MENUS_SUB_HEADER_CONTENT #
+                # START menus_sub_header #
+                {menus_sub_header.MENU}
+                # END menus_sub_header #
+            # ENDIF #
+            &lt;/div&gt;
+            &lt;div class="spacer"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="spacer"&gt;&lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;div id="global"&gt;
+        # IF C_COMPTEUR #
+        &lt;div id="compteur"&gt;
+            &lt;span class="text-strong"&gt;{L_VISIT} : &lt;/span&gt;{COMPTEUR_TOTAL}
+            
+
+            &lt;span class="text-strong"&gt;{L_TODAY} : &lt;/span&gt;{COMPTEUR_DAY}
+        &lt;/div&gt;
+        # ENDIF #
+
+        # IF C_MENUS_LEFT_CONTENT #
+        &lt;aside id="menu-left"&gt;
+            # START menus_left #
+            {menus_left.MENU}
+            # END menus_left #
+        &lt;/aside&gt;
+        # ENDIF #
+
+        &lt;div id="main" class="# IF C_MENUS_LEFT_CONTENT #main-with-left# ENDIF ## IF C_MENUS_RIGHT_CONTENT # main-with-right# ENDIF #" role="main"&gt;
+            # IF C_MENUS_TOPCENTRAL_CONTENT #
+            &lt;div id="top-content"&gt;
+                # START menus_top_central #
+                {menus_top_central.MENU}
+                # END menus_top_central #
+            &lt;/div&gt;
+            &lt;div class="spacer"&gt;&lt;/div&gt;
+            # ENDIF #
+
+            &lt;div id="main-content" itemprop="mainContentOfPage"&gt;
+                # INCLUDE ACTIONS_MENU #
+                &lt;nav id="breadcrumb" itemprop="breadcrumb"&gt;
+                    &lt;ol&gt;
+                        &lt;li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"&gt;
+                            &lt;a href="{START_PAGE}" title="{L_INDEX}" itemprop="url"&gt;
+                                &lt;span itemprop="title"&gt;{L_INDEX}&lt;/span&gt;
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        # START link_bread_crumb #
+                        &lt;li itemscope itemtype="http://data-vocabulary.org/Breadcrumb" # IF link_bread_crumb.C_CURRENT # class="current" # ENDIF #&gt;
+                            # IF link_bread_crumb.C_CURRENT #
+                            &lt;span itemprop="title"&gt;{link_bread_crumb.TITLE}&lt;/span&gt;
+                            # ELSE #
+                            &lt;a href="{link_bread_crumb.URL}" title="{link_bread_crumb.TITLE}" itemprop="url"&gt;
+                                &lt;span itemprop="title"&gt;{link_bread_crumb.TITLE}&lt;/span&gt;
+                            &lt;/a&gt;
+                            # ENDIF #
+                        &lt;/li&gt;
+                        # END link_bread_crumb #
+                    &lt;/ol&gt;
+                &lt;/nav&gt;
+                # INCLUDE KERNEL_MESSAGE #
+                {CONTENT}
+            &lt;/div&gt;
+
+            # IF C_MENUS_BOTTOM_CENTRAL_CONTENT #
+            &lt;div id="bottom-content"&gt;
+                # START menus_bottom_central #
+                {menus_bottom_central.MENU}
+                # END menus_bottom_central #
+            &lt;/div&gt;
+            # ENDIF #
+        &lt;/div&gt;
+
+        # IF C_MENUS_RIGHT_CONTENT #
+        &lt;aside id="menu-right"&gt;
+            # START menus_right #
+            {menus_right.MENU}
+            # END menus_right #
+        &lt;/aside&gt;
+        # ENDIF #
+
+        &lt;div class="spacer"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+        # IF C_MENUS_TOP_FOOTER_CONTENT #
+        &lt;div id="top-footer"&gt;
+            # START menus_top_footer #
+            {menus_top_footer.MENU}
+            # END menus_top_footer #
+            &lt;div class="spacer"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        # ENDIF #
+
+
+    &lt;footer id="footer"&gt;
+
+        # IF C_MENUS_FOOTER_CONTENT #
+        &lt;div class="footer-content"&gt;
+            # START menus_footer #
+            {menus_footer.MENU}
+            # END menus_footer #
+        &lt;/div&gt;
+        # ENDIF #
+
+        &lt;div class="footer-infos"&gt;
+            &lt;span&gt;
+                {L_POWERED_BY} &lt;a href="http://www.phpboost.com" title="PHPBoost"&gt;PHPBoost&lt;/a&gt; {L_PHPBOOST_RIGHT}
+            &lt;/span&gt;
+            # IF C_DISPLAY_BENCH #
+            &lt;span&gt;
+                 | 
+                {L_ACHIEVED} {BENCH}{L_UNIT_SECOND} - {REQ} {L_REQ} - {MEMORY_USED}
+            &lt;/span&gt;
+            # ENDIF #
+            # IF C_DISPLAY_AUTHOR_THEME #
+            &lt;span&gt;
+                | {L_THEME} {L_THEME_NAME} {L_BY}
+                &lt;a href="{U_THEME_AUTHOR_LINK}"&gt;{L_THEME_AUTHOR}&lt;/a&gt;
+            &lt;/span&gt;
+            # ENDIF #
+        &lt;/div&gt;
+
+    &lt;/footer&gt;[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-config-ini">Le fichier config.ini</h2><br />
+
+<br />
+Le fichier <em>config.ini</em> permet d'afficher des informations sur le thème et de lui attribuer une configuration par défaut qui sera appliquée lorsque celui-ci sera installé.<br />
+<br />
+L'article <strong><a href="/wiki/fichier-de-configuration-d-un-theme-config-ini">Fichier de configuration d'un thème <em>config.ini</em></a></strong> détaille le contenu du fichier afin de vous permettre de le modifier simplement.<br />
+<br />
+[[CODE=txt]]author="PHPBoost"
+author_mail="contact@phpboost.com"
+author_link="http://www.phpboost.com"
+version=5.0.1
+date="24/02/2016"
+compatibility=5.0
+require_copyright=0
+html_version=5.0 Strict
+css_version=3.0
+columns_disabled=right
+variable_width=0
+width="1024px"
+pictures="theme/images/theme.jpg,theme/images/admin.jpg"[[/CODE]]<br />
+<br />
+Sur les thèmes officiels autre que celui de base, vous trouverez une dernière ligne qui permet de surveiller les mises à jour pour le thème.<br />
+[[CODE=txt]]repository="https://dl.phpboost.com/unofficial_templates.xml"[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</h2><br />
+
+<br />
+Le fichier <strong>frame.tpl</strong> contient la partie structurante de la page html. Il contient la balise d'en-tête HTML &lt;head&gt;.<br />
+La modification de ce fichier n'est nécessaire que si vous souhaitez ajouter un nouveau fichier css ou du code javascript sur l'ensemble du site.<br />
+<br />
+[[CODE=html]]&lt;!DOCTYPE html&gt;
+&lt;html lang="{L_XML_LANGUAGE}"&gt;
+    &lt;head&gt;
+        &lt;title&gt;{TITLE}&lt;/title&gt;
+        &lt;meta charset="windows-1252" /&gt;
+        # IF C_DESCRIPTION #&lt;meta name="description" content="{SITE_DESCRIPTION}" /&gt;# ENDIF #
+        &lt;meta name="generator" content="PHPBoost" /&gt;
+        # IF C_CANONICAL_URL #&lt;link rel="canonical" href="{U_CANONICAL}" /&gt;# ENDIF #
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"&gt;
+        
+        # IF C_CSS_CACHE_ENABLED #
+        &lt;link rel="stylesheet" href="${CSSCacheManager::get_css_path('/templates/default/theme/default.css;/kernel/lib/css/font-awesome/css/font-awesome.css;/templates/{THEME}/theme/design.css;/templates/{THEME}/theme/content.css;/templates/{THEME}/theme/table.css;/templates/{THEME}/theme/form.css;/templates/{THEME}/theme/global.css;/templates/{THEME}/theme/cssmenu.css')}" type="text/css" media="screen, print" /&gt;
+        # ELSE #
+        &lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/default/theme/default.css" type="text/css" media="screen, print" /&gt;
+        &lt;link rel="stylesheet" href="{PATH_TO_ROOT}/kernel/lib/css/font-awesome/css/font-awesome.css" /&gt;
+        &lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/design.css" type="text/css" media="screen" /&gt;
+        &lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/content.css" type="text/css" media="screen, print" /&gt;
+        &lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/table.css" type="text/css" media="screen, print" /&gt;
+        &lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/form.css" type="text/css" media="screen, print" /&gt;
+        &lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/global.css" type="text/css" media="screen, print" /&gt;
+        &lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/cssmenu.css" type="text/css" media="screen" /&gt;
+        # ENDIF #
+        # IF C_CSS_LOGIN_DISPLAYED #&lt;link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/login.css" type="text/css" media="screen" /&gt;# ENDIF #
+        
+        {MODULES_CSS}
+        # IF C_FAVICON #
+        &lt;link rel="shortcut icon" href="{FAVICON}" type="{FAVICON_TYPE}" /&gt;
+        # ENDIF #
+        # INCLUDE JS_TOP #
+    &lt;/head&gt;
+    &lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+        # INCLUDE BODY #
+        # INCLUDE JS_BOTTOM #
+    &lt;script&gt;
+&lt;!--
+var PATH_TO_ROOT = "";
+var TOKEN = "be7bae63f4f99d4b";
+var THEME = "phpboost";
+var LANG = "french";
+--&gt;
+&lt;/script&gt;&lt;script src="/kernel/lib/js/global.js"&gt;&lt;/script&gt;&lt;script src="/wiki/templates/js/wiki.js"&gt;&lt;/script&gt;&lt;script src="/BBCode/templates/js/bbcode.js"&gt;&lt;/script&gt;&lt;script src="/kernel/lib/js/global.js"&gt;&lt;/script&gt;&lt;script src="/wiki/templates/js/wiki.js"&gt;&lt;/script&gt;&lt;script src="/BBCode/templates/js/bbcode.js"&gt;&lt;/script&gt;&lt;script src="/kernel/lib/js/global.js"&gt;&lt;/script&gt;&lt;script src="/wiki/templates/js/wiki.js"&gt;&lt;/script&gt;&lt;script src="/BBCode/templates/js/bbcode.js"&gt;&lt;/script&gt;&lt;script src="/kernel/lib/js/global.js"&gt;&lt;/script&gt;&lt;script src="/wiki/templates/js/wiki.js"&gt;&lt;/script&gt;&lt;script src="/BBCode/templates/js/bbcode.js"&gt;&lt;/script&gt;&lt;script src="/BBCode/templates/js/bbcode.js"&gt;&lt;/script&gt;&lt;script src="/BBCode/templates/js/bbcode.js"&gt;&lt;/script&gt;&lt;script src="/BBCode/templates/js/bbcode.js"&gt;&lt;/script&gt;&lt;script src="/BBCode/templates/js/bbcode.js"&gt;&lt;/script&gt;&lt;script&gt;
+function open_submenu(myid)
+{
+jQuery('#' + myid).toggleClass('active');
+}
+function check_search_mini_form_post()
+{
+var textSearched = document.getElementById('TxTMiniSearched').value;
+if (textSearched.length &gt; 3)
+{
+textSearched = escape_xmlhttprequest(textSearched);
+return true;
+}
+else
+{
+alert('La chaine recherchée doit faire au moins 4 caractères !');
+return false;
+}
+}
+jQuery(document).ready(function() {
+jQuery('#search-token').val(TOKEN);
+});
+jQuery("#cssmenu-1784").menumaker({ title: "Menu Principal", format: "multitoggle", breakpoint: 768 }); 
+jQuery("#cssmenu-module-wiki").menumaker({
+title: "Menu d'actions du module Wiki",
+format: "multitoggle",
+actionslinks: true,
+breakpoint: 768
+});
+jQuery(document).ready(function() {
+jQuery("#cssmenu-module-wiki ul").removeClass('hidden');
+});
+var path = '/wiki/templates';
+var selected_cat = 215;
+function check_form_post(){
+if(document.getElementById('title').value == "") {
+alert("Veuillez entrer un titre !");
+return false;
+}
+if(document.getElementById('contents').value == "") {
+alert("Veuillez entrer un texte !");
+return false;
+}
+return true;
+}
+var tinymce_editor = 0;
+var enter_text = "Veuillez entrer un nom de lien";
+var title_link = "Titre de l'article";
+var enter_paragraph_name = "Veuillez entrer le titre du paragraphe";
+var title_paragraph = "Titre du paragraphe";
+function XMLHttpRequest_preview(field)
+{
+if( XMLHttpRequest_preview.arguments.length == 0 )
+field = 'contents';
+var contents = jQuery('#' + field).val();
+var preview_field = 'xmlhttprequest-preview' + field;
+if( contents != "" )
+{
+jQuery("#" + preview_field).slideDown(500);
+jQuery('#loading-preview-' + field).show();
+jQuery.ajax({
+url: PATH_TO_ROOT + "/kernel/framework/ajax/content_xmlhttprequest.php",
+type: "post",
+data: {
+token: 'be7bae63f4f99d4b',
+path_to_root: '..',
+editor: 'BBCode',
+page_path: '/wiki/post.php',
+contents: contents,
+ftags: ''
+},
+success: function(returnData){
+jQuery('#' + preview_field).html(returnData);
+jQuery('#loading-preview-' + field).hide();
+}
+});
+}
+else
+alert("Veuillez entrer un texte !");
+}
+set_bbcode_preference('bbcode-container-more');
+var PATH_TO_ROOT = "";
+var TOKEN = "6d6237bc95438421";
+var THEME = "phpboost";
+var LANG = "french";
+function open_submenu(myid)
+{
+jQuery('#' + myid).toggleClass('active');
+}
+function check_search_mini_form_post()
+{
+var textSearched = document.getElementById('TxTMiniSearched').value;
+if (textSearched.length &gt; 3)
+{
+textSearched = escape_xmlhttprequest(textSearched);
+return true;
+}
+else
+{
+alert('La chaine recherchée doit faire au moins 4 caractères !');
+return false;
+}
+}
+jQuery(document).ready(function() {
+jQuery('#search-token').val(TOKEN);
+});
+jQuery("#cssmenu-1784").menumaker({ title: "Menu Principal", format: "multitoggle", breakpoint: 768 }); 
+jQuery("#cssmenu-module-wiki").menumaker({
+title: "Menu d'actions du module Wiki",
+format: "multitoggle",
+actionslinks: true,
+breakpoint: 768
+});
+jQuery(document).ready(function() {
+jQuery("#cssmenu-module-wiki ul").removeClass('hidden');
+});
+var path = '/wiki/templates';
+var selected_cat = 215;
+function check_form_post(){
+if(document.getElementById('title').value == "") {
+alert("Veuillez entrer un titre !");
+return false;
+}
+if(document.getElementById('contents').value == "") {
+alert("Veuillez entrer un texte !");
+return false;
+}
+return true;
+}
+var tinymce_editor = 0;
+var enter_text = "Veuillez entrer un nom de lien";
+var title_link = "Titre de l'article";
+var enter_paragraph_name = "Veuillez entrer le titre du paragraphe";
+var title_paragraph = "Titre du paragraphe";
+function XMLHttpRequest_preview(field)
+{
+if( XMLHttpRequest_preview.arguments.length == 0 )
+field = 'contents';
+var contents = jQuery('#' + field).val();
+var preview_field = 'xmlhttprequest-preview' + field;
+if( contents != "" )
+{
+jQuery("#" + preview_field).slideDown(500);
+jQuery('#loading-preview-' + field).show();
+jQuery.ajax({
+url: PATH_TO_ROOT + "/kernel/framework/ajax/content_xmlhttprequest.php",
+type: "post",
+data: {
+token: '6d6237bc95438421',
+path_to_root: '..',
+editor: 'BBCode',
+page_path: '/wiki/post.php',
+contents: contents,
+ftags: ''
+},
+success: function(returnData){
+jQuery('#' + preview_field).html(returnData);
+jQuery('#loading-preview-' + field).hide();
+}
+});
+}
+else
+alert("Veuillez entrer un texte !");
+}
+set_bbcode_preference('bbcode-container-more');
+var PATH_TO_ROOT = "";
+var TOKEN = "ad57cc15e56677b7";
+var THEME = "phpboost";
+var LANG = "french";
+function open_submenu(myid)
+{
+jQuery('#' + myid).toggleClass('active');
+}
+function check_search_mini_form_post()
+{
+var textSearched = document.getElementById('TxTMiniSearched').value;
+if (textSearched.length &gt; 3)
+{
+textSearched = escape_xmlhttprequest(textSearched);
+return true;
+}
+else
+{
+alert('La chaine recherchée doit faire au moins 4 caractères !');
+return false;
+}
+}
+jQuery(document).ready(function() {
+jQuery('#search-token').val(TOKEN);
+});
+jQuery("#cssmenu-1784").menumaker({ title: "Menu Principal", format: "multitoggle", breakpoint: 768 }); 
+jQuery("#cssmenu-module-wiki").menumaker({
+title: "Menu d'actions du module Wiki",
+format: "multitoggle",
+actionslinks: true,
+breakpoint: 768
+});
+jQuery(document).ready(function() {
+jQuery("#cssmenu-module-wiki ul").removeClass('hidden');
+});
+var path = '/wiki/templates';
+var selected_cat = 215;
+function check_form_post(){
+if(document.getElementById('title').value == "") {
+alert("Veuillez entrer un titre !");
+return false;
+}
+if(document.getElementById('contents').value == "") {
+alert("Veuillez entrer un texte !");
+return false;
+}
+return true;
+}
+var tinymce_editor = 0;
+var enter_text = "Veuillez entrer un nom de lien";
+var title_link = "Titre de l'article";
+var enter_paragraph_name = "Veuillez entrer le titre du paragraphe";
+var title_paragraph = "Titre du paragraphe";
+function XMLHttpRequest_preview(field)
+{
+if( XMLHttpRequest_preview.arguments.length == 0 )
+field = 'contents';
+var contents = jQuery('#' + field).val();
+var preview_field = 'xmlhttprequest-preview' + field;
+if( contents != "" )
+{
+jQuery("#" + preview_field).slideDown(500);
+jQuery('#loading-preview-' + field).show();
+jQuery.ajax({
+url: PATH_TO_ROOT + "/kernel/framework/ajax/content_xmlhttprequest.php",
+type: "post",
+data: {
+token: 'ad57cc15e56677b7',
+path_to_root: '..',
+editor: 'BBCode',
+page_path: '/wiki/post.php',
+contents: contents,
+ftags: ''
+},
+success: function(returnData){
+jQuery('#' + preview_field).html(returnData);
+jQuery('#loading-preview-' + field).hide();
+}
+});
+}
+else
+alert("Veuillez entrer un texte !");
+}
+set_bbcode_preference('bbcode-container-more');
+var PATH_TO_ROOT = "";
+var TOKEN = "ad57cc15e56677b7";
+var THEME = "phpboost";
+var LANG = "french";
+function open_submenu(myid)
+{
+jQuery('#' + myid).toggleClass('active');
+}
+function check_search_mini_form_post()
+{
+var textSearched = document.getElementById('TxTMiniSearched').value;
+if (textSearched.length &gt; 3)
+{
+textSearched = escape_xmlhttprequest(textSearched);
+return true;
+}
+else
+{
+alert('La chaine recherchée doit faire au moins 4 caractères !');
+return false;
+}
+}
+jQuery(document).ready(function() {
+jQuery('#search-token').val(TOKEN);
+});
+jQuery("#cssmenu-1784").menumaker({ title: "Menu Principal", format: "multitoggle", breakpoint: 768 }); 
+jQuery("#cssmenu-module-wiki").menumaker({
+title: "Menu d'actions du module Wiki",
+format: "multitoggle",
+actionslinks: true,
+breakpoint: 768
+});
+jQuery(document).ready(function() {
+jQuery("#cssmenu-module-wiki ul").removeClass('hidden');
+});
+var path = '/wiki/templates';
+var selected_cat = 215;
+function check_form_post(){
+if(document.getElementById('title').value == "") {
+alert("Veuillez entrer un titre !");
+return false;
+}
+if(document.getElementById('contents').value == "") {
+alert("Veuillez entrer un texte !");
+return false;
+}
+return true;
+}
+var tinymce_editor = 0;
+var enter_text = "Veuillez entrer un nom de lien";
+var title_link = "Titre de l'article";
+var enter_paragraph_name = "Veuillez entrer le titre du paragraphe";
+var title_paragraph = "Titre du paragraphe";
+function XMLHttpRequest_preview(field)
+{
+if( XMLHttpRequest_preview.arguments.length == 0 )
+field = 'contents';
+var contents = jQuery('#' + field).val();
+var preview_field = 'xmlhttprequest-preview' + field;
+if( contents != "" )
+{
+jQuery("#" + preview_field).slideDown(500);
+jQuery('#loading-preview-' + field).show();
+jQuery.ajax({
+url: PATH_TO_ROOT + "/kernel/framework/ajax/content_xmlhttprequest.php",
+type: "post",
+data: {
+token: 'ad57cc15e56677b7',
+path_to_root: '..',
+editor: 'BBCode',
+page_path: '/wiki/post.php',
+contents: contents,
+ftags: ''
+},
+success: function(returnData){
+jQuery('#' + preview_field).html(returnData);
+jQuery('#loading-preview-' + field).hide();
+}
+});
+}
+else
+alert("Veuillez entrer un texte !");
+}
+set_bbcode_preference('bbcode-container-more');
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9800261-7']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+function shoutbox_add_message()
+{
+var pseudo = jQuery("#shout-pseudo").val();
+var contents = jQuery("#shout-contents").val();
+if (pseudo && contents)
+{
+jQuery.ajax({
+url: '/shoutbox/ajax_add/',
+type: "post",
+dataType: "json",
+data: {'pseudo' : pseudo, 'contents' : contents, 'token' : 'ad57cc15e56677b7'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+if(returnData.code &gt; 0) {
+shoutbox_refresh_messages_box();
+jQuery('#shout-contents').val('');
+} else {
+switch(returnData.code)
+{
+case -1:
+alert('Vous ne pouvez pas encore poster, réessayez dans quelques instants');
+break;
+case -2:
+alert("Nombre maximum de lien(s) internet autorisé(s) dans votre message : 3");
+break;
+case -3:
+alert('Tous les champs obligatoires doivent être remplis !');
+break;
+case -4:
+alert('Vous n\'avez pas le niveau requis !');
+break;
+}
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+alert('Jeton de session invalide. Veuillez essayer de recharger la page car l\'opération n\'a pas pu être effectuée.');
+}
+});
+} else {
+alert("Veuillez entrer un texte !");
+return false;
+}
+}
+function shoutbox_delete_message(id_message)
+{
+if (confirm('Voulez-vous vraiment supprimer cet élément ?'))
+{
+jQuery.ajax({
+url: '/shoutbox/ajax_delete/',
+type: "post",
+dataType: "json",
+data: {'id' : id_message, 'token' : 'ad57cc15e56677b7'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+var code = returnData.code;
+if(code &gt; 0) {
+jQuery('#shoutbox-message-' + code).remove();
+} else {
+alert("Erreur lors de la suppression du message");
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+alert('Jeton de session invalide. Veuillez essayer de recharger la page car l\'opération n\'a pas pu être effectuée.');
+}
+});
+}
+}
+function shoutbox_refresh_messages_box() {
+jQuery.ajax({
+url: '/shoutbox/ajax_refresh/',
+type: "post",
+dataType: "json",
+data: {'token' : 'ad57cc15e56677b7'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+jQuery('#shoutbox-messages-container').html(returnData.messages);
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+messages = e.responseText;
+if (messages.substring(2, 10) == "messages") {
+messages = messages.replace(/\\(.?)/g, function (s, n1){switch (n1){case '\\':return '\\';case '0':return '\u0000';case '':return '';default:return n1;}});
+messages = messages.replace(/&gt;nn&lt;/g, '&gt;&lt;');
+                                messages = messages.replace(/&lt;br \/&gt;n/g, '&lt;br \/&gt;');
+messages = messages.slice(14);
+messages = messages.slice(0, -3);
+jQuery('#shoutbox-messages-container').html(messages);
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+}
+});
+}
+setInterval(shoutbox_refresh_messages_box, 60000);
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    jQuery("#cssmenu-1764").menumaker({ title: "Liens utiles", format: "multitoggle", breakpoint: 768, static: true }); 
+ 
+jQuery('[data-confirmation]').each(function() {
+data_confirmation = jQuery(this).attr('data-confirmation');
+if (data_confirmation == 'delete-element')
+var message = 'Voulez-vous vraiment supprimer cet élément ?';
+else
+var message = data_confirmation;
+this.onclick = function () { return confirm(message); }
+});
+jQuery(document).ready(function() {
+jQuery('a[rel^=lightbox]').attr('data-rel', 'lightcase:collection');
+jQuery('a[data-lightbox^=formatter]').attr('data-rel', 'lightcase:collection');
+jQuery('a[data-rel^=lightcase]').lightcase({
+labels : {
+'errorMessage' : 'L\'élément que vous demandez n\'existe pas.',
+'sequenceInfo.of' : ' ' + 'sur' + ' ',
+'close' : 'Fermer',
+'navigator.prev' : 'Précédent',
+'navigator.next' : 'Suivant',
+'navigator.play' : 'Lecture',
+'navigator.pause' : 'Pause'
+}
+});
+});
+jQuery('#table').basictable();
+jQuery('#table2').basictable();
+jQuery('#table3').basictable();
+jQuery('#table4').basictable();
+jQuery('#table5').basictable();
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9800261-7']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+function shoutbox_add_message()
+{
+var pseudo = jQuery("#shout-pseudo").val();
+var contents = jQuery("#shout-contents").val();
+if (pseudo && contents)
+{
+jQuery.ajax({
+url: '/shoutbox/ajax_add/',
+type: "post",
+dataType: "json",
+data: {'pseudo' : pseudo, 'contents' : contents, 'token' : 'ad57cc15e56677b7'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+if(returnData.code &gt; 0) {
+shoutbox_refresh_messages_box();
+jQuery('#shout-contents').val('');
+} else {
+switch(returnData.code)
+{
+case -1:
+alert('Vous ne pouvez pas encore poster, réessayez dans quelques instants');
+break;
+case -2:
+alert("Nombre maximum de lien(s) internet autorisé(s) dans votre message : 3");
+break;
+case -3:
+alert('Tous les champs obligatoires doivent être remplis !');
+break;
+case -4:
+alert('Vous n\'avez pas le niveau requis !');
+break;
+}
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+alert('Jeton de session invalide. Veuillez essayer de recharger la page car l\'opération n\'a pas pu être effectuée.');
+}
+});
+} else {
+alert("Veuillez entrer un texte !");
+return false;
+}
+}
+function shoutbox_delete_message(id_message)
+{
+if (confirm('Voulez-vous vraiment supprimer cet élément ?'))
+{
+jQuery.ajax({
+url: '/shoutbox/ajax_delete/',
+type: "post",
+dataType: "json",
+data: {'id' : id_message, 'token' : 'ad57cc15e56677b7'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+var code = returnData.code;
+if(code &gt; 0) {
+jQuery('#shoutbox-message-' + code).remove();
+} else {
+alert("Erreur lors de la suppression du message");
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+alert('Jeton de session invalide. Veuillez essayer de recharger la page car l\'opération n\'a pas pu être effectuée.');
+}
+});
+}
+}
+function shoutbox_refresh_messages_box() {
+jQuery.ajax({
+url: '/shoutbox/ajax_refresh/',
+type: "post",
+dataType: "json",
+data: {'token' : 'ad57cc15e56677b7'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+jQuery('#shoutbox-messages-container').html(returnData.messages);
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+messages = e.responseText;
+if (messages.substring(2, 10) == "messages") {
+messages = messages.replace(/\\(.?)/g, function (s, n1){switch (n1){case '\\':return '\\';case '0':return '\u0000';case '':return '';default:return n1;}});
+messages = messages.replace(/&gt;nn&lt;/g, '&gt;&lt;');
+                                messages = messages.replace(/&lt;br \/&gt;n/g, '&lt;br \/&gt;');
+messages = messages.slice(14);
+messages = messages.slice(0, -3);
+jQuery('#shoutbox-messages-container').html(messages);
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+}
+});
+}
+setInterval(shoutbox_refresh_messages_box, 60000);
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    jQuery("#cssmenu-1764").menumaker({ title: "Liens utiles", format: "multitoggle", breakpoint: 768, static: true }); 
+ 
+jQuery('[data-confirmation]').each(function() {
+data_confirmation = jQuery(this).attr('data-confirmation');
+if (data_confirmation == 'delete-element')
+var message = 'Voulez-vous vraiment supprimer cet élément ?';
+else
+var message = data_confirmation;
+this.onclick = function () { return confirm(message); }
+});
+jQuery(document).ready(function() {
+jQuery('a[rel^=lightbox]').attr('data-rel', 'lightcase:collection');
+jQuery('a[data-lightbox^=formatter]').attr('data-rel', 'lightcase:collection');
+jQuery('a[data-rel^=lightcase]').lightcase({
+labels : {
+'errorMessage' : 'L\'élément que vous demandez n\'existe pas.',
+'sequenceInfo.of' : ' ' + 'sur' + ' ',
+'close' : 'Fermer',
+'navigator.prev' : 'Précédent',
+'navigator.next' : 'Suivant',
+'navigator.play' : 'Lecture',
+'navigator.pause' : 'Pause'
+}
+});
+});
+jQuery('#table').basictable();
+jQuery('#table2').basictable();
+jQuery('#table3').basictable();
+jQuery('#table4').basictable();
+jQuery('#table5').basictable();
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9800261-7']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+function shoutbox_add_message()
+{
+var pseudo = jQuery("#shout-pseudo").val();
+var contents = jQuery("#shout-contents").val();
+if (pseudo && contents)
+{
+jQuery.ajax({
+url: '/shoutbox/ajax_add/',
+type: "post",
+dataType: "json",
+data: {'pseudo' : pseudo, 'contents' : contents, 'token' : '6d6237bc95438421'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+if(returnData.code &gt; 0) {
+shoutbox_refresh_messages_box();
+jQuery('#shout-contents').val('');
+} else {
+switch(returnData.code)
+{
+case -1:
+alert('Vous ne pouvez pas encore poster, réessayez dans quelques instants');
+break;
+case -2:
+alert("Nombre maximum de lien(s) internet autorisé(s) dans votre message : 3");
+break;
+case -3:
+alert('Tous les champs obligatoires doivent être remplis !');
+break;
+case -4:
+alert('Vous n\'avez pas le niveau requis !');
+break;
+}
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+alert('Jeton de session invalide. Veuillez essayer de recharger la page car l\'opération n\'a pas pu être effectuée.');
+}
+});
+} else {
+alert("Veuillez entrer un texte !");
+return false;
+}
+}
+function shoutbox_delete_message(id_message)
+{
+if (confirm('Voulez-vous vraiment supprimer cet élément ?'))
+{
+jQuery.ajax({
+url: '/shoutbox/ajax_delete/',
+type: "post",
+dataType: "json",
+data: {'id' : id_message, 'token' : '6d6237bc95438421'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+var code = returnData.code;
+if(code &gt; 0) {
+jQuery('#shoutbox-message-' + code).remove();
+} else {
+alert("Erreur lors de la suppression du message");
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+alert('Jeton de session invalide. Veuillez essayer de recharger la page car l\'opération n\'a pas pu être effectuée.');
+}
+});
+}
+}
+function shoutbox_refresh_messages_box() {
+jQuery.ajax({
+url: '/shoutbox/ajax_refresh/',
+type: "post",
+dataType: "json",
+data: {'token' : '6d6237bc95438421'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+jQuery('#shoutbox-messages-container').html(returnData.messages);
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+messages = e.responseText;
+if (messages.substring(2, 10) == "messages") {
+messages = messages.replace(/\\(.?)/g, function (s, n1){switch (n1){case '\\':return '\\';case '0':return '\u0000';case '':return '';default:return n1;}});
+messages = messages.replace(/&gt;nn&lt;/g, '&gt;&lt;');
+                                messages = messages.replace(/&lt;br \/&gt;n/g, '&lt;br \/&gt;');
+messages = messages.slice(14);
+messages = messages.slice(0, -3);
+jQuery('#shoutbox-messages-container').html(messages);
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+}
+});
+}
+setInterval(shoutbox_refresh_messages_box, 60000);
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    jQuery("#cssmenu-1764").menumaker({ title: "Liens utiles", format: "multitoggle", breakpoint: 768, static: true }); 
+ 
+jQuery('[data-confirmation]').each(function() {
+data_confirmation = jQuery(this).attr('data-confirmation');
+if (data_confirmation == 'delete-element')
+var message = 'Voulez-vous vraiment supprimer cet élément ?';
+else
+var message = data_confirmation;
+this.onclick = function () { return confirm(message); }
+});
+jQuery(document).ready(function() {
+jQuery('a[rel^=lightbox]').attr('data-rel', 'lightcase:collection');
+jQuery('a[data-lightbox^=formatter]').attr('data-rel', 'lightcase:collection');
+jQuery('a[data-rel^=lightcase]').lightcase({
+labels : {
+'errorMessage' : 'L\'élément que vous demandez n\'existe pas.',
+'sequenceInfo.of' : ' ' + 'sur' + ' ',
+'close' : 'Fermer',
+'navigator.prev' : 'Précédent',
+'navigator.next' : 'Suivant',
+'navigator.play' : 'Lecture',
+'navigator.pause' : 'Pause'
+}
+});
+});
+jQuery('#table').basictable();
+jQuery('#table2').basictable();
+jQuery('#table3').basictable();
+jQuery('#table4').basictable();
+jQuery('#table5').basictable();
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-9800261-7']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+function shoutbox_add_message()
+{
+var pseudo = jQuery("#shout-pseudo").val();
+var contents = jQuery("#shout-contents").val();
+if (pseudo && contents)
+{
+jQuery.ajax({
+url: '/shoutbox/ajax_add/',
+type: "post",
+dataType: "json",
+data: {'pseudo' : pseudo, 'contents' : contents, 'token' : 'be7bae63f4f99d4b'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+if(returnData.code &gt; 0) {
+shoutbox_refresh_messages_box();
+jQuery('#shout-contents').val('');
+} else {
+switch(returnData.code)
+{
+case -1:
+alert('Vous ne pouvez pas encore poster, réessayez dans quelques instants');
+break;
+case -2:
+alert("Nombre maximum de lien(s) internet autorisé(s) dans votre message : 3");
+break;
+case -3:
+alert('Tous les champs obligatoires doivent être remplis !');
+break;
+case -4:
+alert('Vous n\'avez pas le niveau requis !');
+break;
+}
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+alert('Jeton de session invalide. Veuillez essayer de recharger la page car l\'opération n\'a pas pu être effectuée.');
+}
+});
+} else {
+alert("Veuillez entrer un texte !");
+return false;
+}
+}
+function shoutbox_delete_message(id_message)
+{
+if (confirm('Voulez-vous vraiment supprimer cet élément ?'))
+{
+jQuery.ajax({
+url: '/shoutbox/ajax_delete/',
+type: "post",
+dataType: "json",
+data: {'id' : id_message, 'token' : 'be7bae63f4f99d4b'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+var code = returnData.code;
+if(code &gt; 0) {
+jQuery('#shoutbox-message-' + code).remove();
+} else {
+alert("Erreur lors de la suppression du message");
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+alert('Jeton de session invalide. Veuillez essayer de recharger la page car l\'opération n\'a pas pu être effectuée.');
+}
+});
+}
+}
+function shoutbox_refresh_messages_box() {
+jQuery.ajax({
+url: '/shoutbox/ajax_refresh/',
+type: "post",
+dataType: "json",
+data: {'token' : 'be7bae63f4f99d4b'},
+beforeSend: function(){
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-spin fa-spinner"&gt;&lt;/i&gt;');
+},
+success: function(returnData){
+jQuery('#shoutbox-messages-container').html(returnData.messages);
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+},
+error: function(e){
+messages = e.responseText;
+if (messages.substring(2, 10) == "messages") {
+messages = messages.replace(/\\(.?)/g, function (s, n1){switch (n1){case '\\':return '\\';case '0':return '\u0000';case '':return '';default:return n1;}});
+messages = messages.replace(/&gt;nn&lt;/g, '&gt;&lt;');
+                                messages = messages.replace(/&lt;br \/&gt;n/g, '&lt;br \/&gt;');
+messages = messages.slice(14);
+messages = messages.slice(0, -3);
+jQuery('#shoutbox-messages-container').html(messages);
+}
+jQuery('#shoutbox-refresh').html('&lt;i class="fa fa-refresh"&gt;&lt;/i&gt;');
+}
+});
+}
+setInterval(shoutbox_refresh_messages_box, 60000);
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    jQuery("#cssmenu-1764").menumaker({ title: "Liens utiles", format: "multitoggle", breakpoint: 768, static: true }); 
+ 
+jQuery('[data-confirmation]').each(function() {
+data_confirmation = jQuery(this).attr('data-confirmation');
+if (data_confirmation == 'delete-element')
+var message = 'Voulez-vous vraiment supprimer cet élément ?';
+else
+var message = data_confirmation;
+this.onclick = function () { return confirm(message); }
+});
+jQuery(document).ready(function() {
+jQuery('a[rel^=lightbox]').attr('data-rel', 'lightcase:collection');
+jQuery('a[data-lightbox^=formatter]').attr('data-rel', 'lightcase:collection');
+jQuery('a[data-rel^=lightcase]').lightcase({
+labels : {
+'errorMessage' : 'L\'élément que vous demandez n\'existe pas.',
+'sequenceInfo.of' : ' ' + 'sur' + ' ',
+'close' : 'Fermer',
+'navigator.prev' : 'Précédent',
+'navigator.next' : 'Suivant',
+'navigator.play' : 'Lecture',
+'navigator.pause' : 'Pause'
+}
+});
+});
+jQuery('#table').basictable();
+jQuery('#table2').basictable();
+jQuery('#table3').basictable();
+jQuery('#table4').basictable();
+jQuery('#table5').basictable();
+&lt;/script&gt;&lt;script&gt;&lt;/script&gt;&lt;script&gt;&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-repertoire-images">Le répertoire images</h1><br />
+
+<br />
+Le répertoire images contient les images du thème qui ne sont pas associées à un fichier CSS.<br />
+Par défaut, le répertoire ne contient que l'image <em>no_avatar.png</em>.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-repertoire-lang-et-le-fichier-desc-ini">Le répertoire lang et le fichier desc.ini</h1><br />
+
+<br />
+Le répertoire lang contient un répertoire par langue.<br />
+Par défaut, celui-ci contient un répertoire <em>english</em> et <em>french</em>.<br />
+Chaque répertoire ne contient qu'un seul fichier <em>desc.ini</em>.<br />
+<br />
+Le fichier desc.ini contient les éléments identifiants le thème que l'on retrouve dans l'administration des thèmes du panneau d'administration. On y retrouve le nom du thème <em>name</em>, la description <em>desc</em> et les couleurs principales <em>main_color</em>. <span class="notice">La valeur de <em>name</em> peut être différente du nom du répertoire.</span><br />
+[[CODE=text]]name="Base"
+desc="The PHPBoost official theme."
+main_color="White, Blue"[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-repertoire-theme">Le répertoire theme</h1><br />
+
+<br />
+Le répertoire thème contient les différents fichiers CSS du thème ainsi que les images associés à ce thème.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-fichiers-css">Les fichiers CSS</h2><br />
+
+<br />
+Chaque thème est constitué des 7 fichiers CSS suivant : <ul class="formatter-ul">
+<li class="formatter-li"><strong><a href="/wiki/fichier-content-css">content.css</a></strong> : Il contient les classes propres au contenu du site (messages, modules).
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-cssmenu-css">cssmenu.css</a></strong> : Il contient toutes les classes qui permettent la gestion des menus.
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-design-css">design.css</a></strong> : Il contient toutes les classes de mises en forme du sites (Le gros du Design)
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-form-css">form.css</a></strong> : Il contient toutes les classes pour la mise en forme des formulaires.
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-global-css">global.css</a></strong> : il contient toutes les classes utiles sur le site et communes aux différents modules.
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-login-css">login.css</a></strong> : il contient les classes pour un affichage uniquement du login.
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-table-css">table.css</a></strong> : il contient les classes de mise en forme des tableaux.<br />
+</li></ul> Vous retrouverez le contenu de chaque fichier dans l'article associé à chaque fichier.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-repertoire-images">Le répertoire images</h2><br />
+
+<br />
+Le répertoire images du sous dossier <em>theme</em>, contient les images appelées par les fichiers CSS ou TPL du thème.<br />
+Pour le thème de base on y retrouve : <ul class="formatter-ul">
+<li class="formatter-li"><em>admin.jpg</em> : Un rendu du panneau d'administration
+</li><li class="formatter-li"><em>logo.png</em> : Le logo de base
+</li><li class="formatter-li"><em>theme.png</em> : Un rendu du thème (Vu du site)<br />
+</li></ul><br />
+La grande différence avec les versions 4.0 et antérieures est la quantité d'images. L'utilisation de la librairie Font-Awesome a permis de réduire considérablement le nombre d'image dans un thème et donc la taille. Si néanmoins vous souhaitez revenir à des images, lisez l'article suivant <a href="/wiki/remplacer-les-icones-fa-par-des-images"><strong>Remplacer les icones FontAwesome par des images</strong></a> pour voir un exemple de modification.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-repertoire-modules">Le répertoire modules</h1><br />
+
+<br />
+Ce répertoire n'est pas obligatoire, il est nécessaire uniquement lorsque vous souhaitez appliquer des modifications au design d'un module de façon spécifique à un thème.<br />
+<br />
+S'il existe, son contenu serait le suivant : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> /connect<br />
+<div class="indent"><ul class="formatter-ul">
+<li class="formatter-li"> connect_mini.css
+</li><li class="formatter-li"> connect_mini.tpl
+</li><li class="formatter-li">...<br />
+</li></ul></div>
+</li><li class="formatter-li"> /forum
+</li><li class="formatter-li"> ...<br />
+</li></ul><br />
+<br />
+Il contient un répertoire par module. <br />
+Le nom du répertoire doit être identique au module que l'on souhaite surcharger. Les fichiers contenus dans ce répertoire remplacent les fichiers des modules.<br />
+<br />
+Chaque répertoire de module peut contenir le ou les fichiers .tpl ou .css que l'on souhaite remplacer.<br />
+<br />
+Pour en savoir plus sur la personnalisation d'un thème, vous pouvez consulter <strong><a href="/wiki/personnaliser-un-theme">cet article</a></strong>.<br />
+<br />
+<span class="warning">Il est préférable de modifier un thème que de modifier le module. Cela permet notamment de faciliter les mises à jours des modules.</span>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1459831809</timestamp>
+  </article>
+</articles>

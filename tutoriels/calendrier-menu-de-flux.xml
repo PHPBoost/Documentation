@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>302</id>
+    <id_contents>1640</id_contents>
+    <title><![CDATA[Calendrier - menu de flux]]></title>
+    <encoded_title><![CDATA[calendrier-menu-de-flux]]></encoded_title>
+    <hits>1068</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>1640</con_id_contents>
+    <con_id_article>302</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Par défaut les menus de flux sont quasiment identiques et affichent les entrées d'un module dans l'ordre décroissant de création.<br />
+<br />
+Je vous propose d'améliorer le menu de flux du module Calendrier afin d'obtenir un menu affichant les prochaines entrées dans un ordre croissant de rendez-vous.<br />
+<br />
+<span class="warning">ATTENTION: Toute modification d'un fichier php sera annulée par une mise à jour officielle du module correspondant - pensez à garder une copie de vos modifications</span><br />
+<br />
+modification réalisée à partir de phpboost 4.1.2<br />
+<br />
+<h3 class="formatter-title">calendar/phpboost/CalendarFeedProvider.class.php</h3><br />
+<br />
+modification à partir de la ligne 66<br />
+[[CODE=php]]WHERE approved = 1
+AND id_category IN :cats_ids
+ORDER BY start_date DESC', array([[/CODE]] par [[CODE=php]]WHERE approved = 1
+AND start_date &gt; ' . time() . '
+AND id_category IN :cats_ids
+ORDER BY start_date ASC', array([[/CODE]]<br />
+<br />
+modification ligne <s>86</s> 87 (après modification ci-dessus)<br />
+[[CODE=php]]$item-&gt;set_date($event-&gt;get_content()-&gt;get_creation_date());[[/CODE]] par [[CODE=php]]$item-&gt;set_date($event-&gt;get_start_date());[[/CODE]]<br />
+<br />
+Résultat:<br />
+il faut bien sur creer un menu de flux : administration &gt; contenu &gt; menus =&gt; ajouter un menu =&gt; menu de flux =&gt; choisir : calendar/racine (ou une catégorie si vous en avez créé)<br />
+vous pouvez créer autant de menus que de catégories - par défaut la catégorie "racine" affiche les entrées de toutes les catégories.<br />
+<span class="success">Affichage des événements dans l'ordre croissant, classé par date de rendez-vous au lieu de la date de création de l'événement</span><br />
+<br />
+exemple pour des événements tous créés à la même date (09-09): <img src="https://i.imgur.com/9mdFDQY.png" alt="" /><br />
+<br />
+<span class="warning">Pensez à vider le cache syndication pour mettre à jour les menus de flux existants.</span>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965905</timestamp>
+  </article>
+</articles>

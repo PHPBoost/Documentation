@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>45</id>
+    <id_contents>1668</id_contents>
+    <title><![CDATA[Administration du module Forum]]></title>
+    <encoded_title><![CDATA[administration-du-module-forum]]></encoded_title>
+    <hits>1724</hits>
+    <id_cat>25</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>25</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>44</cat_article_id>
+    <con_id_contents>1668</con_id_contents>
+    <con_id_article>45</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_configuration-du-forum">Configuration du forum</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-du-forum">Configuration du forum</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_gestion-des-rangs">Gestion des rangs</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_gestion-des-categories">Gestion des catégories</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_1.jpg" alt="" /></p><br />
+<br />
+Ici vous pouvez voir toutes les catégories et sous forums de votre module forum.<br />
+<br />
+Chaque catégorie à la racine ne peut pas recevoir de posts, mais que des forums.<br />
+Ensuite chaque sous forum peut contenir des sous forums, de manière infinie, mais bon évitez les sous sous (...) forums car après l'utilisateur ne s'y retrouve plus.<br />
+<br />
+Voici à quoi correspondent les boutons d'administration : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrows"></i>
+<!-- END HTML --> : permet de déplacer chaque élément là où vous le souhaitez, en cliquant dessus puis en le lâchant lorsqu'il est bien place (technique du glisser/déposer)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-up"></i>
+<!-- END HTML --> : sert à déplacer vers le haut une catégorie ou un forum.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML --> : sert à déplacer vers le bas une catégorie ou un forum.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> : sert à éditer un élément pour modifier son titre, sa catégorie, ses autorisation,...)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> : sert à supprimer un forum.<br />
+<span class="notice">Si le forum ou le sous forum contient des forum ou des posts, lors de la suppression, il vous sera proposé de transférer les messages ou les sous forums dans une autre catégorie<br />
+</span><br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_6.jpg" alt="" /></p><br />
+<br />
+<strong>Type</strong> :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Catégorie : Une catégorie pourra contenir d'autres catégories, des forums et des liens. Utilisez-les pour structurer votre forum comme vous le souhaitez.
+</li><li class="formatter-li">Forum : Un forum est une catégorie un peu spéciale. C'est à l'intérieur de celui-ci que les membres pourront poster des sujets.
+</li><li class="formatter-li">Lien : Enfin, un lien est comme son nom l'indique, une simple redirection vers une autre page du site ou d'un site extérieur.<br />
+</li></ul><br />
+<strong>Nom</strong> : Titre de votre catégorie, forum ou lien<br />
+<strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.<br />
+<strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre catégorie. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-).<br />
+<br />
+Selon le type de l'élément à créer, certains champs supplémentaires apparaitront :<br />
+<br />
+<strong>Description</strong> (Forum + Lien) : vous pouvez mettre une petite description de votre catégorie. Cette description se trouvera au-dessus des questions de votre catégorie.<br />
+<strong>Emplacement</strong> (Forum + Lien) : Où se situera votre élément. A noter qu'un forum peut lui-même se trouver dans un autre forum.<br />
+<strong>Adresse</strong> (Lien) : URL où seront redirigés les utilisateurs lorsqu'ils cliqueront sur le lien.<br />
+<br />
+Vous pouvez également choisir :<br />
+* l'approbation ou non si vous désirez qu'il soit vu ou non sur le forum général<br />
+* le statut verrouillé ou non selon si vous désirez que les utilisateurs puissent ou non poster sur ce forum.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configuration-du-forum">Configuration du forum</h1><br />
+
+ <br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-du-forum">Configuration du forum</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_7.jpg" alt="" /></p><br />
+<br />
+<em>Nom du forum</em> : à modifier bien sur selon le nom de votre site<br />
+<br />
+<em>Nombre de sujets par page</em> : à votre guise<br />
+<br />
+<em>Nombre de messages par page</em> : à votre guise<br />
+<br />
+<em>Durée pour laquelle les messages lu par les membres sont stockés</em> : Il s'agit des marqueurs de vus du forums, pour économiser la base de données, ils ne sont pas conservés indéfiniment, dans la procédure lancée tous les jours ils sont automatiquement supprimés si ils dépassent la valeur limite. La valeur conseillée est de 30 jours.<br />
+<br />
+<em>Nombre de sujets en favoris maximum pour chaque membre</em> : il est possible de mettre des messages dans ses favoris afin d'y accéder plus rapidement. Il s'agit donc du nombre maximal autorisé.<br />
+<br />
+<em>Marqueurs d'édition des messages</em> : si vous activez cette option, un message précisant par qui et à quelle heure le message a été édité en dessous du message édité par un modérateur/administrateur.<br />
+<br />
+<em>Afficher le formulaire de connexion</em> : Affiche le menu de connexion, comme pour se connecter sur le site. Si votre menu de connexion est déjà accessible, cette option est à désactivée.<br />
+<br />
+<em>Masquer les blocs de gauche du site sur le forum</em> : cliquez sur oui si vous ne souhaitez pas avoir les zone de blocs à gauche du forum.<br />
+<br />
+<em>Masquer les blocs de droite du site sur le forum</em> : cliquez sur oui si vous ne souhaitez pas avoir les zone de blocs à droite du forum.<br />
+<br />
+<em>Afficher le message devant le titre du topic</em> : devant les topics peut être mis une icône donnant un statut à ce dernier. Sur le site de phpboost, cette fonction sera utilisée pour définir si un topic est réglé ou non.<br />
+<br />
+<em>Message devant le titre du topic</em> : petit message qui s'intercalera en début du titre du topic si le statut est donné.<br />
+<br />
+<em>Message devant le titre du topic si statut non changé</em>: Message à afficher si le statut est inchangé.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_11.jpg" alt="" /></p><br />
+<br />
+<em>Message devant le titre du topic si statut changé</em> : Message à afficher si le statut est changé.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_12.jpg" alt="" /></p><br />
+<br />
+<em>Afficher l'icône associée</em> : Si cette case est activée, les icônes respectives du statut seront affichées devant le titre du sujet.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/admin_auth.jpg" alt="" /></p><br />
+<br />
+Ici vous aurez la possibilité de régler finement les autorisations globales du forum, notamment :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Autorisation de lecture
+</li><li class="formatter-li">Autorisation d'écriture
+</li><li class="formatter-li">Autorisation de modération
+</li><li class="formatter-li">Autorisation d'afficher le contenu des topics
+</li><li class="formatter-li">Autorisation de flooder
+</li><li class="formatter-li">Désactivation du marqueur d'édition des messages
+</li><li class="formatter-li">Désactivation de la limite de sujet suivis <br />
+</li></ul><br />
+<br />
+Toutes ces autorisations pourront également être réglés individuellement pour chaque catégorie / forum.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-rangs">Gestion des rangs</h1><br />
+
+<br />
+Les rangs servent à classer les membres en fonction de leur nombre de posts. Une icône est alors affichée au niveau du forum à gauche des posts dans le profil : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/admin_rank.png" alt="" /></p><br />
+<br />
+Voilà comment se présente la page de gestion des rangs :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/admin_ranks_management.png" alt="" /></p><br />
+<br />
+Il existe 2 rangs spéciaux pour les administrateurs et les modérateurs, vous pouvez seulement modifier l'image du rang, car leur rang est donné à titre spécial et n'est pas tributaire du nombre de messages.<br />
+<br />
+Pour les autres rangs, vous pouvez : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> changer le nom du rang
+</li><li class="formatter-li"> changer le nombre de posts du rang
+</li><li class="formatter-li"> changer l'image
+</li><li class="formatter-li"> le supprimer<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1460123123</timestamp>
+  </article>
+</articles>

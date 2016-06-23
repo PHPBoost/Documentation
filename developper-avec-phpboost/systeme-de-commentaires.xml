@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>187</id>
+    <id_contents>939</id_contents>
+    <title><![CDATA[Système de commentaires]]></title>
+    <encoded_title><![CDATA[systeme-de-commentaires]]></encoded_title>
+    <hits>1547</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>939</con_id_contents>
+    <con_id_article>187</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_implementation-de-l-extension-point">Implémentation de l'extension point</a></li><li><a href="#paragraph_appel-de-la-classe">Appel de la classe</a></li><li><a href="#paragraph_affichage-du-systeme-de-commentaires">Affichage du système de commentaires</a></li></ol>]]></menu>
+    <content><![CDATA[Cet article indique les différents éléments à mettre en place pour gérer et afficher les commentaires dans un module.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_implementation-de-l-extension-point">Implémentation de l'extension point</h1><br />
+
+<br />
+Créer un fichier <em>NomDuModuleCommentsTopic.class.php</em> dans le dossier <em>phpboost</em> du module contenant :<br />
+[[CODE=php]]
+&lt;?php
+/*##################################################
+ *                           NomDuModuleCommentsTopic.class.php
+ *                            -------------------
+ *   begin                : May 30, 2013
+ *   copyright            : (C) 2013 Kevin MASSY
+ *   email                : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+ 
+class NomDuModuleCommentsTopic extends CommentsTopic
+{
+	public function __construct()
+	{
+		parent::__construct('nomdumodule');
+	}
+ 
+	public function get_authorizations()
+	{
+		return new CommentsAuthorizations();
+	}
+ 
+	public function is_display()
+	{
+		return true;
+	}
+}
+?&gt;
+[[/CODE]]<br />
+<br />
+Editer le fichier <em>NomDuModuleExtensionPointProvider.class.php</em> dans le dossier <em>phpboost</em> du module et ajouter la fonction suivante dans la classe :<br />
+[[CODE=php]]
+	public function comments()
+	{
+		return new CommentsTopics(array(new NomDuModuleCommentsTopic()));
+	}
+[[/CODE]]<br />
+<h1 class="wiki_paragraph1" id="paragraph_appel-de-la-classe">Appel de la classe</h1><br />
+
+<br />
+Ajouter le contenu suivant dans votre page php à l'endroit où les commentaires doivent être affichés :<br />
+[[CODE=php]]
+$comments_topic = new NomDuModuleCommentsTopic();
+$comments_topic-&gt;set_id_in_module('ID DE L ELEMENT');
+$comments_topic-&gt;set_url(new Url('URL DE TON ELEMENT'));
+$tpl-&gt;put('COMMENTS', $comments_topic-&gt;display());
+[[/CODE]]<br />
+<h1 class="wiki_paragraph1" id="paragraph_affichage-du-systeme-de-commentaires">Affichage du système de commentaires</h1><br />
+
+<br />
+Ajouter le code suivant dans le template appelé par votre contrôleur à l'endroit où les commentaires doivent être affichés :<br />
+[[CODE=tpl]]
+# INCLUDE  COMMENTS #
+[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.12</user_ip>
+    <timestamp>1371137835</timestamp>
+  </article>
+</articles>

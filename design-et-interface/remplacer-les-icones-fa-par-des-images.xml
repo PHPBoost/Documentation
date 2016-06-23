@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>325</id>
+    <id_contents>1596</id_contents>
+    <title><![CDATA[Remplacer les icones FA par des images]]></title>
+    <encoded_title><![CDATA[remplacer-les-icones-fa-par-des-images]]></encoded_title>
+    <hits>528</hits>
+    <id_cat>4</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>4</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>4</cat_article_id>
+    <con_id_contents>1596</con_id_contents>
+    <con_id_article>325</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_l-utilisation-des-icones-font-awesome">L'utilisation des icônes Font-Awesome</a></li><li><a href="#paragraph_remplacement-de-l-icones-fa-par-une-image">Remplacement de l'icônes FA par une image</a><ol class="wiki_list_2"><li><a href="#paragraph_remplacer-certaines-icones-fa-par-une-image-classique">Remplacer certaines icônes FA par une image classique</a></li><li><a href="#paragraph_remplacer-toutes-les-icones-fa-par-une-image-classique">Remplacer toutes les icônes FA par une image classique</a></li></ol></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction</h1><br />
+
+<br />
+Depuis la version 4.0 de PHPBoost, nous avons choisis de remplacer les icônes .jpg / .png / .gif par la police d'icones <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a>.<br />
+<br />
+Font Awesome fournit des icônes évolutifs vectoriels qui peuvent très facilement être personnalisés. Toutes les propriétés classiques CSS peuvent être utilisé sur Font-Awesome (la taille, la couleur, l'ombre portée, etc...)<br />
+<br />
+Les avantages sont notamment les suivants : <ul class="formatter-ul">
+<li class="formatter-li"> Avec un seul fichier, 605 icônes sont disponibles. (gain en taille, nombre de fichier)
+</li><li class="formatter-li"> Avec un seul fichier, toutes les icônes sont étirables à l'infinies. (gain en taille, nombre de fichier)
+</li><li class="formatter-li"> Très léger et pas de soucis de compatibilité car Font Awesome ne demande aucune surcouche supplémentaire (pas de Javascript).
+</li><li class="formatter-li"> L'aspect graphique est géré par des propriété CSS. (modifications très simple)<br />
+</li></ul><br />
+Malgré les nombreux avantages, ils est possible que certaines personnes souhaitent conservés des images particulière dans certains cas. Nous allons voir dans les paragraphes qui suivent que la modification reste très simple, et vous permet avec une grande simplicité d'adapter les icônes à votre guise.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_l-utilisation-des-icones-font-awesome">L'utilisation des icônes Font-Awesome</h1><br />
+
+Afin d'afficher une icones Font-Awesome, nous utilisons la balise [[CODE=html,0,1]]<i>[[/CODE]] et les classes CSS [[CODE=css,0,1]].fa[[/CODE]].<br />
+<br />
+Cela nous donne par exemple l’icône <!-- START HTML -->
+<i class="fa fa-fort-awesome"></i>
+<!-- END HTML --> avec le code [[CODE=html,0,1]]<i class="fa fa-fort-awesome"></i>[[/CODE]]<br />
+<br />
+Comme pour une police classique, la classe [[CODE=css,0,1]].fa-fort-awesome[[/CODE]], nous permet de définir qu'elle icône nous souhaitons afficher.<br />
+Si on regarde le fichier <em>font-awesome.css</em>, nous constatons que la classe [[CODE=css,0,1]].fa-fort-awesome[[/CODE]] possède la propriété suivante :<br />
+[[CODE=css,0,1]].fa-fort-awesome:before { content: "/f286"; }[[/CODE]].<br />
+Le code "/f286" permet de cibler la bonne icônes dans le fichier de police.<br />
+<br />
+Pour cela, il faut forcement définir que toutes les classes [[CODE=css,0,1]].fa[[/CODE]] utilisent la police.<br />
+C'est pourquoi dans le fichier <em>font-awesome.css</em>, nous trouvons : [[CODE=css,0,1]].fa { font: FontAwesome; }[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_remplacement-de-l-icones-fa-par-une-image">Remplacement de l'icônes FA par une image</h1><br />
+
+D'habitude pour ajouter une image, nous utilisons la balise [[CODE=template,0,1]]<img src="mon_image.jpg" alt="mon_image" title="mon_image" />[[/CODE]]<br />
+Vu que nous utilisons les balises [[CODE=template,0,1]]<i>[[/CODE]] pour Font Awesome, l'affichage d'une image, n'utilisera pas la balise [[CODE=template,0,1]]<img>[[/CODE]], mais nous utiliserons le code FontAwesome avec l'image en [[CODE=css,0,1]]background[[/CODE]].<br />
+<br />
+Plusieurs cas s'offre à nous :<br />
+<ul class="formatter-ul">
+    <li class="formatter-li">Remplacer certaines icônes FA par une image classique
+    </li><li class="formatter-li">Remplacer toutes les icônes FA par une image classique</li></ul><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_remplacer-certaines-icones-fa-par-une-image-classique">Remplacer certaines icônes FA par une image classique</h2><br />
+
+Pour la modification, seul des modifications CSS sont à prévoir. Nous allons prendre le cas de l'icone [[CODE=css,0,1]].fa-remove[[/CODE]] qui affiche la croix suivante <!-- START HTML -->
+<i class="fa fa-remove"></i>
+<!-- END HTML --><br />
+<br />
+La classe [[CODE=css,0,1]].fa[[/CODE]] déclare la police, vu que l'on utilisera un background, il n'y a pas lieu de la modifier.<br />
+La classe [[CODE=css,0,1]].fa-remove:before[[/CODE]] déclare le caractère que l'on souhaite utilisé [[CODE=css,0,1]].fa-remove:before { content: "/f00d"; }[[/CODE]], il est nécessaire de l'annuler pour ne pas afficher l'icone FA.<br />
+<br />
+Vu que l'on ne souhaite pas remplacer toutes les icones, il est important de ciblé la modification.<br />
+SI par exemple, vous souhaitez faire la modification que dans le module shoutbox, il nécessaire de faire la modification dans le fichier CSS du module shoutbox et utilisez l'identifiant unique du module [[CODE=css,0,1]]#module-mini-shoutbox[[/CODE]].<br />
+<br />
+Pour supprimer notre icône uniquement dans la shoutbox, il est nécessaire d'ajouter dans le fichier <em>shoutbox_mini.css</em> la ligne :<br />
+[[CODE=css,0,1]]#module-mini-shoutbox .fa-remove:before { content: ""; }[[/CODE]]<br />
+<br />
+Il faut maintenant ajouter l'appel à l'image de votre choix en utilisant un [[CODE=css,0,1]]background[[/CODE]] sur la classe [[CODE=css,0,1]].fa-remove[[/CODE]]<br />
+[[CODE=css]]#module-mini-shoutbox .fa-remove {
+  background-image: url(/templates/mon_theme/theme/images/mon_image.jpg);
+  width: 16px;
+  height: 16px;
+  content : " ";
+}[[/CODE]] Bien sûr, nous définissons la taille de l'image et ajoutons [[CODE=css,0,1]]content : " ";[[/CODE]] pour forcer l'affichage de l'élement malgré le contenu vide.<br />
+<br />
+Dans le cas ou l’icône FA serait sur une balise [[CODE=html,0,1]]<a>[[/CODE]], il faudra plutôt mettre le [[CODE=css,0,1]]background[[/CODE]] sur la pseudo-classe before :<br />
+[[CODE=css]]#module-mini-shoutbox .fa-remove { 
+  background-image: url(/templates/mon_theme/theme/images/mon_image.jpg); 
+  width: 16px; 
+  height: 16px; 
+  content : " "; 
+}[[/CODE]]Il sera peut être nécessaire d'ajuster les marges en fonction des éléments.<br />
+<br />
+L'opération est à reconduire pour chaque image que vous souhaitez remplacer.<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_remplacer-toutes-les-icones-fa-par-une-image-classique">Remplacer toutes les icônes FA par une image classique</h2><br />
+
+Dans ce cas, si vous ne souhaitez pas du tout utiliser les icônes FA, vous pouvez supprimer les fichiers <em>font-awesome</em> et les appels afin de gagner un peu de place.<br />
+<br />
+Vous n'avez alors plus besoin de cibler le module et les modifications peuvent être faite dans le fichier <em>global.css</em>.<br />
+<br />
+Pour gagner quelques ligne de code, vous pouvez appliquer les modifications génériques sur la classes [[CODE=css,0,1]].fa[[/CODE]] :<br />
+[[CODE=css]].fa {
+  width: 16px; 
+  height: 16px; 
+  content : " "; 
+}[[/CODE]]<br />
+<br />
+il ne reste que l'image à définir pour chaque icones. [[CODE=css,0,1]].fa-remove { background-image: url(/templates/mon_theme/theme/images/mon_image.jpg); }[[/CODE]]<br />
+<br />
+Le reste du travail sera sensiblement identique à un remplacement partiel.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_conclusion">Conclusion</h1><br />
+
+Finalement, comme nous avons pu le voir aux travers des paragraphes précédent, les modifications sont assez simple. Le nombre de ligne de code ajouté dépendra du nombre d'images modifiés.<br />
+<br />
+<span class="warning">Attention à l'URL des images qui dépendra de votre configuration.</span>]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>192.196.142.92</user_ip>
+    <timestamp>1457705546</timestamp>
+  </article>
+</articles>

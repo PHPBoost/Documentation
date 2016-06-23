@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>193</id>
+    <id_contents>954</id_contents>
+    <title><![CDATA[Ajouter des champs étendus sur votre forum]]></title>
+    <encoded_title><![CDATA[ajouter-des-champs-etendus-sur-votre-forum]]></encoded_title>
+    <hits>935</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>954</con_id_contents>
+    <con_id_article>193</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_creer-le-champ-etendu">Créer le champ étendu</a></li><li><a href="#paragraph_l-image">L' image</a></li><li><a href="#paragraph_recuperation-du-champ-etendu">Récupération du champ étendu</a></li><li><a href="#paragraph_l-affichage">L'affichage</a></li><li><a href="#paragraph_resultat">Résultat</a></li><li><a href="#paragraph_ca-ne-fonctionne-pas">Ca ne fonctionne pas !</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction</h1><br />
+
+<br />
+Le présent tutoriel a pour but de vous aider à ajouter simplement des champs personnalisés dans les messages du forum.<br />
+Nous vous montrerons la procédure pas à pas simplement, en mettant en place un champ Facebook.<br />
+A la fin de cet article, vous devriez obtenir ce résultat :<br />
+<img src="/upload/champsupp3.jpg" alt="" /><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creer-le-champ-etendu">Créer le champ étendu</h1><br />
+
+<br />
+Tout d'abord, il va falloir créer un champ étendu. Rendez-vous donc dans le panneau d'administration, menu '<strong>Utilisateurs</strong>', '<strong>Champs étendus</strong>' =&gt; '<strong>Ajouter</strong>'<br />
+Remplissez le champ comme vous le souhaitez. Pour notre champ Facebook, j'ai rempli ainsi :<br />
+ <img src="/upload/champsupp1.jpg" alt="" /><br />
+Ensuite, n'oubliez pas de valider (;<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_l-image">L' image</h1><br />
+
+<br />
+Dans mon exemple, j'ai utilisé cette image :  <img src="/upload/user_fb.png" alt="" />. C'est elle qui sera utilisée pour permettre aux usagers de cliquer et atterrir sur la page Facebook de l'auteur du message.<br />
+Vous pouvez bien entendu la récupérer, pour ce un petit clic droit 'Enregistrer l'image sous'.<br />
+<br />
+Je l'ai appelée '<strong>user_fb.png</strong>'. Son nom nous sera important pour la suite. Nous allons maintenant la placer de manière à ce qu'elle soit utilisable par le module forum.<br />
+Copiez donc votre image, et collez la dans le dossier '<strong>templates/nom_de_votre_theme/images/french</strong>'<br />
+<span class="notice">Si vous souhaiter utiliser votre site en anglais, répétez l'opération avec le dossier '<strong>english</strong>'</span><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_recuperation-du-champ-etendu">Récupération du champ étendu</h1><br />
+
+<br />
+Avant de pouvoir afficher notre petit bouton, nous allons déjà en récupérer le contenu. Pour cela, ouvrez le fichier '<strong>forum/topic.php</strong>'.<br />
+Allez à la ligne 205 (oui, le gros pavé (; ). Toute cette partie qui peut paraître très abstraite pour des gens normaux est chargée de questionner la base de données. Elle récupère entre autres les messages du sujet, mais aussi la signature, l'avatar du membre qui les ont postés.<br />
+Ajoutons donc le code qui nous permettra d'obtenir notre champ :<br />
+<br />
+Cherchez dans cette ligne le code suivant :<br />
+[[CODE=php]]ext_field.user_sign,[[/CODE]]<br />
+<br />
+A la suite, ajoutez-y simplement :<br />
+[[CODE=php]] ext_field.f_facebook,[[/CODE]]<br />
+<span class="success">Pour les curieux :<br />
+ext_field : Alias donné à la table '<strong>member_extended_fields</strong>' dans la requête SQL<br />
+f_facebook : nom du champ étendu précédé de '<strong>f_</strong>', utilisé par PHPBoost pour gérer les champs personnalisés</span><br />
+<br />
+Ensuite, passons à la ligne 376 : <br />
+[[CODE=php]]$Template-&gt;assign_block_vars('msg', array([[/CODE]]<br />
+<br />
+Toute cette partie ( jusqu'à la ligne 418) est très importante : Elle passe les variables PHP récupérées dans la base de données jusqu'au template (fichier .TPL). Nous allons donc en profiter pour passer également notre champ facebook :<br />
+<br />
+En dessous de la ligne 397 (qui commence par '<strong>'USER_WEB' =&gt; (!empty($row[</strong>' ), ajoutez ceci :<br />
+[[CODE=php]]'USER_FB' =&gt; (!empty($row['f_facebook'])) ? '&lt;a href="'. $row['f_facebook'] . '"&gt;&lt;img src="../templates/' . get_utheme() . '/images/' . get_ulang() . '/user_fb.png" /&gt;&lt;/a&gt;' : '',[[/CODE]]<br />
+<br />
+<span class="success">Pour les téméraires :<br />
+<strong>USER_FB</strong> sera le nom de la variable dans le template. A noter que cette variable sera stockée dans le block 'msg', qui passera en boucle chaque message du sujet.<br />
+<strong>$row['f_facebook']</strong> contient le champ facebook de l'auteur du message, récupéré dans la BDD.<br />
+Le code teste si le champ étendu en question est rempli ou pas. S'il l'est, alors on affecte à la variable 'USER_FB' le lien et l'image. Sinon, une chaîne vide lui est retournée.<br />
+Remarquez également la présence du nom de notre image (;<br />
+</span><br />
+<br />
+Sauvegardez votre fichier et passons à la dernière étape.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_l-affichage">L'affichage</h1><br />
+
+<br />
+Jusqu'à présent, nous avons préparé et récupéré notre champ étendu. Nous allons pouvoir maintenant l'afficher sur chaque message du forum.<br />
+Pour ce, ouvrez le fichier '<strong>forum\templates\forum_topic.tpl</strong>' et allez à la ligne 296 :<br />
+[[CODE=tpl]]{msg.USER_PM} {msg.USER_MAIL} {msg.USER_MSN} {msg.USER_YAHOO} {msg.USER_WEB}[[/CODE]]<br />
+<br />
+Il nous suffit à présent d'insérer notre variable. Ajoutez donc à la suite :<br />
+[[CODE=tpl]] {msg.USER_FB}[[/CODE]]<br />
+<br />
+Sauvegardez votre fichier.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_resultat">Résultat</h1><br />
+
+<br />
+En naviguant dans les messages de votre forum, vous devriez maintenant voir apparaître la petite icône Facebook comme la mienne :<br />
+<img src="/upload/champsupp3.jpg" alt="" /><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ca-ne-fonctionne-pas">Ca ne fonctionne pas !</h1><br />
+
+<br />
+Si ça ne fonctionne pas, pas de panique.<br />
+Assurez-vous d'avoir :<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> Bien rempli le champ étendu dans votre profil : <br />
+ <img src="/upload/champsupp2.jpg" alt="" />
+	</li><li class="formatter-li"> Vidé le cache après avoir effectué toutes les manipulations
+	</li><li class="formatter-li"> Bien effectué toutes les opérations décrites ci-dessus<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>4652</user_id>
+    <user_ip>31.32.177.198</user_ip>
+    <timestamp>1382998766</timestamp>
+  </article>
+</articles>

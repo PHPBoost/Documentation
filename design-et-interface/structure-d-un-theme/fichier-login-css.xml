@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>327</id>
+    <id_contents>1566</id_contents>
+    <title><![CDATA[Fichier login.css]]></title>
+    <encoded_title><![CDATA[fichier-login-css]]></encoded_title>
+    <hits>107</hits>
+    <id_cat>63</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>63</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>215</cat_article_id>
+    <con_id_contents>1566</con_id_contents>
+    <con_id_article>327</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Le fichier <em>login.css</em> contient les éléments pour afficher la page de connexion a l'administration ou au site lorsqu'il est en maintenance.<br />
+<br />
+[[CODE=css]]
+.fieldset-content {
+    margin: 0 auto;
+    width: 450px;
+    max-width: 100%;
+}
+
+body {
+    display: flex;
+    display: -ms-flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    justify-content: center;
+    -ms-justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -ms-align-items: center;
+    -webkit-align-items: center;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    background-color: #E8EDF3;
+}
+
+div#global {
+    padding: 20px;
+    min-height: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    border-spacing: 1px;
+    border: 1px #bebebe solid;
+}
+
+#connect {
+    margin-bottom: 40px;
+}
+[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>90.107.101.82</user_ip>
+    <timestamp>1457114948</timestamp>
+  </article>
+</articles>

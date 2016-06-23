@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>37</id>
+    <id_contents>963</id_contents>
+    <title><![CDATA[Système de Templates]]></title>
+    <encoded_title><![CDATA[systeme-de-templates]]></encoded_title>
+    <hits>2158</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>963</con_id_contents>
+    <con_id_article>37</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_la-syntaxe-des-templates">La syntaxe des templates</a></li><li><a href="#paragraph_texte-simple">Texte simple</a></li><li><a href="#paragraph_variables">Variables</a><ol class="wiki_list_2"><li><a href="#paragraph_variable-simple">Variable Simple</a></li><li><a href="#paragraph_variable-de-langue">Variable de langue</a></li></ol></li><li><a href="#paragraph_conditions">Conditions</a><ol class="wiki_list_2"><li><a href="#paragraph_condition-simple">Condition simple</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li></ol></li><li><a href="#paragraph_condition-negative">Condition négative</a></li></ol></li><li><a href="#paragraph_boucles">Boucles</a><ol class="wiki_list_2"><li><a href="#paragraph_boucle-simple">Boucle simple</a></li><li><a href="#paragraph_boucle-simple-avec-des-variables">Boucle simple avec des variables</a></li><li><a href="#paragraph_boucles-imbriquees">Boucles imbriquées</a></li></ol></li><li><a href="#paragraph_inclusions">Inclusions</a><ol class="wiki_list_2"><li><a href="#paragraph_inclusion-directe">Inclusion directe</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li><li><a href="#paragraph_le-template-a-inclure">Le template à inclure</a></li><li><a href="#paragraph_le-php">Le PHP</a></li><li><a href="#paragraph_le-resultat">Le résultat</a></li></ol></li><li><a href="#paragraph_inclusion-dans-une-boucle">Inclusion dans une boucle</a><ol class="wiki_list_3"><li><a href="#paragraph_le-template">Le template</a></li></ol></li></ol></li><li><a href="#paragraph_expressions-qui-ecrivent-dans-le-template">Expressions qui écrivent dans le template</a><ol class="wiki_list_2"><li><a href="#paragraph_methodes-de-templates">Méthodes de templates</a></li><li><a href="#paragraph_methode-statique">Méthode statique</a></li></ol></li><li><a href="#paragraph_expressions-qui-n-ecrivent-pas-dans-le-template">Expressions qui n'écrivent pas dans le template</a><ol class="wiki_list_2"><li><a href="#paragraph_association-d-un-fichier-de-langue">Association d'un fichier de langue</a></li></ol></li><li><a href="#paragraph_php">PHP</a><ol class="wiki_list_2"><li><a href="#paragraph_exemple">Exemple</a></li></ol></li><li><a href="#paragraph_les-templates-en-php">Les Templates en PHP</a></li><li><a href="#paragraph_creation-instanciation-d-un-objet-template">Création / instanciation d'un objet Template</a><ol class="wiki_list_2"><li><a href="#paragraph_a-partir-d-un-fichier-filetemplate">A partir d'un fichier : FileTemplate</a></li><li><a href="#paragraph_a-partir-d-une-chaine-de-caractere-stringtemplate">A partir d'une chaîne de caractère : StringTemplate</a></li></ol></li><li><a href="#paragraph_assignation-automatique">Assignation automatique</a></li><li><a href="#paragraph_compatibilite">Compatibilité</a></li></ol>]]></menu>
+    <content><![CDATA[Afin d'offrir de nouvelles possibilités, le moteur de template de PHPBoost 4.0 a été entièrement revu.<br />
+<br />
+Cette page décrit en détails les possibilités (les nouvelles comme les anciennes) offertes par le moteur de template de PHPBoost.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-syntaxe-des-templates">La syntaxe des templates</h1><br />
+
+<br />
+Un template se compose de différents éléments de syntaxe.<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Du texte simple
+</li><li class="formatter-li"> Des variables
+</li><li class="formatter-li"> Des conditions
+</li><li class="formatter-li"> Des boucles
+</li><li class="formatter-li"> Des inclusions de sous-templates
+</li><li class="formatter-li"> Des expressions qui écrivent dans le template
+</li><li class="formatter-li"> Des expressions qui n'écrivent pas dans le template
+</li><li class="formatter-li"> Du PHP<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_texte-simple">Texte simple</h1><br />
+
+<br />
+[[CODE=tpl]]Il est possible d'écrire du texte simplement dans un template, c'est le contenu par défaut[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Il est possible d'écrire du texte simplement dans un template, c'est le contenu par défaut[[/CODE]]<br />
+<span class="notice">Il est possible d'échapper des caractères spéciaux qui pourraient être interprétés par le moteur de template en les faisant précéder par un antislash : &#8220;\&#8221;.<br />
+<br />
+La liste des caractères spéciaux qu'il peut être nécessaire d'échapper est la suivante : \, $, #, {, }</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_variables">Variables</h1><br />
+
+Le moteur de templates supporte différents types de variables. Dans cette partie, nous détaillerons les variables simples et les variables de langues.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_variable-simple">Variable Simple</h2><br />
+
+Une variable simple sera remplacée par la valeur assignée à la variable côté PHP.<br />
+[[CODE=tpl]]Il est possible d'écrire du texte avec des {VARS}[[/CODE]]<br />
+[[CODE=php]]$template-&gt;put('VARS', 'variables');[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Il est possible d'écrire du texte avec des variables[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_variable-de-langue">Variable de langue</h2><br />
+
+[[CODE=tpl]]#{resources('monmodule/meslangues')}
+{@hello.world}[[/CODE]]<br />
+Le fichier de langues associé se trouvant dans le répertoire /monmodule/french/meslangues.php<br />
+[[CODE=php]]$lang = array('hello.world' =&gt; 'Bonjour');[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Bonjour[[/CODE]]<br />
+Dans cette exemple on voit deux choses. Tout d'abord, il faut associer la langue au Template avec la méthode resources qui prend en argument le chemin vers la langue à charger. Cette langue sera prise en compte à l'exécution pour savoir si il faut aller la chercher dans le répertoire french, english ou autre.<br />
+<br />
+<span class="notice">Ceci peut également se faire directement en PHP. L'exemple suivant est équivalent :<br />
+[[CODE=tpl]]{@hello.world}[[/CODE]]<br />
+[[CODE=php]]$template-&gt;add_lang(LangLoader::get('meslangues', 'monmodule'));[[/CODE]]<br />
+Le fichier de langue associé se trouvant dans le répertoire /monmodule/french/meslangues.php<br />
+[[CODE=php]]$lang = array('hello.world' =&gt; 'Bonjour');[[/CODE]]</span><br />
+Ici, la variable de langue est appelée en utilisant la syntaxe @nomDeLaVariableDeLangue. Cette syntaxe est un raccourci pour l'appel i18n('nomDeLaVariableDeLangue'). Cette seconde méthode sera détaillée dans la partie méthode de template.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_conditions">Conditions</h1><br />
+
+Le moteur de templates supporte les conditions de type IF (not) une condition / ELSE. La condition peut être une variable, une constante, ou bien le retour d'une méthode.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_condition-simple">Condition simple</h2><br />
+
+<h3 class="wiki_paragraph3" id="paragraph_le-template">Le template</h3><br />
+
+[[CODE=tpl]]# IF VAR1 #
+la variable "VAR1" vaut TRUE
+# ELSE #
+la variable "VAR1" vaut FALSE
+# END #
+[[/CODE]]<br />
+[[CODE=php]]$template-&gt;put('VAR1',  true);[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]la variable "VAR1" vaut TRUE[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_condition-negative">Condition négative</h2><br />
+
+[[CODE=tpl]]# IF NOT DayTime::is_lunch_time() #
+Ce n'est pas l'heure de manger
+# ELSE #
+A table
+# END #
+[[/CODE]]<br />
+Le résultat si la statique méthode [[CODE=php,0,1]]DayTime::is_lunch_time()[[/CODE]] retourne [[CODE=php,0,1]]false[[/CODE]]<br />
+[[CODE=html]]A table[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_boucles">Boucles</h1><br />
+
+<h2 class="wiki_paragraph2" id="paragraph_boucle-simple">Boucle simple</h2><br />
+
+[[CODE=tpl]]# START boucle #
+Code répété dans la boucle
+# END boucle #[[/CODE]]<br />
+[[CODE=php]]$my_loop = array();
+for ($i = 0; $i &lt; 3; $i++) {
+    $my_loop[] = array();
+}
+$template-&gt;put('boucle', $my_loop);[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Code répété dans la boucle
+Code répété dans la boucle
+Code répété dans la boucle[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_boucle-simple-avec-des-variables">Boucle simple avec des variables</h2><br />
+
+[[CODE=tpl]]Nom de la boucle : ${LOOP_NAME}
+# START boucle #
+${boucle.I} * 2 = ${boucle.2I}
+# END boucle #[[/CODE]]<br />
+[[CODE=php]]$template-&gt;put('LOOP_NAME' =&gt; 'table de 2');
+$my_loop = array();
+for ($i = 0; $i &lt; 3; $i++) {
+    $my_loop[] = array('I' =&gt; $i, '2I' =&gt; $i * 2));
+}
+$template-&gt;put('boucle', $my_loop);[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Nom de la boucle : table de 2
+0 * 2 = 0
+1 * 2 = 2
+2 * 2 = 4[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_boucles-imbriquees">Boucles imbriquées</h2><br />
+
+[[CODE=tpl]]# START boucle1 #
+Code répété dans la boucle 1: {boucle1.VARBOUCLE_1}
+    # START boucle1.boucle2 #
+    Code répété dans la boucle 2: {boucle1.boucle2.VARBOUCLE_2}
+    # END boucle1.boucle2 #
+# END boucle1 #[[/CODE]]<br />
+[[CODE=php]]$loop1 = array();
+for ($i = 1; $i &lt;= 3; $i++) {
+   $loop2 = array();
+   for ($j = 1; $j &lt;= 2; $j++) {
+       $loop2[] = array('VARBOUCLE_2' =&gt; $j);
+   }
+   $loop1[] = array('VARBOUCLE_1' =&gt; $i, 'boucle2' =&gt; $loop2);
+}
+$template-&gt;put('boucle1', $loop1);
+[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Code répété dans la boucle 1: 1
+    Code répété dans la boucle 2: 1
+    Code répété dans la boucle 2: 2
+Code répété dans la boucle 1: 2
+    Code répété dans la boucle 2: 1
+    Code répété dans la boucle 2: 2
+Code répété dans la boucle 1: 3
+    Code répété dans la boucle 2: 1
+    Code répété dans la boucle 2: 2[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_inclusions">Inclusions</h1><br />
+
+<h2 class="wiki_paragraph2" id="paragraph_inclusion-directe">Inclusion directe</h2><br />
+
+<h3 class="wiki_paragraph3" id="paragraph_le-template">Le template</h3><br />
+
+[[CODE=tpl]]Ceci est # INCLUDE SUBTEMPLATE # dans un autre[[/CODE]]<br />
+<h3 class="wiki_paragraph3" id="paragraph_le-template-a-inclure">Le template à inclure</h3><br />
+
+[[CODE=tpl]]un template inclus[[/CODE]]<br />
+<h3 class="wiki_paragraph3" id="paragraph_le-php">Le PHP</h3><br />
+
+[[CODE=php]]$subtemplate = // un objet de type Template ou View
+$template-&gt;put('SUBTEMPLATE', $subtemplate);[[/CODE]]<br />
+<h3 class="wiki_paragraph3" id="paragraph_le-resultat">Le résultat</h3><br />
+
+[[CODE=html]]Ceci est un template inclus dans un autre[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_inclusion-dans-une-boucle">Inclusion dans une boucle</h2><br />
+
+<h3 class="wiki_paragraph3" id="paragraph_le-template">Le template</h3><br />
+
+[[CODE=tpl]]Ceci est # START loop # # INCLUDE loop.SUBTEMPLATE # # END # dans un autre[[/CODE]]<br />
+Le premier template à inclure<br />
+[[CODE=tpl]]un temp[[/CODE]]<br />
+Le second template à inclure<br />
+[[CODE=tpl]]late inclus[[/CODE]]<br />
+Le PHP<br />
+[[CODE=php]]$subtemplates = array($subtemplate1, $subtemplate2); // Objets de type Template ou View
+$loop = array();
+for ($subtemplates as $subtemplate) {
+   $loop[] = array('SUBTEMPLATE' =&gt; $subtemplate);
+}
+$template-&gt;put('loop', $loop);[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Ceci est un template inclus dans un autre[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_expressions-qui-ecrivent-dans-le-template">Expressions qui écrivent dans le template</h1><br />
+
+Les expressions permettent d'appeler du PHP directement depuis un template. Ceci est utile car cela permet de ne plus assigner les langues dans le PHP et de mettre en forme les messages directement dans les templates.<br />
+<br />
+Pour cela, il est possible d'appeler soit des fonctions de templates, soit des méthodes statiques sur de vraies classes PHP.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_methodes-de-templates">Méthodes de templates</h2><br />
+
+Les méthodes de templates sont des méthodes qui permettent d'appeler certains services directement depuis le template. Voici la liste de ces méthodes :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> resources(String languageFile) : Charge le fichier de langue et l'associé au template.
+</li><li class="formatter-li"> i18n(String messageId) : retourne le message de langue identifier par l'identifiant messageId trouvé dans les fichiers de langues chargés par la méthode resources() ci-dessus. Le caractères XML '&lt;', '&gt;', '"' et '&amp;' sont échappés
+</li><li class="formatter-li"> i18nraw(String messageId) : pareil que i18n, mais n'échappe pas le xml
+</li><li class="formatter-li"> i18njs(String messageId) :  pareil que i18n mais échappe les "'" et les "\n"
+</li><li class="formatter-li"> i18njsraw(String messageId) :  pareil que i18nraw mais échappe les "'" et les "\n"
+</li><li class="formatter-li"> setvars(String message, String[String] variables) : remplace les occurences des éléments de la forme ":nom" par la valeur associée à la clé "nom" dans le dictionnaire variables
+</li><li class="formatter-li"> escape(String message) : échappe le xml
+</li><li class="formatter-li"> escapejs(String message, boolean add_quotes = true) : échappe le javascript. Par défaut, la chaîne résultante est entourée de 'simples guillements'<br />
+</li></ul><br />
+Pour plus d'informations sur ces méthodes, il faut se reporter à la PHPDoc de la classe TemplateFunctions<br />
+<br />
+[[CODE=tpl]]${i18n('welcome.message')}[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Le message de bienvenue contenu dans le fichier langue[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_methode-statique">Méthode statique</h2><br />
+
+[[CODE=tpl]]${LangLoader::get_message('step.welcome.message', 'install', 'install')}[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]Bienvenue dans l'assistant d'installation de PHPBoost[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_expressions-qui-n-ecrivent-pas-dans-le-template">Expressions qui n'écrivent pas dans le template</h1><br />
+
+Si l'on comprend bien  l'intérêt des expressions pour modifier la mise en page des variables passées au template, il est peut-être plus difficile de comprendre l'intérêt des expressions qui n'écrivent rien dans les templates. Pourtant elles sont également très importantes.<br />
+<br />
+En effet, pour associer un fichier de langue à un template, on peut soit le faire en PHP, soit directement dans le template. Dans le cas où cela se fait directement dans le template, aucun élément ne sera à écrire dans le template.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_association-d-un-fichier-de-langue">Association d'un fichier de langue</h2><br />
+
+[[CODE=tpl]]#{resources('install/install')}
+&lt;h1&gt;${i18n('step.welcome.message')}&lt;/h1&gt;[[/CODE]]<br />
+Le résultat:<br />
+[[CODE=html]]&lt;h1&gt;Bienvenue dans l'assistant d'installation de PHPBoost&lt;/h1&gt;[[/CODE]]<br />
+Dans le cas ou le #{resources()} n'aurait pas été fait, il aurait fallut faire cette association en php de la façon suivante : [[CODE=php]]$template-&gt;add_lang(LangLoader::get('install', 'install'));[[/CODE]]<br />
+Si aucune de ces deux méthodes n'est employée alors un message d'erreur indiquera que la langue n'a pas été trouvée.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_php">PHP</h1><br />
+
+Il est possible d&#8217;inclure du PHP dans les templates, cependant, ceci est à proscrire pour plusieurs raisons :<br />
+<br />
+<ol class="formatter-ol">
+<li class="formatter-li"> Cela risque fort de mener à avoir des traitements dans le template qui n&#8217;ont rien à voir avec la mise en page, ce qui rend la future maintenance du module beaucoup plus compliquée, car en plus de changer la logique dans le code PHP du module, il faudra également retravailler de façon approfondie les templates.
+</li><li class="formatter-li"> Cela n&#8217;est pas performant. En effet le moteur de rendu de PHPBoost permet d&#8217;afficher le template directement avec une instruction echo, ou bien de pouvoir l&#8217;injecter ailleurs en donnant un rendu sous forme de chaîne de caractères. Ce second cas rend la gestion des echos qui pourraient être fait dans le code PHP appelé très compliquée .
+</li><li class="formatter-li"> La solution utilisée par le moteur de templates pour supporter ces echos consiste à stocker dans le buffer de sortie ce qui va être écrit. Or l&#8217;opération visant à préserver ce buffer est extrêmement coûteuse en terme de performances.<br />
+</li></ol><br />
+Si malgré ceci vous avez tout de même besoin d&#8217;utiliser du PHP dans vos templates, voici un exemple.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_exemple">Exemple</h2><br />
+
+[[CODE=tpl]]ceci est du &lt;?php echo ?PHP?; ?&gt;[[/CODE]]<br />
+Le résultat :<br />
+[[CODE=html]]ceci est du PHP[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-templates-en-php">Les Templates en PHP</h1><br />
+
+Nous venons de voir comment écrire des templates et quels étaient les mécanismes PHP pour communiquer avec ceux-ci.<br />
+<br />
+Nous allons maintenant voir quelques fonctionnalités côté PHP permettant de créer un objet Template et l'utiliser assez simplement.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creation-instanciation-d-un-objet-template">Création / instanciation d'un objet Template</h1><br />
+
+<h2 class="wiki_paragraph2" id="paragraph_a-partir-d-un-fichier-filetemplate">A partir d'un fichier : FileTemplate</h2><br />
+
+[[CODE=php]]$my_template = new FileTemplate('mymodule/mytpl.tpl');[[/CODE]]<br />
+Ce bout de code va chercher à créer un objet Template en utilisant le premier fichier de template existant.<br />
+<br />
+<ol class="formatter-ol">
+<li class="formatter-li"> /templates/$theme/modules/mymodule/mytpl.tpl : C&#8217;est le fichier de template fourni par le thème utilisé. Il est utilisé prioritairement s'il est trouvé car il est en accord avec le thème.
+</li><li class="formatter-li"> /mymodule/templates/mytpl.tpl : C&#8217;est le fichier de template fourni par le module à utiliser si le thème ne propose pas sa propre version.<br />
+</li></ol><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_a-partir-d-une-chaine-de-caractere-stringtemplate">A partir d'une chaîne de caractère : StringTemplate</h2><br />
+
+[[CODE=php]]$my_template = new StringTemplate('Ceci est mon template');[[/CODE]]<br />
+<br />
+Dans les deux cas précédent, un objet template à été créé. Il se comportement indifféremment, peu importe que le template soit issu d&#8217;un fichier ou d&#8217;une chaîne de caractères.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_assignation-automatique">Assignation automatique</h1><br />
+
+Afin de faciliter le travail des développeurs, un certain nombre de variables sont assignés au template par défaut. En voici la liste :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> THEME : le nom du dossier du thème courant
+</li><li class="formatter-li"> LANG : le nom du dossier de la langue courante
+</li><li class="formatter-li"> IS_USER_CONNECTED : true si l&#8217;utilisateur est connecté
+</li><li class="formatter-li"> IS_ADMIN : true si l'utilisateur est un administrateur
+</li><li class="formatter-li"> IS_MODERATOR : true si l'utilisateur est un modérateur
+</li><li class="formatter-li"> PATH_TO_ROOT : le chemin jusqu&#8217;à la racine de PHPBoost
+</li><li class="formatter-li"> TOKEN : le token de session permettant de se prémunir des attaques CSRF. Pour plus d&#8217;informations, lire <a href="http://fr.wikipedia.org/wiki/Cross-Site Request Forgery" class="wikipedia-link">Cross-Site Request Forgery</a><br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_compatibilite">Compatibilité</h1><br />
+
+Le moteur de templates de PHPBoost 4.0 est (presque) entièrement compatible avec les templates de la version 3.0.<br />
+<br />
+<span class="notice">Ceci signifie que tous les templates de la 3.0 continueront à fonctionner sans nécessiter d'adaptation sur la 4.0 (à de rares exceptions près).<br />
+Pour adapter un thème 3.0 en version 4.0, utilisez cette procédure : <a href="/wiki/mettre-a-jour-son-theme-3-0-en-4-0">Mettre à jour son thème 3.0 en 4.0</a><br />
+</span>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>88.125.157.163</user_ip>
+    <timestamp>1386876575</timestamp>
+  </article>
+</articles>

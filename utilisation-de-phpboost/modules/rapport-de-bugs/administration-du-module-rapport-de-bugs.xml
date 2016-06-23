@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>185</id>
+    <id_contents>1715</id_contents>
+    <title><![CDATA[Administration du module Rapport de bugs]]></title>
+    <encoded_title><![CDATA[administration-du-module-rapport-de-bugs]]></encoded_title>
+    <hits>1189</hits>
+    <id_cat>50</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>50</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>184</cat_article_id>
+    <con_id_contents>1715</con_id_contents>
+    <con_id_article>185</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_barre-de-progression">Barre de progression</a></li><li><a href="#paragraph_alertes-administrateur">Alertes administrateur</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li><li><a href="#paragraph_messages-prives">Messages privés</a></li><li><a href="#paragraph_description-par-defaut-des-bugs">Description par défaut des bugs</a></li><li><a href="#paragraph_types">Types</a></li><li><a href="#paragraph_categories">Catégories</a></li><li><a href="#paragraph_niveaux">Niveaux</a></li><li><a href="#paragraph_priorites">Priorités</a></li><li><a href="#paragraph_versions">Versions</a></li></ol></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration">Configuration</h1><br />
+
+<br />
+La page "configuration" du module "Rapport de bugs" se divise en plusieurs parties distinctes.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration">Configuration</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/configuration.jpg" alt="" /></p><br />
+<br />
+La première de ces parties vous propose de régler la configuration globale du module. <br />
+Vous pouvez y définir:<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Le nombre de bugs à afficher sur chaque page contenant une liste
+</li><li class="formatter-li"> La couleur de la ligne pour les bugs fermés
+</li><li class="formatter-li"> La couleur de la ligne pour les bugs rejetés
+</li><li class="formatter-li"> L'activation de la "feuille de route" (cette fonctionnalité, qui permet d'afficher la liste des bugs corrigés ou a corriger pour chaque version, n'est visible que si la liste des versions contient au moins une version)<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_barre-de-progression">Barre de progression</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/progressbar.jpg" alt="" /></p><br />
+<br />
+Vous pouvez choisir d'afficher une barre de progression sur la page d'un bug, qui évoluera selon l'état du bug.<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Afficher la barre de progression des bugs : Si vous souhaitez ou non activer cette barre de progression
+</li><li class="formatter-li"> Pourcentage d'un nouveau bug : Pourcentage affiché à l'ouverture d'un bug
+</li><li class="formatter-li"> Pourcentage d'un bug En attente : Lorsque le bug a été mis à l'état 'En attente'
+</li><li class="formatter-li"> Pourcentage d'un bug Assigné : Lorsqu'un membre a été assigné à ce bug
+</li><li class="formatter-li"> Pourcentage d'un bug En cours : Bug à l'état 'En cours'
+</li><li class="formatter-li"> Pourcentage d'un bug Rejeté : Si le bug a été rejeté par l'équipe
+</li><li class="formatter-li"> Pourcentage d'un bug Réouvert : Lorsque le bug a été réouvert, suite à une raison quelquonque
+</li><li class="formatter-li"> Pourcentage d'un bug Corrigé : Lorsque le bug est corrigé<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_alertes-administrateur">Alertes administrateur</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/alertes.jpg" alt="" /></p><br />
+<br />
+Les alertes administrateur permettent d'alerter les administrateurs lorsqu'un bug est ouvert. Les alertes sont alors envoyées aux administrateurs, comme une alerte de mise à jour.<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Activer les alertes administrateur : Si vous souhaitez ou non activer ces alertes
+</li><li class="formatter-li"> Niveau du bug pour déclencher l'alerte : Pour chaque niveau de bug (mineur, majeur, bloquant), vous pourrez définir si l'ouverture d'un tel bug provoque l'envoi d'une alerte
+</li><li class="formatter-li"> Action à la fermeture d'un bug : Action à accomplir lorsqu'un bug est fermé.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_statistiques">Statistiques</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/stats.jpg" alt="" /></p><br />
+<br />
+Les statistiques permettent d'afficher une page où se trouvent quelques statistiques du module, comme la répartition des bugs selon leur état (nouveau, corrigé, ..) et les membres qui ont postés le plus de bugs.<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Activer les statistiques : Afficher ou non la page des stats dans la partie publique du module
+</li><li class="formatter-li"> Afficher la liste des membres qui ont posté le plus de bugs : Pour afficher la liste des utilisateurs ayant postés le plus de bugs, en dessous des statistiques
+</li><li class="formatter-li"> Nombre d'utilisateurs affichés : Si l'option précèdente est activée, permet de définir le nombre d'utilisateurs à afficher<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_messages-prives">Messages privés</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/mp.jpg" alt="" /></p><br />
+<br />
+Il est possible d'envoyer des messages privés à certains événements. En voici la liste, dans l'ordre :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Activer ou non l'envoi de messages privés
+</li><li class="formatter-li"> Envoi d'un MP lorsque l'auteur ou un autre utilisateur modifie un bug
+</li><li class="formatter-li"> Si un bug est supprimé
+</li><li class="formatter-li"> Lors d'un commentaire sur un bug<br />
+</li></ul><br />
+Les autres options permettent respectivement d'envoyer un MP selon le changement d'état d'un bug.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_description-par-defaut-des-bugs">Description par défaut des bugs</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/description.jpg" alt="" /></p><br />
+<br />
+La section "Description des bugs" vous permet d'indiquer un gabarit si vous le souhaitez, ou des informations à entrer impérativement, ou tout ce que vous voulez.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_types">Types</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/types.jpg" alt="" /></p><br />
+<br />
+Cette section permet de définir des "types de bug". A ne pas confondre avec les "Catégories de bugs". Le type de bugs permet, par défaut, de faire la distinction entre la détection d'une anomalie sur votre site ou bien la requête d'un membre pour une demande d'évolution de celui-ci. Là encore, c'est à vous de configurer le "bugtracker" pour qu'il réponde à vos besoins dans le cadre de votre utilisation.<br />
+Vous pouvez choisir de rendre le choix du type obligatoire via la section "type" obligatoire ? Oui / Non.Vous pouvez choisir de présélectionner le type par défaut dans le formulaire ou le supprimer en cliquant sur le bouton "Supprimer le type par défaut".<br />
+<br />
+<span class="notice">Les types ne s'affichent dans la liste des bugs qu'à partir du moment ou ils contiennent au moins deux valeurs. Si la liste ne contient qu'une valeur, elle est automatiquement attribuée au bug. Si la liste ne contient aucune valeur, les types sont désactivés.</span><br />
+<br />
+Enfin, vous avez la possibilité d'ajouter de nouveaux types via le champ visible sous le tableau des types.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_categories">Catégories</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/categories.jpg" alt="" /></p><br />
+<br />
+Cette section permet de définir les "catégories de bug". Cette section permet de définir la liste des catégories dans lesquelles classer les bugs.<br />
+L'utilisation des catégories est activée par défaut et le membre rapportant un bug doit obligatoirement sélectionner la catégorie à laquelle il se rapporte.<br />
+Vous pouvez choisir de rendre le choix de la catégorie obligatoire via la section "catégorie" obligatoire ? Oui / Non.Vous pouvez choisir de présélectionner la catégorie par défaut dans le formulaire ou la supprimer en cliquant sur le bouton "Supprimer la catégorie par défaut".<br />
+<br />
+<span class="notice">Les catégories ne s'affichent dans la liste des bugs qu'à partir du moment ou elles contiennent au moins deux valeurs. Si la liste ne contient qu'une valeur, elle est automatiquement attribuée au bug. Si la liste ne contient aucune valeur, les catégories sont désactivées.</span><br />
+<br />
+Toujours par défaut, les catégories proposées sont liées à l'utilisation même de PHPBoost. On y retrouve donc des catégories associées au noyau, aux modules, au graphisme, ou à l'installation du logiciel. Là encore vous avez la possibilité d'organiser les catégories de bugs en fonction de vos besoins personnels.<br />
+<br />
+Enfin, vous avez la possibilité d'ajouter de nouvelles catégories via le champ visible sous le tableau des catégories.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_niveaux">Niveaux</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/niveaux.jpg" alt="" /></p><br />
+<br />
+Par défaut, eh oui encore <img src="/images/smileys/smile.png" alt=":)" class="smiley" /> cette section n'est pas obligatoire. Elle vous permet de définir le degré d'importance d'un bug, selon qu'il s'agisse d'un bug mineur (peu important), majeur (très important) ou carrément bloquant (empêchant l'accès à une page/fonctionnalité du site).<br />
+Afin de favoriser la visibilité des bugs, vous pouvez définir pour chaque niveau, une couleur de fond associée.<br />
+Vous pouvez choisir de rendre le choix du niveau obligatoire via la section "niveau" obligatoire ? Oui / Non.<br />
+Vous pouvez choisir de présélectionner le niveau par défaut dans le formulaire ou la supprimer en cliquant sur le bouton "Supprimer le niveau par défaut".<br />
+<br />
+<span class="notice">Les niveaux ne s'affichent dans la liste des bugs qu'à partir du moment ou elles contiennent au moins deux valeurs et que l'utilisateur a le droit de choisir le niveau (voir la partie autorisations). Si la liste ne contient qu'une valeur, elle est automatiquement attribuée au bug. Si la liste ne contient aucune valeur, les niveaux sont désactivés.</span><br />
+<br />
+Sous le tableau, un champ vous permet d'ajouter de nouveaux niveaux et d'y associer la couleur de votre choix.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_priorites">Priorités</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/priorites.jpg" alt="" /></p><br />
+<br />
+La section "Priorités" vous permet, de la même manière que pour les niveaux et catégories de bugs, de définir les priorités liées aux bugs signalés. <br />
+Par défaut, cette section n'est pas obligatoire.<br />
+Vous pouvez choisir de rendre le choix du niveau obligatoire via la section "priorité" obligatoire ? Oui / Non.Vous pouvez choisir de présélectionner le niveau par défaut dans le formulaire ou la supprimer en cliquant sur le bouton "Supprimer la priorité par défaut".<br />
+<br />
+<span class="notice">Les priorités ne s'affichent dans la liste des bugs qu'à partir du moment ou elles contiennent au moins deux valeurs et que l'utilisateur a le droit de choisir la priorité (voir la partie autorisations). Si la liste ne contient qu'une valeur, elle est automatiquement attribuée au bug. Si la liste ne contient aucune valeur, les priorités sont désactivées.</span><br />
+<br />
+Sous le tableau, un champ vous permet d'ajouter de nouvelles priorités.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_versions">Versions</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/versions.jpg" alt="" /></p><br />
+<br />
+La section "Versions" vous permet, de définir dans quelle version le bug a été détecté et dans quelle version il va être corrigé.<br />
+Vous pouvez choisir de rendre le choix de la version obligatoire via la section "version" obligatoire ? Oui / Non.Vous pouvez choisir de présélectionner la version par défaut dans le formulaire ou la supprimer en cliquant sur le bouton "Supprimer la version par défaut".<br />
+<br />
+<span class="notice">Les versions ne s'affichent dans la liste des bugs qu'à partir du moment ou elles contiennent au moins deux valeurs et qu'elles sont affichées dans la liste "détectée". Si la liste ne contient qu'une valeur, elle est automatiquement attribuée au bug. Si la liste ne contient aucune valeur, les versions sont désactivées et il n'est pas possible d'afficher la feuille de route pour chaque version.</span><br />
+<br />
+Sous le tableau, un champ vous permet d'ajouter de nouvelles versions et de choisir si elles sont affichées dans la liste lors de la création d'un bug. Une version peut par exemple ne pas apparaître dans cette liste tant qu'elle n'est pas sortie, les personnes qui détectent un bug ne pourront donc pas la choisir. Une fois la version sortie, il faudra cocher la case correspondante pour l'afficher dans la liste.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_autorisations">Autorisations</h1><br />
+
+<br />
+A l'instar des autres modules et outils de configuration de PHPBoost, les autorisations liées au "Bugtracker" vous permettent de définir les droits de lecture / écriture / autorisations avancées (pour choisir le niveau et la priorité du bug) et modération de ces derniers.<br />
+<br />
+Le fonctionnement du système d'autorisation reste inchangé. Un appui sur la touche "CTRL" et un clic sur les différents types d'utilisateurs vous permettent de choisir à qui vous attribuez les droits.<br />
+<br />
+N'oubliez pas de valider le formulaire en cliquant sur le bouton "Modifier" <img src="/images/smileys/wink.png" alt=";)" class="smiley" /><br />
+<br />
+[align=center]<img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/administration/autorisations.jpg" alt="" />]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.178.7</user_ip>
+    <timestamp>1463220345</timestamp>
+  </article>
+</articles>

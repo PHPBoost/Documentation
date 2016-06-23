@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>122</id>
+    <id_contents>1664</id_contents>
+    <title><![CDATA[Gestion des commentaires]]></title>
+    <encoded_title><![CDATA[gestion-des-commentaires]]></encoded_title>
+    <hits>1185</hits>
+    <id_cat>18</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>18</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>18</cat_article_id>
+    <con_id_contents>1664</con_id_contents>
+    <con_id_article>122</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-commentaires">Configuration des commentaires</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-des-commentaires">Configuration des commentaires</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_gestion-des-commentaires">Gestion des commentaires</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration-des-commentaires">Configuration des commentaires</h1><br />
+
+Cette section vous permet de configurer la manière dont PHPBoost gère les commentaires postés sur votre site.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/comments/comments_config.jpg" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-des-commentaires">Configuration des commentaires</h2><br />
+
+<br />
+La configuration des commentaires vous permet de :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> définir le nombre de commentaires à afficher sur une page
+        </li><li class="formatter-li"> définir le nombre de liens maximum qu'un utilisateur peut insérer dans un commentaire
+</li><li class="formatter-li"> choisir l'ordre d'affichage des commentaires (choix chronologique croissant ou décroissant)
+        </li><li class="formatter-li"> sélectionner le type de formatage interdit dans les commentaires<br />
+</li></ul><br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+Vous pouvez définir avec précision quels sont les droits octroyés aux utilisateurs de votre site. Qu'ils soient visiteurs, membres, modérateurs ou autre, vous définissez qui peut lire, poster, éditer ou encore supprimer des commentaires.<br />
+<br />
+Cette gestion des commentaires est une gestion globale, active par défaut pour l'ensemble de votre site PHPBoost. Cependant, vous pouvez redéfinir ces droits de manière localisée pour chaque module installé sur votre site.<br />
+<br />
+Ainsi, si vous souhaitez configurer différemment le fonctionnement des commentaires dans le module "Galerie". Il vous suffit de vous rendre à la page de configuration de votre galerie d'image et d'y configurer les commentaires.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-commentaires">Gestion des commentaires</h1><br />
+
+Cette section vous permet de visualiser l'ensemble des commentaires qui se trouvent sur votre site et de les modérer si besoin.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/comments/comments_managment.jpg" alt="" /></p><br />
+<br />
+Vous avez la possibilité de voir les commentaires selon : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> l'ordre chronologique pour tous les modules  : "Voir les derniers commentaires"
+</li><li class="formatter-li"> le module désiré en cliquant sur le nom de ce dernier<br />
+</li></ul><br />
+<br />
+Pour chaque commentaire vous voyez : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> le profil du membre à gauche
+</li><li class="formatter-li"> le contenu du commentaire à droite
+</li><li class="formatter-li"> un lien pour accéder au commentaire au niveau du module : 'Voir le topic <!-- START HTML -->
+<i class="fa fa-arrow-right fa-2x"></i>
+<!-- END HTML -->'<br />
+</li></ul><br />
+<br />
+Vous pourrez également modérer les commentaires : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> les éditer via l'icône : <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML -->
+</li><li class="formatter-li"> les supprimer via l'icône : <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --><br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966744</timestamp>
+  </article>
+</articles>

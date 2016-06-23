@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>321</id>
+    <id_contents>1533</id_contents>
+    <title><![CDATA[Créer un Captcha]]></title>
+    <encoded_title><![CDATA[creer-un-captcha]]></encoded_title>
+    <hits>151</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>1533</con_id_contents>
+    <con_id_article>321</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_creation-de-la-base-du-module-du-captcha">Création de la base du module du Captcha</a></li><li><a href="#paragraph_creation-de-la-classe-principale-de-votre-captcha">Création de la classe principale de votre Captcha</a></li><li><a href="#paragraph_extensionpointprovider">ExtensionPointProvider</a></li></ol>]]></menu>
+    <content><![CDATA[Le framework de PHPBoost permet de mettre en place un captcha facilement et rapidement.<br />
+<br />
+Nous allons voir comment en créer un.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creation-de-la-base-du-module-du-captcha">Création de la base du module du Captcha</h1><br />
+
+<br />
+Premièrement, il faut mettre en place la <a href="/wiki/1-les-bases-structure-du-module">Structure de base du module</a>.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creation-de-la-classe-principale-de-votre-captcha">Création de la classe principale de votre Captcha</h1><br />
+
+<br />
+Créer une classe avec le nom de votre Captcha dans le dossier phpboost de votre module. Cette classe doit être une classe fille de la classe <strong>Captcha</strong>.<br />
+Celle-ci doit comprendre à minima les fonctions suivantes :<br />
+<ul class="formatter-ul">
+    <li class="formatter-li"> [[CODE=php,0,1]]public function get_name()[[/CODE]] : retourne le nom du Captcha.
+    </li><li class="formatter-li"> [[CODE=php,0,1]]public function is_available()[[/CODE]] : permet de réaliser des tests afin de déterminer si le Captcha est disponible, utile s'il utilise une librairie distante par exemple. Mettre [[CODE=php,0,1]]true[[/CODE]] s'il n'y a pas besoin de faire de test de disponibilité.
+    </li><li class="formatter-li"> [[CODE=php,0,1]]public function is_valid()[[/CODE]] : permet de vérifier la validité du Captcha.
+    </li><li class="formatter-li"> [[CODE=php,0,1]]public function display()[[/CODE]] : permet d'afficher le Captcha.<br />
+</li></ul><br />
+<br />
+Exemple :<br />
+[[CODE=php]]<?php 
+/*##################################################
+ *                            QuestionCaptcha.class.php
+ *                            -------------------
+ *   begin                : May 9, 2014
+ *   copyright            : (C) 2014 Julien BRISWALTER
+ *   email                : j1.seth@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ *  This program is free software; you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation; either version 2 of the License, or
+ *  (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class QuestionCaptcha extends Captcha
+{
+    private static $questions;
+    
+    public static function __static()
+    {
+        self::$questions = QuestionCaptchaConfig::load()->get_questions();
+    }
+    
+    public function get_name()
+    {
+        return 'QuestionCaptcha';
+    }
+    
+    public function is_available()
+    {
+        return true;
+    }
+    
+    public function is_valid()
+    {
+        if (!$this->is_available() || AppContext::get_current_user()->check_level(User::MEMBER_LEVEL))
+        {
+            return true;
+        }
+        
+        $answer = AppContext::get_request()->get_value($this->get_html_id(), '');
+        $question_id = AppContext::get_request()->get_int($this->get_html_id() . '_question_id', 0);
+        
+        if (!empty($question_id))
+        {
+            $question = new QuestionCaptchaQuestion();
+            $question->set_properties(self::$questions[$question_id]);
+            
+            return in_array(trim(strtolower($answer)), $question->get_formated_answers());
+        }
+        return false;
+    }
+    
+    public function display()
+    {
+        $question_id = array_rand(self::$questions); //Question aléatoire
+        
+        $question = new QuestionCaptchaQuestion();
+        $question->set_properties(self::$questions[$question_id]);
+        
+        $tpl = new FileTemplate('QuestionCaptcha/QuestionCaptcha.tpl');
+        $tpl->put_all(array(
+            'QUESTION_ID' => $question_id,
+            'QUESTION' => $question->get_label(),
+            'HTML_ID' => $this->get_html_id()
+        ));
+        
+        return $tpl->render();
+    }
+}
+?>[[/CODE]]<br />
+<span class="success">Il est possible de créer une <a href="/wiki/creer-une-configuration-pour-votre-module">configuration pour le module</a> afin de permettre la personnalisation de certaines options lors de l'affichage des questions.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_extensionpointprovider">ExtensionPointProvider</h1><br />
+
+<br />
+L'ExtensionPointProvider est à remplir comme tout autre module, il faut en plus y indiquer la fonction [[CODE=php,0,1]]captcha()[[/CODE]] qui va retourner la classe principale de votre module.<br />
+<br />
+Exemple :<br />
+[[CODE=php]]<?php
+/*##################################################
+ *                    QuestionCaptchaExtensionPointProvider.class.php
+ *                            -------------------
+ *   begin                : May 9, 2014
+ *   copyright            : (C) 2014 Julien BRISWALTER
+ *   email                : j1.seth@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class QuestionCaptchaExtensionPointProvider extends ExtensionPointProvider
+{
+    public function __construct()
+    {
+        parent::__construct('QuestionCaptcha');
+    }
+    
+    public function captcha()
+    {
+        return new QuestionCaptcha();
+    }
+    
+    public function css_files()
+    {
+        $module_css_files = new ModuleCssFiles();
+        $module_css_files->adding_running_module_displayed_file('QuestionCaptcha.css');
+        return $module_css_files;
+    }
+    
+    public function url_mappings()
+    {
+        return new UrlMappings(array(new DispatcherUrlMapping('/QuestionCaptcha/index.php')));
+    }
+}
+?>
+[[/CODE]]<br />
+<br />
+Tout le reste fonctionne comme tout autre module pour l'utilisation des fichiers css, la création de templates, etc...<br />
+<br />
+<span class="success"> Vous pouvez vous inspirer du code du module <a href="/download/47-modules-phpboost-5-0/394-recaptcha/">ReCaptcha</a>, le Captcha de Google, qui fait appel à une librairie externe de Google et a une partie configuration ou du module <a href="/download/47-modules-phpboost-5-0/393-questioncaptcha/">QuestionCaptcha</a> qui permet de définir des questions personnalisées dans la partie configuration du module.</span>]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>86.195.31.137</user_ip>
+    <timestamp>1455262740</timestamp>
+  </article>
+</articles>

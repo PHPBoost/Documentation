@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>52</id>
+    <id_contents>1687</id_contents>
+    <title><![CDATA[Administration du module Liens Web]]></title>
+    <encoded_title><![CDATA[administration-du-module-liens-web]]></encoded_title>
+    <hits>669</hits>
+    <id_cat>27</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>27</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>51</cat_article_id>
+    <con_id_contents>1687</con_id_contents>
+    <con_id_article>52</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_menu-partenaires">Menu Partenaires</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_categories">Catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li></ol></li><li><a href="#paragraph_ajout-d-un-lien">Ajout d'un lien</a></li><li><a href="#paragraph_gestion-des-liens">Gestion des liens</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration">Configuration</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration">Configuration</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_config.png" alt="" /></p><br />
+<strong>Paramètres :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nombre d'éléments affichés par page</strong> : nombre maximum de liens qui seront référencés par page.
+</li><li class="formatter-li"><strong>Nombre de catégories maximum affichées par page</strong> : nombre maximum de catégories visibles par page.
+</li><li class="formatter-li"><strong>Nombre de catégories affichées par ligne</strong> : nombre de catégories visibles sur une ligne (entre 1 et 4).
+</li><li class="formatter-li"><strong>Affichage des informations dans les catégories</strong> : Disposition de l'affichage des liens lors de la navigation dans une catégorie :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Résumé</strong> : <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_resume.png" alt="" /></p><br />
+Vous pourrez également choisir d'afficher le résumé aux membres qui n'auraient pas le droit de lecture sur les liens.
+</li><li class="formatter-li"><strong>Tout le contenu</strong> : <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_content.png" alt="" /></p>
+</li><li class="formatter-li"><strong>Tableau</strong> : <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_table.png" alt="" /></p><br />
+</li></ul>
+</li><li class="formatter-li"><strong>Activer les commentaires</strong> : Permet à vos membres de commenter les liens.
+</li><li class="formatter-li"><strong>Activer la notation</strong> : Laisser la possibilité aux utilisateurs de noter les liens.
+</li><li class="formatter-li"><strong>Echelle de notation</strong> : note maximale que peut recevoir un lien (de 3 à 20).
+</li><li class="formatter-li"><strong>Description de la catégorie racine </strong> : Texte qui sera affiché sur la page d'accueil du module.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_menu-partenaires">Menu Partenaires</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_partners.png" alt="" /></p><br />
+<br />
+Le Menu Partenaires est le mini module (menu) de ce module. Il permet d'afficher les sites partenaires au votre.<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Ordre d'affichage des partenaires</strong> : Définition de l'ordre d'affichage des partenaires (Alphabétique, Date de création, Meilleures notes, Nombre de visites, Nombre de commentaires).<br />
+A noter que les partenaires privilégiés seront toujours affichés en premier.
+</li><li class="formatter-li"><strong>Sens</strong> : Croissant ou décroissant
+</li><li class="formatter-li"><strong>Nombre de partenaires affichés maximum </strong> : nombre de sites qui seront affichés dans le menu (entre 1 et 50).<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_auths.png" alt="" /></p><br />
+<br />
+Vous pouvez définir ici les autorisations globales du module, à savoir les droits de :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Lecture : visualiser les liens
+</li><li class="formatter-li">Écriture : ajouter un lien
+</li><li class="formatter-li">Contribution : soumettre un lien à la validation
+</li><li class="formatter-li">Modération : supprimer, modifier et valider les liens<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_categories">Catégories</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-categories">Gestion des catégories</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_categories_management.png" alt="" /></p><br />
+<br />
+Ici vous pouvez voir toutes les catégories et sous catégories de votre module Liens web.<br />
+<br />
+Voici à quoi correspondent les boutons d'administration : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrows"></i>
+<!-- END HTML --> : permet de déplacer chaque élément là où vous le souhaitez, en cliquant dessus puis en le lâchant lorsqu'il est bien place (technique du glisser/déposer)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-up"></i>
+<!-- END HTML --> : sert à déplacer vers le haut une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML --> : sert à déplacer vers le bas une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> : sert à éditer un élément pour modifier son titre, sa catégorie, ses autorisation,...)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> : sert à supprimer une catégorie.<br />
+<span class="notice">Si la catégorie contient des liens, lors de la suppression, il vous sera proposé de transférer les liens ou les sous catégories dans une autre catégorie<br />
+</span><br />
+</li></ul><br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_del_category.png" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/admin_add_category.png" alt="" /></p><br />
+<br />
+<strong>Champs à renseigner :</strong><br />
+<br />
+<strong>Nom</strong> : Titre de la catégorie<br />
+<strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.<br />
+<strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre catégorie. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-).<br />
+<strong>Emplacement</strong> : où se situera votre élément.<br />
+<strong>Description</strong> : vous pouvez mettre une petite description de votre catégorie. Cette description se trouvera au-dessus des questions de votre catégorie.<br />
+<strong>Image</strong> : vous permet d'associer une image à votre catégorie. Veillez à ne pas mettre d'images trop grosses afin de ne pas gêner la navigation des membres. Juste en dessous, vous pourrez voir une prévisualisation de cette image.<br />
+<br />
+<strong>Autorisations</strong> : Enfin, en cliquant sur la checkbox, vous pourrez définir des autorisations spécifiques à cette catégorie.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajout-d-un-lien">Ajout d'un lien</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/add_link.png" alt="" /></p><br />
+<strong>Champs à renseigner :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nom</strong> : nom de votre lien, en général il s'agit du titre du site
+</li><li class="formatter-li"><strong>Emplacement</strong> : catégorie dans laquelle sera mis votre lien.
+</li><li class="formatter-li"><strong>Adresse</strong> : adresse complète du site (ne pas oublier "http://")
+</li><li class="formatter-li"><strong>Description</strong> : description du lien
+</li><li class="formatter-li"><strong>Personnaliser le condensé de la description</strong> : En cochant cette case, vous pouvez définir vous-même le condensé de la description du lien. Dans le cas contraire, la description sera coupée à 250 caractères et le formatage ne sera pas affiché.
+</li><li class="formatter-li"><strong>Site partenaire</strong> : En cochant cette case, vous pouvez définir ce lien comme 'Site partenaire'. Dans ce cas, le lien présenté sera affiché dans le mini module.<br />
+Aussi, vous pourrez également définir :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Bannière du partenaire</strong> : Image représentant le site. En entrant l'adresse de l'image, un aperçu apparaitra juste en dessous.
+</li><li class="formatter-li"><strong>Partenaire prioritaire</strong> : Si le site est défini comme partenaire prioritaire, il apparaitra toujours au dessus des autres.<br />
+</li></ul>
+</li><li class="formatter-li"><strong>Mots-clés</strong> : Mots qui définissent le site ou lien.
+</li><li class="formatter-li"><strong>Date de création</strong> : Vous pouvez définir l'heure et la date de création si celle d'origine ne vous convient pas.
+</li><li class="formatter-li"><strong>Publication</strong> : Vous pouvez garder ce lien en Brouillon, le publier maintenant ou différer sa publication. Dans ce cas, il vous sera demandé la date et heure de parution souhaitée.<br />
+Enfin, vous pourrez définir une date de fin de parution si vous souhaitez que le lien ne soit plus disponible après un certain temps.<br />
+</li></ul><br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-liens">Gestion des liens</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/links_management.png" alt="" /></p><br />
+<br />
+Vous trouverez ici tous les liens de votre module web, que vous pourrez trier selon plusieurs choix (auteur, catégorie, ...).<br />
+Tout à droite se trouvent les boutons d'édition <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> et de suppression <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML -->.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.234.173</user_ip>
+    <timestamp>1460629198</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>261</id>
+    <id_contents>1736</id_contents>
+    <title><![CDATA[Utilisation du module wiki]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-wiki]]></encoded_title>
+    <hits>1291</hits>
+    <id_cat>45</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>45</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>163</cat_article_id>
+    <con_id_contents>1736</con_id_contents>
+    <con_id_article>261</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_accueil-du-wiki">Accueil du wiki</a></li><li><a href="#paragraph_lecture-du-wiki">Lecture du wiki</a></li><li><a href="#paragraph_le-menu-outils">Le menu &quot;Outils&quot;</a><ol class="wiki_list_2"><li><a href="#paragraph_discussion">Discussion</a></li><li><a href="#paragraph_historique">Historique</a></li><li><a href="#paragraph_modifier-supprimer-renommer-deplacer">Modifier - supprimer - renommer - déplacer</a></li><li><a href="#paragraph_redirections">Redirections</a></li><li><a href="#paragraph_type-d-article">Type d'article</a></li><li><a href="#paragraph_niveau-de-restriction">Niveau de restriction</a></li><li><a href="#paragraph_version-imprimable">Version imprimable</a></li></ol></li><li><a href="#paragraph_le-menu-contribuer">Le menu &quot;Contribuer&quot;</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_accueil-du-wiki">Accueil du wiki</h1><br />
+
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_home_page.png" alt="" /><br />
+<br />
+La page d'accueil du wiki se décompose en plusieurs parties:<br />
+<ol class="formatter-ol">
+<li class="formatter-li">2 menus suivants les autorisations de l'utilisateur
+</li><li class="formatter-li">Le texte de l'accueil du wiki
+</li><li class="formatter-li">La liste des catégories principales (si activée dans l'administration du wiki)
+</li><li class="formatter-li">Le lien vers l'explorateur du wiki
+</li><li class="formatter-li">Les derniers articles mis à jour (si activés et configurés dans l'administration du wiki)<br />
+</li></ol><br />
+<br />
+Vous le constaterez à l'usage, le menu "Outils" (le plus bas) sur l'accueil du wiki diffère de celui que vous trouverez sur les autres pages, car il est toujours lié à la page en cours.<br />
+Sur l'index, il se compose uniquement de :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Historique : Qui permet d'afficher les derniers articles créés ou modifiés :<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_home_history.png" alt="" />
+</li><li class="formatter-li">Modifier l'accueil (si vous en avez les droits) : Permet de se rendre dans l'administration afin de modifier le texte de l'accueil du wiki
+</li><li class="formatter-li">Page aléatoire : Ouvre un article au hasard du wiki<br />
+</li></ul><br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_home_tools_links.png" alt="" /><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_lecture-du-wiki">Lecture du wiki</h1><br />
+
+<br />
+Voilà comment se compose la lecture d'un article :<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_article.png" alt="" /><br />
+<br />
+On trouve le titre en haut, le menu Outils sur sa droite, une table des matières si le contenu comprends des balises de titre spécifiques au module wiki.<br />
+Enfin, tout en bas apparait le compteur de vues si activé dans la configuration.<br />
+<br />
+Nous détaillerons à présent le menu Outils.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-menu-outils">Le menu &quot;Outils&quot;</h1><br />
+
+<br />
+Les menus du wiki peuvent être assez denses et diffèrents en fonction des autorisations attribuées aux membres par l'administrateur. <br />
+Cette documentation vous présente l'ensemble des liens qui peuvent apparaitre dans ce menu.<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_tools.png" alt="" /><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_discussion">Discussion</h2><br />
+
+<br />
+Ce lien vous permet de lire les commentaires relatifs à cet article et d'y ajouter le votre.<br />
+Il se peut qu'à droite de ce lien apparaisse un chiffre entre parenthèses; ce dernier indique le nombre de commentaires postés à la suite de l'article en cours de lecture.<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_comment.png" alt="" /><br />
+<br />
+Lors du clic sur l'onglet "discussion", s'affiche la page des commentaires divisée en deux parties distinctes :<br />
+- le formulaire d'ajout de commentaire<br />
+- la liste des commentaires précédemment postés. Cette liste est affichée sous le formulaire d'ajout de commentaire.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_historique">Historique</h2><br />
+
+<br />
+L'historique vous donne accès à l'historique des ajouts, suppressions et autres modifications du wiki, ainsi que les dates et auteurs des actions. Notez que l'historique sera différent selon que vous soyez sur la page d'un article, d'une catégorie ou sur l'accueil du wiki.<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_history.png" alt="" /><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_modifier-supprimer-renommer-deplacer">Modifier - supprimer - renommer - déplacer</h2><br />
+
+<br />
+Ces trois liens vous permettent respectivement de:<br />
+<ul class="formatter-ul">
+<li class="formatter-li">modifier
+</li><li class="formatter-li">supprimer
+</li><li class="formatter-li">renommer
+</li><li class="formatter-li">déplacer<br />
+</li></ul><br />
+<br />
+tout article ou catégorie que vous souhaitez.<br />
+<br />
+L'outil de renommage vous permet également de générer une redirection automatique de l'ancien vers le nouvel article.<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_rename_article.png" alt="" /><br />
+<br />
+L'outil de déplacement vous affiche un explorateur hiérarchisé des catégories du wiki pour vous permettre de choisir celle vers laquelle vous souhaitez déplacer votre article.<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_move_article.png" alt="" /><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_redirections">Redirections</h2><br />
+
+<br />
+Les redirections servent à utiliser plusieurs adresses pour accéder à un article unique.<br />
+<br />
+Par exemple pour cet article que vous êtes en train de lire, soit celui ci : <strong>Utilisation du wiki</strong>, nous allons mettre une redirection pour un titre comme 'Utilisation du wiki - test redirection'.<br />
+<br />
+Si on clique sur 'redirections', on voit qu'aucune redirection existe pour cet article.<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_redirect_step1.png" alt="" /><br />
+<br />
+<br />
+Pour créer une redirection, nous allons cliquer sur l'icône correspondante: <!-- START HTML -->
+<i class="fa fa-fast-forward"></i>
+<!-- END HTML --><br />
+<br />
+La page qui s'affiche nous propose un formulaire destiné à recevoir le nom de la redirection à créer.<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_redirect_step2_add_new_redirection.png" alt="" /><br />
+<br />
+Vous pouvez évidemment supprimer les redirections existantes en cliquant sur <!-- START HTML -->
+<i class="fa fa-fast-forward"></i>
+<!-- END HTML --> au niveau de gestion des redirections de l'article :<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_delete_redirection_table.png" alt="" /><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_type-d-article">Type d'article</h2><br />
+
+<br />
+Cette fonctionnalité vous permet de gérer le statut de vos articles. Vous pouvez ainsi les déclarer comme étant incomplets, refusés, à refaire, en travaux etc... <br />
+Vous pouvez également opter pour un statut personnalisé. <br />
+<br />
+Les statuts des articles, qu'ils soient personnalisés ou non, génèrent l'affichage d'un texte descriptif en préambule aux articles concernés.<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_article_type_predefined.png" alt="" /><br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_article_type_personalized.png" alt="" /><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_niveau-de-restriction">Niveau de restriction</h2><br />
+
+<br />
+vous permet d'outrepasser les autorisations configurées par l'administrateur. Vous pouvez régler de manière précise quels membres ont la possibilité d'agir sur vos articles; qu'il s'agisse de lecture, modification, déplacement, suppression etc...<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_version-imprimable">Version imprimable</h2><br />
+
+<br />
+vous offre la possibilité de générer un fichier texte en vue d'une impression propre, sans intégrer l'environnement graphique de votre site.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-menu-contribuer">Le menu &quot;Contribuer&quot;</h1><br />
+
+<br />
+Ce menu vous propose plusieurs liens en fonction des autorisations attribuées par l'administrateur du site. Parmi les liens qu'il est possible d'attribuer, l'on peut distinguer:<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_contribute.png" alt="" /><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Accueil</strong> : Vous redirige vers l'accueil du wiki
+</li><li class="formatter-li"><strong>Configuration</strong> (si vous en avez les droits): Permet de se rendre à la page de configuration du module
+</li><li class="formatter-li"><strong>Autorisations</strong> (si vous en avez les droits): Permet de se rendre à la page de configuration des autorisations du module
+</li><li class="formatter-li"><strong>Créer un article</strong> charge le formulaire de création d'un article
+</li><li class="formatter-li"><strong>Créer une catégorie</strong> charge la page de création de catégorie
+</li><li class="formatter-li"><strong>Favoris</strong> vous permet de retrouver facilement les articles que vous suivez.<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_favorites.png" alt="" />
+</li><li class="formatter-li"><strong>Explorateur</strong> vous renvoie vers l'explorateur du wiki<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/using_wiki/wiki_explorer.png" alt="" /><br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.210.103</user_ip>
+    <timestamp>1463282135</timestamp>
+  </article>
+</articles>

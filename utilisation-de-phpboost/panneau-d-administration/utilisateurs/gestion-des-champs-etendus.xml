@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>132</id>
+    <id_contents>767</id_contents>
+    <title><![CDATA[Gestion des champs étendus]]></title>
+    <encoded_title><![CDATA[gestion-des-champs-etendus]]></encoded_title>
+    <hits>785</hits>
+    <id_cat>17</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>17</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>17</cat_article_id>
+    <con_id_contents>767</con_id_contents>
+    <con_id_article>132</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-champs-etendus">Gestion des champs étendus</a></li><li><a href="#paragraph_ajouter-un-champ-etendu">Ajouter un champ étendu</a><ol class="wiki_list_2"><li><a href="#paragraph_specificites">Spécificités</a><ol class="wiki_list_3"><li><a href="#paragraph_champs-textes">Champs textes</a></li><li><a href="#paragraph_champs-selections-et-choix">Champs sélections et choix</a></li></ol></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Vous avez la possibilité ici de gérer de nouveaux champs dans le profil de vos utilisateurs. Ainsi vous allez pouvoir personnaliser les champs à votre guise. De nombreuses possibilités vous sont offertes, nous allons les découvrir dans cet article.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-champs-etendus">Gestion des champs étendus</h1><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/administration/user/extended-fields/manage.png" alt="" /></p><br />
+<br />
+Vous pouvez modifier, supprimer et déplacer la position des champs étendus. Un simple glisser-déplacer et quand vous aurez fini, cliquez sur "modifier".<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-un-champ-etendu">Ajouter un champ étendu</h1><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/administration/user/extended-fields/add.png" alt="" /></p><br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> <strong>Nom</strong> : Le nom que votre champ devra avoir dans le profil du membre
+	</li><li class="formatter-li"> <strong>Description</strong> : La description sera présente juste en dessous du nom du champ dans le profil du membre
+	</li><li class="formatter-li"> <strong>Type de champ</strong> : Dans cette liste déroulante, vous devez sélectionner le type de champ. Par défaut, il y en a un certain nombre, mais sachez également que selon les modules installés, vous pouvez en avoir d'autres (ex : Le module newsletter ajoute un champ dans le profil pour pouvoir gérer les abonnements).
+	</li><li class="formatter-li"> <strong>Champ requis</strong> : Cochez oui si vous souhaitez que l'utilisateur soit forcé de donner une valeur.
+	</li><li class="formatter-li"> <strong>Afficher</strong> : Si vous souhaitez afficher/activer le champ
+	</li><li class="formatter-li"> <strong>Autorisations de lecture du champ dans le profil</strong> : Niveau d'autorisation d'accès en lecture au champ lors de la visualisation du profil d'un membre
+	</li><li class="formatter-li"> <strong>Autorisations de lecture du champ dans la création ou la modification d'un profil</strong> : Niveau d'autorisation d'accès lors de la création ou la modification d'un profil (si vous souhaitez afficher un champ seulement pour les membres par exemple)<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_specificites">Spécificités</h2><br />
+
+<br />
+Selon le champ, vous pouvez avoir d'autres informations à saisir :<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_champs-textes">Champs textes</h3><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> <strong>Contrôle de la forme de l'entrée</strong> : Vous permet de choisir dans le cas d'un champ texte court, un type d'entré (ex : email, site web, ...) ou une regex personnalisée.<br />
+</li></ul><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_champs-selections-et-choix">Champs sélections et choix</h3><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> <strong>Valeurs possibles</strong> : Vous permet de donner les valeurs possibles. Ex pour avoir une liste déroulante avec trois valeurs : Rouge, Bleu, Vert, il vous faudra donner comme valeur : Rouge|Bleu|Vert
+        </li><li class="formatter-li"> <strong>Valeurs par défaut </strong> : Le champs valeurs par défaut vous permet de définir les valeurs qui doivent être sélectionnées/cochées par défaut. Si il y en a plusieurs, elles doivent être séparées par | .<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>1466</user_id>
+    <user_ip>90.55.70.218</user_ip>
+    <timestamp>1358189376</timestamp>
+  </article>
+</articles>

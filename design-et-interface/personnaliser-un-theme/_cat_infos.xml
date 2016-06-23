@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>211</id>
+    <id_contents>1742</id_contents>
+    <title><![CDATA[Personnaliser un thème]]></title>
+    <encoded_title><![CDATA[personnaliser-un-theme]]></encoded_title>
+    <hits>15266</hits>
+    <id_cat>59</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>59</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>211</cat_article_id>
+    <con_id_contents>1742</con_id_contents>
+    <con_id_article>211</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_faut-il-des-connaissances-particulieres">Faut-il des connaissances particulières ?</a></li><li><a href="#paragraph_recommandations">Recommandations</a></li><li><a href="#paragraph_la-structure-des-themes">La structure des thèmes</a></li><li><a href="#paragraph_personnaliser-un-theme">Personnaliser un thème</a><ol class="wiki_list_2"><li><a href="#paragraph_la-personnalisation-des-fichiers-css">La personnalisation des fichiers CSS</a></li><li><a href="#paragraph_la-personnalisation-des-fichiers-html">La personnalisation des fichiers HTML</a></li><li><a href="#paragraph_la-personnalisation-des-fichiers-images">La personnalisation des fichiers images</a></li></ol></li><li><a href="#paragraph_finaliser-son-theme">Finaliser son thème</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction</h1><br />
+
+<br />
+Sachez d'abord que ces articles n'ont pas pour but de vous aider à créer un thème à partir d'une feuille blanche. <br />
+Au travers des articles qui vont suivre, vous allez pouvoir comprendre et maîtriser l'architecture d'un thème PHPBoost afin de pouvoir réaliser votre propre thème à votre image, à votre goût, mais surtout un thème dédié à votre projet. <br />
+<br />
+Bien sûr, il est inutile de réinventer la roue, aussi je vous conseille de partir d'un thème très bien fait et dénué de tous bricolages : Le thème <strong>Base</strong>.<br />
+Il est en effet une très bonne base et est facilement personnalisable. <br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_faut-il-des-connaissances-particulieres">Faut-il des connaissances particulières ?</h1><br />
+
+<br />
+La mise en forme de pages web utilise les langages XHTML et CSS. Il n'est pas nécessaire de connaître le XHTML pour faire son thème, en revanche il faut avoir quelques notions en CSS.<br />
+Rassurez-vous, ce langage est très intuitif, il suffit d'avoir quelques notions d'anglais pour le comprendre. Vous trouverez une <strong><a href="http://fr.openclassrooms.com/informatique/cours/apprenez-a-creer-votre-site-web-avec-html5-et-css3/memento-des-proprietes-css">liste des propriétés CSS sur le Site OpenClassrooms</a></strong>. Si vous avez compris ces notions, avec un peu de bon sens et de volonté, c'est à la portée de tout le monde.<br />
+Pour en savoir plus sur ces deux langages nous vous invitons à lire <strong><a href="http://fr.openclassrooms.com/informatique/cours/apprenez-a-creer-votre-site-web-avec-html5-et-css3">cet article sur le html5 et le CSS3</a></strong> est très bien fait, toujours sur le Site du Zéro.<br />
+ <br />
+<h1 class="wiki_paragraph1" id="paragraph_recommandations">Recommandations</h1><br />
+
+<br />
+Afin de travailler sans pour autant empêcher l'accès à votre site, nous vous recommandons de modifier votre thème en local.<br />
+Cela vous permettra également d'éditer rapidement vos fichiers et d'avoir un rendu direct sans nécessité de les transférer via FTP.<br />
+<br />
+Chaque développeurs possède sa propre façon de coder. Lorsque l'on travaille en équipe il est important d'avoir une base commune. Vous trouverez dans l'article <strong><a href="/wiki/conventions-html-et-css">Conventions HTML et CSS</a></strong> notre façon d'écrire le code CSS.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-structure-des-themes">La structure des thèmes</h1><br />
+
+<br />
+Avant de faire des modifications, il est important de comprendre la façon dont est organisé un thème. Nous vous invitons à lire l'article <strong><a href="/wiki/structure-d-un-theme">Structure des thèmes</a></strong>. Chaque répertoires et chaque fichiers sont détaillés.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_personnaliser-un-theme">Personnaliser un thème</h1><br />
+
+<br />
+La personnalisation graphique d'un thème passe par 3 étapes : <br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-personnalisation-des-fichiers-css">La personnalisation des fichiers CSS</h2><br />
+
+<br />
+Pour rappel, le code CSS correspond au style que l'on applique sur des éléments du code HTML. Le code CSS de PHPBoost est contenu dans les fichiers .css . Certains éléments peuvent encore être contenu dans des fichiers .tpl, mais nous avons essayé de les supprimer au maximum pour faciliter la mise à jour graphique.<br />
+L'article <strong><a href="/wiki/personnalisation-du-code-css">Personnalisation du code CSS</a></strong> contient toutes les infos dont vous pourriez avoir besoin.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-personnalisation-des-fichiers-html">La personnalisation des fichiers HTML</h2><br />
+
+<br />
+Le code HTML de PHPBoost est contenu dans les fichiers .tpl. Chaque module contient ces propres fichiers personnalisables.<br />
+L'article <strong><a href="/wiki/personnalisation-des-modules-ou-de-framework">Personnalisation des modules ou de framework</a></strong> vous aidera à la personnalisation et à la modification du code afin d'organiser le site web comme vous le souhaitez.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-personnalisation-des-fichiers-images">La personnalisation des fichiers images</h2><br />
+
+<br />
+Dans certains cas, vous pouvez être amené à modifier certaines images afin d'apporter une touche personnelle.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_finaliser-son-theme">Finaliser son thème</h1><br />
+
+<br />
+Maintenant que vous avez modifié votre thème pour qu'il soit à l'image de votre site web, nous pouvons passer à la dernière étape.<br />
+Il faut maintenant préparer votre thème à l'exportation. L'article <strong><a href="/wiki/finalisation-du-theme">Finalisation du thème</a></strong> vous présente quelques conseils afin de pouvoir partager votre création.]]></content>
+    <activ>1</activ>
+    <user_id>5773</user_id>
+    <user_ip>2.1.83.160</user_ip>
+    <timestamp>1466016225</timestamp>
+  </article>
+</articles>

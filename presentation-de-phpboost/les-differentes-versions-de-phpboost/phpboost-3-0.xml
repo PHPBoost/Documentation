@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>96</id>
+    <id_contents>140</id_contents>
+    <title><![CDATA[PHPBoost 3.0]]></title>
+    <encoded_title><![CDATA[phpboost-3-0]]></encoded_title>
+    <hits>1698</hits>
+    <id_cat>14</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>14</cat_id>
+    <cat_id_parent>1</cat_id_parent>
+    <cat_article_id>14</cat_article_id>
+    <con_id_contents>140</con_id_contents>
+    <con_id_article>96</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol>]]></menu>
+    <content><![CDATA[A l'origine, lorsque le développement a commencé il s'agissait simplement d'une évolution, celle-ci visait à améliorer des fonctionnalités et en ajouter de nouvelles. Cependant notre vision de la programmation sur le web, et en général, évoluant de pair avec PHPBoost, nous avons voulu moderniser notre code en profondeur. En effet l'architecture interne ne nous convenait plus, et était devenue limitée.<br />
+<br />
+Le temps de développement conséquent est le fait de notre décision de repartir sur une base saine. Le framework PHPBoost 3.0 est le fruit de ce travail en interne. Il n'apporte pas de fonction visible car c'est le moteur qui se situe en dessous des modules. Cependant c'est bien à ce nouveau framework que l'on doit les nouvelles fonctions implémentées. Ce nouvel environnement de développement offre aux développeurs du noyau et des modules des outils permettant d'accélérer leur travail.<br />
+<br />
+La sortie de PHPBoost 3.0 finale est l'occasion de vous donner un petit retour sur plus d'un an et demi de développement intensif. Voici, à titre indicatif, quelques chiffres : <br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">1,5 an de développement 
+	</li><li class="formatter-li">Plus de 2800 révisions sur le SVN de développement 
+	</li><li class="formatter-li">Plus de 800 rapports de bugs entre la première version Alpha et la sortie finale 
+	</li><li class="formatter-li">20 modules livrés dans le pack complet<br />
+</li></ul><br />
+<br />
+Un article plus complet détaille l'ensemble des évolutions majeures apportées par PHPBoost 3 : <a href="/articles/articles-6-65+nouveautes-de-phpboost-3-0-tornade.php">Nouveautés de PHPBoost 3</a> !<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_changelog">Changelog</h1><br />
+
+<br />
+<strong>Structure et fonctionnement :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau moteur de templates, avec système de cache intégré et nouvelles fonctionnalités
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Intégration d'un éditeur texte temps réel (WYSIWYG) <em>Tinymce</em>, configurable dans le profil avec choix BBcode ou Tinymce
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Panneau de contribution permettant de centraliser toutes les contributions de tous les modules
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte totale du moteur d'interprétation du BBCode. Ajout de nouvelles balises parmi lesquelles <em>block, fieldset, acronym,</em> <em>HTML</em> qui permet d'insérer du code HTML (seulement pour les personnes autorisées). Colorateur de BBCode et Templates PHPBoost ajouté. Support de l'imbrication de toutes les balises
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Système de communication entres les modules et le noyau (Framework PHPBoost)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveaux outils standardisés communs aux modules (Recherche, dernier ajouts, etc) (Framework PHPBoost)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Amélioration du système d'autorisation, possibilité de gérer en plus des groupes multiples chaque membre individuellement
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Système d'ajout de menus personnel automatisé, création pour les débutants facilité
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Détection automatisée des menus non installés, possibilité d'associer plusieurs menus à un module
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau système de menu dynamique (déroulant), avec sous-menus infinis
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau système de menu de flux, pouvant gérer les derniers ajouts sur les modules (ex: derniers sujets du forum, derniers média ajoutés, ...)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouvelle interface de déplacement des menus (drag 'n drop)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> 5 Nouveaux placements possible des menus (Tête de page/Haut/Centre haut/Centre bas/Pied de page)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Intégration d'un nouveau colorateur syntaxique (Geshi), support de nombreux langages
+
+</li><li class="formatter-li"> Refonte totale des commentaires. Intégration simplifiée dans les modules
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Interface de visualisation/édition des commentaires du site
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouvelle gestion de l'éditeur de contenu, désactivation des balises améliorée
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Gestion du temps global (GMT), et du décalage horaire
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Gestionnaire automatisé des catégories infinies (Framework PHPBoost)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Système de gestion des mises à jour du noyau et des modules avec gestion de différents dépôts
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout d'un proxy web permettant d'effectuer des requêtes asynchrones sur des sites distants
+
+</li><li class="formatter-li"><span style="color:red;">Nouveauté :</span> Gestions des liens du site, duplication possible. Gestion des menus dynamiques (déroulants et extensibles), verticaux et horizontaux. Extension automatique suivant la page consultée
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Gestionnaire de commentaires (Framework PHPBoost)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Gestionnaire de notation (Framework PHPBoost) 
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Amélioration de l'approche de programmation orienté objet (POO, Framework PHPBoost)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Support des autorisations avancées pour les menus
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau gestionnaire avancé de base de données, nombreux outils d'administration
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Enregistrement en XML des flux RSS/ATOM, intégration d'un parseur XML
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau système de captcha (anti-spam), avec différents niveaux de difficulté
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Amélioration du système des sessions, les modules gèrent les sessions pour les invités
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouvelle vérifications interactive (Ajax) dans l'inscription et dans le profil, permet de signaler instantanément les erreurs dans le formulaire
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouvel installateur
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Déplacement des fichiers/dossier dans l'administration
+
+</li><li class="formatter-li"> Système de cache amélioré
+
+</li><li class="formatter-li"> Système de cache, et de changement de jour pour les modules intégrés à l'interface de communication noyau/module
+
+</li><li class="formatter-li"> Gestion des mots de passe avec l'algorithme de cryptage sha256 en lieu et place du md5
+
+</li><li class="formatter-li"> Ajout au framework des éléments nécessaires pour traiter à l'avenir dans un nouveau module le plan du site. Ce module génèrera aussi le fichier <em>sitemap.xml</em> qui permet d'affiner le référencement dans les moteurs de recherches
+
+</li><li class="formatter-li"> Réorganisation du système d'autorisation
+
+</li><li class="formatter-li"> Valeurs par défaut dans les autorisations sur les groupes
+
+</li><li class="formatter-li"> Système de visualisation des messages du membre, possibilité de communication avec les modules pour récupérer les liens vers les messages
+
+</li><li class="formatter-li"> Possibilité de classer les modules dans les différents onglets de l'administration
+
+</li><li class="formatter-li"> Possibilité de désactiver les colonnes droite/gauche du thème
+
+</li><li class="formatter-li"> Possibilité de choisir finement le temps de maintenance du site
+
+</li><li class="formatter-li"> Possibilité de définir une limite d'upload dans le gestionnaire de fichier en fonction des groupes
+
+</li><li class="formatter-li"> Possibilité de définir un nombre maximum de messages privés en fonction des groupes
+
+</li><li class="formatter-li"> Possibilité de définir les extensions autorisées (une par une ou par groupe) dans le gestionnaire de fichier
+
+</li><li class="formatter-li"> Support de <em>https</em> dans l'installation et l'administration
+
+</li><li class="formatter-li"> Éditeur de <em>.htaccess</em>
+
+</li><li class="formatter-li"> Ajout du <em>phpinfo</em> dans l'administration
+
+</li><li class="formatter-li"> Possibilité de se déconnecter dans l'administration
+
+</li><li class="formatter-li"> Page d'erreur 404 lorsqu'une page n'est pas trouvée
+
+</li><li class="formatter-li"> Automatisation des configurations par défaut des modules
+
+</li><li class="formatter-li"> Nouveau système de chargement des langues/thèmes, avec déclenchement d'erreur en cas d'échec
+
+</li><li class="formatter-li"> Réorganisation du chargement de la tête de page
+
+</li><li class="formatter-li"> Cache pour les thèmes, les langues et les CSS
+
+</li><li class="formatter-li"> Amélioration de la gestion des groupes (ajout/édition/suppression)
+
+</li><li class="formatter-li"> Possibilité d'associer une couleur à un groupe, coloration du pseudo des membres du groupe
+
+</li><li class="formatter-li"> Nouveau système pour la barre d'arborescence (fil d&#8217;Ariane)
+
+</li><li class="formatter-li"> Possibilité d'insérer plusieurs CSS pour les modules
+
+</li><li class="formatter-li"> Possibilité de charger un CSS pour chaque mini-module
+
+</li><li class="formatter-li"> Nom des fichiers uploadés conservé (gestionnaire d'upload)
+
+</li><li class="formatter-li"> Ajout d'une interface affichant les informations sur le serveur et générant un rapport pour le support
+
+</li><li class="formatter-li"> Possibilité de désactiver les informations de temps de génération de page
+
+</li><li class="formatter-li"> Possibilité de désactiver les informations sur le thème utilisé
+
+</li><li class="formatter-li"> Message d'alerte lorsque le site est en maintenance, avec temps restant
+
+</li><li class="formatter-li"> Sauvegarde automatique du statut de la barre BBcode (étendu ou non)
+
+</li><li class="formatter-li"> Amélioration de l'insertion des balises BBcode
+
+</li><li class="formatter-li"> Message d'avertissement dans les commentaires si non autorisé à poster
+
+</li><li class="formatter-li"> Couleur alternée dans les messages (configurable par le CSS).
+
+</li><li class="formatter-li"> Ajout d'une barre de progression Ajax automatisée
+
+</li><li class="formatter-li"> Ajout de la balise <em>fieldset</em>
+
+</li><li class="formatter-li"> Ajout de la balise <em>block</em>
+
+</li><li class="formatter-li"> Ajout de la balise <em>font</em>, permet de changer la police d'écriture
+
+</li><li class="formatter-li"> Ajout de la balise <em>bgcolor</em>, permet de définir une couleur de fond
+
+</li><li class="formatter-li"> Ajout de la balise <em>pre</em>
+
+</li><li class="formatter-li"> Ajout de la balise <em>acronym</em>
+
+</li><li class="formatter-li"> Ajout de la balise <em>line</em>
+
+</li><li class="formatter-li"> Interface d'insertion (BBcode) pour la balise <em>table</em>
+
+</li><li class="formatter-li"> Interface d'insertion (BBcode) pour la balise <em>list</em>
+
+</li><li class="formatter-li"> Interface d'insertion (BBcode) pour la balise <em>url</em>
+
+</li><li class="formatter-li"> Possibilité de saisir des dates avant 1970 dans le mini calendrier
+
+</li><li class="formatter-li"> Diminution de la taille du copyright dans le pied de page
+
+</li><li class="formatter-li"> Changement du système de page de démarrage (plus fiable)
+
+</li><li class="formatter-li"> Capture de toutes les erreurs PHP par le gestionnaire, et archivage
+
+</li><li class="formatter-li"> Pose de verrous lors de l'écriture des fichiers de cache (plus sûr)
+
+</li><li class="formatter-li"> Nouveau système de gestion de lecture/écriture des fichiers sur le serveur
+
+</li><li class="formatter-li"> Nouvelle fonction de redirection
+
+</li><li class="formatter-li"> Amélioration du chargement des fichiers de configuration
+
+</li><li class="formatter-li"> Amélioration de la gestion des erreurs
+
+</li><li class="formatter-li"> Avertissement lors de l'exécution de requêtes SQL risquées dans l'administration, amélioration de l'interface et de la coloration syntaxique
+
+</li><li class="formatter-li"> Gestion amélioré des entités HTML
+
+</li><li class="formatter-li"> Récupération possible par les sessions des champs membres supplémentaires du site et des modules
+
+</li><li class="formatter-li"> Déplacement du code de connexion utilisateur
+
+</li><li class="formatter-li"> Regroupement des modules dans les templates
+
+</li><li class="formatter-li"> Nouvelles images pour les rangs
+
+</li><li class="formatter-li"> Amélioration dans la détection des statistiques des pays, navigateurs, et système d'exploitation
+
+</li><li class="formatter-li"> Ajout de Google Chrome dans les statistiques des navigateurs, ajout des téléphones mobiles
+
+</li><li class="formatter-li"> Conformation des requêtes au standard SQL
+
+</li><li class="formatter-li"> Amélioration des taches crons
+
+</li><li class="formatter-li"> Filtrage des bots (si URL Rewriting activé)
+
+</li><li class="formatter-li"> Correction du bug d'affichage des dossiers dans le gestionnaire de fichiers
+
+</li><li class="formatter-li"> Correction des bugs dû à l'option <em>register_globals</em><br />
+</li></ul><br />
+<br />
+<strong>Forum</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Réorganisation complète du code
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'ajouter un forum de type lien internet
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Lien précis vers l'action concernée dans l'historique du panneau de modération
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Interface pour visualiser partout sur le forum et instantanément les messages non lus
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Affichage du nombre de messages non lus
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de se connecter/enregistrer à partir du forum (désactivable)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de voir uniquement les nouveaux messages d'une catégorie
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Coloration des résultats dans le moteur de recherche
+
+</li><li class="formatter-li"> Nouveau formulaire de recherche
+
+</li><li class="formatter-li"> Amélioration de l'interface d'ajout de forums
+
+</li><li class="formatter-li"> Amélioration de l'interface d'alertes sur les sujets
+
+</li><li class="formatter-li"> Amélioration de l'interface et du système de sondage
+
+</li><li class="formatter-li"> Alerte avant de marquer les sujets comme lus
+
+</li><li class="formatter-li"> Action "suivre le sujet", "changement du statut du sujet" sans rechargement de page
+
+</li><li class="formatter-li"> Option de recherche dans le titre et contenu des sujets
+
+</li><li class="formatter-li"> Réparation des bugs sur l'arbre intervallaire gérant les catégories
+
+</li><li class="formatter-li"> Correction de la fonction de comptage des sujets/messages<br />
+</li></ul><br />
+<br />
+<strong>Galerie:</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Nom des images uploadées conservé
+
+</li><li class="formatter-li"> Nouveau système de notation<br />
+</li></ul><br />
+<br />
+<strong>News</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de publier automatiquement des news à la minute près
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Lien vers la news précédente/suivante
+
+</li><li class="formatter-li"> Possibilité de masquer le nom du posteur de la news
+
+</li><li class="formatter-li"> Possibilité de masquer la date de la news<br />
+</li></ul><br />
+<br />
+<strong>Articles</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Création d'une liste déroulante des pages consultables
+
+</li><li class="formatter-li"> Ajout de la balise <em>nouvelle page</em>
+
+</li><li class="formatter-li"> Nouveau système de notation<br />
+</li></ul><br />
+<br />
+<strong>Téléchargement</strong><br />
+<br />
+<ul class="formatter-ul"> 
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité aux membres de proposer des fichiers
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau système pour la gestion des catégories infinies (moins lourd et plus sûr)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouvelle interface
+
+</li><li class="formatter-li"> Nouveau système de notation<br />
+</li></ul><br />
+<br />
+<strong>Liens web</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Nouveau système de notation<br />
+</li></ul><br />
+<br />
+<strong>Statistiques:</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Graphiques en barre, et courbes
+
+</li><li class="formatter-li"> Ajout des pages vues par heures/jours/mois
+
+</li><li class="formatter-li"> Ajout du site de provenance des visiteurs
+
+</li><li class="formatter-li"> Ajout des mots clés qui ont amenés des visiteurs à partir de moteurs de recherche<br />
+</li></ul><br />
+<br />
+<strong>Sondages:</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité d'afficher les minis-sondages aléatoirement
+
+</li><li class="formatter-li"> Impossibilité de revoter pour les membres lorsque le niveau d'autorisation est réglé sur membre ou plus<br />
+</li></ul><br />
+<br />
+<strong>Discussion:</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout et suppression des messages en Ajax (sans rafraichissement de page)
+
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'actualiser la shoutbox toutes les X minute(s) (configurable)
+
+</li><li class="formatter-li"> Coloration du pseudo en fonction du rang<br />
+</li></ul><br />
+<br />
+<strong>En ligne:</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Ajout de la localisation du membre, et de la dernière mise à jour
+
+</li><li class="formatter-li"> Correction du nombre de visiteurs en ligne<br />
+</li></ul><br />
+<br />
+<strong>Livre d'or:</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Menu affichant aléatoirement les derniers messages postés<br />
+</li></ul><br />
+<br />
+<strong>Nouveau module:</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Module FAQ. Permet de gérer une liste de questions/réponses.<br />
+</li></ul><br />
+<br />
+<strong>Nouveau module:</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Module Recherche. Possibilité de faire des recherches globales dans les modules (proposant la fonction) et coloration des résultats<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>82.124.181.87</user_ip>
+    <timestamp>1346007593</timestamp>
+  </article>
+</articles>

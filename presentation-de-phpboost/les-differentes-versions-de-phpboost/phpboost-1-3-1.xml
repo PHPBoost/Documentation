@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>90</id>
+    <id_contents>134</id_contents>
+    <title><![CDATA[PHPBoost 1.3.1]]></title>
+    <encoded_title><![CDATA[phpboost-1-3-1]]></encoded_title>
+    <hits>757</hits>
+    <id_cat>14</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>14</cat_id>
+    <cat_id_parent>1</cat_id_parent>
+    <cat_article_id>14</cat_article_id>
+    <con_id_contents>134</con_id_contents>
+    <con_id_article>90</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol>]]></menu>
+    <content><![CDATA[La première version de PHPBoost distribuée au public est lancée le 18 novembre 2005, en version 1.3.1. Elle est immédiatement remplacée par PHPBoost 1.3.1b, mise à jour corrigeant les erreurs de jeunesse qui sont difficiles à prévoir.<br />
+Les fonctionnalités sont très réduites, mais le fonctionnement global est passable. <br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_changelog">Changelog</h1><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Déplacement des blocs (avec gestion du rang d'affichage)
+	</li><li class="formatter-li">Design tableau et CSS pour éviter les bugs d'affichage
+	</li><li class="formatter-li">Possibilité de pagination dans les articles (balise <em>[page]</em>) 
+	</li><li class="formatter-li">Moteur de recherche pour les membres
+	</li><li class="formatter-li">Blocage de la zone d'administration après 5 essais de connexion
+	</li><li class="formatter-li">Génération d'une clé de déverrouillage du compte administrateur lors de l'inscription (si le compte est bloqué après 5 essais). 
+	</li><li class="formatter-li">Suppression d'une faille possible avec les headers lors de l'envoi d'un mail
+	</li><li class="formatter-li">Amélioration de la régénération du cache des miniatures de la galerie 
+	</li><li class="formatter-li">Optimisation des requêtes SQL<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>82.124.181.87</user_ip>
+    <timestamp>1346007340</timestamp>
+  </article>
+</articles>

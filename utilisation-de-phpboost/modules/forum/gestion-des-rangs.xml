@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>71</id>
+    <id_contents>1698</id_contents>
+    <title><![CDATA[Gestion des rangs]]></title>
+    <encoded_title><![CDATA[gestion-des-rangs]]></encoded_title>
+    <hits>1396</hits>
+    <id_cat>25</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>25</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>44</cat_article_id>
+    <con_id_contents>1698</con_id_contents>
+    <con_id_article>71</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-rangs">Gestion des rangs</a></li><li><a href="#paragraph_ajouter-un-rang">Ajouter un rang</a><ol class="wiki_list_2"><li><a href="#paragraph_uploader-une-image-de-rang">Uploader une image de rang</a></li><li><a href="#paragraph_ajouter-un-rang">Ajouter un rang</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Les rangs servent à classer les membres en fonction de leur nombre de posts. Une icône est alors affichée au niveau du forum à gauche des posts dans le profil : <br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/forum/ranks/profile.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-rangs">Gestion des rangs</h1><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/forum/ranks/manage.png" alt="" /></p><br />
+<br />
+Il existe 2 rangs spéciaux pour les administrateurs et les modérateurs, vous pouvez seulement modifier l'image du rang.<br />
+<br />
+Pour les autres rangs, vous pouvez : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> changer le nom du rang
+</li><li class="formatter-li"> changer le nombre de posts du rang
+</li><li class="formatter-li"> changer l'icône
+</li><li class="formatter-li"> le supprimer<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-un-rang">Ajouter un rang</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_uploader-une-image-de-rang">Uploader une image de rang</h2><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/forum/ranks/upload.png" alt="" /></p><br />
+<br />
+Téléchargez l'icône de votre nouveau rang présente sur votre pc vers le serveur. Le plus simple est d'utiliser le système d'upload de cette page, sinon vous pouvez transférer vos icônes sur votre FTP dans le répertoire ..templates/nom_de_votre_theme/images/rank/<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-un-rang">Ajouter un rang</h2><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/forum/ranks/add.png" alt="" /></p><br />
+<br />
+Pour chaque nouveau rang, vous devez renseigner : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> le nom de votre rang
+</li><li class="formatter-li"> le nombre de message(s) pour accéder à ce rang
+</li><li class="formatter-li"> enfin l'icône relative au rang.<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1461300311</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>263</id>
+    <id_contents>1701</id_contents>
+    <title><![CDATA[Utilisation du module Newsletter]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-newsletter]]></encoded_title>
+    <hits>1059</hits>
+    <id_cat>46</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>46</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>166</cat_article_id>
+    <con_id_contents>1701</con_id_contents>
+    <con_id_article>263</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_accueil-de-la-newsletter">Accueil de la Newsletter</a></li><li><a href="#paragraph_envoyer-une-nouvelle-newsletter">Envoyer une nouvelle newsletter</a><ol class="wiki_list_2"><li><a href="#paragraph_choix-du-formatage-du-texte">Choix du formatage du texte</a></li><li><a href="#paragraph_redaction-de-la-newsletter">Rédaction de la newsletter</a></li></ol></li><li><a href="#paragraph_consulter-les-newsletters-archivees">Consulter les newsletters archivées</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_accueil-de-la-newsletter">Accueil de la Newsletter</h1><br />
+
+La page d'accueil de la newsletter propose un tableau présentant les différents flux disponibles sur le site.<br />
+En haut du tableau, selon que vous en ayez l'autorisation, un bouton permet d'accéder au formulaire pour rédiger et envoyer une nouvelle newsletter.<br />
+<br />
+En deuxième ligne, deux liens vous permettent de vous abonner/désabonner aux différents flux. Selon la configurations des autorisations, l’utilisateur pourra également:<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Consulter les archives des différents flux
+</li><li class="formatter-li"> Consulter la liste des inscrits aux différents flux<br />
+</li></ul><br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_home.png" alt="" /><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_envoyer-une-nouvelle-newsletter">Envoyer une nouvelle newsletter</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_choix-du-formatage-du-texte">Choix du formatage du texte</h2><br />
+
+La procédure de rédaction/envoi d'une newsletter se déroule en deux étapes.<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> La première vous permet de rédiger une newsletter au format texte simple sans encodage particulier.
+</li><li class="formatter-li"> La seconde vous permet de rédiger la newsletter à l'aide du BBCode
+</li><li class="formatter-li"> La troisième, plutôt destinée aux connaisseurs du langage HTML, vous permet de rédiger votre newsletter en utilisant le balisage HTML<br />
+</li></ul><br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_add_new_newsletter_step1.png" alt="" /><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_redaction-de-la-newsletter">Rédaction de la newsletter</h2><br />
+
+<br />
+La seconde étape consiste à rédiger votre newsletter puis de l'envoyer. Peut importe le type d'encodage choisi précédemment, seul le champs texte différera. Il vous faudra:<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Choisir le flux de destination de la newsletter
+</li><li class="formatter-li"> Rédiger la newsletter
+</li><li class="formatter-li"> Envoyer cette dernière. Un bouton vous permet de tester en amont si l'envoi de la news s'effectue correctement.<br />
+</li></ul><br />
+Rédaction au format texte<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_add_new_newsletter_step2_text_only.png" alt="" /><br />
+<br />
+Rédaction à l'aide du BBCode<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_add_new_newsletter_step2_bbcode.png" alt="" /><br />
+<br />
+Rédaction en langage HTML<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_add_new_newsletter_step2_html.png" alt="" /><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_consulter-les-newsletters-archivees">Consulter les newsletters archivées</h1><br />
+
+Dans certains cas, vous voudrez peut-être laisser libre accès aux différentes newsletters précédemment envoyées. PHPBoost vous permet de conserver les archives de chaque flux et, selon les autorisations octroyées aux utilisateurs, d'avoir accès à ces dernières.<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/using_newsletter/newsletter_see_archives.png" alt="" />]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.178.61</user_ip>
+    <timestamp>1461767746</timestamp>
+  </article>
+</articles>

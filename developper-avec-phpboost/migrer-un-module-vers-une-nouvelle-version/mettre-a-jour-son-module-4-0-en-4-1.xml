@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>200</id>
+    <id_contents>1531</id_contents>
+    <title><![CDATA[Mettre à jour son module 4.0 en 4.1]]></title>
+    <encoded_title><![CDATA[mettre-a-jour-son-module-4-0-en-4-1]]></encoded_title>
+    <hits>2114</hits>
+    <id_cat>41</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>41</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>144</cat_article_id>
+    <con_id_contents>1531</con_id_contents>
+    <con_id_article>200</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-de-configuration">Le fichier de configuration</a></li><li><a href="#paragraph_changements-dans-l-api">Changements dans l'API</a><ol class="wiki_list_2"><li><a href="#paragraph_systeme-de-categories">Système de catégories</a></li><li><a href="#paragraph_liens-dans-l-administration">Liens dans l'administration</a></li><li><a href="#paragraph_pagination">Pagination</a><ol class="wiki_list_3"><li><a href="#paragraph_fichiers-php">Fichiers php</a></li><li><a href="#paragraph_templates">Templates</a></li></ol></li><li><a href="#paragraph_notation">Notation</a></li></ol></li><li><a href="#paragraph_templates">Templates</a><ol class="wiki_list_2"><li><a href="#paragraph_tableaux">Tableaux</a></li><li><a href="#paragraph_icones">Icônes</a></li><li><a href="#paragraph_boutons">Boutons</a></li><li><a href="#paragraph_formulaires">Formulaires</a></li><li><a href="#paragraph_templates-des-pages">Templates des pages</a></li><li><a href="#paragraph_mini-modules">Mini-modules</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<span class="warning">Si aucun des éléments se trouvant dans cette documentation ne vous aide, référez-vous au forum et demandez de l'aide.</span><br />
+Cette documentation permet de rendre votre module compatible avec la version 4.1 de PHPBoost sans trop de modifications dans le code. Elle n'a pas pour but de le convertir en utilisant le modèle MVC et d'utiliser les nouvelles fonctionnalités. Effectuez les différentes étapes suivantes (peu importe l'ordre) pour mettre à jour votre module.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-fichier-de-configuration">Le fichier de configuration</h1><br />
+
+<br />
+Le seul changement à effectuer dans le fichier <em>/module/config.ini</em> pour rendre votre module compatible avec la nouvelle version est le paramètre "compatibility". Remplacez la valeur par <strong>4.1</strong>.<br />
+Pensez également à mettre à jour le numéro de version de votre module pour plus de cohérence.<br />
+[[CODE=text]]compatibility="4.1"[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_changements-dans-l-api">Changements dans l'API</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_systeme-de-categories">Système de catégories</h2><br />
+
+<br />
+Si votre module fait appel au système de catégories, il faut changer l'appel à la classe <strong>CategoriesManager</strong> en <strong>DeprecatedCategoriesManager</strong> dans le fichier <em>/module/phpboost/ModuleCats.class.php</em> :<br />
+[[CODE=php]]class DownloadCats extends DeprecatedCategoriesManager[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_liens-dans-l-administration">Liens dans l'administration</h2><br />
+
+<br />
+Un nouveau système a été mis en place pour les liens dans l'administration. Ces liens apparaissent maintenant également sur le site à droite du fil d'ariane.<br />
+<br />
+Pour le mettre en place, ajoutez la fonction suivante dans la classe du fichier <em>/module/phpboost/ModuleExtensionPointProvider.class.php</em> (en remplaçant Module par le nom de votre module) :<br />
+[[CODE=php]]
+public function tree_links()
+{
+return new ModuleTreeLinks();
+}
+[[/CODE]]<br />
+Créez ensuite le fichier <em>/module/phpboost/ModuleTreeLinks.class.php</em> (exemple pour le module download) :<br />
+[[CODE=php]]
+<?php
+/*##################################################
+ *                         DownloadTreeLinks.class.php
+ *                            -------------------
+ *   begin                : November 23, 2013
+ *   copyright            : (C) 2013 Julien BRISWALTER
+ *   email                : julienseth78@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+/**
+ * @author Julien BRISWALTER <julienseth78@phpboost.com>
+ */
+class DownloadTreeLinks implements ModuleTreeLinksExtensionPoint
+{
+public function get_actions_tree_links()
+{
+global $DOWNLOAD_LANG;
+load_module_lang('download'); //Chargement de la langue du module.
+require_once(PATH_TO_ROOT . '/download/download_auth.php');
+$tree = new ModuleTreeLinks();
+//Gestion et ajout de catégories dans l'administration
+$manage_categories_link = new AdminModuleLink($DOWNLOAD_LANG['admin.categories.manage'], new Url('/download/admin_download_cat.php'));
+$manage_categories_link->add_sub_link(new AdminModuleLink($DOWNLOAD_LANG['admin.categories.manage'], new Url('/download/admin_download_cat.php')));
+$manage_categories_link->add_sub_link(new AdminModuleLink($DOWNLOAD_LANG['add_category'], new Url('/download/admin_download_cat.php?new=1')));
+$tree->add_link($manage_categories_link);
+//Gestion et ajout de fichiers dans l'administration
+$manage_download_link = new AdminModuleLink($DOWNLOAD_LANG['files.manage'], new Url('/download/admin_download.php'));
+$manage_download_link->add_sub_link(new AdminModuleLink($DOWNLOAD_LANG['files.manage'], new Url('/download/admin_download.php')));
+$manage_download_link->add_sub_link(new AdminModuleLink($DOWNLOAD_LANG['add_file'], new Url('/download/management.php?new=1')));
+$tree->add_link($manage_download_link);
+//Gestion de la configuration du module dans l'administration
+$tree->add_link(new AdminModuleLink(LangLoader::get_message('configuration', 'admin'), new Url('/download/admin_download_config.php')));
+//Lien pour ajouter un fichier sur le site
+if (!AppContext::get_current_user()->check_level(User::ADMIN_LEVEL))
+{
+$tree->add_link(new ModuleLink($DOWNLOAD_LANG['add_file'], new Url('/download/management.php?new=1'), AppContext::get_current_user()->check_auth(DownloadConfig::load()->get_authorizations(), DOWNLOAD_WRITE_CAT_AUTH_BIT)));
+}
+return $tree;
+}
+}
+?>
+[[/CODE]]<br />
+<span class="notice">La classe [[CODE=php,0,1]]AdminModuleLink()[[/CODE]] permet d'afficher des liens dans l'administration et sur le site pour les administrateurs.<br />
+La classe [[CODE=php,0,1]]ModuleLink()[[/CODE]] des liens uniquement sur la partie site (pas dans l'administration). Les limitations d'accès à ce lien sont définies dans le 3e paramètre.</span><br />
+Vous pouvez ensuite supprimer les liens [[CODE=text,0,1]]admin_links[[/CODE]] dans <em>/module/lang/french/desc.ini</em> (idem pour les autres langues).<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_pagination">Pagination</h2><br />
+
+<br />
+L'API de pagination a été améliorée. Il faut faire des changements au niveau du code php et des templates pour l'utiliser parce-que l'ancienne API n'est plus supportée.<br />
+Si vous utilisiez la classe Pagination dans la version 4.0, veuillez maintenant passer à la nouvelle classe ModulePagination.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_fichiers-php">Fichiers php</h3><br />
+
+<br />
+Remplacez l'ancienne déclaration de la pagination :<br />
+[[CODE=php]]
+$Pagination = new DeprecatedPagination();
+$tpl->put_all(array(
+'PAGINATION' => $Pagination->display(PATH_TO_ROOT . '/module/page.php?p=%d', $number_elements, 'p', $_NBR_ELEMENTS_PER_PAGE, 3),
+));
+[[/CODE]]<br />
+Par :<br />
+[[CODE=php]]
+$page = AppContext::get_request()->get_getint('p', 1);
+$pagination = new ModulePagination($page, $number_elements, $_NBR_ELEMENTS_PER_PAGE);
+$pagination->set_url(new Url('/module/page.php?p=%d'));
+if ($pagination->current_page_is_empty() && $page > 1)
+{
+$error_controller = PHPBoostErrors::unexisting_page();
+DispatchManager::redirect($error_controller);
+}
+$tpl->put_all(array(
+'C_PAGINATION' => $pagination->has_several_pages(),
+'PAGINATION' => $pagination->display(),
+));
+[[/CODE]]<br />
+La variable [[CODE=php,0,1]]$number_elements[[/CODE]] représente le nombre total d'éléments (généralement récupéré par une requête SQL avant) et la variable [[CODE=php,0,1]]$_NBR_ELEMENTS_PER_PAGE[[/CODE]] représente le nombre d'éléments à afficher sur la page (généralement défini dans la configuration du module).<br />
+<br />
+Remplacez également la limitation du nombre de page dans la requête SQL :<br />
+[[CODE=php]]
+$Sql->limit($Pagination->get_first_msg($_NBR_ELEMENTS_PER_PAGE, 'p'), $_NBR_ELEMENTS_PER_PAGE)
+[[/CODE]]<br />
+Par :<br />
+[[CODE=php]]
+$Sql->limit($pagination->get_display_from(), $_NBR_ELEMENTS_PER_PAGE)
+[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_templates">Templates</h3><br />
+
+<br />
+Remplacez l'appel à la pagination dans les templates [[CODE=tpl,0,1]]{PAGINATION}[[/CODE]] par :<br />
+[[CODE=tpl]]
+# IF C_PAGINATION # # INCLUDE PAGINATION # # ENDIF #
+[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_notation">Notation</h2><br />
+
+<br />
+La fonction [[CODE=php,0,1]]set_average_notes()[[/CODE]] a été ajoutée dans la classe <strong>Notation</strong>.<br />
+Initialisation de la notation :<br />
+[[CODE=php]]
+$notation = new Notation();
+$notation->set_module_name('module');
+$notation->set_id_in_module($id);
+$notation->set_notation_scale($max_note);
+$result = $Sql->query_while("SELECT module.*, notes.average_notes
+FROM " . PREFIX . "module module
+LEFT JOIN " . DB_TABLE_AVERAGE_NOTES . " notes ON module.id = notes.id_in_module AND notes.module_name = 'module'", __LINE__, __FILE__);
+while ($row = $Sql->fetch_assoc($result))
+{
+$notation->set_id_in_module($row['id']);
+$notation->set_average_notes($row['average_notes']);
+}
+[[/CODE]]<br />
+Appel de la notation active (notation lors du clic) :<br />
+[[CODE=php]]
+$tpl->put_all(array(
+'NOTE' => NotationService::display_active_image($notation),
+));
+[[/CODE]]<br />
+Appel de la notation statique (affichage uniquement) :<br />
+[[CODE=php]]
+$tpl->put_all(array(
+'NOTE' => NotationService::display_static_image($notation),
+));
+[[/CODE]]<br />
+<h1 class="wiki_paragraph1" id="paragraph_templates">Templates</h1><br />
+
+<br />
+Il y a eu pas mal de changements dans le nom des classes CSS. La plupart du temps il suffit de remplacer le _ par un -. Référez-vous à la documentation des thèmes pour plus d'informations.<br />
+<ul class="formatter-ul">
+  <li class="formatter-li">[[CODE=tpl,0,1]]text_strong[[/CODE]] devient [[CODE=tpl,0,1]]text-strong[[/CODE]]
+  </li><li class="formatter-li">[[CODE=tpl,0,1]]text_center[[/CODE]] devient [[CODE=tpl,0,1]]center[[/CODE]]
+  </li><li class="formatter-li">[[CODE=tpl,0,1]]text_small[[/CODE]] devient [[CODE=tpl,0,1]]smaller[[/CODE]]<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_tableaux">Tableaux</h2><br />
+
+<br />
+Les classes CSS <strong>module-table</strong>, <strong>row1</strong>, <strong>row2</strong> et <strong>row3</strong> ont été supprimées et le style des tableaux a été mis à jour pour respecter les standards.<br />
+Un tableau doit être de la forme :<br />
+[[CODE=tpl]]
+<table>
+<caption>Titre du tableau</caption>
+<thead>
+<tr>
+<th>Titre</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<th>Pied de page</th>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td>Contenu</td>
+</tr>
+<tbody>
+</table>
+[[/CODE]]<br />
+<span class="notice">La déclaration du pied de page se fait bien avant la déclaration du contenu, ce n'est pas une erreur. Les sections <strong>caption</strong>, <strong>thead</strong> et <strong>tfoot</strong> ne sont pas obligatoires. Le style des tableaux se personnalise dans les fichiers CSS du thème (voir la documentation sur les thèmes).</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_icones">Icônes</h2><br />
+
+<br />
+Les images des thèmes ont été remplacées par des icônes de la librairie <a href="http://fontawesome.io/icons/">Font-Awesome</a>.<br />
+Vous pouvez avoir un aperçu des différentes icônes utilisées dans les modules dans le module <strong>bac à sable</strong>.<br />
+<br />
+<span style="text-decoration: underline;">Principaux changements</span> :<br />
+Remplacez :<br />
+[[CODE=tpl]]
+<img src="{PATH_TO_ROOT}/templates/{THEME}/images/{LANG}/edit.png" class="valign_middle" />
+<img src="{PATH_TO_ROOT}/templates/{THEME}/images/{LANG}/delete.png" class="valign_middle" />
+<img src="{PATH_TO_ROOT}/templates/{THEME}/images/refresh.png" alt="" />
+[[/CODE]]<br />
+Par :<br />
+[[CODE=tpl]]
+<i class="fa fa-edit"></i>
+<i class="fa fa-delete"></i>
+<i class="fa fa-refresh fa-2x"></i>
+[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_boutons">Boutons</h2><br />
+
+<br />
+Les boutons des formulaires doivent être mis à jour pour respecter la sémantique HTML5.<br />
+Remplacez :<br />
+[[CODE=tpl]]
+<input type="submit" name="valid" value="{L_SUBMIT}" class="submit">
+  
+<input value="{L_PREVIEW}" onclick="XMLHttpRequest_preview();" class="submit" type="button">
+  
+<input type="reset" value="{L_RESET}" class="reset">
+[[/CODE]]<br />
+Par :<br />
+[[CODE=tpl]]
+<button type="submit" name="valid" value="true">{L_SUBMIT}</button>
+<button type="button" value="{L_PREVIEW}" onclick="XMLHttpRequest_preview();">{L_PREVIEW}</button>
+<button type="reset" value="true">{L_RESET}</button>
+[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_formulaires">Formulaires</h2><br />
+
+<br />
+Certaines parties des formulaires ont été mises à jour. Le plus gros changement consiste à remplacer les _ dans les noms des classes CSS par des -.<br />
+Remplacez :<br />
+[[CODE=tpl]]
+<dl>
+<dt>
+<label for="name">{L_NAME}</label>
+<span class="test_small">{L_NAME_EXPLAIN}</span>
+</dt>
+<dd>
+<input type="text" size="65" maxlength="100" id="name" name="name" value="{NAME}" class="text">
+</dd>
+</dl>
+[[/CODE]]<br />
+Par :<br />
+[[CODE=tpl]]
+<div class="form-element">
+<label for="name">
+{L_NAME}
+<span class="field-description">{L_NAME_EXPLAIN}</span>
+</label>
+<div class="form-field">
+<input type="text" size="65" maxlength="100" id="name" name="name" value="{NAME}">
+</div>
+</div>
+[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_templates-des-pages">Templates des pages</h2><br />
+
+<br />
+L'affichage des pages a été mis à jour pour respecter les standards HTML5.<br />
+Remplacez :<br />
+[[CODE=tpl]]
+<div class="module_position">
+<div class="module_top_l"></div>
+<div class="module_top_r"></div>
+<div class="module_top">Titre</div>
+<div class="module_contents">
+Contenu
+</div>
+<div class="module_bottom_l"></div>
+<div class="module_bottom_r"></div>
+<div class="module_bottom"></div>
+</div>
+[[/CODE]]<br />
+Par :<br />
+[[CODE=tpl]]
+<section>
+<header>
+<h1>Titre</h1>
+</header>
+<div class="content">
+Contenu
+</div>
+<footer></footer>
+</section>
+[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_mini-modules">Mini-modules</h2><br />
+
+<br />
+Remplacez les _ dans les noms des classes CSS par des -. Ce qui donne :<br />
+[[CODE=tpl]]
+<div class="module-mini-container"# IF C_HORIZONTAL # style="width:auto;"# ENDIF #>
+<div class="module-mini-top">
+<h5 class="sub-title">Titre</h5>
+</div>
+<div class="module-mini-contents">
+Contenu
+</div>
+<div class="module-mini-bottom"></div>
+</div>
+[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.11</user_ip>
+    <timestamp>1453905585</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>127</id>
+    <id_contents>901</id_contents>
+    <title><![CDATA[Mettre à jour son module 3.0 en 4.0]]></title>
+    <encoded_title><![CDATA[mettre-a-jour-son-module-3-0-en-4-0]]></encoded_title>
+    <hits>922</hits>
+    <id_cat>41</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>41</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>144</cat_article_id>
+    <con_id_contents>901</con_id_contents>
+    <con_id_article>127</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-de-configuration">Le fichier de configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-de-configuration-config-ini">Le fichier de configuration : config.ini</a></li><li><a href="#paragraph_le-fichier-de-description-desc-ini">Le fichier de description : desc.ini</a></li></ol></li><li><a href="#paragraph_creation-et-suppression-des-tables-du-module">Création et suppression des tables du module</a></li><li><a href="#paragraph_les-extensionpointprovider">Les ExtensionPointProvider</a></li><li><a href="#paragraph_changements-dans-l-api">Changements dans l'API</a><ol class="wiki_list_2"><li><a href="#paragraph_templates">Templates</a></li><li><a href="#paragraph_gestion-des-erreurs">Gestion des erreurs</a></li><li><a href="#paragraph_editeurs-de-texte">Editeurs de texte</a></li><li><a href="#paragraph_divers">Divers</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<span class="warning">Si aucun des éléments se trouvant dans cette documentation ne vous aide, référez-vous au forum et demandez de l'aide.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-fichier-de-configuration">Le fichier de configuration</h1><br />
+
+<br />
+Dans la version 3.0, un fichier rassemblait les différentes informations sur le module : <strong>le fichier config.ini dans chaque dossier de langue</strong>.<br />
+<br />
+Pour être plus cohérent, nous avons <strong>décidé de scinder ce fichier</strong>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-de-configuration-config-ini">Le fichier de configuration : config.ini</h2><br />
+
+<br />
+Le nouveau fichier de configuration va se trouver à la racine de votre module.<br />
+<br />
+Dans un premier temps, veuillez le fichier config.ini pour le coller à la racine de votre module.<br />
+<br />
+Veuillez renommer :<br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> author_link en author_website
+	</li><li class="formatter-li"> starteable_page en home_page
+	</li><li class="formatter-li"> url_rewrite en rewrite_rules[]<br />
+</li></ul><br />
+<br />
+Supprimez les champs suivants : info, admin_links, name, css, cache, sql_table, com, note<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-de-description-desc-ini">Le fichier de description : desc.ini</h2><br />
+
+<br />
+Veuillez ensuite <strong>renommer le fichier config.ini</strong> dans les dossiers de langues <strong>en desc.ini</strong>.<br />
+<br />
+Ouvrez le fichier et gardez <strong>seulement les champs name, info et admin_links</strong>.<br />
+<br />
+Il vous faudra ensuite <strong>renommer le champ info en desc</strong>.<br />
+<br />
+Pour plus d'informations concernant les fichiers <em>config.ini</em> et <em>desc.ini</em> dans la version 4.0, référez-vous à cet article : <a href="/wiki/les-bases">Les bases</a><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creation-et-suppression-des-tables-du-module">Création et suppression des tables du module</h1><br />
+
+<br />
+Si vous utilisez des tables spécifiques pour votre module, vous avez un dossier nommé db à la racine.<br />
+<br />
+Celui-ci centralise les fichiers SQL permettant de créer et de supprimer les tables en question lors de l'installation et la désinstallation de votre module.<br />
+<br />
+Nous avons intégré un tout nouveau système permettant de gérer cela plus proprement.<br />
+<br />
+Dorénavant vous allez avoir un seul et même fichier.<br />
+<br />
+Veuillez créer un dossier phpboost à la racine de votre site. Vous pourrez y mettre tout ce qui est relatif à PHPBoost dans son ensemble.<br />
+<br />
+Pour créer le nouveau fichier vous permettant de créer vos tables, veuillez vous reporter aux articles :<br />
+<br />
+- <a href="/wiki/mise-en-place-du-modulesetup">Mise en place du ModuleSetup</a>.<br />
+- <a href="/wiki/operations-sur-la-base-de-donnees">Opérations sur la base de données</a>.<br />
+- Référez-vous au ModuleSetup d'un module existant en v4.0 pour vous aider si besoin<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-extensionpointprovider">Les ExtensionPointProvider</h1><br />
+
+<br />
+Dans la précédente version, il était déjà possible de communiquer entre plusieurs modules.<br />
+Cela est rendu encore plus facile et lisible sur la version 4.0 grâce à un tout nouveau système : Les ExtensionPoint.<br />
+<br />
+Veuillez suivre <a href="/wiki/la-communication-entre-module">cet article</a>.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_changements-dans-l-api">Changements dans l'API</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_templates">Templates</h2><br />
+
+<br />
+- Ce n'est plus la classe [[CODE=php,0,1]]Template[[/CODE]] qu'il faut instancier mais [[CODE=php,0,1]]FileTemplate[[/CODE]]<br />
+- La fonction [[CODE=php,0,1]]parse()[[/CODE]] est dépréciée, utilisez [[CODE=php,0,1]]render()[[/CODE]]<br />
+- La fonction [[CODE=php,0,1]]assign_vars()[[/CODE]] est renommée en [[CODE=php,0,1]]put_all()[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-erreurs">Gestion des erreurs</h2><br />
+
+<br />
+L'utilisation de la classe [[CODE=php,0,1]]Errorh[[/CODE]] devient obsolète.<br />
+Elle est remplacée par :<br />
+<br />
+- Un bon nombre d'erreurs prédéfinies dans une classe nommée [[CODE=php,0,1]]PHPBoostErrors[[/CODE]]. Pour l'utiliser, voici un exemple :<br />
+<br />
+L'erreur "la page n'existe pas" est affichée de cette manière : <br />
+<br />
+[[CODE=php]]DispatchManager::redirect(PHPBoostErrors::unexisting_page());[[/CODE]]<br />
+<br />
+- Pour créer une erreur personnalisée, utilisez la classe [[CODE=php,0,1]]UserErrorController[[/CODE]] :<br />
+<br />
+[[CODE=php]]$controller = new UserErrorController('Titre de l\'erreur', 'Description de l\'erreur');
+DispatchManager::redirect($controller);[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_editeurs-de-texte">Editeurs de texte</h2><br />
+
+<br />
+- [[CODE=php,0,1]]second_parse()[[/CODE]] devient [[CODE=php,0,1]]FormatingHelper::second_parse()[[/CODE]], [[CODE=php,0,1]]parse()[[/CODE]] devient [[CODE=php,0,1]]FormatingHelper::parse()[[/CODE]], [[CODE=php,0,1]]unparse()[[/CODE]] devient [[CODE=php,0,1]]FormatingHelper::unparse()[[/CODE]]<br />
+- [[CODE=php,0,1]]display_editor('nom_de_votre_textarea')[[/CODE]] devient : <br />
+<br />
+[[CODE=php]]$editor = AppContext::get_content_formatting_service()-&gt;get_default_editor();
+$editor-&gt;set_identifier('nom_de_votre_textarea');
+$editor-&gt;display();[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_divers">Divers</h2><br />
+
+<br />
+- La classe utilisée dans la version 3.0 pour la pagination se nomme maintenant [[CODE=php,0,1]]DeprecatedPagination[[/CODE]]. Si vous souhaitez utiliser la nouvelle classe, référez vous à cet <a href="/wiki/systeme-de-pagination">article</a>.<br />
+- Pour créer une redirection, utilisez [[CODE=php,0,1]]AppContext::get_response()-&gt;redirect()[[/CODE]]<br />
+- L'utilisation de la fonction [[CODE=php,0,1]]import()[[/CODE]] n'est plus utile, les classes sont automatiquement chargées à travers l'autoload.]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.11</user_ip>
+    <timestamp>1361203826</timestamp>
+  </article>
+</articles>

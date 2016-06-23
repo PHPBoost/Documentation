@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>304</id>
+    <id_contents>1375</id_contents>
+    <title><![CDATA[Intégrer les boutons des réseaux sociaux]]></title>
+    <encoded_title><![CDATA[integrer-les-boutons-des-reseaux-sociaux]]></encoded_title>
+    <hits>2198</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>1375</con_id_contents>
+    <con_id_article>304</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_avant-de-commencer">Avant de commencer</a></li><li><a href="#paragraph_facebook">Facebook</a><ol class="wiki_list_2"><li><a href="#paragraph_creer-une-appli-facebook">Créer une appli facebook</a></li><li><a href="#paragraph_integration">Intégration</a><ol class="wiki_list_3"><li><a href="#paragraph_javascript">javascript</a></li><li><a href="#paragraph_html">Html</a><ol class="wiki_list_4"><li><a href="#paragraph_pour-avoir-le-bouton-sur-la-page-de-l-article">Pour avoir le bouton sur la page de l'article:</a></li><li><a href="#paragraph_pour-avoir-le-bouton-sur-chaque-article-de-la-page-d-accueil-du-module-news">Pour avoir le bouton sur chaque article de la page d'accueil du module news:</a></li></ol></li></ol></li></ol></li><li><a href="#paragraph_twitter">Twitter</a><ol class="wiki_list_2"><li><a href="#paragraph_creer-un-widget-twitter">Créer un widget twitter</a></li><li><a href="#paragraph_integration">Intégration</a><ol class="wiki_list_3"><li><a href="#paragraph_javascript">javascript</a></li><li><a href="#paragraph_html">Html</a><ol class="wiki_list_4"><li><a href="#paragraph_pour-avoir-le-bouton-sur-la-page-de-l-article">Pour avoir le bouton sur la page de l'article:</a></li><li><a href="#paragraph_pour-avoir-le-bouton-sur-chaque-article-de-la-page-d-accueil-du-module-news">Pour avoir le bouton sur chaque article de la page d'accueil du module news:</a></li></ol></li></ol></li></ol></li><li><a href="#paragraph_google-plus">Google plus</a><ol class="wiki_list_2"><li><a href="#paragraph_creer-un-widget-google-plus">Créer un widget google plus</a></li><li><a href="#paragraph_integration">Intégration</a><ol class="wiki_list_3"><li><a href="#paragraph_javascript">javascript</a></li><li><a href="#paragraph_html">Html</a><ol class="wiki_list_4"><li><a href="#paragraph_pour-avoir-le-bouton-sur-la-page-de-l-article">Pour avoir le bouton sur la page de l'article:</a></li><li><a href="#paragraph_pour-avoir-le-bouton-sur-chaque-article-de-la-page-d-accueil-du-module-news">Pour avoir le bouton sur chaque article de la page d'accueil du module news:</a></li></ol></li></ol></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_avant-de-commencer">Avant de commencer</h1><br />
+
+Ce tutoriel explique comment intégrer les boutons de partage des réseaux sociaux, facebook, twitter et google plus, dans le module news.<br />
+Le principe est le même pour tout autre widget ou tout autre module.<br />
+<br />
+<span class="notice">si ce n'est pas déjà fait, copier le dossier /news/templates dans /templates/NOMDUTHEME/modules puis le renommer en "news" (s'il n'y a pas de dossier "modules" dans le theme, il faut le créer)</span><br />
+<br />
+<strong>Compatibilité</strong> : PHPBoost 4.1<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_facebook">Facebook</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creer-une-appli-facebook">Créer une appli facebook</h2><br />
+
+<br />
+Se rendre sur facebook/developer =&gt; <a href="https://developers.facebook.com/">lien</a><br />
+Dans le menu haut, cliquer sur "apps" et suivre la procédure pour créer une nouvelle appli facebook =&gt; obtention une clée .<br />
+Cliquer sur "doc" dans le menu haut, puis sur "sharing" dans le menu latéral et enfin sur "modules sociaux"<br />
+<br />
+Choisir son plugin et remplir les champs en fonction des besoins<br />
+Cliquer sur "get code" =&gt; code en 2 parties <br />
+<ul class="formatter-ul">
+	<li class="formatter-li">la premiere partie (javascript) est à inclure dans le frame.tpl du theme entre  et # INCLUDE JS_BOTTOM # et &lt;/body&gt;
+	</li><li class="formatter-li">la deuxieme (html) est inclure dans les pages.tpl du module à l'endroit ou on veut le voir apparaitre, puis modifier le lien cible pour l'adapter à phpboost.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_integration">Intégration</h2><br />
+
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_javascript">javascript</h3><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/frame.tpl<br />
+trouver <br />
+[[CODE=html]]&lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+		
+		# INCLUDE BODY #
+		# INCLUDE JS_BOTTOM # 
+	&lt;/body&gt;
+[[/CODE]]<br />
+et remplacer par<br />
+[[CODE=html]]&lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+   
+		# INCLUDE BODY #
+		# INCLUDE JS_BOTTOM # 		
+
+&lt;!-- facebook share --&gt;
+		&lt;div id="fb-root"&gt;&lt;/div&gt;
+		&lt;script&gt;
+			(function(d, s, id) {
+			  var js, fjs = d.getElementsByTagName(s)[0];
+			  if (d.getElementById(id)) return;
+			  js = d.createElement(s); js.id = id;
+			  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&amp;appId=NUMERO-IDAPP-FOURNIE-PAR-FB&amp;version=v2.0";
+			  fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));			
+		&lt;/script&gt;
+	&lt;/body&gt;[[/CODE]]<br />
+normalement, "NUMERO-IDAPP-FOURNIE-PAR-FB" et automatiquement rempli si l'application est créée<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_html">Html</h3><br />
+
+<br />
+<h4 class="wiki_paragraph4" id="paragraph_pour-avoir-le-bouton-sur-la-page-de-l-article">Pour avoir le bouton sur la page de l'article:</h4><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/modules/news/NewsDisplayNewsController.tpl<br />
+ajouter à l'endroit où on veut voir le bouton<br />
+[[CODE=html]]&lt;div class="fb-share-button" data-href="adresse-du-site{U_LINK}" data-...&gt;&lt;/div&gt;[[/CODE]]<br />
+<br />
+<h4 class="wiki_paragraph4" id="paragraph_pour-avoir-le-bouton-sur-chaque-article-de-la-page-d-accueil-du-module-news">Pour avoir le bouton sur chaque article de la page d'accueil du module news:</h4><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/modules/news/NewsDisplaySeveralNewsController.tpl<br />
+ajouter à l'endroit où on veut voir le bouton<br />
+[[CODE=html]]&lt;div class="fb-share-button" data-href="adresse-du-site{news.U_LINK}" data-...&gt;&lt;/div&gt;[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_twitter">Twitter</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creer-un-widget-twitter">Créer un widget twitter</h2><br />
+
+<br />
+Se rendre sur twitter/ressource =&gt; <a href="https://about.twitter.com/fr/resources/buttons">lien</a> <br />
+<br />
+Choisir son plugin (ici: partager un lien) et remplir les champs en fonction des besoins<br />
+ =&gt; code en 2 parties <br />
+<ul class="formatter-ul">
+	<li class="formatter-li">la première partie (javascript) est à inclure dans le frame.tpl du thème entre  et # INCLUDE JS_BOTTOM # et &lt;/body&gt;
+	</li><li class="formatter-li">la deuxième (html) est inclure dans les pages.tpl du module à l'endroit ou on veut le voir apparaitre, puis modifier le lien cible et le titre pour l'adapter à phpboost.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_integration">Intégration</h2><br />
+
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_javascript">javascript</h3><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/frame.tpl<br />
+trouver <br />
+[[CODE=html]]&lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+		
+		# INCLUDE BODY #
+		# INCLUDE JS_BOTTOM # 
+	&lt;/body&gt;
+[[/CODE]]<br />
+et remplacer par<br />
+[[CODE=html]]&lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+   
+		# INCLUDE BODY #
+		# INCLUDE JS_BOTTOM # 		
+
+&lt;!-- twitter share --&gt;
+		&lt;script type="text/javascript"&gt;
+			!function(d,s,id)
+			{var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+			if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';
+			fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+		&lt;/script&gt;
+	&lt;/body&gt;[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_html">Html</h3><br />
+
+<br />
+<h4 class="wiki_paragraph4" id="paragraph_pour-avoir-le-bouton-sur-la-page-de-l-article">Pour avoir le bouton sur la page de l'article:</h4><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/modules/news/NewsDisplayNewsController.tpl<br />
+ajouter à l'endroit où on veut voir le bouton<br />
+[[CODE=html]]&lt;a href="https://twitter.com/share" class="twitter-share-button" data-url="adresse-du-site{U_LINK}" data-text="{NAME}" data-...&gt;&lt;/div&gt;[[/CODE]]<br />
+<br />
+<h4 class="wiki_paragraph4" id="paragraph_pour-avoir-le-bouton-sur-chaque-article-de-la-page-d-accueil-du-module-news">Pour avoir le bouton sur chaque article de la page d'accueil du module news:</h4><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/modules/news/NewsDisplaySeveralNewsController.tpl<br />
+ajouter à l'endroit où on veut voir le bouton<br />
+[[CODE=html]]&lt;a href="https://twitter.com/share" class="twitter-share-button" data-url="adresse-du-site{news.U_LINK}" data-text="{news.NAME}" data-...&gt;&lt;/div&gt;[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_google-plus">Google plus</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creer-un-widget-google-plus">Créer un widget google plus</h2><br />
+
+<br />
+Se rendre sur google/developer =&gt; <a href="https://developers.google.com/+/web/">lien</a> <br />
+<br />
+Choisir son plugin (ici: bouton de partage) et remplir les champs en fonction des besoins<br />
+ =&gt; code en 2 parties <br />
+<ul class="formatter-ul">
+	<li class="formatter-li">la première partie (javascript), Je conseil d'utiliser le JavaScript asynchrone (plus bas sur la page google) plutôt que celui fourni par le formulaire, est à inclure dans le frame.tpl du thème entre  et # INCLUDE JS_BOTTOM # et &lt;/body&gt;
+	</li><li class="formatter-li">la deuxième (html) est inclure dans les pages.tpl du module à l'endroit ou on veut le voir apparaitre, puis modifier le lien cible pour l'adapter à phpboost.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_integration">Intégration</h2><br />
+
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_javascript">javascript</h3><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/frame.tpl<br />
+trouver <br />
+[[CODE=html]]&lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+		
+		# INCLUDE BODY #
+		# INCLUDE JS_BOTTOM # 
+	&lt;/body&gt;
+[[/CODE]]<br />
+et remplacer par<br />
+[[CODE=html]]&lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+   
+		# INCLUDE BODY #
+		# INCLUDE JS_BOTTOM # 		
+
+&lt;!-- google share --&gt;
+		&lt;script type="text/javascript"&gt;
+			(function() {
+			  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+			  po.src = 'https://apis.google.com/js/plusone.js';
+			  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+	        &lt;/script&gt;
+	&lt;/body&gt;[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_html">Html</h3><br />
+
+<br />
+<h4 class="wiki_paragraph4" id="paragraph_pour-avoir-le-bouton-sur-la-page-de-l-article">Pour avoir le bouton sur la page de l'article:</h4><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/modules/news/NewsDisplayNewsController.tpl<br />
+ajouter à l'endroit où on veut voir le bouton<br />
+[[CODE=html]]&lt;div class="g-plus" data-href="adresse-du-site{U_LINK}" data-...&gt;&lt;/div&gt;[[/CODE]]<br />
+<br />
+<h4 class="wiki_paragraph4" id="paragraph_pour-avoir-le-bouton-sur-chaque-article-de-la-page-d-accueil-du-module-news">Pour avoir le bouton sur chaque article de la page d'accueil du module news:</h4><br />
+
+<br />
+ouvrir /templates/NOMDUTHEME/modules/news/NewsDisplaySeveralNewsController.tpl<br />
+ajouter à l'endroit où on veut voir le bouton<br />
+[[CODE=html]]&lt;div class="g-plus" data-href="adresse-du-site{news.U_LINK}" data-...&gt;&lt;/div&gt;[[/CODE]]<br />]]></content>
+    <activ>1</activ>
+    <user_id>768</user_id>
+    <user_ip>78.122.210.168</user_ip>
+    <timestamp>1414365748</timestamp>
+  </article>
+</articles>

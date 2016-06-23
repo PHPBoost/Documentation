@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>66</id>
+    <id_contents>1731</id_contents>
+    <title><![CDATA[Administration du module Téléchargement]]></title>
+    <encoded_title><![CDATA[administration-du-module-telechargement]]></encoded_title>
+    <hits>836</hits>
+    <id_cat>32</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>32</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>65</cat_article_id>
+    <con_id_contents>1731</con_id_contents>
+    <con_id_article>66</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-telechargements">Configuration des téléchargements</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_menu-telechargements">Menu téléchargements</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_categories">Catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li></ol></li><li><a href="#paragraph_gerer-les-fichiers">Gérer les fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_liste-des-fichiers">Liste des fichiers</a></li><li><a href="#paragraph_ajouter-un-fichier">Ajouter un fichier</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Dans cette partie nous allons voir comment administrer le module téléchargement.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configuration-des-telechargements">Configuration des téléchargements</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration">Configuration</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/config.jpg" alt="" /></p><br />
+<br />
+<strong>Liste des paramètres disponibles :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nombre d'éléments affichés par page</strong> : nombre maximum de fichiers qui seront référencés par page.
+</li><li class="formatter-li"><strong>Nombre de catégories maximum affichées par page</strong> : nombre maximum de catégories visibles par page.
+</li><li class="formatter-li"><strong>Nombre de catégories affichées par ligne</strong> : nombre de catégories visibles sur une ligne (entre 1 et 4).
+</li><li class="formatter-li"><strong>Affichage des informations dans les catégories</strong> : Disposition de l'affichage des fichiers lors de la navigation dans une catégorie :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Résumé</strong> : <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/resume.jpg" alt="" /></p><br />
+Vous pourrez également choisir d'afficher le résumé aux membres qui n'auraient pas le droit de lecture sur les fichiers.
+</li><li class="formatter-li"><strong>Tout le contenu</strong> : <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/all_content.jpg" alt="" /></p>
+</li><li class="formatter-li"><strong>Tableau</strong> : <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/table.jpg" alt="" /></p><br />
+</li></ul>
+</li><li class="formatter-li"><strong>Afficher le nom de l'auteur</strong> : Afficher ou non le nom de l'auteur sur la page de visualisation d'un fichier
+</li><li class="formatter-li"><strong>Activer les commentaires</strong> : Permet à vos membres de commenter les fichiers.
+</li><li class="formatter-li"><strong>Activer la notation</strong> : Laisser la possibilité aux utilisateurs de noter les fichiers.
+</li><li class="formatter-li"><strong>Echelle de notation</strong> : note maximale que peut recevoir un fichier (de 3 à 20).
+</li><li class="formatter-li"><strong>Description de la catégorie racine</strong> : Texte qui sera affiché sur la page d'accueil du module.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_menu-telechargements">Menu téléchargements</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/menu.jpg" alt="" /></p><br />
+<br />
+Ces paramètres affectent le mini module Téléchargements disponible dans la gestion des menus.<br />
+<br />
+<strong>Liste des paramètres disponibles :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Ordre d'affichage des fichiers</strong> : Il est possible de trier par date de modification, date de création, les meilleures notes et enfin le nombre de téléchargements
+</li><li class="formatter-li"><strong>Nombre de fichiers affichés</strong> : nombre de fichiers à afficher dans le menu
+</li><li class="formatter-li"><strong>Limiter l'âge des fichiers dans le menu</strong> : Si le fichier doit disparaitre du menu lorsqu'il a atteint un certain âge.<br />
+Si vous activez cette option, vous serez invité à entrer l'âge correspondant.<br />
+</li></ul><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+Vous pouvez définir ici les permissions globales du module. Vous pourrez changer ces permissions localement sur chaque catégorie.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/auths.jpg" alt="" /></p><br />
+<br />
+<strong>Permissions :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Autorisation de lecture : définit qui a le droit d'accéder au module.
+</li><li class="formatter-li">Autorisation d'écriture : définit qui a le droit d'ajout sur le module.
+</li><li class="formatter-li">Autorisation de contribution : définit qui a le droit de poster une contribution pour le module téléchargement.
+</li><li class="formatter-li">Autorisation de modération : Droit d'approbation (des fichiers proposés en contribution), modification et suppression des fichiers
+</li><li class="formatter-li">Autorisation d'afficher le lien de téléchargement : Pour définir qui a le droit de télécharger le fichier.<br />
+</li></ul><br />
+<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_categories">Catégories</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-categories">Gestion des catégories</h2><br />
+
+<br />
+Cette page vous permet de gérer vos catégories de téléchargement, les rendre visibles ou non, les modifier, les supprimer ou les classer.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/cats_management.jpg" alt="" /></p><br />
+<br />
+Voici à quoi correspondent les boutons d'administration : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrows"></i>
+<!-- END HTML --> : permet de déplacer chaque élément là où vous le souhaitez, en cliquant dessus puis en le lâchant lorsqu'il est bien place (technique du glisser/déposer)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-up"></i>
+<!-- END HTML --> : sert à déplacer vers le haut une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML --> : sert à déplacer vers le bas une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> : sert à éditer un élément pour modifier son titre, sa catégorie, ses autorisation,...)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> : sert à supprimer une catégorie.<br />
+<span class="notice">Si la catégorie contient des médias, lors de la suppression, il vous sera proposé de transférer les fichiers ou les sous catégories dans une autre catégorie<br />
+</span><br />
+</li></ul><br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/admin_cats_delete.png" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/add_cat.jpg" alt="" /></p><br />
+<br />
+<strong>Vous pouvez créer de nouvelles catégories, pour cela vous devez remplir les informations suivantes :</strong><br />
+<br />
+<strong>Nom</strong> : Titre de la catégorie<br />
+<strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.<br />
+<strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre catégorie. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-).<br />
+<strong>Emplacement</strong> : où se situera votre élément.<br />
+<strong>Description</strong> : vous pouvez mettre une petite description de votre catégorie. Cette description se trouvera au-dessus des questions de votre catégorie.<br />
+<strong>Image</strong> : vous permet d'associer une image à votre catégorie. Veillez à ne pas mettre d'images trop grosses afin de ne pas gêner la navigation des membres. Juste en dessous, vous pourrez voir une prévisualisation de cette image.<br />
+<br />
+<strong>Autorisations</strong> : Enfin, en cliquant sur la checkbox, vous pourrez définir des autorisations spécifiques à cette catégorie.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gerer-les-fichiers">Gérer les fichiers</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_liste-des-fichiers">Liste des fichiers</h2><br />
+
+<br />
+Cette page vous permet de voir tous vos téléchargements, de les modifier et si besoin de les supprimer.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/files_management.jpg" alt="" /></p><br />
+<br />
+L'icône <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> vous permettra de les éditer directement.<br />
+Sinon, vous pourrez Montrer, Cacher, Désapprouver (si le fichier est en attente de validation) et Supprimer chaque fichier.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-un-fichier">Ajouter un fichier</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/add_file.jpg" alt="" /></p><br />
+<br />
+<strong>Vous pouvez ajouter un nouveau fichier en téléchargement, pour cela vous devez remplir les informations suivantes :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nom</strong> : nom de votre fichier
+</li><li class="formatter-li"><strong>Emplacement</strong> : catégorie dans laquelle sera mis votre fichier
+</li><li class="formatter-li"><strong>Adresse</strong> : adresse complète du site (ne pas oublier "http://")
+</li><li class="formatter-li"><strong>Description</strong> : description du téléchargement
+</li><li class="formatter-li"><strong>Personnaliser le condensé de la description</strong> : En cochant cette case, vous pouvez définir vous-même le condensé de la description du fichier. Dans le cas contraire, la description sera coupée à 250 caractères et le formatage ne sera pas affiché.
+</li><li class="formatter-li"><strong>Personnaliser le nom de l'auteur</strong> : En cochant cette case, vous pourrez définir un autre auteur que vous-même
+</li><li class="formatter-li"><strong>Mots-clés</strong> : Mots qui définissent le fichier
+</li><li class="formatter-li"><strong>Date de création</strong> : Vous pouvez définir l'heure et la date de création si celle d'origine ne vous convient pas.
+</li><li class="formatter-li"><strong>Publication</strong> : Vous pouvez garder ce fichier en Brouillon, le publier maintenant ou différer sa publication. Dans ce cas, il vous sera demandé la date et heure de parution souhaitée.<br />
+Enfin, vous pourrez définir une date de fin de parution si vous souhaitez que le téléchargement ne soit plus disponible après un certain temps.<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.210.103</user_ip>
+    <timestamp>1463276895</timestamp>
+  </article>
+</articles>

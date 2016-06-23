@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>186</id>
+    <id_contents>1717</id_contents>
+    <title><![CDATA[Utilisation du module Rapport de bugs]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-rapport-de-bugs]]></encoded_title>
+    <hits>1325</hits>
+    <id_cat>50</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>50</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>184</cat_article_id>
+    <con_id_contents>1717</con_id_contents>
+    <con_id_article>186</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_presentation-du-module">Présentation du module</a><ol class="wiki_list_2"><li><a href="#paragraph_bugs-non-resolus">Bugs non résolus</a><ol class="wiki_list_3"><li><a href="#paragraph_les-filtres">Les filtres</a></li></ol></li><li><a href="#paragraph_bugs-resolus">Bugs résolus</a></li><li><a href="#paragraph_feuille-de-route">Feuille de route</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol></li><li><a href="#paragraph_rapporter-un-bug">Rapporter un bug</a></li></ol>]]></menu>
+    <content><![CDATA[Une fois le module "rapport de bugs" activé et configuré, il vous faudra le rendre accessible aux membres ayant une autorisation d'accès. Pour cela, vous pouvez créer un lien direct vers l'URL [[CODE=text]]http://monsite.com/bugtracker/[[/CODE]] dans un menu de liens par exemple.<br />
+<br />
+Seuls les membres ayant les autorisations nécessaires pourront accéder au module.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_presentation-du-module">Présentation du module</h1><br />
+
+<br />
+La page d'accueil du module se présente sous la forme d'un tableau à onglets.<br />
+Si toutes les options sont actives, le tableau affichera quatre onglets:<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Bugs non-résolus
+</li><li class="formatter-li"> Bugs résolus
+</li><li class="formatter-li"> Feuille de route
+</li><li class="formatter-li"> Statistiques : affiche les statistiques <br />
+</li></ul><br />
+<br />
+<span class="notice">Le menu du module en haut à droite de la page permet de déclarer un nouveau rapport de bug.</span><br />
+<br />
+<span class="notice">L'onglet "Feuille de route" n'est pas forcément présent.</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_bugs-non-resolus">Bugs non résolus</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/bugs_non_resolus.jpg" alt="" /></p><br />
+<br />
+Cet onglet présente la liste des bugs non encore résolus. On y trouve les colonnes suivantes:<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> ID -&gt; affiche le numéro identifiant du bug sous forme de lien pointant vers la page détaillée de la description du bug
+</li><li class="formatter-li"> Titre -&gt; Affiche l'intitulé du bug
+</li><li class="formatter-li"> Informations : Etat du bug et commentaires s'il y a lieu
+</li><li class="formatter-li"> Détecté le -&gt; date de détection du bug
+</li><li class="formatter-li"> Actions -&gt; affiche les icônes de gestion du bug: Rejeter le bug / Modifier le bug / Afficher l'historique du bug / Supprimer le bug  <br />
+</li></ul><br />
+Chaque ligne possèède une couleur de fond qui est propre au niveau du bug.<br />
+<br />
+<span class="notice">La colonne "Actions" n'est affichée que si l'utilisateur a le droit de modération sur le module.</span><br />
+<br />
+<span class="notice">Selon la configuration définie, le tableau peut contenir des colonnes supplémentaires.</span><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_les-filtres">Les filtres</h3><br />
+
+<br />
+Pour chaque page de bugs, vous avez la possibilité de trier les bugs selon plusieurs éléments.<br />
+Pour cela, cliquez sur le bouton 'Filtres' présent au dessus du tableau :<br />
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/filtres.jpg" alt="" /> </p><br />
+<br />
+Vous pouvez alors sélectionner plusieurs filtres selon la configuration du module afin de ne laisser apparaitre que ceux qui vous intéressent.<br />
+<br />
+Si vous souhaitez retrouver rapidement ces éléments, le bugtracker vous propose d'enregistrer le filtre courant à l'aide de l'icône <!-- START HTML -->
+<i class="fa fa-save"></i>
+<!-- END HTML --><br />
+En dessous des listes déroulantes sont affichées les filtres sauvegardés. CLiquez dessus pour sélectionner directement le filtre désiré.<br />
+Enfin, si vous souhaitez supprimer un filtre existant, cliquez simplement sur l'icône <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> qui se trouve à coté.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_bugs-resolus">Bugs résolus</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/bugs_resolus.jpg" alt="" /> </p><br />
+<br />
+L'onglet "bugs résolus" affiche un tableau assez similaire au précédent avec cependant quelques variantes. En effet, la colonne "état" dresse ici la liste des bugs corrigés et rejetés. On y trouve la date de correction dans la colonne "Corrigé le". <br />
+<br />
+Chaque ligne possèède une couleur de fond qui est propre au niveau du bug.<br />
+<br />
+<span class="notice">La colonne "Actions" n'est affichée que si l'utilisateur a le droit de modération sur le module.</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_feuille-de-route">Feuille de route</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/feuille_de_route.jpg" alt="" /> </p><br />
+<br />
+L'onglet feuille de route liste les bugs corrigés pour chaque version. Cet onglet ne s'affiche que si chacunes des conditions suivantes sont remplies:<br />
+<ul class="formatter-ul">
+     <li class="formatter-li"> il existe au moins une version renseignée dans la section "version" de l'administration du module
+     </li><li class="formatter-li"> l'option "afficher la feuille de route" est activée dans la section "configuration" de l'administration du module     <br />
+</li></ul><br />
+<br />
+La feuille de route pour une version comprend les bugs corrigés (ID barré) ou à corriger (ID non barré) pour celle-ci. Une liste déroulante positionnée au dessus du tableau vous permet de choisir la version à afficher.<br />
+ <br />
+<h2 class="wiki_paragraph2" id="paragraph_statistiques">Statistiques</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/statistiques.jpg" alt="" /> </p><br />
+<br />
+Comme son nom l'indique, cet onglet présente les statistiques du module.<br />
+Parmi les informations listées on trouve :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Le nombre de bugs détectés
+</li><li class="formatter-li"> Le nombre de bugs corrigés (Cette section n'est disponible que s'il y a au moins un bug corrigé dans une version)
+</li><li class="formatter-li"> Le top 10 (ou nombre défini dans la configuration) des personnes ayant détecté des bugs avec le détail du nombre de bugs pour chaque participant, si cette option est activée.<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_rapporter-un-bug">Rapporter un bug</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/ajout_bug.jpg" alt="" /> </p><br />
+<br />
+Après avoir cliqué sur le lien "Déclarer un bug" (cf "Présentation du module" en début d'article) PHPBoost affiche le formulaire d'ajout de bug.<br />
+Ce dernier vous propose de renseigner les informations nécessaires à la bonne compréhension du bug rapporté ainsi qu'à sa correction.<br />
+Vous aurez à renseigner:<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Le titre du bug, permettant d'identifier rapidement le sujet dont il est question
+</li><li class="formatter-li"> La description, qui comprend certains champs pré-remplis (en fonction de la configuration du module) permettant de traiter le bug au mieux
+</li><li class="formatter-li"> La catégorie (si configurée) permettant de distinguer de quelle partie du site/objet provient le bug
+</li><li class="formatter-li"> Le niveau du bug, en fonction de son degré d'importance du bug
+</li><li class="formatter-li"> La priorité, permettant de savoir si le bug doit être résolu rapidement ou non (bien souvent en fonction du niveau d'importance du bug)
+</li><li class="formatter-li"> La version (si configurée) du script dans laquelle a été répertorié le bug
+</li><li class="formatter-li"> La possibilité de reproduction ou non, selon que le bug soit reproductible ou non
+</li><li class="formatter-li"> La méthode de reproduction du bug, s'il est reproductible<br />
+</li></ul> <br />
+<br />
+Après avoir validé le formulaire, le bug ainsi rapporté ira rejoindre le haut de la liste du tableau présentant les bugs résolus.<br />
+En fonction de la configuration du module, l'utilisateur pourra être averti par MP de :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> L'ajout d'un commentaire à la suite du bug. Ces commentaires sont, la plupart du temps, rédigés par les développeurs qui pourraient nécessiter d'avantage d'informations pour solutionner le bug.
+</li><li class="formatter-li"> Le rejet du bug si ce dernier n'est pas considéré comme tel par les développeurs
+</li><li class="formatter-li"> La résolution du bug.<br />
+</li></ul><br />
+<br />
+Chaque MP contient un lien pointant vers la page du bug avec sa présentation et les commentaires (s'il y en a) qui ont été postés sur la fiche en présence.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/bugtracker/utilisation/fiche_bug.jpg" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.178.7</user_ip>
+    <timestamp>1463227988</timestamp>
+  </article>
+</articles>

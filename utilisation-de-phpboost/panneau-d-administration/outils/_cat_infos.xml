@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>16</id>
+    <id_contents>16</id_contents>
+    <title><![CDATA[Outils]]></title>
+    <encoded_title><![CDATA[outils]]></encoded_title>
+    <hits>925</hits>
+    <id_cat>16</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>16</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>16</cat_article_id>
+    <con_id_contents>16</con_id_contents>
+    <con_id_article>16</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Outils]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>81.51.228.217</user_ip>
+    <timestamp>1345822604</timestamp>
+  </article>
+</articles>

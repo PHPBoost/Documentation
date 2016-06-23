@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>6</id>
+    <id_contents>1744</id_contents>
+    <title><![CDATA[Créer un menu]]></title>
+    <encoded_title><![CDATA[creer-un-menu]]></encoded_title>
+    <hits>2295</hits>
+    <id_cat>6</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>6</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>6</cat_article_id>
+    <con_id_contents>1744</con_id_contents>
+    <con_id_article>6</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Pour créer un menu, vous allez devoir créer un module :<br />
+<br />
+- <a href="/wiki/1-les-bases-structure-du-module">La création d'un module</a><br />
+- <a href="/wiki/la-communication-entre-modules">La communication entre modules</a><br />
+- <a href="/wiki/la-communication-entre-modules#paragraph_les-menus">Intégration d'un ou plusieurs menus</a>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>86.223.63.124</user_ip>
+    <timestamp>1466267969</timestamp>
+  </article>
+</articles>

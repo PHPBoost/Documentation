@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>199</id>
+    <id_contents>1379</id_contents>
+    <title><![CDATA[Mettre à jour son thème 4.0 en 4.1]]></title>
+    <encoded_title><![CDATA[mettre-a-jour-son-theme-4-0-en-4-1]]></encoded_title>
+    <hits>5272</hits>
+    <id_cat>42</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth>a:12:{s:2:"r1";i:2044;i:1;i:16;i:4;i:16;i:5;i:16;i:6;i:16;i:7;i:1020;i:8;i:16;i:9;i:16;i:13;i:16;i:15;i:16;i:16;i:16;i:18;i:16;}</auth>
+    <cat_id>42</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>145</cat_article_id>
+    <con_id_contents>1379</con_id_contents>
+    <con_id_article>199</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_avant-de-commencer">Avant de commencer</a></li><li><a href="#paragraph_modification-de-la-structure-du-theme">Modification de la structure du thème</a><ol class="wiki_list_2"><li><a href="#paragraph_les-fichiers-de-configuration">Les fichiers de configuration</a></li><li><a href="#paragraph_les-fichiers-header-tpl-et-footer-tpl">Les fichiers header.tpl et footer.tpl</a></li><li><a href="#paragraph_les-fichiers-css">Les fichiers CSS</a></li><li><a href="#paragraph_les-fichiers-images-du-repertoire-theme-images">Les fichiers images du répertoire /theme/images</a></li><li><a href="#paragraph_les-fichiers-images-du-repertoire-images">Les fichiers images du répertoire /images</a></li></ol></li><li><a href="#paragraph_modification-du-code-html">Modification du code html</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</a></li><li><a href="#paragraph_le-fichier-body-tpl">Le fichier body.tpl</a></li></ol></li><li><a href="#paragraph_modification-du-code-css">Modification du code CSS</a><ol class="wiki_list_2"><li><a href="#paragraph_generic-css">generic.css</a></li><li><a href="#paragraph_global-css">global.css</a></li><li><a href="#paragraph_design-css">design.css</a></li><li><a href="#paragraph_content-css">content.css</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Nous allons voir au fil de cet article la manière de modifier un thème 4.0 afin de pouvoir l'utiliser sur la version 4.1 de PHPBoost.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_avant-de-commencer">Avant de commencer</h1><br />
+
+<br />
+La mise à jour 4.1 de PHPBoost est une mise à jour importante au niveau de la partie graphique. <br />
+Cette nouvelle version utilise les langages HTML5, CSS3 et intègre la police d'icône <a href="http://fortawesome.github.io/Font-Awesome/">Font-Awesome</a>. Ces évolutions importantes permettront une personnalisation encore plus simple et plus rapide des thèmes.<br />
+<br />
+Lors de la refonte du code en HTML5 et CSS3, nous avons simplifié les fichiers .css et repris plusieurs classes CSS. Le code est maintenant plus lisible, mieux organisé et plus performant.<br />
+<br />
+Ces changements ne sont pas sans conséquences sur les thèmes. Les fichiers .css et .tpl ayant été remaniés, la conversion d'un thème 4.0 en 4.1 est beaucoup plus complexe que le passage 3.0 à 4.0.<br />
+<br />
+Néanmoins, nous allons voir ci-dessous les étapes à réaliser pour rendre le thème compatible avec la version 4.1 et les modifications à entreprendre pour retrouver votre thème sur cette nouvelle version.<br />
+<br />
+<span class="warning">Les modifications présentés dans cet article n'intègrent pas les différents éléments que vous auriez pu ajouter ou modifier dans vos fichiers</span><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-de-la-structure-du-theme">Modification de la structure du thème</h1><br />
+
+<br />
+Dans ce paragraphe, nous allons détailler les modifications à effectuer dans l'organisation du répertoire des thèmes afin de le rendre installable. Pour bien comprendre la structure du thème, vous pouvez consulter cet <a href="/wiki/4-1-la-structure-d-un-theme"><strong>article</strong></a>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-fichiers-de-configuration">Les fichiers de configuration</h2><br />
+
+<br />
+Le répertoire <em>/templates/{VOTRETHEME}/config</em> est renommé en <em>/lang</em>.<br />
+<br />
+Le fichier <em>config.ini</em> de chaque langue est découpé en deux parties.<br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">La première partie du fichier propre à chaque langue est renommée en <em>desc.ini</em> et contient les éléments identifiants le thème dans chaque langue.<br />
+[[CODE=text]]name="Base"
+desc="The PHPBoost official theme."
+main_color="White, Blue"[[/CODE]] Ce fichier est stocké dans un sous répertoire du nom de la langue (<em>/french</em> et <em>/english</em> par défaut).<br />
+<span class="notice">L'ancien élement "info" a été renommé en "desc"</span>
+	</li><li class="formatter-li">La seconde partie du fichier commune à toutes les langues est déplacée à la racine du thème <em>/templates/{VOTRETHEME}/</em>dans un nouveau fichier <em>config.ini</em>. Il contient les éléments techniques du thème :<br />
+[[CODE=text]]author="PHPBoost"
+author_mail="contact@phpboost.com"
+author_link="http://www.phpboost.com"
+version=1.0
+date="05/08/12"
+compatibility=4.1
+require_copyright=0
+html_version=5.0 Strict
+css_version=3.0
+columns_disabled=right
+variable_width=0
+width="980px"
+pictures="theme/images/theme.jpg,theme/images/admin.jpg"[[/CODE]]</li></ul><br />
+Les fichiers <em>index.php</em> des répertoires <em>/lang/french</em> et <em>/lang/english</em> (anciennement <em>/config</em>) peuvent être supprimés.<br />
+<br />
+<span class="warning">A partir de cette étape, le thème peut être installé via le panneau d'administration, mais celui-ci ne sera pas fonctionnel</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-fichiers-header-tpl-et-footer-tpl">Les fichiers header.tpl et footer.tpl</h2><br />
+
+<br />
+Les fichiers <em>header.tpl</em> et <em>footer.tpl</em> ont été modifiés et remplacés par les fichiers <em>frame.tpl</em> et <em>body.tpl</em>. Nous reviendrons sur le contenu dans les prochains paragraphes. Le "regroupement" du contenu du body dans le même fichier rend les modifications beaucoup plus simples.<br />
+<br />
+Le fichier <em>frame.tpl</em> contient la partie structurante de la page html : [[CODE=html]]&lt;!DOCTYPE html&gt;
+&lt;html lang="{L_XML_LANGUAGE}"&gt;
+	&lt;head&gt;
+		...
+	&lt;/head&gt;
+
+	&lt;body itemscope="itemscope" itemtype="http://schema.org/WebPage"&gt;
+		# INCLUDE BODY #
+		# INCLUDE JS_BOTTOM #
+	&lt;/body&gt;
+&lt;/html&gt;[[/CODE]]<br />
+<br />
+Le fichier <em>body.tpl</em> contient le contenu du &lt;body&gt; : [[CODE=html]]	# INCLUDE MAINTAIN #
+	
+	&lt;header id="header"&gt;
+		...
+	&lt;/header&gt;
+	
+	&lt;div id="global"&gt;
+		...
+		&lt;div id="main" role="main"&gt;
+			...
+		&lt;/div&gt;
+		...
+	&lt;/div&gt;
+	&lt;footer id="footer"&gt;
+		...
+	&lt;/footer&gt;[[/CODE]] Un exemple est donné dans l'article <a href="/wiki/4-1-la-structure-d-un-theme"><strong>La structure d'un thème</strong></a><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-fichiers-css">Les fichiers CSS</h2><br />
+
+<br />
+Le fichier <em>print.css</em> a été déplacé dans le répertoire <em>\templates\default\theme</em><br />
+=&gt; Si vous n'avez pas modifié ce fichier, il peut être supprimé du répertoire. <br />
+<br />
+Le contenu du fichier <em>generic.css</em> a été déplacé dans les autres fichiers CSS du thème ou dans le ficher <em>default.css</em> du répertoire <em>\templates\default\theme</em>.<br />
+=&gt; Il peut être supprimé du répertoire de votre thème.<br />
+<br />
+Par défaut, le répertoire <em>\templates\{VOTRETHEME}\theme</em> contient : <ul class="formatter-ul">
+	<li class="formatter-li"> /images
+	</li><li class="formatter-li"> content.css
+	</li><li class="formatter-li"> design.css
+	</li><li class="formatter-li"> global.css<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-fichiers-images-du-repertoire-theme-images">Les fichiers images du répertoire /theme/images</h2><br />
+
+<br />
+Sauf si vous avez ajouté des fichiers spécifiques pour votre thème, le répertoire <em>/theme/images</em> ne contient que les fichiers suivants : <ul class="formatter-ul">
+	<li class="formatter-li"> global.png
+	</li><li class="formatter-li"> logo.png
+	</li><li class="formatter-li"> theme.jpg
+	</li><li class="formatter-li"> admin.jpg<br />
+</li></ul> Les autres fichiers ne sont plus utilisés et peuvent être supprimés.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-fichiers-images-du-repertoire-images">Les fichiers images du répertoire /images</h2><br />
+
+<br />
+Sauf si vous avez ajouté des fichiers spécifiques pour votre thème, le répertoire <em>/images</em> ne contient que le fichier suivant : <ul class="formatter-ul">
+	<li class="formatter-li"> noavatar.png<br />
+</li></ul> Les autres fichiers ne sont plus utilisés et peuvent être supprimés.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-du-code-html">Modification du code html</h1><br />
+
+<br />
+Les modifications du code html étant très importantes, il est préférable de partir des nouveaux fichiers et d'inclure vos modifications, plutôt que d'essayer de convertir vos fichiers. <br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</h2><br />
+
+<br />
+La première partie du code html à modifier correspond au fichier <em>frame.tpl</em> (anciennement <em>header.tpl</em> et <em>footer.tpl</em>)<br />
+<br />
+Vous avez sûrement remarqué que le contenu de la balise <strong>&lt;head&gt;</strong> a légèrement évolué.<br />
+<br />
+Les fichiers spécifiques à PHPBoost comme le Javascript sont maintenant inclus via les balises <strong>INCLUDE</strong>.[[CODE=tpl]]# INCLUDE JS_TOP #[[/CODE]]<br />
+Si vous avez ajouté d'autres fichiers .css ou des scripts javascript dans votre thème il suffit de les ajouter au même endroit.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-body-tpl">Le fichier body.tpl</h2><br />
+
+<br />
+La seconde partie du code html à modifier correspond au fichier <em>body.tpl</em> (anciennement <em>header.tpl</em> et <em>footer.tpl</em>)<br />
+<br />
+Les nouvelles balises html5 ont été intégrées dans le fichier <em>body.tpl</em>. Pour exemple, la balise <strong>&lt;header&gt;</strong> vient encadrer l'en-tête du site : [[CODE=tpl]]&lt;div id="header"&gt;[[/CODE]]devient[[CODE=tpl]]&lt;header id="header"&gt;[[/CODE]]<br />
+<br />
+La balise <strong>&lt;aside&gt;</strong> est utilisée pour les menus de gauche et droite : [[CODE=tpl]]&lt;div id="left_menu"&gt;[[/CODE]]devient[[CODE=tpl]]&lt;aside id="menu-left"&gt;[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-du-code-css">Modification du code CSS</h1><br />
+
+<br />
+Il est impossible et inutile de lister toutes les modifications faites dans les fichiers CSS.<br />
+Afin de faciliter la conversion de vos thèmes, des tableaux de synthèse présentant les évolutions dans les fichiers CSS ont été réalisés.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_generic-css">generic.css</h2><br />
+
+<br />
+<table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head">Classe CSS de la 4.0</th>
+		<th class="formatter-table-head">Type de Modification</th>
+		<th class="formatter-table-head">Classe CSS de la 4.1</th>
+		<th class="formatter-table-head">Fichier CSS de la 4.1</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">img</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">img</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">hr</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">hr</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">ul</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">ul</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">p</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">p</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">text_center</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">center</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">text_small</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">small</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">text_strong</td>
+		<td class="formatter-table-col">Classe CSS modifiée</td>
+		<td class="formatter-table-col">text-strong</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">text_justify</td>
+		<td class="formatter-table-col">Classe CSS modifiée</td>
+		<td class="formatter-table-col">text-justify</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">img_right</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">img.right</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">img_left</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">img.left</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">valign_top</td>
+		<td class="formatter-table-col">Classe CSS modifiée</td>
+		<td class="formatter-table-col">valign-top</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">valign_bottom</td>
+		<td class="formatter-table-col">Classe CSS modifiée</td>
+		<td class="formatter-table-col">valign-bottom</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">valign_bottom</td>
+		<td class="formatter-table-col">Classe CSS modifiée</td>
+		<td class="formatter-table-col">valign-bottom</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">spacer</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">spacer</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">error_handler</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">error-handler</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">question</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">question</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">warning</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">warning</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">error</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">error</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">success</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">success</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">notice</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">notice</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">error_handler_position</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">smiley</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">smiley</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h3.title1</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h3.title2</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h4.stitle1</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h4.stitle2</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">float_left</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">foat-left</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">float_right</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">foat-right</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bb_table</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bb_table_col</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bb_ul</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bb_ol</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bb_li</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">text_blockquote</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">formatter-blockquote</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">text_code</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">formatter-code</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">text_hide</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">formatter-hide</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">blockquote</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">blockquote</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">code</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">code</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">hide</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">hide</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">hide2</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">hide2</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">indent</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">indent</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bb_acronym</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">bb-acronym</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bb_block</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">bb-block</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bb_fieldset</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">bb-fieldset</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">xmlhttprequest_preview</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">xmlhttprequest-preview</td>
+		<td class="formatter-table-col">content.css + default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">wikipedia_link</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">wikipedia-link</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+</table><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_global-css">global.css</h2><br />
+
+<br />
+<table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head">Classe CSS de la 4.0</th>
+		<th class="formatter-table-head">Type de Modification</th>
+		<th class="formatter-table-head">Classe CSS de la 4.1</th>
+		<th class="formatter-table-head">Fichier CSS de la 4.1</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">row1</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">block_contents1</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">block</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">row2</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">block_contents2</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">block</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">row3</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">block_contents3</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">block</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">xmlhhtprequest_result_search</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">xmlhhtprequest-result-search</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">calendar_block</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">calendar-block</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">upload_selected_cat</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">upload-selected-cat</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">a</td>
+		<td class="formatter-table-col">Pas de modification</td>
+		<td class="formatter-table-col">a</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">img_link</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">img-link</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">small_link</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">small et smaller</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">big_link</td>
+		<td class="formatter-table-col">Classe CSS remplacée</td>
+		<td class="formatter-table-col">big et bigger</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">com</td>
+		<td class="formatter-table-col">Classe CSS supprimée</td>
+		<td class="formatter-table-col">-</td>
+		<td class="formatter-table-col">-</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">admin</td>
+		<td class="formatter-table-col">Pas de modification</td>
+		<td class="formatter-table-col">admin</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">modo</td>
+		<td class="formatter-table-col">Pas de modification</td>
+		<td class="formatter-table-col">modo</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">member</td>
+		<td class="formatter-table-col">Pas de modification</td>
+		<td class="formatter-table-col">member</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">pagination</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">pagination</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">pagination_current_page</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">pagination-current-page</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">dynamic_menu</td>
+		<td class="formatter-table-col">Classe CSS renommée et déplacée</td>
+		<td class="formatter-table-col">dynamic-menu</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">menu_vertical_0</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">menu-vertical-0</td>
+		<td class="formatter-table-col">global.css</td>
+	</tr>
+</table><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_design-css">design.css</h2><br />
+
+<br />
+<table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head">Classe CSS de la 4.0</th>
+		<th class="formatter-table-head">Type de Modification</th>
+		<th class="formatter-table-head">Classe CSS de la 4.1</th>
+		<th class="formatter-table-head">Fichier CSS de la 4.1</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">body</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">body</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">html</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">html</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">global</td>
+		<td class="formatter-table-col">Classe CSS conservée avec une arborescence modifiée</td>
+		<td class="formatter-table-col">global</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">header_container</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">header</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">logo</td>
+		<td class="formatter-table-col">Classe CSS renommée avec une arborescence modifiée</td>
+		<td class="formatter-table-col">site-logo</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">site_name</td>
+		<td class="formatter-table-col">Classe CSS renommée avec une arborescence modifiée</td>
+		<td class="formatter-table-col">site-name-container</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">header</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">top-header</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">sub_header</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">sub-header</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">compteur</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">compteur</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">left_menu</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">menu-left</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">right_menu</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">menu-right</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">main</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">main</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">main_content</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">main-content</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">links</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">breadcrumb</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">top_contents</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">top-content</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">bottom_contents</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">bottom-content</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">top_footer</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">top-footer</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">footer</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">footer</td>
+		<td class="formatter-table-col">design.css</td>
+	</tr>
+</table><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_content-css">content.css</h2><br />
+
+<br />
+<table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head">Classe CSS de la 4.0</th>
+		<th class="formatter-table-head">Type de Modification</th>
+		<th class="formatter-table-head">Classe CSS de la 4.1</th>
+		<th class="formatter-table-head">Fichier CSS de la 4.1</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">table</td>
+		<td class="formatter-table-col">Classe CSS conservée mais utilisation des classes CSS thead, tbody, tfoot</td>
+		<td class="formatter-table-col">table</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">block_container</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">block, small-block, medium-block</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">block_contents</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">content</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">block_top</td>
+		<td class="formatter-table-col">Classe CSS supprimée, utilisation de la balise h1</td>
+		<td class="formatter-table-col">block h1</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">hr</td>
+		<td class="formatter-table-col">Classe CSS déplacée</td>
+		<td class="formatter-table-col">hr</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">list</td>
+		<td class="formatter-table-col">Classe CSS supprimée mais utilisation de la balise ul en list ou ajout de la classe CSS no-list</td>
+		<td class="formatter-table-col">no-list</td>
+		<td class="formatter-table-col">default.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h1</td>
+		<td class="formatter-table-col">Classe CSS déplacée et appliquée sur certain éléments tel que les block</td>
+		<td class="formatter-table-col">h1</td>
+		<td class="formatter-table-col">content.css et global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h2</td>
+		<td class="formatter-table-col">Classe CSS déplacée et appliquée sur certains éléments tel que les block</td>
+		<td class="formatter-table-col">h2</td>
+		<td class="formatter-table-col">content.css et global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h3</td>
+		<td class="formatter-table-col">Classe CSS déplacée et appliquée sur certain éléments tel que les block</td>
+		<td class="formatter-table-col">h3</td>
+		<td class="formatter-table-col">content.css et global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h4</td>
+		<td class="formatter-table-col">Classe CSS déplacée et appliquée sur certains éléments tel que les block</td>
+		<td class="formatter-table-col">h4</td>
+		<td class="formatter-table-col">content.css et global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h5</td>
+		<td class="formatter-table-col">Classe CSS déplacée et appliquée sur certains éléments tel que les block</td>
+		<td class="formatter-table-col">h5</td>
+		<td class="formatter-table-col">content.css et global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">h6</td>
+		<td class="formatter-table-col">Classe CSS déplacée et appliquée sur certains éléments tel que les block</td>
+		<td class="formatter-table-col">h6</td>
+		<td class="formatter-table-col">content.css et global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">fieldset_mini</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">fieldset-mini</td>
+		<td class="formatter-table-col">content.css et global.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">input</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">input</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">textarea</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">textarea</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">optgroup</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">optgroup</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">select</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">select</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">xmlhttprequest_preview</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">xmlhttprequest-preview</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">button</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">button</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">option</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">option</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">fieldset</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">fieldset</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">legend</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">legend</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">fieldset-submit</td>
+		<td class="formatter-table-col">Classe CSS conservée</td>
+		<td class="formatter-table-col">fieldset-submit</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">msg_x</td>
+		<td class="formatter-table-col">Classe CSS déplacée dans le forum et création de nouvelle classe CSS pour la messagerie privée</td>
+		<td class="formatter-table-col">message-x</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">module_x</td>
+		<td class="formatter-table-col">Classe CSS déplacée dans le forum</td>
+		<td class="formatter-table-col">.module_x</td>
+		<td class="formatter-table-col">forum.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">module_mini_container</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">module-mini-container</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">module_mini_top</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">module-mini-top</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">module_mini_contents</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">module-mini-contents</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">module_mini_bottom</td>
+		<td class="formatter-table-col">Classe CSS renommée</td>
+		<td class="formatter-table-col">module-mini-bottom</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">label</td>
+		<td class="formatter-table-col">Classe CSS conservée mais ajout d'une classe form-element</td>
+		<td class="formatter-table-col">label</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">comment</td>
+		<td class="formatter-table-col">Classe CSS supprimée car harmonisée avec les messages privés</td>
+		<td class="formatter-table-col">message</td>
+		<td class="formatter-table-col">content.css</td>
+	</tr>
+</table>]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>82.224.142.186</user_ip>
+    <timestamp>1415911805</timestamp>
+  </article>
+</articles>

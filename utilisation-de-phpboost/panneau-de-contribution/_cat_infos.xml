@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>12</id>
+    <id_contents>1650</id_contents>
+    <title><![CDATA[Panneau de contribution]]></title>
+    <encoded_title><![CDATA[panneau-de-contribution]]></encoded_title>
+    <hits>1825</hits>
+    <id_cat>12</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>12</cat_id>
+    <cat_id_parent>3</cat_id_parent>
+    <cat_article_id>12</cat_article_id>
+    <con_id_contents>1650</con_id_contents>
+    <con_id_article>12</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_creer-une-contribution">Créer une contribution</a></li><li><a href="#paragraph_validation-des-contributions">Validation des contributions</a></li></ol>]]></menu>
+    <content><![CDATA[Le panneau de contribution est un outil permettant de faciliter la collaboration entre les différents contributeurs du site.<br />
+<br />
+En comparaison, sur d'autres CMS, il est nécessaire d'être administrateur ou d'avoir un rang particulier pour pouvoir interagir sur le contenu du site. <br />
+Le panneau de contribution permet de changer tout cela en proposant à des membres de participer à l'enrichissement du contenu du site. <br />
+<br />
+Il répond à un principal problème qui est le suivant : on ne peut pas accorder une entière confiance, aux membres, en publiant automatiquement le contenu sans approbation. Il permet donc de coordonner la contribution et l'approbation. <br />
+<br />
+<br />
+Nous allons découvrir ici comment fonctionne le panneau de contribution afin que vos membres puissent participer simplement à la vie de votre site. Ce tutoriel se divisera en 2 parties : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">La création d'une contribution par un membre
+</li><li class="formatter-li">Le traitement de la contribution (un administration par exemple)<br />
+</li></ul><br />
+<br />
+Pour ce tutoriel, nous nous servirons du module multimédia.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creer-une-contribution">Créer une contribution</h1><br />
+
+<br />
+Il suffit de vous rendre dans le menu connexion (ou votre profil) et de cliquer sur <em>Panneau de contribution</em> . Vous vous trouverez ensuite dans le panneau de contribution.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/contribution/contribution_1.jpg" alt="" /></p><br />
+<br />
+Vous avez ici 2 zones : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">La partie haute vous permet de voir vos différentes contributions et son statut.
+</li><li class="formatter-li">La partie basse vous permet de voir les différents modules auxquelles vous pouvez contribuer.<br />
+</li></ul><br />
+<br />
+<br />
+Pour proposer une contribution, il suffit de cliquer sur le module souhaité.<br />
+<br />
+Dans notre cas, nous allons ajouter une news, nous cliquons donc sur <em>News</em>.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/contribution/contribution_2.jpg" alt="" /></p><br />
+<br />
+Il faut maintenant renseigner les différents champs, qui seront différents selon le module.<br />
+<br />
+On remarque ici que nous avons tous les champs existants, comme si nous allions directement publier une news.<br />
+<br />
+En revanche, vous avez un champ supplémentaire : <strong>Contribution</strong>.<br />
+Ce champ facultatif vous permet de donner aux validateurs des explications ou des détails sur votre contribution.<br />
+<br />
+Une fois rempli, cliquez sur envoyer pour proposer votre contribution. Un message de succès apparaîtra :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/contribution/contribution_3.jpg" alt="" /></p><br />
+<br />
+En retournant dans le panneau de contribution, vous apercevez votre contribution et pourrez suivre son statut et son éventuel validation.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/contribution/contribution_4.jpg" alt="" /></p><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_validation-des-contributions">Validation des contributions</h1><br />
+
+<br />
+Quand une contribution est en cours de traitement, les validateurs en sont informés dans le <em>menu de connexion</em>.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/contribution/contribution_5.jpg" alt="" /></p><br />
+<br />
+Il suffit de cliquer sur le lien du panneau de contribution pour y accéder.<br />
+<br />
+Vous avez ici accès à toutes les contributions de votre site avec le statut. On voit ici que la contribution faite ci-dessus est en attente de traitement. Nous allons voir les différentes étapes de validation. Cliquez sur l'intitulé de la contribution à traiter :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/contribution/contribution_6.jpg" alt="" /></p><br />
+<br />
+Un résumé de la contribution avec le commentaire facultatif qu'a pu mettre le contributeur apparaît. Vous pouvez commenter la contribution et discuter avec le contributeur si souhaité. <br />
+<br />
+Pour la traiter, cliquez sur <em>traiter la contribution</em>.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/contribution/contribution_7.jpg" alt="" /></p><br />
+<br />
+Vous pouvez ici modifier les paramètres du fichiers ainsi que la description. <br />
+<br />
+<span class="notice">Afin de valider la contribution, il ne faut pas oublier de changer la valeur dans la boite de sélection 'Garder en brouillon', Publier maintenant'.<br />
+Selon les modules, une simple case 'Approuver' peut remplacer cette liste de choix.</span><br />
+<br />
+Cliquez ensuite sur modifier pour valider les modification et accepter la contribution. <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/contribution/contribution_8.jpg" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966306</timestamp>
+  </article>
+</articles>

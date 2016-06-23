@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>32</id>
+    <id_contents>1636</id_contents>
+    <title><![CDATA[Utilisation du module Discussion]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-discussion]]></encoded_title>
+    <hits>881</hits>
+    <id_cat>22</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>22</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>28</cat_article_id>
+    <con_id_contents>1636</con_id_contents>
+    <con_id_article>32</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_module-discussion">Module discussion</a><ol class="wiki_list_2"><li><a href="#paragraph_lire-les-messages">Lire les messages</a></li><li><a href="#paragraph_ajouter-un-message">Ajouter un message</a></li><li><a href="#paragraph_diter-un-message">Éditer un message</a></li><li><a href="#paragraph_supprimer-un-message">Supprimer un message</a></li></ol></li><li><a href="#paragraph_mini-module-discussion">Mini-module discussion</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-message">Ajouter un message</a></li><li><a href="#paragraph_diter-un-message">Éditer un message</a></li><li><a href="#paragraph_supprimer-un-message">Supprimer un message</a></li><li><a href="#paragraph_rafraichir-le-mini-module">Rafraîchir le mini-module</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_module-discussion">Module discussion</h1><br />
+
+<br />
+L'utilisation de ce module est très simple. Il vous permet de discuter entre membres et à l'aide du module de discussion rapide. Il contient un formulaire dans lequel vous tapez votre message. Vous pouvez le mettre en forme à l'aide des balises de BBcode <strong><em>choisies</em></strong> par l'administrateur.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_lire-les-messages">Lire les messages</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/shoutbox/display_messages.png" alt="" /></p><br />
+Voici un message posté par un visiteur nommé <em>PHPBoost</em>. Si vous avez l'autorisation de modération, vous pourrez alors éditer (<!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML -->) ou supprimer (<!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML -->) le message.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-un-message">Ajouter un message</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/shoutbox/add_message.png" alt="" /></p><br />
+<strong>Message :</strong> Dans ce champ, vous saisissez le message que vous souhaitez ajouter, si vous voulez avoir une idée du rendu vous pouvez cliquer sur le bouton <em>Prévisualiser</em>. Sinon cliquez sur le bouton <em>Envoyer</em>.<br />
+<br />
+<span class="notice">Vous pouvez remarquer que les icônes des <a href="/wiki/administration-du-module-discussion">balises interdites</a> sont désactivées et inutilisables.</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_diter-un-message">Éditer un message</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/shoutbox/edit_message.png" alt="" /></p><br />
+<strong>Message :</strong> Vous pouvez modifier le message, si vous voulez avoir une idée du rendu vous pouvez cliquer sur le bouton <em>Prévisualiser</em>. Sinon cliquez sur le bouton <em>Envoyer</em><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_supprimer-un-message">Supprimer un message</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/shoutbox/delete_message.png" alt="" /></p><br />
+Une fenêtre de confirmation apparaît afin de vérifier que vous souhaitez bien supprimer le message.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mini-module-discussion">Mini-module discussion</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/shoutbox/mini_module.png" alt="" /></p><br />
+Vous pouvez disposer sur toutes les pages de votre site un mini-module afin de pouvoir discuter, lire les derniers messages et poster de nouveaux messages lorsque vous naviguez sur le site.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-un-message">Ajouter un message</h2><br />
+
+<br />
+Pour ajouter un message, il suffit de taper votre message dans le champ <em>Message</em>. Lorsque vous avez fini, cliquez sur <em>Envoyer</em>.<br />
+<br />
+<span class="notice">Le BBcode est utilisable mais si vous souhaitez avoir la barre de formatage, il faut se rendre sur la page des <em>Archives</em> en bas du mini-module.</span><br />
+<h2 class="wiki_paragraph2" id="paragraph_diter-un-message">Éditer un message</h2><br />
+
+<br />
+Pour éditer un message, il faut se rendre sur la page <em>Archives</em>, à l'aide du lien qui se situe en bas du mini-module. Ensuite, repérer votre message et cliquez sur le bouton <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML -->.<br />
+<br />
+<span class="notice">Attention, si vous avez posté votre message en tant que visiteur, vous ne pourrez pas l'éditer.</span><br />
+<h2 class="wiki_paragraph2" id="paragraph_supprimer-un-message">Supprimer un message</h2><br />
+
+<br />
+Pour supprimer un message, il suffit simplement de cliquer sur le bouton <!-- START HTML -->
+<i class="fa fa-remove"></i>
+<!-- END HTML -->. Vous aurez alors un fenêtre de confirmation. Puis le message sera supprimé.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/shoutbox/delete_mini_message.png" alt="" /></p><br />
+<span class="notice">Attention, si vous avez posté votre message en tant que visiteur, vous ne pourrez pas le supprimer.</span><br />
+<h2 class="wiki_paragraph2" id="paragraph_rafraichir-le-mini-module">Rafraîchir le mini-module</h2><br />
+
+<br />
+Si vous souhaitez rafraîchir le contenu du mini-module il suffit de cliquer sur le bouton <!-- START HTML -->
+<i class="fa fa-refresh"></i>
+<!-- END HTML -->.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965784</timestamp>
+  </article>
+</articles>

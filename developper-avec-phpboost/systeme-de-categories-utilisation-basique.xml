@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>322</id>
+    <id_contents>1552</id_contents>
+    <title><![CDATA[Système de catégories - Utilisation basique]]></title>
+    <encoded_title><![CDATA[systeme-de-categories-utilisation-basique]]></encoded_title>
+    <hits>159</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>1552</con_id_contents>
+    <con_id_article>322</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_mise-en-place-des-categories">Mise en place des catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_creation-de-la-table-dans-la-base-de-donnees">Création de la table dans la base de données</a></li><li><a href="#paragraph_classe-qui-va-gerer-le-cache-des-categories-du-module">Classe qui va gérer le cache des catégories du module</a></li><li><a href="#paragraph_services-du-module">Services du module</a></li></ol></li><li><a href="#paragraph_autorisations">Autorisations</a></li><li><a href="#paragraph_mise-en-place-des-url">Mise en place des url</a><ol class="wiki_list_2"><li><a href="#paragraph_constructeur-d-url">Constructeur d'Url</a></li><li><a href="#paragraph_index">index</a></li><li><a href="#paragraph_liens-dans-l-administration">Liens dans l'administration</a></li><li><a href="#paragraph_menu-d-actions">Menu d'actions</a></li></ol></li><li><a href="#paragraph_administration">Administration</a><ol class="wiki_list_2"><li><a href="#paragraph_controleur-de-gestion-des-categories">Contrôleur de gestion des catégories</a></li><li><a href="#paragraph_controleur-d-ajout-edition">Contrôleur d'ajout / édition</a></li><li><a href="#paragraph_controleur-de-suppression">Contrôleur de suppression</a></li></ol></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li><li><a href="#paragraph_integration-dans-le-plan-du-site">Intégration dans le Plan du site</a></li><li><a href="#paragraph_affichage-des-categories">Affichage des catégories</a></li></ol>]]></menu>
+    <content><![CDATA[Cet article indique les différents éléments à mettre en place pour utiliser le système de catégories dans un module.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-place-des-categories">Mise en place des catégories</h1><br />
+
+<br />
+Pour mettre en place les catégories, il faut déclarer la table dans votre ModuleSetup et créer le fichier de Cache de vos catégories.<br />
+<br />
+Deux types de catégories sont déclarées dans le noyau :<br />
+<ul class="formatter-ul">
+    <li class="formatter-li"> <span style="font-family: courier new;">Category</span> : catégorie de base avec un nom et des autorisations
+    </li><li class="formatter-li"> <span style="font-family: courier new;">RichCategory</span> : catégorie de base + description et image<br />
+</li></ul><br />
+Rien ne vous empêche de créer votre propre type de catégorie en créant une classe fille de Category ou RichCategory, nous verrons ça dans l'utilisation avancée des catégories.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creation-de-la-table-dans-la-base-de-donnees">Création de la table dans la base de données</h2><br />
+
+<br />
+Pour créer la table dans la base de données, il suffit de déclarer son nom dans votre ModuleSetup et d'appeler la fonction de création de table de la classe Category ou RichCategory en fonction de votre besoin.<br />
+[[CODE=php]]<?php
+class MyModuleSetup extends DefaultModuleSetup
+{
+    public static $mymodule_cats_table;
+    
+    public static function __static()
+    {
+        self::$mymodule_cats_table = PREFIX . 'mymodule_cats';
+    }
+    
+    public function install()
+    {
+        $this->create_tables();
+    }
+    
+    private function create_tables()
+    {
+        $this->create_mymodule_cats_table();
+    }
+    
+    // Appel de la fonction pour créer la table
+    private function create_mymodule_cats_table()
+    {
+        RichCategory::create_categories_table(self::$mymodule_cats_table);
+    }
+}
+?>[[/CODE]]<br />
+Pensez également à mettre un champ <span style="font-family: courier new;">id_category</span> de type entier dans la table principale de votre module.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_classe-qui-va-gerer-le-cache-des-categories-du-module">Classe qui va gérer le cache des catégories du module</h2><br />
+
+<br />
+Créez le fichier <em>/mymodule/services/MyModuleCategoriesCache.class.php</em>. Cette classe doit être une classe fille de <strong>CategoriesCache</strong>.<br />
+[[CODE=php]]<?php
+class DownloadCategoriesCache extends CategoriesCache
+{
+    // Fonction qui retourne le nom de la table des catégories du module
+    public function get_table_name()
+    {
+        return MyModuleSetup::$mymodule_cats_table;
+    }
+    
+    // Fonction qui retourne la classe de la catégorie (CategoriesManager::STANDARD_CATEGORY_CLASS ou CategoriesManager::RICH_CATEGORY_CLASS)
+    public function get_category_class()
+    {
+        return CategoriesManager::RICH_CATEGORY_CLASS;
+    }
+    
+    // Fonction qui retourne le nom du module
+    public function get_module_identifier()
+    {
+        return 'mymodule';
+    }
+    
+    // Fonction qui permet de compter le nombre d'éléments dans une catégorie
+    protected function get_category_elements_number($id_category)
+    {
+        $now = new Date();
+        return MyModuleService::count('WHERE id_category = :id_category AND approved = 1');
+    }
+    
+    // Fonction qui permet de spécifier les autorisations (et la description si RICH_CATEGORY) de la catégorie racine du module
+    public function get_root_category()
+    {
+        $root = new RichRootCategory();
+        $root->set_authorizations(MyModuleConfig::load()->get_authorizations());
+        $root->set_description(MyModuleConfig::load()->get_root_category_description());
+        return $root;
+    }
+}
+?>
+[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_services-du-module">Services du module</h2><br />
+
+<br />
+Créez le fichier <em>/mymodule/services/MyModuleService.class.php</em>. Ce module contiendra les différentes actions à effectuer vis à vis de la base de données du module (ajout, édition, suppression, ...) et permet de récupérer la classe de gestion des catégories adaptée au module (ce qui nous intéresse ici, donc seule cette partie apparait ci-dessous).<br />
+[[CODE=php]]<?php
+class MyModuleService
+{
+    private static $categories_manager;
+    
+     /**
+     * @desc Return the authorized categories.
+     */
+    public static function get_authorized_categories($current_id_category)
+    {
+        $search_category_children_options = new SearchCategoryChildrensOptions();
+        $search_category_children_options->add_authorizations_bits(Category::READ_AUTHORIZATIONS);
+        
+        if (AppContext::get_current_user()->is_guest())
+            $search_category_children_options->set_allow_only_member_level_authorizations(MyModuleConfig::load()->are_descriptions_displayed_to_guests());
+        
+        $categories = self::get_categories_manager()->get_children($current_id_category, $search_category_children_options, true);
+        return array_keys($categories);
+    }
+    
+     /**
+     * @desc Return the categories manager.
+     */
+    public static function get_categories_manager()
+    {
+        if (self::$categories_manager === null)
+        {
+            $categories_items_parameters = new CategoriesItemsParameters();
+            //Table principale du module
+            $categories_items_parameters->set_table_name_contains_items(MyModuleSetup::$mymodule_table);
+            self::$categories_manager = new CategoriesManager(MyModuleCategoriesCache::load(), $categories_items_parameters);
+        }
+        return self::$categories_manager;
+    }
+}
+?>[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_autorisations">Autorisations</h1><br />
+
+<br />
+La mise en place d'un service pour les autorisations vous permettra d'accéder facilement aux différentes autorisations des catégories de votre module.<br />
+Créez le fichier <em>/mymodule/services/MyModuleAuthorizationsService.class.php</em>.<br />
+[[CODE=php]]<?php
+class MyModuleAuthorizationsService
+{
+    public $id_category;
+    
+    public static function check_authorizations($id_category = Category::ROOT_CATEGORY)
+    {
+        $instance = new self();
+        $instance->id_category = $id_category;
+        return $instance;
+    }
+    
+    public function read()
+    {
+        return $this->is_authorized(Category::READ_AUTHORIZATIONS, Authorizations::AUTH_PARENT_PRIORITY);
+    }
+    
+    public function write()
+    {
+        return $this->is_authorized(Category::WRITE_AUTHORIZATIONS);
+    }
+    
+    public function contribution()
+    {
+        return $this->is_authorized(Category::CONTRIBUTION_AUTHORIZATIONS);
+    }
+    
+    public function moderation()
+    {
+        return $this->is_authorized(Category::MODERATION_AUTHORIZATIONS);
+    }
+    
+    private function is_authorized($bit, $mode = Authorizations::AUTH_CHILD_PRIORITY)
+    {
+        $auth = MyModuleService::get_categories_manager()->get_heritated_authorizations($this->id_category, $bit, $mode);
+        return AppContext::get_current_user()->check_auth($auth, $bit);
+    }
+}
+?>
+[[/CODE]]<br />
+Pour vérifier l'autorisation d'écriture dans une catégorie, il suffit ensuite d'utiliser l'appel ($id_category est optionnel, s'il est omis les autorisations générales du module s'appliquent) :<br />
+[[CODE=php]]MyModuleAuthorizationsService::check_authorizations($id_category)->read()[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-place-des-url">Mise en place des url</h1><br />
+
+<br />
+Cette partie traite la mise en place des différentes url sur les pages pour accéder à la gestion et l'affichage des catégories.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_constructeur-d-url">Constructeur d'Url</h2><br />
+
+<br />
+L'UrlBuilder permet de définir les url qui seront utilisées dans votre module. Créez le fichier <em>/mymodule/util/MyModuleUrlBuilder.class.php</em> si ce n'est pas fait.<br />
+[[CODE=php]]<?php
+class MyModuleUrlBuilder
+{
+    private static $dispatcher = '/mymodule';
+    
+    //Ajout d'une catégorie
+    public static function add_category($id_parent = null)
+    {
+        $id_parent = !empty($id_parent) ? $id_parent . '/' : '';
+        return DispatchManager::get_url(self::$dispatcher, '/admin/categories/add/' . $id_parent);
+    }
+    
+    //Edition d'une catégorie
+    public static function edit_category($id)
+    {
+        return DispatchManager::get_url(self::$dispatcher, '/admin/categories/' . $id . '/edit/');
+    }
+    
+    //Suppression d'une catégorie
+    public static function delete_category($id)
+    {
+        return DispatchManager::get_url(self::$dispatcher, '/admin/categories/' . $id . '/delete/');
+    }
+    
+    //Gestion des catégories
+    public static function manage_categories()
+    {
+        return DispatchManager::get_url(self::$dispatcher, '/admin/categories/');
+    }
+    
+    //Affichage d'une catégorie
+    public static function display_category($id, $rewrited_name, $page = 1)
+    {
+        $category = $id > 0 ? $id . '-' . $rewrited_name . '/' : '';
+        $page = $page !== 1 ? $page . '/' : '';
+        return DispatchManager::get_url(self::$dispatcher, '/' . $category . $page);
+    }
+}
+?>[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_index">index</h2><br />
+
+<br />
+Le fichier index.php de votre module permet de faire le lien entre l'url demandée par l'utilisateur et le contrôleur à utiliser pour la traiter. indiquez les 5 <strong>UrlControllerMapper</strong> suivants :<br />
+[[CODE=php]]<?php
+define('PATH_TO_ROOT', '..');
+require_once PATH_TO_ROOT . '/kernel/init.php';
+$url_controller_mappers = array(
+    //Categories
+    new UrlControllerMapper('MyModuleCategoriesManageController', '`^/admin/categories/?$`'),
+    new UrlControllerMapper('MyModuleCategoriesFormController', '`^/admin/categories/add/?([0-9]+)?/?$`', array('id_parent')),
+    new UrlControllerMapper('MyModuleCategoriesFormController', '`^/admin/categories/([0-9]+)/edit/?$`', array('id')),
+    new UrlControllerMapper('MyModuleDeleteCategoryController', '`^/admin/categories/([0-9]+)/delete/?$`', array('id')),
+    new UrlControllerMapper('MyModuleDisplayCategoryController', '`^(?:/([0-9]+)-([a-z0-9-_]+))?/?([0-9]+)?/?$`', array('id_category', 'rewrited_name', 'page'))
+);
+DispatchManager::dispatch($url_controller_mappers);
+?>[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_liens-dans-l-administration">Liens dans l'administration</h2><br />
+
+<br />
+Pour que les liens vers la gestion et l'ajout de catégories soit visibles dans l'administration, ajoutez le contenu suivant dans votre fichier <em>/mymodule/util/AdminMyModuleDisplayResponse.class.php</em>.<br />
+[[CODE=php]]$this->add_link(LangLoader::get_message('categories.management', 'categories-common'), MyModuleUrlBuilder::manage_categories());
+$this->add_link(LangLoader::get_message('category.add', 'categories-common'), MyModuleUrlBuilder::add_category());[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_menu-d-actions">Menu d'actions</h2><br />
+
+<br />
+Pour que la gestion des catégories apparaisse dans le menu d'actions du module, ajoutez le contenu suivant dans votre fichier <em>/mymodule/phpboost/MyModuleTreeLinks.class.php</em>.<br />
+[[CODE=php]]$manage_categories_link = new AdminModuleLink(LangLoader::get_message('categories.manage', 'categories-common'), MyModuleUrlBuilder::manage_categories());
+$manage_categories_link->add_sub_link(new AdminModuleLink(LangLoader::get_message('categories.manage', 'categories-common'), MyModuleUrlBuilder::manage_categories()));
+$manage_categories_link->add_sub_link(new AdminModuleLink(LangLoader::get_message('category.add', 'categories-common'), MyModuleUrlBuilder::add_category(AppContext::get_request()->get_getint('id_category', Category::ROOT_CATEGORY))));
+$tree->add_link($manage_categories_link);[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_administration">Administration</h1><br />
+
+<br />
+Au niveau administration, la gestion des catégories (et leur ajout / édition / suppression) est automatique, il suffit de mettre en place les contrôleurs suivants dans le dossier <em>controllers</em> de votre module. Pour plus de lisibilité, créez le répertoire <em>/mymodule/controllers/categories</em>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_controleur-de-gestion-des-categories">Contrôleur de gestion des catégories</h2><br />
+
+<br />
+Dans ce dossier, créez le fichier <em>MyModuleCategoriesManageController.class.php</em>. La classe doit être une classe fille de <strong>AbstractCategoriesManageController</strong>.<br />
+[[CODE=php]]<?php
+class MyModuleCategoriesManageController extends AbstractCategoriesManageController
+{
+    protected function generate_response(View $view)
+    {
+        return new AdminMyModuleDisplayResponse($view, $this->get_title());
+    }
+    
+    protected function get_categories_manager()
+    {
+        return MyModuleService::get_categories_manager();
+    }
+    
+    protected function get_display_category_url(Category $category)
+    {
+        return MyModuleUrlBuilder::display_category($category->get_id(), $category->get_rewrited_name());
+    }
+    
+    protected function get_edit_category_url(Category $category)
+    {
+        return MyModuleUrlBuilder::edit_category($category->get_id());
+    }
+    
+    protected function get_delete_category_url(Category $category)
+    {
+        return MyModuleUrlBuilder::delete_category($category->get_id());
+    }
+}
+?>[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_controleur-d-ajout-edition">Contrôleur d'ajout / édition</h2><br />
+
+<br />
+Créez le fichier <em>MyModuleCategoriesFormController.class.php</em>. La classe doit être une classe fille de <strong>AbstractRichCategoriesFormController</strong> si votre catégorie est une catégorie enrichie, <strong>AbstractCategoriesFormController</strong> sinon.<br />
+[[CODE=php]]<?php
+class MyModuleCategoriesFormController extends AbstractRichCategoriesFormController
+{
+    protected function generate_response(View $view)
+    {
+        return new AdminMyModuleDisplayResponse($view, $this->get_title());
+    }
+    
+    protected function get_categories_manager()
+    {
+        return MyModuleService::get_categories_manager();
+    }
+    
+    protected function get_id_category()
+    {
+        return AppContext::get_request()->get_getint('id', 0);
+    }
+    
+    protected function get_categories_management_url()
+    {
+        return MyModuleUrlBuilder::manage_categories();
+    }
+}
+?>[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_controleur-de-suppression">Contrôleur de suppression</h2><br />
+
+<br />
+Créez le fichier <em>MyModuleDeleteCategoryController .class.php</em>. La classe doit être une classe fille de <strong>AbstractDeleteCategoryController</strong>.<br />
+[[CODE=php]]<?php
+class MyModuleDeleteCategoryController extends AbstractDeleteCategoryController
+{
+    protected function generate_response(View $view)
+    {
+        return new AdminMyModuleDisplayResponse($view, $this->get_title());
+    }
+    
+    protected function get_categories_manager()
+    {
+        return MyModuleService::get_categories_manager();
+    }
+    
+    protected function get_id_category()
+    {
+        return AppContext::get_request()->get_getint('id', 0);
+    }
+    
+    protected function get_categories_management_url()
+    {
+        return MyModuleUrlBuilder::manage_categories();
+    }
+}
+?>[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_flux-rss">Flux RSS</h1><br />
+
+<br />
+Si vous souhaitez utiliser les flux RSS dans votre module, crééez le fichier <em>/mymodule/phpboost/MyModuleFeedProvider.class.php</em>. Cette classe doit implémenter la classe <strong>FeedProvider</strong>.<br />
+[[CODE=php]]<?php
+class MyModuleFeedProvider implements FeedProvider
+{
+    public function get_feeds_list()
+    {
+        return MyModuleService::get_categories_manager()->get_feeds_categories_module()->get_feed_list();
+    }
+    
+    public function get_feed_data_struct($idcat = 0, $name = '')
+    {
+        if (MyModuleService::get_categories_manager()->get_categories_cache()->category_exists($idcat))
+        {
+            $querier = PersistenceContext::get_querier();
+            $category = MyModuleService::get_categories_manager()->get_categories_cache()->get_category($idcat);
+            
+            $site_name = GeneralConfig::load()->get_site_name();
+            $site_name = $idcat != Category::ROOT_CATEGORY ? $site_name . ' : ' . $category->get_name() : $site_name;
+            
+            $feed_module_name = LangLoader::get_message('module_title', 'common', 'download');
+            $data = new FeedData();
+            $data->set_title($feed_module_name . ' - ' . $site_name);
+            $data->set_date(new Date());
+            $data->set_link(SyndicationUrlBuilder::rss('mymodule', $idcat));
+            $data->set_host(HOST);
+            $data->set_desc($feed_module_name . ' - ' . $site_name);
+            $data->set_lang(LangLoader::get_message('xml_lang', 'main'));
+            $data->set_auth_bit(Category::READ_AUTHORIZATIONS);
+            
+            $categories = MyModuleService::get_categories_manager()->get_children($idcat, new SearchCategoryChildrensOptions(), true);
+            $ids_categories = array_keys($categories);
+            
+            $now = new Date();
+            $results = $querier->select('SELECT mymodule.*
+                FROM ' . MyModuleSetup::$mymodule_table . ' mymodule
+                LEFT JOIN '. MyModuleSetup::$mymodule_cats_table .' cat ON cat.id = mymodule.id_category
+                WHERE mymodule.id_category IN :ids_categories
+                AND mymodule.approved = 1
+                ORDER BY mymodule.creation_date DESC', array(
+                    'ids_categories' => $ids_categories
+            ));
+    
+            foreach ($results as $row)
+            {
+                $row['rewrited_name_cat'] = !empty($row['id_category']) ? $row['rewrited_name_cat'] : 'root';
+                $link = MyModuleUrlBuilder::display($row['id_category'], $row['rewrited_name_cat'], $row['id'], $row['rewrited_name']);
+                
+                $item = new FeedItem();
+                $item->set_title($row['name']);
+                $item->set_link($link);
+                $item->set_guid($link);
+                $item->set_desc(FormatingHelper::second_parse($row['contents']));
+                $item->set_date(new Date($row['creation_date'], Timezone::SERVER_TIMEZONE));
+                $item->set_image_url($row['picture_url']);
+                $item->set_auth(MyModuleService::get_categories_manager()->get_heritated_authorizations($row['id_category'], Category::READ_AUTHORIZATIONS, Authorizations::AUTH_PARENT_PRIORITY));
+                $data->add_item($item);
+            }
+            $results->dispose();
+            
+            return $data;
+        }
+    }
+}
+?>[[/CODE]]<br />
+Pensez également à indiquer la fonction suivante dans l'ExtensionPointProvider de votre module :<br />
+[[CODE=php]]public function feeds()
+    {
+        return new MyModuleFeedProvider();
+    }
+[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_integration-dans-le-plan-du-site">Intégration dans le Plan du site</h1><br />
+
+<br />
+Tout a été fait pour que l'affichage des catégories dans le Plan du site se fasse automatiquement.<br />
+Si vous souhaitez que vos catégories apparaissent dans le plan du site, crééez le fichier <em>/mymodule/phpboost/MyModuleSitemapExtensionPoint.class.php</em>. Cette classe doit être une classe fille de <strong>SitemapCategoriesModule</strong>.<br />
+[[CODE=php]]<?php
+class MyModuleSitemapExtensionPoint extends SitemapCategoriesModule
+{
+    public function __construct()
+    {
+        parent::__construct(MyModuleService::get_categories_manager());
+    }
+    
+    protected function get_category_url(Category $category)
+    {
+        return MyModuleUrlBuilder::display_category($category->get_id(), $category->get_rewrited_name());
+    }
+}
+?>[[/CODE]]<br />
+Pensez également à indiquer la fonction suivante dans l'ExtensionPointProvider de votre module :<br />
+[[CODE=php]]public function sitemap()
+    {
+        return new MyModuleSitemapExtensionPoint();
+    }
+[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_affichage-des-categories">Affichage des catégories</h1><br />
+
+<br />
+<span class="warning">Article en cours de rédaction</span>]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.12</user_ip>
+    <timestamp>1455813178</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>76</id>
+    <id_contents>1641</id_contents>
+    <title><![CDATA[Choix du serveur local]]></title>
+    <encoded_title><![CDATA[choix-du-serveur-local]]></encoded_title>
+    <hits>5335</hits>
+    <id_cat>49</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>49</cat_id>
+    <cat_id_parent>2</cat_id_parent>
+    <cat_article_id>171</cat_article_id>
+    <con_id_contents>1641</con_id_contents>
+    <con_id_article>76</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_windows">Windows</a><ol class="wiki_list_2"><li><a href="#paragraph_installer-les-modules-complementaires">Installer les modules complémentaires</a></li><li><a href="#paragraph_identifiant-et-mot-de-passe">Identifiant et mot de passe</a></li><li><a href="#paragraph_emplacement-des-fichiers">Emplacement des fichiers</a></li><li><a href="#paragraph_creer-une-base-de-donnees">Créer une base de données</a></li></ol></li><li><a href="#paragraph_mac">Mac</a></li><li><a href="#paragraph_linux">Linux</a></li></ol>]]></menu>
+    <content><![CDATA[Dans cet article, nous nous intéresseront donc à l'installation d'un serveur local sur votre ordinateur sous différents système d'exploitation, à savoir Windows, Mac et Linux.<br />
+<br />
+Si vous choisissez d'installer votre site sur un serveur local, c'est que vous voulez travailler tranquillement sur celui-ci qui ne sera accessible qu'à vous et donc qui ne le sera pas sur Internet. Ceci étant conseillé pour préparer votre site pour qu'il soit prêt et opérationnel pour ensuite le transférer sur un serveur en ligne et ainsi le rendre accessible à tout le monde.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_windows">Windows</h1><br />
+
+<br />
+Contrairement aux autres systèmes d'exploitation, Apache (le serveur Web le plus utilisé) n'est pas installé nativement sur Windows. Il va donc falloir le faire manuellement, mais je vous rassure il existe des logiciels qui incluent tout ce dont nous avons besoin pour créer un serveur Web local (Apache, PHP, MySQL (ou autre serveur de base de données), PHPMyAdmin, etc...).<br />
+<br />
+<span class="warning">Si Apache ne démarre pas c'est que le port 80 est utilisé par un logiciel sur votre ordinateur (Skype par exemple). Pour cela, fermez tous vos logiciels qui l'utilise pour pouvoir démarrer Apache. Une fois Apache démarré, relancez le logiciel, les deux fonctionneront alors simultanément.</span><br />
+<br />
+Pour cet article, nous utiliserons <a href="http://www.wampserver.com/"><em>WAMPServer</em></a>, mais vous pouvez également utiliser <a href="http://www.easyphp.org/"><em>EasyPHP</em></a> qui est aussi extrêmement simple d'utilisation.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_installer-les-modules-complementaires">Installer les modules complémentaires</h2><br />
+
+<br />
+Pour activer ces modules, il faut cliquer sur le logo WAMP, dans la barre des taches, puis :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><em>PHP Settings</em>, <em>PHP extensions</em>, puis cliquez sur le nom du module <em>GD2</em> à charger si ce n'est pas fait par défaut (<em>php_gd2</em>)
+</li><li class="formatter-li">Apache Modules où vous activez <em>rewrite_module</em><br />
+</li></ul><br />
+Ces modules sont déjà installés par défaut avec EasyPHP<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_identifiant-et-mot-de-passe">Identifiant et mot de passe</h2><br />
+
+<br />
+Par défaut l'identifiant pour la base de données est <strong>root</strong>, et pour le mot de passe, <strong>il n'y en a pas</strong>.<br />
+Le serveur SQL est <strong>localhost</strong>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_emplacement-des-fichiers">Emplacement des fichiers</h2><br />
+
+<br />
+Par défaut, si vous ne l'avez pas modifié vous-même pendant l'installation, les fichiers de votre site seront à mettre dans le répertoire : <strong>C:/wamp/www</strong>.<br />
+<br />
+Pour accéder au site par votre navigateur, cliquez sur l'icône WAMP dans la barre des taches, et cliquez sur <em>localhost</em>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creer-une-base-de-donnees">Créer une base de données</h2><br />
+
+<br />
+PHPBoost utilise une base de données pour sauvegarder le contenu de votre site. Cette base de données est accessible via <em>PhpMyAdmin</em>, qui a été installé lorsque vous avez installé WAMPServer.<br />
+Ouvrez <em>PHPMyAdmin</em> en cliquant sur l'icône WAMP, dans la barre des taches, puis sur <em>PHPMyAdmin</em>.<br />
+<br />
+<img src="https://resources.phpboost.com/documentation/installation/local_server/phpmyadmin.png" alt="" /><br />
+<br />
+Pour créer une base de données, ils vous suffit de cliquer sur <em>Bases de données</em> en haut. Entrez le nom de votre base de données et cliquez sur <em>Créer</em>. Voilà, votre base de données est créée et prête à être utilisée !<br />
+<br />
+Vous pouvez maintenant installer votre site, pour cela regardez l'article sur l'installation de PHPBoost.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mac">Mac</h1><br />
+
+<br />
+Avec Mac, Apache est déjà livré d'origine, il suffit juste de l'activer et de le coupler avec MySQL et PHP. Il est possible de les activer manuellement. Mais sachez qu'il existe aussi un package prêt à l'emploi, du même type que sur Windows.<br />
+<br />
+Pour activer manuellement ces deux modules, nous allons vous rediriger vers trois tutoriels. <a href="http://fabien.benariac.fr/content/configurer-un-serveur-web-local-sous-mac-os-x-snow-leopard">Le premier</a> et <a href="http://www.valhalla.fr/2005/10/21/installer-et-configurer-un-environnement-de-developpement-phpmysql-sur-mac-os-x/">le deuxième</a>, similaire, permettant une activation plutôt rapide et simple. <a href="http://www.macp3.info/articles/articles-1-12-1+installer-php-et-mysql-sur-mac.php">Le troisième</a>, détaillant un peu plus la procédure. Ce dernier n'étant plus entièrement à jour, mais pouvant largement vous servir.<br />
+<br />
+Pour ceux ne souhaitant pas faire cela, vous pouvez vous diriger vers <a href="http://www.apachefriends.org/fr/xampp-macosx.html">XAMPP</a> pour Mac. La dernière mise à jour datant de Mars 2010, mais totalement capable de faire tourner la dernière version de PHPBoost.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_linux">Linux</h1><br />
+
+<br />
+Pour Linux, il existe le package XAMPP (le même que pour Mac). Vous pouvez le télécharger à <a href="http://www.apachefriends.org/fr/xampp-linux.html"> cette adresse</a>. L'installation est très simple, et se fait en seulement 4 étapes. L'ensemble de la documentation et de l'utilisation de XAMPP est accessible à la même adresse (en français).<br />
+<br />
+Vous avez également une autre solution, télécharger tous les packages nécessaires via votre distribution, mais ici la démarche se complique. Selon votre distribution, selon les packages sélectionnés, à l'installation, Apache et MySQL seront ou non installés. Pour en savoir plus, merci de vous reporter à la documentation de votre distribution afin de savoir si le serveur est installé, lancé et si ce n'est pas le cas, pour savoir comment l'installer.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965959</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>333</id>
+    <id_contents>1706</id_contents>
+    <title><![CDATA[[PBT V4.1] Créer un &quot;Pastbin-like&quot;]]></title>
+    <encoded_title><![CDATA[pbt-v4-1-creer-un-pastbin-like]]></encoded_title>
+    <hits>30</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>1706</con_id_contents>
+    <con_id_article>333</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Bonsoir,<br />
+<br />
+Dans ce second tutoriel, vous allez pouvoir mettre en place un service "Pastbin-like", en gros c'est fait pour partager votre code HTMl, PHP, Javascript etc ...<br />
+<br />
+1. Connectez-vous à PHPMyAdmin puis exécutez le code suivant:<br />
+[[CODE=sql]]
+CREATE TABLE IF NOT EXISTS `phpboost_codes` (
+`id` int(6) NOT NULL,
+  `titre` varchar(255) NOT NULL,
+  `texte` text NOT NULL,
+  `pseudo` varchar(255) NOT NULL,
+  `language` varchar(30) NOT NULL
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+ALTER TABLE `phpboost_codes`
+ ADD PRIMARY KEY (`id`);[[/CODE]]<br />
+<br />
+Ensuite, créez un dossier nommé code à la racine de votre site, puis dans ce dossier, créez un fichier nommé index.php. Dans index.php veuillez mettre le code suivant:<br />
+<br />
+[[CODE=php]]
+&lt;?php
+/*This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+define('PATH_TO_ROOT', '..');
+//Début du chargement de l'environnement
+include_once('../kernel/init.php');
+//Chargement d'un fichier css, ici le fichier css du module news
+define('ALTERNATIVE_CSS', 'design');
+//Titre de la page, ici Accueil
+define('TITLE', 'Vos codes');
+//Chargement de l'environnement ( header )
+require_once('../kernel/header.php');
+//Chargement des fichiers de langue et autres
+global $LANG, $CONFIG;
+if (!AppContext::get_current_user()-&gt;check_level(User::MEMBER_LEVEL))
+  {
+    echo '&lt;div class="question"&gt;Vous n'avez pas le niveau requis ! &lt;/div&gt;';
+  }
+else
+  {
+?&gt;
+&lt;p&gt; RPG Maker MV France, vous rend facile le partage de code avec les autres utilisateurs, pour cela mettez votre code dans le formulaire ci-dessous et laissez la magie opérée&lt;/p&gt;
+&lt;?php
+    if (isset($_POST['envoyer']))
+      {
+        // Si le code est supérieur à  300 ko on affiche un message d'erreur.
+           if (strlen($_POST['code'])&gt;300000) {
+           echo '&lt;span class="error"&gt;Votre code est beaucoup trop grand.&lt;/span&gt;';
+          }
+        elseif (!empty($_POST['titre']) AND !empty($_POST['code']))
+          {
+            $titre    = addslashes($_POST['titre']);
+            $code     = addslashes(htmlspecialchars($_POST['code']));
+            $language = addslashes($_POST['language']);
+            $Sql-&gt;query_inject("INSERT INTO " . PREFIX . "codes (titre, texte, pseudo, language) VALUES('" . $titre . "','" . $code . " ', '" . $User-&gt;get_pseudo() . "', '" . $language . "')", __LINE__, __FILE__);
+            $req_code  = PersistenceContext::get_querier()-&gt;select("SELECT id,titre,texte,pseudo
+        FROM " . PREFIX . "codes WHERE pseudo = '" . $User-&gt;get_pseudo() . "' ORDER BY id DESC");
+            $req_codes = $req_code-&gt;fetch();
+            header('Location: http://rpgmakermv.fr/code/code.php?id='.$req_codes['id']);
+          exit;
+            
+          }
+        else
+          {
+            echo '&lt;span class="error"&gt;Des champs sont manquants.&lt;/span&gt;';
+          }
+      }
+?&gt;
+&lt;form action="" method="POST"&gt;
+     
+&lt;center&gt;&lt;label for="titre"&gt;Titre: &lt;br/&gt;&lt;input type="text" name="titre" id="titre" required&gt;&lt;/input&gt;&lt;/label&gt;&lt;br/&gt;
+&lt;label for="code"&gt;Code:&lt;textarea id="code" name="code" rows="8" cols="40" class="" onblur=""&gt;&lt;/textarea&gt;&lt;/label&gt;
+&lt;select id="codecontents" name ="language"&gt;
+&lt;option value="" selected="" disabled=""&gt;Choisissez le code&lt;/option&gt;
+&lt;optgroup label="Texte"&gt;
+&lt;option value="text"&gt;Text&lt;/option&gt;
+&lt;option value="sql"&gt;Sql&lt;/option&gt;
+&lt;option value="xml"&gt;Xml&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="PHPBoost"&gt;
+&lt;option value="bbcode"&gt;BBCode&lt;/option&gt;
+&lt;option value="tpl"&gt;Template&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Script"&gt;
+&lt;option value="php"&gt;PHP&lt;/option&gt;
+&lt;option value="asp"&gt;Asp&lt;/option&gt;
+&lt;option value="python"&gt;Python&lt;/option&gt;
+&lt;option value="perl"&gt;Perl&lt;/option&gt;
+&lt;option value="ruby"&gt;Ruby&lt;/option&gt;
+&lt;option value="bash"&gt;Bash&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Web"&gt;
+&lt;option value="html"&gt;Html&lt;/option&gt;
+&lt;option value="css"&gt;Css&lt;/option&gt;
+&lt;option value="javascript"&gt;Javascript&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;optgroup label="Programmation"&gt;
+&lt;option value="c"&gt;C&lt;/option&gt;
+&lt;option value="cpp"&gt;C++&lt;/option&gt;
+&lt;option value="c#"&gt;C#&lt;/option&gt;
+&lt;option value="d"&gt;D&lt;/option&gt;
+&lt;option value="java"&gt;Java&lt;/option&gt;
+&lt;option value="pascal"&gt;Pascal&lt;/option&gt;
+&lt;option value="delphi"&gt;Delphi&lt;/option&gt;
+&lt;option value="fortran"&gt;Fortran&lt;/option&gt;
+&lt;option value="vb"&gt;Vb&lt;/option&gt;
+&lt;option value="asm"&gt;Asm&lt;/option&gt;
+&lt;/optgroup&gt;
+&lt;/select&gt;&lt;br/&gt;&lt;br/&gt;
+&lt;button type="submit" class="submit" name="envoyer"&gt;Envoyer mon code&lt;/button&gt; &lt;/center&gt;&lt;/form&gt; &lt;br/&gt;&lt;br/&gt;
+&lt;?php
+  }
+include_once('../kernel/footer.php');
+?&gt;[[/CODE]]<br />
+<br />
+Ensuite, toujours dans le dossier code, créez un fichier code.php et mettez-y ce contenu :<br />
+<br />
+[[CODE=php]]
+&lt;?php
+/*This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+define('PATH_TO_ROOT', '..');
+//Début du chargement de l'environnement
+include_once('../kernel/init.php');
+//Chargement d'un fichier css, ici le fichier css du module news
+define('ALTERNATIVE_CSS', 'design');
+define('TITLE', 'Votre code');
+//Chargement de l'environnement ( header )
+require_once('../kernel/header.php');
+require_once('../kernel/lib/php/geshi/geshi.php');
+//Chargement des fichiers de langue et autres
+global $LANG, $CONFIG;
+$identifiant = is_numeric($_GET['id']);
+if (isset($identifiant) AND !empty($identifiant))
+  {
+    $req_code  = PersistenceContext::get_querier()-&gt;select("SELECT *
+        FROM " . PREFIX . "codes WHERE id = " . $_GET['id'] . "");
+    $req_codes = $req_code-&gt;fetch();
+    
+    $identifiantvalide = $req_codes['id'];
+    $code              = $req_codes['texte'];
+    $language          = $req_codes['language'];
+    $geshi             = new GeSHi(htmlspecialchars_decode($code), $language);
+    if ($identifiant == $identifiantvalide)
+      {
+        echo 'Nom du code: &lt;b&gt;' . $req_codes['titre'] . '&lt;/b&gt; dans le language: &lt;b&gt;' . $req_codes['language'] . '&lt;/b&gt; par &lt;b&gt;' . $req_codes['pseudo'] . '&lt;/b&gt;&lt;br/&gt;&lt;br/&gt;';
+        echo '&lt;div class="code"&gt;&lt;pre style="display:inline;"&gt;' . $geshi-&gt;parse_code() . '&lt;/pre&gt;&lt;/div&gt;';
+      }
+    else
+      {
+        echo '&lt;span class="error"&gt;Identifiant incorrect&lt;/span&gt;';
+      }
+  }
+else
+  {
+    echo '&lt;span class="error"&gt;Il manque un paramètre dans votre adresse URL.&lt;/span&gt;';
+  }
+?&gt;
+&lt;?php
+include_once('../kernel/footer.php');
+?&gt;[[/CODE]]<br />
+<br />
+Voilà c'est déjà fini, vous avez désormais un service de "Pastbin-like" pour votre site boosté par PHPBoost v4.1<br />
+<br />
+Et pour finir deux screens:<br />
+<br />
+<img src="http://s32.postimg.org/bno6qo0xv/pastbin1.png" alt="" /><br />
+<img src="http://s32.postimg.org/dqylyc0qt/pastbin2.png" alt="" />]]></content>
+    <activ>1</activ>
+    <user_id>3023</user_id>
+    <user_ip>109.190.164.162</user_ip>
+    <timestamp>1462647021</timestamp>
+  </article>
+</articles>

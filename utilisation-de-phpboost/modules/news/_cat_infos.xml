@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>119</id>
+    <id_contents>1696</id_contents>
+    <title><![CDATA[News]]></title>
+    <encoded_title><![CDATA[news]]></encoded_title>
+    <hits>878</hits>
+    <id_cat>39</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>39</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>119</cat_article_id>
+    <con_id_contents>1696</con_id_contents>
+    <con_id_article>119</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<table class="formatter-table" style="float:right;">
+<tr class="formatter-table-row">
+<th class="formatter-table-head" colspan="2">News </th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">Auteur</td>
+<td class="formatter-table-col"><a href="/member/member-1.php">CrowkaiT</a></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">Version actuelle</td>
+<td class="formatter-table-col">5.0</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">Date de sortie</td>
+<td class="formatter-table-col">juillet 2007</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">Compatibilité</td>
+<td class="formatter-table-col">PHPBoost 5.0</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">Démonstration</td>
+<td class="formatter-table-col"><a href="/news/news.php">Module News de PHPBoost</a></td>
+</tr></table><br />
+<p style="text-align:center"><span style="font-size: 20px;"><strong>Module News</strong></span><br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/news/logo.png" alt="" /></p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<strong>Description :</strong> Ce module est très important pour un site, car il permet bien souvent en première page d'ajouter les nouvelles du site ou une nouvelle que l'administrateur veut faire partager. Il vous procure un système de news, avec gestion complète des news par catégories, et de la date de parution. Les membres pourront proposer des news qui seront à valider par l'administrateur et laisser des commentaires afin de faire vivre votre site.<br />
+Bref un module indispensable !]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1461299391</timestamp>
+  </article>
+</articles>

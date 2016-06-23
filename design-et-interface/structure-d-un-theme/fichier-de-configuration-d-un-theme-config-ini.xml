@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>216</id>
+    <id_contents>1199</id_contents>
+    <title><![CDATA[Fichier de configuration d'un thème &quot;config.ini&quot;]]></title>
+    <encoded_title><![CDATA[fichier-de-configuration-d-un-theme-config-ini]]></encoded_title>
+    <hits>934</hits>
+    <id_cat>63</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>63</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>215</cat_article_id>
+    <con_id_contents>1199</con_id_contents>
+    <con_id_article>216</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Situés dans chaque dossier de langue des templates, les fichiers <em>config.ini</em> permettent d'afficher des informations sur le thème et de lui attribuer une configuration par défaut qui sera appliquée lorsque celui-ci sera installé.<br />
+Nous allons au fil de cet article décortiquer et expliquer en détails ce fichier très simple.<br />
+<br />
+[[CODE=text]]author="PHPBoost"[[/CODE]]<br />
+Nom ou pseudo de l'auteur du thème<br />
+<br />
+[[CODE=text]]author_mail="contact@phpboost.com"[[/CODE]]<br />
+Adresse mail de contact de l'auteur<br />
+<br />
+[[CODE=text]]author_link="http://www.phpboost.com"[[/CODE]]<br />
+Site web de l'auteur<br />
+<br />
+[[CODE=text]]version=2.0[[/CODE]]<br />
+Version du thème<br />
+<br />
+[[CODE=text]]date="05/08/12"[[/CODE]]<br />
+Date de la dernière mise à jour du thème<br />
+<br />
+[[CODE=text]]compatibility=4.1[[/CODE]]<br />
+Version de PHPBoost avec laquelle le thème est compatible<br />
+<br />
+[[CODE=text]]require_copyright=0[[/CODE]]<br />
+Si le 'require_copyright' est à 0, c'est que l'auteur n'oblige pas à mettre le copyright du thème dans le footer et vice-versa.<br />
+<br />
+[[CODE=text]]html_version=5.0 Strict[[/CODE]]<br />
+Version du HTML/XHTML<br />
+<br />
+[[CODE=text]]css_version=3.0[[/CODE]]<br />
+Version des CSS utilisés<br />
+<br />
+[[CODE=text]]columns_disabled=right[[/CODE]]<br />
+Emplacements de menus à désactiver à l'installation du thème<br />
+Voici la liste des emplacements :<table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head"><p style="text-align:center">Valeur</p></th>
+		<th class="formatter-table-head"><p style="text-align:center">Description</p></th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">header</td>
+		<td class="formatter-table-col">Tête de page</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">sub_header</td>
+		<td class="formatter-table-col">Sous-entête</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">top_central</td>
+		<td class="formatter-table-col">Menu central haut</td>
+	</tr>
+	<tr class="formatter-table-row">		
+		<td class="formatter-table-col">bottom_central</td>
+		<td class="formatter-table-col">Menu central bas</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">top_footer</td>
+		<td class="formatter-table-col">Sur pied de page</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">footer</td>
+		<td class="formatter-table-col">Pied de page</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">left</td>
+		<td class="formatter-table-col">Colonne gauche</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">right</td>
+		<td class="formatter-table-col">Colonne droite</td>
+	</tr>
+</table>Les éléments doivent être séparés par un ";".<br />
+<br />
+[[CODE=text]]variable_width=0[[/CODE]]<br />
+0 si la largeur du fixe, 1 si le thème est extensible<br />
+<br />
+[[CODE=text]]width="947px"[[/CODE]]<br />
+Largeur du thème<br />
+<br />
+[[CODE=text]]pictures="theme/images/theme.jpg,theme/images/apercu2.png"[[/CODE]]<br />
+Chemin vers les images illustrant le thème.<br />
+Séparer chaque image par une virgule.]]></content>
+    <activ>1</activ>
+    <user_id>5193</user_id>
+    <user_ip>88.125.157.163</user_ip>
+    <timestamp>1404744170</timestamp>
+  </article>
+</articles>

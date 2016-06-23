@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>29</id>
+    <id_contents>1298</id_contents>
+    <title><![CDATA[Conventions de développement]]></title>
+    <encoded_title><![CDATA[conventions-de-developpement]]></encoded_title>
+    <hits>1419</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>1298</con_id_contents>
+    <con_id_article>29</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_indentation">Indentation</a><ol class="wiki_list_2"><li><a href="#paragraph_les-conditions">Les conditions</a><ol class="wiki_list_3"><li><a href="#paragraph_conditions-simples">Conditions simples</a></li><li><a href="#paragraph_traitement-sur-plusieurs-lignes">Traitement sur plusieurs lignes</a></li><li><a href="#paragraph_avec-imbrication">Avec imbrication</a></li></ol></li><li><a href="#paragraph_les-boucles">Les boucles</a></li></ol></li><li><a href="#paragraph_les-variables">Les variables</a></li><li><a href="#paragraph_les-classes">Les classes</a><ol class="wiki_list_2"><li><a href="#paragraph_nommage">Nommage</a></li><li><a href="#paragraph_les-fonctions">Les fonctions</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Il est important dans un projet que les développeurs adoptent un style de développement identique. Ceci favorise la relecture du code et le débogage.<br />
+<br />
+Ces règles n'est pas obligatoire, mais très fortement recommandée pour vos développements.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_indentation">Indentation</h1><br />
+
+<br />
+Le style d'indentation adopté sur PHPBoost permet de gagner en lisibilité et en clarté du code.<br />
+L'utilisation des tabulations et des espaces est très importante dans le code. Il faut aérer votre code pour le rendre plus lisible.<br />
+<br />
+Nous allons voir plusieurs exemple ci-dessous.<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-conditions">Les conditions</h2><br />
+
+<br />
+Un espace avant la parenthèse. Les accolades ne sont pas sur la même ligne que la condition.<br />
+Il faut indenter le code.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_conditions-simples">Conditions simples</h3><br />
+
+<br />
+[[CODE=php]]if ($var == 2)
+{
+	echo 'La variable vaut 2';
+}[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_traitement-sur-plusieurs-lignes">Traitement sur plusieurs lignes</h3><br />
+
+<br />
+[[CODE=php]]if ($var == 2)
+{
+	echo 'test';
+}
+elseif ($var == 3)
+{
+	echo 'La variable vaut 3';
+}
+else
+{
+	echo 'La variable ne vaut ni 2, ni 3';
+}[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_avec-imbrication">Avec imbrication</h3><br />
+
+<br />
+[[CODE=php]]if ($var &gt; 0)
+{
+	if ($var == 2)
+	{
+		echo 'test';
+	}
+	elseif ($var == 3)
+	{
+		echo 'La variable vaut 3';
+	}
+	else
+	{
+		echo 'La variable ne vaut ni 2, ni 3';
+	}
+}[[/CODE]]<br />
+<br />
+Il s'agit donc d'indenter le code et non la partie déclarative.<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-boucles">Les boucles</h2><br />
+
+<br />
+[[CODE=php]]for ($i = 0; $i &lt; 5; $i++)
+{
+	echo $i;
+}[[/CODE]]<br />
+<br />
+[[CODE=php]]$i = 0;
+while ($i &lt; 5)
+{
+	echo $i;
+	$i++;
+}[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-variables">Les variables</h1><br />
+
+<br />
+Par convention, toutes les variables, y compris les variables de classes, doivent commencer par une minuscule.<br />
+<br />
+Si la variable est une suite de mots, ils devront être séparés d'un tiret bas ou underscore (_).<br />
+<br />
+Exemple : <br />
+<br />
+[[CODE=php]]$ma_variable[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-classes">Les classes</h1><br />
+
+<br />
+Les classes ont également un traitement particulier en terme de convention.<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_nommage">Nommage</h2><br />
+
+<br />
+<br />
+Les classes doivent toujours commencer par une majuscule :<br />
+<br />
+[[CODE=php]]class Class
+{
+
+}[[/CODE]]<br />
+<br />
+Si la classe est une suite de mot, chaque mot commence par une majuscule et ne sera séparé d'aucune manière :<br />
+<br />
+[[CODE=php]]class MyClass
+{
+
+}[[/CODE]]<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-fonctions">Les fonctions</h2><br />
+
+<br />
+Les fonctions doivent être en minuscule avec un underscore entre chaque mot. <br />
+<br />
+[[CODE=php]]class MyClass
+{
+	private $name = 'PHPBoost';
+	
+	public function get_name()
+	{
+		return $this-&gt;name;
+	}
+}[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>82.224.142.186</user_ip>
+    <timestamp>1405162535</timestamp>
+  </article>
+</articles>

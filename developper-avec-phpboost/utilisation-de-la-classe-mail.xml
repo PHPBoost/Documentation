@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>175</id>
+    <id_contents>853</id_contents>
+    <title><![CDATA[Utilisation de la classe Mail]]></title>
+    <encoded_title><![CDATA[utilisation-de-la-classe-mail]]></encoded_title>
+    <hits>1044</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>853</con_id_contents>
+    <con_id_article>175</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_verifier-qu-une-adresse-email-est-bien-valide">Vérifier qu'une adresse email est bien valide</a></li><li><a href="#paragraph_envoyer-un-email">Envoyer un email</a><ol class="wiki_list_2"><li><a href="#paragraph_definir-l-adresse-et-le-nom-de-l-expediteur">Définir l'adresse et le nom de l'expéditeur</a></li><li><a href="#paragraph_ajouter-un-destinataire">Ajouter un destinataire</a></li><li><a href="#paragraph_definir-l-objet-du-mail">Définir l'objet du mail</a></li><li><a href="#paragraph_definir-le-contenu">Définir le contenu</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Dans vos développements, vous allez peut être avoir besoin d'envoyer des emails.<br />
+<br />
+PHPBoost intègre une solution simple et complète pour l'envoi de mail et nous allons voir dans cet article son utilisation.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_verifier-qu-une-adresse-email-est-bien-valide">Vérifier qu'une adresse email est bien valide</h1><br />
+
+<br />
+Vous pouvez vérifier qu'une adresse email est bien valide de cette manière :<br />
+<br />
+[[CODE=php]]AppContext::get_mail_service()-&gt;is_mail_valid('adresse email à vérifier');[[/CODE]]<br />
+<br />
+La fonction renvoi <em>true</em> ou <em>false</em> selon sa validité.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_envoyer-un-email">Envoyer un email</h1><br />
+
+<br />
+Pour envoyer un email il faut dans un premier temps initialiser la classe <em>Mail</em> :<br />
+<br />
+[[CODE=php]]$mail = new Mail();[[/CODE]]<br />
+<br />
+Vous allez ensuite pouvoir utiliser plusieurs de ces fonctions pour pouvoir définir un contenu, l'email d&#8217;expédition, etc.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_definir-l-adresse-et-le-nom-de-l-expediteur">Définir l'adresse et le nom de l'expéditeur</h2><br />
+
+<br />
+Vous pouvez définir l'expéditeur avec la fonction <em>set_sender</em> :<br />
+<br />
+[[CODE=php]]$mail-&gt;set_sender('email_expediteur');[[/CODE]]<br />
+<br />
+Vous pouvez également ajouter un deuxième paramètre pour personnaliser le nom sous lequel l'expéditeur apparaîtra dans l'email.<br />
+<br />
+La fonction accepte trois valeurs :<br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> [[CODE=php,0,1]]Mail::SENDER_ADMIN[[/CODE]] : Affiche comme nom de l'expéditeur : <em>Nom du site - Administrateur</em>
+	</li><li class="formatter-li"> [[CODE=php,0,1]]Mail::SENDER_USER[[/CODE]] : Affiche comme nom de l'expéditeur : <em>Nom du site - Utilisateur</em>
+        </li><li class="formatter-li"> [[CODE=php,0,1]]Du texte personnalisé[[/CODE]] : Affiche comme nom de l'expéditeur : <em>Nom du site - Votre texte</em><br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-un-destinataire">Ajouter un destinataire</h2><br />
+
+<br />
+[[CODE=php]]$mail-&gt;add_recipient('email_destinataire');[[/CODE]]<br />
+<br />
+Vous pouvez ajouter le nom du destinataire éventuellement en deuxième paramètre.<br />
+<br />
+--- Vider la liste des destinataires ----<br />
+<br />
+[[CODE=php]]$mail-&gt;clear_recipients();[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_definir-l-objet-du-mail">Définir l'objet du mail</h2><br />
+
+<br />
+[[CODE=php]]$mail-&gt;set_subject('Sujet de votre mail');[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_definir-le-contenu">Définir le contenu</h2><br />
+
+<br />
+[[CODE=php]]$mail-&gt;set_content('Contenu du mail');[[/CODE]]<br />
+<br />
+Si votre contenu est au format HTML, vous devez utiliser la fonction <em>set_is_html</em> :<br />
+<br />
+[[CODE=php]]$mail-&gt;set_is_html(true);[[/CODE]]<br />
+<br />
+<br />
+<br />
+Une fois tous les éléments définis vous pouvez envoyer le mail de cette manière :<br />
+<br />
+[[CODE=php]]AppContext::get_mail_service()-&gt;try_to_send(Mail $mail);[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>86.204.86.165</user_ip>
+    <timestamp>1358772649</timestamp>
+  </article>
+</articles>

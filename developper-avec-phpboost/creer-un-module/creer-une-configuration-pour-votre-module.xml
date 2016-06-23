@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>135</id>
+    <id_contents>484</id_contents>
+    <title><![CDATA[Créer une configuration pour votre module]]></title>
+    <encoded_title><![CDATA[creer-une-configuration-pour-votre-module]]></encoded_title>
+    <hits>2707</hits>
+    <id_cat>7</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>7</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>7</cat_article_id>
+    <con_id_contents>484</con_id_contents>
+    <con_id_article>135</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_mise-en-place">Mise en place</a></li><li><a href="#paragraph_utilisation">Utilisation</a></li><li><a href="#paragraph_conseils">Conseils</a></li></ol>]]></menu>
+    <content><![CDATA[PHPBoost intègre une solution complète de gestion de configuration. Celle-ci est stockée automatiquement dans la Base de données, mais crée également un fichier de cache (bien plus rapide pour un accès très fréquent que la recherche en base de données).  Selon la configuration du serveur, elle peut être stockée sur le disque dur ou dans la mémoire RAM du serveur (encore plus rapide).<br />
+<br />
+Nous allons voir comment utiliser ces outils mis en place par le framework.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-place">Mise en place</h1><br />
+
+<br />
+Il va falloir créer une classe, par exemple <em>MyModuleConfig</em>. Elle doit être crée dans un fichier : <em>MyModuleConfig.class.php</em><br />
+<br />
+Elle devra être une classe fille de <em>AbstractConfigData</em>. Voici un exemple :<br />
+<br />
+[[CODE=php]]&lt;?php
+class MyModuleConfig extends AbstractConfigData
+{
+        //Renvoie le nom de votre module
+	public function get_name()
+	{
+                //Retourne la valeur contenue dans le tableau de la configuration avec comme clé = name
+		return $this-&gt;get_property('name');
+	}
+
+        //Modifie le nom de votre module
+	public function set_name($name)
+	{
+                // Modifie la configuration avec comme clé = name
+		$this-&gt;set_property('name', $name);
+	}
+	
+	public function get_default_values()
+	{
+		// Tableau de la configuration par défaut
+		return array(
+			'name' =&gt; 'Nom de votre module'
+		);
+	}
+
+	/**
+	 * Returns the configuration.
+	 * @return MyModuleConfig
+	 */
+	public static function load()
+	{
+		return ConfigManager::load(__CLASS__, 'my-module', 'config');
+	}
+
+	/**
+	 * Saves the configuration in the database. Has it become persistent.
+	 */
+	public static function save()
+	{
+		ConfigManager::save('my-module', self::load(), 'config');
+	}
+}
+?&gt;[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_utilisation">Utilisation</h1><br />
+
+<br />
+Pour récupérer la configuration de votre module :<br />
+<br />
+[[CODE=php]]//Renvoie l'objet MyModuleConfig avec la configuration (par défaut si besoin)
+$config = MyModuleConfig::load();
+
+// Affiche le nom de votre module
+echo $config-&gt;get_name();[[/CODE]]<br />
+<br />
+Pour modifier la configuration :<br />
+[[CODE=php]]
+//Renvoie l'objet MyModuleConfig avec la configuration (par défaut si besoin)
+$config = MyModuleConfig::load();
+
+// On met en place la nouvelle valeur
+$config-&gt;set_name('ma nouvelle valeur');
+
+//On sauvegarde la config
+MyModuleConfig::save();[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_conseils">Conseils</h1><br />
+
+<br />
+Pour une meilleure qualité du code, les clés des tableaux doivent être stockées dans des constantes. <br />
+<br />
+Exemple : <br />
+<br />
+[[CODE=php]]&lt;?php
+class MyModuleConfig extends AbstractConfigData
+{
+	const NAME = 'name';
+	
+   	//Renvoie le nom de votre module
+	public function get_name()
+	{
+		return $this-&gt;get_property(self::NAME);
+	}
+
+        //Modifie le nom de votre module
+	public function set_name($name)
+	{
+		$this-&gt;set_property(self::NAME, $name);
+	}
+	
+	public function get_default_values()
+	{
+		// Tableau de la configuration par défaut
+		return array(
+			self::NAME =&gt; 'Nom de votre module'
+		);
+	}
+
+	/**
+	 * Returns the configuration.
+	 * @return MyModuleConfig
+	 */
+	public static function load()
+	{
+		return ConfigManager::load(__CLASS__, 'my-module', 'config');
+	}
+
+	/**
+	 * Saves the configuration in the database. Has it become persistent.
+	 */
+	public static function save()
+	{
+		ConfigManager::save('my-module', self::load(), 'config');
+	}
+}
+?&gt;[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>78.224.128.79</user_ip>
+    <timestamp>1353747218</timestamp>
+  </article>
+</articles>

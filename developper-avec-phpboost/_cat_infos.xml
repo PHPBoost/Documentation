@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>159</id>
+    <id_contents>483</id_contents>
+    <title><![CDATA[V. Développer avec PHPBoost]]></title>
+    <encoded_title><![CDATA[developper-avec-phpboost]]></encoded_title>
+    <hits>3628</hits>
+    <id_cat>5</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>483</con_id_contents>
+    <con_id_article>159</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Développer avec PHPBoost]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>78.224.128.79</user_ip>
+    <timestamp>1353746553</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>306</id>
+    <id_contents>1417</id_contents>
+    <title><![CDATA[HomeCustom : Personnalisez votre accueil !]]></title>
+    <encoded_title><![CDATA[homecustom-personnalisez-votre-accueil]]></encoded_title>
+    <hits>1140</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>1417</con_id_contents>
+    <con_id_article>306</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_modification-des-fichiers">Modification des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_homecustomhomepageextensionpoint-class-php">HomeCustomHomePageExtensionPoint.class.php</a><ol class="wiki_list_3"><li><a href="#paragraph_ce-que-vous-avez">Ce que vous avez</a></li><li><a href="#paragraph_le-nouveau-code">Le nouveau code</a></li></ol></li><li><a href="#paragraph_home-tpl">home.tpl</a><ol class="wiki_list_3"><li><a href="#paragraph_ce-que-vous-avez">Ce que vous avez</a></li><li><a href="#paragraph_le-nouveau-code">Le nouveau code</a></li></ol></li></ol></li><li><a href="#paragraph_cr-ation-des-fichiers">Création des fichiers</a><ol class="wiki_list_2"><li><a href="#paragraph_articles-tpl">articles.tpl</a><ol class="wiki_list_3"><li><a href="#paragraph_le-code">Le code</a></li><li><a href="#paragraph_les-diff-rentes-variables-possibles">Les différentes variables possibles</a><ol class="wiki_list_4"><li><a href="#paragraph_les-variables-d-affichage">Les variables d'affichage</a><ol class="wiki_list_5"><li><a href="#paragraph_les-variables-du-module-articles">Les variables du module Articles</a></li><li><a href="#paragraph_les-nouvelles-variables">Les nouvelles variables</a></li></ol></li><li><a href="#paragraph_les-variables-de-conditions">Les variables de conditions</a></li></ol></li></ol></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<span class="notice">Dans ce tutoriel nous ne cherchons pas à ce que votre Page d'Accueil soit la plus esthétique possible, nous nous concentrerons donc uniquement sur la personnalisation fonctionnelle. Nous utiliserons ainsi très peu le langage HTML et CSS mais davantage le langage PHP et MySQL. En d'autre terme, bien que ce tutoriel soit adapté pour tout le monde, il est quand même recommandé d'avoir quelques notions dans ces divers langages et en algorithme.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction</h1><br />
+
+<br />
+Dans ce tutoriel je vais pouvoir vous expliquer comment personnaliser votre petit module <strong>HomeCustom</strong>. En effet, il est toujours plus agréable d'avoir une page d'accueil qui reprend les diverses activité de votre site : <br />
+<br />
+<ol class="formatter-ol">
+	<li class="formatter-li">Les dernières news, 
+	</li><li class="formatter-li">Les derniers articles,
+	</li><li class="formatter-li">Et enfin les prochains événements à venir.<br />
+</li></ol><br />
+<br />
+En somme visuellement pour faire un petit schéma récapitulatif voici à quoi ressemblera votre page d'Accueil :<br />
+<table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head"><span style="font-size: 20px;">Votre page d'accueil</span></th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><span style="font-size: 15px;">Vos 3 derniers Articles</span></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Article 3</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Article 2</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Article 1</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><span style="font-size: 15px;">Vos 3 dernières News</span></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">News 3</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">News 2</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">News 1</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><span style="font-size: 15px;">Vos 3 prochains Evénements</span></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Evénement 1</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Evénement 2</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Evénement 3</td>
+	</tr>
+</table><br />
+<br />
+<span class="question"><h4 class="formatter-title">Heu... <img src="/images/smileys/confused.png" alt=":hum" class="smiley" /> Il y quelques chose que je ne comprends pas, les articles et les news sont classé par ordre décroissant mais pas les événements, est-ce normal ?</h4><br />
+<br />
+<em>Très bien vu, la question est forte intéressante puisque effectivement le dernier article et la dernière news arrivera bien en tête de liste, ce qui est totalement normal. <br />
+En ce qui concerne les événements, on affiche les <span style="text-decoration: underline;">prochains</span> donc ils doivent apparaitre par ordre chronologique on ne va pas afficher d'abord l'événement de Juin 20XX avant celui de Janvier 20XX. Mais par contre il faudra penser à ne pas afficher les événements qui sont passés.</em> <strong>Eh oui il faut penser à tous quand on code !  <img src="/images/smileys/smile.png" alt=":)" class="smiley" />  </strong></span><br />
+<br />
+Alors pour ce faire, il faudra modifier 2 fichiers (<em>HomeCustomHomePageExtensionPoint.class.php</em> et <em>home.tpl</em>) et créer 3 fichiers (<em>articles.tpl</em>, <em>news.tpl</em> et <em>events.tpl</em>).<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-des-fichiers">Modification des fichiers</h1><br />
+
+<br />
+Dans un premier je vous propose de modifier d'abord le <em>HomeCustomHomePageExtensionPoint.class.php</em> puis le fichier <em>home.tpl</em>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_homecustomhomepageextensionpoint-class-php">HomeCustomHomePageExtensionPoint.class.php</h2><br />
+
+<br />
+Ici nous accorderons une grande partie du tutoriel car c'est la partie la plus technique. C'est ici que nous coderons en PHP &amp; MySQL, nous irons chercher toutes les informations dont nous avons besoin dans la Base De Donnée (BDD).<br />
+<br />
+<span class="question"><h4 class="formatter-title">Tu es bien gentil mais où ce trouve ce fichier HomeCustomPagetrucclasse...php que tu nous dis de modifier ?</h4><br />
+<br />
+<em>Oui, au temps pour moi <img src="/images/smileys/happy.png" alt="^^" class="smiley" /> ce fichier ce trouve ici : HomeCustom/phpboost/HomeCustomHomePageExtensionPoint.class.php</em></span><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_ce-que-vous-avez">Ce que vous avez</h3><br />
+
+<br />
+Voici le code que contient ce fichier :<br />
+[[CODE=php]]
+&lt;?php
+/*##################################################
+ *                     HomeCustomHomePageExtensionPoint.class.php
+ *                            -------------------
+ *   begin                : August 25, 2012
+ *   copyright            : (C) 2012 Kevin MASSY
+ *   email                : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class HomeCustomHomePageExtensionPoint implements HomePageExtensionPoint
+{
+	private $template;
+	
+	public function get_home_page()
+	{
+		return new DefaultHomePage($this-&gt;get_title(), $this-&gt;get_view());
+	}
+
+	private function get_title()
+	{
+		return LangLoader::get_message('title', 'common', 'HomeCustom');
+	}
+	
+	private function get_view()
+	{
+		$this-&gt;template = new FileTemplate('HomeCustom/home.tpl');
+				
+		return $this-&gt;template;
+	}
+		
+}
+?&gt;
+[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_le-nouveau-code">Le nouveau code</h3><br />
+
+<br />
+<span class="notice">Je ne sais pas s'il serait de grande utilité de vous faire un cours et de vous amener petit à petit pour créer votre fichier puisque la plupart des personnes feront un copié collé de la solution. Néanmoins, pour les plus courageux ne vous inquiétez pas, le fichier contient pleins de commentaires, en Français et en Anglais (Vous n'avez donc aucune excuse <img src="/images/smileys/devil.png" alt=":devil" class="smiley" /> ), pour réussir à comprendre la logique du code.</span><br />
+<br />
+[[CODE=php]]
+&lt;?php
+/*##################################################
+ *					   HomeCustomHomePageExtensionPoint.class.php
+ *							  -------------------
+ *	 begin				  : August 25, 2012
+ *	 copyright			  : (C) 2012 Kevin MASSY
+ *	 email				  : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	 See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class HomeCustomHomePageExtensionPoint implements HomePageExtensionPoint
+{
+	private $template;
+
+	public function get_home_page()
+	{
+		$columns_disabled = Environment::get_graphical_environment()-&gt;get_columns_disabled();
+		$columns_disabled-&gt;set_disable_left_columns(false); //passer à "true" pour désactiver
+		$columns_disabled-&gt;set_disable_right_columns(false);
+		$columns_disabled-&gt;set_disable_top_central(false);
+		$columns_disabled-&gt;set_disable_bottom_central(false);
+		return new DefaultHomePage($this-&gt;get_title(), $this-&gt;get_view());
+	}
+
+	private function get_title()
+	{
+		return LangLoader::get_message('title', 'common', 'HomeCustom');
+	}
+
+	private function get_view()
+	{
+		$this-&gt;template = new FileTemplate('HomeCustom/home.tpl');
+
+		$this-&gt;build_view();
+
+		return $this-&gt;template;
+	}
+
+	private function build_view()
+	{
+		// ici on définit la date en Français
+		// for the French date
+		setlocale(LC_ALL, 'french', 'fr_FR.UTF8', 'fr.UTF8', 'fr_FR.UTF-8', 'fr.UTF-8', 'fr_FR');
+		$this-&gt;build_articles_view($this-&gt;articles_results());
+		$this-&gt;build_news_view($this-&gt;news_results());
+		$this-&gt;build_events_view($this-&gt;events_results());
+	}
+
+	private function articles_results()
+	{
+		$now = new Date();
+		$querier = PersistenceContext::get_querier();
+		$results = $querier-&gt;select('SELECT articles.*, member.*, com.number_comments, notes.average_notes, notes.number_notes, note.note, cat.rewrited_name AS rewrited_name_cat
+			FROM ' . PREFIX . 'articles articles
+			LEFT JOIN ' . PREFIX . 'articles_cats cat ON cat.id = articles.id_category
+			LEFT JOIN ' . DB_TABLE_MEMBER . ' member ON member.user_id = articles.author_user_id
+			LEFT JOIN ' . DB_TABLE_COMMENTS_TOPIC . ' com ON com.id_in_module = articles.id AND com.module_id = \'articles\'
+			LEFT JOIN ' . DB_TABLE_AVERAGE_NOTES . ' notes ON notes.id_in_module = articles.id AND notes.module_name = \'articles\'
+			LEFT JOIN ' . DB_TABLE_NOTE . ' note ON note.id_in_module = articles.id AND note.module_name = \'articles\' AND note.user_id = :user_id
+			AND (published = 1 OR (published = 2 AND publishing_start_date &lt; :timestamp_now AND (publishing_end_date &gt; :timestamp_now OR publishing_end_date = 0)))
+			ORDER BY articles.date_created DESC
+			LIMIT 3',
+			array(
+				'user_id' =&gt; AppContext::get_current_user()-&gt;get_id(),
+				'timestamp_now' =&gt; $now-&gt;get_timestamp()
+			));
+			/*
+			SELECT = On selectionne tous les champs liés aux articles
+			FROM = Dans quelles entités sont issues les champs
+			LEFT JOIN = On fait les jointure afin de dire que les clefs primaire sont identiques
+			AND = On fait bien attention a récupérer un article qui a été publié avec autorisation ou différé après heure
+			ODRDER BY = On classe les articles par la date de création et par ordre décroissant (DESC, le plus récent en premier et le plus ancien en dernier)
+			LIMIT = On récupère uniquement les 3 derniers articles
+		*/
+		return $results;
+	}
+
+	private function news_results()
+	{
+		$now = new Date();
+		$querier = PersistenceContext::get_querier();
+		$results = $querier-&gt;select('SELECT news.*, member.*, cat.rewrited_name AS rewrited_name_cat
+			FROM ' . PREFIX . 'news news
+			LEFT JOIN ' . PREFIX . 'news_cats cat ON cat.id = news.id_category
+			LEFT JOIN ' . DB_TABLE_MEMBER . ' member ON member.user_id = news.author_user_id
+			AND (approbation_type = 1 OR (approbation_type = 2 AND start_date &lt; :timestamp_now AND (end_date &gt; :timestamp_now OR end_date = 0)))
+			ORDER BY news.creation_date DESC
+			LIMIT 3', array(
+			'timestamp_now' =&gt; $now-&gt;get_timestamp()
+		));
+		/*
+			SELECT = On selectionne tous les champs liés aux news
+			FROM = Dans quelles entités sont issues les champs
+			LEFT JOIN = On fait la jointure afin de dire que les clefs primaire sont identiques
+			AND = On fait bien attention a récupérer une news qui a été publiée avec autorisation ou différé après heure.
+			ODRDER BY = On classe les news par la date de création et par ordre décroissant (DESC, le plus récent en premier et le plus ancien en dernier)
+			LIMIT = On récupère uniquement les 3 dernières news.
+		*/
+		return $results;
+	}
+
+	private function events_results()
+	{
+		$now = new Date();
+		$today = strtotime(date("Y-m-d", $now-&gt;get_timestamp()));
+		$querier = PersistenceContext::get_querier();
+		$results = $querier-&gt;select('SELECT *
+			FROM '. PREFIX . 'calendar_events event
+			LEFT JOIN ' . PREFIX . 'calendar_events_content event_content ON event_content.id = event.content_id
+			LEFT JOIN ' . DB_TABLE_MEMBER . ' member ON member.user_id = event_content.author_id
+			LEFT JOIN '. PREFIX . 'calendar_cats cat ON cat.id = event_content.id_category
+			WHERE approved = 1
+			AND start_date &gt;= :timestamp_now
+			ORDER BY start_date
+			LIMIT 3
+			', array(
+				'timestamp_now' =&gt; $today
+			));
+		/*
+			SELECT = On selectionne tous les champs liés aux événements
+			FROM = Dans quelles entités sont issues les champs
+			LEFT JOIN = On fait la jointure afin de dire que les clefs primaire sont identiques
+			WHERE On fait bien attention a récupérer un événement qui a été publié
+			AND = On récupère uniquement un prochain événement (les événements passés on ne les veut pas)
+			ODRDER BY = On classe les événements par date de début par ordre chronologique (ASC, inutile de le préciser, on précise uniquement le DESC)
+			LIMIT = On récupère uniquement les 3 prochains événements
+		*/
+		return $results;
+	}
+
+	private function build_articles_view(SelectQueryResult $results)
+	{
+		// ici les résultats seront envoyés dans articles.tpl
+		// results send in articles.tpl
+		$tpl = new FileTemplate('HomeCustom/articles.tpl');
+		
+		while($row = $results-&gt;fetch())
+		{
+			$article = new Article();
+			$article-&gt;set_properties($row);
+			
+			$tpl-&gt;assign_block_vars('articles_items', $article-&gt;get_tpl_vars());
+			
+			// create a new custom TPL variable made with the help of $article
+			// ici on créeait une nouvelle variable personnalisée avec l'aide de $article 
+			$tpl-&gt;put_all(array(
+				'DATE_DAY' =&gt; strftime('%d', $article-&gt;get_date_created()-&gt;get_timestamp()),
+				'DATE_MONTH_A' =&gt; strftime('%b', $article-&gt;get_date_created()-&gt;get_timestamp()),
+			));
+		}
+		
+		// ici c'est pour "pousser" articles.tpl via # INCLUDE ARTICLES # dans le home.tpl
+		// "push" articles.tpl with # INCLUDE ARTICLES # in home.tpl
+		$this-&gt;template-&gt;put('ARTICLES', $tpl);
+	}
+
+	private function build_news_view(SelectQueryResult $results)
+	{
+		// ici les résultats seront envoyés dans news.tpl
+		// results send in news.tpl
+		$tpl = new FileTemplate('HomeCustom/news.tpl');
+		while ($row = $results-&gt;fetch())
+		{
+			$news = new News();
+			$news-&gt;set_properties($row);
+			
+			$tpl-&gt;assign_block_vars('news_items', $news-&gt;get_array_tpl_vars());
+		}
+		// ici c'est pour "pousser" news.tpl via # INCLUDE NEWS # dans le home.tpl
+		// "push" news.tpl with # INCLUDE NEWS # in home.tpl
+		$this-&gt;template-&gt;put('NEWS', $tpl);
+	}
+
+	private function build_events_view(SelectQueryResult $results)
+	{
+		// ici les résultats seront envoyés dans events.tpl
+		// results send in events.tpl
+		$tpl = new FileTemplate('HomeCustom/events.tpl');
+		foreach ($results as $row)
+		{
+
+		// si "rewrited_name" est vide c'est que c'est la categorie racine (root)
+		// if "rewrited_name" is empty it's root category (root)
+		$row['rewrited_name'] = !empty($row['id_category']) ? $row['rewrited_name_cat'] : 'root';
+
+		// je me prend pas la tête j'utilise le builder du module calendar, comme ça je suis sure que le lien généré sera correcte.
+		// using the "CalendarUrlBuilder" to build link
+		$link = CalendarUrlBuilder::display_event($row['id_category'], $row['rewrited_name'], $row['id_event'], $row['rewrited_title']);
+		
+		// ici sa boucle et on fait correspondre le tableau extrait de la BDD avec des variables TPL
+		// here is the loop to correspond the row in database with the right TPL variable
+			$tpl-&gt;assign_block_vars('events_items', array(
+				'U_LINK' =&gt; $link-&gt;absolute(),
+				'TITLE' =&gt; $row['title'],
+				'CONTENTS' =&gt; $row['contents'],
+				'PSEUDO' =&gt; $row['login'],
+				'LOCATION' =&gt; $row['location'],
+				'LAST_DATE' =&gt; strftime('%d/%m/%Y', $row['last_registration_date']),
+				'MAX_MEMBER' =&gt; $row['max_registered_members'],
+				'START_DATE' =&gt; strftime('%d/%m/%Y', $row['start_date']),
+				'END_DATE' =&gt; strftime('%d/%m/%Y', $row['end_date']),
+				'CAT' =&gt; $row['name'],
+				'START_DATE_FULL' =&gt; strftime('%d %B %Y', $row['start_date']),
+				
+				// date de début jour
+				// start date of day
+				'START_DATE_DAY_FULL' =&gt; strftime('%A', $row['start_date']),
+				'START_DATE_DAY_SHORT' =&gt; strftime('%a', $row['start_date']),
+				'START_DATE_DAY_FIGURE' =&gt; strftime('%d', $row['start_date']),
+				
+				// date de début mois
+				// start date of month
+				'START_DATE_MONTH_FULL' =&gt; strftime('%B', $row['start_date']),
+				'START_DATE_MONTH_SHORT' =&gt; strftime('%b', $row['start_date']),
+				'START_DATE_MONTH_FIGURE' =&gt; strftime('%m', $row['start_date']),
+				
+				// date de début année
+				// start date of year
+				'START_DATE_YEAR_FULL' =&gt; gmdate_format('%Y', $row['start_date']),
+				'START_DATE_YEAR_SHORT' =&gt; gmdate_format('%y', $row['start_date']),
+			));
+		}
+		// ici c'est pour "pousser" events.tpl via # INCLUDE EVENTS # dans le home.tpl
+		// "push" events.tpl with # INCLUDE EVENTS # in home.tpl
+		$this-&gt;template-&gt;put('EVENTS', $tpl);
+	}
+}
+?&gt;
+[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_home-tpl">home.tpl</h2><br />
+
+<br />
+Ensuite il nous faut de modifier le home.tpl parce que c'est bien beau d'avoir un fichier PHP bien remplis mais si on n'utilise pas ses variables il nous sert strictement à rien.  <img src="/images/smileys/crazy.png" alt=":crazy" class="smiley" /><br />
+<br />
+<span class="success"><em>Celui-ci se trouve ici :  HomeCustom/template/home.tpl</em></span><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_ce-que-vous-avez">Ce que vous avez</h3><br />
+
+<br />
+Non ! <img src="/images/smileys/laugh.png" alt=":lol" class="smiley" /> Quand même je ne vais pas vous dire ce que vous avez, votre fichier est quasiment vide ! Ce serait vous manquer de respect tout ça, le plus simple et de tout supprimer ! <img src="/images/smileys/cool.png" alt=":cool" class="smiley" /><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_le-nouveau-code">Le nouveau code</h3><br />
+
+<br />
+Ah je vous avez prévenu le code est très basique, en d'autre terme il est horriblement moche ! Mais il fonctionne je vous le garanti, libre à votre imagination de le rendre plus esthétique. <img src="/images/smileys/grin.png" alt=":D" class="smiley" /> <br />
+<br />
+[[CODE=TPL]]
+&lt;div class="center"&gt;&lt;h1&gt;Votre Page d'accueil&lt;/h1&gt;&lt;/div&gt;
+&lt;br/&gt;
+&lt;div class="center"&gt;&lt;h2&gt;Les 3 derniers articles&lt;/h2&gt;&lt;/div&gt;
+# INCLUDE ARTICLES #
+&lt;div class="center"&gt;&lt;h2&gt;Les 3 derni&amp;egrave;res news&lt;/h2&gt;&lt;/div&gt;
+# INCLUDE NEWS #
+&lt;div class="center"&gt;&lt;h2&gt;Les 3 prochains &amp;eacute;v&amp;eacute;nements&lt;/h2&gt;&lt;/div&gt;
+# INCLUDE EVENTS #
+[[/CODE]]<br />
+<br />
+<span class="error">Non, votre page n'est pas encore fonctionnelle ! Rappelez-vous, il nous faut modifier 2 fichiers et nous devons en créer 3. La on vient de finir la première partie soit la modification des 2 fichiers.<br />
+Ceci-dit je vous l'accorde dans la logique des choses, le fichier home.tpl est la fichier que l'on doit s'occuper en dernier puisqu'il représente le résultat final. <img src="/images/smileys/smile.png" alt=":)" class="smiley" /> </span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_cr-ation-des-fichiers">Création des fichiers</h1><br />
+
+<br />
+Enfin vous allez pouvoir créer des fichiers, tout le monde aime créer (sauf moi <img src="/images/smileys/grin.png" alt=":D" class="smiley" /> ).<br />
+Comme je vous l'ai dis plus haut, on va créer 3 fichier :<br />
+<br />
+<ol class="formatter-ol">
+	<li class="formatter-li"> articles.tpl
+	</li><li class="formatter-li"> news.tpl
+	</li><li class="formatter-li"> events.tpl<br />
+</li></ol><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_articles-tpl">articles.tpl</h2><br />
+
+<br />
+Cette page .tpl permettra de mettre en forme (<em>oui j'ai compris elle est pas si jolie que ça la forme ! <img src="/images/smileys/whistle.png" alt=":whistle" class="smiley" /> </em>) vos derniers articles.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_le-code">Le code</h3><br />
+
+<br />
+[[CODE=TPL]]# START articles_items #
+&lt;hr&gt;
+&lt;div&gt;
+	&lt;a href="{articles_items.U_ARTICLE}"&gt;&lt;p&gt;{articles_items.TITLE}&lt;/p&gt;&lt;/a&gt;
+		&lt;p&gt;{articles_items.DESCRIPTION}... &lt;a href="{articles_items.U_ARTICLE}"&gt;[${LangLoader::get_message('read-more', 'common')}]&lt;/a&gt;&lt;/p&gt;
+		&lt;p&gt;${TextHelper::lowercase_first(LangLoader::get_message('the', 'common'))}  : {articles_items.DATE}&lt;/p&gt;
+		# IF articles_items.C_AUTHOR_DISPLAYED #
+		&lt;p&gt;${LangLoader::get_message('by', 'common')} : &lt;span&gt;{articles_items.PSEUDO}&lt;/span&gt;&lt;/p&gt;
+		# ENDIF #
+&lt;/div&gt;
+# END articles_items #[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_les-diff-rentes-variables-possibles">Les différentes variables possibles</h3><br />
+
+<br />
+Oui, il serait judicieux de vous dire ce qu'il peut être rajouter aussi ! Vous l'avez bien compris les variables sont belle est bien repris du module articles... Mais pas toutes ! Il y en a 2 qui ont étaient créées ! <img src="/images/smileys/smile.png" alt=":)" class="smiley" /><br />
+<br />
+Toutefois, il est important de préciser qu'il existe plusieurs types de variables : <br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"><span style="text-decoration: underline;"><strong>Les variables d&#8217;affichage :</strong></span> Le résultat affiché est très explicite.
+	</li><li class="formatter-li"><strong><span style="text-decoration: underline;">Les variable de conditions :</span></strong> Le résultat affiché ne veut pas dire grand chose pour les visiteurs.<br />
+</li></ul><br />
+<br />
+En d'autre terme, vous l'aurez compris, les variables d'affichage se servent des variables de conditions. Par exemple, on ne va pas afficher un bouton de suppression d'article si l'utilisateur lambda n'a pas les droits requis <em>(surtout pas le lien de suppression ! <img src="/images/smileys/crazy.png" alt=":crazy" class="smiley" /> )</em> alors :<br />
+<br />
+[[CODE=TPL]]
+# IF articles_items.C_DELETE #
+	&lt;a href="{articles_items.U_DELETE_ARTICLE}" class="fa fa-delete" data-confirmation="delete-element"&gt;&lt;/a&gt;
+# ENDIF #
+[[/CODE]]<br />
+<br />
+<span class="question"><h4 class="formatter-title">Je ne suis pas à l'aise avec ça ! Il me manque quelques explications sur l'utilisation des variables tu peux m'expliquer ?</h4><br />
+<em>Non ! <img src="/images/smileys/devil.png" alt=":devil" class="smiley" /> J'évite de trop m'écarter du sujet principal, Ici je vous donne uniquement une sorte de "lexique" des différentes variables utilisable. En revanche, si la partie variable de conditions vous reste ambiguë ou si vous souhaitez simplement avoir quelques explications supplémentaires, ne vous inquiétez pas, un article lui est consacré dans la documentation de PHPBoost (On ne va réinventer la roue quand même ! <img src="/images/smileys/wink.png" alt=";)" class="smiley" /> ) voici son lien <img src="/images/smileys/smile.png" alt=":)" class="smiley" /> :</em> <a href="/wiki/systeme-de-templates#paragraph_conditions">[CLIQUEZ ICI]</a></span><br />
+<br />
+<br />
+<h4 class="wiki_paragraph4" id="paragraph_les-variables-d-affichage">Les variables d'affichage</h4><br />
+
+<br />
+<br />
+<h5 class="wiki_paragraph5" id="paragraph_les-variables-du-module-articles">Les variables du module Articles</h5><br />
+
+<br />
+<br />
+<table class="formatter-table" style="border:0px;border: 0px;"> <tr class="formatter-table-row">
+<th class="formatter-table-head" colspan="1">NOMS</th>
+<th class="formatter-table-head" colspan="1">SIGNIFICATIONS</th>
+<th class="formatter-table-head" colspan="1">UTILISATIONS</th>
+<th class="formatter-table-head" colspan="1">EXEMPLE</th></tr>
+<tr class="formatter-table-row"> <td class="formatter-table-col">TITLE</td> <td class="formatter-table-col">Affiche le titre de l'article</td> <td class="formatter-table-col">{articles_item.TITLE}</td> <td class="formatter-table-col">Article 1</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">DATE</td> <td class="formatter-table-col">Affiche la date de création de l'article </td> <td class="formatter-table-col">{articles_item.DATE}</td> <td class="formatter-table-col">Samedi 14 Mars 2015 à 14h50</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">DATE_ISO8601</td> <td class="formatter-table-col">Affiche la date de création de l'article </td> <td class="formatter-table-col">{articles_item.DATE-ISO8601}</td> <td class="formatter-table-col">2015-03-14T14:50:00+01:00</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">DATE_SHORT</td> <td class="formatter-table-col">Affiche la date de création de l'article</td> <td class="formatter-table-col">{articles_item.DATE_SHORT}</td> <td class="formatter-table-col">14/03/2015</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">PUBLISHING_START_DATE</td> <td class="formatter-table-col">Affiche la date de publication de l'article s'il a été poster en différé</td> <td class="formatter-table-col">{articles_item.PUBLISHING_START_DATE}</td> <td class="formatter-table-col">14/04/2015</td>
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">PUBLISHING_START_DATE_ISO8601</td> <td class="formatter-table-col">Affiche la date de publication de l'article s'il a été poster en différé</td> <td class="formatter-table-col">{articles_item.PUBLISHING_START_DATE}</td> <td class="formatter-table-col">2015-04-14T14:50:00+01:00</td>
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">PUBLISHING_END_DATE</td> <td class="formatter-table-col">Affiche la date de fin de publication de l'article s'il a été poster en différé</td> <td class="formatter-table-col">{articles_item.PUBLISHING_END_DATE}</td> <td class="formatter-table-col">14/05/2015</td>
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">PUBLISHING_END_DATE_ISO8601</td> <td class="formatter-table-col">Affiche la date de fin de publication de l'article s'il a été poster en différé</td> <td class="formatter-table-col">{articles_item.PUBLISHING_START_DATE}</td> <td class="formatter-table-col">2015-05-14T14:50:00+01:00</td>
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">DATE_UPDATED</td> <td class="formatter-table-col">Affiche la dernière date de modification de l'article</td> <td class="formatter-table-col">{articles_item.DATE_UPDATE}</td> <td class="formatter-table-col">14/03/2015</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">L_COMMENTS</td> <td class="formatter-table-col">Affiche "Poster commentaire" </td> <td class="formatter-table-col">{articles_item.L_COMMENTS}</td> <td class="formatter-table-col">Poster un commentaire</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">NUMBER_COMMENTS</td> <td class="formatter-table-col">Affiche le nombre de commentaires sur l'article</td> <td class="formatter-table-col">{articles_item.NUMBER_COMMENTS}</td> <td class="formatter-table-col">0, 1, 2, 3 ...</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">NUMBER_VIEW</td> <td class="formatter-table-col">Affiche le nombre de vues de l'article</td> <td class="formatter-table-col">{articles_item.NUMBER_VIEW}</td> <td class="formatter-table-col">0, 1, 2, 3...</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">NOTE</td> <td class="formatter-table-col">Affiche les petites étoiles de notation</td> <td class="formatter-table-col">{articles_item.NOTE}</td> <td class="formatter-table-col">Les petites étoiles</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">PSEUDO</td> <td class="formatter-table-col">Affiche le pseudo de l'auteur de l'article</td> <td class="formatter-table-col">{articles_item.PSEUDO}</td> <td class="formatter-table-col">janus57, jpalbert92 ...</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">DESCRIPTION</td> <td class="formatter-table-col">Affiche la description de l'article </td> <td class="formatter-table-col">{articles_item.DESCRIPTION}</td> <td class="formatter-table-col">Ceci est la description de l'article 1</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">PICTURE</td> <td class="formatter-table-col">Affiche le lien de la photo de l'article</td> <td class="formatter-table-col">{articles_item.PICTURE}</td> <td class="formatter-table-col">/phpboost_v4-1/articles/templates/images/default.png</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">USER_LEVEL_CLASS</td> <td class="formatter-table-col">Affiche le niveau de l'auteur</td> <td class="formatter-table-col">{articles_item.USER_LEVEL_CLASS}</td> <td class="formatter-table-col">admin, modo, membre, visiteur</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">USER_GROUP_COLOR</td> <td class="formatter-table-col">Donne le code héxadécimal de la couleur du groupe qui a été configuré dans l'administration via le système de groupe</td> <td class="formatter-table-col">{articles_item.USER_GROUP_COLOR}</td> <td class="formatter-table-col">/</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">CATEGORY_ID</td> <td class="formatter-table-col">Affiche le numéro de la catégorie de l'article</td> <td class="formatter-table-col">{articles_item.CATEGORY_ID}</td> <td class="formatter-table-col">1, 2, 3 ...</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">CATEGORY_NAME</td> <td class="formatter-table-col">Affiche le nom de la catégorie de l'article</td> <td class="formatter-table-col">{articles_item.CATEGORY_NAME}</td> <td class="formatter-table-col">catégorie 1</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">CATEGORY_DESCRIPTION</td> <td class="formatter-table-col">Affiche la description de la catégorie de l'article</td> <td class="formatter-table-col"> {articles_item.DESCRIPTION} </td> <td class="formatter-table-col">Ceci est la description de la cat 1</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">CATEGORY_IMAGE</td> <td class="formatter-table-col">Affiche le lien de l'image de la catégorie de l'article</td> <td class="formatter-table-col">{articles_item.CATEGORY_IMAGE}</td> <td class="formatter-table-col">/phpboost_v4-1/articles/articles.png</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">U_COMMENTS</td> <td class="formatter-table-col">Affiche le lien de la partie commentaires de l'article</td> <td class="formatter-table-col">{articles_item.U_COMMENTS}</td> <td class="formatter-table-col">/phpboost_v4-1/articles/?url=/1-cat-1/5-article-4-cat-1/</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">U_AUTHOR</td> <td class="formatter-table-col">Affiche le lien vers le profil de l'auteur de l'article</td> <td class="formatter-table-col">{articles_item.U_AUTHOR}</td> <td class="formatter-table-col">/phpboost_v4-1/user/profile/1</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">U_CATEGORY</td> <td class="formatter-table-col">Affiche le lien vers la catégorie de l'article</td> <td class="formatter-table-col">{articles_item.U_CATEGORY}</td> <td class="formatter-table-col">/phpboost_v4-1/articles/1-cat-1/</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">U_ARTICLE</td> <td class="formatter-table-col">Affiche le lien de l'article</td> <td class="formatter-table-col">{articles_item.U_ARTICLE}</td> <td class="formatter-table-col">/phpboost_v4-1/articles/1-cat-1/5-article-4-cat-1/</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">U_EDIT_ARTICLE</td> <td class="formatter-table-col">Affiche le lien d'édition de l'article</td> <td class="formatter-table-col">{articles_item.U_EDIT_ARTICLE}</td> <td class="formatter-table-col">/phpboost_v4-1/articles/5/edit/</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">U_DELETE_ARTICLE</td> <td class="formatter-table-col">Affiche le lien de suppression de l'article</td> <td class="formatter-table-col">{articles_item.U_DELETE_ARTICLE}</td> <td class="formatter-table-col">/phpboost_v4-1/articles/5/delete/?token=88baada266a37da1</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">U_SYNDICATION</td> <td class="formatter-table-col">Affiche le flux RSS</td> <td class="formatter-table-col">{articles_item.U_SYNDICATION}</td> <td class="formatter-table-col">/phpboost_v4-1/syndication/rss/articles/1</td> 
+</tr> <tr class="formatter-table-row"> <td class="formatter-table-col">U_PRINT_ARTICLE</td> <td class="formatter-table-col">Affiche la version imprimable de l'article</td> <td class="formatter-table-col">{articles_item.U_PRINT_ARTICLE}</td> <td class="formatter-table-col">/phpboost_v4-1/articles/print/5-article-4-cat-1/</td> 
+</tr> 
+</table><br />
+<br />
+<h5 class="wiki_paragraph5" id="paragraph_les-nouvelles-variables">Les nouvelles variables</h5><br />
+
+<br />
+Jusqu'ici nous avons repris les variables d'affichages du module news, mais nous avons créé 2 nouvelles variables dans le fichier PHP :<br />
+<br />
+<table class="formatter-table">
+	<tr class="formatter-table-row">
+<th class="formatter-table-head" colspan="1">NOMS</th>
+<th class="formatter-table-head" colspan="1">SIGNIFICATIONS</th>
+<th class="formatter-table-head" colspan="1">UTILISATIONS</th>
+<th class="formatter-table-head" colspan="1">EXEMPLE</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">DATE_DAY</td>
+		<td class="formatter-table-col">Affiche le jour de la date de création de l'article</td>
+		<td class="formatter-table-col">{DATE_DAY}</td>
+		<td class="formatter-table-col">01, 02, 03 ... 29, 30, 31</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">DATE_MONTH_A</td>
+		<td class="formatter-table-col">Affiche le mois abrégé de la date de création de l'article </td>
+		<td class="formatter-table-col">{DATE_MONTH_A}</td>
+		<td class="formatter-table-col">Jan, Févr, Mars, Avr, Mai, Juin, Juil, Août ... Nov, Déc</td>
+	</tr>
+</table><br />
+<br />
+<h4 class="wiki_paragraph4" id="paragraph_les-variables-de-conditions">Les variables de conditions</h4><br />
+
+<br />
+<table class="formatter-table" style="border:0px;border: 0px;">  <tr class="formatter-table-row"><th class="formatter-table-head" colspan="1">NOMS</th>
+<th class="formatter-table-head" colspan="1">SIGNIFICATIONS</th>
+<th class="formatter-table-head" colspan="1">UTILISATIONS</th></tr> 
+<tr class="formatter-table-row"> <td class="formatter-table-col"> C_EDIT </td> <td class="formatter-table-col">Si l'utilisateur peut supprimer</td> <td class="formatter-table-col"> # IF  articles_items.C_EDIT  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_DELETE </td> <td class="formatter-table-col">Si l'utilisateur peut supprimer</td> <td class="formatter-table-col"> # IF  articles_items.C_DELETE  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_HAS_PICTURE </td> <td class="formatter-table-col">S'il y a une photo sur l'article</td> <td class="formatter-table-col"> # IF  articles_items.C_HAS_PICTURE  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_USER_GROUP_COLOR </td> <td class="formatter-table-col">Si l'auteur est associé à un groupe avec une couleur</td> <td class="formatter-table-col"> # IF  articles_items.C_USER_GROUP_COLOR  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_PUBLISHED </td> <td class="formatter-table-col">Si l'article est publié</td> <td class="formatter-table-col"> # IF  articles_items.C_PUBLISHED  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_PUBLISHING_START_AND_END_DATE </td> <td class="formatter-table-col">Si l'article à une date de début de publication et une date de fin de publication</td> <td class="formatter-table-col"> # IF  C_PUBLISHING_START_AND_END_DATE  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_PUBLISHING_START_DATE </td> <td class="formatter-table-col">Si l'article à une date de début de publication</td> <td class="formatter-table-col"> # IF  articles_items.C_PUBLISHING_START_DATE  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_PUBLISHING_END_DATE </td> <td class="formatter-table-col">Si l'article à une date de fin de publication</td> <td class="formatter-table-col"> # IF  articles_items.C_PUBLISHING_END_DATE  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_DATE_UPDATED </td> <td class="formatter-table-col">Si l'article à été modifié</td> <td class="formatter-table-col"> # IF  articles_items.C_DATE_UPDATED  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_AUTHOR_DISPLAYED </td> <td class="formatter-table-col">Si l'affichage de l'auteur est activé</td> <td class="formatter-table-col"> # IF  articles_items.C_AUTHOR_DISPLAYED  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_NOTATION_ENABLED </td> <td class="formatter-table-col">Si la notation est activé</td> <td class="formatter-table-col"> # IF  articles_items.C_NOTATION_ENABLED  # <br />
+</td> </tr> <tr class="formatter-table-row"> <td class="formatter-table-col"> C_AUTHOR_EXIST </td> <td class="formatter-table-col">Si l'auteur exist</td> <td class="formatter-table-col"> # IF  articles_items.C_AUTHOR_EXIST  #  <br />
+</td> </tr>  </table><br />
+<br />
+<span class="error">ATTENTION : J'insiste car 90% des erreurs sont lié au fait qu'on oublie de fermé le # IF ... # . En fait c'est comme si vous ne terminez pas votre phrase. En algorithme cela se traduit par un FIN SI autrement dit en anglais ENDIF on rajoute alors # ENDIF #. </span>]]></content>
+    <activ>1</activ>
+    <user_id>5143</user_id>
+    <user_ip>82.242.233.155</user_ip>
+    <timestamp>1426534694</timestamp>
+  </article>
+</articles>

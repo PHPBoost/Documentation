@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>22</id>
+    <id_contents>1485</id_contents>
+    <title><![CDATA[Administration du module calendrier]]></title>
+    <encoded_title><![CDATA[administration-du-module-calendrier]]></encoded_title>
+    <hits>734</hits>
+    <id_cat>20</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>20</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>21</cat_article_id>
+    <con_id_contents>1485</con_id_contents>
+    <con_id_article>22</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configurer-le-module-calendrier">Configurer le module Calendrier</a></li><li><a href="#paragraph_gestion-des-v-nements">Gestion des évènements</a></li><li><a href="#paragraph_gestion-des-cat-gories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-cat-gorie">Ajouter une catégorie</a></li></ol>]]></menu>
+    <content><![CDATA[L'administration du module Calendrier est très simple.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configurer-le-module-calendrier">Configurer le module Calendrier</h1><br />
+
+<br />
+Dans cette partie qui ressemble à l'exemple ci-dessous, vous pouvez définir les droits nécessaires à la création et la modération d'un évènement.<br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/calendar/config.png" alt="" /></p><br />
+<br />
+Ainsi, seuls les membres ayant ce droit, ou le droit au-dessus, seront aptes à ajouter, modifier ou supprimer des évènements.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-v-nements">Gestion des évènements</h1><br />
+
+<br />
+Ici sont affichées tous les évènements du module :<br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/calendar/events_management.png" alt="" /></p><br />
+<br />
+Pour chaque évènement, on peut y trouver :<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"><strong>Titre</strong> : Nom de l'évènement
+	</li><li class="formatter-li"><strong>Catégorie</strong> : Catégorie dans laquelle est placé l'évènement
+	</li><li class="formatter-li"><strong>Auteur</strong> : Auteur de l'évènement
+	</li><li class="formatter-li"><strong>Date</strong> : Dates de début et de fin 
+	</li><li class="formatter-li"><strong>Répétitions</strong> : Si l'évènement doit se répéter toutes les semaines etc
+	</li><li class="formatter-li"><strong>Approuvé</strong> : Si l'évènement a été publié ou en attente de validation par un modérateur<br />
+</li></ul><br />
+Vous pouvez :<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> visualiser l'évènement en cliquant sur son nom
+	</li><li class="formatter-li"> éditer l'évènement, avec le bouton <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML -->
+	</li><li class="formatter-li"> le supprimer, avec <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML -->. Dans ce cas, PHPBoost vous demandera confirmation avant de le supprimer définitivement.<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-cat-gories">Gestion des catégories</h1><br />
+
+<br />
+Ici sont recensées les catégories du module :<br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/calendar/categories_management.png" alt="" /></p><br />
+<br />
+Vous pouvez :<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> les déplacer en faisant du glisser/déposer, ou manuellement à l'aide des boutons <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML -->
+	</li><li class="formatter-li"> éditer la catégorie, avec le bouton <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML -->
+	</li><li class="formatter-li"> supprimer une catégorie, avec <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML -->. Dans ce cas, PHPBoost vous demandera confirmation avant de supprimer définitivement la catégorie sélectionnée.<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-une-cat-gorie">Ajouter une catégorie</h1><br />
+
+<br />
+La page suivante permet de créer une catégorie dans lesquelles vous pourrez classer les différents événements du calendrier :<br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/calendar/add_category.png" alt="" /></p><br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"><strong>Nom</strong> : Nom de la catégorie
+	</li><li class="formatter-li"><strong>Personnaliser le nom dans l'url</strong> : Cette case, si vous l'activez, permet de définir une url personnalisée pour votre catégorie
+	</li><li class="formatter-li"><strong>Nom réécrit dans l'url</strong> : Visible uniquement si vous avez coché la case plus haut. Permet de définir l'url personnalisée (ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-)
+	</li><li class="formatter-li"><strong>Emplacement</strong> : Catégorie dans laquelle vous souhaitez positionner votre catégorie
+	</li><li class="formatter-li"><strong>Couleur</strong> : Couleur de fond qui sera utilisée pour distinguer les évènements de votre catégorie
+	</li><li class="formatter-li"><strong>Autorisations</strong> : En cochant cette case, vous afficherez et pourrez choisir des autorisations spéciales pour votre catégorie et les évènements qu'elle contiendra<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>5369</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1449205438</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>260</id>
+    <id_contents>1735</id_contents>
+    <title><![CDATA[Administration du module wiki]]></title>
+    <encoded_title><![CDATA[administration-du-module-wiki]]></encoded_title>
+    <hits>569</hits>
+    <id_cat>45</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>45</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>163</cat_article_id>
+    <con_id_contents>1735</con_id_contents>
+    <con_id_article>260</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration-du-wiki">Configuration du wiki</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_accueil-du-wiki">Accueil du wiki</a></li></ol></li><li><a href="#paragraph_gestion-des-autorisations-du-wiki">Gestion des autorisations du wiki</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration-du-wiki">Configuration du wiki</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-generale">Configuration générale</h2><br />
+
+<br />
+ <p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/admin_wiki/wiki_configuration.png" alt="" /></p><br />
+<br />
+ Définissez ici :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Nom du wiki : Nom qui sera affiché dans le fil d'ariane et sur l'accueil du module
+</li><li class="formatter-li"> Compter le nombre de fois que sont vus les articles : Si cette option est activée apparaitra en bas de chaque article le nombre de fois où la page a été consultée<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_accueil-du-wiki">Accueil du wiki</h2><br />
+
+<br />
+Cette section vous permet de paramétrer la page d'accueil de votre wiki. Vous pouvez :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Afficher ou non la liste des catégories principales du wiki 
+</li><li class="formatter-li"> Le nombre des derniers articles ajoutés ou modifiés à afficher sur l'accueil. Vous pouvez désactiver l'affichage des derniers articles en mettant la valeur 0
+</li><li class="formatter-li"> Texte de l'accueil : Contenu qui sera affiché sur la page d'accueil du wiki<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-autorisations-du-wiki">Gestion des autorisations du wiki</h1><br />
+
+<br />
+Comme pour chaque module, vous avez la possibilité de gérer de manière précise les autorisations que vous souhaitez octroyer aux visiteurs, membres et autres utilisateurs de votre site PHPBoost.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/wiki/admin_wiki/wiki_authorization.png" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.210.103</user_ip>
+    <timestamp>1463279220</timestamp>
+  </article>
+</articles>

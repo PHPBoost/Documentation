@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>41</id>
+    <id_contents>1632</id_contents>
+    <title><![CDATA[Administration du module FAQ]]></title>
+    <encoded_title><![CDATA[administration-du-module-faq]]></encoded_title>
+    <hits>609</hits>
+    <id_cat>24</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>24</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>39</cat_article_id>
+    <con_id_contents>1632</con_id_contents>
+    <con_id_article>41</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-de-la-faq">Configuration de la FAQ</a></li><li><a href="#paragraph_autorisations-generales">Autorisations générales</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_options">Options</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_gestion-de-la-faq">Gestion de la FAQ</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration-de-la-faq">Configuration de la FAQ</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-de-la-faq">Configuration de la FAQ</h2><br />
+
+<p style="text-align:center"><br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_1.jpg" alt="" /><br />
+</p><br />
+<strong>Nombre de catégories maximum affichées par page </strong> : Choisissez ici combien de catégories seront affichées sur chaque page.<br />
+<br />
+<strong>Nombre de catégories affichées par ligne</strong> : les catégories vont êtres classées sous forme de tableau avec lignes et colonnes. Choisissez ici le nombre de catégorie par ligne que vous souhaitez afficher.<br />
+<br />
+<strong>Type d'affichage </strong>  : 2 modes sont possibles : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><span style="text-decoration: underline;">Cliquez sur la question pour afficher les réponses</span> : par défaut, toutes les réponses seront masquées. L'utilisateur aura alors la charge de cliquer sur la question qui l'intéresse afin d'en voir la réponse.
+</li><li class="formatter-li"><span style="text-decoration: underline;">Afficher toutes les réponses</span> : au contraire, toutes les réponses seront affichées au chargement de la page.<br />
+</li></ul><br />
+<br />
+<strong>Description de la catégorie racine</strong> : Ce texte sera affiché sur la page d'accueil du module, à la catégorie racine.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations-generales">Autorisations générales</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_2.jpg" alt="" /></p><br />
+<br />
+Vous allez pouvoir choisir les droits aux membres pour la lecture de la FAQ, l'écriture de nouvelles questions, proposer de nouvelles questions et enfin modérer les questions.<br />
+<br />
+Vous allez pouvoir inclure : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> les différents rangs (visiteur / membres / modérateurs / administrateur)
+</li><li class="formatter-li"> les différents groupes que vous aurez créés
+</li><li class="formatter-li">des membres en particulier<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-categories">Gestion des catégories</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_3.jpg" alt="" /></p><br />
+<br />
+Vous avez ici l'arborescence complète des catégories de votre FAQ. Pour chaque catégorie, vous allez pouvoir : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>La déplacer</strong> par rapport à sa catégorie supérieure ou inférieure. Pour cela utiliser les petites flèches ou jouez du glisser-déposer afin de structurer les catégories comme vous le souhaitez.
+</li><li class="formatter-li">Vous allez pouvoir déplacer la catégorie 1 par rapport à la 2
+</li><li class="formatter-li">Vous pouvez monter ou descendre la sous-catégorie 2 par rapport à la 1 ou 3 (ce sont des exemples, non présents dans le screen).
+</li><li class="formatter-li"> <strong>l'éditer</strong> pour la modifier
+</li><li class="formatter-li"> <strong>la supprimer</strong> : il vous sera automatiquement demandé si vous le souhaitez avant de supprimer votre catégorie de transférer les questions et les sous-catégories dans une autre catégorie pour ne pas les perdre ou bien alors vous pourrez effacer votre catégorie avec tout son contenu à l'intérieur.<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h1><br />
+
+<br />
+Cette page se divise en 3 parties :<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_add_add.jpg" alt="" /></p><br />
+<br />
+<strong>Nom</strong> : donnez un nom à votre catégorie<br />
+<br />
+<strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.<br />
+<br />
+<strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre catégorie. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-). <br />
+<br />
+<strong>Emplacement</strong> : choisissez dans l'arborescence dans quelle catégorie déjà existante vous souhaitez mettre votre nouvelle catégorie<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_options">Options</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_add_options.jpg" alt="" /></p><br />
+<br />
+<strong>Description</strong> : vous pouvez mettre une petite description de votre catégorie. Cette description se trouvera au-dessus des questions de votre catégorie.<br />
+<br />
+<strong>Image</strong> : vous permet d'associer une image à votre catégorie. Veillez à ne pas mettre d'images trop grosses afin de ne pas gêner la navigation des membres. Juste en dessous, vous pourrez voir une prévisualisation de cette image.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_add_auth.jpg" alt="" /></p><br />
+<br />
+Chaque catégorie peut disposer de permissions spécifiques. Nous allons voir ça ensemble. Pour faire apparaître les permissions, cochez la petite case juste à côté.<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Autorisation de lecture :</strong> Cela vous permettra de définir qui peut voir la catégorie.
+</li><li class="formatter-li"><strong>Autorisation d'écriture :</strong> vous permettra de définir qui peut ajouter une catégorie
+</li><li class="formatter-li"><strong>Autorisation de contribution :</strong> vous permettra de définir qui peut proposer une question (si vous ne savez pas ce qu'est le panneau de contribution, dirigez-vous <a href="/wiki/panneau-de-contribution">ici</a>)
+</li><li class="formatter-li"><strong>Autorisation de modération :</strong> vous permettra de définir qui peut modifier une catégorie<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-de-la-faq">Gestion de la FAQ</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_5.jpg" alt="" /></p><br />
+<br />
+Vous avez ici la liste complète des questions avec leur date de création et leur catégorie.<br />
+<br />
+<span class="notice">Si une question n'a pas de catégorie, c'est qu'elle se trouve a la racine de l'arborescence des catégories.</span>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965692</timestamp>
+  </article>
+</articles>

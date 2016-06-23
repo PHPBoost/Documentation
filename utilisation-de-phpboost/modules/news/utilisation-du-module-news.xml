@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>259</id>
+    <id_contents>1695</id_contents>
+    <title><![CDATA[Utilisation du module News]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-news]]></encoded_title>
+    <hits>1099</hits>
+    <id_cat>39</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>39</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>119</cat_article_id>
+    <con_id_contents>1695</con_id_contents>
+    <con_id_article>259</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_accueil-du-module-news">Accueil du module News</a></li><li><a href="#paragraph_visualisation-d-une-categorie">Visualisation d'une catégorie</a></li><li><a href="#paragraph_affichage-d-une-news">Affichage d'une news</a></li></ol>]]></menu>
+    <content><![CDATA[Sur cette page, nous verrons l'utilisation du module News, qui n'a rien de bien compliqué :<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_accueil-du-module-news">Accueil du module News</h1><br />
+
+<br />
+Nous voici sur la page d'accueil du module, qui recense les dernières news publiées :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/home.png" alt="" /></p><br />
+<br />
+Pour chaque News, nous retrouvons de haut en bas et de gauche à droite :<br />
+<ul class="formatter-ul">
+    <li class="formatter-li"><strong>Le titre</strong> : En cliquant dessus, vous ouvrirez la news en ayant accès à tout son contenu (commentaires etc)
+    </li><li class="formatter-li"><strong>L'auteur</strong>
+    </li><li class="formatter-li"><strong>Date de création</strong>
+    </li><li class="formatter-li"><strong>La catégorie</strong> : En ouvrant ce lien vous retrouverez toutes les news publiées dans cette catégorie
+    </li><li class="formatter-li"><strong>Le nombre de commentaires postés sur cette news</strong>
+    </li><li class="formatter-li"><strong>Le contenu de la news</strong> : Ici le contenu est affiché complètement. Mais si l'administrateur a choisi d'afficher le condensé de la news, celle-ci sera coupé et un lien 'Lire la suite' vous permettra d’accéder au contenu complet.
+    </li><li class="formatter-li"><strong>Les sources</strong> : S'il y en a, les sources de la news seront affichées en bas de la news<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_visualisation-d-une-categorie">Visualisation d'une catégorie</h1><br />
+
+<br />
+Lorsque vous vous rendez dans une catégorie, l'affichage est exactement similaire à l'affichage de l'accueil du module. En effet, l'accueil des news n'est qu'une catégorie particulière :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/category.png" alt="" /></p><br />
+<br />
+La seule différence notable est qu'elle n'affichera que les news contenues dans cette catégorie.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_affichage-d-une-news">Affichage d'une news</h1><br />
+
+<br />
+Le module News ne fait pas exception aux autres modules, aussi on retrouve dans la visualisation d'une news les principaux éléments communs à de nombreux modules :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/news.png" alt="" /></p><br />
+<br />
+On y retrouve de haut en bas :<br />
+<br />
+<ul class="formatter-ul">
+    <li class="formatter-li"><strong>Le titre</strong>
+    </li><li class="formatter-li"><strong>L'auteur</strong>
+    </li><li class="formatter-li"><strong>Date de création</strong>
+    </li><li class="formatter-li"><strong>La catégorie</strong> : En ouvrant ce lien vous retrouverez toutes les news publiées dans cette catégorie
+    </li><li class="formatter-li"><strong>Le nombre de commentaires postés sur cette news</strong>
+    </li><li class="formatter-li"><strong>L'image de la news</strong> : Définie à la création, affichée à droite du contenu
+    </li><li class="formatter-li"><strong>Le contenu de la news</strong> : Ici le contenu est affiché complètement. Mais si l'administrateur a choisi d'afficher le condensé de la news, celle-ci sera coupé et un lien 'Lire la suite' vous permettra d’accéder au contenu complet.
+    </li><li class="formatter-li"><strong>Les sources</strong> : S'il y en a, les sources de la news seront affichées en bas de la news
+    </li><li class="formatter-li"><strong>Les mots-clés</strong> : Si l'auteur y a défini des mots-clés, ils seront visibles ici et permettront de retrouver des news ayant un thème commun à la news en cours
+    </li><li class="formatter-li"><strong>Suggestions</strong> : Si l'auteur a activé l'affichage des suggestions et que PHPboost a trouvé des news similaires, il en affichera les liens ici<br />
+</li></ul><br />
+<br />
+Enfin, tout en bas, vous aurez la possibilité de laisser un commentaire et lire les commentaires déjà postés par les autres membres.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1461299359</timestamp>
+  </article>
+</articles>

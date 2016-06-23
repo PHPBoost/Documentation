@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>46</id>
+    <id_contents>1619</id_contents>
+    <title><![CDATA[Modération du Forum]]></title>
+    <encoded_title><![CDATA[moderation-du-forum]]></encoded_title>
+    <hits>1387</hits>
+    <id_cat>25</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>25</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>44</cat_article_id>
+    <con_id_contents>1619</con_id_contents>
+    <con_id_article>46</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_moderation-des-sujets-posts">Modération des sujets / posts</a><ol class="wiki_list_2"><li><a href="#paragraph_diter-un-post">Éditer un post</a></li><li><a href="#paragraph_supprimer-un-post-un-topic">Supprimer un post / un topic</a></li><li><a href="#paragraph_verrouiller-un-sujet">Verrouiller un sujet</a></li><li><a href="#paragraph_deplacer-un-sujet-de-forum">Déplacer un sujet de forum</a></li><li><a href="#paragraph_scinder-un-sujet-en-2-sujets">Scinder un sujet en 2 sujets</a></li></ol></li><li><a href="#paragraph_moderation-des-membres-et-des-alertes">Modération des membres et des alertes</a></li></ol>]]></menu>
+    <content><![CDATA[Nous voici dans une zone importante du forum : la modération! <strong>Tout modérateur d'un site créé avec PHPBoost devrait le lire pour bien connaître les outils dont il dispose.</strong><br />
+<br />
+Voici un sujet de base vu par un modérateur : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_13.jpg" alt="" /></p><br />
+<br />
+En haut à droite se trouvent les outils de modération.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_14.jpg" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_moderation-des-sujets-posts">Modération des sujets / posts</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_diter-un-post">Éditer un post</h2><br />
+
+<br />
+<strong>Icône </strong>: [html]&lt;i class="fa fa-edit"&gt;&lt;/i&gt;[/html]<br />
+<br />
+Un post est à modérer, vous pouvez l'éditer et ainsi en modifier le contenu.<br />
+<br />
+<span class="notice">Selon la configuration mise par l'administrateur, il sera possible ou non qu'un marqueur d'édition des messages soit indiqué sur le post édité.</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_supprimer-un-post-un-topic">Supprimer un post / un topic</h2><br />
+
+<br />
+<strong>Icône</strong> : [html]&lt;i class="fa fa-trash"&gt;&lt;/i&gt;[/html]<br />
+<br />
+Vous souhaitez supprimer un topic ou un post, il suffit de cliquer sur l'icône ci-dessus.<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> pour un post, rendez vous au niveau du post et cliquez sur l'icône du post en question.
+</li><li class="formatter-li"> Pour supprimer un sujet complet, cliquez sur l'icône au niveau du 1er post du sujet.<br />
+</li></ul><br />
+<br />
+<span class="notice">Lorsque vous aurez cliqué sur l'icône d'effacement, un message de confirmation de la suppression s'affichera, il suffira de cliquer sur oui pour valider.</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_verrouiller-un-sujet">Verrouiller un sujet</h2><br />
+
+<br />
+<strong>Icône</strong> : [html]&lt;i class="fa fa-ban"&gt;&lt;/i&gt;[/html]<br />
+Vous souhaitez fermer un topic parque la conversation dérive ou pour autre raison, cliquez sur cette icône et ainsi les membres ne pourront plus poster dans ce sujet.<br />
+<br />
+Si vous souhaitez par la suite ré-ouvrir le sujet, au même emplacement cliquez sur l'icône ci-dessus.<br />
+<span class="notice">Lorsque vous aurez cliqué sur l'icône de verrouillage, un message de confirmation s'affichera, il suffira de cliquer sur oui pour valider.</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_deplacer-un-sujet-de-forum">Déplacer un sujet de forum</h2><br />
+
+<br />
+<strong>Icône</strong> : [html]&lt;i class="fa fa-move"&gt;&lt;/i&gt;[/html]<br />
+<br />
+Un sujet n'est pas à sa place, cliquez sur cette icône pour l'envoyer dans le forum désiré.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_scinder-un-sujet-en-2-sujets">Scinder un sujet en 2 sujets</h2><br />
+
+<br />
+<strong>Icône</strong> : [html]&lt;i class="fa fa-scissors"&gt;&lt;/i&gt;[/html]<br />
+<br />
+Il arrive parfois qu'au cours d'un sujet un autre sujet débute. Vous avez avec PHPBoost la possibilité de diviser le message en 2. Voyons comment cela fonctionne.<br />
+<br />
+Cliquez sur l'icône scinder au niveau du message à partir duquel vous souhaitez créer un nouveau sujet.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_18.jpg" alt="" /></p><br />
+<br />
+Voici 2 posts, nous allons créer une nouvelle discussion à partir du second message. Cliquons sur l'icône [html]&lt;i class="fa fa-scissors"&gt;&lt;/i&gt;[/html] .<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_19.jpg" alt="" /></p><br />
+<br />
+Choisissez ici le forum destiné, un nom pour le topic. Cliquez sur 'Envoyer'<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_20.jpg" alt="" /></p><br />
+<br />
+Et voila 2 sujets qui remplace le sujet initial.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_moderation-des-membres-et-des-alertes">Modération des membres et des alertes</h1><br />
+
+<br />
+Pour tout connaitre sur la modération des membres, allez voir <a href="/wiki/panneau-de-moderation">ici</a>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459919779</timestamp>
+  </article>
+</articles>

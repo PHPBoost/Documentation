@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>331</id>
+    <id_contents>1622</id_contents>
+    <title><![CDATA[Configurer les connexions externes]]></title>
+    <encoded_title><![CDATA[configurer-les-connexions-externes]]></encoded_title>
+    <hits>300</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>1622</con_id_contents>
+    <con_id_article>331</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_activation-dans-le-panneau-d-administration">Activation dans le panneau d’administration</a></li><li><a href="#paragraph_activer-le-systeme-de-connexion-de-facebook">Activer le système de connexion de Facebook</a></li><li><a href="#paragraph_activer-le-systeme-de-connexion-de-google">Activer le système de connexion de Google +</a></li></ol>]]></menu>
+    <content><![CDATA[Nous allons voir au travers de cet article comment activer sur votre site web le système de connexion externe.<br />
+Depuis la version [5.0], il est possible d'activer les connexions à partir d'un compte : <ul class="formatter-ul">
+<li class="formatter-li">Facebook
+</li><li class="formatter-li">Google +<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_activation-dans-le-panneau-d-administration">Activation dans le panneau d’administration</h1><br />
+
+Pour activer le mode de connexion externe, il faut vous rendre dans le <a href="/admin/member/config/">panneau d'administration</a>, activer le système voulu et saisir les identifiants que vous allez créer.<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/1.0_panneauadministration.jpg" alt="" /><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_activer-le-systeme-de-connexion-de-facebook">Activer le système de connexion de Facebook</h1><br />
+
+Dans cette seconde partie, nous allons créer les identifiants pour une connexion Facebook.<br />
+<br />
+Un compte Facebook est donc requis afin de pouvoir créer l'application FB.<br />
+<br />
+Rendez-vous sur cette page : <a href="https://developers.facebook.com/apps/">https://developers.facebook.com/apps/</a><br />
+<br />
+ - La première étape consiste à créer une application Facebook. Cliquer sur le bouton vert "+ Add a New App".<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/2.1_addanewapp.jpg" alt="" /><br />
+<br />
+ - Sélectionner la plateforme pour laquelle vous souhaitez créer une Apps ("www" pour notre cas).<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/2.2_selectplatform.jpg" alt="" /><br />
+<br />
+<br />
+ - Sélectionner une catégorie et créer votre Apps.<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/2.3_createapps.jpg" alt="" /><br />
+<br />
+<br />
+ - Préciser l'URL de votre site et passer le quick start<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/2.4_urlwebsite.jpg" alt="" /><br />
+<br />
+<br />
+ - Dans le menu en haut à droite choisi votre Apps pour la personnalisée.<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/2.5_myapps.jpg" alt="" /><br />
+<br />
+<br />
+ - Complétez les éléments de la partie "basic" puis passer à la partie "Advanced".<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/2.6_basic.jpg" alt="" /><br />
+<br />
+<br />
+ - Dans la partie "Advanced", il vous faudra spécifier l'url source de confiance qui sollicitera votre Apps.<br />
+Il faut saisir l'url complète de votre site web en ajoutant ceci derrière : [[CODE=txt,0,1]]/user/login/?authenticate=fb[[/CODE]].<br />
+Ce qui donne par exemple : [[CODE=txt,0,1]]https://www.mysite.web/user/login/?authenticate=fb[[/CODE]].<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/2.7_validoauth.jpg" alt="" /><br />
+<br />
+ - Une fois validé, vous pouvez retourner sur la page "Dashboard" de votre apps et récuperer l'ID et la clé secrète à inscrire dans l'administration de PHPBoost.<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/2.8_idsecret.jpg" alt="" /><br />
+<br />
+Voilà vos utilisateurs peuvent maintenant s'inscrire avec leur compte Facebook.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_activer-le-systeme-de-connexion-de-google">Activer le système de connexion de Google +</h1><br />
+
+Dans cette seconde partie, nous allons créer les identifiants pour une connexion Google+.<br />
+<br />
+Un compte Google+ est donc requis afin de pouvoir créer l'application google.<br />
+<br />
+Rendez-vous sur cette page : <a href="https://console.developers.google.com/project">https://console.developers.google.com/projectd</a><br />
+<br />
+ - La première étape consiste à créer un projet. Cliquer sur "Select a project" puis "Créer un projet".<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/3.1_creerprojet.jpg" alt="" /><br />
+<br />
+- Nommez votre projet et validez.<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/3.2_namedprojet.jpg" alt="" /><br />
+<br />
+- Cliquer sur "Activer et gérer les API".<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/3.3_activeapi.jpg" alt="" /><br />
+<br />
+- Activer l'API qui se nomme "Google+ API" de la rubrique "API pour les réseau sociaux".<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/3.4_googleapi.jpg" alt="" /><br />
+<br />
+- Il faut maintenant configurer les élément de l'onglet "Ecran d'autorisation OAuth".<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/3.5_auth.jpg" alt="" /><br />
+<br />
+- Vous pouvez maintenant créer des identifiants dans l'onglets "Identifiants". Choisissez "ID client OAuth".<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/3.6_createid.jpg" alt="" /><br />
+<br />
+- Selectionnez "Application Web" en "Type d'application. Ajoutez un nom et configurer les origines et URL autorisés de la façon suivante :<br />
+Origine : <a href="http://www.mysite.com/apps/">http://www.mysite.com/apps/</a><br />
+URL de redication autorisés : <a href="http://www.mysite.com/user/login/?authenticate=google">http://www.mysite.com/user/login/?authenticate=google</a><br />
+Ajoutez les version https si besoin.<br />
+<img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/3.7_configid.jpg" alt="" /><br />
+<br />
+ - Une fois validé, vous pourrez récupérer l'ID Client et le code secret client.<br />
+ <img src="https://resources.phpboost.com/documentation/tutoriels/configurerlesconnexionsexternes/3.8_getid.jpg" alt="" /><br />
+<br />
+ Voilà vos utilisateurs peuvent maintenant s'inscrire avec leur compte Google+.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459958441</timestamp>
+  </article>
+</articles>

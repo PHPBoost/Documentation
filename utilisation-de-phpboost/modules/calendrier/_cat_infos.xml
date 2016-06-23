@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>21</id>
+    <id_contents>1644</id_contents>
+    <title><![CDATA[Calendrier]]></title>
+    <encoded_title><![CDATA[calendrier]]></encoded_title>
+    <hits>1557</hits>
+    <id_cat>20</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>20</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>21</cat_article_id>
+    <con_id_contents>1644</con_id_contents>
+    <con_id_article>21</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<table class="formatter-table" style="float:right;width:50%;">
+   <tr class="formatter-table-row">
+      <th class="formatter-table-head" colspan="2">Calendrier</th>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Auteur</td>
+      <td class="formatter-table-col"><a href="/user/profile/982">julienseth78</a></td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Version actuelle</td>
+      <td class="formatter-table-col">5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Compatibilité</td>
+      <td class="formatter-table-col">PHPBoost 5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Démonstration</td>
+      <td class="formatter-table-col"><a href="http://demo.phpboost.com/calendar/">Module Calendrier</a></td>
+   </tr>
+</table><br />
+<br />
+<p style="text-align:center"><br />
+   <span style="font-size: 20px;"><strong>Module Calendrier</strong></span><br />
+   <img src="https://resources.phpboost.com/documentation/utilisation/modules/calendar/logo.png" alt="" /><br />
+</p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<strong>Description :</strong> Ce module est un calendrier permettant de gérer les événements de son site par exemple. Un système de droits d'autorisation existe pour limiter le type d'utilisateur pouvant proposer des événements via la gestion du niveau d'accès. Chaque membre pourra laisser un commentaire par événement.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966191</timestamp>
+  </article>
+</articles>

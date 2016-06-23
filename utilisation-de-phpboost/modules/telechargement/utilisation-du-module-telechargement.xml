@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>67</id>
+    <id_contents>1741</id_contents>
+    <title><![CDATA[Utilisation du module Téléchargement]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-telechargement]]></encoded_title>
+    <hits>563</hits>
+    <id_cat>32</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>32</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>65</cat_article_id>
+    <con_id_contents>1741</con_id_contents>
+    <con_id_article>67</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_categories">Catégories</a></li><li><a href="#paragraph_telecharger-un-fichier">Télécharger un fichier</a><ol class="wiki_list_2"><li><a href="#paragraph_signaler-un-lien-mort">Signaler un lien mort</a></li><li><a href="#paragraph_note">Note</a></li><li><a href="#paragraph_commentaires">Commentaires</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Cette article traite de l'utilisation du module Téléchargement.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_categories">Catégories</h1><br />
+
+<br />
+Lorsque vous accédez à la page d'accueil des téléchargements, une page avec la description de la catégorie racine et plusieurs catégories est proposée.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/home.jpg" alt="" /></p><br />
+<br />
+Pour voir les fichiers disponibles dans une catégorie, cliquez sur celle-ci.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/cat_home.jpg" alt="" /></p><br />
+<br />
+<strong>Vous pourrez classer les téléchargement par ordre croissant ou décroissant selon : </strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> leur dernière modification
+</li><li class="formatter-li"> leur date de création
+</li><li class="formatter-li"> leur nom
+</li><li class="formatter-li"> leur nombre de téléchargements
+</li><li class="formatter-li"> leur nombre de commentaires
+</li><li class="formatter-li"> leur note
+</li><li class="formatter-li"> leur auteur<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_telecharger-un-fichier">Télécharger un fichier</h1><br />
+
+<br />
+Pour accéder à un fichier, cliquez sur celui-ci.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/file_view.jpg" alt="" /></p><br />
+<br />
+Vous y trouverez les informations suivantes :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> La taille du fichier si elle est connue
+</li><li class="formatter-li"> Sa date de création
+</li><li class="formatter-li"> Le nombre de téléchargements
+</li><li class="formatter-li"> La catégorie parente directe
+</li><li class="formatter-li"> Son auteur
+</li><li class="formatter-li"> Le nombre de commentaires postés pour ce fichier
+</li><li class="formatter-li"> Sa note moyenne et le nombre de votes<br />
+</li></ul><br />
+<br />
+Cliquez sur "Télécharger" pour enregistrer le fichier sur votre ordinateur.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_signaler-un-lien-mort">Signaler un lien mort</h2><br />
+
+<br />
+Vous pouvez signaler un lien mort (qui n'est plus valide et qui est impossible à télécharger). <br />
+<br />
+Votre demande apparaîtra dans le panneau de contribution : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/download/dead_link.jpg" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_note">Note</h2><br />
+
+<br />
+Vous avez la possibilité de noter le fichier en téléchargement. Pour cela cliquez sur le nombre d'étoiles que vous voulez donner au fichier. La note marquée sera la moyenne de toutes les notes.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_commentaires">Commentaires</h2><br />
+
+<br />
+Enfin, en bas de page apparaît la zone des commentaires. Vous pourrez y laisser le votre et lire ceux déjà postés.]]></content>
+    <activ>1</activ>
+    <user_id>5773</user_id>
+    <user_ip>2.1.83.160</user_ip>
+    <timestamp>1465984458</timestamp>
+  </article>
+</articles>

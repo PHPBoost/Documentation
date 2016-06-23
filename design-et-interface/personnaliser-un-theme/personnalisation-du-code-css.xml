@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>247</id>
+    <id_contents>1582</id_contents>
+    <title><![CDATA[Personnalisation du code CSS]]></title>
+    <encoded_title><![CDATA[personnalisation-du-code-css]]></encoded_title>
+    <hits>2026</hits>
+    <id_cat>59</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>59</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>211</cat_article_id>
+    <con_id_contents>1582</con_id_contents>
+    <con_id_article>247</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_les-fichiers-css-du-theme">Les fichiers CSS du thème</a></li><li><a href="#paragraph_le-cas-du-default-css-et-print-css">Le cas du default.css et print.css</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_les-fichiers-css-du-theme">Les fichiers CSS du thème</h1><br />
+
+<br />
+Nous l'avons vu dans l'article "<strong><a href="/wiki/structure-d-un-theme">Structure d'un thème</a></strong>", les thèmes de la version 4.1 sont constitués de 3 fichiers CSS<br />
+<br />
+Pour modifier le thème base à votre goût, il est préférable de modifier les fichiers CSS dans l'ordre suivant :<br />
+<br />
+Chaque thème est constitué des 7 fichiers CSS suivant : <ul class="formatter-ul">
+<li class="formatter-li"><strong><a href="/wiki/fichier-design-css">design.css</a></strong> : Il contient toutes les classes de mises en forme du sites (Le gros du Design)
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-content-css">content.css</a></strong> : Il contient les classes propres au contenu du site (messages, modules).
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-global-css">global.css</a></strong> : il contient toutes les classes utiles sur le site et communes aux différents modules.
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-form-css">form.css</a></strong> : Il contient toutes les classes pour la mise en forme des formulaires.
+</li><li class="formatter-li"><strong><a href="/wiki/fichier-table-css">table.css</a></strong> : il contient les classes de mise en forme des tableaux.<br />
+</li></ul><br />
+La modification de ces 5 fichiers permet de donner à votre site web, le rendu général que vous souhaitez.<br />
+<br />
+Si vous souhaitez modifier le design des menus, il vous faudra en plus, modifier le fichier :<br />
+<ul class="formatter-ul"><li class="formatter-li"><strong><a href="/wiki/fichier-cssmenu-css">cssmenu.css</a></strong> : Il contient toutes les classes qui permettent la gestion des menus.</li></ul><br />
+Enfin, si vous avez envie de personnaliser la page de login admin, il reste ce fichier à modifier<br />
+<ul class="formatter-ul"><li class="formatter-li"><strong><a href="/wiki/fichier-login-css">login.css</a></strong> : il contient les classes pour un affichage uniquement du login.</li></ul><br />
+Vous retrouverez le contenu de chaque fichier dans l'article associé à chaque fichier.<br />
+<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-cas-du-default-css-et-print-css">Le cas du default.css et print.css</h1><br />
+
+<br />
+Facultativement, vous pouvez avoir besoin de modifier les fichiers du thème default. Sachez qu'ils ne contiennent aucune information de couleur ou autre propriété susceptible d'être modifiée à chaque thème.<br />
+<ul class="formatter-ul"><li class="formatter-li"><strong><a href="/wiki/fichier-default-css">default.css</a></strong> : Il contient les éléments génériques et les réinitialisations afin de garantir un affichage identique sur tous les navigateurs.
+</li><li class="formatter-li">print.css : Met en forme le site pour un affichage épuré destiné à l'impression.</li></ul><br />
+<br />
+<span class="warning">Il est vivement conseillé de ne pas faire de modification dans ces fichiers</span><br />
+<br />
+Il vaut mieux privilégier la surcharge des fichiers du thème que de toucher au fichier du répertoire <em>default</em> qui touchera l'ensemble des thèmes et l'administration.]]></content>
+    <activ>1</activ>
+    <user_id>768</user_id>
+    <user_ip>77.202.89.95</user_ip>
+    <timestamp>1457190017</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>31</id>
+    <id_contents>1492</id_contents>
+    <title><![CDATA[Administration du module Discussion]]></title>
+    <encoded_title><![CDATA[administration-du-module-discussion]]></encoded_title>
+    <hits>751</hits>
+    <id_cat>22</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>22</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>28</cat_article_id>
+    <con_id_contents>1492</con_id_contents>
+    <con_id_article>31</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_menu-discussion">Menu discussion</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration">Configuration</h1><br />
+
+<br />
+Voici la page  de configuration du module Discussion, qui se découpe en 3 parties :<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration">Configuration</h2><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/config_config.png" alt="" /></p><br />
+<br />
+<strong>Nombre d'éléments affichés par page dans les archives :</strong> Nombre de messages à afficher par page dans le module<br />
+<br />
+<strong>Limiter le nombre de messages dans les archives  :</strong> En cochant cette case, vous pourrez déterminer le nombre de messages qui seront gardés. Dans le cas contraire, tous les messages seront conservés.<br />
+<br />
+<strong>Nombre de messages maximum à conserver :</strong> Vous pouvez ensuite choisir le nombre de messages conservés. Ainsi, par défaut <em>200</em>, ce nombre <em>n</em> de messages sera conservé dans votre base de données. Cette dernière est "vidée" tous les jours. PHPBoost videra la Base de données de manière à ce qu'il ne reste que <em>n</em> messages.<br />
+<br />
+<strong>Limiter le nombre de liens dans les messages :</strong> En cochant cette case, vous pourrez déterminer combien de liens les utilisateurs pourront poster dans chaque message.<br />
+<br />
+<strong>Nombre de liens maximum dans un message :</strong> Même si la balise [url] est autorisée, vous pouvez décider du nombre de liens maximum par message. C'est une protection supplémentaire contre les robots. Ainsi, ils ne pourront écrire plus de 2 liens, par défaut, dans leur message.<br />
+<br />
+<strong>Formats interdits :</strong> Cette liste vous permet de décider des balises interdites ou non sur le module. Par défaut, très peu de balises sont permises. Cette option a été rajoutée simplement afin de ne pas alourdir le module avec des vidéos, etc. Mais vous pouvez personnaliser ces balises comme vous le voulez.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_menu-discussion">Menu discussion</h2><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/config_menu.png" alt="" /></p><br />
+<br />
+<strong>Activer le rafraichissement automatique de la discussion  :</strong> Rafraichir automatiquement le menu, afin que les membres n'aient pas à cliquer sur le lien de rechargement.<br />
+<br />
+<strong>Délai de rafraîchissement :</strong> Vous pouvez décider du délai de rafraîchissement automatique de la fenêtre de discussion. Si vous mettez <em>0</em>, la fenêtre ne se rafraîchira pas automatiquement. Cette option permet aux membres de suivre la conversation sans avoir à actualiser la page.<br />
+<br />
+<strong>Afficher la date :</strong> Activez cette case si vous souhaitez afficher la date devant chaque message.<br />
+<br />
+<strong>Limiter le nombre de messages affichés :</strong> En cochant cette case, vous limiterez le nombre de messages à afficher dans le menu. Dans le cas contraire, tous les messages seront affichés.<br />
+<br />
+<strong>Nombre de messages à afficher :</strong> Si la case ci-dessus est cochée, définissez ici le nombre de messages à afficher dans le menu.<br />
+<br />
+<strong>Afficher une mini barre BBcode avant le bouton Envoyer :</strong> Permet d'afficher une petite barre BBcode das le menu.<br />
+<br />
+<strong>Envoyer le message en appuyant sur la touche Entrée :</strong> En cochant cette case, les utilisateurs pourront utiliser la touche Entrée pour envoyer le message. Sinon, la touche Entrée provoquera un retour à la ligne.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/utilisation/modules/shoutbox/config_auth.png" alt="" /></p><br />
+<br />
+<strong>Autorisation de lecture :</strong> Vous pouvez choisir les autorisations requises pour afficher la discussion. Par défaut, les <em>visiteurs</em> peuvent consulter la discussion.<br />
+<br />
+<strong>Autorisation d'écriture :</strong> Vous pouvez choisir les autorisations requises pour poster un message. Par défaut, il faut d'être <em>membre</em> pour poster sur le module.<br />
+<br />
+<strong>Autorisation de modération :</strong> Vous pouvez choisir les autorisations requises pour supprimer et éditer un message. Par défaut, il faut d'être <em>modérateur</em> pour modérer sur le module.]]></content>
+    <activ>1</activ>
+    <user_id>5369</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1449331307</timestamp>
+  </article>
+</articles>

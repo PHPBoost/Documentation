@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>253</id>
+    <id_contents>1209</id_contents>
+    <title><![CDATA[Système de notation]]></title>
+    <encoded_title><![CDATA[systeme-de-notation]]></encoded_title>
+    <hits>2035</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>1209</con_id_contents>
+    <con_id_article>253</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_creer-une-notation-dynamique">Créer une notation dynamique</a></li><li><a href="#paragraph_recuperer-la-note-d-un-element">Récupérer la note d'un élément</a></li><li><a href="#paragraph_recuperer-le-nombre-de-note-d-un-element">Récupérer le nombre de note d'un élément</a><ol class="wiki_list_2"><li><a href="#paragraph_afficher-la-note-sous-forme-graphique">Afficher la note sous forme graphique</a></li></ol></li><li><a href="#paragraph_autre-traitement-sur-les-notes">Autre traitement sur les notes</a><ol class="wiki_list_2"><li><a href="#paragraph_mettre-a-jour-l-echelle-de-notation">Mettre à jour l'échelle de notation</a></li><li><a href="#paragraph_supprimer-les-notes-d-un-element-supprime">Supprimer les notes d'un élément supprimé</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Le framework de PHPBoost intègre une classe vous permettant de générer très facilement un système de notation complet.<br />
+<br />
+Nous allons voir comment l'utiliser.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creer-une-notation-dynamique">Créer une notation dynamique</h1><br />
+
+<br />
+Pour intégrer une notation dynamique, permettant aux utilisateurs de voter, vous devez procéder de cette manière :<br />
+<br />
+[[CODE=php]]$notation = new Notation();
+$notation-&gt;set_module_name('articles'); //Identifiant du module
+$notation-&gt;set_notation_scale(5); //Valeur maximum d'une note, par exemple 5 pour pouvoir noter sur 5 étoiles.
+$notation-&gt;set_id_in_module(1); //Identifiant de l'élément que l'on veut noter
+
+//On créée la variable template NOTATION avec la notation dynamique
+$tpl-&gt;put('NOTATION', NotationService::display_active_image($notation));[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_recuperer-la-note-d-un-element">Récupérer la note d'un élément</h1><br />
+
+<br />
+[[CODE=php]]$notation = new Notation();
+$notation-&gt;set_module_name('articles'); //Identifiant du module
+$notation-&gt;set_notation_scale(5); //Valeur maximum d'une note, par exemple 5 pour pouvoir noter sur 5 étoiles.
+$notation-&gt;set_id_in_module(1); //Identifiant de l'élément que l'on veut noter
+
+//On récupère la moyenne des notes
+$number_notes = NotationService::get_average_notes($notation);[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_recuperer-le-nombre-de-note-d-un-element">Récupérer le nombre de note d'un élément</h1><br />
+
+<br />
+[[CODE=php]]$notation = new Notation();
+$notation-&gt;set_module_name('articles'); //Identifiant du module
+$notation-&gt;set_notation_scale(5); //Valeur maximum d'une note, par exemple 5 pour pouvoir noter sur 5 étoiles.
+$notation-&gt;set_id_in_module(1); //Identifiant de l'élément que l'on veut noter
+
+//On récupère le nombre de notes
+$number_notes = NotationService::get_number_notes($notation);[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_afficher-la-note-sous-forme-graphique">Afficher la note sous forme graphique</h2><br />
+
+<br />
+[[CODE=php]]$notation = new Notation();
+$notation-&gt;set_module_name('articles'); //Identifiant du module
+$notation-&gt;set_notation_scale(5); //Valeur maximum d'une note, par exemple 5 pour pouvoir noter sur 5 étoiles.
+$notation-&gt;set_id_in_module(1); //Identifiant de l'élément que l'on veut noter
+
+//On créée la variable template NOTATION avec la notation sous forme graphique
+$tpl-&gt;put('NOTATION', NotationService::display_static_image($notation));[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_autre-traitement-sur-les-notes">Autre traitement sur les notes</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_mettre-a-jour-l-echelle-de-notation">Mettre à jour l'échelle de notation</h2><br />
+
+<br />
+[[CODE=php]]//Remplacer "articles" par l'identifiant du module. La variable $old_notation_scale est l'ancienne échelle de notation, $notation_scale la nouvelle.
+NotationService::update_notation_scale('articles', $old_notation_scale, $notation_scale);[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_supprimer-les-notes-d-un-element-supprime">Supprimer les notes d'un élément supprimé</h2><br />
+
+<br />
+[[CODE=php]]//Remplacer "articles" par l'identifiant du module, 1 par l'identifiant de l'élément 
+NotationService::delete_notes_id_in_module('articles', 1);[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>5193</user_id>
+    <user_ip>88.125.157.163</user_ip>
+    <timestamp>1404746290</timestamp>
+  </article>
+</articles>

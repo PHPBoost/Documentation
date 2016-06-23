@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>181</id>
+    <id_contents>1440</id_contents>
+    <title><![CDATA[Utiliser PHPBoost en ligne de commande]]></title>
+    <encoded_title><![CDATA[utiliser-phpboost-en-ligne-de-commande]]></encoded_title>
+    <hits>2271</hits>
+    <id_cat>3</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>3</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>3</cat_article_id>
+    <con_id_contents>1440</con_id_contents>
+    <con_id_article>181</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_utilisation">Utilisation</a></li><li><a href="#paragraph_installer-phpboost">Installer PHPBoost</a></li><li><a href="#paragraph_modification-du-htaccess">Modification du .htaccess</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-du-contenu-au-fichier">Ajouter du contenu au fichier</a></li><li><a href="#paragraph_activer-ou-d-sactiver-la-r-criture-des-urls">Activer ou désactiver la réécriture des URLs</a></li></ol></li><li><a href="#paragraph_g-rer-les-utilisateurs">Gérer les utilisateurs</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-un-utilisateur">Ajouter un utilisateur</a></li><li><a href="#paragraph_supprimer-un-utilisateur">Supprimer un utilisateur</a><ol class="wiki_list_3"><li><a href="#paragraph_supprimer-par-son-id">Supprimer par son id</a></li><li><a href="#paragraph_supprimer-par-son-login">Supprimer par son login</a></li><li><a href="#paragraph_supprimer-par-son-email">Supprimer par son email</a></li></ol></li></ol></li><li><a href="#paragraph_faire-un-backup-sql">Faire un backup SQL</a></li><li><a href="#paragraph_restaurer-un-backup-sql">Restaurer un backup SQL</a></li><li><a href="#paragraph_r-g-n-rer-le-cache">Régénérer le cache</a></li></ol>]]></menu>
+    <content><![CDATA[Depuis PHPBoost 4.0, vous pouvez installer PHPBoost en ligne de commande. <br />
+<br />
+Cela permet de déployer votre site très rapidement. Vous pouvez également effectuer d'autres opérations comme la modification du .htaccess, du cache, l'import d'un backup, opérations sur les membres, ...<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_utilisation">Utilisation</h1><br />
+
+<br />
+Dans le pack de PHPBoost, vous avez à la racine un fichier nommé phpboost, c'est celui ci que vous allez devoir utiliser. Il devra être exécuté avec PHP CLI de cette manière :<br />
+<br />
+[[CODE=bash]]cd /var/www/phpboost/
+php phpboost[[/CODE]]<br />
+<br />
+Vous devriez avoir comme réponse (la liste va dépendre des modules disponibles) :<br />
+<br />
+[[CODE=text]]no command specified
+available commands are:
+	- dump: Dump database
+	- restoredb: Restore database
+	- generate-sitemap: Generates the sitemap.xml file.
+	- help: describe phpboost commands
+	- cache: manages the phpboost cache
+	- htaccess: manages the htaccess file
+	- user: manages the phpboost users
+	- install: install phpboost development environment[[/CODE]]<br />
+<br />
+A partir de ce moment là vous pouvez effectuer les opérations listées.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_installer-phpboost">Installer PHPBoost</h1><br />
+
+<br />
+Pour voir tous les paramètres de l'installateur de PHPBoost tapez :<br />
+<br />
+[[CODE=bash]]php phpboost install[[/CODE]]<br />
+<br />
+Voici la liste avec les paramètres par défaut :<br />
+<br />
+[[CODE=text]]DATABASE
+	--db-host localhost
+	--db-port 3306
+	--db-user root
+	--db-pwd 
+	--db-schema phpboost
+	--db-table-prefix phpboost_
+WEBSITE
+	--ws-server http://localhost
+	--ws-path /
+	--ws-name PHPBoost
+        --ws-desc PHPBoost command line installation
+	--ws-locale english
+	--ws-timezone Europe/Paris
+ADMIN
+	--u-login admin
+	--u-pwd admin
+	--u-email admin@mail.com[[/CODE]]<br />
+<br />
+Exemple pour installer PHPBoost :<br />
+<br />
+[[CODE=bash]]php phpboost install --ws-server "http://url_du_site.com" --ws-name "Nom du site" --ws-desc "description du site" --ws-locale french --db-user login_database --db-pwd mot_de_passe --db-schema database_name[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-du-htaccess">Modification du .htaccess</h1><br />
+
+<br />
+Accueil de la gestion :<br />
+<br />
+[[CODE=bash]]php phpboost htaccess[[/CODE]]<br />
+<br />
+[[CODE=text]]scenario: phpboost htaccess &lt;goal&gt;
+where "goal" is the name of the operation that you want to launch
+available goals are:
+	- content: Set content for htaccess file
+	- rewriting: Manage rewriting urls[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-du-contenu-au-fichier">Ajouter du contenu au fichier</h2><br />
+
+<br />
+[[CODE=bash]]php phpboost htaccess content add "votre contenu à ajouter"[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_activer-ou-d-sactiver-la-r-criture-des-urls">Activer ou désactiver la réécriture des URLs</h2><br />
+
+<br />
+Pour activer la réécriture des URLs :<br />
+<br />
+[[CODE=bash]]php phpboost htaccess rewriting enable[[/CODE]]<br />
+<br />
+Pour désactiver la réécriture des URLs :<br />
+<br />
+[[CODE=bash]]php phpboost htaccess rewriting disable[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_g-rer-les-utilisateurs">Gérer les utilisateurs</h1><br />
+
+<br />
+Accueil de la gestion :<br />
+<br />
+[[CODE=bash]]php phpboost user[[/CODE]]<br />
+<br />
+[[CODE=text]]scenario: phpboost user &lt;goal&gt;
+where "goal" is the name of the operation that you want to launch
+available goals are:
+	- add: add user
+	- delete: delete user[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-un-utilisateur">Ajouter un utilisateur</h2><br />
+
+<br />
+[[CODE=bash]]php phpboost user add[[/CODE]]<br />
+<br />
+Paramètres :<br />
+<br />
+[[CODE=text]]scenario: phpboost user add [args]
+	--login user
+	--email user@user.com
+	--pwd phpboost
+	--level member in possible values : member|moderator|administrator
+	--approb yes in possible values : yes|no[[/CODE]]<br />
+<br />
+Exemple :<br />
+<br />
+[[CODE=bash]]php phpboost user add --login admin --email "admin@admin.com" --pwd mot_de_passe --level administrator --approb yes[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_supprimer-un-utilisateur">Supprimer un utilisateur</h2><br />
+
+<br />
+[[CODE=bash]]php phpboost user delete[[/CODE]]<br />
+<br />
+Paramètres :<br />
+<br />
+[[CODE=text]]scenario: phpboost user delete [args]
+	--id user id
+	 or
+	--login user login
+	 or
+	--email user email[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_supprimer-par-son-id">Supprimer par son id</h3><br />
+
+<br />
+[[CODE=bash]]php phpboost user delete --id user_id[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_supprimer-par-son-login">Supprimer par son login</h3><br />
+
+<br />
+[[CODE=bash]]php phpboost user delete --login login_a_supprimer[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_supprimer-par-son-email">Supprimer par son email</h3><br />
+
+<br />
+[[CODE=bash]]php phpboost user delete --email "admin@admin.fr"[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_faire-un-backup-sql">Faire un backup SQL</h1><br />
+
+<br />
+Pour générer un dump de la base de données :<br />
+<br />
+[[CODE=bash]]php phpboost dump[[/CODE]]<br />
+<br />
+En réponse on vous donnera où est stocké le fichier (dossier cache du site)<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_restaurer-un-backup-sql">Restaurer un backup SQL</h1><br />
+
+<br />
+Pour restaurer votre base de données à partir d'un fichier :<br />
+<br />
+[[CODE=bash]]php phpboost restoredb "emplacement_du_fichier"[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_r-g-n-rer-le-cache">Régénérer le cache</h1><br />
+
+<br />
+Pour régénérer le cache du site :<br />
+<br />
+[[CODE=bash]]php phpboost cache clear[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>80.215.133.141</user_ip>
+    <timestamp>1441796169</timestamp>
+  </article>
+</articles>

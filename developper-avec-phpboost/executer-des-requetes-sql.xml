@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>35</id>
+    <id_contents>1515</id_contents>
+    <title><![CDATA[Exécuter des requêtes SQL]]></title>
+    <encoded_title><![CDATA[executer-des-requetes-sql]]></encoded_title>
+    <hits>3475</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>1515</con_id_contents>
+    <con_id_article>35</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_les-requetes">Les requêtes</a><ol class="wiki_list_2"><li><a href="#paragraph_insert">INSERT</a></li><li><a href="#paragraph_update">UPDATE</a></li><li><a href="#paragraph_delete">DELETE</a></li></ol></li><li><a href="#paragraph_select">SELECT</a><ol class="wiki_list_2"><li><a href="#paragraph_selectionner-un-seul-element">Sélectionner un seul élément</a></li><li><a href="#paragraph_selectionner-une-seule-colonne">Sélectionner une seule colonne</a></li><li><a href="#paragraph_selectionner-plusieurs-colonnes">Sélectionner plusieurs colonnes</a></li><li><a href="#paragraph_select-personnalise">SELECT personnalisé</a></li></ol></li><li><a href="#paragraph_count">COUNT</a></li><li><a href="#paragraph_truncate">TRUNCATE</a></li></ol>]]></menu>
+    <content><![CDATA[PHPBoost possède son propre système de gestion des requêtes SQL.<br />
+<br />
+Il a pour but de faciliter le développement et ainsi gagner en productivité.<br />
+<br />
+La classe qui regroupe les différentes fonctions se nomme DBQuerier.<br />
+<br />
+On peut accéder à son objet avec :<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-requetes">Les requêtes</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_insert">INSERT</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]InjectQueryResult insert($table_name, array $columns)[[/CODE]]<br />
+<br />
+Pour insérer un élément en base de donnée, exécuter la commande suivante :<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;insert('la_table_en_question', array(
+    'colonne_1' =&gt; 'valeur_1', 
+    'colonne_2' =&gt; 'valeur_2'
+));[[/CODE]]<br />
+<br />
+Il suffit de renseigner le nom de la table et de fournir un tableau avec pour chaque élément une clé qui correspond au nom de la colonne et une valeur à lui attribuer.<br />
+<br />
+Les caractères spéciaux sont échappés automatiquement, vous n'avez donc pas à le faire manuellement.<br />
+<br />
+Le dernier id inséré peut être récupéré grâce à la fonction <em>get_last_inserted_id()</em> :<br />
+<br />
+[[CODE=php]]$result = PersistenceContext::get_querier()-&gt;insert('la_table_en_question', array(
+    'colonne_1' =&gt; 'valeur_1', 
+    'colonne_2' =&gt; 'valeur_2'
+));
+$inserted_id = $result-&gt;get_last_inserted_id();
+[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_update">UPDATE</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]InjectQueryResult update($table_name, array $columns, $condition, array $parameters = array())[[/CODE]]<br />
+<br />
+Voici un exemple de mise à jour d'un élément en base de données :<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;update('la_table_en_question', array(
+    'colonne_1' =&gt; 'valeur_1', 
+    'colonne_2' =&gt; 'valeur_2'
+), 'WHERE id=:id', array('id' =&gt; 'identifiant à modifier'));[[/CODE]]<br />
+<br />
+De la même manière que dans un insert, le deuxième argument de la fonction est un tableau avec les colonnes à modifier.<br />
+<br />
+Les arguments 3 et 4 permettent de définir la condition, c'est à dire quel(s) élément(s) vous souhaitez modifier.<br />
+<br />
+Le troisième argument est la condition. Dans cet exemple, <em>WHERE id=:id</em>. Au lieu de faire de la concaténation, il vous suffit de mettre un double point suivit d'une clé. Dans notre cas c'est <em>:id</em>. <br />
+<br />
+Le quatrième argument est un tableau contenant les valeurs de remplacement. La clé du tableau est celle que vous avez renseigné dans la condition.<br />
+<br />
+Les caractères spéciaux sont également échappés automatiquement.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_delete">DELETE</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]delete($table_name, $condition, array $parameters = array())[[/CODE]]<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;delete('la_table_en_question', 'WHERE user_id=:id', array(
+    'id' =&gt; 'identifiant à supprimer'
+));[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_select">SELECT</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_selectionner-un-seul-element">Sélectionner un seul élément</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]mixed[string] select_single_row($table_name, array $columns, $condition, array $parameters = array())[[/CODE]]<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;select_single_row('la_table_en_question', array('les_colonnes_demandées, * pour toutes les colonnes'), 'WHERE id=:id', array(
+    'id' =&gt; 'identifiant à sélectionner'
+));[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_selectionner-une-seule-colonne">Sélectionner une seule colonne</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]string get_column_value($table_name, $column, $condition, array $parameters = array())[[/CODE]]<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;get_column_value('la_table_en_question', 'la_colonne_demandée', 'WHERE id=:id', array(
+    'id' =&gt; 'identifiant à sélectionner'
+));[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_selectionner-plusieurs-colonnes">Sélectionner plusieurs colonnes</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]array select_rows($table_name, array $columns, $condition = 'WHERE 1', $parameters = array())[[/CODE]]<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;select_rows('la_table_en_question', array('les_colonnes_demandées, * pour toutes les colonnes'), 'WHERE id=:id', array(
+    'id' =&gt; 'identifiant à sélectionner'
+));[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_select-personnalise">SELECT personnalisé</h2><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]SelectQueryResult select($query, $parameters = array(), $fetch_mode = SelectQueryResult::FETCH_ASSOC)[[/CODE]]<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;select('SELECT toto FROM votre_table WHERE id=:id', array(
+    'id' =&gt; 'identifiant à sélectionner'
+), SelectQueryResult::FETCH_ASSOC ou SelectQueryResult::FETCH_NUM);[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_count">COUNT</h1><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]int count($table_name, $condition = 'WHERE 1', $parameters = array(), $count_column = '*')[[/CODE]]<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;count('la_table_en_question', 'WHERE id=:id', array(
+    'id' =&gt; 'identifiant à compter'
+));[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_truncate">TRUNCATE</h1><br />
+
+<br />
+Fonction : [[CODE=php,0,1]]truncate($table_name)[[/CODE]]<br />
+<br />
+[[CODE=php]]PersistenceContext::get_querier()-&gt;truncate('la_table_de_votre_module');[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.11</user_ip>
+    <timestamp>1451924122</timestamp>
+  </article>
+</articles>

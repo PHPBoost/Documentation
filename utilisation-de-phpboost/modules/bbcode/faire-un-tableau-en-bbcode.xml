@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>80</id>
+    <id_contents>1386</id_contents>
+    <title><![CDATA[Faire un tableau en BBCode]]></title>
+    <encoded_title><![CDATA[faire-un-tableau-en-bbcode]]></encoded_title>
+    <hits>11197</hits>
+    <id_cat>34</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>34</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>79</cat_article_id>
+    <con_id_contents>1386</con_id_contents>
+    <con_id_article>80</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_tableau-de-base">Tableau de base</a></li><li><a href="#paragraph_fusion-de-cellules">Fusion de cellules</a><ol class="wiki_list_2"><li><a href="#paragraph_fusion-de-colonnes">Fusion de colonnes</a></li><li><a href="#paragraph_fusion-de-lignes">Fusion de lignes</a></li><li><a href="#paragraph_fusion-horizontale-et-verticale">Fusion horizontale et verticale</a></li></ol></li><li><a href="#paragraph_mise-en-forme-avanc-e">Mise en forme avancée</a><ol class="wiki_list_2"><li><a href="#paragraph_cellules-d-en-t-te">Cellules d'en-tête</a></li><li><a href="#paragraph_personnalisation-du-tableau-gr-ce-au-css">Personnalisation du tableau grâce au CSS</a><ol class="wiki_list_3"><li><a href="#paragraph_personnalisation-du-tableau-en-lui-m-me">Personnalisation du tableau en lui-même</a></li><li><a href="#paragraph_personnalisation-des-cellules">Personnalisation des cellules</a></li></ol></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Depuis PHPBoost 2.0 il est possible de faire des tableaux en BBCode.<br />
+Cette nouvelle balise supporte les imbrications infinies et elle permet une personnalisation presque totale puisqu'elle permet de définir au tableau des propriétés graphiques en CSS.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction</h1><br />
+
+<br />
+La création d'un tableau n'est pas une opération simple à comprendre. La balise table de PHPBoost suit la même logique que la création de tableaux en HTML, seules les balises ne portent pas le même nom.<br />
+Pour mieux expliquer cet article va progresser pas à pas avec de nombreux exemples.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_tableau-de-base">Tableau de base</h1><br />
+
+<br />
+Nous allons faire un tableau qui contient une seule cellule. Voilà le code source :<br />
+<br />
+<table class="formatter-table" style="margin: auto;">
+<tr class="formatter-table-row">
+	<th class="formatter-table-head" colspan="2">Tableau de base : une ligne et une colonne</th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><table class="formatter-table"><tr class="formatter-table-row"><td class="formatter-table-col">Tableau à une cellule</td></tr></table><br />
+</td>
+<td class="formatter-table-col"><br />
+[[CODE=bbcode]][table]
+	[row]
+		[col]
+			Tableau à une cellule
+		[/col]
+	[/row]
+[/table][[/CODE]]<br />
+</td></tr></table><br />
+<br />
+Explications :<br />
+<ul class="formatter-ul"><li class="formatter-li">table : marque le début du tableau
+</li><li class="formatter-li">row : marque le début d'une ligne du tableau
+</li><li class="formatter-li">col : marque une colonne</li></ul><br />
+<span class="notice">Il faut comprendre que la construction d'un tableau se fait d'abord selon les lignes, puis pour chaque ligne on définit des colonnes, ce qui définit pour chaque intersection une cellule.</span><br />
+<br />
+Faisons maintenant un tableau à deux cellules sur la même ligne :<br />
+<br />
+<table class="formatter-table" style="margin: auto;">
+<tr class="formatter-table-row">
+<th class="formatter-table-head" colspan="2">Tableau de base : une ligne et deux colonnes</th>
+</tr><tr class="formatter-table-row">
+<td class="formatter-table-col"><table class="formatter-table"><tr class="formatter-table-row"><td class="formatter-table-col">cellule de gauche</td><td class="formatter-table-col">cellule de droite</td></tr></table><br />
+</td>
+<td class="formatter-table-col"><br />
+[[CODE=bbcode]][table]
+	[row]
+		[col]
+			Cellule de gauche
+		[/col]
+		[col]
+			Cellule de droite
+		[/col]
+	[/row]
+[/table][[/CODE]]<br />
+</td></tr></table><br />
+<br />
+Il est donc important de remarquer que pour rajouter une cellule il suffit de rajouter une colonne dans la ligne.<br />
+<br />
+Rajoutons maintenant une deuxième ligne :<br />
+<br />
+<table class="formatter-table" style="margin: auto;">
+<tr class="formatter-table-row">
+<th class="formatter-table-head" colspan="2">Tableau à deux lignes et deux colonnes</th>
+</tr><tr class="formatter-table-row">
+<td class="formatter-table-col"><table class="formatter-table">
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><br />
+			Cellule haut gauche<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Cellule haut droite<br />
+		</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><br />
+			Cellule bas gauche<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Cellule bas droite<br />
+		</td>
+	</tr>
+</table></td>
+<td class="formatter-table-col"><br />
+[[CODE=bbcode]][table]
+	[row]
+		[col]
+			Cellule haut gauche
+		[/col]
+		[col]
+			Cellule haut droite
+		[/col]
+	[/row]
+	[row]
+		[col]
+			Cellule bas gauche
+		[/col]
+		[col]
+			Cellule bas droite
+		[/col]
+	[/row]
+[/table][[/CODE]]<br />
+</td></tr></table><br />
+<br />
+Pour rajouter une ligne il faut utiliser la balise row et y insérer des cellules.<br />
+<br />
+<span class="warning">Il est important de mettre le même nombre de colonnes dans chaque ligne pour ne pas risquer de déformer le tableau. Si vous souhaitez faire des fusions de cellules reportez vous au paragraphe <a href="/wiki/faire-un-tableau-en-bbcode#paragraph_fusion-de-cellules">fusions de cellules</a>.</span><br />
+<br />
+On peut donc grâce à cette balise créer des tableaux avec n'importe quel nombre de cellules.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_fusion-de-cellules">Fusion de cellules</h1><br />
+
+<br />
+Nous avons vu qu'il est nécessaire de mettre le même nombre de cellules dans chaque ligne. Voyons maintenant comment fusionner des cellules.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_fusion-de-colonnes">Fusion de colonnes</h2><br />
+
+<br />
+Pour fusionner deux colonnes horizontalement il faut simplement déclarer une seule des cellules et lui donner l'argument colspan="2" afin de lui faire remarquer que celle déclaration de cellule vaudra pour deux cellules. Voilà un exemple.<br />
+<br />
+<table class="formatter-table" style="margin: auto;">
+<tr class="formatter-table-row">
+<th class="formatter-table-head" colspan="2">Tableau avec cellules fusionnées</th>
+</tr><tr class="formatter-table-row">
+<td class="formatter-table-col"><table class="formatter-table">
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col" colspan="2"><br />
+			Deux cellules fusionnées horizontalement<br />
+		</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><br />
+			Cellule bas gauche<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Cellule bas droite<br />
+		</td>
+	</tr>
+</table></td>
+<td class="formatter-table-col"><br />
+[[CODE=bbcode]][table]
+	[row]
+		[col colspan="2"]
+			Deux cellules fusionnées horizontalement
+		[/col]
+	[/row]
+	[row]
+		[col]
+			Cellule bas gauche
+		[/col]
+		[col]
+			Cellule bas droite
+		[/col]
+	[/row]
+[/table][[/CODE]]<br />
+</td></tr></table><br />
+<br />
+<span class="question">Il est évident que l'on peut fusionner autant de colonnes que l'on veut. Pour cela il faut indiquer dans l'attribut colspan le nombre de cellules à fusionner.</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_fusion-de-lignes">Fusion de lignes</h2><br />
+
+<br />
+Voyons maintenant comment fusionner deux cellules selon la verticale. La démarche est la même que pour fusionner horizontalement sauf qu'on utilise ici l'attribut rowspan.<br />
+<br />
+<table class="formatter-table" style="margin: auto;">
+<tr class="formatter-table-row">
+<th class="formatter-table-head" colspan="2">Tableau avec cellules fusionnées</th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><table class="formatter-table">
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col" rowspan="2"><br />
+			Deux cellules fusionnées verticalement<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Cellule haut droite<br />
+		</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><br />
+			Cellule bas droite<br />
+		</td>
+	</tr>
+</table><br />
+</td>
+<td class="formatter-table-col"><br />
+[[CODE=bbcode]][table]
+	[row]
+		[col rowspan="2"]
+			Deux cellules fusionnées verticalement
+		[/col]
+		[col]
+			Cellule haut droite
+		[/col]
+	[/row]
+	[row]
+		[col]
+			Cellule bas droite
+		[/col]
+	[/row]
+[/table][[/CODE]]<br />
+</td></tr></table><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_fusion-horizontale-et-verticale">Fusion horizontale et verticale</h2><br />
+
+<br />
+Nous pouvons aussi fusionner des cellules à la fois horizontalement et verticalement.<br />
+<br />
+<br />
+<table class="formatter-table" style="margin: auto;">
+<tr class="formatter-table-row">
+<th class="formatter-table-head" colspan="2">Tableau avec cellules fusionnées</th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><table class="formatter-table">
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col" colspan="2" rowspan="2"><br />
+			Quatre cellules fusionnées verticalement<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Cellule haut droite<br />
+		</td>
+	</tr>
+	<tr class="formatter-table-row">	
+		<td class="formatter-table-col"><br />
+			Cellule milieu droite<br />
+		</td>
+	</tr>
+	<tr class="formatter-table-row">		
+		<td class="formatter-table-col"><br />
+			Cellule bas gauche<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Cellule bas milieu<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Cellule bas droite<br />
+		</td>
+	</tr>
+</table><br />
+</td>
+<td class="formatter-table-col"><br />
+[[CODE=bbcode]][table]
+	[row]
+		[col colspan="2" rowspan="2"]
+			Quatre cellules fusionnées verticalement
+		[/col]
+		[col]
+			Cellule haut droite
+		[/col]
+	[/row]
+	[row]	
+		[col]
+			Cellule milieu droite
+		[/col]
+	[/row]
+	[row]		
+		[col]
+			Cellule bas gauche
+		[/col]
+		[col]
+			Cellule bas milieu
+		[/col]
+		[col]
+			Cellule bas droite
+		[/col]
+	[/row]
+[/table][[/CODE]]<br />
+</td></tr></table><br />
+<br />
+<span class="warning">Il est important de respecter l'ordre : d'abord colspan et ensuite rowspan.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-forme-avanc-e">Mise en forme avancée</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_cellules-d-en-t-te">Cellules d'en-tête</h2><br />
+
+<br />
+Pour distinguer les cellules d'en-tête il existe une balise qui permet de donner un style différent des cellules par défaut ; il permet par exemple de distinguer le libellé d'une colonne et son contenu.<br />
+Au lieu d'utiliser la balise col il faut simplement mettre head, son fonctionnement est strictement identique à celui de col, seule l'apparence graphique en sera modifiée.<br />
+<br />
+Voyons un exemple : <br />
+<br />
+<table class="formatter-table" style="margin: auto;">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head" colspan="2">Tableau à mise en forme avancée</th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head"><br />
+			Légume<br />
+		</th>
+		<th class="formatter-table-head"><br />
+			Couleur<br />
+		</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><br />
+			Carotte<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Orange<br />
+		</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><br />
+			Radis<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Rouge<br />
+		</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><br />
+			Salade<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Vert<br />
+		</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><br />
+			Pomme de terre<br />
+		</td>
+		<td class="formatter-table-col"><br />
+			Jaune<br />
+		</td>
+	</tr>
+</table></td>
+<td class="formatter-table-col"><br />
+[[CODE=bbcode]][table]
+	[row]
+		[head]
+			Légume
+		[/head]
+		[head]
+			Couleur
+		[/head]
+	[/row]
+	[row]
+		[col]
+			Carotte
+		[/col]
+		[col]
+			Orange
+		[/col]
+	[/row]
+	[row]
+		[col]
+			Radis
+		[/col]
+		[col]
+			Rouge
+		[/col]
+	[/row]
+	[row]
+		[col]
+			Salade
+		[/col]
+		[col]
+			Vert
+		[/col]
+	[/row]
+	[row]
+		[col]
+			Pomme de terre
+		[/col]
+		[col]
+			Jaune
+		[/col]
+	[/row]
+[/table][[/CODE]]<br />
+</td></tr></table><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_personnalisation-du-tableau-gr-ce-au-css">Personnalisation du tableau grâce au CSS</h2><br />
+
+<br />
+Comme précisé en introduction, la balise table permet de donner au tableau son propre CSS.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_personnalisation-du-tableau-en-lui-m-me">Personnalisation du tableau en lui-même</h3><br />
+
+<br />
+Voici comment insérer du CSS pour un tableau.<br />
+<br />
+[[CODE=bbcode]][table style="css du tableau"]
+//Contenu du tableau
+[/table][[/CODE]]<br />
+<br />
+Voyons maintenant les principales propriétés CSS d'un tableau.<br />
+Tout d'abord il faut connaître au minimum la syntaxe du CSS qui est très simple.<br />
+<br />
+[[CODE=bbcode]]propriété 1: valeur; propriété 2 : valeur; propriété 3 : valeur; ...[[/CODE]]<br />
+<br />
+<table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head">Propriété</th>
+		<th class="formatter-table-head">Action</th>
+		<th class="formatter-table-head">Valeurs</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">border-collapse</td>
+		<td class="formatter-table-col">Coller les bordures du tableau entre elles</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">collapse : les bordures sont collées entre elles (par défaut dans le BBCode PHPBoost)
+		</li><li class="formatter-li">separate : les bordures sont dissociées</li></ul></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">border-spacing</td>
+		<td class="formatter-table-col">Définit l'espace entre les cellules</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">valeur: en pixels 3px par exemple</li></ul></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">margin</td>
+		<td class="formatter-table-col">Définit les marges</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">auto : le tableau est centré</li></ul></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">width</td>
+		<td class="formatter-table-col">Définit la largeur du tableau</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">valeur : en % (50% par exemple): largeur proportionnelle à la place disponible
+		</li><li class="formatter-li">valeur : en pixels (50px par exemple)</li></ul></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">height</td>
+		<td class="formatter-table-col">Définit la hauteur du tableau</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">valeur : en % (50% par exemple): Hauteur proportionnelle à la place disponible
+		</li><li class="formatter-li">valeur : en pixels (50px par exemple)</li></ul></td>
+	</tr>
+</table><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_personnalisation-des-cellules">Personnalisation des cellules</h3><br />
+
+<br />
+Vous allez aussi pouvoir personnaliser vos cellules ([col] et [head]) grâce au css. Voici un petit aperçu des possibilités.<br />
+<br />
+<table class="formatter-table">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head">Propriété</th>
+		<th class="formatter-table-head">Action</th>
+		<th class="formatter-table-head">Valeurs</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">background</td>
+		<td class="formatter-table-col">Fond de la cellule</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">couleur: hexadécimale ou en anglais.
+		</li><li class="formatter-li">url('adresse de l'image') :  Image en fond
+		</li><li class="formatter-li">repeat: (repeat-x, repeat-y, repeat, no-repeat) Répétition de l'image de fond.</li></ul><br />
+		Ex: background:black url('http://www/phpboost.com/image.jpg') repeat-x;</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">border</td>
+		<td class="formatter-table-col">Bordure de la cellule</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">valeur: Largeur de la bordure
+		</li><li class="formatter-li">(solid, dotted, dashed, groove, double, inset, outset, ridge): Type de bordure
+		</li><li class="formatter-li">couleur</li></ul><br />
+		Ex: border:1px solid black;</td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">width</td>
+		<td class="formatter-table-col">Définit la largeur de la cellule</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">valeur: en % (50% par exemple): largeur proportionnelle à la place disponible
+		</li><li class="formatter-li">valeur: en pixels (50px par exemple)</li></ul></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">height</td>
+		<td class="formatter-table-col">Définit la hauteur de la cellule</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">valeur: en % (50% par exemple): Hauteur proportionnelle à la place disponible
+		</li><li class="formatter-li">valeur: en pixels (50px par exemple)</li></ul></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">color</td>
+		<td class="formatter-table-col">Définit la couleur du texte de la cellule</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">couleur: hexadécimale ou en anglais</li></ul></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">padding</td>
+		<td class="formatter-table-col">Définit la marge intérieure de la cellule</td>
+		<td class="formatter-table-col"><ul class="formatter-ul"><li class="formatter-li">valeur: en % (50% par exemple): Hauteur proportionnelle à la place disponible
+		</li><li class="formatter-li">valeur: en pixels (50px par exemple)</li></ul></td>
+	</tr>
+</table>]]></content>
+    <activ>1</activ>
+    <user_id>5083</user_id>
+    <user_ip>93.5.71.211</user_ip>
+    <timestamp>1423340272</timestamp>
+  </article>
+</articles>

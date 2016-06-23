@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>92</id>
+    <id_contents>136</id_contents>
+    <title><![CDATA[PHPBoost 1.4.1]]></title>
+    <encoded_title><![CDATA[phpboost-1-4-1]]></encoded_title>
+    <hits>743</hits>
+    <id_cat>14</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>14</cat_id>
+    <cat_id_parent>1</cat_id_parent>
+    <cat_article_id>14</cat_article_id>
+    <con_id_contents>136</con_id_contents>
+    <con_id_article>92</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol>]]></menu>
+    <content><![CDATA[Sortie en mars 2006, PHPBoost 1.4.1 comporte un nouveau module de statistiques, comprenant un compteur de visites journalières et mensuelles, avec un affichage graphique, des statistiques sur les navigateurs des visiteurs, sur leurs systèmes d'exploitation ainsi que des Fournisseurs d'Accès Internet. Un calendrier a aussi fait son apparition, ainsi qu'une première version du système de gestion des messages non vus sur le forum.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_changelog">Changelog</h1><br />
+
+<br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Module Statistiques
+	</li><li class="formatter-li">Module Calendrier, avec commentaires
+	</li><li class="formatter-li">Lien: "Voir les nouveaux messages" depuis la dernière visite sur le forum
+	</li><li class="formatter-li">Icône fille/garçon associée aux membres, avec changement de couleur, si connecté au site
+	</li><li class="formatter-li">Fonction de débogage, avec affichage du fichier concerné, et la ligne de l'erreur
+	</li><li class="formatter-li">Gestion des titres de pages (support des langues), localisation plus précise en fonction du fichier consulté
+	</li><li class="formatter-li">Possibilité de forcer un thème par défaut aux membres
+	</li><li class="formatter-li">Possibilité de modifier la place du module de connexion, et des menus de liens (gestion des blocs)
+	</li><li class="formatter-li">Possibilité de désactiver les blocs de droite sur le forum
+	</li><li class="formatter-li">Possibilité de supprimer plusieurs Messages privés en même temps
+	</li><li class="formatter-li">Possibilité d'éditer le pseudo de l'invité (commentaires, livre d'or et shoutbox)
+	</li><li class="formatter-li">Possibilité pour le membre de supprimer son compte (messages du forum non supprimés)
+	</li><li class="formatter-li">Ajout d'un lien vers les commentaires dans la liste téléchargement, et des liens web
+	</li><li class="formatter-li">Choix de langue et thème lors de l'inscription basé sur langue et thème par défaut du site
+	</li><li class="formatter-li">Ajout du statut du membre dans le profil
+	</li><li class="formatter-li">Ajout de la dernière connexion du membre dans le profil
+	</li><li class="formatter-li">Gestion des photos dans l'administration après suppression de leur catégorie
+	</li><li class="formatter-li">Si ouverture des photos (Galerie) en nouvelle fenêtre, activation des commentaires en popup
+	</li><li class="formatter-li">Lors de la suppression d'un thème par l'administrateur, PHPBoost met le thème par défaut du site aux membres qui avait choisi ce thème
+	</li><li class="formatter-li">Amélioration dans les sessions (plus rapide pour les invités)
+	</li><li class="formatter-li">Restructuration du forum pour plus de rapidité
+	</li><li class="formatter-li">Login sensible à la casse (majuscules) lors de la connexion
+	</li><li class="formatter-li">Nouveau compteur (plus rapide)
+	</li><li class="formatter-li">Correction des problèmes d'URL avec la balise <em>[url]</em>
+	</li><li class="formatter-li">Nombreuses optimisations SQL
+	</li><li class="formatter-li">Corrections, Optimisations du code
+	</li><li class="formatter-li">4 nouveaux smileys<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>82.124.181.87</user_ip>
+    <timestamp>1346007427</timestamp>
+  </article>
+</articles>

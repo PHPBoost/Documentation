@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>332</id>
+    <id_contents>1692</id_contents>
+    <title><![CDATA[Utilisation du module Multimedia]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-multimedia]]></encoded_title>
+    <hits>54</hits>
+    <id_cat>29</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>29</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>57</cat_article_id>
+    <con_id_contents>1692</con_id_contents>
+    <con_id_article>332</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_la-racine">La racine</a></li><li><a href="#paragraph_les-categories">Les catégories</a></li><li><a href="#paragraph_voir-un-media">Voir un média</a></li></ol>]]></menu>
+    <content><![CDATA[Ici nous verrons l'utilisation du module Multimédia.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-racine">La racine</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/home.png" alt="" /></p><br />
+<br />
+La page d'accueil des médias propose les différentes catégories des fichiers multimédias, avec, si l'administrateur l'a complété ou non, un petit descriptif pour chaque catégorie.<br />
+Au dessus, vous pourrez voir la description de la catégorie racine, définie dans l'administration du module.<br />
+<br />
+Pour accéder à une catégorie, il vous suffit de cliquer sur celle-ci.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-categories">Les catégories</h1><br />
+
+<br />
+Voici comment se présente une catégorie :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/category.png" alt="" /></p><br />
+<br />
+<strong>Les médias sont classés par ordre chronologique, mais vous avez la possibilité de les classer par :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Titre
+</li><li class="formatter-li"> Date
+</li><li class="formatter-li"> Popularité
+</li><li class="formatter-li"> Note
+</li><li class="formatter-li"> Nombre de commentaires<br />
+</li></ul><br />
+Pour accéder à un média, cliquez sur celui-ci.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_voir-un-media">Voir un média</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/media.png" alt="" /></p><br />
+Vous avez, pour chaque media, une petite description ainsi que quelques informations tels le nombre de vues et l'auteur (si activé dans l'administration du module).<br />
+<br />
+En dessous, vous pourrez voir la vidéo ou écouter la musique, selon le type du média.<br />
+<br />
+Il est possible de noter le lien entre 0 et le nombre maximal d'étoiles défini dans l'administration du module.<br />
+<br />
+Chaque utilisateur peut laisser un commentaire selon les autorisations mises par l'administrateur.<br />
+Pour poster un commentaire il suffit d'entrer votre commentaire et cliquer sur 'Envoyer'.<br />
+Plus bas, les commentaires déjà présents sont affichés.]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>90.107.101.82</user_ip>
+    <timestamp>1460930308</timestamp>
+  </article>
+</articles>

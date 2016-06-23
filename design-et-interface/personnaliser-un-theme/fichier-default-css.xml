@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>272</id>
+    <id_contents>1581</id_contents>
+    <title><![CDATA[Fichier default.css]]></title>
+    <encoded_title><![CDATA[fichier-default-css]]></encoded_title>
+    <hits>1869</hits>
+    <id_cat>59</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>59</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>211</cat_article_id>
+    <con_id_contents>1581</con_id_contents>
+    <con_id_article>272</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_le-fichier-default-css">Le fichier default.css</a></li><li><a href="#paragraph_le-contenu">Le contenu</a><ol class="wiki_list_2"><li><a href="#paragraph_les-resets">Les resets</a></li><li><a href="#paragraph_l-alignement">L'alignement</a></li><li><a href="#paragraph_la-mise-en-forme-du-texte">la mise en forme du texte</a></li><li><a href="#paragraph_la-gestion-des-images">La gestion des images</a></li><li><a href="#paragraph_les-champs-de-formulaire">Les champs de formulaire</a></li><li><a href="#paragraph_l-opacite">L'opacité</a></li><li><a href="#paragraph_la-pagination">La pagination</a></li><li><a href="#paragraph_les-erreurs-et-le-debug">Les erreurs et le debug</a></li><li><a href="#paragraph_la-previsualisation">La prévisualisation</a></li><li><a href="#paragraph_les-tableaux">Les tableaux</a></li><li><a href="#paragraph_l-effet-blink">L'effet blink</a></li><li><a href="#paragraph_l-effet-lightbox">L'effet lightbox</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction</h1><br />
+
+<br />
+Le fichier <em>default.css</em> contient des classes destinées à tout le site. Il sert notamment à réinitialiser certains attributs qui peuvent varier en fonction des navigateurs. <br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-fichier-default-css">Le fichier default.css</h1><br />
+
+<br />
+Ce fichier ne fait pas partie de votre thème, il est contenu dans le template <em>default</em>.<br />
+<br />
+Il est important de noter que toutes modification dans le fichier <em>default.css</em> aura une incidence sur l'ensemble de votre site web. Que ce soit sur la partie admin ou publique et sur l'ensemble des thèmes.<br />
+<span class="warning">Il est vivement conseillé de ne pas faire de modification dans ce fichier</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-contenu">Le contenu</h1><br />
+
+<br />
+Le fichier <em>default.css</em> contient les classes suivantes :<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-resets">Les resets</h2><br />
+
+[[CODE=css]]* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: none;
+    overflow: auto;
+    vertical-align: middle;
+}
+img, table, td, blockquote, code, pre, textarea, input, video, object, .video-player {
+    max-width: 100%;
+}
+input, button, label, select, textarea, legend {
+    font-family: inherit;
+    font-size: inherit;
+    vertical-align: middle;
+}
+optgroup, select, label, button, .button, input[type=radio], input[type=checkbox], input[type=color], .notation .star {
+    cursor: pointer;
+}
+input[type=checkbox] {
+    border: none;
+    background: none;
+}
+button::-moz-focus-inner, .button::-moz-focus-inner{
+    border: 0;
+    padding: 0;
+}
+div, textarea, table, td, th, code, pre, samp {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+/* Fix for no wrap for button */
+button, .button {
+    word-wrap: normal;
+    overflow-wrap: normal;
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+}
+/* Fix for chrome word-wrap ... */
+fieldset {
+    min-width: 0 !important;
+}
+hr {
+    background-color: #C4CED6;
+    border: none;
+    margin: 1px auto;
+    height: 1px;
+    width: 99%;
+}
+ul, ol {
+    line-height: normal;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+ul.no-list {
+    list-style: none;
+}
+p {
+    margin-bottom: 0.7em;
+    line-height: normal;
+    font-size: 1em;
+}
+pre {
+    white-space: pre-wrap;
+}
+abbr, a.wikipedia-link {
+    position: relative;
+    border-bottom: 1px dotted #CCCCCC;
+    cursor: help;
+    padding-left: 18px;
+}
+a.wikipedia-link:before {
+    position: absolute;
+    vertical-align: middle;
+    top: 1px;
+    left: 0;
+    content: "\f266" ;
+    font-family: fontawesome;
+    font-size: 1em;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_l-alignement">L'alignement</h2><br />
+
+[[CODE=css]].inline { display: inline !important; }
+.inline-block { display: inline-block !important; }
+.center  { text-align: center !important; }
+.left    { text-align: left !important; }
+.right   { text-align: right !important; }
+.justify { text-align: justify !important; }
+.float-left, img.left   { float: left !important; }
+.float-right, img.right { float: right !important; }
+.hidden { display: none !important; }
+@media (max-width: 768px) {
+    .hidden-small-screens { display: none !important; }
+}
+@media (min-width: 769px) {
+    .hidden-large-screens { display: none !important; }
+}
+img.left, img.right {
+    margin: 6px;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-mise-en-forme-du-texte">la mise en forme du texte</h2><br />
+
+[[CODE=css]].text-strong  { font-weight: bold !important; }
+.text-justify { text-align: justify !important; }
+.text-italic  { font-style: italic !important; }
+.valign-top    { vertical-align: top !important; }
+.valign-middle { vertical-align: middle !important; }
+.valign-bottom { vertical-align: bottom !important; }
+.spacer {
+    clear: both;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-gestion-des-images">La gestion des images</h2><br />
+
+[[CODE=css]].img-link,
+.img-link:hover {
+    text-decoration: none;
+}
+.smiley {
+    vertical-align: middle;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-champs-de-formulaire">Les champs de formulaire</h2><br />
+
+[[CODE=css]]div.vertical-fieldset,
+div.horizontal-fieldset {
+    margin: 20px 0;
+}
+div.vertical-fieldset .form-element,
+div.horizontal-fieldset .form-element {
+    margin: 0 5px 0 5px;
+}
+div.horizontal-fieldset .form-element label {
+    display: inline;
+}
+div.horizontal-fieldset .form-field {
+    display: block;
+    width: 100%;
+}
+div.vertical-fieldset .form-element label,
+div.horizontal-fieldset .form-element label {
+    width: auto;
+    vertical-align: middle;
+    font-weight: bold;
+}
+/* Imite l'affichage fieldset / legend */
+.fieldset-content {
+    margin: auto;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+    .fieldset-content {
+        margin-top: 0.5em;
+    }
+}
+.module-mini-contents .fieldset-content {
+    width: 100%;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_l-opacite">L'opacité</h2><br />
+
+[[CODE=css]].low-opacity {
+    opacity: 0.40;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-pagination">La pagination</h2><br />
+
+[[CODE=css]]ul.pagination li {
+    display: inline;
+}
+ul.pagination .current-page {
+    text-decoration: underline;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-erreurs-et-le-debug">Les erreurs et le debug</h2><br />
+
+[[CODE=css]].pbt-debug {
+    background-color: #FFA500 !important;
+    outline: 3px solid #FF4500 !important;
+}
+#error-handler {
+    width: auto;
+    max-width: 750px;
+    margin: 15px auto;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-previsualisation">La prévisualisation</h2><br />
+
+[[CODE=css]].xmlhttprequest-preview {
+    overflow: auto;
+    height: 220px;
+    width: 94%;
+    font-size: 11px;
+    margin: 4px auto 3px auto;
+    padding: 1px 2px 1px 2px;
+    border-radius: 4px;
+}
+/* --- Elements de previsualisation --- */
+.loading-preview-container {
+    position: relative;
+}
+.loading-preview {
+    position: absolute;
+    margin: 90px auto auto auto;
+    width: 100%;
+    text-align: center;
+}
+@media print {
+    * {
+        background-color: transparent;
+        text-shadow: none;
+        box-shadow: none;
+        color: #000000;
+    }
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-tableaux">Les tableaux</h2><br />
+
+[[CODE=css]]table.table-fixed {
+    table-layout: fixed;
+    width: 100%;
+}[[/CODE]]<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_l-effet-blink">L'effet blink</h2><br />
+
+[[CODE=css]]@keyframes blink {
+    0%   { opacity: 0; }
+    30%  { opacity: 1; }
+    70%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes blink {
+    0%   { opacity: 0; }
+    30%  { opacity: 1; }
+    70%  { opacity: 1; }
+    100% { opacity: 0; }
+}
+.blink {
+    animation: blink 1.5s ease-in-out infinite;
+    -moz-animation: blink 1.5s ease-in-out infinite;
+    -webkit-animation: blink 1.5s ease-in-out infinite;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_l-effet-lightbox">L'effet lightbox</h2><br />
+
+[[CODE=css]]/*
+ * Lightcase - jQuery Plugin
+ * The smart and flexible Lightbox Plugin.
+ *
+ * @author        Cornel Boppart <cornel@bopp-art.com>
+ * @copyright    Author
+ *
+ * @version        2.1.0 (25/04/2015)
+ */
+/* icon font */
+@font-face {
+    font-family: 'lightcase';
+    src: url('../../../kernel/data/fonts/lightcase.eot?55356177');
+    src: url('../../../kernel/data/fonts/lightcase.eot?55356177#iefix') format('embedded-opentype'),
+         url('../../../kernel/data/fonts/lightcase.woff?55356177') format('woff'),
+         url('../../../kernel/data/fonts/lightcase.ttf?55356177') format('truetype'),
+         url('../../../../kernel/data/fonts/lightcase.svg?55356177#lightcase') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ 
+[class*='lightcase-icon-']:before {
+    font-family: 'lightcase';
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    text-align: center;
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+     
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+/* Codes */
+.lightcase-icon-play:before     { content: '\e800'; } /* 'play' */
+.lightcase-icon-pause:before     { content: '\e801'; } /* 'pause' */
+.lightcase-icon-close:before     { content: '\e802'; } /* 'close' */
+.lightcase-icon-prev:before     { content: '\e803'; } /* 'prev' */
+.lightcase-icon-next:before     { content: '\e804'; } /* 'next' */
+.lightcase-icon-spin:before     { content: '\e805'; } /* 'spin' */
+/* Reduced layout for small devices */
+@media screen and (max-width: 768px) {
+    .lightcase-open body {
+        padding: 55px 0 70px 0;
+    }
+    .lightcase-open body > *:not([id*=lightcase-]) {
+        position: fixed !important;
+        top: -9999px !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+    }
+    /* Overlay */
+    #lightcase-overlay {
+        background-color: #333333;
+    }
+    /* Loading */
+    #lightcase-loading {
+        color: #AAAAAA;
+    }
+    /* Case */
+    #lightcase-case {
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: left;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    #lightcase-case:not([data-type=image]):not([data-type=video]):not([data-type=flash]):not([data-type=error]),
+    #lightcase-case:not([data-type=image]):not([data-type=video]):not([data-type=flash]):not([data-type=error]) .lightcase-contentInner,
+    #lightcase-case:not([data-type=image]):not([data-type=video]):not([data-type=flash]):not([data-type=error]) .lightcase-inlineWrap {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: auto !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none;
+        background: none;
+    }
+    /*
+     * Content - Extend with further selectors and colors in case you
+     * have elements like <ul>, <li>, <span> or similar displayed in lightcase.
+     */
+    #lightcase-case .lightcase-content h1,
+    #lightcase-case .lightcase-content h2,
+    #lightcase-case .lightcase-content h3,
+    #lightcase-case .lightcase-content h4,
+    #lightcase-case .lightcase-content h5,
+    #lightcase-case .lightcase-content h6,
+    #lightcase-case .lightcase-content p {
+        color: #AAAAAA;
+    }
+    /* Additional info */
+    #lightcase-case .lightcase-info {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #lightcase-case:not([data-type=image]):not([data-type=video]):not([data-type=flash]):not([data-type=error]) .lightcase-info {
+        position: static;
+    }
+    #lightcase-case:not([data-type=image]):not([data-type=video]):not([data-type=flash]):not([data-type=error]) .lightcase-content {
+        padding: 15px;
+        border: none;
+        background: none;
+        box-shadow: none;
+    }
+    #lightcase-case:not([data-type=image]):not([data-type=video]):not([data-type=flash]):not([data-type=error]) .lightcase-contentInner,
+    #lightcase-case:not([data-type=image]):not([data-type=video]):not([data-type=flash]):not([data-type=error]) .lightcase-contentInner > * {
+        width: 100% !important;
+        max-width: none !important;
+    }
+    /*
+     * Set auto height to each element except iframes, because of that
+     * those cannot have a natural/native height and it must be especially defined.
+     */
+    #lightcase-case:not([data-type=image]):not([data-type=video]):not([data-type=flash]):not([data-type=error]) .lightcase-contentInner > *:not(iframe) {
+        height: auto !important;
+        max-height: none !important;
+    }
+    /* Navigation */
+    .lightcase-open #lightcase-nav[data-ispartofsequence]:before {
+        content: '';
+        position: fixed;
+        z-index: 9998;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 55px;
+        background-color: rgba(55, 55, 55, 0.9);
+    }
+    #lightcase-nav a {
+        position: fixed;
+        z-index: 9999;
+        bottom: 15px;
+        outline: none;
+        cursor: pointer;
+        font-size: 24px;
+    }
+    #lightcase-nav a:hover {
+        text-shadow: 0 0 15px #FFFFFF;
+    }
+    /* Icon positioning */
+    #lightcase-nav .lightcase-icon-close {
+        position: absolute;
+        z-index: 9997;
+        top: 15px;
+        right: 15px;
+        opacity: 0;
+    }
+    #lightcase-nav .lightcase-icon-pause,
+    #lightcase-nav .lightcase-icon-play {
+        left: 50%;
+        margin-left: -0.5em;
+    }
+    #lightcase-nav .lightcase-icon-prev {
+        left: 15px;
+    }
+    #lightcase-nav .lightcase-icon-next {
+        right: 15px;
+    }
+    /* Error message */
+    #lightcase-case p.lightcase-error {
+        padding: 30px 0;
+        font-size: 17px;
+        text-align: center;        
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #AAAAAA;
+    }
+}
+@media screen and (min-width: 769px) {
+    /* Overlay */
+    #lightcase-overlay {
+        background-color: #333333;
+    }
+    /* Loading */
+    #lightcase-loading {
+        color: #FFFFFF;
+        text-shadow: 0 0 15px #FFFFFF;
+    }
+    /* Case */
+    #lightcase-case {
+        font-family: arial, sans-serif;
+        font-size: 13px;
+        line-height: 18px;
+        text-align: left;
+        color: #AAAAAA;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    /* Content */
+    #lightcase-case:not([data-type=error]) .lightcase-content {
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        text-shadow: none;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        -webkit-backface-visibility: hidden;
+    }
+    #lightcase-case[data-type=image] .lightcase-content,
+    #lightcase-case[data-type=video] .lightcase-content {
+        background-color: #333333;
+    }
+    #lightcase-case[data-type=image] .lightcase-contentInner,
+    #lightcase-case[data-type=video] .lightcase-contentInner {
+        line-height: 0.75;
+    }
+    #lightcase-case:not([data-type=error]) .lightcase-inlineWrap {
+        padding: 30px;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    /*
+     * Content - Extend with further selectors and colors in case you
+     * have elements like <ul>, <li>, <span> or similar displayed in lightcase.
+     */
+    #lightcase-case .lightcase-content h1,
+    #lightcase-case .lightcase-content h2,
+    #lightcase-case .lightcase-content h3,
+    #lightcase-case .lightcase-content h4,
+    #lightcase-case .lightcase-content h5,
+    #lightcase-case .lightcase-content h6,
+    #lightcase-case .lightcase-content p {
+        color: #333333;
+    }
+    /* Navigation */
+    #lightcase-nav a {
+        top: 50%;
+        margin-top: -0.5em;
+        outline: none;
+        cursor: pointer;
+    }
+    #lightcase-nav a.lightcase-icon-close {
+        margin: 0;
+    }
+    #lightcase-nav a.lightcase-icon-close,
+    #lightcase-nav a.lightcase-icon-play,
+    #lightcase-nav a.lightcase-icon-pause {
+        opacity: 0;
+    }
+    #lightcase-nav a:hover {
+        text-shadow: 0 0 15px #FFFFFF;
+    }
+    #lightcase-nav a:hover,
+    #lightcase-case:hover ~ #lightcase-nav a {
+        opacity: 1;
+    }
+    /* Icon positioning */
+    #lightcase-nav a.lightcase-icon-close {
+        position: fixed;
+        z-index: 9997;
+        top: 15px;
+        right: 15px;
+        outline: none;
+    }
+    
+    #lightcase-nav a.lightcase-icon-play,
+    #lightcase-nav a.lightcase-icon-pause {
+        left: 50%;
+        margin-left: -0.5em;
+    }
+    
+    #lightcase-nav a.lightcase-icon-prev {
+        left: 15px;
+    }
+    
+    #lightcase-nav a.lightcase-icon-next {
+        right: 15px;
+    }
+    /* Error message */
+    #lightcase-case p.lightcase-error {
+        margin: 0;
+        padding: 0;
+        font-size: 17px;
+        color: #AAAAAA;
+    }
+}
+@media screen {
+    /* Overlay */
+    #lightcase-overlay {
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+    }
+    /* Loading */
+    #lightcase-loading {
+        position: fixed;
+        z-index: 1001;
+        top: 50%;
+        left: 50%;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+        opacity: 1;
+        font-size: 32px;        
+        /* Fixes the icon wobble issue in firefox */
+        -moz-transform-origin: 50% 53%;
+        animation: lightcase-loading-spin 0.5s infinite linear;
+    }
+    /* Case */
+    #lightcase-case {
+        display: none;
+        position: fixed;
+        z-index: 1002;
+        top: 50%;
+        left: 50%;
+    }
+    /* Additional info */
+    #lightcase-case .lightcase-info {
+        /* 
+         * You can change to position "static" or "relative" instead, but consider
+         * that this height will be integrated and calculated
+         * to the maximum height additionally to the image height.
+         */
+        position: absolute;
+        padding-top: 15px;
+    }
+    #lightcase-case .lightcase-caption {
+        clear: both;
+    }
+    #lightcase-case .lightcase-title,
+    #lightcase-case .lightcase-caption {
+        margin: 0;
+        padding: 0;
+        font-size: 17px;
+        line-height: 1.5;
+        font-weight: normal;
+        text-overflow: ellipsis;
+    }
+    #lightcase-case .lightcase-caption {
+        font-size: 13px;
+    }
+    #lightcase-case .lightcase-sequenceInfo {
+        font-size: 11px;
+    }
+    /* Icons */
+    [class*='lightcase-icon-'] {
+        width: 1.123em;
+        height: auto;
+        /*
+         * For adjusting the icon size, just change the
+         * value for "font-size" here!
+         */
+        font-size: 38px;
+        line-height: 1;
+        text-align: center;
+        text-shadow: none;
+    }
+    
+    a[class*='lightcase-icon-'],
+    a[class*='lightcase-icon-']:focus {
+        position: fixed;
+        z-index: 9999;
+        color: rgba(255, 255, 255, 0.6);
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        transition: color, opacity, ease-in-out 0.25s;
+    }
+    
+    a[class*='lightcase-icon-']:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+    
+    a[class*='lightcase-icon-'] > span {
+        display: inline-block;
+        text-indent: -9999px;
+    }
+    /* For mobile (touch) devices */
+    .lightcase-isMobileDevice #lightcase-case .lightcase-inlineWrap,
+    .lightcase-isMobileDevice #lightcase-case[data-type=iframe] .lightcase-contentInner {
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .lightcase-isMobileDevice.lightcase-open,
+    .lightcase-isMobileDevice.lightcase-open body {
+        max-width: 100%;
+        max-height: 100%;
+        overflow: hidden;
+    }
+    .lightcase-isMobileDevice #lightcase-nav a:hover {
+        color: #aaa;
+        text-shadow: none;
+    }
+}
+/* Animation for loading spin icon */
+@-webkit-keyframes lightcase-loading-spin {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+    }
+}
+@keyframes lightcase-loading-spin {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(359deg);
+        -webkit-transform: rotate(359deg);
+    }
+}
+/* Lightbox customization
+--------------------------------------*/
+#lightcase-nav a {
+    text-decoration: none;
+}
+#lightcase-nav a:hover > span {
+    display: block;
+    margin: 0.6em 0 0 0;
+    font-size: 0.3em;
+    text-indent: 0;
+    word-wrap: normal;
+}[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>768</user_id>
+    <user_ip>77.202.89.95</user_ip>
+    <timestamp>1457189829</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>192</id>
+    <id_contents>951</id_contents>
+    <title><![CDATA[VI. Tutoriels]]></title>
+    <encoded_title><![CDATA[tutoriels]]></encoded_title>
+    <hits>1105</hits>
+    <id_cat>54</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>951</con_id_contents>
+    <con_id_article>192</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Tutoriels]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>88.125.157.163</user_ip>
+    <timestamp>1381850343</timestamp>
+  </article>
+</articles>

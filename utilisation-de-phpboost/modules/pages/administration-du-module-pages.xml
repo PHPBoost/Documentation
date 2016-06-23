@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>161</id>
+    <id_contents>1707</id_contents>
+    <title><![CDATA[Administration du module Pages]]></title>
+    <encoded_title><![CDATA[administration-du-module-pages]]></encoded_title>
+    <hits>922</hits>
+    <id_cat>44</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>44</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>160</cat_article_id>
+    <con_id_contents>1707</con_id_contents>
+    <con_id_article>161</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-des-pages">Configuration des pages</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_gestion-des-pages">Gestion des pages</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration">Configuration</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_2.jpg" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-des-pages">Configuration des pages</h2><br />
+
+<br />
+<em> Compter le nombre de fois que la page est consultée  </em> : permet de montrer sur chaque page le nombre de fois que la page a été vue.<br />
+Cette option peut-être choisie au cas par cas pour chaque page lors de sa création ou édition.<br />
+<br />
+<em> Activer les commentaires </em> : choisissez ici si vous souhaitez que les membres puissent écrire des commentaires sur les pages créées.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+Vous allez pouvoir choisir ici par défaut pour le module page les autorisations pour : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> la lecture des pages
+</li><li class="formatter-li"> l'édition des pages
+</li><li class="formatter-li"> l'utilisation des commentaires<br />
+</li></ul><br />
+<br />
+Pour chacun, vous pouvez autoriser les visiteurs / les membres / les modérateurs / les administrateurs / les groupes de membres<br />
+<br />
+<span class="notice">Bien sûr, pour chaque page créée vous pourrez donner des droits spécifiques.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-pages">Gestion des pages</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/pages_pages.png" alt="" /></p><br />
+La documentation de cette zone se trouve dans <a href="/wiki/utilisation-du-module-pages">cet article</a>.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1462766248</timestamp>
+  </article>
+</articles>

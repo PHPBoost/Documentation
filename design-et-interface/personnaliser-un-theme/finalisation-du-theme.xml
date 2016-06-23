@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>275</id>
+    <id_contents>1743</id_contents>
+    <title><![CDATA[Finalisation du thème]]></title>
+    <encoded_title><![CDATA[finalisation-du-theme]]></encoded_title>
+    <hits>1262</hits>
+    <id_cat>59</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>59</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>211</cat_article_id>
+    <con_id_contents>1743</con_id_contents>
+    <con_id_article>275</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_les-images-de-previsualisation">Les images de prévisualisation</a></li><li><a href="#paragraph_le-fichier-de-configuration-d-un-theme">Le fichier de configuration d'un thème</a></li><li><a href="#paragraph_le-nom-de-votre-theme">Le nom de votre thème</a></li><li><a href="#paragraph_faire-le-menage">Faire le ménage</a></li><li><a href="#paragraph_l-archivage">L'archivage</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_les-images-de-previsualisation">Les images de prévisualisation</h1><br />
+
+<br />
+Afin de reconnaître votre thème parmi les autres, nous utilisons de petites images appeler Screen ou images de prévisualisation.<br />
+<br />
+Elles constituent la première impression que l'utilisateur aura de votre thème. Vous pouvez en créer autant que vous le souhaitez (restez raisonnable <img src="/images/smileys/wink.png" alt=";)" class="smiley" />) et placez-les ensuite dans le dossier de votre thème.<br />
+<br />
+Recommandations : <br />
+<ul class="formatter-ul">
+<li class="formatter-li">Les images doivent faire 1024 pixels de large afin de pouvoir être visualisées sous la plupart des résolutions.
+</li><li class="formatter-li">Rien ne sert de mettre une multitude d'images : elles alourdissent le thème et sont parfois répétitives.
+</li><li class="formatter-li">Même si la qualité est moindre, préférez le format .JPG plutôt que le .PNG, qui a une taille bien plus importante en général.<br />
+</li></ul><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-fichier-de-configuration-d-un-theme">Le fichier de configuration d'un thème</h1><br />
+
+<br />
+Le fichier <em>config.ini</em> donne des informations sur le thème et permet de lui attribuer une configuration par défaut à son installation.<br />
+<strong><a href="/wiki/fichier-de-configuration-d-un-theme-config-ini">Cet article</a></strong> détaille ligne par ligne le contenu du fichier <em>config.ini</em>, situé à la racine de votre thème.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-nom-de-votre-theme">Le nom de votre thème</h1><br />
+
+<br />
+Avant de nommer votre thème, il est préférable de vérifier que le nom n'est pas déjà utilisé. <br />
+Cherchez un peu dans les téléchargements avant de proposer un thème dont le nom est déjà pris, sous peine d'empêcher certains membres à ne pas pouvoir utiliser le votre.<br />
+<br />
+Pour modifier le nom et la description du thème, il est important de le faire dans le répertoire lang. Si votre thème est multilingue, il faudra le faire dans chaque langue. Il suffit de modifier le fichier <em>desc.ini</em> du répertoire langue. Vous trouverez un exemple dans l'article "<strong><a href="/wiki/structure-d-un-theme">la structure d'un thème</a></strong>".<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_faire-le-menage">Faire le ménage</h1><br />
+
+<br />
+Il arrive parfois que votre thème soit très lourd. Avec l'intégration de Font-Awesome, nous avons pu réduire la taille d'un thème à moins de 300 ko.<br />
+<br />
+Si votre thème dépasse plusieurs Mo, il est préférable de vérifier si vous ne pouvez pas l’alléger. Un thème lourd, est un thème qui se charge lentement.<br />
+Si vous avez des fichiers sources (.psd par exemple), il est préférable de les distribuer en parallèle pour ne pas alourdir le fichier zip.<br />
+<br />
+Pour les utilisateurs de Windows un fichier <em>thumbs.db</em> est généralement crée automatique lorsque vous naviguez dans un dossier d'images en vue 'Miniatures'. Ce fichier est inutile, vous pouvez donc le supprimer de votre thème sans crainte <img src="/images/smileys/wink.png" alt=";)" class="smiley" /> (Ce fichier peut atteindre parfois plusieurs centaines de Ko).<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_l-archivage">L'archivage</h1><br />
+
+<br />
+Le thème est maintenant entièrement finalisé. Il est nécessaire de l'archiver en un unique fichier pour le partager.<br />
+Préférer l'archive classique .zip qui est lisible par la plupart des systèmes sans logiciel supplémentaire.<br />
+<br />
+Le nom de l'archive n'a pas vraiment d'importance, mais il est important d'archiver le répertoire complet (exemple : base) et non pas l'ensemble des fichiers et répertoire de votre thème de façon à conserver le répertoire lors de l'installation.]]></content>
+    <activ>1</activ>
+    <user_id>5773</user_id>
+    <user_ip>2.1.83.160</user_ip>
+    <timestamp>1466016476</timestamp>
+  </article>
+</articles>

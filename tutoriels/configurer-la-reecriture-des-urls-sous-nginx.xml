@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>303</id>
+    <id_contents>1374</id_contents>
+    <title><![CDATA[Configurer la réécriture des URLs sous Nginx.]]></title>
+    <encoded_title><![CDATA[configurer-la-reecriture-des-urls-sous-nginx]]></encoded_title>
+    <hits>1935</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>1374</con_id_contents>
+    <con_id_article>303</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Vous êtes sous nginx et votre réécriture des urls pour PHPBoost ne fonctionne pas ? C'est tout à faire normal, nginx ne gère pas les .htaccess, vous êtes obligé de passer par la configuration de nginx.<br />
+<br />
+<span class="notice">En continuant ce tutoriel, vous assumez comprendre et manipuler la configuration d'un virtual host. Si ce n'est pas le cas, je vous conseille ce turoriel : <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3">https://www.digitalocean.com/community/tutorials/how-to-set-up-nginx-virtual-hosts-server-blocks-on-ubuntu-12-04-lts--3</a>.</span><br />
+<ol class="formatter-ol">
+	<li class="formatter-li">Éditez votre <em>virtual host</em> ou votre fichier <em>nginx.conf</em>.
+	</li><li class="formatter-li">Insérez s'y le code de réécriture des URLs après la ligne <em>server_name</em> :<br />
+<div class="formatter-block">rewrite "^/user/pm-?([0-9]+)-?([0-9]{0,})-?([0-9]{0,})-?([0-9]{0,})-?([a-z_]{0,})\.php$" /user/pm.php?pm=$1&amp;id=$2&amp;p=$3"e=$4 last;<br />
+rewrite ^/admin/config/([\w/_-]*)$ /admin/config/index.php?url=/$1 last;<br />
+rewrite ^/admin/cache/([\w/_-]*)$ /admin/cache/index.php?url=/$1 last;<br />
+rewrite ^/admin/errors/([\w/_-]*)$ /admin/errors/index.php?url=/$1 last;<br />
+rewrite ^/admin/themes/([\w/_-]*)$ /admin/themes/index.php?url=/$1 last;<br />
+rewrite ^/admin/langs/([\w/_-]*)$ /admin/langs/index.php?url=/$1 last;<br />
+rewrite ^/admin/modules/([\w/_-]*)$ /admin/modules/index.php?url=/$1 last;<br />
+rewrite ^/admin/member/([\w/_-]*)$ /admin/member/index.php?url=/$1 last;<br />
+rewrite ^/admin/content/([\w/_-]*)$ /admin/content/index.php?url=/$1 last;<br />
+rewrite ^/syndication/([\w/_-]*)$ /syndication/index.php?url=/$1 last;<br />
+rewrite ^/user/([\w/-_]*)$ /user/index.php?url=/$1 last;<br />
+rewrite ^/QuestionCaptcha/([\w/_-]*)$ /QuestionCaptcha/index.php?url=/$1 last;<br />
+rewrite ^/articles/([\w/_-]*)$ /articles/index.php?url=/$1 last;<br />
+rewrite ^/calendar/([\w/_-]*)$ /calendar/index.php?url=/$1 last;<br />
+rewrite ^/faq/faq-([0-9]+)(\+?[^.]*)\.php(\?question=([0-9]+))?$ /faq/faq.php?id=$1&amp;id_question=$3 last;<br />
+rewrite ^/guestbook/([\w/_-]*)$ /guestbook/index.php?url=/$1 last;<br />
+rewrite ^/news/([\w/_-]*)$ /news/index.php?url=/$1 last;<br />
+rewrite ^/newsletter/([\w/_-]*)$ /newsletter/index.php?url=/$1 last;<br />
+rewrite ^/online/([\w/_-]*)$ /online/index.php?url=/$1 last;<br />
+rewrite ^/poll/poll-([0-9]+)-?([0-9]*)-?([0-9]*)\.php$ /poll/poll.php?id=$1&amp;r=$2&amp;p=$3 last;<br />
+rewrite ^/sitemap/([\w/_-]*)$ /sitemap/index.php?url=/$1 last;<br />
+rewrite ^/stats/stats-([a-z]+)\.php$ /stats/stats.php/$1=1 last;<br />
+rewrite ^/wiki/([a-z0-9-]+)$ /wiki/wiki.php?title=$1 ;<br />
+rewrite ^/customization/([\w/_-]*(?:\.css)?)$ /customization/index.php?url=/$1 last;<br />
+rewrite ^/dictionary/dictionary-([0-9a-z]+)-?([0-9]*)(\+?[^.]*)\.php$ /dictionary/dictionary.php?l=$2&amp;cat=$3 last;<br />
+if ($http_referer !~ "^$"){<br />
+	set $rule_25 1$rule_25;<br />
+}<br />
+if ($http_referer !~ "^http://creapoint.cf"){<br />
+	set $rule_25 2$rule_25;<br />
+}<br />
+if ($rule_25 = "21"){<br />
+	break;<br />
+}<br />
+if ($http_user_agent ~* "libwww"){<br />
+	set $rule_26 1;<br />
+}<br />
+if ($rule_26 = "1"){<br />
+	break;<br />
+}<br />
+error_page 403 /user/error/403/;<br />
+error_page 404 /user/error/404/;<br />
+expires 604800s;<br />
+location ~* \.(jpeg|jpg)$ {<br />
+	expires 2592000s;<br />
+}<br />
+location ~* \.(png)$ {<br />
+	expires 2592000s;<br />
+}<br />
+location ~* \.(gif)$ {<br />
+	expires 2592000s;<br />
+}<br />
+location ~* \.(ico)$ {<br />
+	expires 2592000s;<br />
+}<br />
+location ~* \.(css)$ {<br />
+	expires 2592000s;<br />
+}<br />
+location ~* \.(js|jsonp)$ {<br />
+	expires 2592000s;<br />
+}<br />
+location ~* \.(js)$ {<br />
+	expires 2592000s;<br />
+}<br />
+location ~* \.(swf)$ {<br />
+	expires 2592000s;<br />
+}</div>
+	</li><li class="formatter-li">Sauvegardez le fichier.
+	</li><li class="formatter-li">Relancez nginx : <strong>sudo service nginx restart</strong>.<br />
+</li></ol>]]></content>
+    <activ>1</activ>
+    <user_id>4571</user_id>
+    <user_ip>213.49.88.148</user_ip>
+    <timestamp>1413640412</timestamp>
+  </article>
+</articles>

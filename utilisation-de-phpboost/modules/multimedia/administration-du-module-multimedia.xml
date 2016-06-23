@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>58</id>
+    <id_contents>1729</id_contents>
+    <title><![CDATA[Administration du module Multimédia]]></title>
+    <encoded_title><![CDATA[administration-du-module-multimedia]]></encoded_title>
+    <hits>815</hits>
+    <id_cat>29</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>29</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>57</cat_article_id>
+    <con_id_contents>1729</con_id_contents>
+    <con_id_article>58</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_categories">Catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li></ol></li><li><a href="#paragraph_ajout-d-un-fichier-multimedia">Ajout d'un fichier multimédia</a></li><li><a href="#paragraph_gerer-les-fichiers-multimedia">Gérer les fichiers multimédia</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration">Configuration</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration">Configuration</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/admin_config.png" alt="" /></p><br />
+<strong>Paramètres :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nombre d'éléments affichés par page</strong> : nombre maximum de liens qui seront référencés par page.
+</li><li class="formatter-li"><strong>Nombre de catégories maximum affichées par page</strong> : nombre maximum de catégories visibles par page.
+</li><li class="formatter-li"><strong>Nombre de catégories affichées par ligne</strong> : nombre de catégories visibles sur une ligne (entre 1 et 4).
+</li><li class="formatter-li"><strong>Afficher le nom de l'auteur</strong> : Afficher ou non le nom de l'auteur sur la page de visualisation d'un fichier
+</li><li class="formatter-li"><strong>Activer les commentaires</strong> : Permet à vos membres de commenter les médias.
+</li><li class="formatter-li"><strong>Activer la notation</strong> : Laisser la possibilité aux utilisateurs de noter les médias.
+</li><li class="formatter-li"><strong>Echelle de notation</strong> : note maximale que peut recevoir un média (de 3 à 20).
+</li><li class="formatter-li"><strong>Largeur maximale d'une vidéo</strong> : En pixels, entre 50 et 2000
+</li><li class="formatter-li"><strong>Hauteur maximale d'une vidéo</strong> : En pixels, entre 50 et 2000
+</li><li class="formatter-li"><strong>Description de la catégorie racine</strong> : Texte qui sera affiché sur la page d'accueil du module.
+</li><li class="formatter-li"><strong>Types de fichiers autorisés dans la racine des fichiers multimédia</strong> : Musique, Vidéo ou les 2.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/admin_auths.png" alt="" /></p><br />
+<br />
+Vous pouvez définir ici les autorisations globales du module, à savoir les droits de :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Lecture : visualiser les médias
+</li><li class="formatter-li">Écriture : ajouter un média
+</li><li class="formatter-li">Contribution : soumettre un média à la validation
+</li><li class="formatter-li">Modération : supprimer, modifier et valider les médias<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_categories">Catégories</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-categories">Gestion des catégories</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/admin_cats_management.png" alt="" /></p><br />
+<br />
+Ici vous pouvez voir toutes les catégories et sous catégories de votre module Multimédia.<br />
+<br />
+Voici à quoi correspondent les boutons d'administration : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrows"></i>
+<!-- END HTML --> : permet de déplacer chaque élément là où vous le souhaitez, en cliquant dessus puis en le lâchant lorsqu'il est bien place (technique du glisser/déposer)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-up"></i>
+<!-- END HTML --> : sert à déplacer vers le haut une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML --> : sert à déplacer vers le bas une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> : sert à éditer un élément pour modifier son titre, sa catégorie, ses autorisation,...)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> : sert à supprimer une catégorie.<br />
+<span class="notice">Si la catégorie contient des médias, lors de la suppression, il vous sera proposé de transférer les fichiers ou les sous catégories dans une autre catégorie<br />
+</span><br />
+</li></ul><br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/admin_del_category.png" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/admin_add_cat.png" alt="" /></p><br />
+<br />
+<strong>Champs à renseigner :</strong><br />
+<br />
+<strong>Nom</strong> : Titre de la catégorie<br />
+<strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.<br />
+<strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre catégorie. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-).<br />
+<strong>Emplacement</strong> : où se situera votre élément.<br />
+<strong>Description</strong> : vous pouvez mettre une petite description de votre catégorie. Cette description se trouvera au-dessus des questions de votre catégorie.<br />
+<strong>Image</strong> : vous permet d'associer une image à votre catégorie. Veillez à ne pas mettre d'images trop grosses afin de ne pas gêner la navigation des membres. Juste en dessous, vous pourrez voir une prévisualisation de cette image.<br />
+[*]<strong>Types de fichiers autorisés dans la racine des fichiers multimédia</strong> : Musique, Vidéo ou les 2.<br />
+<br />
+<strong>Autorisations</strong> : Enfin, en cliquant sur la checkbox, vous pourrez définir des autorisations spécifiques à cette catégorie.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajout-d-un-fichier-multimedia">Ajout d'un fichier multimédia</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/add_media.png" alt="" /></p><br />
+<strong>Champs à renseigner :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Titre du fichier multimédia</strong> : nom de votre vidéo ou musique
+</li><li class="formatter-li"><strong>Emplacement</strong> : catégorie dans laquelle sera mis votre média.
+</li><li class="formatter-li"><strong>Largeur de la vidéo</strong> : Largeur souhaitée de la vidéo
+</li><li class="formatter-li"><strong>Hauteur de la vidéo</strong> : Hauteur souhaitée de la vidéo
+</li><li class="formatter-li"><strong>Lien du fichier multimédia</strong> : adresse complète du fichier (ne pas oublier "http://")
+</li><li class="formatter-li"><strong>Description</strong> : description du fichier<br />
+<br />
+</li></ul><br />
+<h1 class="wiki_paragraph1" id="paragraph_gerer-les-fichiers-multimedia">Gérer les fichiers multimédia</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/media/management.png" alt="" /></p><br />
+<br />
+Vous trouverez ici tous les médias contenus dans votre module.<br />
+L'icône <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> vous permettra de les éditer directement.<br />
+Sinon, vous pourrez Montrer, Cacher, Désapprouver (si le média est en attente de validation) et Supprimer chaque fichier.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.210.103</user_ip>
+    <timestamp>1463274417</timestamp>
+  </article>
+</articles>

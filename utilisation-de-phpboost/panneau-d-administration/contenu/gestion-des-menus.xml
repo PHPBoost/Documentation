@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>113</id>
+    <id_contents>1663</id_contents>
+    <title><![CDATA[Gestion des menus]]></title>
+    <encoded_title><![CDATA[gestion-des-menus]]></encoded_title>
+    <hits>1749</hits>
+    <id_cat>18</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>18</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>18</cat_article_id>
+    <con_id_contents>1663</con_id_contents>
+    <con_id_article>113</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-menus">Gestion des menus</a></li><li><a href="#paragraph_ajouter-un-menu">Ajouter un menu</a><ol class="wiki_list_2"><li><a href="#paragraph_ajout-menu-de-lien">Ajout menu de lien</a></li><li><a href="#paragraph_ajout-menu-de-contenu">Ajout menu de contenu</a></li><li><a href="#paragraph_ajout-de-flux">Ajout de flux</a></li><li><a href="#paragraph_les-filtres">Les filtres</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[La page d'accueil contient par défaut des blocs (ou menus) en fonction des modules que vous avez installés, ils se trouvent à gauche et à droite en haut et en bas de la page selon vos préférences.<br />
+<br />
+Ces menus peuvent être déplacés comme bon vous semble, et de nouveaux peuvent également être crées afin de personnaliser au maximum votre site.<br />
+<br />
+<span class="warning">Attention l'affichage prend automatiquement en compte la disposition des blocs sur le thème courant (une colonne à droite, à gauche, les deux ou aucune des deux, de même en hauteur). Ainsi l'interface d'administration reflète la position réelle des blocs sur le site.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-menus">Gestion des menus</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/menus/menus.png" alt="" /></p><br />
+<br />
+Les menus ou blocs peuvent être disposés sur 8 zones délimitées en pointillés et organisées comme suit:<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Tête de page : correspond au header de votre page
+</li><li class="formatter-li"> Sous entête : correspond au sub-header avec les liens se connecter, administration, etc... qui se trouvent sous la bannière du header.
+</li><li class="formatter-li"> Menu gauche
+</li><li class="formatter-li"> Menu central haut : se trouve entre le sous entête et le contenu central de la page, en général un module
+</li><li class="formatter-li"> Menu central bas : se trouve entre le contenu central de la page et le pied de page
+</li><li class="formatter-li"> Menu droit
+</li><li class="formatter-li"> Sur pied de page : zone entre le cadre central ou se trouve le module et le bas de la page
+</li><li class="formatter-li"> Pied de page : correspond au footer où se trouvent les copyrights de PHPboost.<br />
+</li></ul><br />
+<br />
+Vous pouvez déplacer chaque menu dans la zone de votre choix, par l'action d'un simple cliquer/déplacer.<br />
+<br />
+Enfin vous pouvez éditer <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> et supprimer <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> les menus et modules que vous souhaitez.<br />
+<br />
+<strong>Nota Bene:</strong> Les menus désactivés apparaissent grisés.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-un-menu">Ajouter un menu</h1><br />
+
+<br />
+En plus des menus des modules, vous pouvez également créer des menus personnalisés.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajout-menu-de-lien">Ajout menu de lien</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/menus/add_link_menu.png" alt="" /></p><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nom</strong> : donnez un nom à votre menu
+</li><li class="formatter-li"><strong>Url</strong> : facultatif, correspond à l'adresse du lien du titre du menu
+</li><li class="formatter-li"><strong>Image</strong> : facultatif, vous pouvez mettre ici l'adresse d'une image représentant le menu.
+</li><li class="formatter-li"><strong>Type</strong> : vous allez avoir le choix entre : <br />
+</li></ul><br />
+<ul class="formatter-ul">
+<li class="formatter-li">Automatique : Le menu se transforme automatiquement selon l'endroit où vous le placez. Par exemple, il prendra une forme verticale s'il est placé dans une colonne gauche/droite.
+</li><li class="formatter-li">Menu horizontal déroulant
+</li><li class="formatter-li">Menu vertical déroulant
+</li><li class="formatter-li">Statique : Menu de liens statiques, se dépliant sur mobile.<br />
+</li></ul><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Emplacement</strong> : Une fois encore, à l'aide d'un cliquer/déplacer, vous pouvez placer votre menu où vous le souhaitez, dans l'une des 8 zones prédéfinies (cf plus haut)
+</li><li class="formatter-li"><strong>Statut</strong> : activé ou désactivé si vous souhaitez qu'ils soit affiché ou non sur le site
+</li><li class="formatter-li"><strong>Autorisations</strong> : définissez ici quel type de membre peut voir ce menu.
+</li><li class="formatter-li"><strong>Caché sur petit écran (mobile)</strong> : Si cette case est cochée, le menu ne sera pas affiché sur les écrans réduits.
+</li><li class="formatter-li"><strong>Contenu</strong> : vous allez mettre ici la liste des liens de votre menu avec un nom de votre lien, une adresse et la possibilité de mettre une icône personnalisée pour chaque lien.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajout-menu-de-contenu">Ajout menu de contenu</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/menus/add_content_menu.png" alt="" /></p><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nom</strong> : donnez un nom à votre menu
+</li><li class="formatter-li"><strong>Emplacement</strong> : choisissez l'emplacement de votre menu (cf plus haut)
+</li><li class="formatter-li"><strong>Contenu</strong> : mettez ici le contenu de votre menu, cela peut être du texte, des images, de la vidéos, du contenu html, etc...
+</li><li class="formatter-li"><strong>Statut</strong> : activé ou désactivé si vous souhaitez qu'ils soit affiché ou non sur le site
+</li><li class="formatter-li"><strong>Caché sur petit écran (mobile)</strong> : Si cette case est cochée, le menu ne sera pas affiché sur les écrans réduits.
+</li><li class="formatter-li"><strong>Autorisations</strong> : définissez ici quel type de membre peut voir ce menu.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajout-de-flux">Ajout de flux</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/menus/add_syndication_menu.png" alt="" /></p><br />
+<br />
+Vous pouvez créer un menu contenant l'un des flux de votre site.<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nom</strong> : donnez un nom à votre menu
+</li><li class="formatter-li"><strong>Emplacement</strong> : choisissez l'emplacement de votre menu (cf plus haut)
+</li><li class="formatter-li"><strong>Flux</strong> : choisissez parmi la liste le flux que vous souhaitez afficher
+</li><li class="formatter-li"><strong>Statut</strong> : activé ou désactivé si vous souhaitez qu'ils soit affiché ou non sur le site
+</li><li class="formatter-li"><strong>Caché sur petit écran (mobile)</strong> : Si cette case est cochée, le menu ne sera pas affiché sur les écrans réduits.
+</li><li class="formatter-li"><strong>Autorisations</strong> : définissez ici quel type de membre peut voir ce menu.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-filtres">Les filtres</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/menus/filters.jpg" alt="" /></p><br />
+<br />
+Les filtres vous permettent de définir sur quelle(s) page(s) devra/devront apparaître vos menus. Que ce soit sur des pages statiques, ou bien sur un ou des modules particulier.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966728</timestamp>
+  </article>
+</articles>

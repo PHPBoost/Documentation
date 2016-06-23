@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>328</id>
+    <id_contents>1569</id_contents>
+    <title><![CDATA[Fichier table.css]]></title>
+    <encoded_title><![CDATA[fichier-table-css]]></encoded_title>
+    <hits>120</hits>
+    <id_cat>63</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>63</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>215</cat_article_id>
+    <con_id_contents>1569</con_id_contents>
+    <con_id_article>328</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_affichage-des-tableaux-basic">Affichage des tableaux basic</a><ol class="wiki_list_2"><li><a href="#paragraph_entete-du-tableau">Entête du tableau</a></li><li><a href="#paragraph_le-contenu-du-tableau">Le contenu du tableau</a></li><li><a href="#paragraph_le-pied-de-tableau">Le pied de tableau</a></li><li><a href="#paragraph_patch-thead-tableaux-formates">Patch thead tableaux formates</a></li><li><a href="#paragraph_taille-des-colonnes">Taille des colonnes</a></li><li><a href="#paragraph_les-mini-tableaux">Les mini tableaux</a></li><li><a href="#paragraph_pagination-footer-tableaux">Pagination footer tableaux</a></li><li><a href="#paragraph_affichage-des-tableaux-responsive-sur-les-petits-ecrans">Affichage des tableaux responsive sur les petits ecrans</a></li></ol></li><li><a href="#paragraph_table-responsive-basictable-js">Table responsive basictable.js</a></li></ol>]]></menu>
+    <content><![CDATA[Le fichier <em>table.css</em> contient les éléments pour l'affichage des tableaux HTML et responsive.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_affichage-des-tableaux-basic">Affichage des tableaux basic</h1><br />
+
+<br />
+[[CODE=css]]table {
+    margin: 8px 0;
+    padding: 0;
+    width: 100%;
+    border-spacing: 0;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_entete-du-tableau">Entête du tableau</h2><br />
+
+[[CODE=css]]table caption {
+    margin: 5px 0 5px 20px;
+    border-bottom: 1px solid #D1D2D5;
+    color: #757679;
+    font-size: 13px;
+    text-align: left;
+}
+table thead th {
+    padding: 8px;
+    background-color: #4D4C50;
+    color: #E5E6E6;
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: normal;
+}
+table thead th:first-child { border-top-left-radius: 3px;  }
+table thead th:last-child  { border-top-right-radius: 3px; }
+table thead th a         { color: #E5E6E6; }
+table thead th a:hover     { color: #FFFFFF; }[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-contenu-du-tableau">Le contenu du tableau</h2><br />
+
+[[CODE=css]]table tbody td {
+    padding: 8px;
+    background-color: #F5F5F5;
+    border-top: 1px solid #D1D2D4;
+    border-left: 1px solid #D1D2D4;
+    color: #676A74;
+    text-align: center;
+}
+tr:nth-child(even) td {
+    background-color: #FFFFFF;
+}
+table tbody tr:last-child td {
+    border-bottom: 1px solid #D1D2D4;
+}
+table.bt tbody tr:last-child td {
+    border-bottom: none;
+}
+table.bt tbody tr:last-child td:last-child {
+    border-bottom: 1px solid #D1D2D4;
+}
+table tbody tr td:last-child {
+    border-right: 1px solid #D1D2D4;
+}
+table tbody tr.no-separator td {
+    border-top: none;
+}
+table tbody tr td.no-separator {
+    border-left: none;
+}
+table tbody tr td.no-separator:first-child {
+    border-left: 1px solid #D1D2D4;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-pied-de-tableau">Le pied de tableau</h2><br />
+
+[[CODE=css]]table tfoot tr th {
+    padding: 8px;
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #D1D2D4;
+    color: #AAAAAA;
+}
+table tfoot tr th:first-child {
+    border-left: 1px solid #D1D2D4;
+    border-bottom-left-radius: 3px;
+}
+table tfoot tr th:last-child {
+    border-right: 1px solid #D1D2D4;
+    border-bottom-right-radius: 3px;
+}
+table tfoot tr th:only-child {
+    text-align: right;
+}
+table tfoot tr th * {
+    vertical-align: middle;
+}
+table tfoot tr th a {
+    color: #676A74;
+}
+table tfoot tr th select {
+    padding: 2px 5px;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_patch-thead-tableaux-formates">Patch thead tableaux formates</h2><br />
+
+[[CODE=css]]table.formatter-table th.formatter-table-head {
+    padding: 8px;
+    background-color: #4D4C50;
+    color: #E5E6E6;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: normal;
+}
+table.formatter-table th.formatter-table-head:first-child { border-top-left-radius: 3px;  }
+table.formatter-table th.formatter-table-head:last-child  { border-top-right-radius: 3px; }
+table.formatter-table th.formatter-table-head a       {    color: #E5E6E6; }
+table.formatter-table th.formatter-table-head a:hover {    color: #FFFFFF; }
+table.formatter-table th.formatter-table-head p {
+    margin-bottom: 0;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_taille-des-colonnes">Taille des colonnes</h2><br />
+
+[[CODE=css]].col-smaller { width: 3em;  }
+.col-small   { width: 6em;  }
+.col-large   { width: 9em;  }
+.col-larger  { width: 12em; }
+.col-xlarge  { width: 15em; }[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-mini-tableaux">Les mini tableaux</h2><br />
+
+[[CODE=css]]table.mini th,
+table.mini td {
+    padding: 3px 1px;
+    font-size: 11px;
+}
+@media (max-width: 768px) {
+    table.mini th,
+    table.mini td {
+        padding: 7px 1px;
+    }
+}
+table.mini th a,
+table.mini td a {
+    font-size: 11px;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_pagination-footer-tableaux">Pagination footer tableaux</h2><br />
+
+[[CODE=css]]table tfoot nav.pagination a {
+    color: #8B8D90;
+    text-decoration: none;
+    padding: 3px 3px;
+}
+table tfoot nav.pagination a span.current-page {
+    color: #CED0D0;
+    text-decoration: none;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_affichage-des-tableaux-responsive-sur-les-petits-ecrans">Affichage des tableaux responsive sur les petits ecrans</h2><br />
+
+[[CODE=css]]@media (max-width: 768px) {
+    table thead th,
+    table tbody td,
+    table tfoot tr th {
+        padding: 4px;
+        font-size: 0.9em;
+    }
+}[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_table-responsive-basictable-js">Table responsive basictable.js</h1><br />
+
+<br />
+Afin de simplifier l'affichage des tableaux sur smartphone, nous avons choisis d'utiliser le plugin jQuery "basictable". il permet de basculer d'un affichage classique multi-colonne en un affichage condensé sur une colonne.<br />
+[[CODE=css]]table.bt thead th {
+    display: none;
+}
+table.bt thead th:first-child{
+    display: block;
+    border-radius: 0;
+}
+@media (min-width:769px){
+    table.bt thead th:first-child {
+        border-radius: 3px 3px 0 0;
+    }
+}
+table.bt tbody td {
+    display: block;
+    width: 100%;
+    border-right: 1px solid #D1D2D4;
+    text-align: left;
+    vertical-align: top;
+}
+table.bt tbody td.no-separator {
+    border-left: 1px solid #D1D2D4;
+}
+table.bt tbody td:before {
+    display: inline-block;
+    width: 35%;
+    content: attr(data-th) " ";
+    font-weight: bold;
+}
+table.bt tbody td.bt-hide {
+    display: none;
+}
+table.bt tbody td .bt-content {
+    display: inline-block;
+    padding-left: 6px;
+    max-width: 100%;
+    vertical-align: top;
+}
+.bt-wrapper.active {
+    max-height: 310px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>90.107.101.82</user_ip>
+    <timestamp>1457115308</timestamp>
+  </article>
+</articles>

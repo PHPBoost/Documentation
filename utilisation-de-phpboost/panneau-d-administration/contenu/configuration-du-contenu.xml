@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>123</id>
+    <id_contents>1665</id_contents>
+    <title><![CDATA[Configuration du contenu]]></title>
+    <encoded_title><![CDATA[configuration-du-contenu]]></encoded_title>
+    <hits>1302</hits>
+    <id_cat>18</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>18</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>18</cat_article_id>
+    <con_id_contents>1665</con_id_contents>
+    <con_id_article>123</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_langage-de-formatage">Langage de formatage</a></li><li><a href="#paragraph_langage-html">Langage HTML</a></li><li><a href="#paragraph_gestion-des-posts">Gestion des posts</a></li><li><a href="#paragraph_captcha">Captcha</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_langage-de-formatage">Langage de formatage</h1><br />
+
+<br />
+PHPBoost offre la possibilité de choisir entre plusieurs éditeurs destinés à faciliter la mise en page du contenu de vos publications. Par défaut, vous avez la possibilité de choisir entre deux éditeurs :<br />
+<br />
+BBCode :<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/content_config/bbcode.png" alt="" /></p><br />
+<br />
+TinyMCE :<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/content_config/tinymce.png" alt="" /></p><br />
+<br />
+Cette section, pour chacun des éditeurs, vous permet de définir les balises que les membres de votre site peuvent utiliser pour personnaliser l'affichage de leurs publications.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/content_config/format_lang.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_langage-html">Langage HTML</h1><br />
+
+<br />
+Avec PHPBoost vous pouvez autoriser l'insertion de langage html dans vos pages.<br />
+<br />
+<span class="warning">Le code HTML peut contenir du code Javascript pouvant constituer une faille de sécurité si quelqu'un y insère un code malveillant. Veillez donc à n'autoriser que les personnes de confiance à insérer du HTML !</span><br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/content_config/html_language.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-posts">Gestion des posts</h1><br />
+
+<br />
+<strong>Nombre maximum de messages privés :</strong> ne mettez pas un nombre trop important au risque de surcharger votre base de données si les utilisateurs ne suppriment pas régulièrement leurs messages privés. Pour les administrateurs et les modérateurs le nombre est illimité.<br />
+<br />
+<strong>Anti-flood :</strong> Empêche les messages trop rapprochés, sauf si les visiteurs sont autorisés. Cela évite qu'un utilisateur poste toutes les 5 secondes sur le forum par exemple.<br />
+<br />
+<strong>Intervalle minimal de temps, entre les messages :</strong> 7 secondes par défaut, cela sert à éviter qu'un utilisateur poste de manière trop rapprochée sur le forum et les commentaires, ainsi le risque de spam est diminué.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/content_config/posts_management.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_captcha">Captcha</h1><br />
+
+<br />
+La section captcha permet de définir le code de vérification utilisé sur votre site pour vous prémunir du spam.<br />
+Celui-ci n'est affiché que pour les visiteurs, les membres connectés n'ont pas besoin de rentrer de code.<br />
+<br />
+Plusieurs captchas sont disponibles :<br />
+<ul class="formatter-ul">
+    <li class="formatter-li"> <strong>QuestionCaptcha</strong> : questions/réponses configurables dans l'administration
+    </li><li class="formatter-li"> <strong>ReCaptcha</strong> : code évolué pouvant être visuel ou sonore<br />
+</li></ul><br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/content_config/captcha.png" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966766</timestamp>
+  </article>
+</articles>

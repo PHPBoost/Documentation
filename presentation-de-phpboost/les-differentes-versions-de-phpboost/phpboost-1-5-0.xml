@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>93</id>
+    <id_contents>137</id_contents>
+    <title><![CDATA[PHPBoost 1.5.0]]></title>
+    <encoded_title><![CDATA[phpboost-1-5-0]]></encoded_title>
+    <hits>703</hits>
+    <id_cat>14</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>14</cat_id>
+    <cat_id_parent>1</cat_id_parent>
+    <cat_article_id>14</cat_article_id>
+    <con_id_contents>137</con_id_contents>
+    <con_id_article>93</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_changelog">Changelog</a></li></ol>]]></menu>
+    <content><![CDATA[Sortie en juin 2006, PHPBoost 1.5.0 rime avec optimisation. Le maximum d'informations est mis en cache afin d'améliorer la rapidité, la réécriture des adresses (URL Rewriting) fait son apparition afin d'optimiser le référencement. La gestion de groupes d'utilisateurs est aussi gérée, afin de donner des autorisations spécifiques sur chaque catégorie du forum par exemple.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_changelog">Changelog</h1><br />
+
+<br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Système de sessions intégralement recodé. Suivi des utilisateurs plus précis et lien vers la page consultée par le membre dans l'administration
+	</li><li class="formatter-li">Gestion des groupes, avec autorisations d'accès, modération et autres options sur le forum accordés aux groupes paramétrable
+	</li><li class="formatter-li">Sondages sur le forum
+	</li><li class="formatter-li">Gestion de l'URL Rewriting
+	</li><li class="formatter-li">Gestion des catégories pour les articles
+	</li><li class="formatter-li">Système d'avertissements aux membres sur le forum (modérateur et administrateur), à 10 avertissements le membre est banni
+	</li><li class="formatter-li">Affichage date/heure, et éditeur d'un message sur le forum. Activable/désactivable suivant configuration. Possibilité de supprimer le marqueur d'édition pour les membres d'un groupe
+	</li><li class="formatter-li">Activation du compte membre par lien envoyé par mail. (Activable/désactivable)
+	</li><li class="formatter-li">Liste déroulante pour changer facilement, et instantanément de forum
+	</li><li class="formatter-li">Système de mise en cache des requêtes SQL "statiques"
+	</li><li class="formatter-li">Nouvelles architectures orientées objets: SQL, sessions, pagination, mails, benchmark du site, et RSS
+	</li><li class="formatter-li">Connexion avec les cookies bloqués possible
+	</li><li class="formatter-li">Possibilité de mettre un règlement à accepter à l'inscription
+	</li><li class="formatter-li">Nouvelle balise Flash <em>[swf]</em>
+	</li><li class="formatter-li">Nouveau champ Biographie dans le profil membre pour se décrire
+	</li><li class="formatter-li">Vue de la dernière connexion dans la liste des membres et tri possible sur cette date
+	</li><li class="formatter-li">Reprise du message de la page précédente sur le forum
+	</li><li class="formatter-li">Possibilité de modifier l'adresse des liens ajoutés dans l'administration
+	</li><li class="formatter-li">Nouvelle fonction d'ouverture des photos de la galerie en popup (plus grande)
+	</li><li class="formatter-li">Statistique : Nombre de visites totales depuis le lancement du site
+	</li><li class="formatter-li">Statistique : Provenance géographique des visiteurs. 
+	</li><li class="formatter-li">Statistique : Vue du graphique de visites sur les mois en plus des jours
+	</li><li class="formatter-li">Possibilité de modifier la durée de validité du cookie des sondages
+	</li><li class="formatter-li">Nouveaux boutons sur le forum pour tous les statuts, bouton clignotant pour les sujets de plus d'une page
+	</li><li class="formatter-li">Passage automatique des URLs sans la balise <em>[url]</em>
+	</li><li class="formatter-li">Détection des robots d'exploration par plage IP, ajout de nouveaux robots
+	</li><li class="formatter-li">Meilleure intégration du moteur de recherche dans le forum
+	</li><li class="formatter-li">Nouvelle interface pour la gestion des catégories du forum
+	</li><li class="formatter-li">Corrections et améliorations du fonctionnement des messages vu/non vus
+	</li><li class="formatter-li">Améliorations de la fonction d'insertion du BBcode
+	</li><li class="formatter-li">Nombreuses optimisations SQL, et optimisations du code
+	</li><li class="formatter-li">Code HTML et CSS en partie recodé
+	</li><li class="formatter-li">5 nouveaux smileys, nouvelles icônes sur le forum<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>82.124.181.87</user_ip>
+    <timestamp>1346007468</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>124</id>
+    <id_contents>1659</id_contents>
+    <title><![CDATA[Mises à jour]]></title>
+    <encoded_title><![CDATA[mises-a-jour]]></encoded_title>
+    <hits>547</hits>
+    <id_cat>83</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>83</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>315</cat_article_id>
+    <con_id_contents>1659</con_id_contents>
+    <con_id_article>124</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_mises-a-jour-disponibles">Mises à jour disponibles</a></li><li><a href="#paragraph_pas-de-mise-a-jour-disponible">Pas de mise à jour disponible</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_mises-a-jour-disponibles">Mises à jour disponibles</h1><br />
+
+<br />
+Vous allez être averti lorsqu'une mise à jour du noyau, d'un module ou d'un  thème va être disponible au niveau du menu 'connexion' lorsque vous êtes connecté avec un chiffre à côté de 'Panneau d'administration ' : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/updates/alert.png" alt="" /></p><br />
+<br />
+Puis si une mise à jour est disponible, elle s'affichera dans les alertes : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/updates/alerts.png" alt="" /></p><br />
+<br />
+Vous pouvez également vous rendre sur la page : "Outils/Mises à jour" et vous verrez les mises à jour disponibles : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/updates/updates.png" alt="" /></p><br />
+<br />
+Pour chaque mise à jour, vous allez avoir <br />
+<ul class="formatter-ul">
+<li class="formatter-li">le type de mise à jour : noyau, modules, thèmes
+</li><li class="formatter-li">un descriptif avec un lien détail pour plus de précision
+</li><li class="formatter-li">un niveau de priorité pour effectuer la mise à jour
+</li><li class="formatter-li">un lien vers le téléchargement<br />
+</li></ul><br />
+<br />
+<span class="notice">Les mises à jour noyau, modules et thèmes auront la même présentation, nous n'allons ici traiter qu'une mise à jour noyau.</span><br />
+<br />
+Voyons le détail d'une mise à jour : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/updates/update_info.png" alt="" /></p><br />
+<br />
+L'affichage est divisé en 2 : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <strong>à gauche</strong> se trouve le descriptif et un conseil pour l'installation
+</li><li class="formatter-li"><strong>à droite</strong> se trouve une zone de téléchargement de la mise à jour, la liste des auteurs.<br />
+</li></ul><br />
+<br />
+Il suffit alors de télécharger la mise à jour et d'appliquer le correctif comme cela sera signalé sur la fiche.<br />
+<br />
+Une fois la mise à jour appliquée, l'alerte mise à jour disparaitra.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_pas-de-mise-a-jour-disponible">Pas de mise à jour disponible</h1><br />
+
+<br />
+S'il n'y a pas de mise à jour disponible, au niveau de la section mise à jour, vous aurez ce message : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/updates/no_updates.png" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966624</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>258</id>
+    <id_contents>1699</id_contents>
+    <title><![CDATA[Administration du module News]]></title>
+    <encoded_title><![CDATA[administration-du-module-news]]></encoded_title>
+    <hits>1257</hits>
+    <id_cat>39</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>39</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>119</cat_article_id>
+    <con_id_contents>1699</con_id_contents>
+    <con_id_article>258</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration">Configuration</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_categories">Catégories</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li></ol></li><li><a href="#paragraph_ajout-d-une-news">Ajout d'une News</a></li><li><a href="#paragraph_gerer-les-news">Gérer les news</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration">Configuration</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration">Configuration</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/admin_config.png" alt="" /></p><br />
+<strong>Paramètres :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nombre d'éléments affichés par page</strong> : nombre maximum de news qui seront affichés par page lors de la navigation dans une catégorie.
+</li><li class="formatter-li"><strong>Nombre de colonnes pour afficher les news</strong> : Permet d'afficher les news sur 1, 2, 3 ou 4 colonnes lors de la navigation dans une catégorie.
+</li><li class="formatter-li"><strong>Afficher le condensé de la news et non la news entière</strong> : Si cette case est activée, dans une catégorie, seuls les condensés des news seront affichés et non pas la news entière.<br />
+<span class="notice">Dans l'affichage condensé, le formatage des news n'est pas affiché</span><br />
+Cette option affichera les options suivantes :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Afficher le condensé des news aux visiteurs s'ils n'ont pas l'autorisation de lecture</strong> : Si cette case est activée et que les visiteurs n'ont pas les droits de lecture sur les news, le condensé leur sera tout de même affiché. Ils ne pourront en revanche toujours pas consulter la news complète.
+</li><li class="formatter-li"><strong>Nombre de caractères pour couper la news</strong> : Défini le nombre de caractères affichés dans le condensé de la news. A noter que pour chaque news, vous pourrez définir un condensé personel.<br />
+</li></ul>
+</li><li class="formatter-li"><strong>Activer les commentaires</strong> : Permet à vos membres de commenter les liens.
+</li><li class="formatter-li"><strong>Activer l'affichage des suggestions</strong> : Si cette case est activée, des liens vers des news en rapport avec la news en cours de lecture seront proposés en dessous de celle-ci.
+</li><li class="formatter-li"><strong>Afficher le nom de l'auteur</strong> : Afficher ou non le nom de l'auteur sur la page de visualisation d'un fichier
+</li><li class="formatter-li"><strong>Type d'affichage</strong> : Permet de définir le type d'affichage des news lors de la navigation dans une catégorie (en liste / en bloc).<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/admin_auths.png" alt="" /></p><br />
+<br />
+Vous pouvez définir ici les autorisations globales du module, à savoir les droits de :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Lecture : visualiser les news
+</li><li class="formatter-li">Écriture : ajouter une news
+</li><li class="formatter-li">Contribution : soumettre une news à la validation
+</li><li class="formatter-li">Modération : supprimer, modifier et valider les news<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_categories">Catégories</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-categories">Gestion des catégories</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/admin_cats_management.png" alt="" /></p><br />
+<br />
+Ici vous pouvez voir toutes les catégories et sous catégories de votre module Multimédia.<br />
+<br />
+Voici à quoi correspondent les boutons d'administration : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrows"></i>
+<!-- END HTML --> : permet de déplacer chaque élément là où vous le souhaitez, en cliquant dessus puis en le lâchant lorsqu'il est bien place (technique du glisser/déposer)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-up"></i>
+<!-- END HTML --> : sert à déplacer vers le haut une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML --> : sert à déplacer vers le bas une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> : sert à éditer un élément pour modifier son titre, sa catégorie, ses autorisation,...)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> : sert à supprimer une catégorie.<br />
+<span class="notice">Si la catégorie contient des news, lors de la suppression, il vous sera proposé de les transférer dans une autre catégorie<br />
+</span><br />
+</li></ul><br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/admin_del_category.png" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/admin_add_cat.png" alt="" /></p><br />
+<br />
+<strong>Champs à renseigner :</strong><br />
+<br />
+<strong>Nom</strong> : Titre de la catégorie<br />
+<strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.<br />
+<strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre catégorie. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-).<br />
+<strong>Emplacement</strong> : où se situera votre élément.<br />
+<strong>Description</strong> : vous pouvez mettre une petite description de votre catégorie. Cette description se trouvera au-dessus des questions de votre catégorie.<br />
+<strong>Image</strong> : vous permet d'associer une image à votre catégorie. Veillez à ne pas mettre d'images trop grosses afin de ne pas gêner la navigation des membres. Juste en dessous, vous pourrez voir une prévisualisation de cette image.<br />
+<br />
+<strong>Autorisations</strong> : Enfin, en cliquant sur la checkbox, vous pourrez définir des autorisations spécifiques à cette catégorie.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajout-d-une-news">Ajout d'une News</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/add_news.png" alt="" /></p><br />
+<strong>Champs à renseigner :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nom</strong> : Titre de votre news
+</li><li class="formatter-li"><strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.
+</li><li class="formatter-li"><strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre news. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-).
+</li><li class="formatter-li"><strong>Emplacement</strong> : catégorie dans laquelle sera mis l'actualité.
+</li><li class="formatter-li"><strong>Contenu</strong> : Contenu de la news
+</li><li class="formatter-li"><strong>Personnaliser le condensé de la news</strong> : A activer si vous souhaitez personnaliser le condensé de la news. Dans le cas contraire, et si l'affichage des condensés est activé, la news sera coupé à un certain nombre de caractère défini dans la configuration.
+</li><li class="formatter-li"><strong>Image</strong> : vous permet d'afficher une image au dessus de votre news. Juste en dessous, vous pourrez voir une prévisualisation de cette image.
+</li><li class="formatter-li"><strong>Mots clés </strong>: Entrez ici les quelques mots-clés qui correspondent à votre news.
+</li><li class="formatter-li"><strong>Source</strong> : vous pouvez ajouter les sources éventuelles de l'actualité (c'est-à-dire si la news n'est pas de vous, mais que vous l'avez pioché sur un site tiers)
+</li><li class="formatter-li"><strong>Date de création</strong> : Vous pouvez définir l'heure et la date de création si celle d'origine ne vous convient pas.
+</li><li class="formatter-li"><strong>Publication</strong> : Vous pouvez garder cette news en Brouillon, la publier maintenant ou différer sa publication. Dans ce cas, il vous sera demandé la date et heure de parution souhaitée.<br />
+Enfin, vous pourrez définir une date de fin de parution si vous souhaitez que la news ne soit plus disponible après un certain temps.
+</li><li class="formatter-li"><strong>Placer la news en tête de liste</strong> : Si cette case est cochée, cette news sera visible avant les autres.<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gerer-les-news">Gérer les news</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/news/management.png" alt="" /></p><br />
+<br />
+Vous trouverez ici toutes les news contenus dans votre module, classés par ordre chronologique descendant, avec ces quelques informations :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Le titre
+</li><li class="formatter-li">La catégorie, ou sous-catégorie
+</li><li class="formatter-li">L'auteur
+</li><li class="formatter-li">La date de création
+</li><li class="formatter-li">Le statut
+</li><li class="formatter-li"><!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> Modifier la news
+</li><li class="formatter-li"><!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML -->Supprimer la news<br />
+</li></ul><br />
+Une petite précision est nécessaire pour la <strong>catégorie</strong>. En effet, comme vous l'avez-vu, seule est indiquée la catégorie <em>parente et directe</em> de la news. Le chemin complet n'est donc pas spécifié. Si vous voulez avoir plus d'informations sur la catégorie d'une news en particulier, vous pouvez cliquer sur le nom de la catégorie dans le tableau, ce qui vous redirigera vers l'écran de la catégorie. De même, en cliquant sur le nom de la news, vous pouvez bien sûr accéder à l'actualité elle-même.<br />
+<br />
+<span class="question"><strong>Le statut ???</strong></span><br />
+Cette valeur vous permet, si par exemple vous commencez à rédiger une news, de la mettre en ligne afin de la modifier plus tard sans toutefois la mettre en libre accès aux visiteurs et aux membres. Elle ne sera donc pas approuvée et ne sera visible que par vous.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.210.149</user_ip>
+    <timestamp>1461758316</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>316</id>
+    <id_contents>1655</id_contents>
+    <title><![CDATA[Alertes]]></title>
+    <encoded_title><![CDATA[alertes]]></encoded_title>
+    <hits>142</hits>
+    <id_cat>83</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>83</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>315</cat_article_id>
+    <con_id_contents>1655</con_id_contents>
+    <con_id_article>316</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_alerte">Alerte</a></li><li><a href="#paragraph_aucune-alerte">Aucune alerte</a></li></ol>]]></menu>
+    <content><![CDATA[PHPBoost est doté d'un système permettant d'envoyer des alertes aux administrateurs. Ce système est notamment utilisé quand un utilisateur souhaite s'inscrire et qu'il faut l'approbation d'un administrateur ou bien encore pour alerter d'une mise à jour d'un module ou de PHPBoost.<br />
+Cette page recense les alertes qui n'ont pas été prises en charge par les administrateurs de votre site.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_alerte">Alerte</h1><br />
+
+<br />
+Lorsqu'une alerte est signalée sur votre site, elle s'affiche sous cette forme :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/alerts/alert.png" alt="" /></p><br />
+<br />
+Les 4 colonnes repésentent :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Type : Type et description de l'alerte (Mise à jour, attente de validation d'inscription d'un membre, ..)
+</li><li class="formatter-li"> Date : Date et heure à laquelle l'alerte a été signalée
+</li><li class="formatter-li"> Priorité : Priorité de l'alerte
+</li><li class="formatter-li"> Actions : Actions possibles pour l'alerte (supprimer, ..)<br />
+</li></ul><br />
+<br />
+En cliquant sur son nom, vous serez redirigé vers la page permettant de remédier à cette alerte.<br />
+Si vous ne souhaitez pas donner suite à cette alerte, il suffit de cliquer sur l'icône <!-- START HTML -->
+<i class="fa fa-error"></i>
+<!-- END HTML --> afin de supprimer l'alerte. Celle-ci ne réapparaitra plus.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_aucune-alerte">Aucune alerte</h1><br />
+
+<br />
+Si aucune alerte n'est disponible, la page se présentera comme ceci :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/alerts/no_alert.png" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966513</timestamp>
+  </article>
+</articles>

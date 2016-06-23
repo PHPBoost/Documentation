@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>149</id>
+    <id_contents>504</id_contents>
+    <title><![CDATA[Mise en place du ModuleSetup]]></title>
+    <encoded_title><![CDATA[mise-en-place-du-modulesetup]]></encoded_title>
+    <hits>1678</hits>
+    <id_cat>7</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>7</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>7</cat_article_id>
+    <con_id_contents>504</con_id_contents>
+    <con_id_article>149</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_le-fonctionnement">Le fonctionnement</a></li><li><a href="#paragraph_la-mise-a-jour-d-un-module">La mise à jour d'un module</a></li></ol>]]></menu>
+    <content><![CDATA[Dans la version 3.0, nous n'avions pas la possibilité de personnaliser l'installation et la désinstallation d'un module, outre le fait de travailler avec des fichiers SQL.<br />
+<br />
+Dans la version 4.0, nous avons intégré un nouveau système qui permet d'aller bien plus loin : Le <em>ModuleSetup</em>.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-fonctionnement">Le fonctionnement</h1><br />
+
+<br />
+Il faut créer un fichier <strong>LeNomDeVotreModuleSetup.class.php</strong> qui contiendra une classe du même nom.<br />
+<br />
+Cette classe est une <strong>classe fille de DefaultModuleSetup</strong> et devra contenir une fonction install() et uninstall().<br />
+<br />
+Pour plus de clarté dans votre module, créez un dossier <em>phpboost</em> à sa racine et placez-y votre classe.<br />
+<br />
+Exemple :<br />
+<br />
+[[CODE=php]]&lt;?php
+class MonModuleSetup extends DefaultModuleSetup
+{
+	public function install()
+	{
+		
+	}
+
+	public function uninstall()
+	{
+		
+	}
+}
+?&gt;[[/CODE]]<br />
+<br />
+A chaque installation, et à chaque désinstallation, se fichier sera appelé. C'est donc à l'intérieur des deux fonctions que vous allez exécuter les différentes tâches que vous souhaitez faire. Créer des tables, les supprimer, etc.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-mise-a-jour-d-un-module">La mise à jour d'un module</h1><br />
+
+<br />
+Vous allez également pouvoir faire les mises à jour de votre module à travers ce fichier en rajoutant une fonction upgrade() :<br />
+<br />
+[[CODE=php]]
+public function upgrade($installed_version)
+{
+	return null;
+}[[/CODE]]<br />
+<br />
+De cette manière, l'utilisateur qui mettra à jour le module à travers l'administration, ne perdra pas ses données en cas de changement au niveau des tables ou autres. C'est maintenant à vous de procéder à la conversion des différents éléments.<br />
+<br />
+L'argument passé en paramètre renvoi le numéro de version installée sur le serveur de l'utilisateur. En valeur de retour, il faudra renvoyer le nouveau numéro de version. Si la fonction ne retourne rien ou est nulle, alors la page de mise à jour renverra une erreur à l'utilisateur.]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.12</user_ip>
+    <timestamp>1353926601</timestamp>
+  </article>
+</articles>

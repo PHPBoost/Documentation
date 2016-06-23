@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>38</id>
+    <id_contents>1634</id_contents>
+    <title><![CDATA[Utilisation du module En ligne]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-en-ligne]]></encoded_title>
+    <hits>566</hits>
+    <id_cat>23</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>23</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>34</cat_article_id>
+    <con_id_contents>1634</con_id_contents>
+    <con_id_article>38</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Sur la page d'accueil, si le bloc 'En ligne' est activé par l'administrateur, vous allez pouvoir voir le nombre d'utilisateurs en ligne sur le site, ainsi que leur rang, avec un lien vers leur profil.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/online/menu.png" alt="" /></p><br />
+<br />
+Si le quota de membres est supérieur à celui décidé par l'administrateur, il s'affichera sous les pseudos un lien 'Membres en ligne' <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/online/menu_quota.png" alt="" /></p><br />
+<br />
+Ce lien renvoie vers la page /online/ qui contient la liste de tous les membres présents sur le site et la page sur laquelle ils naviguent.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/online/home.png" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965729</timestamp>
+  </article>
+</articles>

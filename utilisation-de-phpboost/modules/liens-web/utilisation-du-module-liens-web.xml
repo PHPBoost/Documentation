@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>53</id>
+    <id_contents>1689</id_contents>
+    <title><![CDATA[Utilisation du module Liens Web]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-liens-web]]></encoded_title>
+    <hits>621</hits>
+    <id_cat>27</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>27</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>51</cat_article_id>
+    <con_id_contents>1689</con_id_contents>
+    <con_id_article>53</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_les-categories">Les catégories</a></li><li><a href="#paragraph_liens-d-une-categorie">Liens d'une catégorie</a></li><li><a href="#paragraph_visiter-un-lien">Visiter un lien</a></li><li><a href="#paragraph_le-menu-partenaires">Le Menu Partenaires</a></li></ol>]]></menu>
+    <content><![CDATA[Il est toujours intéressant de consulter une rubrique de gestion de liens d'un site, que ce soit par curiosité ou approfondir ses connaissances dans un domaine traité par le site que l'on consulte.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-categories">Les catégories</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/home.png" alt="" /></p><br />
+La page d'accueil des liens web propose les différentes catégories de liens, avec, si l'administrateur l'a complété ou non, un petit descriptif pour chaque catégorie.<br />
+<br />
+Pour accéder à une catégorie, il vous suffit de cliquer sur celle-ci.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_liens-d-une-categorie">Liens d'une catégorie</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/category_links_table.png" alt="" /></p><br />
+Les liens sont classés par ordre chronologique.<br />
+Pour accéder à un lien, cliquez sur celui-ci.<br />
+<br />
+<span class="notice">Il se peut que vous ayez un affichage différent de celui présenté sur l'image ci-dessus.<br />
+Rappelez-vous qu'il est possible de modifier l'apparence des catégories dans la <a href="/wiki/administration-du-module-liens-web#paragraph_configuration">configuration du module</a>.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_visiter-un-lien">Visiter un lien</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/link_details.png" alt="" /></p><br />
+Vous avez, pour chaque lien, une petite description ainsi qu'un lien "visiter". Au dessous, vous avez l'adresse vers laquelle vous allez être dirigé.<br />
+<br />
+Il est possible de noter le lien entre 0 et le nombre maximal d'étoiles défini dans <a href="/wiki/administration-du-module-liens-web">l'administration du module liens web</a>.<br />
+<br />
+Chaque utilisateur peut laisser un commentaire selon les autorisations mises par l'administrateur.<br />
+Pour poster un commentaire il faut cliquer sur "poster un commentaire", un éditeur vous permettra d'écrire un nouveau commentaire et plus bas les commentaires déjà présents sont affichés.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-menu-partenaires">Le Menu Partenaires</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/web/partners.png" alt="" /></p><br />
+<br />
+Ce menu inclus avec le module Liens Web vous permet d'afficher les sites définis comme partenaires.<br />
+Rappelez-vous que les partenaires privilégiés seront toujours affichés avant les autres.<br />
+<br />
+Vous pouvez le configurer dans <a href="/wiki/administration-du-module-liens-web#paragraph_menu-partenaires">l'administration du module liens web</a>.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.138.53</user_ip>
+    <timestamp>1460641579</timestamp>
+  </article>
+</articles>

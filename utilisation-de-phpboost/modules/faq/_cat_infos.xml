@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>39</id>
+    <id_contents>1630</id_contents>
+    <title><![CDATA[FAQ]]></title>
+    <encoded_title><![CDATA[faq]]></encoded_title>
+    <hits>943</hits>
+    <id_cat>24</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>24</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>39</cat_article_id>
+    <con_id_contents>1630</con_id_contents>
+    <con_id_article>39</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<table class="formatter-table" style="float:right;width:50%;">
+   <tr class="formatter-table-row">
+      <th class="formatter-table-head" colspan="2">FAQ</th>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Auteur</td>
+      <td class="formatter-table-col"><a href="/user/profile/2">ben.popeye</a></td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Version actuelle</td>
+      <td class="formatter-table-col">5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Compatibilité</td>
+      <td class="formatter-table-col">PHPBoost 5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Démonstration</td>
+      <td class="formatter-table-col"><a href="http://demo.phpboost.com/faq/">Module FAQ</a></td>
+   </tr>
+</table><br />
+<br />
+<p style="text-align:center"><br />
+   <span style="font-size: 20px;"><strong>Module FAQ</strong></span><br />
+   <img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/logo.png" alt="" /><br />
+</p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<strong>Description :</strong> Ce module vous permet de créer une Foire Aux Questions dans laquelle vous pourrez apporter une réponse aux questions fréquemment posées.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965650</timestamp>
+  </article>
+</articles>

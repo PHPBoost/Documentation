@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>49</id>
+    <id_contents>1675</id_contents>
+    <title><![CDATA[Administration du module Galerie]]></title>
+    <encoded_title><![CDATA[administration-du-module-galerie]]></encoded_title>
+    <hits>1817</hits>
+    <id_cat>26</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>26</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>48</cat_article_id>
+    <con_id_contents>1675</con_id_contents>
+    <con_id_article>49</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-galerie">Configuration de la galerie</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-generale">Configuration générale</a></li><li><a href="#paragraph_options-d-affichage">Options d'affichage</a></li><li><a href="#paragraph_defilement-des-miniatures">Défilement des miniatures</a></li><li><a href="#paragraph_protection-des-images">Protection des images</a></li><li><a href="#paragraph_upload-des-images">Upload des images</a></li><li><a href="#paragraph_protection-des-images">Protection des images</a></li><li><a href="#paragraph_cache">Cache</a></li></ol></li><li><a href="#paragraph_gestion-des-categories">Gestion des catégories</a></li><li><a href="#paragraph_ajouter-une-categorie">Ajouter une catégorie</a></li><li><a href="#paragraph_gestion-de-la-galerie">Gestion de la galerie</a></li><li><a href="#paragraph_ajout-d-images">Ajout d'images</a><ol class="wiki_list_2"><li><a href="#paragraph_ajouter-une-image">Ajouter une image</a></li><li><a href="#paragraph_images-disponibles-sur-le-serveur">Images disponibles sur le serveur</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration-de-la-galerie">Configuration de la galerie</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-generale">Configuration générale</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_general_config.png" alt="" /></p><br />
+<strong>Paramètres :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li">Largeur max photos : taille à mettre en pixels. Évitez de dépasser 800px pour garder une bonne visualisation des pages.
+</li><li class="formatter-li">Hauteur max photos : taille à mettre en pixels. Évitez de dépasser 600px pour garder une bonne visualisation des pages.
+</li><li class="formatter-li">Hauteur max miniatures : taille à mettre en pixels. La taille conseillée est de 150 pixels.
+</li><li class="formatter-li">Largeur max miniatures : taille à mettre en pixels. La taille conseillée est de 150 pixels.
+</li><li class="formatter-li">Poids max de la photo : 1024ko est un bon compromis, attention aux images trop grosses qui ralentiront l'affichage des pages.
+</li><li class="formatter-li">Qualité miniatures (80% par défaut) : Baissez la qualité des miniatures permet de diminuer la taille des images et ainsi permettre un affichage de la page plus rapide.
+</li><li class="formatter-li">Nombre de colonnes (4 par défaut) : nombre de colonnes de miniatures dans les catégories.
+</li><li class="formatter-li">Nombre de photos par page : nombre maximum de miniatures qui seront affichées par page de catégorie. S'il y a plus de photos que le nombre que vous aurez fixé ici, un système de pagination prendra le relais et vous aurez la possibilité d'afficher les autres pages de photos de la catégorie.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_options-d-affichage">Options d'affichage</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_display_option.png" alt="" /></p><br />
+<strong>Mode d'agrandissement des images :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Nouvelle page : ouvre l'image dans une page de phpboost AVEC toutes les caractéristiques de l'image sous celle-ci.
+</li><li class="formatter-li"> Redimensionnement : ouvre l'image dans une page de phpboost SANS toutes les caractéristiques de l'image sous celle-ci.
+</li><li class="formatter-li"> Popup : ouvre l'image dans une nouvelle fenêtre.
+</li><li class="formatter-li"> Plein écran : ouvre l'image dans une nouvelle fenêtre noire avec l'image au centre.<br />
+</li></ul><br />
+<br />
+<strong>Autres paramètres :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li">Activer les Titres : Afficher ou non le nom de la photo sous la miniature
+</li><li class="formatter-li">Activer l'affichage du posteur : Afficher ou non le nom du posteur de la photo sous la miniature
+</li><li class="formatter-li">Activer le compteur de vue(s) : Afficher ou non le nombre de vue(s) de la photo sous la miniature
+</li><li class="formatter-li">Activer les commentaires : permettre aux membres de commenter les photos
+</li><li class="formatter-li">Activer la notation : activer ou non la moyenne des notes attribuées à la photo sous la miniature
+</li><li class="formatter-li">Afficher le nombre de notes
+</li><li class="formatter-li">Échelle de notation  : Note maximale que peut avoir une image. (5 par défaut)<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_defilement-des-miniatures">Défilement des miniatures</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_scrolling_thumbnails.png" alt="" /></p><br />
+Cette zone correspond au mini module galerie que l'on peut positionner dans différentes zones du site selon le choix de l'administrateur du site. Dans ce mini module sont affichées des miniatures des images de la galerie.<br />
+<br />
+<strong> Type de défilement </strong> : <br />
+<ul class="formatter-ul">
+<li class="formatter-li">Défilement statique : les miniatures changent sans effet visuel.
+</li><li class="formatter-li">Défilement dynamique vertical: les miniatures défilent de bas en haut dans le bloc
+</li><li class="formatter-li">Défilement dynamique horizontal: les miniatures défilent de gauche à droite dans le bloc
+</li><li class="formatter-li">Aucun défilement : les images ne défilent pas<br />
+</li></ul><br />
+<br />
+<strong>Autres paramètres :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li">Nombre de miniatures  : Nombre de miniatures que vous souhaitez voir apparaitre dans le mini module 'Galerie'.
+</li><li class="formatter-li">Vitesse du défilement : Vitesse du défilement des images dans votre mini module si vous avez configuré en dynamique. La vitesse maximale est de 10, 6 étant un bon compromis.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_protection-des-images">Protection des images</h2><br />
+
+<br />
+La galerie vous offre la possibilité de marquer vos images avec un logo afin que quelqu'un d'autre ne les utilise pas en les faisant passer pour sienne :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_pictures_protection.png" alt="" /></p><br />
+<strong>Paramètres :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li">Activer Logo  : un logo sera incrusté en bas à droite sur la photo
+</li><li class="formatter-li">Adresse du logo : Vous pouvez créer votre propre logo. Mettez le dans le dossier /gallery et indiquez ici son nom. Attention, veillez à ne pas avoir un logo immense sous risque de couvrir une grosse partie la photo.
+</li><li class="formatter-li">Transparence du logo (60% par défaut) : définissez ici le pourcentage de transparence du logo sur votre image.
+</li><li class="formatter-li">Distance horizontale (par rapport au coin inférieur droit) : définissez ici en pixels la distance qui séparera le logo de la partie latérale droite de votre image.
+</li><li class="formatter-li">Distance verticale : par rapport au coin inférieur droit) : définissez ici en pixels la distance qui séparera le logo de la partie inférieure droite de votre image.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_upload-des-images">Upload des images</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_upload_pictures.png" alt="" /></p><br />
+<strong>Paramètres :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li">Nombre de photos maximum (membres) : nombre maximal d'images qu'un membre pourra proposer dans la galerie. Ce sera illimité si les invités y seront autorisés
+</li><li class="formatter-li">Nombre de photos maximum (modérateurs) : nombre maximal d'images qu'un modérateur pourra proposer dans la galerie<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_protection-des-images">Protection des images</h2><br />
+
+<br />
+Permissions globales de la galerie :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_auths.png" alt="" /></p><br />
+<br />
+Ici vous pourrez définir quels rangs et quels groupes ont le droit de Lecture, d' Envoi d'images et de Modérer les images.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_cache">Cache</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_configuration_cache_config.png" alt="" /></p><br />
+Vous allez pouvoir vider le cache si vous avez changé la configuration des miniatures. Elles seront ainsi régénérées sous la nouvelle configuration.<br />
+Par la même occasion, les images seront recomptées.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-categories">Gestion des catégories</h1><br />
+
+ <br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_cat_managment.png" alt="" /></p><br />
+<br />
+Ici vous pouvez voir toutes les catégories et sous catégories de votre module Galerie.<br />
+<br />
+Voici à quoi correspondent les boutons d'administration : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrows"></i>
+<!-- END HTML --> : permet de déplacer chaque élément là où vous le souhaitez, en cliquant dessus puis en le lâchant lorsqu'il est bien place (technique du glisser/déposer)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-up"></i>
+<!-- END HTML --> : sert à déplacer vers le haut une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML --> : sert à déplacer vers le bas une catégorie.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> : sert à éditer un élément pour modifier son titre, sa catégorie, ses autorisation,...)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> : sert à supprimer une catégorie.<br />
+<span class="notice">Si la catégorie contient des images, lors de la suppression, il vous sera proposé de transférer les images ou les sous catégories dans une autre catégorie<br />
+</span><br />
+</li></ul><br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_would_you_mode_file.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-une-categorie">Ajouter une catégorie</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_add_new_cat.png" alt="" /></p><br />
+<strong>Champs à renseigner :</strong><br />
+<br />
+<strong>Nom</strong> : Titre de la catégorie<br />
+<strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.<br />
+<strong>Nom réécrit dans l'url</strong> : visible uniquement si vous activez la case précédente, vous pourrez entrer dans ce champ texte une url personnalisée pour votre catégorie. Ne doit contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-).<br />
+<strong>Emplacement</strong> : où se situera votre élément.<br />
+<strong>Description</strong> : vous pouvez mettre une petite description de votre catégorie. Cette description se trouvera au-dessus des questions de votre catégorie.<br />
+<strong>Image</strong> : vous permet d'associer une image à votre catégorie. Veillez à ne pas mettre d'images trop grosses afin de ne pas gêner la navigation des membres. Juste en dessous, vous pourrez voir une prévisualisation de cette image.<br />
+<br />
+<strong>Autorisations</strong> : Enfin, en cliquant sur la checkbox, vous pourrez définir des autorisations sur la lecture ou l'envoi d'images spécifiquement à cette catégorie.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-de-la-galerie">Gestion de la galerie</h1><br />
+
+<br />
+Dans cette zone, vous pouvez parcourir toutes les catégories (albums) avec toutes les images de votre galerie. Vous pourrez pour chaque catégorie et chaque image les administrer.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_managment.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajout-d-images">Ajout d'images</h1><br />
+
+<br />
+<strong>Vous avez 2 moyens d'ajouter des images dans votre galerie : </strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li">ajouter chaque image via l'upload d'image de la galerie
+</li><li class="formatter-li">ajouter toutes vos images sur votre FTP dans le répertoire /gallery/pics/ de votre serveur puis validez les via le panel d'admin du module galerie.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-une-image">Ajouter une image</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/gallery/gallery_add_picture.png" alt="" /></p><br />
+<br />
+<strong>Paramètres des images :</strong><br />
+<ul class="formatter-ul"><li class="formatter-li">Extensions autorisées : JPEG, GIF, PNG, toutes les autres extensions d'images ne peuvent être intégrées dans la galerie.
+</li><li class="formatter-li">Poids max de la photo  : 1024 ko par défaut, attention aux poids des photos trop grandes qui peuvent ralentir l'affichage des pages.
+</li><li class="formatter-li">Largeur max photos :  800 px par défaut
+</li><li class="formatter-li">Hauteur max photos: 600 px par défaut<br />
+</li></ul><br />
+<br />
+<strong>Champs à renseigner :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li">Emplacement : Choisissez dans quel album (catégorie) vous souhaitez placer votre image.
+</li><li class="formatter-li">Nom : inscrivez ici le nom de votre image.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_images-disponibles-sur-le-serveur">Images disponibles sur le serveur</h2><br />
+
+<br />
+Moyen simple d'ajouter une grande quantité d'images dans votre galerie. Uploadez toutes vos images sur votre FTP dans le répertoire ../gallery/pics/ de votre serveur.<br />
+Vous verrez alors s'afficher sur cette page toutes les images en attente d'être insérées dans la galerie.<br />
+Pour chacune, nommez la et choisissez la catégorie dans laquelle elle sera placée.<br />
+<br />
+NB : vous pouvez bien sur cliquer sur 'supprimer' si vous ne souhaitez pas mettre une image dans votre galerie.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.210.161</user_ip>
+    <timestamp>1460555074</timestamp>
+  </article>
+</articles>

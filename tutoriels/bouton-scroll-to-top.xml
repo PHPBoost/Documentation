@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>330</id>
+    <id_contents>1604</id_contents>
+    <title><![CDATA[Bouton &quot;Scroll to top&quot;]]></title>
+    <encoded_title><![CDATA[bouton-scroll-to-top]]></encoded_title>
+    <hits>160</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>1604</con_id_contents>
+    <con_id_article>330</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_modification-html-frame-tpl">Modification HTML :  frame.tpl</a></li><li><a href="#paragraph_modification-javascript-frame-tpl">Modification Javascript :  frame.tpl</a></li><li><a href="#paragraph_modification-css-design-css">Modification CSS :  design.css</a></li><li><a href="#paragraph_cas-phpboost-avant-5-0">Cas PHPBoost avant 5.0</a></li><li><a href="#paragraph_cas-du-scroll-to-bottom">Cas du scroll to bottom</a></li></ol>]]></menu>
+    <content><![CDATA[Ce tutorial va vous expliquez comment ajouter sur la version [5.0] un bouton qui permet de remonter automatiquement en haut de page lorsque celle-ci est un peu longue, vous évitant ainsi de scroller pour y parvenir.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-html-frame-tpl">Modification HTML :  frame.tpl</h1><br />
+
+<br />
+Dans le fichier <em>frame.tpl</em>, ajoutez entre les lignes [[CODE=tpl,0,1]]# INCLUDE BODY #[[/CODE]] et [[CODE=tpl,0,1]]# INCLUDE JS_BOTTOM #[[/CODE]] le code<br />
+[[CODE=tpl]]<a id="scroll-to-top" class="scroll-to" href="#"><i class="fa fa-chevron-up"></i></a>[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-javascript-frame-tpl">Modification Javascript :  frame.tpl</h1><br />
+
+Dans le fichier <em>frame.tpl</em>, ajoutez juste après [[CODE=tpl,0,1]]# INCLUDE JS_BOTTOM #[[/CODE]] le code suivant :<br />
+[[CODE=javascript]]<script>
+    <!--
+    jQuery(document).ready(function(){
+        jQuery(window).scroll(function(){
+            if ($(this).scrollTop() > 800) {
+                jQuery('#scroll-to-top').fadeIn();
+            } else {
+                jQuery('#scroll-to-top').fadeOut();
+            }
+        });
+         
+        jQuery('#scroll-to-top').click(function(){
+            jQuery('html, body').animate({scrollTop : 0},1200);
+            return false;
+        });
+        jQuery('#scroll-to-bottom').click(function(){
+            jQuery('html, body').animate({scrollTop: $(document).height()-$(window).height()},1200);
+            return false;
+        });
+    });
+    -->
+</script>[[/CODE]]<br />
+<br />
+Dans la partie javascript, 800 représente le nombre de crans de scroll avant l'apparition du bouton (1 cran = 100), 1200 représente en millisecondes, le temps pour "remonter" en haut de page<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-css-design-css">Modification CSS :  design.css</h1><br />
+
+Enfin dans le fichier <em>design.css</em> à la fin du fichier, ajoutez :<br />
+[[CODE=css]].scroll-to {
+    position: fixed;
+    z-index: 10;
+    display: none;
+    background-color: rgba(15, 15, 16, 0.8);
+}
+#scroll-to-top {
+    right: 25px;
+    bottom: 25px;
+    padding: 9px 11px 11px 10px;
+}
+.scroll-to i {
+    font-size: 2em;
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.2s;
+}
+.scroll-to:hover i {
+    color: rgba(255, 255, 255, 1);
+    transition: 0.5s;
+}[[/CODE]]<br />
+<br />
+<br />
+<span class="notice"> Ce code sera sera implémenté de base dans la version 5.1. Dans l’éventualité ou vous n'en voulez pas, il suffira de modifier la valeur du bottom de la classe [[CODE=css,0,1]].scroll-to-top[[/CODE]] dans le fichier <em>design.css</em> pour l'envoyer en dehors de la page, par exemple [[CODE=css,0,1]]bottom: -1000;[[/CODE]] ou encore de supprimer le lien dans le fichier <em>frame.tpl</em></span><br />
+<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_cas-phpboost-avant-5-0">Cas PHPBoost avant 5.0</h1><br />
+
+<br />
+Pour ceux, qui sont toujours en [4.1] voir moins, il faut ajouter l'appel du plugin Jquery et utiliser la méthode du no-conflict pour assurer une compatibilité avec le plugins Javascript Prototype.<br />
+<br />
+Dans le fichier <em>frame.tpl</em> juste après [[CODE=tpl,0,1]]# INCLUDE JS_TOP #[[/CODE]], ajoutez :<br />
+[[CODE=tpl]]<script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script> var $jQ = jQuery.noConflict();</script>[[/CODE]]<br />
+et remplacez jQuery par $ dans le script d'avant.<br />
+<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_cas-du-scroll-to-bottom">Cas du scroll to bottom</h1><br />
+
+<br />
+Il est possible que dans votre design, vous souhaitiez ajouté un bouton pour descendre et pied de page et non pas monté en haut de page.<br />
+C'est la raison pour laquelle nous avons ajouté les lignes : [[CODE=javascript]]jQuery('#scroll-to-bottom').click(function(){
+    jQuery('html, body').animate({scrollTop: $(document).height()-$(window).height()},1200);
+    return false;
+});[[/CODE]]<br />
+<br />
+Pour que cela fonctionne, il vous suffit de mettre l'id [[CODE=css,0,1]]#scroll-to-bottom[[/CODE]] à votre bouton. [[CODE=html,0,1]]<a id="scroll-to-bottom" href="#"></a>[[/CODE]]<br />
+<br />
+Ce bouton n'étant pas aussi courant que le scroll-to-top, il n'est pas présent dans le thème de base. Il vous faudra le customiser à votre souhait pour correspondre à votre design.<br />
+<br />
+<br />
+enjoy <img src="/images/smileys/smile.png" alt=":)" class="smiley" />]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>90.107.101.82</user_ip>
+    <timestamp>1458382461</timestamp>
+  </article>
+</articles>

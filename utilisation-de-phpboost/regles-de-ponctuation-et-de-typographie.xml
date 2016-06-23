@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>288</id>
+    <id_contents>1339</id_contents>
+    <title><![CDATA[Règles de ponctuation et de typographie]]></title>
+    <encoded_title><![CDATA[regles-de-ponctuation-et-de-typographie]]></encoded_title>
+    <hits>1719</hits>
+    <id_cat>3</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>3</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>3</cat_article_id>
+    <con_id_contents>1339</con_id_contents>
+    <con_id_article>288</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a><ol class="wiki_list_2"><li><a href="#paragraph_espace">Espace</a></li><li><a href="#paragraph_signes">Signes</a></li></ol></li><li><a href="#paragraph_les-regles-de-ponctuation">Les règles de ponctuation</a></li><li><a href="#paragraph_divers">Divers</a><ol class="wiki_list_2"><li><a href="#paragraph_titres-et-abreviations">Titres et abréviations</a></li><li><a href="#paragraph_unites">Unités</a></li><li><a href="#paragraph_citations-tronquees">Citations tronquées</a></li><li><a href="#paragraph_etc-et-les-points-de-suspension">&quot;etc.&quot; et les points de suspension</a></li><li><a href="#paragraph_acronymes">Acronymes</a></li><li><a href="#paragraph_accents-et-majuscules">Accents et majuscules</a></li><li><a href="#paragraph_numeration">Énumération</a></li><li><a href="#paragraph_siecles">Siècles</a></li><li><a href="#paragraph_noms-et-prenoms">Noms et prénoms</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_espace">Espace</h2><br />
+
+<br />
+<span class="notice">En matière de typographie, le mot espace est du genre féminin (On dit une espace).</span><br />
+<br />
+<strong>Espace sécable</strong> : C'est une espace qu'on peut remplacer par une coupure de ligne.<br />
+<br />
+<strong>Espace insécable</strong> : C'est une espace à dimension fixe qui est indissociable des caractères qui l'encadrent.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_signes">Signes</h2><br />
+
+<br />
+<strong>Signes simples</strong><br />
+<br />
+Les signes simples sont :<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">la virgule ","
+	</li><li class="formatter-li">le point "."
+	</li><li class="formatter-li">les points de suspension "..."<br />
+</li></ul><br />
+<br />
+<strong>Signes doubles</strong><br />
+<br />
+Les signes doubles sont :<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">le point-virgule ";"
+	</li><li class="formatter-li">les deux-points ":"
+	</li><li class="formatter-li">le point d'exclamation "!"
+	</li><li class="formatter-li">le point d'interrogation "?"<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-regles-de-ponctuation">Les règles de ponctuation</h1><br />
+
+<br />
+Le tableau qui suit donne les principales règles de ponctuation qui doivent être utilisées :<br />
+<br />
+<table class="formatter-table">
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center"><strong>Ponctuation</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>Avant le signe</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>Signe</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>Après le signe</strong></p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Virgule</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>,</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Point</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>.</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Deux points</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>:</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Point-virgule</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>;</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Point d'exclamation</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>!</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Point d'interrogation</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>?</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Points de suspension en fin de phrase</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>...</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Points de suspension en début de phrase</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>...</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Tiret court (trait-d'union, mots composés, césure)</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>-</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Tiret moyen : listes</p></td>
+<td class="formatter-table-col"><p style="text-align:center">En début de ligne</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>-</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Tiret moyen : incises</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>-</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Tiret long (dialogues)</p></td>
+<td class="formatter-table-col"><p style="text-align:center">En début de ligne</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>&#8212;</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Parenthèse ouvrante</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>(</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Parenthèse fermante</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>)</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace (ou ponctuation)</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Parenthèse ouvrante</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>[</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Parenthèse fermante</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>]</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace (ou ponctuation)</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Apostrophe</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>'</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Guillemet droit ouvrant</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>"</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Guillemet droit fermant</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>"</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace (ou ponctuation)</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Guillemet à l'anglaise ouvrant</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>&#8220;</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Guillemet à l'anglaise fermant</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>&#8221;</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace (ou ponctuation)</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Guillemet à la française ouvrant</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>«</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Guillemet à la française fermant</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>»</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Espace (ou ponctuation)</p></td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col"><p style="text-align:center">Barre de fraction</p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+<td class="formatter-table-col"><p style="text-align:center"><strong>/</strong></p></td>
+<td class="formatter-table-col"><p style="text-align:center">Pas d'espace</p></td>
+</tr>
+</table><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_divers">Divers</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_titres-et-abreviations">Titres et abréviations</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Mademoiselle : <strong>M<sup>lle</sup></strong> ou <strong>Mlle</strong>
+	</li><li class="formatter-li">Madame : <strong>M<sup>me</sup></strong> ou <strong>Mme</strong>
+	</li><li class="formatter-li">Mesdames : <strong>M<sup>mes</sup></strong> ou <strong>Mmes</strong>
+	</li><li class="formatter-li">Monsieur : <strong>M.</strong> (et non Mr pour Mister)
+	</li><li class="formatter-li">Messieurs : <strong>MM.</strong>
+	</li><li class="formatter-li">Maitre : <strong>M<sup>e</sup></strong> ou <strong>Me</strong>
+	</li><li class="formatter-li">Monseigneur : <strong>M<sup>gr</sup></strong> ou <strong>Mgr</strong><br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_unites">Unités</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Laisser une espace avant l'unité et une espace après sauf si elle est suivie d'une ponctuation simple.<br />
+</li></ul><br />
+<span class="notice">Une largeur de 20,7 cm<br />
+Un cagnotte de 1 000 000,00 &#8364;<br />
+Une augmentation de 15,5 %</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_citations-tronquees">Citations tronquées</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Utiliser <strong>(...)</strong> ou <strong>[...]</strong><br />
+</li></ul><br />
+<span class="notice">John DOE disait « À vouloir trop en faire (...) cela n'aura pas de fin », et il savait de quoi il parlait.</span><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_etc-et-les-points-de-suspension">&quot;etc.&quot; et les points de suspension</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Écrire au choix : <strong>etc.</strong> ou <strong>...</strong> mais surtout pas : <strong>etc&#8230;</strong><br />
+</li></ul><br />
+<span class="notice">des pommes, des poires etc.<br />
+des pommes, des poires...</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_acronymes">Acronymes</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Écrire les acronymes en majuscules, avec ou sans points.<br />
+</li></ul><br />
+<span class="notice">O.C.D.E. ou OCDE<br />
+O.P.E.P. ou OPEP</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_accents-et-majuscules">Accents et majuscules</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Il est fortement recommandé de mettre des accents dans les titres (ce qui peut lever certaines ambigüités)<br />
+</li></ul><br />
+<span class="notice">ELEVES EN PLEIN AIR = ÉLÈVES EN PLEIN AIR ou ÉLEVÉS EN PLEIN AIR ?<br />
+ENFANTS LEGITIMES DE LOUIS XIV = ENFANTS LÉGITIMES DE LOUIS XIV ou ENFANTS LÉGITIMÉS DE LOUIS XIV ?<br />
+PALAIS DES CONGRES = PALAIS DES CONGRES ou PALAIS DES CONGRÈS ?<br />
+LES PARENTS INDIGNES = LES PARENTS INDIGNES ou LES PARENTS INDIGNÉS ?</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_numeration">Énumération</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Premier : <strong>1er</strong>
+	</li><li class="formatter-li">Première : <strong>1re</strong>
+	</li><li class="formatter-li">Deuxième : <strong>2e</strong><br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_siecles">Siècles</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Écrire le siècle en chiffres romains petites capitales, suivi d'un e minuscule en exposant (ou er pour premier).<br />
+</li></ul><br />
+<span class="notice">Le Ier s. av. J.-C.<br />
+Le XIXe s. ap. J.-C. </span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_noms-et-prenoms">Noms et prénoms</h2><br />
+
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Écrire les initiales en capitales, les prénoms en minuscules et les noms de préférence en capitales, et sauf exception motivée (p. ex. bibliographie) les prénoms précèderont les noms.<br />
+</li></ul><br />
+<br />
+<span class="notice">John DOE</span>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>88.125.157.163</user_ip>
+    <timestamp>1406534170</timestamp>
+  </article>
+</articles>

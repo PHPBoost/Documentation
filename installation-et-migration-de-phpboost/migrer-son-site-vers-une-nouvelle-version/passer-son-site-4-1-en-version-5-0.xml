@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>319</id>
+    <id_contents>1705</id_contents>
+    <title><![CDATA[Passer son site 4.1 en version 5.0]]></title>
+    <encoded_title><![CDATA[passer-son-site-4-1-en-version-5-0]]></encoded_title>
+    <hits>1053</hits>
+    <id_cat>48</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>48</cat_id>
+    <cat_id_parent>2</cat_id_parent>
+    <cat_article_id>170</cat_article_id>
+    <con_id_contents>1705</con_id_contents>
+    <con_id_article>319</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_pre-requis">Pré-requis</a></li><li><a href="#paragraph_preparer-votre-site">Préparer votre site</a></li><li><a href="#paragraph_mise-a-jour-du-site">Mise à jour du site</a></li><li><a href="#paragraph_configurez-votre-site-sur-phpboost-5-0">Configurez votre site sur PHPBoost 5.0</a></li><li><a href="#paragraph_mise-en-place-des-redirections-301-pour-les-anciens-liens-de-phpboost-4-1">Mise en place des redirections 301 pour les anciens liens de PHPBoost 4.1</a></li></ol>]]></menu>
+    <content><![CDATA[Pour pouvoir passer de la version 4.1 à la 5.0, il ne suffit pas de remplacer les fichiers ou d'appliquer un patch comme les mises à jours mineures.<br />
+Etant donné qu'il y a eu plusieurs changements au niveau de la base de données, il faut faire des conversions pour que la nouvelle version fonctionne correctement, nous allons donc voir au cours de cet article les différentes étapes à suivre pour migrer vers PHPBoost 5.0.<br />
+<span class="notice">N'oubliez pas de faire des sauvegardes de <strong>vos fichiers</strong> et de <strong>la base de données</strong> avant la procédure !<br />
+La version php minimale est toujours la <strong>5.<span style="color:red;">4</span></strong> pour installer PHPBoost 5.0, mais celle-ci fonctionne également avec php <strong>7.0</strong>.</span><br />
+<h1 class="wiki_paragraph1" id="paragraph_pre-requis">Pré-requis</h1><br />
+
+En premier lieu, nous vous conseillons très fortement d'effectuer une sauvegarde de tout votre site. Que ce soit au niveau de l'hébergement des répertoires et fichiers constituant le site, ou au niveau de la base de données.<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><em> Pour la base de données, nous vous invitons à regarder cet <a href="/wiki/gestion-de-la-base-de-donnees#paragraph_sauvegarder-une-table-ou-l-ensemble-des-tables">article</a>.</em>
+</li><li class="formatter-li"><em> Pour le contenu de votre site, nous vous invitons à regarder cet <a href="/wiki/transfert-des-fichiers-via-logiciel-ftp">article</a> (au lieu de copier vers le serveur en ligne, vous copierez vers le serveur local ou nouveau serveur)</em><br />
+</li></ul><br />
+En second lieu, cette migration ne vaut que pour le noyau du CMS ainsi que ses modules associés, compatibles avec la nouvelle version. Les thèmes et les modules non-officiels non compatibles devront être migrés à part avec la procédure les affairant.<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><em>Les modules et thèmes non-officiels non compatibles seront désactivés pendant migration, il faudra uploader leur version PHPBoost 5.0 pour pouvoir les réactiver.</em><br />
+</li></ul><span class="success">Les modules ou thèmes non-officiels qui ont déjà été convertis en version compatible PHPBoost 5.0 peuvent être inclus lors de la mise à jour, dans ce cas ils seront convertis automatiquement.</span><br />
+Il sera aussi important de sauvegarder la/les thèmes 4.1 se trouvant dans le répertoire <strong>/templates</strong> parce que le premier redémarrage se fera avec le thème base de la version 5.0 si votre thème n'est pas compatible.<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><em> Nous vous invitons à regarder cet <a href="/wiki/mettre-a-jour-son-theme-4-1-en-5-0">article</a></em>.<br />
+</li></ul><br />
+Les menus présents <strong>dans le dossier <span style="text-decoration: underline;">/menus</span></strong> (donc le <strong>dossier </strong>sur le <strong>FTP</strong>) sont aussi à sauvegarder. Le fonctionnement des menus a changé, il faut maintenant les installer comme des modules. Ils seront désactivés lors de la mise à jour.<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><em> Nous vous invitons à regarder cet <a href="/wiki/creer-un-menu">article</a> pour créer un menu si besoin</em>.<br />
+</li></ul><br />
+Enfin, il vous faudra recenser tous les répertoires et fichiers que vous avez ajoutés en plus de ceux constituant le CMS PHPBoost pour bien les identifier avant de suivre cette procédure.<br />
+<h1 class="wiki_paragraph1" id="paragraph_preparer-votre-site">Préparer votre site</h1><br />
+
+1 - Téléchargez la version <strong>mise à jour</strong> de <a href="/download/45-mises-a-jour-phpboost-5-0/363-pack-de-mise-a-jour-4-1-vers-5-0/">PHPBoost 5.0</a>. Celle-ci contient tous les fichiers nécessaires à la nouvelle version (la dernière version en date, donc la 5.0.4 depuis le 28/04/2016) ainsi que le script de mise à jour.<br />
+2 - Décompressez l'archive et transférez <strong><span style="text-decoration: underline;">tous</span></strong> les fichiers et dossiers <strong>contenus</strong> (et non le dossier) dans le dossier <strong>phpboost_update</strong> sur votre serveur dans le même répertoire de la version 4.1.<br />
+Dans la plupart des cas la préparation s'arrête ici.<br />
+3 - Si un module de la version PDK est installé sur votre site (exemple Rapport de bug ou Bac à sable), veuillez le télécharger en version 5.0 et mettre le répertoire sur votre FTP (en même temps que la mise à jour si vous voulez qu'il reste actif, mais vous pouvez le faire plus tard, auquel cas il(s) sera/seront désactivé(s)).<br />
+4 - Si les versions compatibles PHPBoost 5.0 de vos modules non-officiels et/ou vos thèmes non-officiels sont disponibles, téléchargez-les, décompressez-les et uploadez-les également. Ils seront mis à jour automatiquement dans ce cas.<br />
+5 - Si vous avez des menus de liens, éditez-les un a un puis revalidez-les pour leur appliquer la nouvelle configuration.<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-a-jour-du-site">Mise à jour du site</h1><br />
+
+- Connectez-vous sur votre site (le script de mise à jour est détecté automatiquement).<br />
+- Vous pouvez suivre les différentes étapes, qui sont proches de la procédure d'installation de PHPBoost que vous avez connu au moment de la création de votre site PHPBoost version 4.1 ou 4.0. A noter que les informations de base de donnée n'ont pas besoin d'être renseignées puisqu'elles l'ont déjà été à l'installation. Le temps de la conversion peut être plus où moins long suivant la taille de la base de données. En moyenne comptez une à deux minutes.<br />
+<span class="notice">Si vous ne l'aviez pas déjà fait avant de lancer la mise à jour, votre site sera automatiquement placé en maintenance au début de celle-ci.</span><br />
+<h1 class="wiki_paragraph1" id="paragraph_configurez-votre-site-sur-phpboost-5-0">Configurez votre site sur PHPBoost 5.0</h1><br />
+
+- Une fois connecté sur le site, un message vous invitera à <span style="text-decoration: underline;">supprimer le dossier /update et/ou /install de votre serveur</span>, une personne mal intentionnée pourrait endommager votre site le cas échéant. Il suffira de cliquer sur le bouton <strong>Supprimer</strong> (après avoir fait une sauvegarde de ce dossier à cause des logs qu'il contient) pour supprimer le(s) dossier(s) automatiquement. En fonction des navigateurs il est possible que celui-ci garde en cache la redirection vers le script d'update même quand le dossier a été supprimé. Dans ce cas videz le cache de votre navigateur en appuyant sur <strong>Ctrl + F5</strong>.<br />
+- Passez en revue l'ensemble des données, configurations et autorisations puis désactivez la maintenance pour ré-ouvrir le site.<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-place-des-redirections-301-pour-les-anciens-liens-de-phpboost-4-1">Mise en place des redirections 301 pour les anciens liens de PHPBoost 4.1</h1><br />
+
+Pour éviter que vous tombiez sur des erreurs 404, nous avons développé un module qui met en place tout seul des redirections 301.<br />
+Cela va permettre également aux moteurs de recherche de savoir qu'une page à changé d'url.<br />
+Le module (UrlUpdater) est installé comme un module standard lors de la mise à jour et vous n'avez pas besoin de vous en occuper.<br />
+Au moindre problème contactez le support sur le <a href="/forum/">forum PHPBoost</a>.<br />
+Bonne continuation sur PHPBoost 5.0 !]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1461875747</timestamp>
+  </article>
+</articles>

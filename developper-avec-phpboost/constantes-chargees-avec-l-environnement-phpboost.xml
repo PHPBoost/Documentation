@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>147</id>
+    <id_contents>1540</id_contents>
+    <title><![CDATA[Constantes chargées avec l'environnement PHPBoost]]></title>
+    <encoded_title><![CDATA[constantes-chargees-avec-l-environnement-phpboost]]></encoded_title>
+    <hits>1295</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>1540</con_id_contents>
+    <con_id_article>147</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_divers">Divers</a></li><li><a href="#paragraph_operations-sur-la-base-de-donnees">Opérations sur la base de données</a></li></ol>]]></menu>
+    <content><![CDATA[Un certain nombre de constantes sont chargées avec l'environnement PHPBoost.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_divers">Divers</h1><br />
+
+<br />
+[[CODE=php,0,1]]HOST[[/CODE]] : Retourne l'url vers le serveur.<br />
+[[CODE=php,0,1]]PATH_TO_ROOT[[/CODE]] : Retourne le chemin relatif depuis la racine du serveur.<br />
+[[CODE=php,0,1]]TPL_PATH_TO_ROOT[[/CODE]] ou [[CODE=php,0,1]]DIR[[/CODE]] : Retourne le chemin absolu depuis la racine du serveur.<br />
+[[CODE=php,0,1]]SCRIPT[[/CODE]] : Retourne le chemin absolu vers le script en cours d’exécution sans les paramètres passés en GET. <br />
+[[CODE=php,0,1]]REWRITED_SCRIPT[[/CODE]] : Retourne le chemin absolu vers le script en cours d’exécution avec les paramètres passés en GET. <br />
+<br />
+[[CODE=php,0,1]]TITLE[[/CODE]] : Retourne le titre de la page.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_operations-sur-la-base-de-donnees">Opérations sur la base de données</h1><br />
+
+<br />
+[[CODE=php,0,1]]PREFIX[[/CODE]] : Retourne le préfixe choisi lors de l'installation du site pour la création des tables.<br />
+<br />
+Pour certaines opérations sur la base de données, vous pouvez également utiliser les constantes définies dans le fichier /kernel/db/tables.php :<br />
+<br />
+[[CODE=php]]define('DB_TABLE_COMMENTS', PREFIX . 'comments');
+define('DB_TABLE_COMMENTS_TOPIC', PREFIX . 'comments_topic');
+define('DB_TABLE_NOTE', PREFIX . 'note');
+define('DB_TABLE_AVERAGE_NOTES', PREFIX . 'average_notes');
+define('DB_TABLE_VISIT_COUNTER', PREFIX . 'visit_counter');
+define('DB_TABLE_CONFIGS', PREFIX . 'configs');
+define('DB_TABLE_EVENTS', PREFIX . 'events');
+define('DB_TABLE_GROUP', PREFIX . 'group');
+define('DB_TABLE_KEYWORDS', PREFIX . 'keywords');
+define('DB_TABLE_KEYWORDS_RELATIONS', PREFIX . 'keywords_relations');
+define('DB_TABLE_MEMBER', PREFIX . 'member');
+define('DB_TABLE_MEMBER_EXTENDED_FIELDS', PREFIX . 'member_extended_fields');
+define('DB_TABLE_MEMBER_EXTENDED_FIELDS_LIST', PREFIX . 'member_extended_fields_list');
+define('DB_TABLE_MENUS', PREFIX . 'menus');
+define('DB_TABLE_PM_MSG', PREFIX . 'pm_msg');
+define('DB_TABLE_PM_TOPIC', PREFIX . 'pm_topic');
+define('DB_TABLE_SESSIONS', PREFIX . 'sessions');
+define('DB_TABLE_INTERNAL_AUTHENTICATION', PREFIX . 'internal_authentication');
+define('DB_TABLE_INTERNAL_AUTHENTICATION_FAILURES', PREFIX . 'internal_authentication_failures');
+define('DB_TABLE_AUTHENTICATION_METHOD', PREFIX . 'authentication_method');
+define('DB_TABLE_SMILEYS', PREFIX . 'smileys');
+define('DB_TABLE_UPLOAD', PREFIX . 'upload');
+define('DB_TABLE_UPLOAD_CAT', PREFIX . 'upload_cat');[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.12</user_ip>
+    <timestamp>1455634870</timestamp>
+  </article>
+</articles>

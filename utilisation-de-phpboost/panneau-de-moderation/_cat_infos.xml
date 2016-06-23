@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>11</id>
+    <id_contents>1469</id_contents>
+    <title><![CDATA[Panneau de modération]]></title>
+    <encoded_title><![CDATA[panneau-de-moderation]]></encoded_title>
+    <hits>1931</hits>
+    <id_cat>11</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>11</cat_id>
+    <cat_id_parent>3</cat_id_parent>
+    <cat_article_id>11</cat_article_id>
+    <con_id_contents>1469</con_id_contents>
+    <con_id_article>11</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Depuis la version 5.0 de PHPBoost, la gestion des sanctions du panneau d'administration et le panneau de modération ne font plus qu'un.<br />
+Je vous invite donc à suivre ce lien afin de tout savoir sur <a href="/wiki/gestion-des-utilisateurs#paragraph_gestion-des-sanctions">le panneau de modération</a>.]]></content>
+    <activ>1</activ>
+    <user_id>5369</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1448802807</timestamp>
+  </article>
+</articles>

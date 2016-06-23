@@ -1,0 +1,631 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>226</id>
+    <id_contents>1563</id_contents>
+    <title><![CDATA[Fichier global.css]]></title>
+    <encoded_title><![CDATA[fichier-global-css]]></encoded_title>
+    <hits>1774</hits>
+    <id_cat>63</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>63</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>215</cat_article_id>
+    <con_id_contents>1563</con_id_contents>
+    <con_id_article>226</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_la-mise-en-forme-du-texte">La mise en forme du texte</a><ol class="wiki_list_2"><li><a href="#paragraph_les-liens-du-site">Les liens du site</a></li><li><a href="#paragraph_les-liens-des-utilisateurs">Les liens des utilisateurs</a></li><li><a href="#paragraph_couleur-de-texte">Couleur de texte</a></li><li><a href="#paragraph_les-differentes-tailles-de-polices">Les différentes tailles de polices</a></li><li><a href="#paragraph_les-titres-la-balise-h">les titres (la balise h)</a></li><li><a href="#paragraph_les-titres-bbcode">Les titres &quot;BBcode&quot;</a></li></ol></li><li><a href="#paragraph_mise-en-forme-du-contenu">Mise en forme du contenu</a><ol class="wiki_list_2"><li><a href="#paragraph_affichage-du-mini-calendrier">Affichage du mini calendrier</a></li><li><a href="#paragraph_les-blocs-bbcode">Les blocs bbcode</a></li><li><a href="#paragraph_le-selecteur-de-couleurs">Le sélecteur de couleurs</a></li><li><a href="#paragraph_les-blocs-de-quotes-de-code-ou-caches">les blocs de quotes, de code, ou cachés</a></li><li><a href="#paragraph_les-autres-elements-de-positionnement">Les autres éléments de positionnement</a></li><li><a href="#paragraph_les-listes-numerotees">Les listes numérotées</a></li><li><a href="#paragraph_le-menu-de-flux">Le menu de flux</a></li><li><a href="#paragraph_la-recherche-de-membres-en-ajax">La recherche de membres (en AJAX)</a></li><li><a href="#paragraph_la-barre-de-progression">La barre de progression</a></li><li><a href="#paragraph_le-systeme-de-notation">Le système de notation</a></li></ol></li><li><a href="#paragraph_les-icones-specifiques-phpboost-de-fontawesome">Les Icônes spécifiques PHPBoost de FontAwesome</a><ol class="wiki_list_2"><li><a href="#paragraph_les-couleurs-specifiques">Les couleurs spécifiques</a></li><li><a href="#paragraph_les-alertes">les alertes</a></li></ol></li><li><a href="#paragraph_les-message-d-erreurs">Les message d'erreurs</a></li><li><a href="#paragraph_le-systeme-d-upload">Le système d'upload</a></li><li><a href="#paragraph_les-icones-reseaux-sociaux">Les icônes réseaux sociaux</a></li></ol>]]></menu>
+    <content><![CDATA[Le fichier <em>global.css</em> contient les classes globales du site, qui peuvent être utilisées par les modules et le noyau.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-mise-en-forme-du-texte">La mise en forme du texte</h1><br />
+
+Commençons par les éléments de mise en forme du texte<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-liens-du-site">Les liens du site</h2><br />
+
+Chaque fois qu'un lien est cliquable, c'est la balise &lt;a&gt; qui se cache derrière. Pour gérer la couleur des lien par défaut, il suffit de remplacer les valeurs de l'attribut <strong><a href="http://www.w3schools.com/cssref/css_colornames.asp">color</a></strong> ci-dessous.<br />
+[[CODE=css]]a {
+    color: #4372AA;
+    text-decoration: none;
+}
+a:hover {
+    color: #2D4D73;
+    text-decoration: underline;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-liens-des-utilisateurs">Les liens des utilisateurs</h2><br />
+
+Lorsque le lien correspond à un pseudo, nous attribuons une couleur particulière et notamment pour les admin, modo et membre. Vous pouvez personnaliser ces éléments avec le code ci-dessous.<br />
+[[CODE=css]]a.admin  { color: #FFA34F; }
+a.modo   { color: #006699; }
+a.member { color: #000000; }[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_couleur-de-texte">Couleur de texte</h2><br />
+
+Un certain nombre de couleur sont prédéfini pour afficher des élements actifs ou des alertes.<br />
+[[CODE=css]].color-alert { color: #B22222; }
+.color-notavailable     { color: #B22222; }
+.color-available     { color: #008000; }
+.color-unknown         { color: #004b80; }
+.bkgd-color-visible         { background-color: #CCFFCC; }
+.bkgd-color-unvisible         { background-color: #FFEE99; }
+.bkgd-color-unaprobed     { background-color: #FFCCCC; }
+.bkgd-color-fixed         { background-color: #7FFF9C; }
+tr td.bkgd-color-fixed     { background-color: #7FFF9C; }
+.bkgd-color-processing     { background-color: #FFD86F; }
+tr td.bkgd-color-processing { background-color: #FFD86F; }
+.bkgd-color-unknown     { background-color: #FF796F; }
+tr td.bkgd-color-unknown     { background-color: #FF796F; }[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-differentes-tailles-de-polices">Les différentes tailles de polices</h2><br />
+
+Afin de facilité la personnalisation, nous avons créer des tailles pour redéfinir la taille du texte dans certains cas. Nous utilisons l'unités de mesure "em" qui permet d'adapter automatiquement la taille en fonction de celle de son parent.<br />
+[[CODE=css]].smaller { font-size: 0.7em; }
+.small   { font-size: 0.9em; }
+.normal  { font-size: 1.0em; }
+.big     { font-size: 1.2em; }
+.bigger  { font-size: 1.5em; }
+.biggest { font-size: 2.0em; }[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-titres-la-balise-h">les titres (la balise h)</h2><br />
+
+Les balises &lt;h&gt; sont les en-têtes des différents éléments de votre site. Des tailles ont été définies pour assurer une cohérence dans la page. Cette fois-ci nous utilisons l'unité "rem" qui permet de définir la taille par rapport à la première taille (celle du body).<br />
+[[CODE=css]]h1 { font-size: 2.2rem; }
+h2 { font-size: 2.0rem; }
+h3 { font-size: 1.9rem; }
+h4 { font-size: 1.8rem; }
+h5 { font-size: 1.6rem; }
+h6 { font-size: 1.4rem; }
+h1, h2, h3, h4, h5, h6 {
+    overflow: hidden;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-titres-bbcode">Les titres &quot;BBcode&quot;</h2><br />
+
+Lorsque les titres sont utilisés dans un contenu tel que le forum, ils sont associés à une classe supplémentaire<br />
+[[CODE=css]].formatter-title {
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+h1.formatter-title {  }
+h2.formatter-title { margin-left: 1.5rem; }
+h3.formatter-title { margin-left: 3rem; }
+h4.formatter-title { margin-left: 5rem; }
+h3.formatter-title,
+h4.formatter-title {
+    border-bottom: 1px solid #366393;
+}[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-forme-du-contenu">Mise en forme du contenu</h1><br />
+
+La partie suivante correspond à la mise en forme du contenu tel que le mini-calendrier, le selecteur de couleur, les blocs.<br />
+<h2 class="wiki_paragraph2" id="paragraph_affichage-du-mini-calendrier">Affichage du mini calendrier</h2><br />
+
+Les formulaires demandes parfois la saisie d'une date. Le sélecteur est géré par le code suivant.<br />
+[[CODE=css]].calendar-block-container {
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    right: 0;
+}
+.form-field .calendar-container {
+    display: inline-block;
+    position: relative;
+}
+.calendar-block {
+    position: absolute;
+    border: 1px solid #999999;
+    z-index: 10;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+.calendar-block {
+    top: 25px;
+    left: -104px;
+}
+.calendar-block .date-picker {
+    margin: 0;
+    width: 250px;
+    table-layout: fixed;
+}
+.calendar-block .date-select-container {
+    background-color: #F5F5F5;
+    padding: 2px 0;
+    border-radius: 3px 3px 0 0;
+}
+.calendar-block .date-select-previous {
+    float: left;
+    margin: 1px 4px 0 4px;
+}
+.calendar-block .date-select-next {
+    float: right;
+    margin: 1px 4px 0 4px;
+}
+.calendar-block .date-select-next i,
+.calendar-block .date-select-previous i {
+    color: #666666;
+}
+.calendar-block .date-select-content {
+    margin: auto;
+    width: 185px;
+    text-align: center;
+}
+.calendar-block .date-select-content select,
+.calendar-block .date-select-content select:focus {
+    padding: 1px 1px;
+    font-size: 0.9em;
+    border: none;
+    background: none;
+    box-shadow: none;
+}
+.calendar-block .date-select-month {
+    width: 92px;
+    margin: 0 1px 0 5px;
+}
+.calendar-block .date-select-year {
+    width: 55px;
+    margin: 0;
+}
+.calendar-block .date-picker select,
+.calendar-block .date-picker select:focus {
+    box-shadow: none;
+    max-width: 75px;
+}
+.calendar-block .date-picker thead tr th {
+    border-top: 1px solid #CCCCCC;
+    padding: 5px 0;
+    border-radius: 0;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    color: #666666;
+}
+.calendar-block .date-picker tbody tr:last-child {
+    border-bottom: none;
+}
+.calendar-block .date-picker tbody td {
+    height: 23px;
+    padding: 1px 2px;
+}
+.calendar-block .date-picker tbody td:first-child { border-left: none;  }
+.calendar-block .date-picker tbody td:last-child  { border-right: none; }
+.calendar-block .date-picker tbody td.calendar-none        { background-color: #FFFFFF; }
+.calendar-block .date-picker tbody td.calendar-today     { background-color: #B5E5B9; }
+.calendar-block .date-picker tbody td.calendar-event     { background-color: #DBE5EE; }
+.calendar-block .date-picker tbody td.calendar-weekend     { background-color: #FFE3B6; }
+.calendar-block .date-picker tbody tr:last-child td {
+    border-bottom: none;
+}
+.calendar-block .date-picker tbody tr:last-child td:first-child { border-radius: 0 0 0 2px; }
+.calendar-block .date-picker tbody tr:last-child td:last-child    { border-radius: 0 0 2px 0; }
+td.calendar-week {
+    border-right: 1px solid #BBBBBB;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-blocs-bbcode">Les blocs bbcode</h2><br />
+
+De nombreux éléments dans le bbcode utilise un bloc pour délimiter leur zone.<br />
+[[CODE=css]].bbcode-block-container {
+    position: absolute;
+    z-index: 20;
+    top: 26px;
+    left: -4px;    
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.bbcode-block {
+    margin: 0;
+    background-color: #F3F3F3;
+    border: 1px solid #AAAAAA;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.bbcode-block a {
+    cursor: pointer;
+    text-decoration: none;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-selecteur-de-couleurs">Le sélecteur de couleurs</h2><br />
+
+Il s'agit du bloc permettant de sélectionner une couleur. Il est notamment utilisé dans la barre bbcode ou les formulaires.<br />
+[[CODE=css]].color-picker {
+    position: absolute;
+    z-index: 100;
+}
+.color-picker .bbcode-block table {
+    margin: auto;
+    border: none;
+    border-collapse: collapse;
+}
+.color-picker td {
+    padding: 0;
+    border: 1px solid #F3F3F3;
+}
+.color-picker td a {
+    display: block;
+    width: 14px;
+    height: 14px;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-blocs-de-quotes-de-code-ou-caches">les blocs de quotes, de code, ou cachés</h2><br />
+
+Lorsque vous souhaitez afficher une quote, du code ou masqué un texte, vous pouvez utiliser les class suivantes : "blockquote", "code", "hide". La class "text-" correspond à l'élément précédent le bloc.<br />
+[[CODE=css]].formatter-hide,
+.formatter-code,
+.formatter-blockquote {
+    display: block;
+    margin: auto;
+    padding: 2px 0;
+    width: 93%;    
+    font-weight: bold;    
+}
+.hide,
+.code,
+.blockquote {
+    margin: 0 25px;
+    padding: 8px;
+    max-height: 500px;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    overflow: auto;
+    color: #444444;    
+}
+.hide {
+    height: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.hide2 {
+    visibility: hidden;
+    overflow: auto;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-autres-elements-de-positionnement">Les autres éléments de positionnement</h2><br />
+
+Autres codes associés aux éditeurs de texte<br />
+[[CODE=css]].indent {
+    margin-left: 30px;
+}
+.formatter-acronym {
+    cursor: help;
+}
+.formatter-block {
+    display: block;
+    margin: 5px 20px;
+    padding: 5px;
+    border: 1px solid #C4CED6;
+    overflow: hidden;
+}
+.formatter-fieldset {
+    margin: 10px;
+}
+.formatter-ul {
+    text-align: left;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-listes-numerotees">Les listes numérotées</h2><br />
+
+La balise &lt;ol&gt; correspond à une liste ordonnées d’élément.<br />
+[[CODE=css]].code ol {
+    margin-left: 3em;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-menu-de-flux">Le menu de flux</h2><br />
+
+[[CODE=css]].feed-list {
+    margin: 5px 0;
+    list-style-type: none;
+    text-align: left;
+}
+@media (max-width: 768px) {
+    .feed-list li a {
+        margin: 1px 0;
+        padding: 7px 0;
+        display: inline-block;
+    }
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-recherche-de-membres-en-ajax">La recherche de membres (en AJAX)</h2><br />
+
+Le résultat d'une recherche de membre en AJAX est affiché dans un bloc. L'attribut box-shadow permet d'afficher une légère ombre derrière se bloc.<br />
+[[CODE=css]].xmlhttprequest-result-search {
+    margin: 2px 0 0 0;
+    padding: 2px;
+    min-height: 40px;
+    width: 100px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.01);
+    overflow: auto;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-barre-de-progression">La barre de progression</h2><br />
+
+La barre de progression utilisé lors de l'installation, dans les sondages ou tout autres utilisation que vous pourriez en faire utilise les classes suivantes. Un container, le texte, la barre en elle même, et une variante lorsque la barre est à 100%.<br />
+[[CODE=css]].progressbar-container {
+    position: relative;
+    margin: 4px 0 10px;
+    background-color: #F5F5F5;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.progressbar-container .progressbar-infos {
+    position: absolute;
+    width: 100%;
+    line-height: 13px;
+    font-size: 11px;
+    text-align: center;
+}
+.progressbar {
+    border-radius: 3px 0 0 3px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+.progressbar[style*="100"] {
+    border-radius: 3px 3px 3px 3px;
+}
+.progressbar-container .progressbar {
+    height: 13px;
+    background-color: #8ECF67;
+    transition: width .6s ease;
+}[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-systeme-de-notation">Le système de notation</h2><br />
+
+Certains modules autorisent la notation. Si vous souhaitez ajuster la couleur ou la taille, vous pouvez modifier l'attribut "color" ou "font-size".<br />
+[[CODE=css]].notation,
+.static-notation {
+    display: inline-block;
+}
+.notation .star,
+.static-notation .star {
+    padding-right: 5px;
+    color: #E3CF7A;
+    font-size: 14px;
+    text-decoration: none;
+}[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-icones-specifiques-phpboost-de-fontawesome">Les Icônes spécifiques PHPBoost de FontAwesome</h1><br />
+
+La version 4.1 de PHPBoost utilise la librairie FontAwesome comme bibliothèque d'images. Certains couleurs ont été personnalisé en fonction de leur utilisation. On retrouve par exemple l'icone fa-forbidden que l'on colori en rouge #BA4B49.<br />
+On retrouve aussi l'affichage des alertes du profil avec la double icones<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-couleurs-specifiques">Les couleurs spécifiques</h2><br />
+
+[[CODE=css]].fa-syndication:before { color: #F57900; }
+.fa-success:before     { color: #478948; }
+.fa-forbidden:before   { color: #BA4B49; }
+.fa-error:before       { color: #BA4B49; }
+.fa-warning:before     { color: #C19954; }
+.fa-ban:before         { color: #BA4B49; }
+.fa-unban:before       { color: #478948; }
+.fa-male:before        { color: #8DC3E9; }
+.fa-female:before      { color: #F49CC4; }
+.fa-online:before      { color: #52D132; }
+.fa-offline:before     { color: #E05759; }
+.fa-trend-up:before    { color: #478948; }
+.fa-trend-down:before  { color: #BA4B49; }[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-alertes">les alertes</h2><br />
+
+[[CODE=css]]li.small-block .fa-stack {
+    height: 2.34em;
+}
+.fa-circle-alert {
+    position: absolute;
+    z-index: 1;
+    top: -3px;
+    left: 20px;
+    font-size: 1.32em;
+    color: #BA4B49;
+}
+.fa-circle-alert span {
+    position: absolute;
+    top: 4px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    color: #FFFFFF;
+    font-size: 0.7em;
+    text-align: center;
+}[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-message-d-erreurs">Les message d'erreurs</h1><br />
+
+Pour personnaliser les messages d'erreurs, notice, warning, success, il suffit de modifier les attributs "border", "background" et "color" ci-dessous. Les icones utilisent la librairies font-awesome<br />
+[[CODE=css]]div.message-helper-small {
+    width: 50%;
+}
+.error,
+.notice,
+.warning,
+.success,
+.question {
+    position: relative;
+    display: block;
+    margin: 5px auto 15px auto;
+    padding: 10px 10px 10px 40px;
+    height: auto;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    line-height: 20px;
+    text-align: left;
+    overflow: hidden;
+}
+.error:before,
+.notice:before,
+.warning:before,
+.success:before, 
+.question:before {
+    position: absolute;
+    left: 6px;
+    top: 7px;
+    width: 28px;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    font-size: 2em;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.error:before    { content: "\f00d"; }
+.notice:before   { content: "\f12a"; }
+.warning:before     { content: "\f071"; }
+.success:before     { content: "\f00c"; }
+.question:before { content: "\f128"; }
+.error, .error:before       { color: #BA4B49; }
+.notice, .notice:before     { color: #888888; }
+.warning, .warning:before   { color: #C19954; }
+.success, .success:before   { color: #478948; }
+.question, .question:before { color: #3B88AE; }
+.error    { background-color: #F3DFDF; border-color: #ECCDD2; }
+.notice   { background-color: #F0F0F0; border-color: #E2E2E2; }
+.warning  { background-color: #FDF9E4; border-color: #FBECCD; }
+.success  { background-color: #E0F1D9; border-color: #D7EAC7; }
+.question { background-color: #DAEEF8; border-color: #BDE9F2; }[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-systeme-d-upload">Le système d'upload</h1><br />
+
+Certain éléments comme la barre d'adresse ou de lien peuvent être personnaliser avec les class "upload-".<br />
+[[CODE=css]]#module-user-upload {
+    margin: 5px;
+}
+.upload-address-bar {
+    margin: 0 25px;
+    padding: 6px;
+    background-color: #FAFAFA;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    color: #444444;
+}
+.upload-address-bar-links {
+    float: right;
+    margin: 0 25px 25px 25px;
+}
+.upload-address-bar-links a {
+    margin-left: 10px;
+}
+#empty-folder {
+    width: 70%;
+}
+.upload-elements-container {
+    margin: 10px 0 0 20px;
+    overflow: hidden;
+}
+.upload-elements-file,
+.upload-elements-repertory {
+    float: left;
+    margin: 10px;
+}
+.upload-elements-repertory {
+    height: 60px;
+}
+a.upload-recent-file {
+    color: #BA4B49;
+}
+.upload-input-bbcode {
+    margin-top: 2px;
+    cursor: pointer;
+}
+.upload-cat-list,
+.upload-cat-explorer {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: normal;
+}
+.upload-cat-explorer {
+    padding-left: 30px;
+}
+.upload-no-sub-cat {
+    padding-left: 17px;
+}
+/* --- Deplacement des fichiers --- */
+.upload-selected-cat {
+    background-color: #F5FBFF;
+    border: 1px solid #2C5169;
+}
+.upload-elements-move-to,
+.upload-elements-move-file,
+.upload-elements-move-to-cat,
+.upload-elements-move-folder {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+.upload-elements-move-to {
+    margin-top: 50px;
+}
+.upload-elements-move-file img {
+    width: 100px;
+    height: auto;
+}
+.upload-root-cat {
+    padding: 0 0 0 17px;
+}[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-icones-reseaux-sociaux">Les icônes réseaux sociaux</h1><br />
+
+Depuis la version 5.0, il est possible de se connecter avec Facebook et Google+. Les boutons et les icônes sont facilement personnalisable avec la classe ".social-connect".<br />
+[[CODE=css]]a.social-connect {
+    display: inline-block;
+    margin: 10px 0;
+    width: 30px;
+    height: 30px;
+    vertical-align: top;
+    border-radius:4px;
+    color: #DEDEDE;
+    text-align: center;
+}
+.horizontal-fieldset a.social-connect {
+    margin: 0;
+    vertical-align: middle;
+}
+@media (max-width: 768px) {
+    .horizontal-fieldset a.social-connect {
+        display: block;
+        width: 100%;
+        margin: 5px auto;
+    }
+    .horizontal-fieldset a.social-connect i {
+        margin-right: 5px;
+    }
+}
+a.social-connect i:before {
+    color: #DFDFDF;
+    transition: 0.2s ease-out;
+}
+a.social-connect:hover i:before {
+    color: #EFEFEF;
+    transition: 0.2s ease-out;
+}
+a.fb i:before         { font-size: 1.9em; }
+a.google i:before     { font-size: 1.7em; }
+a.fb         { padding: 8px 0 0 4px; }
+a.google     { padding: 6px 1px 0 0; }
+@media (max-width: 768px) {
+    a.fb {
+        padding: 5px 0 0 3px;
+    }
+}
+a.fb         { background: #3B5998; }
+a.google     { background: #D8432E; }    
+a.twitter     { background: #5EA9DD; }
+a.social-connect span {
+    display: none;
+}[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>90.107.101.82</user_ip>
+    <timestamp>1457114211</timestamp>
+  </article>
+</articles>

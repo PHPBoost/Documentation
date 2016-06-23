@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>81</id>
+    <id_contents>113</id_contents>
+    <title><![CDATA[Insérer une liste en BBCode]]></title>
+    <encoded_title><![CDATA[inserer-une-liste-en-bbcode]]></encoded_title>
+    <hits>1718</hits>
+    <id_cat>34</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>34</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>79</cat_article_id>
+    <con_id_contents>113</con_id_contents>
+    <con_id_article>81</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_liste-de-base">Liste de base</a></li><li><a href="#paragraph_liste-numerotee">Liste numérotée</a></li><li><a href="#paragraph_imbrication">Imbrication</a></li><li><a href="#paragraph_personnalisation-supplementaire">Personnalisation supplémentaire</a></li></ol>]]></menu>
+    <content><![CDATA[Dans cet article nous allons voir comment créer des listes en langage BBCode.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_liste-de-base">Liste de base</h1><br />
+
+<br />
+Pour créer une liste il faut d'abord la déclarer. Pour cela il faut utiliser la balise [[CODE=bbcode]][list][[/CODE]].<br />
+Ensuite il faut déclarer chaque élément de la liste en utilisant [*].<br />
+Voilà un exemple de liste basique :<br />
+<ul class="formatter-ul"><li class="formatter-li">élément 1
+</li><li class="formatter-li">élément 2
+</li><li class="formatter-li">élément 3</li></ul><br />
+dont le code source est :<br />
+[[CODE=bbcode]][list][*]élément 1
+[*]élément 2
+[*]élément 3[/list][[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_liste-numerotee">Liste numérotée</h1><br />
+
+<br />
+Pour faire une liste numérotée il faut passer l'argument <em>ordered</em>.<br />
+<ol class="formatter-ol">
+<li class="formatter-li">Elément 1
+</li><li class="formatter-li">Elément 2
+</li><li class="formatter-li">Elément 3</li></ol><br />
+<br />
+[[CODE=bbcode]][list=ordered]
+[*]Elément 1
+[*]Elément 2
+[*]Elément 3[/list][[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_imbrication">Imbrication</h1><br />
+
+<br />
+Il est possible d'imbriquer les listes.<br />
+<ul class="formatter-ul"><li class="formatter-li">Elément 1
+</li><li class="formatter-li">Elément 2<ul class="formatter-ul"><li class="formatter-li">Sous liste 1
+</li><li class="formatter-li">Sous liste 2</li></ul>
+</li><li class="formatter-li">Elément 3</li></ul><br />
+<br />
+[[CODE=bbcode]][list][*]Elément 1
+[*]Elément 2
+[list][*]Sous liste 1
+[*]Sous liste 2[/list]
+[*]Elément 3[/list][[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_personnalisation-supplementaire">Personnalisation supplémentaire</h1><br />
+
+<br />
+Il est possible de donner un style supplémentaire à chaque liste.<br />
+Pour cela il suffit de mettre du CSS.<br />
+Voici un exemple :<br />
+<ol style="list-style-type: upper-roman;" class="formatter-ol">
+<li class="formatter-li">Elément 1
+</li><li class="formatter-li">Elément 2</li></ol><br />
+<br />
+[[CODE=bbcode]][list=ordered style="list-style-type: upper-roman;"]
+[*]Elément 1
+[*]Elément 2[/list][[/CODE]]<br />
+<br />
+Vous retrouverez les propriétés CSS disponibles pour les listes dans ce récapitulatif du Site du Zér0 : <a href="http://www.siteduzero.com/tuto-3-1938-1-liste-des-proprietes-css.html#ss_part_5">Propriétés des listes</a>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>81.51.228.217</user_ip>
+    <timestamp>1345885245</timestamp>
+  </article>
+</articles>

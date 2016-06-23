@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>89</id>
+    <id_contents>1514</id_contents>
+    <title><![CDATA[Transfert des fichiers via logiciel FTP]]></title>
+    <encoded_title><![CDATA[transfert-des-fichiers-via-logiciel-ftp]]></encoded_title>
+    <hits>3060</hits>
+    <id_cat>49</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>49</cat_id>
+    <cat_id_parent>2</cat_id_parent>
+    <cat_article_id>171</cat_article_id>
+    <con_id_contents>1514</con_id_contents>
+    <con_id_article>89</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_preparatifs">Préparatifs</a></li><li><a href="#paragraph_enregistrer-les-parametres-de-son-site">Enregistrer les paramètres de son site</a></li><li><a href="#paragraph_transferer-les-fichiers">Transférer les fichiers</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_preparatifs">Préparatifs</h1><br />
+
+<br />
+Après avoir téléchargé les fichiers de PHPBoost à cette <a href="/download/"> <em><span style="text-decoration: underline;">adresse</span></em></a>, vient la phase de les transférer sur le serveur de votre hébergement Web.<br />
+<br />
+Pour cela il vous faut un logiciel FTP. Pour cette documentation, nous utiliserons le logiciel gratuit <em>Filezilla</em>, très simple d'utilisation, téléchargeable <a href="https://filezilla-project.org/download.php?type=client"><span style="text-decoration: underline;"><em>ici</em></span></a>. <br />
+<br />
+Installez le sur votre ordinateur, puis démarrez le.<br />
+<br />
+Voici l'affichage que vous obtenez : <br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_1.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_enregistrer-les-parametres-de-son-site">Enregistrer les paramètres de son site</h1><br />
+
+<br />
+Afin d'éviter de devoir retaper systématiquement les identifiants de connexion, nous allons les enregistrer dans le logiciel. <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Cliquez sur <em>Fichiers</em> puis <em>Gestionnaire de sites</em><br />
+</li></ul><br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_2.png" alt="" /></p><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Cliquez sur <em>Nouveau site</em><br />
+</li></ul><br />
+Quelques paramètres sont à renseigner : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Hôte :</strong> Ceci se trouve dans les paramètres que votre hébergeur vous a fournis
+</li><li class="formatter-li"><strong>Port :</strong> 21 (dans la grande majorité des cas)
+</li><li class="formatter-li"><strong>Protocole :</strong> FTP
+</li><li class="formatter-li"><strong>Type d'authentification :</strong> Normale
+</li><li class="formatter-li"><strong>Utilisateur :</strong> Ceci se trouve dans les paramètres que votre hébergeur vous a fournis
+</li><li class="formatter-li"><strong>Mot de passe :</strong> Ceci se trouve dans les paramètres que votre hébergeur vous a fournis<br />
+</li></ul><br />
+Cliquez ensuite sur <em>Connexion</em>.<br />
+<br />
+Par la suite pour vous connecter à votre site, il suffira de cliquer sur l'icône ordinateur et cliquer sur le nom que vous avez donné à votre site, comme ceci :<br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_3.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_transferer-les-fichiers">Transférer les fichiers</h1><br />
+
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_4.png" alt="" /></p><br />
+<br />
+La partie gauche correspond aux fichiers contenus dans le dossier que vous avez choisi d'afficher.<br />
+La partie droite correspond aux fichiers de votre hébergement. <br />
+<br />
+Maintenant, deux solutions s'offrent à vous :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Mettre les fichiers du dossier <em>phpboost</em> directement dans le répertoire <em>www</em> (n'est pas commun à tous les hébergeurs, peut varier. Dans mon cas il n'y a rien) qui est la racine de votre site, pour avoir une adresse du type : <em>www.mon-site.com/bidule.truc</em>
+</li><li class="formatter-li">Placez directement le dossier <em>phpboost </em>à la racine de votre site, vous aurez alors une adresse du type : <em>www.mon-site.com/phpboost/bidule.truc</em> (cette dernière solution étant utile si plusieurs sites sont hébergés sur le même serveur).<br />
+</li></ul><br />
+<br />
+Après avoir choisi une des deux solutions, sélectionnez tous les fichiers et répertoires (ou directement le dossier <em>phpboost</em> si vous avez choisi la deuxième solution) et avec la souris maintenue enfoncée, faites glissez les fichiers dans le répertoire de votre hébergement (qui se trouve à droite).<br />
+<br />
+Le transfert se réalise : <br />
+<br />
+<p style="text-align:center"><img src="http://resources.phpboost.com/documentation/installation/ftp_transfert/ftp_5.png" alt="" /></p><br />
+<br />
+Une fois que tous les fichiers sont transférés, passez à l'installation de PHPBoost.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>86.223.18.175</user_ip>
+    <timestamp>1451323271</timestamp>
+  </article>
+</articles>

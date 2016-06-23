@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>309</id>
+    <id_contents>1432</id_contents>
+    <title><![CDATA[Création simplifié d'un thème]]></title>
+    <encoded_title><![CDATA[cr-ation-simplifi-d-un-th-me]]></encoded_title>
+    <hits>527</hits>
+    <id_cat>4</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>4</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>4</cat_article_id>
+    <con_id_contents>1432</con_id_contents>
+    <con_id_article>309</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_introduction">Introduction</a></li><li><a href="#paragraph_pr-paration-des-fichiers-du-futur-th-me">Préparation des fichiers du futur thème</a></li><li><a href="#paragraph_configuration-du-th-me">Configuration du thème</a></li><li><a href="#paragraph_transformation-du-th-me-base-en-mon-theme">Transformation du thème base en mon_theme</a><ol class="wiki_list_2"><li><a href="#paragraph_images">images</a></li><li><a href="#paragraph_lang">lang</a></li><li><a href="#paragraph_theme">theme</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_introduction">Introduction</h1><br />
+
+<br />
+Dans cette partie de la documentation, vous allez apprendre comment créer un thème étape par étape à partir du thème de base.<br />
+Il ne vous est pas nécessaire d'avoir des connaissances poussées en langage HTML et CSS, mais au moins quelques bases, surtout pour pouvoir personnaliser votre thème.<br />
+Afin de vous aider dans cette soif de connaissances, voici quelques liens utiles :<br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"><a href="http://j-willette.developpez.com/tutoriels/html/les-bases-du-html/">Les bases du HTML - Developpez.com</a>
+	</li><li class="formatter-li"><a href="https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/votre-premiere-page-web-en-html">Votre première page Web en HTML - OpenClassRooms.com</a>
+
+	</li><li class="formatter-li"><a href="http://pbnaigeon.developpez.com/tutoriel/CSS-HTML/notions-de-base/">CSS : Notions de base</a>
+	</li><li class="formatter-li"><a href="https://openclassrooms.com/courses/apprenez-a-creer-votre-site-web-avec-html5-et-css3/mettre-en-place-le-css">Mettre en place le CSS - OpenClassRooms.com</a><br />
+</li></ul><br />
+<br />
+<span class="notice"><strong>Petite Astuce :</strong> Installer PHPBoost sur votre ordinateur en local afin de développer votre thème et d'effectuer des testes, pour ce faire il existe <a href="http://www.wampserver.com/">WampServer</a> que je conseil, ou <a href="http://www.easyphp.org/">EasyPHP</a> choisissez la version <strong>DEVELOPMENT SERVER</strong></span><br />
+<br />
+En attendant la rédaction d'un guide d'installation pour ces 2 logiciels, vous trouverez facilement ce qu'il vous faut sur le Web, comme :<br />
+<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"><a href="/wiki/installer-phpboost">Installer PHPBoost</a>
+	</li><li class="formatter-li"><a href="http://easy-design.net/forum/topic-3019+tuto-installation-et-mise-en-place-de-wamp-2-4.php">Installation avec WampServer (Le Tuto est pour la V3 de PHPBoost mais est valable pour la V4.1)</a><br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_pr-paration-des-fichiers-du-futur-th-me">Préparation des fichiers du futur thème</h1><br />
+
+<br />
+Dans un premier temps nous allons dupliquer le thème de base et nommer notre thème :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Aller dans le dossier <strong>templates</strong>
+</li><li class="formatter-li"> Créez un nouveau dossier portant le nom de votre thème, dans notre exemple mon_theme<strong>(</strong><strong><span style="color:#F04343;">ATTENTION</span></strong> pas de caractères spéciaux<strong>)</strong>
+</li><li class="formatter-li"> Entrer dans le dossier <strong>base</strong> et copiez tout les fichiers présents et les coller dans le dossier <strong>mon_theme</strong><br />
+</li></ul><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configuration-du-th-me">Configuration du thème</h1><br />
+
+<br />
+Dans le dossier de votre thème, il vous faut modifier le fichier <strong>config.ini</strong> qui va contenir la configuration de celui-ci.<br />
+Ouvrez le fichier avec le Bloc Note de Windows, <a href="https://notepad-plus-plus.org/download/v6.8.1.html">Notepad++</a> Conseillé.<br />
+Maintenant voyons ensemble quoi mettre à la suite de chaque variable sur chaque ligne juste après le signe <strong>=</strong> que ce soit entre guillemet ou non.<br />
+<br />
+Pour ce faire, lisez cette page-ci <a href="/wiki/fichier-de-configuration-d-un-theme-config-ini">Fichier de configuration d'un thème "config.ini"</a><br />
+<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_transformation-du-th-me-base-en-mon-theme">Transformation du thème base en mon_theme</h1><br />
+
+<br />
+On a presque finit, seul problème, si on ne veut pas que notre thème soit une copie conforme du thème de base il va falloir le modifier.<br />
+Voyons les différents dossier et leur fonctionnement.<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_images">images</h2><br />
+
+<br />
+Contient l'image à afficher pour un Membre qui n'a pas choisi d'avatar <strong>(no_avatar.png)</strong><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_lang">lang</h2><br />
+
+<br />
+Ce dossier contient 2 sous dossier <strong>english</strong> et <strong>french</strong> tout deux contenant un fichier nommé <em>desc.ini</em><br />
+Il vous faut ouvrir ce fichier et modifier les valeurs selon votre souhait.<br />
+<br />
+[[CODE=text]]name="Base"
+desc="Le thème officiel de PHPBoost."
+main_color="Blanc, Bleu"[[/CODE]]<br />
+<br />
+<strong><span style="text-decoration: underline;">Remplacer :</span></strong><br />
+<br />
+<strong><span style="text-decoration: underline;">Base :</span></strong> Par le nom de votre Thème, les caractères spéciaux sont admis ici, dans notre exemple, <strong>Mon Thème</strong><br />
+<strong><span style="text-decoration: underline;">Le thème officiel de PHPBoost :</span></strong> Une description de votre thème<br />
+<strong><span style="text-decoration: underline;">Blanc, Bleu :</span></strong> Couleur dominantes de l'accueil<br />
+<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_theme">theme</h2><br />
+
+<br />
+Ce dossier contient des fichiers <strong>CSS</strong>, ils sont à modifier pour modifier une partie de l'aspect du site selon vos souhait.<br />
+<br />
+Quand au dossier <strong>images</strong>, il contient des images d'aperçus du thème ainsi que le Logo de celui-ci ainsi que l'image d'arrière plan, répétée ou non selon sa définition dans les fichiers CSS<br />
+<br />
+Une fois vos modifications effectuées, pensez à installer votre thème via le panneau d'administration.]]></content>
+    <activ>1</activ>
+    <user_id>787</user_id>
+    <user_ip>78.225.116.39</user_ip>
+    <timestamp>1439164644</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>162</id>
+    <id_contents>1708</id_contents>
+    <title><![CDATA[Utilisation du module Pages]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-pages]]></encoded_title>
+    <hits>1658</hits>
+    <id_cat>44</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>44</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>160</cat_article_id>
+    <con_id_contents>1708</con_id_contents>
+    <con_id_article>162</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_gestion-du-module-page">Gestion du module page</a></li><li><a href="#paragraph_visualisation-d-une-page">Visualisation d'une page</a><ol class="wiki_list_2"><li><a href="#paragraph_commentaires">Commentaires</a></li><li><a href="#paragraph_renommer">Renommer</a></li><li><a href="#paragraph_modifier-la-page">Modifier la page</a></li><li><a href="#paragraph_supprimer-la-page">Supprimer la page</a></li><li><a href="#paragraph_version-imprimable">Version imprimable</a></li></ol></li><li><a href="#paragraph_creer-une-page">Créer une page</a><ol class="wiki_list_2"><li><a href="#paragraph_creation-d-une-page">Création d'une page</a></li><li><a href="#paragraph_emplacement">Emplacement</a></li><li><a href="#paragraph_proprietes">Propriétés</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_gerer-les-redirections">Gérer les redirections</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-redirections">Gestion des redirections</a></li><li><a href="#paragraph_creer-une-redirection">Créer une redirection</a></li></ol></li><li><a href="#paragraph_explorateur">Explorateur</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_gestion-du-module-page">Gestion du module page</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_3.jpg" alt="" /></p><br />
+<br />
+Vous voilà sur l'accueil du module page. Grâce au menu se trouvant en haut à droite sur toutes les pages du module, vous pourrez :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Gérer les pages : Vous pourrez Gérer les pages (retour à cette page), ou créer une nouvelle page.
+</li><li class="formatter-li"> Gérer la <a href="/wiki/administration-du-module-pages">configuration</a> du module.
+</li><li class="formatter-li"> Gérer les redirections
+</li><li class="formatter-li"> Accèder à l'Explorateur des pages<br />
+</li></ul><br />
+<br />
+ Tout en bas de la page, se trouve le mini explorateur, qui vous permet de naviguer à travers les pages créées. Nous détaillerons tout cela plus tard.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_visualisation-d-une-page">Visualisation d'une page</h1><br />
+
+<br />
+Une page se présente comme ceci :<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_page.jpg" alt="" /></p><br />
+Pour accéder à une page, vous pouvez aller la chercher dans l'explorateur, ou récupérer son lien directement.<br />
+Tout en haut, nous retrouvons le titre de la page.<br />
+A droite, plusieurs icônes sont disponibles, en fonctions des droits qui vous sont accordés :<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_commentaires">Commentaires</h2><br />
+
+<br />
+<!-- START HTML -->
+<i class="fa fa-comments-o"></i>
+<!-- END HTML --><br />
+<br />
+Commentaires de la page (si activés). En cliquant sur le lien, vous pourrez lire les commentaires déjà rédigés et en écrire un nouveau.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_coms.jpg" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_renommer">Renommer</h2><br />
+
+<br />
+<!-- START HTML -->
+<i class="fa fa-magic"></i>
+<!-- END HTML --><br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_rename.jpg" alt="" /></p><br />
+Entrez ici le nouveau titre de la page.<br />
+L'option 'Créer une redirection vers cette page' permet de créer une redirection, c'est à dire que tous les liens qui pointent vers l'ancien titre seront redirigés vers la nouvelle page, afin de ne pas avoir de liens rompus.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_modifier-la-page">Modifier la page</h2><br />
+
+<br />
+<!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --><br />
+<br />
+Vous pourrez modifier ici le contenu de la page, ainsi que les autorisations, compteurs de vues, ...<br />
+En revanche, vous ne pourrez ni transformer une page en catégorie ni en modifier son nom.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_supprimer-la-page">Supprimer la page</h2><br />
+
+<br />
+<!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --><br />
+<br />
+Vous avez la possibilité de supprimer une page ou une catégorie si vous le souhaitez.<br />
+<br />
+Si c'est une catégorie, une page vous proposera de transférer les pages de la catégorie dans une autre.<br />
+<span class="warning">Attention, la suppression de toute page est définitive!</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_version-imprimable">Version imprimable</h2><br />
+
+<br />
+<!-- START HTML -->
+<i class="fa fa-print"></i>
+<!-- END HTML --><br />
+<br />
+Vous avez la possibilité de supprimer une page ou une catégorie si vous le souhaitez.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creer-une-page">Créer une page</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_10.jpg" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creation-d-une-page">Création d'une page</h2><br />
+
+<br />
+<em>Titre de la page</em> : donnez un titre clair et conforme au sujet de la page.<br />
+<br />
+<em>Contenu de la page</em> : écrivez ici le contenu de votre page. Rappelons que vous pouvez utiliser 3 langages : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> le <a href="/wiki/bbcode">bbcode</a>
+</li><li class="formatter-li"> le HTML
+</li><li class="formatter-li"> le javascript<br />
+</li></ul><br />
+<br />
+<span class="notice">Nous tenons à souligner un détail très important. Nous avons trop souvent vu des gens qui intègrent une page HTML dans le portail et qui commencent leur code par la déclaration doctype, les balises html, head, body et tout ce qui va avec. Nous allons le répéter: si votre page est intégrée au portail, alors toutes ces balises sont chargées automatiquement, il n'est donc pas utile de le refaire, vous courrez un risque d'incompatibilité assez conséquent. Sachez donc que le code que vous allez taper sera à l'intérieur de la cellule principale du portail.</span><br />
+<br />
+Une balise propre au module page peut être utilisée ici : [[CODE=bbcode]][link= nom-de-votre-page]Nom de votre page[/link][[/CODE]] pour faire des liens entre les articles.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_emplacement">Emplacement</h2><br />
+
+<br />
+<em>Cette page est une catégorie</em> : cocher si cette page sera une catégorie. <br />
+<br />
+<span class="notice">La différence entre une page et une catégorie est uniquement qu'une catégorie pourra contenir d'autres pages. Son contenu sera affiché comme une page standard.</span><br />
+<br />
+<em>Catégorie parente</em> : choisissez la catégorie ou se trouvera votre page.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_proprietes">Propriétés</h2><br />
+
+<br />
+<em>Compter le nombre de fois que la page est consultée</em> : cochez si vous désirez que sur chaque page se trouve un compteur de vues.<br />
+<br />
+<em>Activer les commentaires</em> : cochez si vous désirez que sur chaque page se trouve un lien vers les commentaires de la page.<br />
+<br />
+<em>Afficher le lien d'impression</em> : Cette option affichera une petite icône en forme d'imprimante ( <!-- START HTML -->
+<i class="fa fa-print"></i>
+<!-- END HTML --> ) qui permettra d'afficher une version imprimable (sans le contexte PHPBoost).<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+Mettre des autorisations particulières à la page : si vous ne cochez pas cette page, les autorisations seront celles mises lors de la configuration du module.<br />
+<br />
+Si vous souhaitez une configuration particulière, cochez et mettez les droits désirés pour : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">  la lecture des pages
+</li><li class="formatter-li">  l'édition des pages
+</li><li class="formatter-li">  l'utilisation des commentaires<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gerer-les-redirections">Gérer les redirections</h1><br />
+
+<br />
+Une redirection va permettre d'avoir plusieurs noms de pages qui redirigent vers la même page.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-redirections">Gestion des redirections</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_redir.jpg" alt="" /></p><br />
+<br />
+Sont affichées ici toutes les redirections de toutes les pages du module.<br />
+Sur la gauche, vous avez le nom de la redirection.<br />
+Puis le nom de la page sur laquelle la redirection est dirigée.<br />
+Enfin, la colonne actions vous permet de supprimer une redirection ou d'afficher les redirections menant à cette page.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creer-une-redirection">Créer une redirection</h2><br />
+
+<br />
+Si vous souhaitez créer une redirection sans renommer la page, rendez-vous dans la gestion des redirections (paragraphe ci-dessus)<br />
+Puis cliquez sur l'icône <!-- START HTML -->
+<i class="fa fa-fast-forward"></i>
+<!-- END HTML --> de la page souhaitée :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_redir_new.jpg" alt="" /></p><br />
+<br />
+Sur cette page sont affichées toutes les redirections menant à la page désirée.<br />
+Pour ajouter une nouvelle direction, cliquez sur le lien 'Créer une redirection vers cette page'.<br />
+<br />
+Dans la nouvelle fenêtre, saisissez le nom de la redirection à créer et validez.<br />
+<br />
+Voilà la redirection faite.<br />
+<br />
+==&gt; 2 moyens d'accéder à la page : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> ../pages/test
+</li><li class="formatter-li"> ../pages/nouveau-test<br />
+</li></ul><br />
+<br />
+Lorsqu'un visiteur se rendra sur le lien de la redirection, il sera donc redirigé vers la page voulue et un petit encadré sera affiché :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_rediriged.jpg" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_explorateur">Explorateur</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/pages/page_explorer.jpg" alt="" /></p><br />
+<br />
+Vous pouvez ici parcourir le module page pour suivre le classement de vos catégories et de vos pages.<br />
+<br />
+Dans l'exemple ci-dessus, vous avez : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> 3 pages à la racine du module page
+</li><li class="formatter-li"> 1 catégorie à la racine : 'Ma toute nouvelle page'<br />
+</li></ul><br />
+<br />
+Il suffit de cliquer sur une catégorie pour voir son contenu et sur une page pour l'afficher.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.178.121</user_ip>
+    <timestamp>1462976976</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>17</id>
+    <id_contents>17</id_contents>
+    <title><![CDATA[Utilisateurs]]></title>
+    <encoded_title><![CDATA[utilisateurs]]></encoded_title>
+    <hits>807</hits>
+    <id_cat>17</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>17</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>17</cat_article_id>
+    <con_id_contents>17</con_id_contents>
+    <con_id_article>17</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Utilisateurs]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>81.51.228.217</user_ip>
+    <timestamp>1345822629</timestamp>
+  </article>
+</articles>

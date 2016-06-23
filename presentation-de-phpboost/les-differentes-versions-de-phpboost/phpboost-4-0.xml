@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>140</id>
+    <id_contents>473</id_contents>
+    <title><![CDATA[PHPBoost 4.0]]></title>
+    <encoded_title><![CDATA[phpboost-4-0]]></encoded_title>
+    <hits>1956</hits>
+    <id_cat>14</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>14</cat_id>
+    <cat_id_parent>1</cat_id_parent>
+    <cat_article_id>14</cat_article_id>
+    <con_id_contents>473</con_id_contents>
+    <con_id_article>140</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<strong>Framework :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage à PHP5 de l'ensemble du framework.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau framework MVC.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Réorganisation des packages du framework.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Regroupement de toutes les notions du noyau dans une classe Environment de façon à rendre le code considérablement plus maintenable.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Création d'un chargeur automatique de classe.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte complète de la gestion des requêtes à la bases de données.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte du moteur de templates, possibilité de gérer les templates sous forme de chaine de caractères.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte complète du gestionnaire de cache, possibilité de stockage directement en mémoire pour des performances grandement améliorées.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Création d'un gestionnaire de configuration, stockant de façon autonome les données et s'appuyant sur le gestionnaire de cache pour le rendre plus performant.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Création d'un chargeur de langue permettant une gestion plus aisée des langues.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Générateur automatique de formulaire avec contrôle client et serveur automatisés.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Générateur automatique de tableau avec gestion de la pagination, filtres, tris.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Système de cache CSS.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Création de diverses classes permettant le partage et la publication d'informations sur les réseaux sociaux.
+</li><li class="formatter-li"> Utilitaire en ligne de commande permettant :<br />
+	- l'installation de PHPBoost<br />
+	- la gestion des utilisateurs (ajout, suppression)<br />
+	- Régénération du cache<br />
+	- Gestion du htaccess
+</li><li class="formatter-li"> Nouveau gestionnaire d'erreur et d'exception.
+</li><li class="formatter-li"> Création d'une classe de débug pour les développeurs.
+</li><li class="formatter-li"> Refonte du système de communication entres les modules et le noyau.
+</li><li class="formatter-li"> Nouvelles classes de gestion des requêtes et réponses HTTP.
+</li><li class="formatter-li"> Gestion des cookies à travers les classes HTTP.
+</li><li class="formatter-li"> Amélioration de la récupération des erreurs.
+</li><li class="formatter-li"> Récupération du chemin complet du fichier dans les logs d'erreurs.
+</li><li class="formatter-li"> Ajout de la balise [feed] permettant d'inclure un flux RSS dans une mise en page
+</li><li class="formatter-li"> Nouveau système de champs membres permettant également à un développeur de créer son propre champ personnalisé à partir d'un module.
+</li><li class="formatter-li"> Nouveau système de changement de mot de passe en cas d'oubli.
+</li><li class="formatter-li"> Refonte du système de notation : suppression des champs BDD sur tous les modules, système autonome.
+</li><li class="formatter-li"> Refonte de la section membre.
+</li><li class="formatter-li"> Amélioration de la fonction d'upgrade d'un module.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Possibilité d'avoir la page d'accueil d'un module sur l'index du site
+</li><li class="formatter-li"> Possibilité de définir plusieurs menus dans les modules<br />
+</li></ul><br />
+<br />
+<strong>Menus :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau système de gestion des menus en drag'n drop.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Possibilité d'afficher/masquer un menu sur un module ou une page donnée à l'aide de filtres.<br />
+</li></ul><br />
+<br />
+<strong>Personnalisation graphique :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Possibilité de masquer indépendamment tous les conteneurs suivant les thèmes.
+</li><li class="formatter-li"> Possibilité de cacher/ouvrir dans la liste des modules, la description et les autorisations de lecture pour une meilleure lisibilité
+</li><li class="formatter-li"> Amélioration de l'interface de gestion des thèmes.
+</li><li class="formatter-li"> Possibilité de personnaliser son logo par thème et le favicon du site ainsi que les fichiers CSS de chaque thème
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Nouveau thème Base2 pour la distribution complete.
+</li><li class="formatter-li"> Le nom du site est directement intégré dans le header et n'est plus une image<br />
+</li></ul><br />
+<br />
+<strong>Divers :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Possibilité d'utiliser un serveur smtp pour l'envoi de mails.
+</li><li class="formatter-li"> Possibilité de spécifier le niveau d'accès pour voir la liste des membres.
+</li><li class="formatter-li"> Redimensionnement automatisé des avatars s'ils dépassent les dimensions maximales autorisées.
+</li><li class="formatter-li"> Meilleur détection des robots d'indexation, ajout de la prise en compte de Bing.
+</li><li class="formatter-li"> Ajout d'un défilement vertical dans l'administration pour la visualisation de la liste des utilisateurs connectées.
+</li><li class="formatter-li"> Ajout d'un bloc note à l'accueil de l'administration.
+</li><li class="formatter-li"> Possibilité de trier les membres par date de dernière connexion dans l'administration.
+</li><li class="formatter-li"> Ajout de l'attribut style à la balise image de façon à pouvoir fixer des propriétés comme largeur, hauteur et bordure.
+</li><li class="formatter-li"> Nouveau système de champs membres : Les champs peuvent être désactivé, modifier et l'ajout de type de champs supplémentaires ont été ajoutés.
+</li><li class="formatter-li"> Possibilité de gérer finement les autorisations des commentaires.
+</li><li class="formatter-li"> Possibilité de gérer finement les autorisations de l'interface de fichier.
+</li><li class="formatter-li"> Possibilité de gérer finement les autorisations d'accès au site quand il est en maintenance.
+</li><li class="formatter-li"> Possibilité de définir une période de validité d'une publication (pour les articles, news, sondages et téléchargements)
+</li><li class="formatter-li"> Refonte de la gestion des thèmes : Possibilité de gérer finement les autorisations des langues, d'avoir plusieurs images pour présenter un thème avec effet LightBox
+</li><li class="formatter-li"> Refonte de la gestion des langues : Possibilité de gérer finement les autorisations des langues
+</li><li class="formatter-li"> Refonte du système de commentaire : <br />
+	- Refonte graphique<br />
+	- Gestion de la pagination en AJAX<br />
+	- Ajout d'autorisations de lecture, de modération et d'ajout<br />
+	- Possibilité de définir des tâches dans une classe lors d'un ajout de commentaire
+</li><li class="formatter-li"> Déplacement du réglement à l'inscription dans la configuration des membres pour plus de cohérence
+</li><li class="formatter-li"> Inscription : Envoi d'un email au membre lorsqu'il est approuvé par un administrateur<br />
+</li></ul><br />
+<br />
+<strong>Nouveau module BugTracker</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Nouveau module de gestion des bugs.
+</li><li class="formatter-li"> Possibilité de voir les statistiques
+</li><li class="formatter-li"> Possibilité de filtrer les bugs résolus et non résolus<br />
+</li></ul><br />
+<br />
+<strong>Nouveau module Sitemap</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Nouveau module permettant la gestion du plan du site mais aussi du sitemap.xml permettant un meilleure référencement du site<br />
+</li></ul><br />
+<br />
+<strong>Nouveau module personnalisation</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Nouveau module permettant personnaliser son logo par thème et le favicon du site ainsi que les fichiers CSS de chaque thème</li></ul><br />
+<br />
+<strong>BBCode :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Déplacement de l'éditeur dans un module à part entière
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Ajout de la balise YouTube
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Ajout de la balise LightBox
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Ajout de la balise feed
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Ajout de paramètre dans la balise img (comme style par exemple)<br />
+</li></ul><br />
+<br />
+<strong>TinyMCE</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Déplacement de l'éditeur dans un module à part entière
+</li><li class="formatter-li"> Mise à jour de TinyMCE
+</li><li class="formatter-li"> Corrections de bugs<br />
+</li></ul><br />
+<br />
+<strong>Galerie :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Voir les images plus vues/mieux notées, affichage sur l'ensemble de la galerie et non sur une catégorie.
+</li><li class="formatter-li"> Possibilité de télécharger l'image.
+</li><li class="formatter-li"> Tri des images conservé dans la pagination.
+</li><li class="formatter-li"> Gestion des flux RSS et Atom
+</li><li class="formatter-li"> Possibilité de définir une catégorie principale pour tous les fichiers dans l'ajout d'image par FTP<br />
+</li></ul><br />
+<br />
+<strong>News :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Mise à jour du module
+</li><li class="formatter-li"> Collaboration des utilisateurs possible.
+</li><li class="formatter-li"> Ajout des suggestions de news
+</li><li class="formatter-li"> Ajout des sources de news
+</li><li class="formatter-li"> Possibilité de voir les news non approuvées<br />
+</li></ul><br />
+<br />
+<strong>Articles :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Mise à jour du module
+</li><li class="formatter-li"> Collaboration des utilisateurs possible.
+</li><li class="formatter-li"> Ajout des sources de l'article
+</li><li class="formatter-li"> Possibilité de voir les articles non approuvés<br />
+</li></ul><br />
+<br />
+<strong>ShoutBox :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité de gérer les autorisations d'écriture et de modération (édition et suppression).<br />
+</li></ul><br />
+<br />
+<strong>Livre d'or :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité de gérer les autorisations d'écriture et de modération (édition et suppression).<br />
+</li></ul><br />
+<br />
+<strong>Pages :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité de cacher le lien d'impression pour chacune des pages.<br />
+</li></ul><br />
+<br />
+<strong>Calendrier :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité de gérer les autorisations d'écriture, de lecture et de modération (édition et suppression).<br />
+</li></ul><br />
+<br />
+<strong>Forum</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Suppression d'un sondage maintenant possible<br />
+</li></ul><br />
+<br />
+<strong>Téléchargement</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité de signaler les liens cassés.
+</li><li class="formatter-li"> Possibilité d'ajouter le lien d'un fichier contenu dans la section upload<br />
+</li></ul><br />
+<br />
+<strong>Shoutbox</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Menu adaptable automatiquement à la largeur du site en positionnement horizontal<br />
+</li></ul><br />
+<br />
+<strong>Statistiques</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Ajout de Windows 8 dans les statistiques<br />
+</li></ul><br />
+<br />
+<strong>Compatibilité des thèmes 3.0 :</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Ajout d'une variable js THEME dans header.tpl
+</li><li class="formatter-li"> Modification de la classe xmlhttprequest_preview (border-radius en plus).
+</li><li class="formatter-li"> Ajout d'une image images/form/justify.png dans les thèmes 
+</li><li class="formatter-li"> Changement mineurs dans bbcode.css (bloc masquables + balise wikipédia)<br />
+</li></ul><br />
+<br />
+<strong>Newsletter</strong><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Refonte du module en MVC.
+</li><li class="formatter-li"> Gestion des autorisations de création d'une newsletter.
+</li><li class="formatter-li"> Gestion des autorisations de lecture et de modération de la liste des archives.
+</li><li class="formatter-li"> Gestion des autorisations de lecture et de modération des inscrits.
+</li><li class="formatter-li"> Gestions de plusieurs newsletter (possibilité de s'abonner à certaines ou à toutes les newsletters).
+</li><li class="formatter-li"> Possibilité de gérer les autorisations de lecture et de modération des inscrits, de création d'une newsletteret de modération des archives par newsletter.
+</li><li class="formatter-li"> Gestion des archives avec tries sur les types de newsletter.
+</li><li class="formatter-li"> Inscription aux newsletters dès l'enregistrement/l'édition d'un membre<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>90.40.105.71</user_ip>
+    <timestamp>1353689443</timestamp>
+  </article>
+</articles>

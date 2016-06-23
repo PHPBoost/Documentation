@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>246</id>
+    <id_contents>1721</id_contents>
+    <title><![CDATA[Utilisation du module Recherche]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-recherche]]></encoded_title>
+    <hits>480</hits>
+    <id_cat>75</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>75</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>244</cat_article_id>
+    <con_id_contents>1721</con_id_contents>
+    <con_id_article>246</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_page-de-recherche">Page de recherche</a></li><li><a href="#paragraph_resultats">Résultats</a></li><li><a href="#paragraph_mini-menu">Mini menu</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_page-de-recherche">Page de recherche</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/search/home.png" alt="" /></p><br />
+Sur la page de recherche, vous pouvez indiquer le ou les mots rechercher (4 lettres minimum) et choisir le ou les modules concernés.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_resultats">Résultats</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/search/results.png" alt="" /></p><br />
+Si des résultats correspondant à la recherche demandée sont trouvés, ils sont affichés en liste. Les résultats se présentent de la forme :<br />
+<strong>nom du module</strong> : titre<br />
+La pagination est appliquée si le nombre de résultats dépasse le nombre de résultats par page configuré dans l'<a href="/wiki/4-1-administration-du-module-recherche">administration du module</a>.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mini-menu">Mini menu</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/search/mini.png" alt="" /></p><br />
+Vous avez la possibilité d'effectuer une recherche depuis n'importe quelle page du site si le bloc <strong>Recherche</strong> est activé par l'administrateur du site, dans la gestion des menus.]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.178.7</user_ip>
+    <timestamp>1463232798</timestamp>
+  </article>
+</articles>

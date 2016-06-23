@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>83</id>
+    <id_contents>1626</id_contents>
+    <title><![CDATA[Principales balises BBCode]]></title>
+    <encoded_title><![CDATA[principales-balises-bbcode]]></encoded_title>
+    <hits>17636</hits>
+    <id_cat>34</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>34</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>79</cat_article_id>
+    <con_id_contents>1626</con_id_contents>
+    <con_id_article>83</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_smileys">Smileys</a></li><li><a href="#paragraph_mise-en-forme-du-texte">Mise en forme du texte</a><ol class="wiki_list_2"><li><a href="#paragraph_mises-en-forme-de-base-gras-italique-souligne-et-barre">Mises en forme de base : gras, italique, souligné et barré</a></li><li><a href="#paragraph_taille-du-texte">Taille du texte</a></li><li><a href="#paragraph_couleur">Couleur</a></li><li><a href="#paragraph_alignement">Alignement</a></li><li><a href="#paragraph_lement-flottant">Élément flottant</a></li><li><a href="#paragraph_les-titres">Les titres</a></li><li><a href="#paragraph_les-conteneurs">Les conteneurs</a></li><li><a href="#paragraph_les-styles">Les styles</a></li></ol></li><li><a href="#paragraph_autres-balises-utiles">Autres balises utiles</a><ol class="wiki_list_2"><li><a href="#paragraph_liens">Liens</a></li><li><a href="#paragraph_images">Images</a></li><li><a href="#paragraph_lightbox">Lightbox</a></li><li><a href="#paragraph_texte-cache">Texte caché</a></li><li><a href="#paragraph_citation">Citation</a></li><li><a href="#paragraph_tableaux">Tableaux</a></li><li><a href="#paragraph_listes">Listes</a></li><li><a href="#paragraph_inserer-du-code">Insérer du code</a><ol class="wiki_list_3"><li><a href="#paragraph_preciser-le-type-de-code-insere">Préciser le type de code inséré</a></li><li><a href="#paragraph_afficher-les-lignes">Afficher les lignes</a></li></ol></li><li><a href="#paragraph_multimedia">Multimédia</a><ol class="wiki_list_3"><li><a href="#paragraph_flash">Flash</a></li><li><a href="#paragraph_videos">Vidéos</a></li><li><a href="#paragraph_son">Son</a></li></ol></li><li><a href="#paragraph_inserer-des-expressions-mathematiques">Insérer des expressions mathématiques</a></li><li><a href="#paragraph_ancres">Ancres</a><ol class="wiki_list_3"><li><a href="#paragraph_qu-est-ce-qu-une-ancre">Qu'est-ce qu'une ancre?</a></li><li><a href="#paragraph_creer-une-ancre">Créer une ancre</a></li><li><a href="#paragraph_faire-pointer-un-lien-vers-une-ancre">Faire pointer un lien vers une ancre</a></li></ol></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[PHPBoost gère la mise en forme des messages du forum, articles, commentaires, etc... avec un "langage" simplifié. En effet, qui n'a jamais entendu parler du BBCode ? C'est un langage inventé, qui permet de faciliter la mise en forme d'un message et qui permet entre autres de mettre du texte en gras, de le souligner, de faire un lien ou bien d'autres choses encore. Il permet à des utilisateurs ne connaissant pas du tout l'html de formater leur messages.<br />
+<br />
+Niveau fonctionnement, pour ceux qui sont intéressés, des expressions régulières reconnaissent les balises BBcode et remplacent ce language à balises à crochets [] par les balises XHTML et CSS correspondantes.<br />
+<br />
+Nous allons voir par l'intermédiaire de cet article comment mettre en forme un message, valable sur toutes les pages de PHPBoost contenant l'éditeur de texte.<br />
+<br />
+<span class="warning">Veillez à bien respecter un ordre d'ouverture et de fermeture des balises lorsque vous en imbriquez une dans l'autre :<br />
+[[CODE]][b][i]Texte[/b][/i]
+est à proscrire et à remplacer par :
+[b][i]Texte[/i][/b][[/CODE]]<br />
+Effectivement vous allez me dire : "mais ça marche aussi!".<br />
+Certes, mais cela n'est absolument pas bon pour les navigateurs et la page ne sera plus compatible au standard XHTML 1.0 Strict du W3C.<br />
+<br />
+Veillez aussi à ne pas intercaler d'espaces à l'intérieur des crochets [] qui correspondent à la balise, cela empêcherait tout simplement le fonctionnement de la mise en forme.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_smileys">Smileys</h1><br />
+
+<br />
+Pour égayer vos messages, rien de mieux que d'y insérer quelques smileys histoire d'illustrer des réactions récurrentes.<br />
+<br />
+Pour cela vous devez placer le curseur à l'endroit où vous voulez insérer le smiley, à l'intérieur de la zone de texte. Ensuite vous cliquez sur le bouton <!-- START HTML -->
+<i class="fa bbcode-icon-smileys"></i>
+<!-- END HTML --> dans la barre BBCode pour afficher la collection de smileys disponibles (une vingtaine d'origine plus ceux éventuellement rajoutés) et cliquez sur le smiley qui vous intéresse.<br />
+<br />
+Un code va donc s'afficher à l'endroit où vous aviez placé le curseur.<br />
+Et oui vous l'aurez compris le smiley ne s'insère pas directement mais cela insère un "code smiley" qui est propre à chaque smiley, qui sera remplacé par le smiley à l'affichage du message.<br />
+<br />
+Vous pourrez donc au bout d'un certain temps et avec de l'habitude ne plus avoir à cliquer sur le bouton smiley car vous aurez retenu les codes correspondants. D'ailleurs pourquoi des caractères si bizarres ?<br />
+<br />
+Effectivement les caractères correspondant aux smileys peuvent être compliqués mais pour cela on a une explication évidente. Par exemple pour le smiley sourire si le code était sourire, dès que le mot sourire apparaîtrait dans le message il serait remplacé par le smiley correspondant.<br />
+<br />
+Et puis pour allez encore plus loin vous allez remarquer quelque chose si ce n'est pas déjà fait.<br />
+Par exemple justement le smiley sourire <img src="/images/smileys/smile.png" alt=":)" class="smiley" /><br />
+Son code est :<br />
+<br />
+[[CODE]]:)[[/CODE]]<br />
+Et bien faites faire un quart de tour dans le sens horaire et vous verrez vite qu'il forme un visage souriant (avec les deux points : les yeux, et la parenthèse : la bouche).<br />
+Vous pouvez faire ça avec beaucoup de smileys classiques comme le clin d'œil par exemple.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-forme-du-texte">Mise en forme du texte</h1><br />
+
+<br />
+Vous vous demandez comment j'ai mis en page cet article ? Simplement, grâce au BBCode ! En effet le BBCode dérive de l'HTML par sa syntaxe.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_mises-en-forme-de-base-gras-italique-souligne-et-barre">Mises en forme de base : gras, italique, souligné et barré</h2><br />
+
+<br />
+Pour mettre un texte en gras vous n'aurez qu'à l'encadrer par la balise <em>b</em> comme le montre cet exemple :<br />
+<br />
+[[CODE]][b]Texte à mettre en gras[/b][[/CODE]]<br />
+Cet exemple affichera:<br />
+<strong>Texte en gras</strong><br />
+<br />
+Pour l'insérer plus facilement vous pouvez sélectionner le texte que vous voulez mettre en gras et vous cliquez sur <!-- START HTML -->
+<i class="fa bbcode-icon-bold"></i>
+<!-- END HTML -->, il s'entourera automatiquement des bonnes balises.<br />
+<br />
+Vous pouvez faire de même avec les balises i, u, s qui correspondent à : <br />
+<ul class="formatter-ul"><li class="formatter-li">i : italique (<!-- START HTML -->
+<i class="fa bbcode-icon-italic"></i>
+<!-- END HTML -->)
+</li><li class="formatter-li">u : souligné (<!-- START HTML -->
+<i class="fa bbcode-icon-underline"></i>
+<!-- END HTML -->)
+</li><li class="formatter-li">s : barré (<!-- START HTML -->
+<i class="fa bbcode-icon-strike"></i>
+<!-- END HTML -->)</li></ul><br />
+Mais pourquoi des lettres b, i et u ?<br />
+A cause de l'anglais tout simplement !<br />
+b est l'initiale de "bold" qui signifie "gras", i pour "italic", et u pour "underline" ou "souligné" en français.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_taille-du-texte">Taille du texte</h2><br />
+
+<br />
+Pour modifier ces propriétés, le principe est le même. On va encadrer le texte désiré par d'autres balises. L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-size"></i>
+<!-- END HTML --><br />
+<br />
+[[CODE]][size=25]Texte[/size][[/CODE]]<br />
+Cet exemple affichera :<br />
+<span style="font-size: 25px;">Texte</span><br />
+<br />
+La balise <em>size</em>, admet en argument un chiffre entre 0 et 49<br />
+<br />
+Quelques exemples :<br />
+<span style="font-size: 5px;">Taille 5</span><br />
+<span style="font-size: 9px;">Taille 9</span><br />
+<span style="font-size: 25px;">Taille 25</span><br />
+<span style="font-size: 35px;">Taille 35</span><br />
+<span style="font-size: 49px;">Taille 49</span><br />
+[size=50]Taille 50[/size] Celle la ne marche pas comme prévu.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_couleur">Couleur</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-color"></i>
+<!-- END HTML --><br />
+<br />
+Dans <em>color</em> vous mettrez la couleur du texte (en anglais pour les principales couleurs, ou alors en hexadécimal pour les connaisseurs). Liste des couleurs disponibles: red, green, blue, yellow, purple, olive, black, white, grey etc.<br />
+<br />
+[[CODE]][size=25][color=red]Texte[/color][/size]
+[size=25][color=#FF6600]Texte[/color][/size][[/CODE]]<br />
+Cet exemple affichera :<br />
+<span style="font-size: 25px;"><span style="color:red;">Texte</span></span><br />
+<span style="font-size: 25px;"><span style="color:#FF6600;">Texte</span></span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_alignement">Alignement</h2><br />
+
+<br />
+Pour l'alignement d'un texte le principe est encore une fois le même. En utilisant les boutons gauche, centré, droite et justifié, vous pourrez aligner le texte qui sera entouré des balises où vous voudrez dans la page.<br />
+<br />
+Les icônes de la balise sont : <br />
+<ul class="formatter-ul"><li class="formatter-li">gauche : <!-- START HTML -->
+<i class="fa bbcode-icon-left"></i>
+<!-- END HTML -->
+</li><li class="formatter-li">centré : <!-- START HTML -->
+<i class="fa bbcode-icon-center"></i>
+<!-- END HTML -->
+</li><li class="formatter-li">droite : <!-- START HTML -->
+<i class="fa bbcode-icon-right"></i>
+<!-- END HTML -->
+</li><li class="formatter-li">justifié: <!-- START HTML -->
+<i class="fa bbcode-icon-justify"></i>
+<!-- END HTML --></li></ul><br />
+[[CODE]][align=right]Exemple de texte aligné à droite[/align][[/CODE]]<br />
+Cet exemple affichera :<br />
+<p style="text-align:right">Exemple de texte aligné à droite</p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_lement-flottant">Élément flottant</h2><br />
+
+<br />
+Nous avons déjà vu la balise <em>align</em>, elle permet de positionner des éléments.<br />
+L'avantage de la balise <em>float</em> c'est qu'elle permet de mettre plusieurs éléments à la même hauteur, par exemple si on veut insérer une image sur la droite, si on lui demande de se positionner à droite par la balise <em>float</em> le texte ne viendra pas se mettre sur l'image mais il l'entourera.<br />
+A noter qu'il est possible de faire flotter à droite ou à gauche mais pas au centre.<br />
+<br />
+Les icônes de la balise sont : <br />
+<ul class="formatter-ul"><li class="formatter-li">gauche : <!-- START HTML -->
+<i class="fa bbcode-icon-float-left"></i>
+<!-- END HTML -->
+</li><li class="formatter-li">droite : <!-- START HTML -->
+<i class="fa bbcode-icon-float-right"></i>
+<!-- END HTML --></li></ul><br />
+[[CODE]][float=right]Elément flottant à droite[/float][[/CODE]]<br />
+Cet exemple affichera :<br />
+<p class="float-right">Elément flottant à droite</p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-titres">Les titres</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-title"></i>
+<!-- END HTML --><br />
+<br />
+La balise <em>title</em> sert à créer des titres.  Sélectionnez votre texte à mettre en titre, cliquez sur l'icône et choisissez le niveau de titre.<br />
+<br />
+[[CODE]][title=1]titre 1[/title]
+[title=2]titre 2[/title]
+[title=3]titre 3[/title]
+[title=4]titre 4[/title][[/CODE]]<br />
+Cet exemple affichera :<br />
+<h3 class="formatter-title">titre 1</h3><br />
+<h3 class="formatter-title">titre 2</h3><br />
+<h4 class="formatter-title">titre 3</h4><br />
+<h4 class="formatter-title">titre 4</h4><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-conteneurs">Les conteneurs</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-subtitle"></i>
+<!-- END HTML --> <br />
+<br />
+Les balises <em>block</em> et <em>fieldset</em> servent à créer un cadre autour d'un texte.  Sélectionnez votre texte à encadrer, cliquez sur l'icône et choisissez le type de cadre.<br />
+<br />
+[[CODE]][block]ce texte est encadré[/block]
+[fieldset]ce texte est aussi un texte encadré[/fieldset][[/CODE]]<br />
+Cet exemple affichera :<br />
+<div class="formatter-block">ce texte est encadré</div><br />
+<fieldset class="formatter-fieldset" style=""><legend></legend>Ce texte est aussi un texte encadré.</fieldset><br />
+A noter que la balise <em>fieldset</em> peut aussi s'utiliser avec l'attribut "legend" pour mettre un titre:<br />
+<br />
+[[CODE]][fieldset legend="titre"]ce texte est encadré avec un titre[/fieldset][[/CODE]]<br />
+Cet exemple affichera :<br />
+<fieldset class="formatter-fieldset" style=""><legend>titre</legend>Ce texte est encadré avec un titre.</fieldset><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-styles">Les styles</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-style"></i>
+<!-- END HTML --><br />
+<br />
+Les styles de texte permettent de bien mettre en évidence une zone de texte sous forme de question, remarque, attention et erreur. La balise utilisée est <em>style</em>.<br />
+<br />
+Voici comme exemple les 4 styles disponibles : <br />
+<br />
+[[CODE]][style=question]question[/style]
+[style=notice]remarque[/style]
+[style=warning]attention[/style]
+[style=error]erreur[/style]
+[[/CODE]]<br />
+Cet exemple affichera :<br />
+<span class="question">question</span><br />
+<span class="notice">remarque</span><br />
+<span class="warning">attention</span><br />
+<span class="error">erreur</span><br />
+<h1 class="wiki_paragraph1" id="paragraph_autres-balises-utiles">Autres balises utiles</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_liens">Liens</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-url"></i>
+<!-- END HTML --><br />
+<br />
+Pour faire un lien vers une page web quelconque, vous devez suivre la démarche suivante. Vous devez d'abord insérer la balise lien qui est <em>url</em>. Vous mettez le <em>texte ou l'image</em> qui serviront de support pour le lien. Ensuite vous revenez à l'ouverture de la balise url et vous remplacez url par url=votre page. <br />
+<br />
+Voici un exemple :<br />
+<br />
+[[CODE]][url=http://www.phpboost.com]PHPBoost[/url]
+[url=http://www.phpboost.com]http://www.phpboost.com[/url][[/CODE]]<br />
+Cet exemple affichera :<br />
+<a href="/">PHPBoost</a><br />
+<a href="/">http://www.phpboost.com</a><br />
+<br />
+Lors du clic sur l'icône de la balise, l'adresse du lien vous est demandée et le curseur est positionné automatiquement pour ajouter le texte du lien.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_images">Images</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-image"></i>
+<!-- END HTML --><br />
+<br />
+L'ajout d'image permet d'expliquer un problème, montrer des créations graphiques, images drôles/intéressantes, etc...<br />
+Pour cela vous pouvez insérer une image en spécifiant son adresse internet dans les balises <em>img</em>.<br />
+<br />
+Voici un exemple :<br />
+<br />
+[[CODE]][img]https://resources.phpboost.com/phpboost/logo.png[/img][[/CODE]]<br />
+<br />
+Cet exemple affichera :<br />
+<img src="https://resources.phpboost.com/phpboost/logo.png" alt="" /><br />
+<br />
+Combinons avec ce que nous avons appris avant, nous allons centrer l'image :<br />
+[[CODE]][align=center][img]https://resources.phpboost.com/phpboost/logo.png[/img][/align][[/CODE]]<br />
+Cet exemple affichera :<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/phpboost/logo.png" alt="" /></p><br />
+Il est également possible de fixer les propriétés de style de l'image (la largeur ou la hauteur par exemple) directement dans la balise. Exemple avec une largeur à 30% :<br />
+<br />
+[[CODE]][img style="width:30%;"]https://resources.phpboost.com/phpboost/logo.png[/img][[/CODE]]<br />
+Vous savez donc maintenant ajouter des images à vos messages.<br />
+<br />
+Pour écrire sur une image, il vous suffit de faire cela :<br />
+<br />
+[[CODE=bbcode]][block style="background-image:url(LIEN DE L'IMAGE); width:760px; height:650px;"]Texte par dessus[/block][[/CODE]]<br />
+[[CODE=bbcode]]background-image:url(LIEN DE L'IMAGE)[[/CODE]] est l'élément ou vous devriez mettre le lien de l'image<br />
+[[CODE=bbcode]]width:760px[[/CODE]] et la largeur.<br />
+[[CODE=bbcode]]height:650px;[[/CODE]] la hauteur.<br />
+[[CODE=text]]Texte par dessus[[/CODE]] est le texte qui sera par dessus l'image.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_lightbox">Lightbox</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-lightbox"></i>
+<!-- END HTML --><br />
+<br />
+Cette balise permet d'ajouter un effet sur une image. Elle permet d'afficher la miniature d'une image dans un texte et de l'afficher en taille réelle lorsqu'on clique dessus.<br />
+<br />
+Voici un exemple :<br />
+<br />
+[[CODE]][lightbox=https://resources.phpboost.com/phpboost/logo.png][img style="width: 50px;"]https://resources.phpboost.com/phpboost/logo.png[/img][/lightbox][[/CODE]]<br />
+Cet exemple affichera :<br />
+<a href="https://resources.phpboost.com/phpboost/logo.png" data-lightbox="formatter"><img src="https://resources.phpboost.com/phpboost/logo.png" alt="" style="width: 50px;" /></a><br />
+<br />
+Lors du clic sur l'icône de la balise, l'adresse de l'image en taille réelle vous est demandée et le curseur est positionné automatiquement pour ajouter l'image miniature (avec la balise <em>img</em> décrite au paragraphe précédent) ou le texte à afficher.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_texte-cache">Texte caché</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-hide"></i>
+<!-- END HTML --><br />
+<br />
+La balise <em>hide</em> permet d'afficher une zone de texte caché. Il suffit de cliquer dessus pour afficher le contenu. Elle peut être utilisée pour un article de questionnaire donnant ainsi la réponse à la question.<br />
+<br />
+Exemple : <br />
+<br />
+[[CODE]][hide]Cliquez sur la zone de texte pour afficher le texte.[/hide][[/CODE]]<br />
+Cet exemple affichera :<br />
+<br />
+<span class="formatter-hide">Caché:</span><div class="hide" onclick="bb_hide(this)"><div class="hide2">Cliquez sur la zone de texte pour afficher le texte.</div></div><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_citation">Citation</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-quote"></i>
+<!-- END HTML --><br />
+<br />
+La balise <em>quote</em> (citation en anglais) est souvent utilisée pour citer le message d'un autre membre, mais peut avoir d'autres utilisation très pratiques.<br />
+<br />
+Elle peut être utilisé simplement pour citer un texte :<br />
+<br />
+[[CODE]][quote]Texte sans auteur particulier à citer[/quote][[/CODE]]<br />
+Cet exemple affichera :<br />
+<br />
+<span class="formatter-blockquote">Citation:</span><div class="blockquote">Texte sans auteur particulier à citer</div><br />
+Maintenant, vous pouvez citer l'auteur du message (ça ne doit pas forcément être le pseudo d'un membre, ça peut être le nom d'un site ou d'un auteur...)<br />
+<br />
+[[CODE]][quote=CrowkaiT]Message dont l'auteur est CrowkaiT[/quote][[/CODE]]<br />
+<br />
+Cet exemple affichera :<br />
+<br />
+<span class="formatter-blockquote">CrowkaiT:</span><div class="blockquote">Message dont l'auteur est CrowkaiT</div><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_tableaux">Tableaux</h2><br />
+
+<br />
+<span class="formatter-blockquote">Article détaillé:</span><div class="blockquote"><a href="/wiki/faire-un-tableau-en-bbcode">Insérer des tableaux</a></div><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_listes">Listes</h2><br />
+
+<br />
+<span class="formatter-blockquote">Article détaillé:</span><div class="blockquote"><a href="/wiki/inserer-une-liste-en-bbcode">Insérer des listes</a></div><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_inserer-du-code">Insérer du code</h2><br />
+
+<br />
+Pour afficher du BBCode sans qu'il soit interprété comme par exemple plus haut dans cet article (tous les autres langages y compris le HTML sont bloqués par mesure de sécurité), il faut utiliser la balise BBCode nommée code. Le code ne sera pas interprété, et il sera coloré si le langage est supporté et reconnu par le colorateur syntaxique. <br />
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-code"></i>
+<!-- END HTML --><br />
+<br />
+Voici un exemple:<br />
+<br />
+[[CODE]]&lt;?php echo 'Bonjour cher membre'; ?&gt;[[/CODE]]<br />
+On peut également précisé le type de code que l'on vas y insérer :<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_preciser-le-type-de-code-insere">Préciser le type de code inséré</h3><br />
+
+<br />
+En précisant le type de code que l'on veux colorer, on met toute les chances de notre côtés pour que l'interpréteur syntaxique gère au mieux la couleur.<br />
+<br />
+Exemple :<br />
+<br />
+Si c'est du code php, l'on peut mettre directement :<br />
+<br />
+[[CODE=bbcode]][code=php]&lt;?php echo 'Bonjour cher membre'; ?&gt;[/code][[/CODE]]<br />
+Cet exemple affichera :<br />
+<br />
+[[CODE=php]]&lt;?php echo 'Bonjour cher membre'; ?&gt;[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_afficher-les-lignes">Afficher les lignes</h3><br />
+
+<br />
+Pour insérer les lignes a côtés du code, il va falloir insérer un argument supplémentaire dans la balise BBCode.<br />
+<br />
+Procéder comme suit :<br />
+<br />
+[[CODE=bbcode]][code=php,1]&lt;?php 
+echo 'Bonjour cher membre'; 
+?&gt;[/code][[/CODE]]<br />
+Cet exemple affichera :<br />
+<br />
+[[CODE=php,1]]&lt;?php 
+echo 'Bonjour cher membre'; 
+?&gt;[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_multimedia">Multimédia</h2><br />
+
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_flash">Flash</h3><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-flash"></i>
+<!-- END HTML --><br />
+<br />
+La balise flash <em>swf</em> permet d'intégrer des animations flash directement dans PHPBoost, celle-ci peut prendre deux arguments : largeur et hauteur.<br />
+<br />
+[[CODE]][swf=largeur,hauteur]url de l'animation[/swf][[/CODE]]<br />
+Exemple :<br />
+<br />
+[[CODE]][swf=155,250]http://www.phpboost.com/phpboost/pub.swf[/swf][[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_videos">Vidéos</h3><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-movie"></i>
+<!-- END HTML --><br />
+<br />
+Pour savoir comment utiliser la balise <em>flash</em> pour insérer des vidéos, merci de lire <a href="/wiki/inserer-des-videos-sur-phpboost">l'article approprié</a>.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_son">Son</h3><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-sound"></i>
+<!-- END HTML --><br />
+Vous pouvez bien sur insérer du son sur phpboost. La balise utilisée est <em>sound</em>.<br />
+Il faut cependant noter que le lecteur lit <strong>uniquement</strong> les fichiers <strong>.mp3</strong>. De plus la lecture optimale se fait pour <em>les fichiers encodés à 44,100kH</em>z. Dans les autres cas, la lecture ne se fera pas normalement.<br />
+<br />
+Exemple : <br />
+<br />
+[[CODE]][sound]https://art.macp3.info/VRAC/mp3/tagadatsointsoin.mp3[/sound][[/CODE]]<br />
+Cet exemple affichera :<br />
+[[MEDIA]]insertSoundPlayer('https://art.macp3.info/VRAC/mp3/tagadatsointsoin.mp3');[[/MEDIA]]<br />
+<span style="font-size: 10px;"><span style="text-decoration: underline;">Source:</span> Musique composée par <em>Kak Miortvi Pengvin</em>. Fichier distribué sous licence <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/fr/">Creative Commons BY-NC-ND 2.0</a>.<br />
+</span><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_inserer-des-expressions-mathematiques">Insérer des expressions mathématiques</h2><br />
+
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-math"></i>
+<!-- END HTML --><br />
+<br />
+La balise math permet d'insérer des expressions mathématiques. Vous trouverez tous les détails sur <a href="/wiki/utiliser-latex-en-bbcode">l'article approprié</a> (explication et démonstration).<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ancres">Ancres</h2><br />
+
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_qu-est-ce-qu-une-ancre">Qu'est-ce qu'une ancre?</h3><br />
+
+<br />
+Une ancre permet de définir des lieux dans la page. Elle permet de faire en sorte de se rendre directement sur l'endroit recherché dans la page (voir par exemple les liens du sommaire de cette page, ils mènent directement au paragraphe concerné).<br />
+<br />
+L'icône de la balise est : <!-- START HTML -->
+<i class="fa bbcode-icon-anchor"></i>
+<!-- END HTML --><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_creer-une-ancre">Créer une ancre</h3><br />
+
+<br />
+Pour définir une ancre, il faut définir la syntaxe suivante:<br />
+<br />
+[[CODE]][anchor=nom-ancre]Titre[/anchor][[/CODE]]<br />
+<h3 class="wiki_paragraph3" id="paragraph_faire-pointer-un-lien-vers-une-ancre">Faire pointer un lien vers une ancre</h3><br />
+
+<br />
+Pour créer un lien vers un endroit précis de la page, il faut mettre avant tout l'adresse de la page, puis mettre un dièse et le nom de l'ancre précédemment définie.<br />
+Nous utiliserons par exemple:<br />
+<br />
+[[CODE]][url=/wiki/principales-balises-bbcode#creer-une-ancre]Créer des ancres en BBCode sur PHPBoost[/url][[/CODE]]<br />
+Cet exemple affichera :<br />
+<a href="/wiki/principales-balises-bbcode#creer-une-ancre">Créer des ancres en BBCode sur PHPBoost</a><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_flux-rss">Flux RSS</h2><br />
+
+<br />
+Depuis la 4.0, il est possible d'ajouter un flux RSS interne au site via le BBCode.<br />
+<br />
+Il faut utiliser cette balise :<br />
+<br />
+[[CODE=bbcode]][feed cat"x" number="x"]NOM DU MODULE[/feed][[/CODE]]<br />
+Vous avez la possibilité de personnaliser l'affichage : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>cat="numéro de la catégorie du flux dans le module"</strong><br />
+Pour connaitre le numéro de la catégorie du flux, allez dans le module souhaité, allez dans la catégorie souhaitée et cliquez sur cette icone <!-- START HTML -->
+<i class="fa fa-syndication"></i>
+<!-- END HTML -->, vous allez être redirigé vers une page avec ce type d'adresse : /syndication/rss/forum/4<br />
+Cela correspond au module forum et la catégorie est la n° 4.<br />
+Si vous souhaitez afficher tous les flux d'un module, dans ce cas ne mettez pas cat"x"
+</li><li class="formatter-li"><strong>number="nombre de flux à afficher"</strong><br />
+</li></ul><br />
+Exemple pour afficher les 5 derniers flux du module téléchargement de la catégorie 3 :<br />
+<br />
+[[CODE=bbcode]][feed cat"3" number="5"]download[/feed][[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965458</timestamp>
+  </article>
+</articles>

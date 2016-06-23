@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>118</id>
+    <id_contents>1649</id_contents>
+    <title><![CDATA[Utilisation du module Articles]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-articles]]></encoded_title>
+    <hits>1127</hits>
+    <id_cat>36</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>36</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>108</cat_article_id>
+    <con_id_contents>1649</con_id_contents>
+    <con_id_article>118</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_index-des-articles">Index des articles</a></li><li><a href="#paragraph_afficher-une-categorie">Afficher une catégorie</a></li><li><a href="#paragraph_lire-un-article">Lire un article</a><ol class="wiki_list_2"><li><a href="#paragraph_noter-un-article">Noter un article</a></li><li><a href="#paragraph_ajouter-un-commentaire">Ajouter un commentaire</a></li></ol></li><li><a href="#paragraph_creer-un-article">Créer un article</a><ol class="wiki_list_2"><li><a href="#paragraph_diviser-son-article-en-pages">Diviser son article en pages</a></li><li><a href="#paragraph_articles-en-attentes">Articles en attentes</a></li></ol></li><li><a href="#paragraph_contribution-d-un-article">Contribution d'un article</a></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol>]]></menu>
+    <content><![CDATA[Ici nous verrons comment marche le module Articles du côté utilisateur.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_index-des-articles">Index des articles</h1><br />
+
+<br />
+Nous voici donc dans le module Articles : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_8.jpg" alt="" /></p><br />
+<br />
+Ceci est la catégorie racine, soit la page d'accueil du module.<br />
+Nous pouvons voir les différentes catégories qui ont été crées et les articles placés à la racine du module (ici <em>Titre art</em>), c'est-à-dire les articles qui ne figurent dans aucune catégorie.<br />
+Le texte qu'elle contient est paramétrable dans la configuration du module.<br />
+Enfin, le menu à droite vous permet de gérer le module Articles, comme voir la liste des articles en attente de publication.<br />
+<br />
+Pour accéder à une catégorie, rien de plus simple : il vous suffit de cliquer sur son nom. Vous pourrez alors avoir accès aux éventuelles sous-catégories qui auront été créées.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_afficher-une-categorie">Afficher une catégorie</h1><br />
+
+<br />
+Pour afficher une catégorie, il suffit de cliquer sur son nom. <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_cat.jpg" alt="" /></p><br />
+<br />
+Dans celle-ci, on peut y voir les catégories et articles qu'elle contient (uniquement les enfants <em>directs</em>).<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_lire-un-article">Lire un article</h1><br />
+
+<br />
+Pour lire un article, cliquer sur son nom. Nous voici dans la lecture d'un article : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_9.jpg" alt="" /></p><br />
+<br />
+En haut, au-dessus du séparateur (la petite barre) il y a, à gauche le nom de l'article que vous lisez, à droite, la possibilité de poster un commentaire (nous y reviendrons plus tard), la possibilité de modifier l'article en question, la possibilité de le supprimer, et la possibilité d'obtenir une version imprimable de cet article. Bien-sûr ces options n'apparaîtront pas pour tout le monde (lisez l'article sur l'administration de ce module pour en savoir plus sur les permissions).<br />
+<br />
+En bas à gauche se trouve la notation de l'article (lire ci-dessus pour plus de précisions) et à droite, l'auteur et la date à laquelle cet article est paru.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_noter-un-article">Noter un article</h2><br />
+
+<br />
+Avec PHPBoost, vous avez la possibilité de noter les articles. Pour noter un article, rendez-vous en bas de ce même article, à gauche. Vous devriez voir ça : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_10.jpg" alt="" /></p><br />
+<br />
+Pour noter l'article, déplacez votre curseur sur les étoiles, et choisissez la note que vous voulez lui attribuer en cliquant sur l'étoile (sachant que celle tout à gauche représentera une note de 1/5 et celle tout à droite une note de 5/5). Il n'est pas possible d'attribuer une note de 0. Vous ne pouvez noter l'article qu'une seule fois, si vous tentez de le noter une seconde fois, une petite fenêtre apparaîtra vous disant que vous avez déjà noté l'article.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-un-commentaire">Ajouter un commentaire</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_11.jpg" alt="" /></p><br />
+<br />
+Renseignez donc le contenu de votre commentaire, et cliquez sur <em>Envoyer</em>. Vous pourrez ensuite voir votre commentaire à la suite des autres (s'il y en a) : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_12.jpg" alt="" /></p><br />
+<br />
+<span class="notice">Si vous en avez les droits, vous verrez également, comme le montre l'image, le lien 'Verrouiller', ce qui aura pour effet immédiat de désactiver les commentaires pour cet article.</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creer-un-article">Créer un article</h1><br />
+
+<br />
+Nous allons voir ici comment créer un article, en détaillant toutes les options possibles. Pour créer un article, cliquez sur le lien <em>Ajouter un article</em>du menu en haut à droite du module. Vous devriez voir ceci : <br />
+<p style="text-align:center"><br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_13.jpg" alt="" /></p><br />
+<br />
+Détaillons ensemble l'écran qui se présente à vous :<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Titre :</strong> ce sera le titre de votre article
+</li><li class="formatter-li"><strong>Personnaliser le nom dans l'url :</strong> si activé, affiche la case qui vous permettra de définir manuellement l'url du module
+</li><li class="formatter-li"><strong>Nom réécrit de l'url :</strong> url personnalisé (ne peut contenir que des caractères alphanumériques (0-9 a-z) et des traits d'union (-)
+</li><li class="formatter-li"><strong>Emplacement :</strong> ce sera la catégorie dans laquelle figurera votre article. Sachant que la racine le placera directement dans l'accueil du module (comme vu précédemment)
+</li><li class="formatter-li"><strong>Activer le condensé de l'article :</strong> vous permet d'afficher un texte court qui sera affiché lorsque vous naviguerez dans les catégories
+</li><li class="formatter-li"><strong>Description :</strong> condensé de votre article
+</li><li class="formatter-li"><strong>Contenu :</strong> ce sera ce que votre article en lui-même.
+</li><li class="formatter-li"><strong>Insérer une nouvelle page </strong>: il vous est possible d'insérer une nouvelle page (nous reparlerons de cela juste après)
+</li><li class="formatter-li"><strong>Afficher le nom de l'auteur </strong>: Affiche le nom de l'auteur de la news
+</li><li class="formatter-li"><strong>Activer la notation </strong>: permet de laisser aux utilisateurs de noter votre article
+</li><li class="formatter-li"><strong>Image </strong>: Image qui représentera votre article
+</li><li class="formatter-li"><strong>Mots clés </strong>: Entrez ici les quelques mots-clés qui correspondent à votre article, séparés par des virgules. Très utile au référencement <img src="/images/smileys/wink.png" alt=";)" class="smiley" />
+        </li><li class="formatter-li"><strong>Source</strong> : vous pouvez ajouter les sources éventuelles de l'article (c'est-à-dire si l'article n'est pas de vous, mais que vous l'avez pioché sur un site tiers)
+</li><li class="formatter-li"><strong>Date de création :</strong> vous pouvez ici spécifier la date de l'article, le moment où vous l'avez écrit par exemple.
+</li><li class="formatter-li"><strong>Publication :</strong> vous pouvez choisir de publier l'article maintenant, plus tard (différée) ou encore de le garder à l'état de brouillon si vous n'avez pas terminé son écriture.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_diviser-son-article-en-pages">Diviser son article en pages</h2><br />
+
+<br />
+Comme vous l'avez compris ci-dessus, vous pouvez séparer votre article en page. Pour ce faire, il vous suffit d'ajouter les balises : <br />
+<br />
+[[CODE=bbcode]][page]Le titre de la page[/page][[/CODE]] <br />
+<br />
+Vous pouvez également cliquer sur <em>Insérer une nouvelle page</em>, une fenêtre s’ouvrira vous demandant le titre de la page, et les balises se créeront automatiquement. Pour remplir les pages, vous pouvez remplir les espaces entre les couples de balises [page][/page] : <br />
+<br />
+[[CODE=bbcode]][page]Mon titre de page 1[/page]
+le contenu de la page 1
+[page]titre page 2[/page]
+le contenu de la page 2[[/CODE]]<br />
+<br />
+Voici un exemple concret d'un article comportant plusieurs pages : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/articles/article_14.jpg" alt="" /></p><br />
+<br />
+Donc comme vous pouvez le voir, un sommaire déroulant est apparu en haut à droite, qui permettra une navigation rapide. En bas les numéros des pages sont apparu, et les boutons <em>page suivante</em> et <em>page précédente</em>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_articles-en-attentes">Articles en attentes</h2><br />
+
+<br />
+Comme vous avez pu lire précédemment, il est possible de mettre des articles en attente, c'est-à-dire des articles qui ne sont visibles que par l'administrateur du site, et le créateur de l'article. Vous pouvez modifier qui peut les voir via les permissions de modération du module Articles, dans l'administration. Pourquoi mettre un article en attente ? Tout simplement par ce que vous ne souhaitez pas le publier tout de suite, ou qu'il n'est pas encore terminé.<br />
+Pour mettre un article en attente, vous devez sélectionner 'Garder en brouillon' lors de l'écriture d'un article.<br />
+Pour consulter les articles en attente, vous avez juste à cliquer sur le lien situé dans le menu en haut à droite du module, nommé <em>Articles en attente</em>. Vous verrez alors les articles qui sont en attente (dans leurs catégories respectives).<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_contribution-d-un-article">Contribution d'un article</h1><br />
+
+<br />
+Vous pouvez soumettre un article à contribution. Nous ne verrons pas tout en détails ici, un tutoriel concernant la contribution est disponible <a href="/wiki/panneau-de-contribution">ici</a>. Le fonctionnement est identique à la création d'un article normal.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_conclusion">Conclusion</h1><br />
+
+<br />
+Comme vous l'avez vu, le module Articles n'est pas très compliqué et est un bon moyen de promouvoir des tutoriels, ... De plus, étant soumis à contribution il vous permettra de dynamiser votre site en proposant aux membres de rédiger leurs propres articles.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966287</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>262</id>
+    <id_contents>1700</id_contents>
+    <title><![CDATA[Administration du module Newsletter]]></title>
+    <encoded_title><![CDATA[administration-du-module-newsletter]]></encoded_title>
+    <hits>1148</hits>
+    <id_cat>46</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>46</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>166</cat_article_id>
+    <con_id_contents>1700</con_id_contents>
+    <con_id_article>262</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration-de-la-newsletter">Configuration de la Newsletter</a></li><li><a href="#paragraph_gestion-des-flux">Gestion des flux</a></li><li><a href="#paragraph_ajout-de-flux">Ajout de flux</a></li></ol>]]></menu>
+    <content><![CDATA[Le module newsletter vous permet de gérer les flux de multiples newsletters, centralisés au sein d'un seul et même site. <br />
+Le système de configuration des droits d'accès est puissant et vous permet de contrôler avec précision quelles sont les actions que peuvent effectuer vos membres et visiteurs.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configuration-de-la-newsletter">Configuration de la Newsletter</h1><br />
+
+<br />
+Via le panel d'administration de votre site, vous accédez à la configuration du module newsletter via le menu : "modules" --&gt; "newsletter" -&gt; "configuration".<br />
+<br />
+Cette page présente un long formulaire vous permettant de régler les autorisations par défaut de l'ensemble des newsletter qui seront gérées via votre site Internet. Vous pouvez définir qui peut créer, voir, accéder, modifier une newsletter et qui peut s'y s'inscrire.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/admin_newsletter/newsletter_configuration.png" alt="" /> </p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-flux">Gestion des flux</h1><br />
+
+<br />
+La gestion des flux vous dresse la liste des flux (newsletter) active sur votre site. Le tableau vous permet de modifier et/ou supprimer les flux existants, ainsi que les réorganiser.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/admin_newsletter/newsletter_flow_managment.png" alt="" /> </p><br />
+<br />
+Voici à quoi correspondent les boutons d'administration : <br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrows"></i>
+<!-- END HTML --> : permet de déplacer chaque élément là où vous le souhaitez, en cliquant dessus puis en le lâchant lorsqu'il est bien place (technique du glisser/déposer)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-up"></i>
+<!-- END HTML --> : sert à déplacer vers le haut un flux.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML --> : sert à déplacer vers le bas un flux.
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --> : sert à éditer un élément pour modifier son titre, ses autorisations,...)
+</li><li class="formatter-li"> <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --> : sert à supprimer un flux.<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajout-de-flux">Ajout de flux</h1><br />
+
+La page "Ajout de flux" comme son nom l'indique, vous permet de créer de nouveaux flux (newsletter). <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/newsletter/admin_newsletter/newsletter_add_new_flow.png" alt="" /></p><br />
+<br />
+<strong>Champs à renseigner :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Nom</strong> : Titre de votre news
+</li><li class="formatter-li"><strong>Personnaliser le nom dans l'url</strong> : cette case permet, si vous l'activez, de définir une url personnalisée.
+</li><li class="formatter-li"><strong>Description</strong> : Description du flux
+</li><li class="formatter-li"><strong>Image</strong> : vous permet d'afficher une image au dessus de votre news. Juste en dessous, vous pourrez voir une prévisualisation de cette image.
+</li><li class="formatter-li"><strong>Autorisations</strong> : Enfin, en cliquant sur la checkbox, vous pourrez définir des autorisations spécifiques à ce flux<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.210.149</user_ip>
+    <timestamp>1461758320</timestamp>
+  </article>
+</articles>

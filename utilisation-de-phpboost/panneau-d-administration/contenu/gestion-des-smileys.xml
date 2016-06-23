@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>68</id>
+    <id_contents>1651</id_contents>
+    <title><![CDATA[Gestion des smileys]]></title>
+    <encoded_title><![CDATA[gestion-des-smileys]]></encoded_title>
+    <hits>1695</hits>
+    <id_cat>18</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>18</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>18</cat_article_id>
+    <con_id_contents>1651</con_id_contents>
+    <con_id_article>68</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-smileys">Gestion des smileys</a></li><li><a href="#paragraph_ajout-d-un-smiley">Ajout d'un smiley</a><ol class="wiki_list_2"><li><a href="#paragraph_uploader-un-smiley">Uploader un smiley</a></li><li><a href="#paragraph_ajouter-un-smiley">Ajouter un smiley</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_gestion-des-smileys">Gestion des smileys</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/smileys/manage.png" alt="" /></p><br />
+<br />
+Dans la gestion des smileys, vous avez la possibilité : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> de supprimer un smiley
+</li><li class="formatter-li"> de l'éditer pour changer le code à insérer pour l'afficher.<br />
+</li></ul><br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/smileys/edit.png" alt="" /></p><br />
+<br />
+L'édition d'un smiley vous demande : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> le code du smiley (ex: <img src="/images/smileys/grin.png" alt=":D" class="smiley" />) 
+</li><li class="formatter-li"> choisir le smiley parmi ceux de la liste disponible dans le répertoire /images/smileys<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajout-d-un-smiley">Ajout d'un smiley</h1><br />
+
+<br />
+Nous allons d'abord mettre le smiley sur le serveur FTP puis nous l'inclurons dans la liste des smileys disponibles dans le BBcode.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_uploader-un-smiley">Uploader un smiley</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/smileys/upload.png" alt="" /></p><br />
+<br />
+Pour ajouter, il faut que vous mettiez sur votre serveur le smiley en question. Pour cela vous avez 2 possibilités : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> le mettre directement via ftp dans le répertoire /images/smileys/
+</li><li class="formatter-li"> le télécharger sur votre ftp via le formulaire proposé à cette page.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_ajouter-un-smiley">Ajouter un smiley</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/content/smileys/add.png" alt="" /></p><br />
+<br />
+Une fois le smiley mis sur votre ftp, il faut l'ajouter dans la base des smileys.<br />
+<br />
+Pour cela vous devez : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> donner un code au smiley (ex : :ne)
+</li><li class="formatter-li"> choisir le smiley parmi ceux de la liste disponible<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966352</timestamp>
+  </article>
+</articles>

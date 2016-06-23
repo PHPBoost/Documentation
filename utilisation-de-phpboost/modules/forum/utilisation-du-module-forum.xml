@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>47</id>
+    <id_contents>1667</id_contents>
+    <title><![CDATA[Utilisation du module Forum]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-forum]]></encoded_title>
+    <hits>2006</hits>
+    <id_cat>25</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>25</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>44</cat_article_id>
+    <con_id_contents>1667</con_id_contents>
+    <con_id_article>47</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_accueil-du-forum">Accueil du forum</a></li><li><a href="#paragraph_les-categories-et-les-forums">Les catégories et les forums</a><ol class="wiki_list_2"><li><a href="#paragraph_les-categories">Les catégories</a></li><li><a href="#paragraph_les-forums">Les forums</a></li></ol></li><li><a href="#paragraph_creer-un-sujet-repondre-a-un-message">Créer un sujet / répondre à un message</a><ol class="wiki_list_2"><li><a href="#paragraph_creer-un-post">Créer un post</a></li><li><a href="#paragraph_creer-un-sondage">Créer un sondage</a></li><li><a href="#paragraph_repondre-a-un-sujet">Répondre à un sujet</a></li></ol></li><li><a href="#paragraph_outils-a-disposition">Outils à disposition</a><ol class="wiki_list_2"><li><a href="#paragraph_editer-citer-un-message">Editer / citer un message</a><ol class="wiki_list_3"><li><a href="#paragraph_editer-un-de-ses-messages">Editer un de ses messages</a></li><li><a href="#paragraph_citer-un-message">Citer un message</a></li></ol></li><li><a href="#paragraph_voir-les-derniers-messages-messages-non-lus">Voir les derniers messages/messages non lus</a><ol class="wiki_list_3"><li><a href="#paragraph_messages-non-lus">Messages non lus</a></li><li><a href="#paragraph_marquer-les-messages-comme-lus">Marquer les messages comme lus</a></li><li><a href="#paragraph_derniers-messages-lus">Derniers messages lus</a></li></ol></li><li><a href="#paragraph_options-sur-les-sujets">Options sur les sujets</a><ol class="wiki_list_3"><li><a href="#paragraph_sujet-regle">Sujet réglé</a></li><li><a href="#paragraph_alerter-les-moderateurs">Alerter les modérateurs</a></li><li><a href="#paragraph_mettre-en-favori">Mettre en favori</a></li><li><a href="#paragraph_suivre-par-message-prive-par-mail">Suivre par message privé / par mail</a></li></ol></li></ol></li><li><a href="#paragraph_profil-des-membres">Profil des membres</a></li><li><a href="#paragraph_flux-rss">Flux RSS</a></li><li><a href="#paragraph_statistiques">Statistiques</a></li></ol>]]></menu>
+    <content><![CDATA[Le forum est un module vaste, son utilisation est au plus simple, voici une petite description.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_accueil-du-forum">Accueil du forum</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_21.jpg" alt="" /></p><br />
+<br />
+voici une vue globale d'un forum sous PHPBoost :<br />
+ <br />
+<ul class="formatter-ul">
+<li class="formatter-li">En haut vous avez les fonctions possibles,
+</li><li class="formatter-li">Au centre les catégories avec les forums
+</li><li class="formatter-li">En bas les statistiques, membres présents...<br />
+</li></ul><br />
+<br />
+Voyons un peu en détail comment se servir du forum.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-categories-et-les-forums">Les catégories et les forums</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-categories">Les catégories</h2><br />
+
+<br />
+On voit sur l'exemple ci dessus 2 catégories : <br />
+<ul class="formatter-ul"><li class="formatter-li">Catégorie de test
+</li><li class="formatter-li">2nde catégorie</li></ul><br />
+<br />
+A l'intérieur de ces catégories, se trouvent les forums. On ne peut pas poster de message dans la catégorie mais uniquement dans les forums qui y sont intégrés.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-forums">Les forums</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_22.jpg" alt="" /></p><br />
+<br />
+Nous voici dans un forum, chaque ligne est composée d'un sujet, et est elle même divisée en 6 colonnes :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> la première qui signalera par ses icônes la présence d'anciens ou de nouveaux messages, et le type de message (annonce, message épinglé, message normal)
+</li><li class="formatter-li"> une colonne pour voir une particularité des messages : <br />
+Par ordre des messages on a :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">un message considéré réglé par l'équipe modératrice ou l'auteur du sujet.
+</li><li class="formatter-li">un message sans particularité
+</li><li class="formatter-li">un sondage<br />
+</li></ul>
+</li><li class="formatter-li">le titre du sujet
+</li><li class="formatter-li">le nombre de réponses au sujet
+</li><li class="formatter-li">Le nombre de fois que le sujet a été vu (donc lu) par les membres
+</li><li class="formatter-li">un lien vers le dernier message du sujet avec la date, l'heure et l'auteur<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creer-un-sujet-repondre-a-un-message">Créer un sujet / répondre à un message</h1><br />
+
+ <br />
+Pour créer un topic, rendez vous dans un forum puis cliquez sur poster comme le montre l'exemple : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_23.jpg" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creer-un-post">Créer un post</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_24.jpg" alt="" /></p><br />
+<br />
+Vous voici pour créer un post! Rien de plus simple!<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li">Donnez un titre à votre sujet,
+</li><li class="formatter-li">vous pouvez donner une petite description du post qui sera mis en dessous du titre,
+</li><li class="formatter-li">enfin remplissez le contenu de votre post.
+</li><li class="formatter-li">choisissez le type de message. S'il est épinglé ou sous forme d'annonce il sera toujours placé en haut de votre forum (l'annonce est plus importante que le message épinglé).<br />
+</li></ul><br />
+<br />
+Une fois fini cliquez sur <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <strong>Prévisualiser</strong> si vous souhaite voir votre message avant de le poster
+</li><li class="formatter-li"> <strong>Envoyer</strong> si vous souhaitez poster votre message.<br />
+</li></ul><br />
+<br />
+Voila votre post est créé!<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_creer-un-sondage">Créer un sondage</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_25.jpg" alt="" /></p><br />
+<br />
+La manipulation débute comme pour créer un topic. La différence est qu'en bas il faut cliquer sur 'Ouvrir le menu sondage' .<br />
+<br />
+Vous avez ensuite un menu sondage avec <br />
+<ul class="formatter-ul"><li class="formatter-li">la question de votre sondage
+</li><li class="formatter-li"> une liste d'items à mettre comme réponse.<br />
+</li></ul><br />
+<br />
+Vous avez la possibilité de réaliser 2 types de sondages<br />
+<ul class="formatter-ul"><li class="formatter-li"> Réponse simple : seule une réponse pourra être sélectionnée
+</li><li class="formatter-li"> Réponses multiples : lors du vote il sera possible de cocher plusieurs réponses.<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_repondre-a-un-sujet">Répondre à un sujet</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_26.jpg" alt="" /></p><br />
+<br />
+En bas de chaque sujet se trouve cette interface de réponse. Entrez votre message et cliquez sur <strong>Envoyer </strong>pour répondre à un sujet.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_outils-a-disposition">Outils à disposition</h1><br />
+
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_editer-citer-un-message">Editer / citer un message</h2><br />
+
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_editer-un-de-ses-messages">Editer un de ses messages</h3><br />
+
+<br />
+Vous souhaitez éditer un de vos messages pour en modifier le contenu ? Rien de plus simple, rendez vous sur le message en question et cliquez sur <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_citer-un-message">Citer un message</h3><br />
+
+<br />
+Vous souhaitez citer un post pour le commenter dans un nouveau message, cliquez sur <!-- START HTML -->
+<i class="fa fa-quote-left"></i>
+<!-- END HTML --><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_voir-les-derniers-messages-messages-non-lus">Voir les derniers messages/messages non lus</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_28.jpg" alt="" /></p><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_messages-non-lus">Messages non lus</h3><br />
+
+<br />
+Si vous êtes connecté sous votre pseudo, vous pouvez cliquer sur 'Messages non lus' pour voir tous les messages créés depuis votre dernière connexion.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_marquer-les-messages-comme-lus">Marquer les messages comme lus</h3><br />
+
+<br />
+Vous souhaitez marquer d'un coup tous les messages du forum comme lus, cliquez alors sur (Marquer les messages comme lus'<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_derniers-messages-lus">Derniers messages lus</h3><br />
+
+<br />
+Cliquez dessus si vous souhaitez voir les derniers messages que vous avez consultés sur le forum. Ceci est pratique pour retrouver un message récent.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_options-sur-les-sujets">Options sur les sujets</h2><br />
+
+<br />
+Rendez vous en bas de chaque sujet : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_30.jpg" alt="" /></p><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_sujet-regle">Sujet réglé</h3><br />
+
+<br />
+Le modérateur ou l'auteur du sujet peuvent estimer qu'un message a été réglé pour une facilité de gestion du forum. L'icône <!-- START HTML -->
+<i class="fa fa-check"></i>
+<!-- END HTML -->  s'affichera devant les topics concernés.<br />
+Si le sujet n'est finalement pas résolu, ces mêmes personnes pourront passer le statut du sujet à 'Sujet non réglé', en cliquant sur le lien du même nom au même emplacement.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_alerter-les-moderateurs">Alerter les modérateurs</h3><br />
+
+<br />
+Vous estimez qu'un topic nécessite l'intervention d'un modérateur ? Cliquez sur 'Alerter les modérateurs', et vous accèderez à une page pour contacter les modérateurs. (cf l'article <a href="/wiki/moderation-du-forum">modération du forum</a><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_mettre-en-favori">Mettre en favori</h3><br />
+
+<br />
+Ce lien vous permet de mettre en favori le sujet en cours. Il apparaitra alors dans la liste de vos sujets suivis, qui permet de retrouver facilement des sujets qui vous intéressent particulièrement.<br />
+<br />
+Pour voir vos messages favoris, dans la barre en haut du forum, cliquez sur 'Sujets suivis'.<br />
+<br />
+Vous accédez au panel des sujets suivi : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_31.jpg" alt="" /></p><br />
+<br />
+Pour chacun vous pouvez :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">activer la notification par mail de nouveaux posts
+</li><li class="formatter-li">activer la notification  par message privé de nouveaux posts<br />
+</li></ul><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_suivre-par-message-prive-par-mail">Suivre par message privé / par mail</h3><br />
+
+<br />
+ En cliquant sur ces liens, vous avez la possibilité de recevoir un message privé ou un email lors d'une nouvelle réponse sur le sujet.<br />
+Si vous ne souhaitez plus recevoir de notifications, cliquez sur 'Ne plus suivre'.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_profil-des-membres">Profil des membres</h1><br />
+
+<br />
+Pour chaque post se trouve à sa gauche une zone de description du membre.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_32.jpg" alt="" /></p><br />
+<br />
+Vous pouvez voir  : <br />
+<ul class="formatter-ul"><li class="formatter-li">le profil du membre en cliquant sur son pseudo
+</li><li class="formatter-li">s'il est connecté ou non par l'icone à gauche du pseudo
+</li><li class="formatter-li">son avatar
+</li><li class="formatter-li">s'il est membre d'un groupe d'utilisateur
+</li><li class="formatter-li">sa date d'inscription
+</li><li class="formatter-li">son nombre de message avec un lien vers ses messages<br />
+</li></ul><br />
+<br />
+En dessous de son message vous pourrez avoir accès selon les renseignements donnés du membre : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> sa signature en bas du post (facultatif)
+</li><li class="formatter-li"> un lien pour lui envoyer un message privé
+</li><li class="formatter-li"> un lien pour le contacter via mail (facultatif)
+</li><li class="formatter-li"> un lien vers son site (facultatif)<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_flux-rss">Flux RSS</h1><br />
+
+<br />
+Les flux RSS servent à voir les derniers messages du forum sans aller sur le site. Il faut pour cela un lecteur de flux RSS.<br />
+<br />
+Les navigateurs (internet explorer, firefox,...) permette de s'abonner aux flux rss, le flux se trouvera dans les favoris. Sinon il existe des logiciels de lecture tel que thunderbird, RSSXpress,...<br />
+<br />
+Pour s'abonner au flux RSS, cliquez sur l'icône RSS qui se trouve à côté de chaque catégorie : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_33.jpg" alt="" /></p><br />
+<br />
+En cliquant dessus, vous accèderez à une page (sous Firefox) : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_34.jpg" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_statistiques">Statistiques</h1><br />
+
+<br />
+Les statistiques se trouvent en bas du forum (sur l'index) en cliquant sur le lien 'Statistiques' : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_35.jpg" alt="" /></p><br />
+<br />
+Vous pourrez voir : <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/forum/forum_36.jpg" alt="" /></p><br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> statistiques générales avec : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> nombre de sujets
+</li><li class="formatter-li"> nombre de messages
+</li><li class="formatter-li"> Nombre de sujets par jour
+</li><li class="formatter-li"> Nombre de messages par jour
+</li><li class="formatter-li"> Nombre de sujets aujourd'hui<br />
+</li></ul>
+</li><li class="formatter-li"> Les 10 derniers sujets ayant eu une réponse
+</li><li class="formatter-li"> Les 10 sujets les plus populaires
+</li><li class="formatter-li">Les 10 sujets ayant eu le plus de réponses<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1459972466</timestamp>
+  </article>
+</articles>

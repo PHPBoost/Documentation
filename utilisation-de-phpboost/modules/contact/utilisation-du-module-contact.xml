@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>27</id>
+    <id_contents>1639</id_contents>
+    <title><![CDATA[Utilisation du module Contact]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-contact]]></encoded_title>
+    <hits>676</hits>
+    <id_cat>21</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>21</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>24</cat_article_id>
+    <con_id_contents>1639</con_id_contents>
+    <con_id_article>27</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/contact/home.png" alt="" /></p><br />
+Le formulaire de contact est composé de différents champs par défaut. Il est possible d'en ajouter via l'administration du module.<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>Adresse mail :</strong> Votre adresse mail (valide). Nécessaire si vous souhaitez recevoir une réponse de la part des administrateurs. Le champ est pré-rempli pour les membres avec leur adresse mail présente dans le profil.
+</li><li class="formatter-li"><strong>Objet :</strong> Facilite la vie aux administrateurs qui devront traiter et répondre à vos messages.
+</li><li class="formatter-li"><strong>Message :</strong> Le contenu de votre message.<br />
+</li></ul><br />
+Il est possible d'activer le choix du destinataire dans l'administration du module si vous souhaitez donner la possibilité de pouvoir contacter plusieurs personnes distinctes. Il est également possible de prédéfinir une liste d'objets par défaut (et d'associer chaque objet à un destinataire si le champ Destinataire(s) n'est pas affiché).<br />
+<br />
+On pourra noter également la présence de 2 champs supplémentaires sur l'image ci-dessus, à savoir heure et numéro de téléphone, qui sont des champs supplémentaires ajoutés pour la démonstration.<br />
+<br />
+Le code de vérification est uniquement affiché pour les visiteurs pour éviter le spam.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965835</timestamp>
+  </article>
+</articles>

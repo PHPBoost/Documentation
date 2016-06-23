@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>56</id>
+    <id_contents>1683</id_contents>
+    <title><![CDATA[Utilisation du module Livre d'or]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-livre-d-or]]></encoded_title>
+    <hits>798</hits>
+    <id_cat>28</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>28</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>54</cat_article_id>
+    <con_id_contents>1683</con_id_contents>
+    <con_id_article>56</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/guestbook/home.png" alt="" /></p><br />
+<br />
+Si vous en avez l'autorisation, vous pouvez saisir un message dans le champ prévu à cet effet. Ce message s'ajoutera à la liste des messages qui se trouvent en-dessous.<br />
+Si les visiteurs sont autorisés à poster (autorisés par défaut), ils doivent saisir un pseudo et le code de vérification en plus du message. Pour les membres enregistrés sur le site ces champs n'apparaissent pas.<br />
+Les messages seront affichés du plus récent au plus ancien. La date du message ainsi que les informations du membre qui l'a posté sont précisées autour du message.<br />
+<br />
+<span class="warning">Attention ! Il est possible que l'administrateur du site ait bloqué certaines balises de BBCode. Dans ce cas, elles ne vous seront pas accessibles et ne seront pas "parsées" (transformées en code HTML) par le code PHP. Inutile de tenter de les saisir manuellement dans ce cas.</span>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1460609105</timestamp>
+  </article>
+</articles>

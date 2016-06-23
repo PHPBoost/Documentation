@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>20</id>
+    <id_contents>1646</id_contents>
+    <title><![CDATA[Base de données]]></title>
+    <encoded_title><![CDATA[base-de-donnees]]></encoded_title>
+    <hits>2697</hits>
+    <id_cat>19</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>19</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>20</cat_article_id>
+    <con_id_contents>1646</con_id_contents>
+    <con_id_article>20</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<table class="formatter-table" style="float:right;">
+   <tr class="formatter-table-row">
+      <th class="formatter-table-head" colspan="2">Base de données</th>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Auteur</td>
+      <td class="formatter-table-col"><a href="/user/profile/1">CrowkaiT</a></td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Version actuelle</td>
+      <td class="formatter-table-col">5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Date de sortie</td>
+      <td class="formatter-table-col">juillet 2007</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Compatibilité</td>
+      <td class="formatter-table-col">PHPBoost 5.0</td>
+   </tr>
+   <tr class="formatter-table-row">
+      <td class="formatter-table-col">Démonstration</td>
+      <td class="formatter-table-col"><a href="http://demo.phpboost.com/database/database.php">Module Base de données</a></td>
+   </tr>
+</table><br />
+<br />
+<p style="text-align:center"><br />
+   <span style="font-size: 20px;"><strong>Module Base de données</strong></span><br />
+   <img src="https://resources.phpboost.com/documentation/utilisation/modules/database/logo.png" alt="" /><br />
+</p><br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<strong>Description :</strong> Ce module vous procure un système complet de gestion de base de données avec exportation et importation des données.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966221</timestamp>
+  </article>
+</articles>

@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<wiki_redirect_infos>
-  <wiki_articles_fields>
-    <wiki_id>286</wiki_id>
-    <wiki_id_contents>0</wiki_id_contents>
-    <wiki_title>contribution</wiki_title>
-    <wiki_encoded_title>contribution</wiki_encoded_title>
-    <wiki_hits>0</wiki_hits>
-    <wiki_id_cat>0</wiki_id_cat>
-    <wiki_is_cat>0</wiki_is_cat>
-    <wiki_defined_status>0</wiki_defined_status>
-    <wiki_undefined_status></wiki_undefined_status>
-    <wiki_redirect>12</wiki_redirect>
-    <wiki_auth></wiki_auth>
-  </wiki_articles_fields>
-</wiki_redirect>
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>286</id>
+    <id_contents>0</id_contents>
+    <title><![CDATA[contribution]]></title>
+    <encoded_title><![CDATA[contribution]]></encoded_title>
+    <hits>0</hits>
+    <id_cat>0</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>12</redirect>
+    <auth></auth>
+  </article>
+</articles>

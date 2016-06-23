@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>128</id>
+    <id_contents>1016</id_contents>
+    <title><![CDATA[Créer vos pages]]></title>
+    <encoded_title><![CDATA[creer-vos-pages]]></encoded_title>
+    <hits>3028</hits>
+    <id_cat>7</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>7</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>7</cat_article_id>
+    <con_id_contents>1016</con_id_contents>
+    <con_id_article>128</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_le-fichier-index-php">Le fichier index.php</a></li><li><a href="#paragraph_les-controleurs">Les Contrôleurs</a><ol class="wiki_list_2"><li><a href="#paragraph_cas-particulier-jsonresponse">Cas particulier : JSONResponse</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Si vous êtes familier avec la <a href="http://fr.wikipedia.org/wiki/Programmation orientée objet" class="wikipedia-link">Programmation orientée objet</a> et le modèle <a href="http://fr.wikipedia.org/wiki/MVC" class="wikipedia-link">MVC</a> vous ne devriez pas avoir beaucoup de problèmes pour créer vos pages.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-fichier-index-php">Le fichier index.php</h1><br />
+
+<br />
+Le fichier index.php devra être créé à la racine de votre module. C'est ce fichier qui va vous permettre d'utiliser tel et tel Contrôleur selon l'url.<br />
+<br />
+Voici une exemple :<br />
+<br />
+[[CODE=php]]&lt;?php
+/*##################################################
+ *                                 index.php
+ *                            -------------------
+ *   begin                : September 06, 2012
+ *   copyright            : (C) 2012 Kévin MASSY
+ *   email                : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+define('PATH_TO_ROOT', '..');
+
+require_once PATH_TO_ROOT . '/kernel/init.php';
+
+$url_controller_mappers = array(
+	new UrlControllerMapper('MyModuleAdminController', '`^/admin/?$`'),
+        //Contrôleur exécuté lorsqu'il n'y a pas de paramètre
+	new UrlControllerMapper('MyModuleHomeController', '`^/?$`')
+);
+
+DispatchManager::dispatch($url_controller_mappers);
+?&gt;[[/CODE]] <br />
+<br />
+Lorsque vous allez accéder à votre module avec cette url <em>http://localhost/my_module/?url=/admin</em>, la classe DispatchManager va exécuter le Contrôleur MyModuleAdminController (Lorsque la réécriture des urls est activée, <em>?url=</em> ne sera plus utile).<br />
+<br />
+Vous pouvez également gérer vos paramètres, par exemple, dans le cas où vous souhaitez supprimer une news, il vous faudra transmettre l'identifiant de la news.<br />
+<br />
+Exemple :<br />
+<br />
+[[CODE=php]]&lt;?php
+/*##################################################
+ *                                 index.php
+ *                            -------------------
+ *   begin                : September 06, 2012
+ *   copyright            : (C) 2012 Kévin MASSY
+ *   email                : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+define('PATH_TO_ROOT', '..');
+
+require_once PATH_TO_ROOT . '/kernel/init.php';
+
+$url_controller_mappers = array(
+	new UrlControllerMapper('MyModuleAdminController', '`^/admin/?$`'),
+        //Contrôleur exécuté lorsqu'il n'y a pas de paramètre
+	new UrlControllerMapper('MyModuleHomeController', '`^/?$`'),
+        //Contrôleur exécuté avec l'url /my_module/?url/edit/2
+        new UrlControllerMapper('EditNewsController', '`^/edit/([0-9]+)?/?$`', array('identifier'))
+);
+
+DispatchManager::dispatch($url_controller_mappers);
+?&gt;[[/CODE]] <br />
+<br />
+Il vous faudra quelques notions de <a href="http://fr.wikipedia.org/wiki/Regex" class="wikipedia-link">Regex</a> pour mettre en place la gestion des paramètres.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-controleurs">Les Contrôleurs</h1><br />
+
+<br />
+Veuillez d'abord, pour une meilleure clarté du module, créer un dossier <em>controllers</em> à la racine de votre site.<br />
+<br />
+Créer ensuite un fichier et une classe, par exemple MyModuleHomeController. La classe doit être une classe fille de ModuleController ou AdminModuleController (selon si c'est un module à exécuter dans l'administration ou sur le site).<br />
+<br />
+Une fonction est obligatoire dans cette classe :<br />
+<br />
+[[CODE=php]]public function execute(HTTPRequestCustom $request)
+	{
+	}[[/CODE]]<br />
+<br />
+Elle devra retourner une <em>Response</em> :<br />
+<br />
+- <em>SiteDisplayResponse</em> si vous souhaitez afficher votre page avec le design du site<br />
+- <em>SiteNodisplayResponse</em> si vous souhaitez afficher votre page sans le design du site<br />
+- <em>AdminMenuDisplayResponse</em> si vous souhaitez afficher votre page avec le design de l'administration et un menu à gauche pour les différentes pages de votre module<br />
+- <em>AdminDisplayResponse</em> si vous souhaitez afficher votre page avec le design de l'administration sans le menu de gauche<br />
+- <em>AdminNodisplayResponse</em> si vous souhaitez afficher votre page sans le design de l'administration<br />
+<br />
+La <em>Response</em> ne se charge que de la vue (ce que vous voyez).<br />
+<br />
+Vous devez donc lui donner en paramètre une vue que vous allez afficher dans votre module (objet <em>Template</em>).<br />
+<br />
+Exemple :<br />
+<br />
+[[CODE=php]]&lt;?php
+/*##################################################
+ *                         MyModuleHomeController.class.php
+ *                            -------------------
+ *   begin                : September 06, 2012
+ *   copyright            : (C) 2012 Kévin MASSY
+ *   email                : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class MyModuleHomeController extends ModuleController
+{
+	public function execute(HTTPRequestCustom $request)
+	{
+		$tpl = new StringTemplate('Voici le page d\'accueil de mon module!');
+		return $this-&gt;build_response($tpl);
+	}
+
+	private function build_response(View $view)
+	{
+		$response = new SiteDisplayResponse($view);
+		$response-&gt;get_graphical_environment()-&gt;set_page_title('Mon premier module !');
+		return $response;
+	}
+}
+?&gt;[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_cas-particulier-jsonresponse">Cas particulier : JSONResponse</h2><br />
+
+<br />
+Vous avez également la possibilité de renvoyer des données en JSON dans un contrôleur vous permettant de communiquer plus facilement entre différents langages de programmation comme le Javascript par exemple.<br />
+<br />
+Exemple :<br />
+<br />
+[[CODE=php]]&lt;?php
+/*##################################################
+ *                         MyModuleJSONController.class.php
+ *                            -------------------
+ *   begin                : September 06, 2012
+ *   copyright            : (C) 2012 Kévin MASSY
+ *   email                : kevin.massy@phpboost.com
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+
+class MyModuleJSONController extends ModuleController
+{
+	public function execute(HTTPRequestCustom $request)
+	{
+		$data = array('Vos données');
+		return new JSONResponse($data);
+	}
+}
+?&gt;[[/CODE]]]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.11</user_ip>
+    <timestamp>1397128871</timestamp>
+  </article>
+</articles>

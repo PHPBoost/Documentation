@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>178</id>
+    <id_contents>868</id_contents>
+    <title><![CDATA[POptimizer]]></title>
+    <encoded_title><![CDATA[poptimizer]]></encoded_title>
+    <hits>1368</hits>
+    <id_cat>5</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>5</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>159</cat_article_id>
+    <con_id_contents>868</con_id_contents>
+    <con_id_article>178</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_optimiser-pourquoi-comment">Optimiser, pourquoi ? comment ?</a><ol class="wiki_list_2"><li><a href="#paragraph_php-un-langage-de-script-interprete">PHP, un langage de script interprété</a></li><li><a href="#paragraph_l-enjeu">L'enjeu</a><ol class="wiki_list_3"><li><a href="#paragraph_un-fichier-source-contient-de-nombreux-caracteres-inutiles-pour-l-interpreteur">Un fichier source contient de nombreux caractères inutiles pour l'interpréteur</a></li><li><a href="#paragraph_exemple-de-codes-equivalents">Exemple de codes équivalents</a></li><li><a href="#paragraph_le-but-de-poptimizer">Le but de POptimizer</a></li></ol></li></ol></li><li><a href="#paragraph_telechargement-de-poptimizer">Téléchargement de POptimizer</a><ol class="wiki_list_2"><li><a href="#paragraph_l-executable">L'exécutable</a></li><li><a href="#paragraph_le-code-source">Le code source</a></li></ol></li><li><a href="#paragraph_utilisation-de-poptimizer">Utilisation de POptimizer</a><ol class="wiki_list_2"><li><a href="#paragraph_lancer-poptimizer">Lancer POptimizer</a></li><li><a href="#paragraph_les-options">Les options</a><ol class="wiki_list_3"><li><a href="#paragraph_fichiers-a-optimiser">Fichiers à optimiser</a></li><li><a href="#paragraph_repertoire-cible">Répertoire cible</a></li><li><a href="#paragraph_fichiers-dossiers-a-exclure">Fichiers/dossiers à exclure</a></li><li><a href="#paragraph_choix-des-modules-d-optimisation">Choix des modules d'optimisation</a></li><li><a href="#paragraph_encodage-des-fichiers">Encodage des fichiers</a></li><li><a href="#paragraph_autres">Autres</a></li></ol></li></ol></li></ol>]]></menu>
+    <content><![CDATA[POptimizer (pour PHP Optimizer) est un optimiseur de code source en PHP distribué sous licence GNU/GPL. Cet outil a été développé par l'équipe de développement du noyau de PHPBoost afin d'améliorer ses performances.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_optimiser-pourquoi-comment">Optimiser, pourquoi ? comment ?</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_php-un-langage-de-script-interprete">PHP, un langage de script interprété</h2><br />
+
+<br />
+Bien que la plupart des cas d'utilisation de PHP n'utilisent pas le fait que ce soit un langage de script, il faut tout de même le garder à l'esprit. Contrairement à un langage compilé comme C et C++ par exemple où le code est déjà compilé en langage machine et donc directement exécutable, l'exécution d'une application écrite en langage de script se fait à chaque fois directement à partir du code source. Ainsi, par exemple sur PHPBoost, lorsqu'une page est générée, tous les fichiers source utilisés sont ouverts, lus, interprétés puis ensuite exécutés là où avec un langage compilé l'ordinateur n'aurait qu'à exécuter le fichier. La lecture et l'interprétation de chaque fichier source sont certes très optimisées, mais elles prennent un temps non négligeable.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_l-enjeu">L'enjeu</h2><br />
+
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_un-fichier-source-contient-de-nombreux-caracteres-inutiles-pour-l-interpreteur">Un fichier source contient de nombreux caractères inutiles pour l'interpréteur</h3><br />
+
+<br />
+Les fichiers source d'une application écrite en PHP contient souvent un grand nombre de caractères qui sont ignorés lors de l'interprétation des fichiers (espaces blancs, caractères...).<br />
+Pourtant ces caractères inutiles ont une importance très grande pour le développeur. Par exemple, les commentaires sont totalement ignorés par l'interpréteur mais sont indispensables pour avoir un code clair et lisible que tout le monde puisse comprendre. De même, on met en forme les fichiers source de façon à faciliter leur lisibilité, souvent grâce à l'insertion d'espaces pour aérer le code (indentation).<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_exemple-de-codes-equivalents">Exemple de codes équivalents</h3><br />
+
+<br />
+Prenons un exemple de code aéré et bien commenté.<br />
+[[CODE=php]]&lt;?php
+/**
+ * @desc Une classe d'exemple
+ * @author Développeur &lt;developpeur@societe.com&gt;
+*/
+class Personne
+{
+     /**
+      * @desc Construit un personnage
+      * @param $nom_personne Nom de la personne
+     */
+    function Personne($nom_personne)
+    {
+        $this-&gt;nom = $nom_personne;
+    }
+
+     /**
+      * @desc Dit bonjour à quelqu'un
+      * @param string $personne nom de la personne à qui dire bonjour
+     */
+    function dire_bonjour($personne)
+    {
+        echo $this-&gt;nom . ' dit bonjour à ' . $personne;
+    }
+
+     /**
+      * string Nom de la personne
+     */
+     var $personne = '';
+}
+
+//Instanciation de la classe
+$une_personne = new Personne('Jean');
+
+//On dit bonjour
+$une_personne-&gt;dire_bonjour('Pierre');
+?&gt;[[/CODE]]<br />
+Ce code est strictement identique au suivant vis-à-vis de l'interpréteur PHP.<br />
+[[CODE=php]]&lt;?php
+class Personne
+{
+function Personne($nom_personne)
+{
+$this-&gt;nom=$nom_personne;
+}
+function dire_bonjour($personne)
+{
+echo $this-&gt;nom.' dit bonjour à '.$personne;
+}
+var $personne='';
+}
+$une_personne=new Personne('Jean');
+$une_personne-&gt;dire_bonjour('Pierre');
+?&gt;[[/CODE]]<br />
+On pourrait même le réduire davantage en supprimant les sauts de ligne mais après l'exemple devient complètement illisible.<br />
+<br />
+Ces deux codes donnent exactement le même résultat lors de leur exécution. Pourtant, le premier contient 771 caractères alors que le deuxième en compte seulement 280. Sur cet exemple, on voit donc qu'il y a plus de la moitié des caractères qui n'ont aucun sens pour l'interpréteur PHP. Il parait donc assez évident que la lecture des fichiers sources est plus rapide.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_le-but-de-poptimizer">Le but de POptimizer</h3><br />
+
+<br />
+POptimizer permet de supprimer automatiquement une très grande majorité des caractères illisibles de façon à diminuer considérablement le nombre de caractères des fichiers source. Il transforme les fichiers source de la même manière que ce qui a été présenté dans l'exemple ci-dessus. Tous les commentaires du fichier sont supprimés, ainsi que toutes les indentations et les espaces inutiles entre les opérateurs du langage. Seuls les retours à la ligne sont conservés, pour une raison très simple, cela permet de conserver les numéros de ligne. Cela n'a donc aucune conséquence sur la maintenance du code, puisqu'un patch qui indique de modifier une certaine ligne sera également applicable sans difficultés.<br />
+<br />
+Bien sûr POptimizer fait une copie des fichiers et ne les remplace pas brutalement. En fait, POptimizer s'utilise lorsqu'on veut mettre le code en production, au moment de l'export. Il est évident que l'objectif n'est pas d'écrire les fichiers sans commentaire et sans mise en forme, mais juste de déployer une application plus optimisée.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_telechargement-de-poptimizer">Téléchargement de POptimizer</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_l-executable">L'exécutable</h2><br />
+
+<br />
+L'exécutable de POptimizer est téléchargeable <a href="/download/download-105+poptimizer.php">ici</a>.<br />
+Vous obtenez un fichier nommé poptimizer.jar que vous ne devez pas exécuter directement en cliquant dessus mais en le lançant en ligne de commande. Voir le paragraphe suivant pour savoir comment l'exécuter.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-code-source">Le code source</h2><br />
+
+<br />
+Le code source est distribué sous licence GNU/GPL. Vous pouvez le consulter <a href="http://code.google.com/p/phpboost/source/browse/tools/POptimizer/">ici</a> et le télécharger à partir du SVN de développement à l'adresse suivante : [[CODE=txt,0,1]]http://phpboost.googlecode.com/svn/tools/POptimizer/[[/CODE]].<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_utilisation-de-poptimizer">Utilisation de POptimizer</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_lancer-poptimizer">Lancer POptimizer</h2><br />
+
+<br />
+<a href="/wiki/poptimizer">POptimizer</a> est écrit en <a href="http://fr.wikipedia.org/wiki/Java_(langage)" class="wikipedia-link">Java</a>, il nécessite d'avoir une machine virtuelle Java installée sur sa machine pour pouvoir l'exécuter. Si ce n'est pas votre cas, vous pouvez télécharger Java <a href="http://java.com/fr/download/">ici</a> ou si vous êtes sur Linux l'installer avec votre gestionnaire de paquets comme décrit <a href="http://doc.ubuntu-fr.org/java">ici</a> pour Ubuntu.<br />
+<br />
+POptimizer s'exécute en ligne de commande. Il se lance en tapant la commande suivant en invite de commande. La commande est évidemment à adapter en fonction de là où vous vous trouvez dans votre arborescence de fichiers ainsi que du nom de l'exécutable (nommé poptimizer.jar lorsque vous le téléchargez).<br />
+[[CODE=bash]]java -jar poptimizer.jar[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-options">Les options</h2><br />
+
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_fichiers-a-optimiser">Fichiers à optimiser</h3><br />
+
+<br />
+L'option [[CODE=bash,0,1]]-i[[/CODE]] permet de déterminer quel est le dossier à optimiser, elle est <strong>obligatoire</strong>. Il sera parcouru récursivement et tous ses enfants seront également optimisés à l'exception de ceux qui ont été exclus (voir l'option [[CODE=bash,0,1]]-e[[/CODE]]) et des fichiers qui ne sont pas des sources PHP qui eux seront copiés. L'arborescence de sortie sera la même que l'arborescence d'entrée.<br />
+<br />
+Exemple : le code suivant optimisera tous les fichiers PHP du dossier dossiersource et recréera la même arborescence dans le dossier dossiercible.<br />
+[[CODE=bash]]java -jar poptimizer.jar -i dossiersource -o dossiercible[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_repertoire-cible">Répertoire cible</h3><br />
+
+<br />
+L'option [[CODE=bash,0,1]]-o[[/CODE]] permet de déterminer quelle est le répertoire cible de l'optimisation, c'est-à-dire dans quel répertoire sera reconstituée l'arborescence passée en entrée. Si le répertoire cible indiqué n'existe pas, il sera créé.<br />
+<br />
+Exemple : le code suivant optimisera tous les fichiers PHP du dossier dossiersource et recréera la même arborescence dans le dossier dossiercible.<br />
+[[CODE=bash]]java -jar poptimizer.jar -i dossiersource -o dossiercible[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_fichiers-dossiers-a-exclure">Fichiers/dossiers à exclure</h3><br />
+
+<br />
+Par défaut, POptimizer va optimiser l'ensemble des fichiers contenus dans le répertoire source. Cependant, il se peut qu'il y ait des fichiers ou des répertoires que vous ne vouliez pas optimiser. Pour cela, l'option [[CODE=bash,0,1]]-e[[/CODE]] permet d'exclure certains chemins de l'optimisation. Ces fichiers qui seront ignorés seront tout de même copiés pour conserver l'arborescence originale.<br />
+<br />
+Exemple : le code suivant optimisera tous les fichiers PHP du dossier dossiersource sauf le fichier dossiersource/fichier.php et l'ensemble du contenu du dossier dossiersource/sousdossier. POptimizer recréera la même arborescence dans le dossier dossiercible.<br />
+[[CODE=bash]]java -jar poptimizer.jar -i dossiersource -o dossiercible -e dossiersource/fichier.php dossiersource/sousdossier[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_choix-des-modules-d-optimisation">Choix des modules d'optimisation</h3><br />
+
+<br />
+Pour l'instant POptimizer se décompose en deux modules, un module qui retire les commentaires et un autre qui enlève tous les espaces inutiles (indentation et autour des opérateurs du langage). Par défaut, les deux modules sont appliqués sur les fichiers à optimiser, mais il est possible de choisir manuellement les modules à appliquer grâce à l'option [[CODE=bash,0,1]]-m[[/CODE]] suivie de la liste des modules à appliquer. Les modules disponibles sont les suivants :<br />
+<ul class="formatter-ul">
+<li class="formatter-li">[[CODE=txt,0,1]]comments[[/CODE]] : ce module retire tous les commentaires
+</li><li class="formatter-li">[[CODE=txt,0,1]]spaces[[/CODE]] : ce module retire tous les espaces inutiles
+</li><li class="formatter-li">[[CODE=txt,0,1]]all[[/CODE]] : sélectionne tous les modules (par défaut)<br />
+</li></ul><br />
+Exemples : <br />
+Le code suivant retirera uniquement les espaces des fichiers à optimiser.<br />
+[[CODE=bash]]java -jar poptimizer.jar -i dossiersource -o dossiercible -m spaces[[/CODE]]<br />
+Le code suivant retirera uniquement les commentaires des fichiers à optimiser.<br />
+[[CODE=bash]]java -jar poptimizer.jar -i dossiersource -o dossiercible -m comments[[/CODE]]<br />
+Le code suivant fera une optimisation totale sur les fichiers à optimiser (équivalent à la commande sans l'option [[CODE=bash,0,1]]-m[[/CODE]]).<br />
+[[CODE=bash]]java -jar poptimizer.jar -i dossiersource -o dossiercible -m all[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_encodage-des-fichiers">Encodage des fichiers</h3><br />
+
+<br />
+Les fichiers source peuvent être encodés en différents jeux de caractères. Le code est généralement écrit en anglais donc les problèmes d'encodage sont limités mais il n'est pas rare que des caractères spéciaux soient présents dans les fichiers.<br />
+POptimizer est capable de lire et d'écrire les fichiers dans différents jeux de caractères grâce aux options [[CODE=bash,0,1]]-ics[[/CODE]] et [[CODE=bash,0,1]]-ocs[[/CODE]] pour les encodages respectivement en entrée et en sortie (input charset et output charset).<br />
+Les jeux de caractères disponibles sont les suivants :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"><strong>UTF-8</strong> (utilisé par défaut par POptimizer si on ne le précise pas, ce jeu de caractère est généralement par défaut sur Linux)
+</li><li class="formatter-li"><strong>UTF-16</strong> (assez rarement utilisé)
+</li><li class="formatter-li"><strong>ISO-8859-1</strong> (encodage européen, par défaut sur Windows et très utilisé sur les applications Web écrites en PHP car le support d'UTF-8 n'est pas natif dans PHP 5)
+</li><li class="formatter-li"><strong>US-ASCII</strong> (rarement utilisé)</li></ul><br />
+<br />
+Exemple : on souhaite optimiser un répertoire dont les fichiers sont encodés en UTF-8 et on souhaite l'exporter en ISO-8859-1.<br />
+[[CODE=bash]]java -jar poptimizer.jar -i dossiersource -o dossiercible -ics UTF-8 -ocs ISO-8859-1[[/CODE]]<br />
+<br />
+Il est à noter qu'il est possible de préciser seulement un des deux encodages. Dans le cas où on ne précise pas, UTF-8 est utilisé par défaut.<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_autres">Autres</h3><br />
+
+<br />
+L'option [[CODE=bash,0,1]]-h[[/CODE]] permet d'obtenir de l'aide sur la commande. S'affiche alors un résumé de cette page de documentation.<br />
+<br />
+L'option [[CODE=bash,0,1]]-v[[/CODE]] permet d'obtenir la version de POptimizer que vous utilisez.]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>86.204.86.165</user_ip>
+    <timestamp>1358790167</timestamp>
+  </article>
+</articles>

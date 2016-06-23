@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>308</id>
+    <id_contents>1422</id_contents>
+    <title><![CDATA[Liens en cas de problèmes avec son .htaccess et/ou réécriture d'url]]></title>
+    <encoded_title><![CDATA[liens-en-cas-de-probl-mes-avec-son-htaccess-et-ou-r-criture-d-url]]></encoded_title>
+    <hits>387</hits>
+    <id_cat>2</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>2</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>2</cat_article_id>
+    <con_id_contents>1422</con_id_contents>
+    <con_id_article>308</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_liens">Liens</a><ol class="wiki_list_2"><li><a href="#paragraph_administration">Administration</a></li><li><a href="#paragraph_utilisateur">Utilisateur</a></li></ol></li><li><a href="#paragraph_remarques">Remarques</a></li></ol>]]></menu>
+    <content><![CDATA[Voici les liens les plus importants pour accéder à son site en V4.1 après avoir supprimé ou modifié son .htaccess alors que l'on avait la réécriture d'url activé.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_liens">Liens</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_administration">Administration</h2><br />
+
+<br />
+Configuration avancée : <a href="http://www.example.org/admin/config/?url=/advanced/">http://www.example.org/admin/config/?url=/advanced/</a><br />
+Cache : <a href="http://www.example.org/admin/cache/?url=/data">http://www.example.org/admin/cache/?url=/data</a><br />
+Maintenance : <a href="http://www.example.org/admin/admin_maintain.php">http://www.example.org//admin/admin_maintain.php</a><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_utilisateur">Utilisateur</h2><br />
+
+<br />
+Connexion : <a href="http://www.example.org/user/?url=/connect/">http://www.example.org/user/?url=/connect/</a><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_remarques">Remarques</h1><br />
+
+<br />
+Le lien de connexion sert si on a pas le cookie d'autoconnexion d'activé pour accéder à l'administration.<br />
+Les liens de Configuration avancée et cache peuvent permettre la remise en place du .htaccess<br />
+<br />
+Ne pas oublier de remplacer <a href="http://www.example.org">http://www.example.org</a> par votre NDD (Nom De Domaine)]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>92.138.198.63</user_ip>
+    <timestamp>1430410280</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>293</id>
+    <id_contents>1583</id_contents>
+    <title><![CDATA[Conventions HTML et CSS]]></title>
+    <encoded_title><![CDATA[conventions-html-et-css]]></encoded_title>
+    <hits>1832</hits>
+    <id_cat>59</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>59</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>211</cat_article_id>
+    <con_id_contents>1583</con_id_contents>
+    <con_id_article>293</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_indentation">Indentation</a><ol class="wiki_list_2"><li><a href="#paragraph_un-seul-attribut">Un seul attribut</a></li><li><a href="#paragraph_plusieurs-attributs">Plusieurs attributs</a></li></ol></li><li><a href="#paragraph_les-attributs-pour-plusieurs-classes">Les attributs pour plusieurs classes</a></li><li><a href="#paragraph_les-espaces-dans-les-attributs">Les espaces dans les attributs</a></li><li><a href="#paragraph_le-nom-des-classes">Le nom des classes</a></li></ol>]]></menu>
+    <content><![CDATA[Il est important dans un projet que les développeurs adoptent un style d’écriture identique. Ceci favorise la relecture du code par tout le monde et facilite grandement le débogage.<br />
+<br />
+Depuis l'intégration du cache CSS, il n'est plus question d'optimiser le fichier CSS pour accélérer le chargement web (le cache CSS s'en occupe), mais plutôt de gagner en lisibilité dans le développement.<br />
+<br />
+Afin de simplifier le travail de tous, nous avons choisi un style similaire à l'affichage des fonctions "examiner l’élément" des navigateurs web.<br />
+<br />
+Ces règles ne sont pas obligatoire, mais très fortement recommandée pour vos développements.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_indentation">Indentation</h1><br />
+
+Le style d'indentation adopté sur PHPBoost permet de gagner en lisibilité et en clarté du code.<br />
+L'utilisation des tabulations et des espaces est très importante dans le code. Il faut aérer votre code pour le rendre plus lisible.<br />
+<br />
+Nous allons voir plusieurs exemples ci-dessous.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_un-seul-attribut">Un seul attribut</h2><br />
+
+Lorsque des classes similaires ne possèdent qu'un seul attribut, nous privilégions un affichage sur une seule ligne.<br />
+[[CODE=css]].inline { display: inline !important; }
+.center { text-align: center !important; }
+.left { text-align: left !important; }
+.right { text-align: right !important; }
+.justify { text-align: justify !important; }[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_plusieurs-attributs">Plusieurs attributs</h2><br />
+
+Lorsqu'une classe possèdent un certain nombre d'attributs, nous privilégions le retour à la ligne pour chaque attribut.<br />
+[[CODE=css]]body {
+position: relative;
+min-height: 100%;
+height: auto;
+background: url(images/body.jpg) no-repeat fixed top center;
+color: #555555;
+font-size: 13px;
+font-family: "Trebuchet MS", Verdana, 'Bitstream Vera Sans', Times, serif;
+}[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-attributs-pour-plusieurs-classes">Les attributs pour plusieurs classes</h1><br />
+
+Dans le cas où nous souhaitons appliquer un attribut à plusieurs classes, nous avons deux façons de coder en fonction de l'utilisation des fonctions.<br />
+<br />
+Lorsque nous avons besoin de les identifier simplement, nous utilisons un retour à la ligne : [[CODE=css]]nav.dynamic-menu li ul li a,
+nav.dynamic-menu li ul li span { color: #0578CC; }[[/CODE]] On distingue bien les deux cas où l'on applique la couleur.<br />
+<br />
+Lorsque nous n'avons pas besoin d'identifier les éléments, nous n'utilisons pas de retour à la ligne : [[CODE=css]]img, table, td, blockquote, code, pre, textarea, input, video, object, .video-player { max-width: 100%; }[[/CODE]] Ce type d'écriture est privilégié dans le fichier <em>default.css</em> qui n'a pas pour but d’être modifié de façon régulière.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-espaces-dans-les-attributs">Les espaces dans les attributs</h1><br />
+
+Pour faciliter les copier-coller des navigateurs, nous intégrons un espace après les ":" mais pas avant.[[CODE=css]]background: #C4CED6;[[/CODE]]De cette manière, si vous réalisez des tests avec votre navigateur, un simple copier-coller vous permet de le mettre dans votre fichier CSS.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-nom-des-classes">Le nom des classes</h1><br />
+
+Les règles sont simples : <br />
+<ul class="formatter-ul">
+<li class="formatter-li">Pas de majuscule
+</li><li class="formatter-li">Utilisation du tiret du 6 "-"<br />
+</li></ul>Pour le reste, les noms restent cohérents avec la fonction d'utilisation.<br />
+<br />
+La classe <em>header</em> est faite pour l'en-tête du site, la classe <em>content</em> pour le contenu du site.<br />
+<br />
+<span class="notice">Il reste encore quelques underscore "_" dans certains noms de classes, mais ils seront remplacés dans les versions futures. Ce choix permet de distinguer un nom de classe CSS et d'une variable PHP</span>]]></content>
+    <activ>1</activ>
+    <user_id>768</user_id>
+    <user_ip>77.202.89.95</user_ip>
+    <timestamp>1457190432</timestamp>
+  </article>
+</articles>

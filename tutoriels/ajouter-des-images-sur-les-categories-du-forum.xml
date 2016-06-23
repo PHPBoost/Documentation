@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>287</id>
+    <id_contents>1336</id_contents>
+    <title><![CDATA[Ajouter des images sur les catégories du forum]]></title>
+    <encoded_title><![CDATA[ajouter-des-images-sur-les-categories-du-forum]]></encoded_title>
+    <hits>886</hits>
+    <id_cat>54</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>54</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>192</cat_article_id>
+    <con_id_contents>1336</con_id_contents>
+    <con_id_article>287</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_la-base-de-donnee">La base de donnée</a></li><li><a href="#paragraph_les-variables-de-langues">Les variables de langues</a></li><li><a href="#paragraph_modification-php">Modification php</a><ol class="wiki_list_2"><li><a href="#paragraph_admin-forum-php">admin_forum.php</a></li><li><a href="#paragraph_admin-forum-add-php">admin_forum_add.php</a></li><li><a href="#paragraph_forumextensionpointprovider-class-php">ForumExtensionPointProvider.class.php</a></li><li><a href="#paragraph_forumhomepageextensionpoint-class-php">ForumHomePageExtensionPoint.class.php</a></li></ol></li><li><a href="#paragraph_fichier-tpl">Fichier TPL</a><ol class="wiki_list_2"><li><a href="#paragraph_l-administration">L'administration</a><ol class="wiki_list_3"><li><a href="#paragraph_admin-forum-add-tpl">admin_forum_add.tpl</a></li><li><a href="#paragraph_admin-forum-cats-edit-tpl">admin_forum_cats_edit.tpl</a></li></ol></li><li><a href="#paragraph_le-forum">Le forum</a><ol class="wiki_list_3"><li><a href="#paragraph_forum-forum-tpl">forum_forum.tpl</a></li><li><a href="#paragraph_forum-index-tpl">forum_index.tpl</a></li></ol></li></ol></li><li><a href="#paragraph_fichier-css">Fichier CSS</a></li><li><a href="#paragraph_fichiers-modifies">Fichiers modifiés</a></li></ol>]]></menu>
+    <content><![CDATA[<span class="notice">Ce Tutorial est réalisé pour la version V4.1</span><br />
+<br />
+Ce Tutorial a pour objectif d'ajouter une icône à chaque catégorie de votre forum.<br />
+<br />
+Les numéros de lignes correspondent aux fichiers de la version V4.1.0<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-base-de-donnee">La base de donnée</h1><br />
+
+Utiliser le script sql suivant pour ajouter le champ "icon" dans la table <em>forum_cats</em><br />
+[[CODE=sql]]ALTER TABLE `phpboost_forum_cats` ADD `icon` VARCHAR( 255 ) NOT NULL AFTER `url` ;[[/CODE]]<br />
+<p style="text-align:center"><a href="/upload/screenshot_1_4ed99.png" rel="lightbox[2]"><img src="/upload/screenshot_1_4ed99.png" alt="" style="width:300px;" /></a><a href="/upload/screenshot_2.png" rel="lightbox[2]"><img src="/upload/screenshot_2.png" alt="" style="width:300px;" /></a></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-variables-de-langues">Les variables de langues</h1><br />
+
+Ajouter dans les fichiers de langue, les deux lignes suivantes :<br />
+[[CODE=php]]$LANG['icon_forum'] = 'Icône de la catégorie';
+$LANG['icon_forum_explain'] = 'A placer dans le répertoire /forum';[[/CODE]]<br />
+<br />
+Pour le french : <em>forum\lang\french\forum_french.php</em>, après la ligne 80<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_modification-php">Modification php</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_admin-forum-php">admin_forum.php</h2><br />
+
+<br />
+Ajouter après la ligne 78 : <br />
+<br />
+[[CODE=php]]$icon = retrieve(POST, 'icon', '');
+$icon_path = retrieve(POST, 'icon_path', '');
+if (!empty($icon_path))
+$icon = $icon_path;[[/CODE]]<br />
+<br />
+Remplacer la ligne 103 : <br />
+<br />
+[[CODE=php]]$Sql-&gt;query_inject("UPDATE " . PREFIX . "forum_cats SET name = '" . $name . "', subname = '" . $subname . "', url = '" . $url . "', status = '" . $status . "', aprob = '" . $aprob . "', auth = '" . addslashes(serialize($array_auth_all)) . "' WHERE id = '" . $id . "'", __LINE__, __FILE__);[[/CODE]]<br />
+par<br />
+[[CODE=php]]$Sql-&gt;query_inject("UPDATE " . PREFIX . "forum_cats SET name = '" . $name . "', subname = '" . $subname . "', url = '" . $url . "', status = '" . $status . "', aprob = '" . $aprob . "', auth = '" . addslashes(serialize($array_auth_all)) . "',icon = '" . $icon . "' WHERE id = '" . $id . "'", __LINE__, __FILE__);[[/CODE]]<br />
+<br />
+Remplacer la ligne 268 : <br />
+<br />
+[[CODE=php]]$forum_info = $Sql-&gt;query_array(PREFIX . "forum_cats", "id_left", "id_right", "level", "name", "subname", "url", "status", "aprob", "auth", "WHERE id = '" . $id . "'", __LINE__, __FILE__);[[/CODE]]<br />
+par<br />
+[[CODE=php]]$forum_info = $Sql-&gt;query_array(PREFIX . "forum_cats", "id_left", "id_right", "level", "name", "subname", "url", "status", "aprob", "auth", "icon", "WHERE id = '" . $id . "'", __LINE__, __FILE__);[[/CODE]]<br />
+<br />
+Ajouter après la ligne 282 : <br />
+<br />
+[[CODE=php]]$img_direct_path = (strpos($forum_info['icon'], '/') !== false);
+$rep = './';
+$image_list = '&lt;option value=""' . ($img_direct_path ? ' selected="selected"' : '') . '&gt;--&lt;/option&gt;';
+if (is_dir($rep)) //Si le dossier existe
+{
+	$img_array = array();
+	$dh = @opendir( $rep);
+	while (! is_bool($lang = readdir($dh)))
+	{
+		if (preg_match('`\.(gif|png|jpg|jpeg|tiff)+$`i', $lang))
+			$img_array[] = $lang; //On crée un tableau, avec les different fichiers.
+	}
+	closedir($dh); //On ferme le dossier
+
+	foreach ($img_array as $key =&gt; $img_path)
+	{	
+		$selected = $img_path == $forum_info['icon'] ? ' selected="selected"' : '';
+		$image_list .= '&lt;option value="' . $img_path . '"' . ($img_direct_path ? '' : $selected) . '&gt;' . $img_path . '&lt;/option&gt;';
+	}
+}[[/CODE]]<br />
+<br />
+Ajouter après la ligne 336 : <br />
+<br />
+[[CODE=php]]'IMG_ICON' =&gt; !empty($forum_info['icon']) ? '&lt;img src="' . $forum_info['icon'] . '" alt="" class="valign_middle" /&gt;' : '',
+'IMG_LIST' =&gt; $image_list,
+'IMG_PATH' =&gt; $img_direct_path ? $forum_info['icon'] : '',
+'L_ICON' =&gt; $LANG['icon_forum'],
+'L_ICON_EXPLAIN' =&gt; $LANG['icon_forum_explain'],
+'L_OR_DIRECT_PATH' =&gt; $LANG['or_direct_path'],[[/CODE]]<br />
+<br />
+Ajouter après la ligne 390 : <br />
+<br />
+[[CODE=php]]'L_ICON' =&gt; $LANG['icon_forum'],
+'L_ICON_EXPLAIN' =&gt; $LANG['icon_forum_explain'],
+'L_OR_DIRECT_PATH' =&gt; $LANG['or_direct_path'],[[/CODE]]<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_admin-forum-add-php">admin_forum_add.php</h2><br />
+
+<br />
+Ajouter après la ligne 78 : <br />
+<br />
+[[CODE=php]]$icon = retrieve(POST, 'icon', '');[[/CODE]]<br />
+<br />
+Remplacer ligne 129 : <br />
+<br />
+[[CODE=php]]$Sql-&gt;query_inject("INSERT INTO " . PREFIX . "forum_cats (id_left, id_right, level, name, subname, url, nbr_topic, nbr_msg, last_topic_id, status, aprob, auth) VALUES('" . $id_left . "', '" . ($id_left + 1) . "', '" . $level . "', '" . $name . "', '" . $subname . "', '" . $url . "', 0, 0, 0, '" . $status . "', '" . $aprob . "', '" . addslashes(serialize($array_auth_all)) . "')", __LINE__, __FILE__);
+[[/CODE]]<br />
+par<br />
+[[CODE=php]]$Sql-&gt;query_inject("INSERT INTO " . PREFIX . "forum_cats (id_left, id_right, level, name, subname, url, nbr_topic, nbr_msg, last_topic_id, status, aprob, auth, icon) VALUES('" . $id_left . "', '" . ($id_left + 1) . "', '" . $level . "', '" . $name . "', '" . $subname . "', '" . $url . "', 0, 0, 0, '" . $status . "', '" . $aprob . "', '" . addslashes(serialize($array_auth_all)) . "')", __LINE__, __FILE__);[[/CODE]]<br />
+<br />
+Ajouter après la ligne 157 : <br />
+<br />
+[[CODE=php]]$rep = './';//Images disponibles
+$image_list = '';
+if (is_dir($rep)) //Si le dossier existe
+{
+	$img_array = array();
+	$dh = @opendir( $rep);
+	while (! is_bool($lang = @readdir($dh)))
+	{	
+		if (preg_match('`\.(gif|png|jpg|jpeg|tiff)+$`i', $lang))
+			$img_array[] = $lang; //On crée un tableau, avec les different fichiers.				
+	}	
+	@closedir($dh); //On ferme le dossier
+
+	foreach ($img_array as $key =&gt; $img_path)
+		$image_list .= '&lt;option value="' . $img_path . '"&gt;' . $img_path . '&lt;/option&gt;';
+}[[/CODE]]<br />
+<br />
+Ajouter après la ligne 185 : <br />
+<br />
+[[CODE=php]]'IMG_LIST' =&gt; $image_list,
+'L_ICON' =&gt; $LANG['icon_forum'],
+'L_ICON_EXPLAIN' =&gt; $LANG['icon_forum_explain'],
+'L_OR_DIRECT_PATH' =&gt; $LANG['or_direct_path'],[[/CODE]]<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_forumextensionpointprovider-class-php">ForumExtensionPointProvider.class.php</h2><br />
+
+<br />
+ajouter après la ligne 73 :<br />
+<br />
+[[CODE=php]]$forum_cats .= '$CAT_FORUM[\'' . $row['id'] . '\'][\'icon\'] = ' . var_export($row['icon'], true) . ';' . "\n";[[/CODE]]<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_forumhomepageextensionpoint-class-php">ForumHomePageExtensionPoint.class.php</h2><br />
+
+<br />
+remplacer la ligne 132 : <br />
+<br />
+[[CODE=php]]t.idcat, t.title, t.last_timestamp, t.last_user_id, t.last_msg_id, t.nbr_msg AS t_nbr_msg, t.display_msg, m.user_id, m.login, m.level as user_level, m.user_groups, v.last_view_id[[/CODE]]<br />
+par <br />
+[[CODE=php]]t.idcat, t.title, t.last_timestamp, t.last_user_id, t.last_msg_id, t.nbr_msg AS t_nbr_msg, t.display_msg, m.user_id, m.login, m.level as user_level, m.user_groups, v.last_view_id, c.icon[[/CODE]]<br />
+<br />
+Ajouter après la ligne 254 :<br />
+<br />
+[[CODE=php]]'ICON' =&gt; !empty($row['icon']) ? '&lt;a href="forum' . url('.php?id=' . $row['cid'], '-' . $row['cid'] . '+' . Url::encode_rewrite($row['name']) . '.php') . '"&gt;&lt;img src="' . $row['icon'] . '" alt="" class="valign_middle" /&gt;&lt;/a&gt;&lt;br /&gt;' : '',[[/CODE]]<br />
+<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_fichier-tpl">Fichier TPL</h1><br />
+
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_l-administration">L'administration</h2><br />
+
+<br />
+Il est nécessaire d'ajouter les éléments de sélection dans les formulaires de création et de modification d'un forum.<br />
+<br />
+Voici le rendu que vous devez obtenir dans l'administration : <a href="/upload/screenshot_3.png" rel="lightbox[2]"><img src="/upload/screenshot_3.png" alt="" style="width:300px;" /></a><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_admin-forum-add-tpl">admin_forum_add.tpl</h3><br />
+
+<br />
+Ajouter après la ligne 29 : <br />
+<br />
+[[CODE=tpl]]function change_icon(img_path)
+	{
+		document.getElementById('icon_img').innerHTML = '&lt;img src="' + img_path + '" alt="" class="valign_middle" /&gt;';
+	}[[/CODE]]<br />
+<br />
+Ajouter après la ligne 117 :<br />
+<br />
+[[CODE=tpl]]&lt;div class="form-element"&gt;
+	&lt;label for="icon"&gt;{L_ICON}&lt;br /&gt;&lt;span class="field-description"&gt;{L_ICON_EXPLAIN}&lt;/span&gt;&lt;/label&gt;
+	&lt;div class="form-field"&gt;
+		&lt;label&gt;
+			&lt;select name="icon" id="icon" onchange="change_icon(this.options[this.selectedIndex].value)" onclick="change_icon(this.options[this.selectedIndex].value)"&gt;
+				{IMG_LIST}
+			&lt;/select&gt;
+			&lt;span id="icon_img"&gt;{IMG_ICON}&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;br /&gt;
+		&lt;label&gt;
+			&lt;span class="text_small"&gt;{L_OR_DIRECT_PATH}&lt;/span&gt;
+			&lt;input type="text" class="text" name="icon_path" value="{IMG_PATH}" onblur="if( this.value != '' )change_icon(this.value);" onclick="document.getElementById('img_default_select').selected = 'selected';" /&gt;
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_admin-forum-cats-edit-tpl">admin_forum_cats_edit.tpl</h3><br />
+
+<br />
+Ajouter après la ligne 50 : <br />
+<br />
+[[CODE=tpl]]function change_icon(img_path)
+	{
+		document.getElementById('icon_img').innerHTML = '&lt;img src="' + img_path + '" alt="" class="valign_middle" /&gt;';
+	}[[/CODE]]<br />
+<br />
+Ajouter après la ligne 127 :<br />
+<br />
+[[CODE=tpl]]&lt;div class="form-element"&gt;
+	&lt;label for="icon"&gt;{L_ICON}&lt;br /&gt;&lt;span class="field-description"&gt;{L_ICON_EXPLAIN}&lt;/span&gt;&lt;/label&gt;
+	&lt;div class="form-field"&gt;
+		&lt;label&gt;
+			&lt;select name="icon" id="icon" onchange="change_icon(this.options[this.selectedIndex].value)" onclick="change_icon(this.options[this.selectedIndex].value)"&gt;
+				{IMG_LIST}
+			&lt;/select&gt;
+			&lt;span id="icon_img"&gt;{IMG_ICON}&lt;/span&gt;
+		&lt;/label&gt;
+		&lt;br /&gt;
+		&lt;label&gt;
+			&lt;span class="text_small"&gt;{L_OR_DIRECT_PATH}&lt;/span&gt;
+			&lt;input type="text" class="text" name="icon_path" value="{IMG_PATH}" onblur="if( this.value != '' )change_icon(this.value);" onclick="document.getElementById('img_default_select').selected = 'selected';" /&gt;
+		&lt;/label&gt;
+	&lt;/div&gt;
+&lt;/div&gt;[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-forum">Le forum</h2><br />
+
+<br />
+Pour finir, il faut modifier les fichiers TPL du forum afin d'afficher l'image.<br />
+En fonction de vos besoins, la personnalisation est un peu différente. Dans le cas présent, j'ai ajouter les icônes uniquement au forum (par les url) et uniquement sur les pages index et forum.<br />
+<br />
+Voici le rendu : <a href="/upload/screenshot_4.png" rel="lightbox[2]"><img src="/upload/screenshot_4.png" alt="" style="width:300px;" /></a><br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_forum-forum-tpl">forum_forum.tpl</h3><br />
+
+<br />
+Remplacer la ligne 21 : <br />
+<br />
+[[CODE=tpl]]&lt;th class="forum-text-column" colspan="2"&gt;{L_FORUM}&lt;/th&gt;[[/CODE]]<br />
+par <br />
+[[CODE=tpl]]&lt;th class="forum-text-column" colspan="3"&gt;{L_FORUM}&lt;/th&gt;[[/CODE]]<br />
+<br />
+Ajouter après la ligne 48 : <br />
+<br />
+[[CODE=tpl]]&lt;td class="forum-sous-cat-icon"&gt;
+	{forums_list.subcats.ICON}
+&lt;/td&gt;[[/CODE]]<br />
+<br />
+<h3 class="wiki_paragraph3" id="paragraph_forum-index-tpl">forum_index.tpl</h3><br />
+
+<br />
+Remplacer la ligne 31 : <br />
+<br />
+[[CODE=tpl]]&lt;th class="forum-text-column" colspan="2"&gt;{L_FORUM}&lt;/th&gt;[[/CODE]]<br />
+par <br />
+[[CODE=tpl]]&lt;th class="forum-text-column" colspan="3"&gt;{L_FORUM}&lt;/th&gt;[[/CODE]]<br />
+<br />
+Remplacer la ligne 39 : <br />
+<br />
+[[CODE=tpl]]&lt;th colspan="5"&gt;&lt;/th&gt;[[/CODE]]<br />
+par <br />
+[[CODE=tpl]]&lt;th colspan="6"&gt;&lt;/th&gt;[[/CODE]]<br />
+<br />
+Ajouter après la ligne 50 : <br />
+<br />
+[[CODE=tpl]]&lt;td class="forum-sous-cat-icon"&gt;
+	{forums_list.subcats.ICON}
+&lt;/td&gt;[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_fichier-css">Fichier CSS</h1><br />
+
+<br />
+Cette modification n'est pas forcement nécessaire, mais elle simplifiera votre travail de design.<br />
+<br />
+Ajouter dans le forum.css après la ligne 80 la classe suivante : <br />
+<br />
+[[CODE=css]]td.forum-sous-cat-icon {
+	width: 50px;
+	text-align: center;	
+}[[/CODE]]<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_fichiers-modifies">Fichiers modifiés</h1><br />
+
+<br />
+Pour ceux qui le souhaite, voici les fichiers modifiés à mettre dans les bons répertoire : <a href="/upload/icones_forum.zip">fichiers</a><br />
+<span class="warning">Attention car ces fichiers ne prennent pas en compte vos éventuelles modifications. Il ne peuvent être appliqués que sur un site non modifié</span>]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>82.224.142.186</user_ip>
+    <timestamp>1406456254</timestamp>
+  </article>
+</articles>

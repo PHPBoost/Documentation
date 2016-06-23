@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>61</id>
+    <id_contents>1722</id_contents>
+    <title><![CDATA[Administration du module Sondages]]></title>
+    <encoded_title><![CDATA[administration-du-module-sondages]]></encoded_title>
+    <hits>1027</hits>
+    <id_cat>30</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>30</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>60</cat_article_id>
+    <con_id_contents>1722</con_id_contents>
+    <con_id_article>61</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration-des-sondages">Configuration des sondages</a><ol class="wiki_list_2"><li><a href="#paragraph_mini-sondages">Mini-sondages</a></li><li><a href="#paragraph_configuration-avancee">Configuration avancée</a></li><li><a href="#paragraph_autorisations">Autorisations</a></li></ol></li><li><a href="#paragraph_la-gestion-des-sondages">La gestion des sondages</a><ol class="wiki_list_2"><li><a href="#paragraph_la-liste-des-sondages">La liste des sondages</a></li></ol></li><li><a href="#paragraph_creation-d-un-sondage">Création d'un sondage</a></li></ol>]]></menu>
+    <content><![CDATA[L'administration de ce module est séparée en trois parties.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configuration-des-sondages">Configuration des sondages</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/poll/config.jpg" alt="" /></p><br />
+<br />
+Dans cette partie de l'administration, vous pouvez configurer les sondages.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_mini-sondages">Mini-sondages</h2><br />
+
+<br />
+Vous pouvez décider dans cette sous-partie du ou des sondages affichés dans le mini-module dans les menus. Lorsque vous sélectionnez plusieurs sondages, l'affichage sera aléatoire et un des sondages sélectionnés sera affiché.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-avancee">Configuration avancée</h2><br />
+
+<br />
+Vous pouvez ici décider du nom du cookie qui sera stocké dans le navigateur du visiteur qui contiendra les sondages où le visiteur a déjà voté et sa durée de validité.<br />
+Enfin, vous pourrez décider d'afficher ou non les résultats des votes avant même la fin des sondages.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_autorisations">Autorisations</h2><br />
+
+<br />
+Vous pouvez définir ici le rang minimum et les groupes autorisés à visualiser les votes, et à voter.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-gestion-des-sondages">La gestion des sondages</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-liste-des-sondages">La liste des sondages</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/poll/management.jpg" alt="" /></p><br />
+<br />
+Cette première partie affiche la liste des sondages existants dans un tableau. Voici les informations fournies par ce tableau :<br />
+<br />
+<ol class="formatter-ol">
+<li class="formatter-li">La <strong>question</strong> posée dans ce sondage
+</li><li class="formatter-li">Un lien pour <strong>consulter</strong> le sondage tel que vu par les membres
+</li><li class="formatter-li">Le <strong>pseudo</strong> du membre ayant lancé ce sondage
+</li><li class="formatter-li">La <strong>date</strong> à laquelle le sondage a été lancé
+</li><li class="formatter-li">S'il est <strong>caché</strong> (oui ou non)
+</li><li class="formatter-li">L'<strong>approbation</strong> (mis-en-ligne ou non)
+</li><li class="formatter-li">Un lien pour <strong>modifier</strong> le sondage : <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML -->
+</li><li class="formatter-li">Un autre lien pour le <strong>supprimer</strong> : <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --><br />
+</li></ol><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_creation-d-un-sondage">Création d'un sondage</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/poll/add.jpg" alt="" /></p><br />
+<br />
+Créer un sondage est relativement intuitif.<br />
+Il y a plusieurs options à renseigner.<br />
+<br />
+<ol class="formatter-ol">
+<li class="formatter-li">Tout d'abord, vous devez entrer la <strong>question</strong> qui sera posée dans ce sondage. Elle peut être sous la forme d'une phrase interrogative ou même de plusieurs phrases. Libre à vous de la personnaliser comme bon vous semble.
+</li><li class="formatter-li">Ensuite, vous devez choisir si la réponse donnée par le membre sera de <strong>type</strong> unique ou multiple. Lorsqu'elle est unique, seule une des réponses pourra être choisie. Lorsque le sondage est de type multiple, une ou plusieurs réponses pourront être cochées par le membre.
+</li><li class="formatter-li">Puis, vous devez décider si c'est une <strong>archive</strong> ou non. Bien sûr, il est inutile de mettre un sondage directement dans les archives mais on ne sait jamais.
+</li><li class="formatter-li">Enfin, vous voici devant la <em>liste des réponses</em>. Par défaut, vous avez 3 champs pour insérer des réponses. Les grandes cases à gauche servent à mettre la réponse et celles à droite pour insérer le nombre de votes au préalable.
+</li><li class="formatter-li">Les champs suivants servent à renseigner la <em>date</em>. Vous pouvez ainsi décider dans l'ordre, de la date à laquelle paraîtra le sondage, la date de fin du sondage et la date de création du sondage. Si vous voulez que le sondage paraisse tout de suite, choisissez la case 'Immédiate', et pour que le sondage ne paraisse pas tout de suite, faites 'Désapprouver'.<br />
+</li></ol>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>80.215.210.103</user_ip>
+    <timestamp>1463269776</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>88</id>
+    <id_contents>1656</id_contents>
+    <title><![CDATA[Gestion des langues]]></title>
+    <encoded_title><![CDATA[gestion-des-langues]]></encoded_title>
+    <hits>841</hits>
+    <id_cat>83</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>83</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>315</cat_article_id>
+    <con_id_contents>1656</con_id_contents>
+    <con_id_article>88</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-langues">Gestion des langues</a></li><li><a href="#paragraph_ajouter-une-langue">Ajouter une langue</a></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_gestion-des-langues">Gestion des langues</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/langs/manage.png" alt="" /></p><br />
+<br />
+<span class="warning">La langue par défaut ne peut pas être désinstallée, désactivée, ou réservée pour un type de membre, ceci afin que le logiciel ait toujours un fichier langue disponible pour son bon fonctionnement.</span><br />
+<br />
+Pour chaque langue vous avez un descriptif sur : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> ses auteurs
+</li><li class="formatter-li"> sa compatibilité avec les versions de PHPBoost.<br />
+</li></ul><br />
+<br />
+Vous pouvez<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> activer ou non une langue
+</li><li class="formatter-li"> désinstaller une langue
+</li><li class="formatter-li"> Choisir pour chaque langue le niveau d'autorisation d'utilisateur minimum pour l'utiliser.<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-une-langue">Ajouter une langue</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/menu_administration/langs/add.png" alt="" /></p><br />
+<br />
+Le fichier langue à installer peut : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> se trouver sur votre disque dur et vous l'uploadez via ce formulaire. Il doit être en format ZIP ou GZIP.
+</li><li class="formatter-li"> être disponible dans le répertoire '../lang' de votre site puisque vous l'aurez préalablement déposé à cet endroit via un logiciel FTP.<br />
+</li></ul><br />
+<span class="notice">La langue par défaut est choisie dans la configuration du site.<br />
+Si plusieurs langues sont installées, chaque membre pourra choisir sa langue dans son profil. </span><br />
+<br />
+Pour installer une langue, il suffit de choisir le niveau d'autorisations d'accès à la langue et de cliquer sur 'installer'.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966531</timestamp>
+  </article>
+</articles>

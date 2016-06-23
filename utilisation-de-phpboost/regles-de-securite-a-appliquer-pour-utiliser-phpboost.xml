@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>291</id>
+    <id_contents>1351</id_contents>
+    <title><![CDATA[Règles de sécurité à appliquer pour utiliser PHPBoost]]></title>
+    <encoded_title><![CDATA[regles-de-securite-a-appliquer-pour-utiliser-phpboost]]></encoded_title>
+    <hits>988</hits>
+    <id_cat>3</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>3</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>3</cat_article_id>
+    <con_id_contents>1351</con_id_contents>
+    <con_id_article>291</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_a-l-installation">A l'installation</a></li><li><a href="#paragraph_les-mots-de-passe">Les mots de passe</a><ol class="wiki_list_2"><li><a href="#paragraph_comment-avoir-un-mot-de-passe-securise">Comment avoir un mot de passe sécurisé?</a></li><li><a href="#paragraph_pour-votre-mot-de-passe-d-administrateur-ou-moderateur">Pour votre mot de passe d'administrateur ou modérateur</a></li><li><a href="#paragraph_les-mots-de-passe-pour-les-utilisateurs">Les mots de passe pour les utilisateurs</a></li><li><a href="#paragraph_liste-non-exhaustive-de-quelques-utilitaires-pour-creer-vos-mots-de-passe">Liste non exhaustive de quelques utilitaires pour créer vos mots de passe :</a></li></ol></li><li><a href="#paragraph_register-globals-on-ou-off">Register_globals : on ou off?</a></li><li><a href="#paragraph_mettez-vos-site-a-jour">Mettez vos site à jour</a></li><li><a href="#paragraph_sauvegardez-regulierement-les-donnees-de-votre-site">Sauvegardez régulièrement les données de votre site</a><ol class="wiki_list_2"><li><a href="#paragraph_la-base-de-donnee">La base de donnée</a></li><li><a href="#paragraph_les-donnees-du-ftp">Les données du FTP</a></li></ol></li><li><a href="#paragraph_administrateurs-et-moderateurs">Administrateurs et modérateurs</a></li><li><a href="#paragraph_comment-donner-un-acces-ftp-a-une-personne">Comment donner un accès FTP à une personne ?</a></li><li><a href="#paragraph_mefiez-vous-des-connexions-automatiques">Méfiez vous des connexions automatiques...</a></li><li><a href="#paragraph_conclusion">Conclusion</a></li></ol>]]></menu>
+    <content><![CDATA[Un des points clé de PHPBoost est la sécurité. L'ensemble du noyau est conçu pour sécuriser un maximum les données. Toutes les techniques connues concernant les attaques de sites web sont bloquées. Cependant nous ne sommes pas à l'abri d'une attaque qui peut être réussie si on fait face à quelqu'un de revanchard et compétent ; cela dit aucun système n'est sûr. PHPBoost a mis tous les éléments de son côté sur ce point là.<br />
+<br />
+La sécurité des sites est un point important que beaucoup de personnes négligent car ne se rendent pas compte des conséquences que cela peut avoir...<br />
+<br />
+Voyons ensemble ce que vous devez faire de votre côté pour avoir votre site le plus sécurisé possible.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_a-l-installation">A l'installation</h1><br />
+
+<br />
+Dans le pack de PHPBoost se trouve un répertoire ../install pour installer PHPBoost. A la fin de l'installation, il est important de bien supprimer ce répertoire, cela évite qu'une personne mal intentionnée connaissant vos identifiants relance l'installation et supprime toutes les données de votre site.<br />
+<br />
+De plus utilisez des mots de passe sécurisés, ce que nous allons développer de suite.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-mots-de-passe">Les mots de passe</h1><br />
+
+<br />
+Bien souvent les mots de passe des gens se limitent à 123456, azerty, leur prénom, leur nom, etc... Ceci est bien trop simple et peut facilement se deviner, les hackers ayant a leur disposition des scripts de recherche de mots de passes. Si votre mot de passe est un nom propre, une suite de chiffres, il sera très facilement décryptable.<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_comment-avoir-un-mot-de-passe-securise">Comment avoir un mot de passe sécurisé?</h2><br />
+
+<br />
+Un mot de passe doit être le plus complexe possible! Voici quelques règles importantes à respecter pour votre mot de passe :<br />
+<br />
+    * minimum de 8 caractères<br />
+    * contient des chiffres, des majuscules, minuscules et caractères spéciaux<br />
+    * il ne doit jamais être un mot qu'on trouve dans le dictionnaire d'aucune langue<br />
+<br />
+Ex : QL8(DtU1;OrF1t<br />
+<br />
+<span class="warning">N'UTILISEZ JAMAIS LE MÊME MOT DE PASSE pour le les bases de données SQl, FTP, e-mail, interface d'administration du site web, etc... Beaucoup de personnes font cette erreur, hors si le pirate trouve votre mot de passe, il tentera ce mot de passe sur votre serveur ftp, base de donnée, etc... et donc il aura encore plus d'accès...</span><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_pour-votre-mot-de-passe-d-administrateur-ou-moderateur">Pour votre mot de passe d'administrateur ou modérateur</h2><br />
+
+<br />
+Avec des droits qui peuvent être nuisibles en cas de piratage de comptes, il faut un mot de passe assez complexe, mais facile à retenir. Créez votre propre mot de passe et vous serez déjà un peu plus tranquille <img src="/images/smileys/wink.png" alt=";)" class="smiley" /> Pensez donc à indiquer aux personnes qui ont des responsabilités sur votre site de choisir un mot de passe le plus complexe possible. <br />
+Il est facile de faire des mots de passes complexes mais faciles à se souvenir. Prenez par exemple un mot, décomposez le et ajoutez des chiffres, majuscules et caractères spéciaux.<br />
+<br />
+ex : Prenons par exemple le mot password. On va le décomposer en pass et word. Pour compliquéer on met des majuscules : Pass Word. Ensuite on ajour des chiffres 1Pass2Word3 et enfin pour vraiment compliquer ajoutons des caractères spéciaux pour obtenir : 1,Pass2;Word3:&amp;<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-mots-de-passe-pour-les-utilisateurs">Les mots de passe pour les utilisateurs</h2><br />
+
+<br />
+Ils ne nécessitent pas le même soucis de complexité car les conséquences sont moindres, un minimum de 8 caractères est conseillé.<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_liste-non-exhaustive-de-quelques-utilitaires-pour-creer-vos-mots-de-passe">Liste non exhaustive de quelques utilitaires pour créer vos mots de passe :</h2><br />
+
+<br />
+<a href="http://www.generateurdemotdepasse.com/">http://www.generateurdemotdepasse.com/</a><br />
+<a href="http://www.freepasswordgenerator.com/">http://www.freepasswordgenerator.com/</a><br />
+<a href="http://www.pctools.com/guides/password/">http://www.pctools.com/guides/password/</a><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_register-globals-on-ou-off">Register_globals : on ou off?</h1><br />
+
+<br />
+Register_globals est une fonction PHP de votre serveur : elle définit si oui ou non les variables EGPCS (Environment, GET, POST, Cookie, Server) seront enregistrées comme des variables globales. Depuis PHP 4.2.0 , la valeur par défaut de cette directive est off.' (<a href="http://www.manuelphp.com/php/ini.register-globals.php">source manuelphp.com</a>) <br />
+<br />
+<strong>Il faut le mettre à Off</strong>, mais normalement il n'y a pas de problèmes si il est à On.<br />
+Si il est activé sur PHPBoost ça ne sera pas grave car toutes les variables sont initialisées et les variables générées par le register_globals sont supprimées.<br />
+<br />
+<span class="question">Si dans le panel d'administration de votre hébergeur vous ne pouvez pas modifier la configuration de register_global, il va falloir mettre dans le fichier .htaccess à la racine de votre site cette commande : <br />
+[[CODE=text]]php_flag register_globals off  [[/CODE]]</span><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mettez-vos-site-a-jour">Mettez vos site à jour</h1><br />
+
+<br />
+Un site à jour est la première et meilleure défense de votre site. Il est parfois étonnant de voir les webmasters réticents à mettre à jour leur site (peur de perdre ses données, trop dur, leur site est stable alors pourquoi changer? etc...).<br />
+<br />
+Il peut exister plusieurs types de mise à jour : <br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> Correction d'une faille de sécurité
+	</li><li class="formatter-li"> Correction d'un bug minime dans un logiciel
+	</li><li class="formatter-li"> Ajout de nouveautés dans un module
+	</li><li class="formatter-li"> etc<br />
+</li></ul><br />
+<br />
+Si il existe une mise à jour faille de sécurité, il faudra ABSOLUMENT réaliser cette mise à jour. <br />
+<br />
+Les mises à jours sont très simples à réaliser, lorsqu'il y en a une, la démarche à suivre est toujours mentionnée, pas d'inquiétude !<br />
+<br />
+<span class="warning">Gardez votre site constamment à jour</span><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_sauvegardez-regulierement-les-donnees-de-votre-site">Sauvegardez régulièrement les données de votre site</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_la-base-de-donnee">La base de donnée</h2><br />
+
+<br />
+Il est important de sauvegarder régulièrement sa base de données afin de ne pas perdre ses données en cas de plantage de serveur ou de piratage.<br />
+PHPBoost contient un module pour la sauvegarde et la restauration de la base de donnée.<br />
+<br />
+Consultez <a href="/wiki/base-de-donnees">cet article</a> pour en savoir plus.<br />
+<br />
+<span class="warning">Sauvegardez toujours votre base de donnée sur votre ordinateur.</span><br />
+<br />
+<span class="notice">Certains hébergeurs proposent de faire des sauvegardes de vos bases de données de manière périodique. Renseignez vous auprès de votre hébergeur.</span><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-donnees-du-ftp">Les données du FTP</h2><br />
+
+<br />
+Sauvegardez de temps en tempes les données de votre FTP. Voici ce qu'il faut sauvegarder : <br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> /images
+	</li><li class="formatter-li"> /gallery/pics (si le module gallery est installé)
+	</li><li class="formatter-li"> /templates (si vous avez un thème personnalisé)
+	</li><li class="formatter-li"> /stats/cache (si le module stats est installé)
+	</li><li class="formatter-li"> /upload
+	</li><li class="formatter-li"> ET tous les répertoires que vous aurez créés pour y mettre des fichiers.<br />
+</li></ul><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_administrateurs-et-moderateurs">Administrateurs et modérateurs</h1><br />
+
+<br />
+On ne donne pas des droits à n'importe qui et sans vraiment connaitre la personne. Bon nombre de webmasters recrutent rapidement du monde pour montrer que leur site est vivant, qu'il y a une équipe importante, etc... Mais tout le monde ne peut pas avoir accès à ces fonctions, car il existe des risques non négligeables. Citons les par exemple : <br />
+<ul class="formatter-ul">
+	<li class="formatter-li">Le modérateur à accès en général selon les autorisations données<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">a la modération de tout le forum donc peut effacer autant de messages qu'il le souhaite
+	</li><li class="formatter-li">à la modération des articles, news, liens webs, téléchargements à partir de la version 2.1 de PHPBoost<br />
+</li></ul>
+	</li><li class="formatter-li">L'administrateur<br />
+<ul class="formatter-ul">
+	<li class="formatter-li">il a accès à TOUT
+	</li><li class="formatter-li">Il a les droits sur tous les modules
+	</li><li class="formatter-li">il a accès au panel d'administration
+	</li><li class="formatter-li"> ainsi via le panel de gestion de la base de donnée il peut entièrement effacer tout le contenu du site<br />
+</li></ul><br />
+</li></ul><br />
+<br />
+Bref comme vous pouvez le constater, ces droits ne se donnent pas à la légère, car les risques pour votre site ne sont pas négligeables. <br />
+<br />
+<span class="warning">Ne donnez ces droits que si vous connaissez bien la personne et que vous avez une totale confiance en lui et que cette personne a vraiment besoin de ces droits. Donnez le minimum d'accès administrateur car c'est le rang le plus dangereux !</span><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_comment-donner-un-acces-ftp-a-une-personne">Comment donner un accès FTP à une personne ?</h1><br />
+
+<br />
+Il peut parfois être nécessaire de donner un accès FTP à un tiers pour différentes raisons. Mais donner l'accès au FTP à une personne mal intentionnée peut avoir de graves conséquences pour votre site. Il peut par exemple : <br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> insérer un code source malicieux
+	</li><li class="formatter-li"> effacer des fichiers ou tout le contenu de votre FTP
+	</li><li class="formatter-li"> S'approprier du fichier config.php, et ainsi accéder à votre base de donnée
+	</li><li class="formatter-li"> etc<br />
+</li></ul><br />
+<br />
+Mais alors vous allez me dire qu'il ne faut pas donner d'accès FTP ?<br />
+<br />
+Bien sur que oui que vous pouvez donner un accès FTP à quelqu'un, mais ne lui donnez pas l'accès à TOUT le FTP, réservez lui un accès un un répertoire par exemple. Pour créer un compte FTP à un membre et lui définir un espace bien particulier, il faudra vous rendre dans le panel d'administration de votre hébergeur.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mefiez-vous-des-connexions-automatiques">Méfiez vous des connexions automatiques...</h1><br />
+
+<br />
+<strong>Ces consignes s'adressent à tout le monde</strong> et surtout pour les administrateurs et les modérateurs chez qui leur connexion à leur site par un intrus peut engendrer de graves conséquences puisque la personne aura accès au panel d'administration et à la base de données. Cela doit être un réflexe chez tout le monde. Tout d'abord il y a 2 risques<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> Votre session reste ouverte et ainsi quelqu'un peut utiliser votre compte pour effectuer des manipulation pouvant être grave pour votre site
+	</li><li class="formatter-li"> Les navigateurs proposent d'enregistrer automatiquement vos mots de pass et ainsi vous avez déjà le pseudo et le mot de passe de mis dans les champs pour se connecter<br />
+</li></ul><br />
+<br />
+Si vous êtes sur votre ordinateur personnel et que vous êtes le seul utilisateur, les risques sont moindres.<br />
+<br />
+<span class="warning">Si vous êtes sur un ordinateur public, les risques sont beaucoup plus graves. Dans ce cas lorsque vous quittez l'ordinateur : <br />
+ <ul class="formatter-ul">
+	<li class="formatter-li"> <strong>Déconnectez vous de votre session en cours</strong>
+	</li><li class="formatter-li"> <strong>Allez dans les paramètres du navigateur et effacez les cookies, le cache, les mots de passe enregistré et les sessions d'identification.</strong><br />
+</li></ul></span><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_conclusion">Conclusion</h1><br />
+
+<br />
+Même si tout est étudié pour éviter toute faille de sécurité, PHPBoost est comme tout CMS non garanti à 100%.<br />
+Le plus souvent les problèmes rencontrés par les utilisateurs ne proviennent pas d'une faille de PHPboost mais d'eux même. <br />
+<br />
+<span class="warning">Il est important de respecter les consignes données ci-dessus pour sécuriser correctement votre site</span>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>88.125.157.163</user_ip>
+    <timestamp>1406671804</timestamp>
+  </article>
+</articles>

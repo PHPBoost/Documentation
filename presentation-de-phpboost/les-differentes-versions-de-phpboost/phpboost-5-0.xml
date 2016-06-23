@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>318</id>
+    <id_contents>1518</id_contents>
+    <title><![CDATA[PHPBoost 5.0]]></title>
+    <encoded_title><![CDATA[phpboost-5-0]]></encoded_title>
+    <hits>610</hits>
+    <id_cat>14</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>14</cat_id>
+    <cat_id_parent>1</cat_id_parent>
+    <cat_article_id>14</cat_article_id>
+    <con_id_contents>1518</con_id_contents>
+    <con_id_article>318</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<h3 class="formatter-title">PHPBoost 5.0 Changelog</h3><br />
+===================================== Noyau ======================================<br />
+<strong>Framework :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Suppression de l'ancienne classe SQL
+</li><li class="formatter-li"> Suppression de l'ancien système de Tpl
+</li><li class="formatter-li"> Suppression de l'ancien système de catégories
+</li><li class="formatter-li"> Suppression de l'ancien système de cache
+</li><li class="formatter-li"> Suppression de la classe UserDisplayResponse
+</li><li class="formatter-li"> Refonte de la balise Title HTML (création d'un format standardisé dans PHPBoost :
+</li><li class="formatter-li"> Titre de la page - Nom de la section ou du module - Nom du site
+</li><li class="formatter-li"> Titre de la page - Nom du site (dans le cas ou c'est une page sans module)
+</li><li class="formatter-li"> Nom du site - Description du site (pour la page d'accueil)
+</li><li class="formatter-li"> Suppression des mots clés du site qui ne sont plus utilisés pour le référencement
+</li><li class="formatter-li"> Les modules auxquels l'utilisateur n'a pas le droit de contribuer ne sont plus affichés dans le panneau de contribution
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Générateur automatique de tableaux avec gestion de la pagination, filtres, tris.
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Possibilité de mettre en place un site complètement en HTTPS
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté:</span> Message d'avertissement affiché aux administrateurs si les dossiers install ou update sont présent avec possibilité de les supprimer via un bouton (sauf pour une installation locale)
+</li><li class="formatter-li"> Nouveau système de session et de connexion :
+</li><li class="formatter-li"> Suppression du champ Pseudo, remplacé par Nom d'affichage
+</li><li class="formatter-li"> Connexion interne avec l'adresse email ou un login que l'on peut choisir
+</li><li class="formatter-li"> Connexion avec un compte Facebook et/ou Google paramétrable dans l'administration
+</li><li class="formatter-li"> Possibilité de gérer ses types de connexion dans le profil
+</li><li class="formatter-li"> Regroupement des fonctionnalités de l'édition du profil de l'admin dans l'édition d'un membre en front<br />
+</li></ul><br />
+<strong>Administration</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Passage de la configuration de la maintenance, des smileys et des fichiers en MVC (simplification de l'interface)
+</li><li class="formatter-li"> Refonte de la partie Rapport système avec ajout de différentes informations concernant les options APC et une partie avec des conseils
+</li><li class="formatter-li"> Conseils affichés sur la page d'accueil de l'administration
+</li><li class="formatter-li"> Possibilité de définir le contenu du fichier robots.txt dans la configuration avancée
+</li><li class="formatter-li"> Possibilité de configurer l'optimisation automatique des tables de la base de données dans la configuration avancée
+</li><li class="formatter-li"> Suppression de la clé de déverrouillage de l'administration
+</li><li class="formatter-li"> Possibilité de définir le nombre de flux affichés dans les menus de flux
+</li><li class="formatter-li"> Possibilité de masquer les menus en version mobile<br />
+</li></ul><br />
+<strong>Profil</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Lors de l'affichage du profil un champ texte court de type email ou site web est automatiquement affiché sous forme de bouton avec une icône pour certaines marques<br />
+</li></ul><br />
+<strong>Sécurité</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité de choisir la longueur minimale des mots de passe pour les comptes internes dans la configuration des membres
+</li><li class="formatter-li"> Possibilité de définir la complexité des mots de passe<br />
+</li></ul><br />
+<strong>Graphisme</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Refonte de l'affichage de la barre BBCode, amélioration de son ergonomie et suppression de la Pop-up "Tous les smileys"
+</li><li class="formatter-li"> Mise à jour de la librairie d'icônes Font-Awesome
+</li><li class="formatter-li"> Intégration de Lightcase (lightbox responsive)
+</li><li class="formatter-li"> Design responsive pour le thème base (support mobile et version tablette)
+</li><li class="formatter-li"> Refonte de la gestion des liens : suppression des types de menu de liens et création d'un menu de lien qui s'adapte automatiquement à l'emplacement
+</li><li class="formatter-li"> Refonte de l'administration en responsive<br />
+</li></ul><br />
+<strong>Divers</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Suppression du lecteur DewPlayer et utilisation de la balise audio HTML5
+</li><li class="formatter-li"> Suppression du module PHPBoostCaptcha du projet PHPBoost (il ne sera plus maintenu)<br />
+</li></ul><br />
+=================================== Modules =====================================<br />
+<strong>Articles</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité de désactiver la notation
+</li><li class="formatter-li"> Possibilité d'acéder aux condensés d'articles pour les visiteurs même si une catégorie est réservée aux membres
+</li><li class="formatter-li"> Affichage des sources lors de l'affichage des catégories d'articles<br />
+</li></ul><br />
+<strong>BBCode</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Possibilité de choisir la police d'écriture<br />
+</li></ul><br />
+<strong>Calendrier</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Tableau permettant de lister les événements avec possibilité de filtrer par date
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout d'une légende sous le calendrier quand il y a des événements<br />
+</li></ul><br />
+<strong>Discussion</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en MVC
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte de la partie mini module en ajax
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout d'une option pour afficher afficher ou non la date dans le mini module
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout d'une option pour envoyer un message lors de l'appui sur la touche entrée du mini module
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout d'une option pour afficher une mini barre BBCode (Smileys, gras, italique, souligné, barré) dans le mini module si le module BBCode est activé (activée par défaut)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de mettre un délai de rafraîchissement de la discussion inférieur à 1 minute (exemple : 0.5 pour 30 secondes)<br />
+</li></ul><br />
+<strong>FAQ</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en MVC
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Mise en place du nouveau système de catégories
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout des contributions
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nettoyage de la configuration
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte graphique
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout du module dans le plan du site
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de réorganiser les questions dans les catégories en drag & drop pour les utilisateurs ayant le droit de modération
+</li><li class="formatter-li"> Ajout des microdonnées pour améliorer le référencement<br />
+</li></ul><br />
+<strong>Forum</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Mise en place du nouveau système de catégories
+</li><li class="formatter-li"> Optimisation de la configuration
+</li><li class="formatter-li"> Affichage automatique des champs du profil de type email ou site web dans les informations de l'utilisateur dans les topics
+</li><li class="formatter-li"> Possibilité de cacher le détail des messages des topics aux visiteurs tout en leur laissant accès à la liste des topics
+</li><li class="formatter-li"> Possibilité d'empêcher le double post (le nouveau message d'un utilisateur est ajouté au dernier s'il est le dernier à avoir posté dans le topic)<br />
+</li></ul><br />
+<strong>Galerie</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Mise en place du nouveau système de catégories<br />
+</li></ul><br />
+<strong>Installation</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Activation automatique du cache APCu si celui-ci est disponible sur le serveur<br />
+</li></ul><br />
+<strong>Liens Web</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en MVC
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Mise en place du nouveau système de catégories
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout des contributions
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'ajouter des mots clés
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte des formulaires (plus intuitifs)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nettoyage de la configuration
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte graphique
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout du module dans le plan du site
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout des flux RSS
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout de la recherche
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de signaler les liens morts
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de définir des sites partenaires
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Menu pour afficher la liste des partenaires (possibilité de les classer par note, nombre de visites, nombre de commentaires depuis la configuration)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'activer/désactiver les commentaires et la notation globalement
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de choisir la date de parution des liens
+</li><li class="formatter-li"> Possibilité d'acéder aux descriptions pour les visiteurs même si une catégorie est réservée aux membres
+</li><li class="formatter-li"> Ajout des microdonnées pour améliorer le référencement<br />
+</li></ul><br />
+<strong>Multimédia</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Mise en place du nouveau système de catégories
+</li><li class="formatter-li"> Optimisation de la configuration<br />
+</li></ul><br />
+<strong>News</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Affichage des sources lors de l'affichage des catégories de news
+</li><li class="formatter-li"> Possibilité d'acéder aux condensés de news pour les visiteurs même si une catégorie est réservée aux membres
+</li><li class="formatter-li"> Possibilité de récupérer la date de création d'une news avec le jour, le mois et l'année séparés dans le template pour plus de personnalisation<br />
+</li></ul><br />
+<strong>Newsletter</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Ajout de la possibilité de supprimer une archive<br />
+</li></ul><br />
+<strong>Personnalisation</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de personnaliser les fichiers css des modules
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de personnaliser les fichiers templates du thème (body.tpl et frame.tpl) et ceux des modules<br />
+</li></ul><br />
+<strong>ReCaptcha</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Ajout d'une page de configuration pour entrer les identifiants permettant de mettre en place ReCaptcha v2<br />
+</li></ul><br />
+<strong>Téléchargements</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en MVC
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Mise en place du nouveau système de catégories
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'ajouter des mots clés
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte des formulaires (plus intuitifs)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nettoyage de la configuration
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte graphique
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Calcul automatique de la taille des fichiers
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Menu pour afficher la liste des fichiers les plus téléchargés (possibilité de les classer par note, nombre de téléchargements, date d'ajout depuis la configuration)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'activer/désactiver les commentaires, la notation et l'affichage de l'auteur globalement
+</li><li class="formatter-li"> Possibilité d'acéder aux descriptions des fichiers pour les visiteurs même si une catégorie est réservée aux membres
+</li><li class="formatter-li"> Ajout des microdonnées pour améliorer le référencement<br />
+</li></ul><br />
+<strong>TinyMCE</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Mise à jour du module (TinyMCE version 4.3.2)<br />
+</li></ul><br />
+<strong>Script de migration</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Vérification automatique de la présence de la nouvelle version par le noyau, et redirection vers le script d'update<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>193.164.156.12</user_ip>
+    <timestamp>1452178969</timestamp>
+  </article>
+</articles>

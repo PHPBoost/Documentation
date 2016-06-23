@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>248</id>
+    <id_contents>1198</id_contents>
+    <title><![CDATA[Personnalisation des modules ou de framework]]></title>
+    <encoded_title><![CDATA[personnalisation-des-modules-ou-de-framework]]></encoded_title>
+    <hits>1642</hits>
+    <id_cat>59</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>59</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>211</cat_article_id>
+    <con_id_contents>1198</con_id_contents>
+    <con_id_article>248</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_comment-ca-marche">Comment ça marche ?</a></li><li><a href="#paragraph_que-peut-on-modifier">Que peut-on modifier ?</a></li><li><a href="#paragraph_les-templates">Les templates</a><ol class="wiki_list_2"><li><a href="#paragraph_les-modules">Les modules</a></li><li><a href="#paragraph_le-framework">Le framework</a></li><li><a href="#paragraph_l-administration">L'administration</a></li></ol></li><li><a href="#paragraph_les-css">Les CSS</a></li></ol>]]></menu>
+    <content><![CDATA[Nous verrons ici comment modifier les templates et CSS d'un module, du panneau d'administration ou du framework sur un thème en particulier.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_comment-ca-marche">Comment ça marche ?</h1><br />
+
+<br />
+Lors de l'affichage d'une page, le framework de PHPBoost teste dans un premier temps la présence des fichiers <em>.tpl</em> et <em>.css</em> nécessaires, dans le dossier du thème actuel.<br />
+Si ces fichiers ne sont pas présents, il va ensuite les chercher dans leurs dossiers d'origine.<br />
+Ainsi, <span style="text-decoration: underline;">tout fichier</span> copié dans le dossier de votre thème sera utilisé <span style="text-decoration: underline;">à la place</span> du fichier d'origine.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_que-peut-on-modifier">Que peut-on modifier ?</h1><br />
+
+<br />
+Avec cette méthode, il est possible de modifier absolument tous les templates.<br />
+Cela comprend donc :<br />
+<ul class="formatter-ul">
+	<li class="formatter-li"> Les modules
+	</li><li class="formatter-li"> Le framework
+	</li><li class="formatter-li"> L'administration<br />
+</li></ul><br />
+<br />
+C'est ce que nous détaillerons dans la suite de cet article.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-templates">Les templates</h1><br />
+
+<br />
+L'arborescence est la seule contrainte à respecter. Ne vous inquiétez pas, elle est très simple.<br />
+Elle diffère légèrement selon le type de templates à modifier :<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_les-modules">Les modules</h2><br />
+
+<br />
+Les fichiers relatifs aux modules se trouvent à la racine de PHPBoost, dans le dossier <em>nomdumodule/templates</em>.<br />
+Si vous souhaitez modifier un template de module, il faut à la racine de votre thème créer un dossier appelé 'modules' s'il n'existe pas encore.<br />
+Dans le dossier précédemment créé, il suffit de créer un nouveau dossier portant le nom du module dont vous souhaitez modifier les templates.<br />
+Ce qui nous donne par exemple : <em>monthème/modules/forum/</em><br />
+<br />
+Dans ce nouveau dossier,il suffit de copier les fichiers TPL que vous avez besoin.<br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-framework">Le framework</h2><br />
+
+<br />
+Le framework est en fait le noyau de PHPBoost autour duquel les modules sont rattachés. Ainsi, il y a de nombreuses fonctionnalités qui font partie du framework, telles que les menus, les commentaires etc.<br />
+<br />
+Les templates du framework se trouvent dans le dossier <em>templates/default/framework</em>.<br />
+Pour personnaliser un de ces éléments, il faut au préalable créer un dossier nommé <em>framework</em> dans le dossier de votre thème.<br />
+<br />
+Il suffit ensuite de copier les éléments souhaités dans ce nouveau dossier, en respectant l'arborescence d'origine.<br />
+Par exemple : <em>templates/mon_theme/framework/menus/feed/feed.tpl</em><br />
+<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_l-administration">L'administration</h2><br />
+
+<br />
+Le panneau d'administration est aussi géré par le même système. Ainsi, il est tout à fait possible de redessiner complètement l'architecture de cette partie du site.<br />
+<br />
+Les templates de l'administration se trouvent dans le dossier <em>templates/default/admin</em>.<br />
+Pour personnaliser un de ces éléments, il faut au préalable créer un dossier nommé <em>admin</em> dans le dossier de votre thème.<br />
+<br />
+Il suffit ensuite de copier les éléments souhaités dans ce nouveau dossier, en respectant l'arborescence d'origine.<br />
+Par exemple : <em>templates/mon_theme/admin/updates/detail.tpl</em><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-css">Les CSS</h1><br />
+
+<br />
+Nous avons vu jusqu'à présent qu'il était possible de modifier les fichiers TPL en les mettant dans les dossiers de votre thème.<br />
+Mais vous pouvez également modifier les fichiers CSS se trouvant dans les modules.<br />
+<br />
+Les fichiers de styles des modules sont positionnés dans le dossier <em>nomdumodule/templates</em>.<br />
+Il suffit ensuite de faire un copier/coller du fichier CSS afin d'en faire une copie dans le dossier <em>monthème/modules/nomdumodule/</em>.<br />
+<br />
+Il est alors possible de modifier tous les styles de vos modules, afin qu'aucun élément ne fasse 'dépareillé'.<br />
+<br />
+<span class="warning">NB : Dans certains modules, les images sont appelées par le CSS, comme le module 'forum'. Si vous choisissez de modifier le CSS du module, le chemin indiqué dans le fichier de style ne sera plus bon. Il faudra alors copier l'intégralité du dossier <em>images</em> contenu dans le module ou redéfinir chaque URL du CSS.</span>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>88.125.157.163</user_ip>
+    <timestamp>1404743990</timestamp>
+  </article>
+</articles>

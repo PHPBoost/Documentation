@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>225</id>
+    <id_contents>1561</id_contents>
+    <title><![CDATA[Fichier design.css]]></title>
+    <encoded_title><![CDATA[fichier-design-css]]></encoded_title>
+    <hits>3852</hits>
+    <id_cat>63</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>63</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>215</cat_article_id>
+    <con_id_contents>1561</con_id_contents>
+    <con_id_article>225</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_fixe-ou-extensible">Fixe ou extensible ?</a></li><li><a href="#paragraph_les-elements-generiques">Les éléments génériques </a></li><li><a href="#paragraph_l-en-tete-et-le-sous-en-tete">L'en-tête et le sous en-tête</a></li><li><a href="#paragraph_conteneurs">Conteneurs</a></li><li><a href="#paragraph_le-contenu-de-la-page">Le contenu de la page</a></li><li><a href="#paragraph_le-pied-de-page">Le pied de page</a></li><li><a href="#paragraph_les-elements-specifiques">Les éléments spécifiques</a><ol class="wiki_list_2"><li><a href="#paragraph_le-compteur-de-visite">Le compteur de visite</a></li><li><a href="#paragraph_barre-de-lien-rapide">Barre de lien rapide</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Le fichier <em>design.css</em> définit en fait l'aspect général de votre thème. On y trouve les éléments importants comme la largeur de votre site, la couleur d'arrière plan, et l'organisation des zones tels que l'en-tête, le menu de gauche ou le pied de page. <br />
+<br />
+Commençons par le commencement :<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_fixe-ou-extensible">Fixe ou extensible ?</h1><br />
+
+<br />
+Le thème peut être fixe, ou extensible.<br />
+<br />
+<h4 class="formatter-title">Mais qu'est ce que cela veut dire ?</h4> <br />
+<br />
+C'est simplement la taille que va prendre votre site, un thème fixe a une taille défini cela veut dire qu'en fonction de la taille de la fenêtre du visiteur ou de sa résolution, le site ne s'y adaptera pas. Un thème extensible en revanche s'adapte a la résolution d'écran et la taille de la fenêtre du navigateur, donc il va s'étirer.<br />
+<br />
+<h4 class="formatter-title">La partie concernée :</h4><br />
+<br />
+[[CODE=css]]/* Conteneurs 
+--------------------------------------*/
+/* ##### Conteneur global du site ###### */
+div#global {
+width: 980px;
+margin: 18px auto 0px auto;
+padding-bottom: 42px; /* Taille du footer */
+}[[/CODE]]<br />
+Le thème base est fixe mais cela peut vite se modifier en changeant simplement la taille ( width/largeur )<br />
+<br />
+Il vous suffira donc de faire ça comme ceci :<br />
+<br />
+[[CODE=css]]/* Conteneurs 
+--------------------------------------*/
+/* ##### Conteneur global du site ###### */
+div#global {
+    width:auto;
+    margin:auto;
+    padding-bottom: 42px; /* Taille du footer */
+}[[/CODE]]<br />
+Vous constaterez aussi le padding-bottom qui correspond à la taille du footer. Sans cette astuce, le footer ne reste pas en bas de page lorsque le contenu est petit (vide en fait).<br />
+<br />
+<h4 class="formatter-title">L'arrière plan, la couleur, taille de la police :</h4><br />
+[[CODE=css]]body {
+position: relative;
+min-height: 100%;
+height: auto;
+background: #E8EDF3 url(images/body.png) repeat-x;
+color: #555555;
+font-size: 13px;
+font-family: "Trebuchet MS", Verdana, 'Bitstream Vera Sans', Times, serif;
+}[[/CODE]]<br />
+Le body est le premier élément du site. Tous les éléments ont donc une répercutions sur les classes suivantes.<br />
+La taille du texte ainsi que la police doivent être définit ici pour éviter les déclarations multiples.<br />
+<br />
+Pour changer l'arrière plan ( background ) il vous suffira simplement de changer l'image global ainsi que la valeur de son code couleur :[[CODE=css]]background:#E9ECEF url(images/global.png)  repeat-x;[[/CODE]]repeat-x veut dire que l'on va répéter l'image tout le long (à l'horizontal).<br />
+Pour répéter une image verticalement il vous suffira de mettre :[[CODE=css]]repeat-y[[/CODE]]<br />
+<br />
+Et pour que l'image ne soit pas répétée mettre : [[CODE=css]]no-repeat[[/CODE]]<br />
+<br />
+Bien sûr il existe encore de grandes possibilités à ce niveau.<br />
+<br />
+Pour la police, c'est toujours quelque chose de très simple [[CODE=css]]color:#0E2A48;[[/CODE]]<br />
+<br />
+Il vous suffira de changer le code couleur, pour la taille c'est à ce niveau que ça ce passe : [[CODE=css]]font-size:12px;[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-elements-generiques">Les éléments génériques </h1><br />
+
+[[CODE=css]]html {
+    font-size: 100%;
+    font-size: 10px;
+}
+body {
+    position: relative;
+    height: auto;
+    min-height: 100%;
+    background-color: #E8EDF3;
+    color: #555555;
+    font-size: 1.3em;
+    font-family: "Trebuchet MS", Verdana, 'Bitstream Vera Sans', Times, serif;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 1.4em;
+    }
+}[[/CODE]]<br />
+L’élément HTML englobe tout votre site. L'élément BODY va englober toute la partie visible. On retrouve déja dans ces quelques lignes le système de media-queries qui nous permet de gérer l'affichage en fonction de la taille de l'écran (ordinateur, tablette, smartphone).<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_l-en-tete-et-le-sous-en-tete">L'en-tête et le sous en-tête</h1><br />
+
+[[CODE=css]]header#header {
+    background-color: #366393;
+}
+/* --- Partie superieure du header --- */
+div#top-header {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: row;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    margin: auto;
+    min-height: 139px;
+    max-width: 1024px;
+}
+div#top-header-content {
+    flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    -webkit-flex: 1 1 auto;
+}
+@media (max-width: 768px) {
+    div#top-header {
+        flex-direction: column;
+        -ms-flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+    
+    div#top-header-content {
+        align-self: flex-end;
+        -ms-align-self: flex-end;
+        -webkit-align-self: flex-end;
+    }
+}
+/* --- Partie inferieur du header --- */
+div#sub-header {
+    min-height: 35px;
+    background-color: #353535;
+    border-top: 1px solid #8B9193;
+}
+div#sub-header-content{
+    margin: auto;
+    max-width: 1024px;
+}
+/* --- Logo et Nom du site web --- */
+div#site-infos {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    margin: 1.5em 0 0 1.5em;
+    max-width: 940px;
+    flex: 1 1 auto;
+}
+div#site-logo {
+    margin: 0 1em 0 0;
+    width: 60px;
+    height: 60px;
+    background-image: url('images/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
+}
+div#site-name-container {
+    margin: 0.4em 0 0 0;
+}
+a#site-name {
+    color: #F9FCFF;
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1em;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+    text-shadow: 0 0 0 rgb(0, 0, 0), 1px 0 0 rgb(0, 0, 0), 2px 0 0.1px rgba(0, 0, 0, 0.1), 2px 0 0.1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, .1);
+}
+span#site-slogan {
+    display: block;
+    padding: 0.1em 0 0 0.1em;
+    color: #FFFFFF;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+}
+@media (min-width: 769px) {
+    div#site-logo {
+        width: 90px;
+        height: 90px;
+    }
+    div#site-name-container {
+        margin: 1em 0 0 0;
+    }
+    a#site-name {
+        font-size: 4em;
+    }
+    
+}[[/CODE]]<br />
+Les classes ci-dessous permettent de définir le header et le sub-header du site ainsi que la position du logo et du nom du site.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_conteneurs">Conteneurs</h1><br />
+
+[[CODE=css]]div#global {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    margin: 1.5em auto 0 auto;
+    padding: 0 10px;
+    max-width: 1024px;
+}
+div#main {
+    padding: 0 0 10px 0;
+    max-width: 100%;
+    order : 1;
+    -ms-flex-order: 1;
+    -webkit-flex-order: 1;
+}
+aside#menu-left,
+aside#menu-right {
+    width: 100%;
+}
+aside#menu-left  {
+    order : 2;
+    -ms-flex-order: 2;
+    -webkit-flex-order: 2;
+}
+aside#menu-right {
+    order : 3;
+    -ms-flex-order: 3;
+    -webkit-flex-order: 3;
+}
+@media (min-width: 769px) {
+    div#global {
+        min-height: 100vh;
+        flex-direction: row;
+        -ms-flex-direction: row;
+        -webkit-flex-direction: row;
+    }
+    div#main {
+        padding: 0 10px;
+        order : 2;
+        -ms-flex-order: 2;
+        -webkit-flex-order: 2;
+        flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+    }
+    aside#menu-left,
+    aside#menu-right {
+        width: 200px;
+    }
+    aside#menu-left  { 
+        order : 1;
+        -ms-flex-order: 1;
+        -webkit-flex-order: 1;
+    }
+    aside#menu-right { 
+        order : 3;
+        -ms-flex-order: 3;
+        -webkit-flex-order: 3;
+    }
+    
+    .main-with-left,
+    .main-with-right {
+        width: calc(100% - 200px);
+    }
+    
+    .main-with-left.main-with-right {
+        width: calc(100% - 400px);
+    }
+}
+div#top-footer {
+    padding: 2% 0;
+}[[/CODE]]<br />
+En dessous du header, on retrouve le corps de la page avec le conteneur principal "main" qui sera entourée de colonne "left" et "right".<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-contenu-de-la-page">Le contenu de la page</h1><br />
+
+[[CODE=css]]div#main-content {
+    padding: 1.5em 0.8em;
+    border: 1px #BEBEBE solid;
+    background-color: #FFFFFF;
+}
+div.block-container {
+    margin-top: 15px;
+}
+/* --- Emplacement au dessus et en dessous du contenu de la page --- */
+div#top-content {
+    margin: 0 0 2% 0;
+    padding: 0.1em 0.8em;
+    background-color: #FFFFFF;
+    border: 1px solid #BEBEBE;
+}
+/* --- Emplacement au dessus du pied de page --- */
+div#bottom-content {
+    margin: 2% 0 0 0;
+    padding: 0.1em 0.8em;
+    background-color: #FFFFFF;
+    border: 1px solid #BEBEBE;
+}[[/CODE]]<br />
+Le contenu de la page est aussi intégré un élément #main-content. On retrouve en plus un élément au dessus #top-content, et un élément en dessous #bottom-content. Tous ces éléments peuvent intégré des modules via l'administration.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-pied-de-page">Le pied de page</h1><br />
+
+[[CODE=css]]footer#footer {
+    width: 100%;
+    background-color: #212121;
+    border-top: #336397 2px solid;
+    clear: both;
+}
+
+footer#footer .footer-content {
+    margin: 0 auto 0 auto;
+    padding: 1.5em 0;
+    max-width: 1024px;
+    border-bottom: 2px groove #444444;
+}
+
+footer#footer .footer-infos {
+    padding-top: 10px;
+    min-height: 40px;
+    text-align: center;
+}
+
+footer#footer .footer-infos span {
+    color: #FFFFFF;
+    font-size: 0.8em;
+}[[/CODE]]<br />
+Le bas du site est géré par les classe footer. La zone supérieur ".footer-content" est personnalisable avec des modules alors que la zone inférieure ".footer-infos" est reversé aux informations du site tel que le nom du thème, ou le copyright.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-elements-specifiques">Les éléments spécifiques</h1><br />
+
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-compteur-de-visite">Le compteur de visite</h2><br />
+
+[[CODE=css]]div#compteur {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    font-size: 0.9em;
+    color: #E9ECD9;
+    text-align: right;
+}
+
+@media (min-width: 769px) {
+    div#compteur {
+        top: 100px;
+    }
+}[[/CODE]]<br />
+<div class="indent"><ul class="formatter-ul">
+<li class="formatter-li"><strong>Color</strong> définit la couleur de la police,
+</li><li class="formatter-li"><strong>font-size</strong> la taille,
+</li><li class="formatter-li"><strong>text-align</strong> l'alignement du texte ( <strong><em>center</em></strong> pour centrer, <strong><em>left</em></strong> pour aligner à gauche et <strong><em>right</em></strong> pour aligner à droite ).<br />
+</li></ul></div><br />
+<br />
+Pour définir l'espace entre le site et le compteur ont fait toujours appelle au <strong>margin</strong>, ici on choisit un <strong>margin-right:<span style="color:red;">15px</span></strong>, se qui veut dire qu'on aura un décalement de <em>15 pixels par la gauche</em>.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_barre-de-lien-rapide">Barre de lien rapide</h2><br />
+
+[[CODE=css]]nav#breadcrumb {
+    margin: 0 0 20px 10px;
+    text-indent: 10px;
+}
+
+nav#breadcrumb ol {
+    margin: 0;
+    list-style: none;
+}
+
+nav#breadcrumb ol li {
+    display: inline;
+}
+
+nav#breadcrumb ol li:not(.current):after {
+    content: '/';
+    color: #616161;
+}[[/CODE]]<br />
+Afin de toujours savoir ou nous sommes et pouvoir revenir en arrière une navigation rapide est présente sur l'ensemble du site. Elle est facilement personnalisabile avec la classe unique "#breadcrumb".]]></content>
+    <activ>1</activ>
+    <user_id>1760</user_id>
+    <user_ip>90.107.101.82</user_ip>
+    <timestamp>1457113427</timestamp>
+  </article>
+</articles>

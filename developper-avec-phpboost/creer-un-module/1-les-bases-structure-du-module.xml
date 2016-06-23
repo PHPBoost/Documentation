@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>317</id>
+    <id_contents>1513</id_contents>
+    <title><![CDATA[1. Les bases : structure du module]]></title>
+    <encoded_title><![CDATA[1-les-bases-structure-du-module]]></encoded_title>
+    <hits>733</hits>
+    <id_cat>7</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>7</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>7</cat_article_id>
+    <con_id_contents>1513</con_id_contents>
+    <con_id_article>317</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_cr-ation-du-dossier-du-module">Création du dossier du module</a></li><li><a href="#paragraph_mise-en-place-des-sous-dossiers">Mise en place des sous-dossiers</a></li><li><a href="#paragraph_cr-ation-du-fichier-de-configuration-config-ini">Création du fichier de configuration : config.ini</a></li><li><a href="#paragraph_copyright">Copyright</a></li><li><a href="#paragraph_mise-en-place-des-langues-du-module">Mise en place des langues du module</a><ol class="wiki_list_2"><li><a href="#paragraph_cr-ation-du-fichier-de-description-du-module-desc-ini">Création du fichier de description du module : desc.ini</a></li><li><a href="#paragraph_cr-ation-du-fichier-de-langue-du-module-common-php">Création du fichier de langue du module : common.php</a></li></ol></li><li><a href="#paragraph_mise-en-place-du-g-n-rateur-d-urls">Mise en place du Générateur d'urls</a></li><li><a href="#paragraph_mise-en-place-de-la-page-d-index-du-module">Mise en place de la page d'index du module</a></li><li><a href="#paragraph_les-images-du-module">Les images du module</a></li></ol>]]></menu>
+    <content><![CDATA[Nous allons voir les bases de la création d'un module à travers cet article.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_cr-ation-du-dossier-du-module">Création du dossier du module</h1><br />
+
+<br />
+Dans un premier temps, il va falloir <strong>créer un dossier à la racine de PHPBoost</strong> contenant tous les fichiers du module.<br />
+<strong>Le choix du nom du dossier est important</strong> puisqu'il sera l'identifiant du module mais sera également présent dans les différentes urls.<br />
+<br />
+Il est préférable de choisir un nom anglais pour rester cohérent avec le reste de PHPBoost.<br />
+<br />
+Par exemple pour un module dictionnaire, il conviendrait parfaitement de choisir dictionary.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-place-des-sous-dossiers">Mise en place des sous-dossiers</h1><br />
+
+<br />
+Plusieurs dossiers sont à créer dans le dossier de votre module :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <strong>controllers</strong> : contiendra tous les contrôleurs permettant d'afficher vos différentes pages.
+</li><li class="formatter-li"> <strong>lang</strong> : contiendra les dossiers de langue de votre module.
+</li><li class="formatter-li"> <strong>phpboost</strong> : contiendra le gestionnaire d'extensions et les différentes extensions qui permettent l'interaction entre modules.
+</li><li class="formatter-li"> <strong>services</strong> : contiendra les services liés à vos objets, les différentes actions vers la base de données et la définition des autorisations du module.
+</li><li class="formatter-li"> <strong>templates</strong> : contiendra tous les templates de vos différentes pages.
+</li><li class="formatter-li"> <strong>util</strong> : contiendra les fonctions utiles du module, comme le générateur d'urls et la définition des liens du menu du module dans l'administration.<br />
+</li></ul><br />
+<h1 class="wiki_paragraph1" id="paragraph_cr-ation-du-fichier-de-configuration-config-ini">Création du fichier de configuration : config.ini</h1><br />
+
+<br />
+Le fichier <strong>config.ini</strong> contient toutes les informations relatives au module, à l'exception de son nom et de sa description, qui seront placés dans les dossiers de langue.<br />
+Il faut créer ce fichier <strong>à la racine du module</strong>.<br />
+<br />
+Celui-ci doit contenir au minimum les informations suivantes :<br />
+<br />
+[[CODE=ini]]author="Auteur du module"
+author_mail="Adresse email de l'auteur"
+author_website="Lien vers la page de l'auteur"
+version="Version du module"
+date="Date de création sous forme : JJ/MM/AA"
+compatibility="Version minimum de PHPBoost compatible avec le module. Exemple : 4.1"
+admin_main_page="Chemin vers la page d'administration principale du module"
+admin_menu="Choix de l'endroit où le menu doit apparaître dans l'administration. Vous avez le choix entre : index|administration|tools|members|content|modules"
+home_page="Chemin vers la page principale du module"[[/CODE]]<br />
+<br />
+D'autres choix sont disponibles : <br />
+<br />
+[[CODE=ini]]php_version="Version de PHP minimum pour exécuter le module. Exemple : 5.5"
+repository="Lien vers le fichier XML de mise à jour s'il y en a un"
+contribution_interface="Chemin vers la page de contribution du module"[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_copyright">Copyright</h1><br />
+
+<br />
+Insérez un copyright dans toutes les pages php de votre module. Celui-ci doit être de la forme suivante (remplacez les différentes valeurs par ce qui convient dans l'entête) :<br />
+[[CODE=php]]
+/*##################################################
+ *                           PageName.class.php
+ *                            -------------------
+ *   begin                : [Date]
+ *   copyright            : (C) [Year] [Author]
+ *   email                : [author mail]
+ *
+ *
+ ###################################################
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ *
+ ###################################################*/
+[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-place-des-langues-du-module">Mise en place des langues du module</h1><br />
+
+<br />
+Dans le dossier <strong>lang</strong>, créez un premier sous-dossier : <strong>french</strong>. Nous allons y créer deux fichiers : le fichier contenant la description du module et le fichier de langue utilisé pour le module.<br />
+<br />
+Les étapes suivantes peuvent être reproduites pour ajouter la langue anglaise (avec la création d'un dossier <strong>english</strong>) ou tout autre langue.<br />
+<h2 class="wiki_paragraph2" id="paragraph_cr-ation-du-fichier-de-description-du-module-desc-ini">Création du fichier de description du module : desc.ini</h2><br />
+
+<br />
+Créez le fichier <em>desc.ini</em> dans le dossier <strong>french</strong>.<br />
+<br />
+Celui-ci doit contenir (dans la langue concernée, français dans cet exemple) :<br />
+<br />
+[[CODE=ini]]name="Le nom de votre module"
+desc="La description de votre module"[[/CODE]]<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_cr-ation-du-fichier-de-langue-du-module-common-php">Création du fichier de langue du module : common.php</h2><br />
+
+<br />
+Nous allons mettre en place le fichier <em>common.php</em> qui sera utilisé dans les chapitres suivant. Commencez par y indiquer le nom de votre module (en remplaçant <em>ModuleName</em> par le nom de votre module) comme suit :<br />
+<br />
+[[CODE=php]]
+&lt;?php
+//Insérer le copyright ici
+
+ ####################################################
+ #						French				  #
+ ####################################################
+
+$lang['module_title'] = 'ModuleName';
+?&gt;
+[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-place-du-g-n-rateur-d-urls">Mise en place du Générateur d'urls</h1><br />
+
+<br />
+Le générateur d'urls est utilisé pour éviter de réécrire à chaque fois chaque url. Il suffira d'appeler une de ses méthodes lorsqu'il est nécessaire de renvoyer vers une url ou d'afficher une url.<br />
+<br />
+Créez le fichier <em>ModuleNameUrlBuilder.class.php</em> dans le dossier <strong>util</strong> de votre module.<br />
+Nous allons y placer deux méthodes pour le moment : <em>configuration()</em> qui permettra de générer le lien vers l'administration du module et <em>home()</em> qui permettra de générer le lien vers la page d'accueil du module :<br />
+[[CODE=php]]
+&lt;?php
+//Insérer le copyright ici
+
+class ModuleNameUrlBuilder
+{
+	private static $dispatcher = '/ModuleName';
+	
+	/**
+	 * @return Url
+	 */
+	public static function configuration()
+	{
+		return DispatchManager::get_url(self::$dispatcher, '/admin/config');
+	}
+	
+	/**
+	 * @return Url
+	 */
+	public static function home($param = '')
+	{
+		return DispatchManager::get_url(self::$dispatcher, '/' . $param);
+	}
+}
+?&gt;
+[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mise-en-place-de-la-page-d-index-du-module">Mise en place de la page d'index du module</h1><br />
+
+<br />
+La page <em>index.php</em> permet de diriger l'affichage vers tel ou tel contrôleur en fonction de l'url appelée. Nous allons ici créer un premier lien vers le contrôleur d'administration du module si l'url de configuration est appelée. Pour mettre en place d'autres liens, il suffit d'ajouter d'autres <em>UrlControllerMapper()</em> dans le tableau. Il est préférable d'avoir des connaissances en regex pour définir au mieux les urls.<br />
+[[CODE=php]]
+&lt;?php
+//Insérer le copyright ici
+
+define('PATH_TO_ROOT', '..');
+
+require_once PATH_TO_ROOT . '/kernel/init.php';
+
+$url_controller_mappers = array(
+	//Admin
+	new UrlControllerMapper('AdminCalendarConfigController', '`^/admin(?:/config)?/?$`'),
+);
+DispatchManager::dispatch($url_controller_mappers);
+?&gt;
+[[/CODE]]<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-images-du-module">Les images du module</h1><br />
+
+<br />
+Deux images doivent être placées à la racine de votre module : <br />
+<br />
+[list]<br />
+[*] <strong>ModuleName_mini.png</strong> qui doit être une image de 16 pixels de large et de long.<br />
+[*] <strong>ModuleName.png</strong> qui doit être une image de 32 pixels de large et de long.<br />
+<br />
+ModuleName étant le nom du dossier principal de votre module.<br />
+<br />
+<span class="success">A ce stade là, votre module sera visible sur la page d'ajout d'un module dans l'administration.</span>]]></content>
+    <activ>1</activ>
+    <user_id>982</user_id>
+    <user_ip>86.195.29.90</user_ip>
+    <timestamp>1450520049</timestamp>
+  </article>
+</articles>

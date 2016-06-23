@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>134</id>
+    <id_contents>1654</id_contents>
+    <title><![CDATA[Gestion des utilisateurs]]></title>
+    <encoded_title><![CDATA[gestion-des-utilisateurs]]></encoded_title>
+    <hits>2163</hits>
+    <id_cat>17</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>17</cat_id>
+    <cat_id_parent>10</cat_id_parent>
+    <cat_article_id>17</cat_article_id>
+    <con_id_contents>1654</con_id_contents>
+    <con_id_article>134</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_gestion-des-membres">Gestion des membres</a></li><li><a href="#paragraph_ajouter-un-membre">Ajouter un membre</a></li><li><a href="#paragraph_configuration-des-membres">Configuration des membres</a><ol class="wiki_list_2"><li><a href="#paragraph_configuration-des-membres">Configuration des membres</a></li><li><a href="#paragraph_securite">Sécurité</a></li><li><a href="#paragraph_configuration-des-moyens-d-authentification">Configuration des moyens d'authentification</a></li><li><a href="#paragraph_gestion-des-avatars">Gestion des avatars</a></li><li><a href="#paragraph_gestion-des-autorisations">Gestion des autorisations</a></li><li><a href="#paragraph_message-a-tous-les-membres">Message à tous les membres</a></li><li><a href="#paragraph_reglement-d-inscription">Règlement d'inscription</a></li></ol></li><li><a href="#paragraph_gestion-des-sanctions">Gestion des sanctions</a><ol class="wiki_list_2"><li><a href="#paragraph_gestion-des-avertissements">Gestion des avertissements</a></li><li><a href="#paragraph_gestion-des-sanctions">Gestion des sanctions</a></li><li><a href="#paragraph_gestion-des-bannissements">Gestion des bannissements</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[PHPBoost propose un système de complet de gestion des membres. Ce système repose sur :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> La gestion globale des membres
+</li><li class="formatter-li"> L'ajout manuel de membres
+</li><li class="formatter-li"> La configurations des membres
+        </li><li class="formatter-li"> La gestion des sanctions<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-membres">Gestion des membres</h1><br />
+
+Le panneau d'accueil de la gestion des membres se présente en deux parties:<br />
+<br />
+ La première vous permet de recherche un membre si vous connaissez son pseudo<br />
+<br />
+ La seconde vous propose un tableau récapitulatif des membres inscrits sur votre site. Vous pouvez gérer l'affichage de ce tableau à l'air des flèches (haut et bas) présente en tête de chacune des colonnes qui le composent. <br />
+<br />
+Le tableau est organisé en plusieurs colonnes telles que: <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Edition / Suppression
+</li><li class="formatter-li"> Pseudo
+</li><li class="formatter-li"> Rangs
+</li><li class="formatter-li"> Mail
+</li><li class="formatter-li"> Date d'enregistrement
+</li><li class="formatter-li"> Date de dernière connexion
+</li><li class="formatter-li"> Approbation<br />
+</li></ul><br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/members_managment.png" alt="" /></p><br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-un-membre">Ajouter un membre</h1><br />
+
+<br />
+Il est possible d'ajouter manuellement des comptes membres à votre site si, par exemple, vous voulez en limiter l'accès aux seules personnes que vous aurez choisies ou bien si une personne rencontre une difficulté à s'inscrire seule.<br />
+<br />
+Le formulaire est des plus simples. Il vous suffit de remplir les champs proposés et d'indiquer le rang du nouveau membre. Validez le formulaire... <br />
+Voilà qui est fait <img src="/images/smileys/wink.png" alt=";)" class="smiley" /><br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/add_member.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configuration-des-membres">Configuration des membres</h1><br />
+
+<br />
+La page de configuration des membres est organisée en 7 parties distinctes.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-des-membres">Configuration des membres</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/members_configuration.png" alt="" /></p><br />
+Cette partie vous donne accès aux réglages :<br />
+<br />
+<strong>Activer l'inscription des membres</strong> : Si cochée, cette option permet à vos visiteurs de s'inscrire sur votre site. <br />
+<br />
+<strong>Mode d'activation du compte membre</strong> : 3 options sont disponibles:<br />
+<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> automatique : le compte du membre est inscrit dès la validation du formulaire d'inscription
+</li><li class="formatter-li"> mail : le membre recevra un mail contenant un lien à cliquer pour valider son inscription
+</li><li class="formatter-li"> administrateur : le compte du membre sera validé par l'administrateur. Ce dernier sera informé de l'inscription d'un nouveau membre par la présence d'une mention à côté du lien "panneau d'administration"<br />
+</li></ul> <br />
+<strong>Nombre de jours après lesquels un compte non activé est effacé</strong> : Comme indiqué dans l'intitulé, permet d'affecter un nombre de jour maximal au delà duquel un compte non activé sera effacé.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_securite">Sécurité</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/security.png" alt="" /></p><br />
+<br />
+Vous avez ici la possibilité de modifier les choix que vous aviez fait durant l'installation de PHPBoost concernant les mots de passe de vos membres :<br />
+<br />
+<strong>Longueur minimale des mots de passe</strong> : Entre 6 et 30 caractères : Les membres ne pourront pas utiliser de mots de passe qui soit plus court que le nombre de caractères défini.<br />
+<br />
+<strong>Complexité des mots de passe</strong> : Faible, moyenne ou forte. Selon l'option choisie, les mots de passe devront contenir des chiffres, des lettres ou les deux.<br />
+<br />
+<strong>Interdire l'adresse email et l'identifiant de connexion dans le mot de passe</strong> : Si cette option est activée, les mots de passe contenant l'adresse email et/ou l'identifiant du membre seront rejetés.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_configuration-des-moyens-d-authentification">Configuration des moyens d'authentification</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/auth_management.png" alt="" /></p><br />
+<br />
+Encore une fois, vous avez la possibilité de modifier les types d'authentification que vous souhaitez mettre en place sur votre site.<br />
+Si vous choisissez une de ces options, il vous sera alors demandé les codes ID et secret qui vous seront fournis lorsque vous vous inscrirez sur ces applications respectives.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-avatars">Gestion des avatars</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/members_configuration_avatars_managment.png" alt="" /></p><br />
+<strong>Autoriser l'upload d'avatar sur le serveur</strong> : permet aux membres de votre site d'uploader leur avatar depuis leur ordinateur<br />
+<br />
+<strong>Activer le redimensionnement automatique des images</strong> : Redimensionne automatiquement les avatars uploadés si leur taille est plus importante que celle définie ci-après.<br />
+<br />
+<strong>Largeur maximale de l'avatar</strong> : largeur de l'avatar en pixels<br />
+<br />
+<strong>Hauteur maximale de l'avatar</strong> : hauteur de l'avatar en pixels<br />
+<br />
+<strong>Poids maximal de l'avatar en Ko</strong> : poids maximal du fichier uploadé en guise d'avatar<br />
+<br />
+<strong>Activer l'avatar par défaut</strong> : permet l'affichage d'un avatar par défaut pour les membres n'ayant pas choisi d'avatar personnalisé<br />
+<br />
+<strong>Adresse de l'avatar par défaut</strong> : spécifie l'url de l'avatar par défaut mentionné ci-dessus<br />
+<br />
+<strong>Prévisualiser</strong> : permet de voir un aperçu de l'avatar en cours d'utilisation<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-autorisations">Gestion des autorisations</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/members_configuration_authorizations.png" alt="" /></p><br />
+La gestion des autorisations permet de définir les droits en lecture de certaines parties de votre site telles que:<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> La liste des membres
+</li><li class="formatter-li"> Les adresses mails des membres<br />
+</li></ul> <br />
+<br />
+Via le lien "autorisations avancées" vous pouvez définir ces droits pour des groupes de membres ou un membre en particulier en renseignant son pseudonyme<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_message-a-tous-les-membres">Message à tous les membres</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/members_configuration_message_to_all_members.png" alt="" /></p><br />
+Cette section vous permet de définir un message qui sera affiché dans la page d'accueil du profil d'un utilisateur. <br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_reglement-d-inscription">Règlement d'inscription</h2><br />
+
+<br />
+Vous avez la possibilité de faire valider un règlement aux nouveaux membres lors de leur inscription. <br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/agreement.png" alt="" /></p><br />
+<br />
+Si le règlement est vide, il ne sera pas demandé de l'accepter lors de l'inscription.<br />
+<br />
+Si vous désirez en mettre un, l'utilisateur devra valider ce règlement avant d'accéder au formulaire d'inscription. Vous pouvez le personnaliser à votre souhait avec les balises bbcode ou du html.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/registration.png" alt="" /></p><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_gestion-des-sanctions">Gestion des sanctions</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/global_penalizations_managment.png" alt="" /></p><br />
+<br />
+La page d'accueil du gestionnaire des sanctions vous donne l'accès à 3 types de modérations:<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Les avertissements
+</li><li class="formatter-li"> Les sanctions
+</li><li class="formatter-li"> Les bannissements<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-avertissements">Gestion des avertissements</h2><br />
+
+<br />
+La gestion des avertissements vous permet d'appliquer une forme de prévention sur votre site. Afin de ne pas avoir à sanctionner un membre directement vous pouvez lui affecter un taux d'avertissement. Ce taux varie de 0% à 100%. Quand la limite des 100% est atteinte, le membre est banni.<br />
+Tout d'abord, vous pouvez rechercher un membre via le formulaire dédié, ou bien sélectionner un membre dans la liste des membres avertis. Un clic sur l'icône d'avertissement (point d'exclamation orange) vous mène sur le panneau suivant :<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/warnings_managment1.png" alt="" /></p><br />
+Ensuite, vous pouvez affecter  le taux d'avertissement choisi et joindre un message d'explication, que le membre recevra dans sa messagerie privée.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/warnings_managment2.png" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-sanctions">Gestion des sanctions</h2><br />
+
+<br />
+La gestion des sanctions fonctionne sur le même principe que celle des avertissements. La différence réside dans le fait qu'ici, on n'affecte pas un taux d'avertissement au compte du membre. On le place en lecture seule durant un laps de temps que l'administrateur défini. Le placement d'un membre en lecture seule signifie que ce dernier pourra se connecter normalement sur le site et accéder normalement aux diverses sections de ce dernier, mais il n'aura plus la possibilité d'interagir avec le site ou les membres. Il ne pourra plus écrire de message, poster de photos ou autres...<br />
+<br />
+Recherche du membre par pseudo ou via la liste des membres en lecture seule<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/penalizations_managment1.png" alt="" /></p><br />
+Panel d'application de la sanction avec définition du temps imparti à la sanction.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/penalizations_managment2.png" alt="" /></p><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_gestion-des-bannissements">Gestion des bannissements</h2><br />
+
+<br />
+Enfin, la gestion des bannissements, tout comme les deux premières, vous permet de bannir un membre, de manière temporaire ou définitive. Le membre ne pourra donc plus se connecter à votre site, ni interagir avec ce dernier.<br />
+<br />
+Recherche de membre ou sélection via la liste des membres bannis<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/bans_managment1.png" alt="" /></p><br />
+Attribution d'un bannissement à un membre avec choix de la durée du bannissement.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/administration/user/users/bans_managment2.png" alt="" /></p><br />
+<br />
+<span class="notice"><br />
+Pour les sanctions et bannissements, vous disposez aussi de la possibilité d'écrire un message à l'attention du membre, pour lui expliquer les raisons de la modération.<br />
+</span>]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459966493</timestamp>
+  </article>
+</articles>

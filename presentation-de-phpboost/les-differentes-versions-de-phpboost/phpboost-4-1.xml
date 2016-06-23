@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>197</id>
+    <id_contents>1392</id_contents>
+    <title><![CDATA[PHPBoost 4.1]]></title>
+    <encoded_title><![CDATA[phpboost-4-1]]></encoded_title>
+    <hits>10328</hits>
+    <id_cat>14</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>14</cat_id>
+    <cat_id_parent>1</cat_id_parent>
+    <cat_article_id>14</cat_article_id>
+    <con_id_contents>1392</con_id_contents>
+    <con_id_article>197</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[<h3 class="formatter-title">PHPBoost 4.1 Changelog</h3><br />
+<br />
+===================================== Noyau ======================================<br />
+<strong>Framework :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Nouveau système de catégories :<br />
+	<ul class="formatter-ul">
+	<li class="formatter-li"> Plus fiable et plus performant, ajout du drag &amp; drop pour la gestion des catégories
+	</li><li class="formatter-li"> Il est maintenant possible de déplacer et de supprimer les éléments contenus dans une catégorie lors de sa suppression<br />
+	</li></ul>
+</li><li class="formatter-li"> Ajout d'une classe ModulePagination pour simplifier l'ajout de la pagination dans un module
+</li><li class="formatter-li"> Modification de la classe Date :<br />
+	<ul class="formatter-ul">
+	<li class="formatter-li"> Refonte des constantes de formatage
+	</li><li class="formatter-li"> Ajout d'un formatage relatif (ex : Il y a 9 heures)<br />
+	</li></ul>
+</li><li class="formatter-li"> Installation : Ajout de la possibilité de modifier la description du site dans l'installation en CLI
+</li><li class="formatter-li"> Création d'un système permettant de gérer facilement des mots clés dans les modules
+</li><li class="formatter-li"> Passage de l'extension mysql à mysqli pour assurer la compatibilité à long terme de PHPBoost sur tous les serveurs
+</li><li class="formatter-li"> Améliorations de la rapidité d'éxécution et de la fiabilité de l'installateur
+</li><li class="formatter-li"> Ajout des liens éditer et supprimer dans la liste déroulante de la recherche d'un membre (les boutons sont visible seulement par les administrateurs)
+</li><li class="formatter-li"> Création d'une classe ModuleTreeLinks et d'un ExtensionPoint pour contenir tous les liens avec les différentes actions possible (remplace le admin_links dans desc.ini du module)
+</li><li class="formatter-li"> Création d'une API pour pouvoir intégrer facilement des Captchas alternatifs
+</li><li class="formatter-li"> Optimisation du système de notation et refonte graphique
+</li><li class="formatter-li"> Création d'un FormFieldUploadFile permettant d'utiliser le gestionnaire d'upload pour attacher un fichier à un élément facilement
+</li><li class="formatter-li"> Modification du ScheduledJobs pour intégrer une fonction on_changepage() pour exécuter du code à chaque génération de page à partir des modules
+</li><li class="formatter-li"> Ajout de l'url dans le stacktrace du gestionnaire d'erreur pour mieux suivre les erreurs levées
+</li><li class="formatter-li"> Changer de format de stockage des fuseaux horaires<br />
+</li></ul><br />
+<br />
+<strong>Menus :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Améliorations graphique<br />
+</li></ul><br />
+<br />
+<strong>Personnalisation graphique :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Logo cliquable
+</li><li class="formatter-li"> Intégration des technologies HTML5 + CSS 3
+</li><li class="formatter-li"> Nouveau pack de smileys
+</li><li class="formatter-li"> Fin du support d'Internet Explorer 7 et inférieur qui ne représente maintenant plus que 0.6 % du marché des navigateurs
+</li><li class="formatter-li"> Unification du design des commentaires, des messages du livre d'or, de la shoutbox ainsi que les messages privés.
+</li><li class="formatter-li"> Refonte du design et du code des formulaires
+</li><li class="formatter-li"> Refonte du design et du code des tableaux
+</li><li class="formatter-li"> Création d'un menu unique contenant les actions possibles d'un module dans la partie visible du site.
+</li><li class="formatter-li"> Ajout de Font-Awesome au projet PHPBoost
+</li><li class="formatter-li"> Grand nettoyage dans les images et remplacement par les équivalents du projet Font-Awesome
+</li><li class="formatter-li"> Le thème base est 500% plus compact en poids que celui de la version 4.0
+</li><li class="formatter-li"> Nettoyage du fichier default.css (gain de 30%)
+</li><li class="formatter-li"> Refonte de l'affichage de l'upload
+</li><li class="formatter-li"> Nettoyage des principaux fichiers TPL et CSS
+</li><li class="formatter-li"> Possibilité d'ajouter un texte de présentation du site en dessous du nom
+</li><li class="formatter-li"> Suppression des header.tpl et footer.tpl et création de deux fichiers frame.tpl et body.tpl pour les remplacer. La personnalisation en sera plus aisée. Il y a également un gain de performance.<br />
+</li></ul><br />
+<br />
+<strong>Référencement :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Le nom du site est affiché à la fin dans la balise title (sauf pour la page d'accueil où il est au début)
+</li><li class="formatter-li"> Modification de la balise description (elle contient la description de la page ou celle du site sur la page d'accueil)
+</li><li class="formatter-li"> Ajout de l'url canonique qui permet d'éviter le contenu dupliqué dans les moteurs de recherche
+</li><li class="formatter-li"> Ajout des microdonnées : <br />
+	<ul class="formatter-ul">
+	<li class="formatter-li"> Modification du système de notation
+	</li><li class="formatter-li"> Modification du système de commentaire<br />
+	</li></ul><br />
+</li></ul><br />
+<br />
+<strong>Administration :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Suppression du panneau de modération présent dans l'administration qui fait doublon avec celui du dossier user
+</li><li class="formatter-li"> Suppression des autorisations d'accès dans la gestion des modules pour plus de cohérence et éviter les doublons avec les autorisations des modules
+</li><li class="formatter-li"> Harmonisation des liens dans l'administration :<br />
+	<ul class="formatter-ul">
+	<li class="formatter-li"> Smileys est maintenant dans Contenu
+	</li><li class="formatter-li"> Mises à jour dans Administration
+	</li><li class="formatter-li"> Maintenance dans Administration<br />
+	</li></ul>
+</li><li class="formatter-li"> Ajout d'une option dans la configuration avancée pour pouvoir afficher la liste des requêtes SQL et afficher le stacktrace pour pouvoir les tracer
+</li><li class="formatter-li"> Suppression des extensions de programmation dans la configuration des fichiers (pouvait entraîner l'upload de fichier "critique" sur le serveur avec la configuration de base)
+</li><li class="formatter-li"> Ajout de l'url canonique. Elle permet de définir une url favorite pour accéder à une page et évite ainsi la duplication de contenu.<br />
+</li></ul><br />
+<br />
+<strong>Installation :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Activation des options url rewriting et compression des pages automatiquement si elles sont disponibles sur le serveur<br />
+</li></ul><br />
+<br />
+<strong>Script de migration :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Mise en maintenance automatique si le site n'est pas déjà en maintenance
+</li><li class="formatter-li"> Simplification du script de migration pour ne plus avoir à faire d'actions manuelles sur les fichiers. Tout est maintenant automatique, il suffit d'écraser les fichiers de la 4.0 par la 4.1 et de lancer la migration
+</li><li class="formatter-li"> Les informations de connexion vers la base de données n'ont plus besoin d'être entrées si phpboost est déjà installé<br />
+</li></ul><br />
+<br />
+<strong>Divers :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Ajout de la balise enclosure dans les flux RSS pour joindre des médias
+</li><li class="formatter-li"> Ajout de l'affichage de la taille de la mémoire utilisée par PHP
+</li><li class="formatter-li"> Meilleure gestion des contraintes des formulaires :<br />
+	<ul class="formatter-ul">
+	<li class="formatter-li"> Toutes les erreurs sont listées dans une seule et même boite de dialogue
+	</li><li class="formatter-li"> Les champs qui ne sont pas remplis correctement sont affichés en rouge
+	</li><li class="formatter-li"> La page est automatiquement remontée vers le haut du formulaire si il y a des erreurs pour faciliter la vérification et la correction des champs<br />
+	</li></ul><br />
+</li></ul><br />
+<br />
+<strong>Optimisations :</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Optimisation du chargement de l&#8217;environnent de PHPBoost
+</li><li class="formatter-li"> Optimisation du chargement de l&#8217;environnent graphique de PHPBoost
+</li><li class="formatter-li"> Optimisation du chargement du cache CSS
+</li><li class="formatter-li"> Optimisation du système de notation
+</li><li class="formatter-li"> Nettoyage dans les fichiers CSS
+</li><li class="formatter-li"> Réduction du poids des images utilisées dans le projet
+</li><li class="formatter-li"> Utilisation par défaut du cache du navigateur pour stocker les fichiers statiques
+</li><li class="formatter-li"> Création de deux fichiers JS (js_top.js et js_bottom.js) pour stocker les scripts JavaScript à charger dans le haut ou le bas de la page (gain de chargement)<br />
+</li></ul><br />
+<br />
+=================================== Modules =====================================<br />
+<br />
+<span style="color:red;">Nouveauté :</span> Nouveau module ReCaptcha<br />
+<br />
+<span style="color:red;">Nouveauté :</span> Nouveau module QuestionCaptcha<br />
+<br />
+<strong>Articles</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en <a href="http://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">MVC</a>
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout du nouveau système de catégorie
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'ajouter des mots clés
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte des formulaires (plus intuitifs)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nettoyage de la configuration
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte graphique
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de personnaliser l'url d'un article
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Amélioration du référencement
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de personnaliser la pagination
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'activer/désactiver les commentaires globalement
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'activer/désactiver l'affichage du nom de l'auteur d'un article pour chacun des articles
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'activer/désactiver la notation d'un article pour chacun des articles
+</li><li class="formatter-li"> Ajout des microdonnées pour améliorer le référencement<br />
+</li></ul><br />
+<br />
+<strong>Bac à sable</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Intégration d'une section regroupant tous les styles que l'on peut trouver dans les différentes pages du projet. Elle permettra de gagner du temps lors de la personnalisation d'un thème
+</li><li class="formatter-li"> Page regroupant les alias des icônes de Font-Awesome<br />
+</li></ul><br />
+<br />
+<strong>Calendrier</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en <a href="http://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">MVC</a>
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout du nouveau système de catégorie pour les événements
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Gestion des événements sur plusieurs jours
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Module mini-calendrier, module mini attenant au module du calendrier
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Option pour afficher l'anniversaire des membres dans le calendrier
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Flux RSS
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Recherche
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Sitemap
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Contributions pour l'ajout d'évènement
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de créer un évènement répétitif (tous les X jours, X semaines, X mois, X années)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout des microdonnées pour améliorer le référencement
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de s'inscrire à un évènement et de limiter le nombre des inscrits à un évènement<br />
+</li></ul><br />
+<br />
+<strong>Contact</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Gestion complète des champs du formulaire dans l'administration avec possibilité d'en ajouter
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau champ "Destinataires" (désactivé par défaut) permettant de choisir le/les destinataire(s) du message
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'envoyer le mail à un destinataire en fonction de l'objet, si le champ destinataires n'est pas affiché
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de configurer le titre du formulaire dans la configuration
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'afficher une zone d'informations à côté du formulaire (à gauche, au dessus, à droite ou en dessous) et de la configurer dans l'administration<br />
+</li></ul><br />
+<br />
+<strong>En ligne</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout de l'avatar des membres dans la liste
+</li><li class="formatter-li"> Refonte de l'affichage<br />
+</li></ul><br />
+<br />
+<strong>Forum</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Déplacement de la gestion des rangs dans le module forum<br />
+</li></ul><br />
+<br />
+<strong>Livre d'or</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en <a href="http://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">MVC</a>
+</li><li class="formatter-li"> Refonte de l'affichage<br />
+</li></ul><br />
+<br />
+<strong>Multimedia</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Ajout de la balise enclosure dans les flux RSS pour pouvoir diffuser le media
+</li><li class="formatter-li"> Ajout du support du format MP4<br />
+</li></ul><br />
+<br />
+<strong>News</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en <a href="http://fr.wikipedia.org/wiki/Mod%C3%A8le-vue-contr%C3%B4leur">MVC</a>
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout du nouveau système de catégorie
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité d'ajouter des mots clés
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte des formulaires (plus intuitifs)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de couper une news à un certain nombre de caractères
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de désactiver les suggestions de news
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Suppression de l'affichage en liste devenu inutile
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nettoyage de la configuration
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Refonte graphique
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de personnaliser l'url d'une news
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Amélioration du référencement
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Suppression de l'édito et ajout d'une option supplémentaire dans le formulaire d'ajout pour placer les news en tête de liste.
+</li><li class="formatter-li"> Ajout des microdonnées pour améliorer le référencement<br />
+</li></ul><br />
+<br />
+<strong>Newsletter</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Remplacement de l'ancien système de flux par le nouveau système de catégories pour gagner en lisibilité et efficacité<br />
+</li></ul><br />
+<br />
+<strong>Rapport de bugs</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Passage du module en MVC
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Filtres en haut des tableaux avec possibilité pour chaque utilisateur d'enregistrer ses combinaisons de filtres favoris
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Légende en bas des tableaux avec la couleur des niveaux et leurs noms
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Affichage du nombre de bugs correspondants aux filtres choisis
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Options dans l'administration pour personnaliser les statistiques
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Graphiques dans les statistiques
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Alertes administrateur en fonction de la criticité du bug lors de l'ajout, possibilité de désactiver l'option dans l'administration
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Statut d'avancement sous forme de %
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Ajout d'une date de parution pour les versions (utilisée dans la roadmap)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouvel état : "En cours", lorsque la version de correction d'un bug est choisie mais qu'il n'est pas encore corrigé
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouvel état : "En attente", pour indiquer que le bug ne sera pas corrigé toute suite
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Sitemap avec bugs résolus, non résolus, feuille de route (si activée) et statistiques
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Flux RSS pour les bugs non-résolus et résolus
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau bouton pour corriger un bug directement depuis la liste des bugs/le détail d'un bug pour les utilisateurs autorisés (on n'est maintenant plus obligé de choisir la version quand on passe à l'état corrigé)
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Nouveau bouton pour assigner un bug directement depuis la liste des bugs/le détail d'un bug pour les utilisateurs autorisés
+</li><li class="formatter-li"> <span style="color:red;">Nouveauté :</span> Possibilité de mettre un commentaire directement quand on assigne, corrige, rejette, ré-ouvre et supprime un bug
+</li><li class="formatter-li"> L'ajout et la suppression de niveaux et priorités n'est plus possible pour être cohérent avec les alertes administrateur. Par contre il est toujours possible de changer leur nom et la couleur des niveaux
+</li><li class="formatter-li"> L'envoi de MP peut être activé de manière plus affinée
+</li><li class="formatter-li"> Changement de mise en forme des tableaux pour plus de lisibilité
+</li><li class="formatter-li"> Amélioration de l'affichage Corrigé/En cours dans la roadmap
+</li><li class="formatter-li"> Suppression de l'option pour désactiver les commentaires (dorénavant ils sont toujours activés)
+</li><li class="formatter-li"> Refonte de l'affichage général du module<br />
+</li></ul><br />
+<br />
+<strong>Recherche</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Refonte visuelle<br />
+</li></ul><br />
+<br />
+<strong>Téléchargement</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Améliorations visuelles<br />
+</li></ul><br />
+<br />
+<strong>Wiki</strong><br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Ajout du captcha pour les visiteurs<br />
+</li></ul>]]></content>
+    <activ>1</activ>
+    <user_id>5083</user_id>
+    <user_ip>90.16.36.10</user_ip>
+    <timestamp>1423574456</timestamp>
+  </article>
+</articles>

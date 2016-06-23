@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>43</id>
+    <id_contents>1631</id_contents>
+    <title><![CDATA[Utilisation du module FAQ]]></title>
+    <encoded_title><![CDATA[utilisation-du-module-faq]]></encoded_title>
+    <hits>1058</hits>
+    <id_cat>24</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>24</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>39</cat_article_id>
+    <con_id_contents>1631</con_id_contents>
+    <con_id_article>43</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_index-de-la-faq">Index de la FAQ</a></li><li><a href="#paragraph_contenu-d-une-categorie">Contenu d'une catégorie</a></li><li><a href="#paragraph_ajouter-une-question">Ajouter une question</a></li><li><a href="#paragraph_questions-reponses">Questions/Réponses</a><ol class="wiki_list_2"><li><a href="#paragraph_moderateur">Modérateur</a></li><li><a href="#paragraph_simple-usager">Simple usager</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[Voici une petite documentation pour les utilisateurs du module FAQ.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_index-de-la-faq">Index de la FAQ</h1><br />
+
+<p style="text-align:center"><br />
+<img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_6.jpg" alt="" /></p><br />
+<br />
+Lorsque vous arrivez sur l'index de la foire aux questions vous accédez à une page regroupant les catégories contenant les questions/réponses.<br />
+Le nombre de question que contient une catégorie est écrit en-dessous de celle-ci.<br />
+Pour accéder aux questions/réponses d'une catégorie, il suffit de cliquez sur celle désirée.<br />
+<br />
+Autre point, l'index se gère comme les autres catégories, il vous est donc possible d'ajouter des questions/réponses directement sur l'index.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_contenu-d-une-categorie">Contenu d'une catégorie</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_7.jpg" alt="" /></p><br />
+<br />
+Résumé du contenu:<br />
+<br />
+<ul class="formatter-ul"><li class="formatter-li">Un en-tête vous permet de rédiger une description et/ou autre de la catégorie.
+</li><li class="formatter-li">Pour chaque catégorie vous accédez à la liste des questions/réponses correspondantes. Il peut y avoir des sous-catégories dans une catégorie.
+</li><li class="formatter-li">Vous pouvez éditer directement la catégorie en cliquant sur le lien <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --><br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_ajouter-une-question">Ajouter une question</h1><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_9.jpg" alt="" /></p><br />
+<br />
+Pour ajouter, une question, cliquez sur le lien 'Ajouter une question', comme le montre le screen ci-dessus.<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_10.jpg" alt="" /></p><br />
+<br />
+Définissez ensuite les quelques champs demandés :<br />
+<br />
+<strong>Question</strong> : Titre de la question<br />
+<strong>Emplacement</strong> : Catégorie de la question<br />
+<strong>Réponse</strong> : Réponse à la question<br />
+<strong>Approuver</strong> : Si vous avez les droits nécessaires (écriture), vous pouvez approuver directement la question. Dans le cas contraire, elle devra être validée par un modérateur.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_questions-reponses">Questions/Réponses</h1><br />
+
+<br />
+La liste des questions peut prendre 2 formes selon les droits que possède l'utilisateur.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_moderateur">Modérateur</h2><br />
+
+<br />
+Un utilisateur qui a le droit de modération verra la liste des questions comme suit :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_11.jpg" alt="" /></p><br />
+<br />
+Il peut alors agir sur ces questions :<br />
+- Un clic sur la question affichera la réponse si elle n'est pas déjà affichée<br />
+- Glisser/déposer à l'aide de <!-- START HTML -->
+<i class="fa fa-arrows"></i>
+<!-- END HTML --> afin de réorganiser les questions<br />
+- Réorganiser manuellement les questions à l'aide des flèches <!-- START HTML -->
+<i class="fa fa-arrow-down"></i>
+<!-- END HTML --><br />
+- Editer la question en cliquant sur <!-- START HTML -->
+<i class="fa fa-edit"></i>
+<!-- END HTML --><br />
+- Supprimer la question, avec le lien <!-- START HTML -->
+<i class="fa fa-delete"></i>
+<!-- END HTML --><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_simple-usager">Simple usager</h2><br />
+
+<br />
+En revanche, si un utilisateur n'a pas les droits pour modifier les questions, celles-ci se présenteront comme cela :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/faq/faq_no_moderation.jpg" alt="" /></p><br />
+<br />
+La seule action possible étant d'afficher/masquer les réponses en cliquant sur les questions désirées.]]></content>
+    <activ>1</activ>
+    <user_id>440</user_id>
+    <user_ip>93.16.51.115</user_ip>
+    <timestamp>1459965672</timestamp>
+  </article>
+</articles>

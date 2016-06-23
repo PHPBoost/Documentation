@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>144</id>
+    <id_contents>713</id_contents>
+    <title><![CDATA[Migrer un module vers une nouvelle version]]></title>
+    <encoded_title><![CDATA[migrer-un-module-vers-une-nouvelle-version]]></encoded_title>
+    <hits>1121</hits>
+    <id_cat>41</id_cat>
+    <is_cat>1</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>41</cat_id>
+    <cat_id_parent>5</cat_id_parent>
+    <cat_article_id>144</cat_article_id>
+    <con_id_contents>713</con_id_contents>
+    <con_id_article>144</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Dans cette catégorie, vous trouverez différents articles vous permettant de mettre à jour votre module vers une nouvelle version de PHPBoost.]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>90.40.233.244</user_ip>
+    <timestamp>1357646276</timestamp>
+  </article>
+</articles>

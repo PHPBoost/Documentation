@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>137</id>
+    <id_contents>1710</id_contents>
+    <title><![CDATA[Administration du module Personnalisation]]></title>
+    <encoded_title><![CDATA[administration-du-module-personnalisation]]></encoded_title>
+    <hits>674</hits>
+    <id_cat>40</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>40</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>136</cat_article_id>
+    <con_id_contents>1710</con_id_contents>
+    <con_id_article>137</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_personnalisation-de-l-interface">Personnalisation de l'interface</a></li><li><a href="#paragraph_personnalisation-de-la-favicon">Personnalisation de la favicon</a></li><li><a href="#paragraph_diteur-de-fichiers-css">Éditeur de fichiers CSS</a></li></ol>]]></menu>
+    <content><![CDATA[PHPBoost vous permet de personnaliser certaines parties d'un site Internet. <br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_personnalisation-de-l-interface">Personnalisation de l'interface</h1><br />
+
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/customization/interface_customization.png" alt="" /></p><br />
+<br />
+La personnalisation de l'interface vous permet de modifier le logo qui sera affiché sur votre site, sur un thème donné ou pour l'ensemble des thèmes que vous avez installé. Il vous suffit de choisir le thème à personnaliser, puis de sélectionner le fichier image qui fera office de logo. La case à cocher vous permet, si vous le souhaitez, de supprimer le logo précédemment affecté au thème.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_personnalisation-de-la-favicon">Personnalisation de la favicon</h1><br />
+
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/customization/favicon_customization.png" alt="" /></p><br />
+<br />
+De la même manière, vous pouvez personnaliser la favicon (petite icône visible dans la barre de navigation de votre navigateur) de votre site. La favicon attribuée pour votre site sera la même pour tous les thèmes que vous utilisez.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_diteur-de-fichiers-css">Éditeur de fichiers CSS</h1><br />
+
+Enfin, l'éditeur de fichiers CSS vous permet, comme son nom l'indique, d'éditer en ligne les fichiers CSS du thème de votre choix. <br />
+<br />
+Pour se faire, sélectionnez d'abord le thème qui contient le fichier à éditer.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/customization/css_files_editor_theme_select.png" alt="" /></p><br />
+<br />
+Sélectionnez ensuite le fichier à éditer. Il n'y a pas de bouton de validation, l'affichage s'effectue automatiquement une fois le fichier sélectionné.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/customization/css_files_editor_file_select.png" alt="" /></p><br />
+<br />
+Sélection faite, l'éditeur de fichier CSS s'ouvre et vous permet d'éditer le fichier choisi.<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/customization/css_files_editor_file_edit.png" alt="" /></p><br />
+<br />
+<span class="warning"><br />
+La modification d'un fichier CSS est effective et définitive une fois qu'elle a été validée. Nous vous conseillons fortement de faire une sauvegarde de votre fichier avant de l'éditer, afin de pouvoir faire face à toute erreur de manipulation.<br />
+</span>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1463028375</timestamp>
+  </article>
+</articles>

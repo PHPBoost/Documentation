@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>320</id>
+    <id_contents>1585</id_contents>
+    <title><![CDATA[Mettre à jour son thème 4.1 en 5.0]]></title>
+    <encoded_title><![CDATA[mettre-a-jour-son-theme-4-1-en-5-0]]></encoded_title>
+    <hits>515</hits>
+    <id_cat>42</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>42</cat_id>
+    <cat_id_parent>4</cat_id_parent>
+    <cat_article_id>145</cat_article_id>
+    <con_id_contents>1585</con_id_contents>
+    <con_id_article>320</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_avant-de-commencer">Avant de commencer</a></li><li><a href="#paragraph_le-fichier-de-configuration">Le fichier de configuration</a></li><li><a href="#paragraph_les-fichiers-tpl">Les fichiers tpl</a><ol class="wiki_list_2"><li><a href="#paragraph_le-fichier-body-tpl">Le fichier body.tpl</a></li><li><a href="#paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</a></li></ol></li><li><a href="#paragraph_les-fichiers-css">Les fichiers css</a><ol class="wiki_list_2"><li><a href="#paragraph_design-css">design.css</a></li><li><a href="#paragraph_content-css">content.css</a></li><li><a href="#paragraph_global-css">global.css</a></li><li><a href="#paragraph_table-css">table.css</a></li><li><a href="#paragraph_form-css">form.css</a></li><li><a href="#paragraph_cssmenu-css">cssmenu.css</a></li><li><a href="#paragraph_login-css">login.css</a></li></ol></li><li><a href="#paragraph_methode-conseillee-pour-la-migration">Méthode conseillée pour la migration</a></li><li><a href="#paragraph_la-responsivite">La responsivité</a></li></ol>]]></menu>
+    <content><![CDATA[<span style="font-size: 25px;"><strong><span style="color:#F04343;"># EN COURS #</span></strong> </span><br />
+Nous allons voir au fil de cet article la manière de modifier un thème 4.1 afin de pouvoir l'utiliser sur la version 5.0 de PHPBoost.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_avant-de-commencer">Avant de commencer</h1><br />
+
+<br />
+La mise à jour 5.0 de PHPBoost est une mise à jour à la fois mineure et majeure au niveau de la partie graphique.<br />
+Elle est mineure car nous n'avons pas renommé de classe ou autre comme la version précédente. En revanche, nous avons introduit le responsive nativement dans le thème de base ce qui a pour effet d'augmenter sensiblement le nombre de ligne de code.<br />
+<br />
+Pour rendre le thème responsive, nous avons choisi d'utiliser les medias-queries dans les fichiers CSS. Cette solution est la plus pratique de notre point de vue, mais elle complexifie le code en ajoutant un certain nombre de lignes supplémentaires.<br />
+Du fait de l'ajout massif de lignes de code, la conversion d'un thème sera longue si vous souhaitez le rendre responsive ou très simple si vous ne souhaitez que le rendre compatible.<br />
+Pour rendre le code CSS plus lisible, nous avons découper les fichiers css existants en plusieurs fichiers plus petits.<br />
+<br />
+Nous allons voir ci-dessous les étapes à réaliser pour rendre le thème compatible avec la version 5.0 et les modifications à entreprendre pour retrouver votre thème sur cette nouvelle version.<br />
+<br />
+<span class="warning">Les modifications présentées dans cet article n'intègrent pas les différents éléments que vous auriez pu ajouter ou modifier dans vos fichiers</span><br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_le-fichier-de-configuration">Le fichier de configuration</h1><br />
+
+<br />
+La première étape pour rendre le thème compatible est de modifier la compatibilité dans le fichier <em>config.ini</em>.<br />
+[[CODE=text]]compatibility=4.1[[/CODE]] à remplacer par [[CODE=text]]compatibility=5.0[[/CODE]]<br />
+<span class="warning">A partir de cette étape, le thème peut être installé via le panneau d'administration. Il sera presque entièrement fonctionnel</span><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-fichiers-tpl">Les fichiers tpl</h1><br />
+
+<br />
+Il y a quelques modifications dans les fichiers tpl. L'ajout des fichiers css notamment.<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-body-tpl">Le fichier body.tpl</h2><br />
+
+<ul class="formatter-ul">
+<li class="formatter-li">Modification du style css du logo.[[CODE=html]]background-image: url('{HEADER_LOGO}');[[/CODE]]
+</li><li class="formatter-li">Nous avons ajouté un nouveau conteneur pour les menus du top-header. [[CODE=html]]<div id="top-header-content">[[/CODE]]
+</li><li class="formatter-li">L'appel des menus changent. Le code[[CODE=html]]{MENUS_HEADER_CONTENT}[[/CODE]] devient [[CODE=html]]# START menus_header #
+{menus_header.MENU}
+# END menus_header #[[/CODE]]<br />
+<table class="formatter-table">
+<tr class="formatter-table-row">
+<th class="formatter-table-head">Code 4.1</th>
+<th class="formatter-table-head">Code 5.0</th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">[[CODE=html]]{MENUS_HEADER_CONTENT}[[/CODE]]</td>
+<td class="formatter-table-col">[[CODE=html]]# START menus_header #
+{menus_header.MENU}
+# END menus_header #[[/CODE]]</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">[[CODE=html]]{SUB_HEADER_CONTENT}[[/CODE]]</td>
+<td class="formatter-table-col">[[CODE=html]]# START menus_sub_header #
+{menus_sub_header.MENU}
+# END menus_sub_header #[[/CODE]]</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">[[CODE=html]]{MENUS_LEFT_CONTENT}[[/CODE]]</td>
+<td class="formatter-table-col">[[CODE=html]]# START menus_left #
+{menus_left.MENU}
+# END menus_left #[[/CODE]]</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">[[CODE=html]]{MENUS_RIGHT_CONTENT}[[/CODE]]</td>
+<td class="formatter-table-col">[[CODE=html]]# START menus_right #
+{menus_right.MENU}
+# END menus_right #[[/CODE]]</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">[[CODE=html]]{MENUS_TOPCENTRAL_CONTENT}[[/CODE]]</td>
+<td class="formatter-table-col">[[CODE=html]]# START menus_top_central #
+{menus_top_central.MENU}
+# END menus_top_central #[[/CODE]]</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">[[CODE=html]]{MENUS_BOTTOMCENTRAL_CONTENT}[[/CODE]]</td>
+<td class="formatter-table-col">[[CODE=html]]# START menus_bottom_central #
+{menus_bottom_central.MENU}
+# END menus_bottom_central #[[/CODE]]</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">[[CODE=html]]{MENUS_TOP_FOOTER_CONTENT}[[/CODE]]</td>
+<td class="formatter-table-col">[[CODE=html]]# START menus_top_footer #
+{menus_top_footer.MENU}
+# END menus_top_footer #[[/CODE]]</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">[[CODE=html]]{MENUS_FOOTER_CONTENT}[[/CODE]]</td>
+<td class="formatter-table-col">[[CODE=html]]# START menus_footer #
+{menus_footer.MENU}
+# END menus_footer #[[/CODE]]</td>
+</tr>
+</table>
+</li><li class="formatter-li">Afin de permettre l'affichage des alertes noyau, ajouter la ligne[[CODE=html]]# INCLUDE KERNEL_MESSAGE #[[/CODE]] juste avant [[CODE=html]]{CONTENT}[[/CODE]]
+</li><li class="formatter-li">Ajouter la version de PHPBoost dans le footer après "PHPBoost" [[CODE=html]]{PHPBOOST_VERSION}[[/CODE]]<br />
+</li></ul><br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_le-fichier-frame-tpl">Le fichier frame.tpl</h2><br />
+
+<ul class="formatter-ul">
+<li class="formatter-li">Dans le head, il faut modifier le charset [[CODE=html]]<meta charset="iso-8859-1" />[[/CODE]] par [[CODE=html]]<meta charset="windows-1252" />[[/CODE]]
+</li><li class="formatter-li">Dans le head, juste après la description, supprimer les mots clés.[[CODE=html]]<meta name="keywords" content="{SITE_KEYWORD}" />[[/CODE]]
+</li><li class="formatter-li">Dans le head, juste après la description, supprimer la version de PHPBoost à "PHPBoost".[[CODE=html]]<meta name="generator" content="PHPBoost" />[[/CODE]]
+</li><li class="formatter-li">Afin de bien gérer les medias-queries, ajouter à la suite des meta [[CODE=html]]<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">[[/CODE]]
+</li><li class="formatter-li">Ajouter les nouveaux fichiers dans le cache-manager et juste en dessous pour le sans cache. [[CODE=html]]
+# IF C_CSS_CACHE_ENABLED #
+<link rel="stylesheet" href="${CSSCacheManager::get_css_path('/templates/default/theme/default.css;/kernel/lib/css/font-awesome/css/font-awesome.css;/templates/{THEME}/theme/design.css;/templates/{THEME}/theme/content.css;/templates/{THEME}/theme/table.css;/templates/{THEME}/theme/form.css;/templates/{THEME}/theme/global.css;/templates/{THEME}/theme/cssmenu.css')}" type="text/css" media="screen, print" />
+# ELSE #
+<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/default/theme/default.css" type="text/css" media="screen, print" />
+<link rel="stylesheet" href="{PATH_TO_ROOT}/kernel/lib/css/font-awesome/css/font-awesome.css" />
+<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/design.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/content.css" type="text/css" media="screen, print" />
+<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/table.css" type="text/css" media="screen, print" />
+<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/form.css" type="text/css" media="screen, print" />
+<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/global.css" type="text/css" media="screen, print" />
+<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/cssmenu.css" type="text/css" media="screen" />
+# ENDIF #
+# IF C_CSS_LOGIN_DISPLAYED #
+<link rel="stylesheet" href="{PATH_TO_ROOT}/templates/{THEME}/theme/login.css" type="text/css" media="screen" />
+# ENDIF #
+[[/CODE]]<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_les-fichiers-css">Les fichiers css</h1><br />
+
+Le passage de la version 4.1 à la version 5.0 intègre une modification qui a un impact non négligeable sur les fichiers CSS. Par défaut, le thème de base est responsive. Cela veut dire qu'il peut s'adapter à des écrans de smartphone, des tablettes ou à un affichage standard sur ordinateur.<br />
+Pour se faire, nous avons utilisé les média queries pour ajuster chaque classe CSS en fonction du besoin. De ce fait, convertir un thème v4.1 pour le rendre responsive est une tâche très très lourde.<br />
+Nous vous conseillons vivement l'approche inverse qui consiste à refaire votre thème à partir du thème de base déjà responsive. Même si à première vue cela veut dire recommencer un thème, cette tâche sera beaucoup plus rapide que celle de bidouiller votre thème pour le rendre responsive.<br />
+L'introduction des médias queries nous a obligé à découper le code css dans plusieurs fichiers. Les fichiers <em>design.css</em>, <em>content.css</em>, <em>global.css</em> existaient sur la version 4.1, la version 5.0 intègre maintenant en plus les fichiers <em>cssmenu.css</em>, <em>form.css</em>, <em>table.css</em> et <em>login.css</em>.<br />
+Dans les paragraphes suivants, nous allons détailler les modifications majeures entre la v4.1 et la v5.0 pour vous permettre de vous y retrouver.<br />
+Nous ne ferons pas le détail de toutes les classes CSS créées afin de simplifier le travail des designers car elles sont assez nombreuses.<br />
+N'oubliez pas que la meilleur façon de retrouver une classe CSS dans un fichier est d'utiliser les outils "examiner l’élément" de votre navigateur en désactivant le cache CSS.<br />
+<h2 class="wiki_paragraph2" id="paragraph_design-css">design.css</h2><br />
+
+<table class="formatter-table">
+<tr class="formatter-table-row">
+<th class="formatter-table-head">élément</th>
+<th class="formatter-table-head">Position V4.1</th>
+<th class="formatter-table-head">Position V5.0</th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">html {}</td>
+<td class="formatter-table-col">default.css</td>
+<td class="formatter-table-col">design.css</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">#top-header-content {}</td>
+<td class="formatter-table-col">nouvelle classe pour gérer le contenu du top-header</td>
+<td class="formatter-table-col">design.css</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">#sub-header-content {}</td>
+<td class="formatter-table-col">nouvelle classe pour gérer le contenu du sub-header</td>
+<td class="formatter-table-col">design.css</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">.main-with-left {}</td>
+<td class="formatter-table-col">nouvelle classe pour indiquer dans le main si une colonne gauche existe</td>
+<td class="formatter-table-col">design.css</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">.main-with-right {}</td>
+<td class="formatter-table-col">nouvelle classe pour indiquer dans le main si une colonne droite existe</td>
+<td class="formatter-table-col">design.css</td>
+</tr>
+</table><br />
+<h2 class="wiki_paragraph2" id="paragraph_content-css">content.css</h2><br />
+
+<table class="formatter-table">
+<tr class="formatter-table-row">
+<th class="formatter-table-head">élément</th>
+<th class="formatter-table-head">Position V4.1</th>
+<th class="formatter-table-head">Position V5.0</th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">table {}</td>
+<td class="formatter-table-col">content.css</td>
+<td class="formatter-table-col">Toutes les classes liées aux tableaux sont maintenant dans le fichier table.css</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">button, .button {}</td>
+<td class="formatter-table-col">content.css</td>
+<td class="formatter-table-col">Toutes les classes liées aux boutons sont maintenant dans le fichier form.css</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">.fieldset {}</td>
+<td class="formatter-table-col">content.css</td>
+<td class="formatter-table-col">Toutes les classes liées aux formulaires sont maintenant dans le fichier form.css</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">input, textarea {}</td>
+<td class="formatter-table-col">content.css</td>
+<td class="formatter-table-col">Toutes les classes liées aux formulaires sont maintenant dans le fichier form.css</td>
+</tr>
+</table><br />
+Ce qui fait que l'on retrouve maintenant dans le fichier <em>content.css</em> les éléments suivants : <ul class="formatter-ul">
+<li class="formatter-li">conteneurs généraux, éléments de module,
+</li><li class="formatter-li">pagination des pages,
+</li><li class="formatter-li">explorateur de catégorie,
+</li><li class="formatter-li">gestion des catégories,
+</li><li class="formatter-li">mini-module,
+</li><li class="formatter-li">message postes,
+</li><li class="formatter-li">profile user,
+</li><li class="formatter-li"><span style="color:#3366FF;">maintenance,</span>
+</li><li class="formatter-li"><span style="color:#339966;">contribution,</span>
+</li><li class="formatter-li"><span style="color:#339966;">erreur 403/404.</span><br />
+</li></ul> Les éléments en <span style="color:#339966;">vert</span> correspondent à des nouveautés, les éléments en <span style="color:#3366FF;">bleu</span> correspondent à des classes venant d'un autre fichier.<br />
+<h2 class="wiki_paragraph2" id="paragraph_global-css">global.css</h2><br />
+
+<table class="formatter-table">
+<tr class="formatter-table-row">
+<th class="formatter-table-head">élément</th>
+<th class="formatter-table-head">Position V4.1</th>
+<th class="formatter-table-head">Position V5.0</th>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">.dynamic-menu {}</td>
+<td class="formatter-table-col">global.css</td>
+<td class="formatter-table-col">Toutes les classes liées aux menus sont maintenant dans le fichier cssmenu.css</td>
+</tr>
+<tr class="formatter-table-row">
+<td class="formatter-table-col">#message-maintain {}</td>
+<td class="formatter-table-col">global.css</td>
+<td class="formatter-table-col">la partie maintenance a été déplacée dans le fichier content.css</td>
+</tr>
+</table><br />
+Ce qui fait que l'on retrouve maintenant dans le fichier <em>global.css</em> les éléments suivants : <ul class="formatter-ul">
+<li class="formatter-li">Mise en forme du texte,
+</li><li class="formatter-li">Mise en forme du contenu
+</li><li class="formatter-li">Les Icones specifiques PHPBoost de FontAwesome
+</li><li class="formatter-li">Système d'upload
+</li><li class="formatter-li"><span style="color:#339966;">social connect</span><br />
+</li></ul> Les éléments en <span style="color:#339966;">vert</span> correspondent à des nouveautés, les éléments en <span style="color:#3366FF;">bleu</span> correspondent à des classes venant d'un autre fichier.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_table-css">table.css</h2><br />
+
+Le fichier étant nouveau, le plus simple est supprimer les classes tableaux du fichier <em>content.css</em> et de copier le fichier <em>table.css</em> dans votre thème. Il vous suffira de modifier les quelques éléments de styles (color, size) que vous aviez sur la v4.1.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_form-css">form.css</h2><br />
+
+Le fichier étant nouveau, le plus simple est supprimer les classes des formulaires du fichier <em>content.css</em> et de copier le fichier <em>form.css</em> dans votre thème. Il vous suffira de modifier les quelques éléments de styles (color, size) que vous aviez sur la v4.1.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_cssmenu-css">cssmenu.css</h2><br />
+
+Le système de menu à complètement été revu dans la v5.0 afin de le rendre responsive. Le fichier étant nouveau, le plus simple est supprimer les classes menu du fichier <em>global.css</em> et de copier le fichier <em>cssmenu.css</em> dans votre thème. Il vous suffira de modifier les quelques éléments de styles (color, size) pour ajuster à votre design.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_login-css">login.css</h2><br />
+
+Le fichier étant nouveau, il vous suffit de le copier dans votre thème. Vous pourrez adapter les éléments en fonction du design que vous souhaiterez.<br />
+<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_methode-conseillee-pour-la-migration">Méthode conseillée pour la migration</h1><br />
+
+Comme nous avons pu le voir au travers des différents paragraphes, le passage à la V5.0 demande un investissement du designer. Mais la cause de cette investissement est due à la responsivité.<br />
+<br />
+Pour finir, nous allons vous expliquer la méthode que nous avons utilisé pour migrer les thèmes officiels. Malgré l'attente que vous avez observé de votre coté, la migration de chaque thème ne nous a pas demandé beaucoup d'effort.<br />
+<br />
+Tous d'abord, nous avons utilisé une installation de la V4.1 avec le thème pour bien avoir le rendu final souhaité.<br />
+Sur une installation de la V5.0, nous avons : <ul class="formatter-ul">
+    <li class="formatter-li">copié le thème V4.1
+    </li><li class="formatter-li">modifié le fichier config.ini pour le rendre compatible.
+    </li><li class="formatter-li">déplacé ailleurs les répertoires modules/framwork/admin pour ne pas avoir de soucis de compatibilité
+    </li><li class="formatter-li">remplacé les fichiers tpl et css par les fichiers du thème base.</li></ul><br />
+A partir de cette étape, le thème est identique aux thèmes de base.<br />
+<br />
+La prochaine étape consiste à retrouver le design que nous avions sur la V4.1.<ul class="formatter-ul">
+    <li class="formatter-li">déplacer les classes dans le fichier <em>body.tpl</em> pour retrouver la structure de la V4.1
+    </li><li class="formatter-li">recopier les attributs des classes CSS de la version v4.1 vers la version v5.0</li></ul><br />
+<br />
+A partir de cette étape, le design du thème est identique à la version v4.1.<br />
+<br />
+L'étape suivante consiste à ajuster les couleurs de liens etc. Pour ce faire, il est conseillé d'utiliser le module "bac à sable" qui permet sur une seule page d'avoir tous les éléments.<ul class="formatter-ul">
+    <li class="formatter-li">recopier les attributs des classes de la version v4.1 vers la version v5.0</li></ul><br />
+<br />
+Pour finir, il est nécessaire de refaire les modifications sur les modules/framework/administration que vous aviez surchargés.<ul class="formatter-ul">
+    <li class="formatter-li">re-créer les répertoires modules (framework / administration) dans le thème
+    </li><li class="formatter-li">copier le fichier tpl ou css en partant bien de la version v5.0
+    </li><li class="formatter-li">appliquer les modifications HTML que vous auriez pu faire sur la v4.1
+    </li><li class="formatter-li">recopier les attributs des classes CSS de la version v4.1 vers la version v5.0</li></ul><br />
+<br />
+Et voilà, votre thème est maintenant converti pour la v5.0 et il est responsive.<br />
+<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_la-responsivite">La responsivité</h1><br />
+
+<br />
+Bien sûr la responsivité que nous avons prévu n'est peut-être pas celle que vous souhaitez. Si vous souhaitez un comportement différent, il vous suffit d'ajuster les médias-queries.<br />
+<br />
+Lorsque vous lirez le code, vous trouverez 3 types d'écriture pour gérer l'affichage.<br />
+<ul class="formatter-ul">
+    <li class="formatter-li">La partie classique qui s'affichera sur tous les écrans sans restrictions particulière. [[CODE=css]] .ma-classe-css { mesattributs: valeurs; }[[/CODE]]
+    </li><li class="formatter-li">La partie qui ne s'affichera que sur les écrans larges. [[CODE=css]] @media (min-width: 769px) {.ma-classe-css { mesattributs: valeurs; } }[[/CODE]]
+    </li><li class="formatter-li">La partie qui ne s'affichera pas sur les écrans larges. [[CODE=css]] @media (max-width: 768px) {.ma-classe-css { mesattributs: valeurs; } }[[/CODE]]<br />
+</li></ul> Bien sûr il existe des variantes pour faire en fonction de la taille d'écran que l'on souhaite prévoir.]]></content>
+    <activ>1</activ>
+    <user_id>768</user_id>
+    <user_ip>77.202.89.95</user_ip>
+    <timestamp>1457192889</timestamp>
+  </article>
+</articles>

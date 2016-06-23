@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>116</id>
+    <id_contents>1712</id_contents>
+    <title><![CDATA[Administration du module Plan du site]]></title>
+    <encoded_title><![CDATA[administration-du-module-plan-du-site]]></encoded_title>
+    <hits>459</hits>
+    <id_cat>38</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>38</cat_id>
+    <cat_id_parent>13</cat_id_parent>
+    <cat_article_id>115</cat_article_id>
+    <con_id_contents>1712</con_id_contents>
+    <con_id_article>116</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_configuration">Configuration</a><ol class="wiki_list_2"><li><a href="#paragraph_generer-le-fichier-de-maniere-automatique">Générer le fichier de manière automatique</a></li><li><a href="#paragraph_generer-le-fichier-manuellement">Générer le fichier manuellement</a></li></ol></li></ol>]]></menu>
+    <content><![CDATA[<h1 class="wiki_paragraph1" id="paragraph_configuration">Configuration</h1><br />
+
+<br />
+Vous avez la possibilité de générer le fichier sitemap.xml de manière automatique ou manuelle.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_generer-le-fichier-de-maniere-automatique">Générer le fichier de manière automatique</h2><br />
+
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/sitemap/config.png" alt="" /></p><br />
+<br />
+Cocher "Générer automatiquement le fichier sitemap.xml" et choisissez la durée de vie du fichier (en jours). Le fichier sera automatiquement mis à jour selon votre configuration.<br />
+<br />
+<h2 class="wiki_paragraph2" id="paragraph_generer-le-fichier-manuellement">Générer le fichier manuellement</h2><br />
+
+<br />
+Même si vous avez coché la génération automatique, vous pourrez également régénérer le fichier sitemap.<br />
+Dans le menu du module, vous pouvez cliquer sur "Générer le fichier sitemap.xml".<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/sitemap/menu.png" alt="" /></p><br />
+<br />
+Ce qui donnera :<br />
+<br />
+<p style="text-align:center"><img src="https://resources.phpboost.com/documentation/utilisation/modules/sitemap/success_generate.png" alt="" /></p>]]></content>
+    <activ>1</activ>
+    <user_id>5738</user_id>
+    <user_ip>78.195.243.46</user_ip>
+    <timestamp>1463113107</timestamp>
+  </article>
+</articles>

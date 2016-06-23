@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>138</id>
+    <id_contents>1397</id_contents>
+    <title><![CDATA[Configurez votre site]]></title>
+    <encoded_title><![CDATA[configurez-votre-site]]></encoded_title>
+    <hits>2367</hits>
+    <id_cat>49</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>49</cat_id>
+    <cat_id_parent>2</cat_id_parent>
+    <cat_article_id>171</cat_article_id>
+    <con_id_contents>1397</con_id_contents>
+    <con_id_article>138</con_id_article>
+    <menu><![CDATA[<ol class="wiki_list_1"><li><a href="#paragraph_mettre-le-site-en-maintenance">Mettre le site en maintenance</a></li><li><a href="#paragraph_configuration-g-n-rale-du-site">Configuration générale du site</a></li><li><a href="#paragraph_comment-les-visiteurs-vont-s-inscrire">Comment les visiteurs vont s'inscrire ?</a></li><li><a href="#paragraph_quels-modules-peuvent-tre-vus-par-quel-type-de-membres">Quels modules peuvent être vus par quel type de membres ?</a></li><li><a href="#paragraph_quel-s-th-me-s-voulez-vous-utiliser">Quel(s) thème(s) voulez vous utiliser ?</a></li><li><a href="#paragraph_configurer-les-modules">Configurer les modules</a></li><li><a href="#paragraph_supprimer-la-maintenance-du-site">Supprimer la maintenance du site</a></li></ol>]]></menu>
+    <content><![CDATA[Vous venez d'installer votre site avec PHPBoost ? On ne vous avait pas menti c'était très simple. <br />
+<br />
+Maintenant il vous reste 2 phases : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> paramétrer votre site comme vous le souhaitez ! C'est ce que nous allons voir de suite.
+</li><li class="formatter-li"> le remplir, mais pour cela on ne va pas pouvoir beaucoup vous aider. Si vous avez un problème sur un module, n'hésitez pas à aller voir la <a href="/wiki/modules">documentation sur les modules</a>. <br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_mettre-le-site-en-maintenance">Mettre le site en maintenance</h1><br />
+
+<br />
+Bon c'est pas tout mais y'a un site à paramétrer ! Le temps que vous ayez mis les paramètres que vous souhaitez, on va mettre le site en maintenance. Pour cela rendez vous dans le panel d'administration (lien dans le bloc profil) puis allez dans outils puis maintenance et mettez le site en maintenance. Bon on va être tranquille maintenant, seul les administrateurs pourront accéder au site.<br />
+<br />
+Tout d'abord on va se poser quelques questions : <br />
+<ul class="formatter-ul">
+<li class="formatter-li"> Voulez-vous que les visiteurs puissent s'inscrire pour être membre ? Ou alors voulez-vous gérer les inscriptions ?
+</li><li class="formatter-li"> Quels modules peuvent être vus par quel type de membres ?
+</li><li class="formatter-li"> Quel(s) thème(s) voulez vous utiliser ?
+</li><li class="formatter-li"> Donner les autorisations à chaque module en fonction du type de membres.
+</li><li class="formatter-li"> ...<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configuration-g-n-rale-du-site">Configuration générale du site</h1><br />
+
+<br />
+En attendant un peu le temps que vous réfléchissiez à ces questions, on va aller faire la configuration générale du site. Pour cela rendez vous dans le panel d'administration puis site puis configuration (<a href="/wiki/configuration">voici l'article détaillant la configuration du site</a>).<br />
+<br />
+En gros ce qui est important c'est de :<br />
+<ul class="formatter-ul">
+<li class="formatter-li"> donner un bon titre au site
+</li><li class="formatter-li"> éventuellement ajouter un slogan
+</li><li class="formatter-li"> mettre quelques mots clés bien choisis et une petite description de votre site pour le référencement
+</li><li class="formatter-li"> choisir le module affiché à l'accueil du site<br />
+</li></ul><br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_comment-les-visiteurs-vont-s-inscrire">Comment les visiteurs vont s'inscrire ?</h1><br />
+
+<br />
+Voyons un peu comment configurer l'inscription des membres. Cela se situe dans le panel d'administration, dans "utilisateurs" puis "membres" et "configuration". Pour les détails référez vous à la <a href="/wiki/gestion-des-utilisateurs">documentation sur les membres</a>.<br />
+<br />
+En gros il va falloir configurer l'autorisation et le mode d'inscription des membres (normal, validation par mail ou par l'administrateur).<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_quels-modules-peuvent-tre-vus-par-quel-type-de-membres">Quels modules peuvent être vus par quel type de membres ?</h1><br />
+
+<br />
+De base tous les modules sont visibles par tous les membres. Si vous souhaitez limiter la visibilité d'un module, rendez vous dans la configuration du module en question et gérez ses autorisations !<br />
+ <br />
+<h1 class="wiki_paragraph1" id="paragraph_quel-s-th-me-s-voulez-vous-utiliser">Quel(s) thème(s) voulez vous utiliser ?</h1><br />
+
+<br />
+Vous souhaitez un thème unique pour tous les membres ? Ou alors laisser le choix aux membre de choisir leur thème ? <br />
+Rendez vous dans le panel d'administration puis "site" puis "thème" pour mettre les thèmes que vous souhaitez activer.<br />
+Le thème de base du site se choisira dans la configuration générale du site.<br />
+Si vous souhaitez ou non que les membres puissent choisir leur thèmes, cela sera dans la configuration des membres (cf ci dessus).<br />
+<span class="warning">Cette fonctionnalité n'est plus valable à partir de la version 4.1 de PHPBoost. Elle a été remplacée par la gestion des autorisations d'accès aux différents thèmes dans le panel d'administration des thèmes (dont lien vers l'article ci-dessous) et l'emploi du module <a href="/download/download-306+themes-switcher.php">Themes switcher</a></span><br />
+Cet article de la <a href="/wiki/gestion-des-themes">documentation sur les thèmes</a> reprend très bien les étapes à suivre.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_configurer-les-modules">Configurer les modules</h1><br />
+
+<br />
+Voila un gros travail qui vous attend, mais vous allez voir cela va être très simple.<br />
+La plupart des modules ont une partie configuration (pour y accéder : panel d'administration puis "modules" et choisir le module à configurer). Ensuite pour chacun, il va falloir créer des catégories/sous catégories (exemple pour le forum, la galerie, les téléchargements, ...) et mettre les droits des membres en fonction du grade, etc. Cela peut paraître long et pénible, mais c'est là que vous allez découvrir le vrai potentiel de PHPBoost, et encore même après il vous surprendra encore !<br />
+Pour toute question sur un module, la documentation est là pour vous aider : <a href="/wiki/modules">consulter la documentation sur les modules</a>.<br />
+<br />
+<h1 class="wiki_paragraph1" id="paragraph_supprimer-la-maintenance-du-site">Supprimer la maintenance du site</h1><br />
+
+<br />
+Après avoir fait le tour de tout le panel d'administration, vous devez avoir fini de paramétrer votre site. Il est temps de mettre votre site en accès au public ! Rendez vous dans le panel d'administration puis allez dans "outils" puis "maintenance" et enlevez la maintenance.<br />
+<br />
+Il ne vous reste plus qu'à vous mettre au boulot pour le remplir.<br />
+<br />
+Et n'oubliez pas, pour toute question, consultez la documentation ou demandez sur le forum si vous ne trouvez pas !<br />
+<br />
+<p style="text-align:center"><strong>Merci d'utiliser PHPBoost, bon courage et longue vie à votre site !</strong></p>]]></content>
+    <activ>1</activ>
+    <user_id>5083</user_id>
+    <user_ip>90.16.36.10</user_ip>
+    <timestamp>1423580312</timestamp>
+  </article>
+</articles>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<articles>
+  <article>
+    <id>77</id>
+    <id_contents>1342</id_contents>
+    <title><![CDATA[Liste des modules supportés et contenus dans votre distribution]]></title>
+    <encoded_title><![CDATA[liste-des-modules-supportes-et-contenus-dans-votre-distribution]]></encoded_title>
+    <hits>2594</hits>
+    <id_cat>1</id_cat>
+    <is_cat>0</is_cat>
+    <defined_status>0</defined_status>
+    <undefined_status></undefined_status>
+    <redirect>0</redirect>
+    <auth></auth>
+    <cat_id>1</cat_id>
+    <cat_id_parent>0</cat_id_parent>
+    <cat_article_id>1</cat_article_id>
+    <con_id_contents>1342</con_id_contents>
+    <con_id_article>77</con_id_article>
+    <menu><![CDATA[]]></menu>
+    <content><![CDATA[Un des choix technique de l'équipe de PHPBoost a été de développer et de maintenir les modules en même temps que le noyau.<br />
+<br />
+Cette approche permet d'avoir un environnement graphique unique et homogène : tous thèmes modifiés ou créés s'appliquent à l'ensemble du logiciel et de ses modules.<br />
+<br />
+L'utilisateur est certain que d'une version à l'autre de PHPBoost les modules seront fonctionnels, et qu'il ne se retrouvera pas avec des modules incompatibles avec la dernière version du noyau, comme c'est souvent le cas avec d'autres CMS.<br />
+<br />
+<h3 class="formatter-title">Liste des modules supportés et contenus dans votre distribution</h3><br />
+<br />
+<table class="formatter-table" style="margin:auto;">
+	<tr class="formatter-table-row">
+		<th class="formatter-table-head">Modules inclus</th>
+		<th class="formatter-table-head">Complète</th>
+		<th class="formatter-table-head">Développement</th>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/articles">Articles</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/base-de-donnees">Base de données</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Bac à sable</td>
+		<td class="formatter-table-col"></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/calendrier">Calendrier</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Captcha QuestionCaptcha</td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Captcha ReCaptcha</td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/contact">Contact</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/bbcode">Éditeur BBCode</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Éditeur TinyMCE</td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/en-ligne">En ligne</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/discussion">Discussion</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Documentation du Framework</td>
+		<td class="formatter-table-col"></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/faq">FAQ</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/forum">Forum</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/galerie">Galerie</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/liens-web">Liens web</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/livre-d-or">Livre d'or</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Menu Connexion</td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Menu changement de langue</td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col">Menu changement de thème</td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/multimedia">Multimédia</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/news">News</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/newsletter">Newsletter</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/pages">Pages</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/personnalisation">Personnalisation</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/wiki">Plan du site</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+        <tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/rapport-de-bug">Rapport de bug</a></td>
+		<td class="formatter-table-col"></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/recherche">Recherche</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/sondages">Sondages</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/administration">Statistiques</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/telechargement">Téléchargements</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+	<tr class="formatter-table-row">
+		<td class="formatter-table-col"><a href="/wiki/wiki">Wiki</a></td>
+		<td class="formatter-table-col"><p style="text-align:center"><!-- START HTML -->
+<i class="fa fa-success"></i>
+<!-- END HTML --></p></td>
+		<td class="formatter-table-col"></td>
+	</tr>
+</table>]]></content>
+    <activ>1</activ>
+    <user_id>1393</user_id>
+    <user_ip>88.125.157.163</user_ip>
+    <timestamp>1406535472</timestamp>
+  </article>
+</articles>
