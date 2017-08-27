@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="40"
-   height="40"
-   viewBox="0 0 40 40.000001"
+   width="32"
+   height="32"
+   viewBox="0 0 32 32.000001"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r"
@@ -39,7 +39,8 @@
        y1="1024.5062"
        x2="1.733"
        y2="1057.6937"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.79024345,0,0,0.79206416,-0.01910553,218.92154)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -82,30 +83,30 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline;opacity:1"
-     transform="translate(0.09199934,-1012.8312)">
+     transform="translate(0.09199934,-1020.8312)">
     <ellipse
-       style="opacity:1;fill:url(#linearGradient6370);fill-opacity:1;fill-rule:nonzero;stroke:#004600;stroke-width:0.42190227;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       style="opacity:1;fill:url(#linearGradient6370);fill-opacity:1;fill-rule:nonzero;stroke:#004600;stroke-width:0.33378938;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4920"
-       ry="19.926548"
-       rx="20.051548"
-       cy="1032.6937"
-       cx="20.1705" />
+       ry="15.783105"
+       rx="15.845605"
+       cy="1036.8812"
+       cx="15.9205" />
     <g
-       transform="matrix(4.0086306,0,0,3.5946963,-59.679,986.22278)"
+       transform="matrix(3.4205861,0,0,2.9666615,-51.548562,998.19443)"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.99987411px;line-height:110.00000238%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Italic';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot6392">
       <path
          d="m 18.863308,11.365658 -0.07568,0.410146 -1.508751,0 -0.175777,0.900856 q 0.112302,-0.03662 0.227045,-0.05371 0.117184,-0.01709 0.23681,-0.01709 0.505359,0 0.79832,0.27099 0.292961,0.270989 0.292961,0.734844 0,0.324699 -0.151363,0.622543 -0.148922,0.297844 -0.424794,0.522448 -0.195308,0.156246 -0.478504,0.241693 -0.280754,0.08301 -0.615218,0.08301 -0.219722,0 -0.449208,-0.03906 -0.229486,-0.03906 -0.480945,-0.117184 l 0.09033,-0.458973 q 0.224604,0.109861 0.449207,0.166012 0.227045,0.05371 0.456532,0.05371 0.476062,0 0.786113,-0.285637 0.312492,-0.285638 0.312492,-0.715314 0,-0.317375 -0.205073,-0.493152 -0.202632,-0.175777 -0.568833,-0.175777 -0.192867,0 -0.402822,0.04639 -0.207515,0.04394 -0.427236,0.134274 l 0.353995,-1.831009 1.9604,0 z"
-         style=""
-         id="path6401" />
+         id="path6401"
+         inkscape:connector-curvature="0" />
       <path
          d="m 19.551768,14.390484 0.515123,0 -0.119626,0.620102 -0.515123,0 0.119626,-0.620102 z"
-         style=""
-         id="path6403" />
+         id="path6403"
+         inkscape:connector-curvature="0" />
       <path
          d="m 23.038008,13.250376 -1.574667,1.350064 1.740678,0 -0.08545,0.410146 -2.365663,0 0.08057,-0.415029 1.645466,-1.411097 q 0.329582,-0.285637 0.466297,-0.500476 0.139156,-0.217279 0.139156,-0.444324 0,-0.236811 -0.166011,-0.385733 -0.166011,-0.148922 -0.434559,-0.148922 -0.231928,0 -0.515124,0.08301 -0.283196,0.08301 -0.605454,0.241693 l 0.09033,-0.488269 q 0.302727,-0.119626 0.578599,-0.180659 0.275872,-0.06103 0.510241,-0.06103 0.478504,0 0.769024,0.2539 0.292961,0.2539 0.292961,0.666487 0,0.278313 -0.139157,0.532213 -0.139156,0.251459 -0.427235,0.498034 z"
-         style=""
-         id="path6405" />
+         id="path6405"
+         inkscape:connector-curvature="0" />
     </g>
   </g>
   <g
@@ -113,5 +114,5 @@
      id="layer3"
      inkscape:label="texte"
      style="opacity:1"
-     transform="translate(0.09199934,-1012.8312)" />
+     transform="translate(0.09199934,-1020.8312)" />
 </svg>
