@@ -10,9 +10,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="32"
-   height="32"
-   viewBox="0 0 32 32.000001"
+   width="28"
+   height="28"
+   viewBox="0 0 28 28.000001"
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r"
@@ -40,7 +40,7 @@
        x2="1.733"
        y2="1057.6937"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.79024345,0,0,0.79206416,-0.01910553,218.92154)" />
+       gradientTransform="matrix(0.69306807,0,0,0.69741572,-0.09027973,318.57065)" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -83,16 +83,15 @@
      inkscape:groupmode="layer"
      id="layer1"
      style="display:inline;opacity:1"
-     transform="translate(0.09199934,-1020.8312)">
-    <ellipse
-       style="opacity:1;fill:url(#linearGradient6370);fill-opacity:1;fill-rule:nonzero;stroke:#004600;stroke-width:0.33378938;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     transform="translate(0.09199934,-1024.8312)">
+    <circle
+       style="opacity:1;fill:url(#linearGradient6370);fill-opacity:1;fill-rule:nonzero;stroke:#004600;stroke-width:0.29332271;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="path4920"
-       ry="15.783105"
-       rx="15.845605"
-       cy="1036.8812"
-       cx="15.9205" />
+       cy="1038.7875"
+       cx="13.88925"
+       r="13.897088" />
     <g
-       transform="matrix(3.4205861,0,0,2.9666615,-51.548562,998.19443)"
+       transform="matrix(2.6834599,0,0,2.4377901,-39.649139,1007.2955)"
        style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.99987411px;line-height:110.00000238%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Italic';text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        id="flowRoot6392">
       <path
@@ -114,5 +113,5 @@
      id="layer3"
      inkscape:label="texte"
      style="opacity:1"
-     transform="translate(0.09199934,-1020.8312)" />
+     transform="translate(0.09199934,-1024.8312)" />
 </svg>
